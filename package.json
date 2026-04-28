@@ -1,0 +1,21 @@
+{
+  "name": "calendar-sheet-manager",
+  "version": "1.0.0",
+  "description": "Single-page manager for Google Calendar + Google Sheets exports",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "googleapis": "^140.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
