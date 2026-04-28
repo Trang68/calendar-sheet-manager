@@ -462,7 +462,11 @@
       }
 
       // Setup modal event listeners
-      setupCreateEventModal();
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupCreateEventModal);
+      } else {
+        setupCreateEventModal();
+      }
 
       loadConfig().catch((err) => setStatus(`Error: ${err.message}`));
     </script>
