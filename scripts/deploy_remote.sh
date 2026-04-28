@@ -7,6 +7,9 @@ PORT="${PORT:-8080}"
 
 cd "$APP_DIR"
 
+# Load NVM to make npm available
+[[ -s "$HOME/.nvm/nvm.sh" ]] && \. "$HOME/.nvm/nvm.sh"
+
 echo "[deploy] Installing dependencies..."
 if [[ -f package-lock.json ]]; then
   npm ci --omit=dev
