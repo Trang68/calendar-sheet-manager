@@ -263,8 +263,8 @@
     <div class="shell">
       <header class="masthead">
         <div>
-          <h1 class="title">Calendar + Sheet Control Room</h1>
-          <p class="subtitle">One page to edit schedule and export results.</p>
+          <h1 class="title"> TAIGA CENTER - 🔒 Confidential Suite</h1>
+          <p class="subtitle">Managing schedule and exporting results.</p>
         </div>
         <span class="mini" id="now"></span>
       </header>
@@ -417,8 +417,44 @@
         }
         btnCreateEvent.dataset.bound = "1";
 
+
+        // Helper: làm tròn phút về 00, 15, 30, 45
+        function roundToQuarterHour(date) {
+          const d = new Date(date);
+          d.setSeconds(0, 0);
+          let m = d.getMinutes();
+          m = Math.round(m / 15) * 15;
+          if (m === 60) {
+            d.setHours(d.getHours() + 1);
+            m = 0;
+          }
+          d.setMinutes(m);
+          return d;
+        }
+        function toDatetimeLocalString(date) {
+          // yyyy-MM-ddTHH:mm
+          const pad = n => n.toString().padStart(2, '0');
+          return date.getFullYear() + '-' + pad(date.getMonth()+1) + '-' + pad(date.getDate()) + 'T' + pad(date.getHours()) + ':' + pad(date.getMinutes());
+        }
+
         btnCreateEvent.addEventListener("click", () => {
+          // Ưu tiên state.selectedDate (ISO string), nếu không thì lấy new Date()
+          let base = window.state && window.state.selectedDate ? new Date(window.state.selectedDate) : new Date();
+          base = roundToQuarterHour(base);
+          document.getElementById("eventStart").value = toDatetimeLocalString(base);
+
+          // eventEnd = eventStart + 1h, làm tròn về 00/15/30/45
+          const end = roundToQuarterHour(new Date(base.getTime() + 60*60*1000));
+          document.getElementById("eventEnd").value = toDatetimeLocalString(end);
+
           modal.classList.add("open");
+        });
+
+        // Khi đổi eventStart, tự động set eventEnd = +1h, làm tròn
+        document.getElementById("eventStart").addEventListener("change", (e) => {
+          const start = new Date(e.target.value);
+          const end = roundToQuarterHour(new Date(start.getTime() + 60*60*1000));
+          document.getElementById("eventEnd").value = toDatetimeLocalString(end);
         });
 
         modalCancel.addEventListener("click", () => {
@@ -437,6 +473,7 @@
             const startTime = document.getElementById("eventStart").value;
             const endTime = document.getElementById("eventEnd").value;
             const description = document.getElementById("eventDesc").value.trim();
+            const createMeetLink = document.getElementById("eventMeetLink").checked;
 
             if (!title || !startTime || !endTime) {
               setStatus("Error: Fill all required fields");
@@ -446,16 +483,17 @@
             setStatus("Creating event...");
             const result = await api("/api/events/create", {
               method: "POST",
-              body: { title, startTime, endTime, description },
+              body: { title, startTime, endTime, description, createMeetLink },
             });
 
-            setStatus(`Event created: ${result.result.eventTitle}`);
+            setStatus(`Event created: ${result.result.eventTitle}` + (result.result.meetLink ? ` | <a href='${result.result.meetLink}' target='_blank'>Google Meet</a>` : ""));
             modal.classList.remove("open");
 
             document.getElementById("eventTitle").value = "";
             document.getElementById("eventStart").value = "";
             document.getElementById("eventEnd").value = "";
             document.getElementById("eventDesc").value = "";
+            document.getElementById("eventMeetLink").checked = false;
 
             setTimeout(() => {
               calendarFrame.src = calendarFrame.src;
@@ -482,11 +520,14 @@
         <label>Event Title *</label>
         <input id="eventTitle" type="text" placeholder="Event name" />
 
+
         <label>Start Time *</label>
-        <input id="eventStart" type="datetime-local" />
+        <input id="eventStart" type="datetime-local" step="900" />
 
         <label>End Time *</label>
-        <input id="eventEnd" type="datetime-local" />
+        <input id="eventEnd" type="datetime-local" step="900" />
+
+        <label><input type="checkbox" id="eventMeetLink" /> Add Google Meet link</label>
 
         <label>Description</label>
         <textarea id="eventDesc" placeholder="Optional event description"></textarea>
