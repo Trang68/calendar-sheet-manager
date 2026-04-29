@@ -124,6 +124,28 @@ app.post("/api/events/create", requireToken, async (req, res) => {
   }
 });
 
+app.get("/api/events", requireToken, async (req, res) => {
+  try {
+    // Lấy toàn bộ sự kiện trong 1 năm (hoặc giới hạn theo nhu cầu)
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 1);
+    const end = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
+    const events = await exportService.fetchEvents(start, end);
+    // Chuẩn hóa dữ liệu cho FullCalendar
+    const result = events.map(ev => ({
+      id: ev.id,
+      title: ev.summary,
+      startTime: ev.start?.dateTime || ev.start?.date,
+      endTime: ev.end?.dateTime || ev.end?.date,
+      description: ev.description,
+      meetLink: ev.conferenceData?.entryPoints?.find(e => e.entryPointType === "video")?.uri || "",
+    }));
+    res.json({ ok: true, result });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
