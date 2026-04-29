@@ -160,6 +160,12 @@
         background: #fff;
       }
 
+      #calendar {
+        height: 100%;
+        min-height: 560px;
+        background: #fff;
+      }
+
       .mini {
         font-size: 0.8rem;
         opacity: 0.74;
@@ -185,6 +191,10 @@
         .status {
           margin-left: 0;
           width: 100%;
+        }
+
+        #calendar {
+          min-height: 420px;
         }
       }
       .modal {
@@ -489,32 +499,33 @@
           window.calendarObj.destroy();
         }
         window.calendarObj = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
+          initialView: "dayGridMonth",
+          height: "100%",
           headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
           },
           events: async (info, successCallback, failureCallback) => {
             try {
-              const res = await fetch('/api/events');
-              const json = await res.json();
-              if (!json.ok) throw new Error(json.error || 'Failed to fetch events');
+              const json = await api("/api/events");
               // Map backend events to FullCalendar format
-              const events = (json.events || []).map(ev => ({
+              const events = (json.events || []).map((ev) => ({
                 id: ev.id,
                 title: ev.title,
                 start: ev.start,
                 end: ev.end,
                 description: ev.description,
-                meetLink: ev.meetLink
+                meetLink: ev.meetLink,
               }));
+              setStatus(`Loaded ${events.length} events`);
               successCallback(events);
             } catch (e) {
+              setStatus(`Error loading events: ${e.message}`);
               failureCallback(e);
             }
           },
-          eventClick: function(info) {
+          eventClick(info) {
             let html = `<b>${info.event.title}</b><br/>`;
             if (info.event.extendedProps.meetLink) {
               html += `<a href='${info.event.extendedProps.meetLink}' target='_blank'>Google Meet</a><br/>`;
@@ -522,23 +533,25 @@
             if (info.event.extendedProps.description) {
               html += `<div>${info.event.extendedProps.description}</div>`;
             }
-            const popup = document.createElement('div');
+            const popup = document.createElement("div");
             popup.innerHTML = html;
-            popup.style.position = 'fixed';
-            popup.style.left = info.jsEvent.clientX + 'px';
-            popup.style.top = info.jsEvent.clientY + 'px';
-            popup.style.background = '#fff';
-            popup.style.border = '1px solid #ccc';
-            popup.style.padding = '12px';
+            popup.style.position = "fixed";
+            popup.style.left = `${Math.min(info.jsEvent.clientX, window.innerWidth - 260)}px`;
+            popup.style.top = `${Math.min(info.jsEvent.clientY, window.innerHeight - 140)}px`;
+            popup.style.background = "#fff";
+            popup.style.border = "1px solid #ccc";
+            popup.style.padding = "12px";
             popup.style.zIndex = 9999;
-            popup.style.borderRadius = '10px';
+            popup.style.borderRadius = "10px";
+            popup.style.maxWidth = "240px";
+            popup.style.boxShadow = "0 8px 22px rgba(0,0,0,0.2)";
             document.body.appendChild(popup);
             function removePopup() {
               popup.remove();
-              document.removeEventListener('click', removePopup, true);
+              document.removeEventListener("click", removePopup, true);
             }
             setTimeout(() => {
-              document.addEventListener('click', removePopup, true);
+              document.addEventListener("click", removePopup, true);
             }, 10);
             info.jsEvent.preventDefault();
           },
@@ -552,13 +565,14 @@
           cb();
           return;
         }
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css';
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css";
         document.head.appendChild(link);
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js';
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js";
         script.onload = cb;
+        script.onerror = () => setStatus("Error: Cannot load FullCalendar CDN");
         document.body.appendChild(script);
       }
 
