@@ -28,10 +28,16 @@ if (!config.googleServiceAccountJson || !config.googleCalendarId || !config.goog
 const exportService = new ExportService(config);
 let lastRun = null;
 
+// Thay thế requireToken để hỗ trợ cả header và query string
 function requireToken(req, res, next) {
   if (!config.appToken) return next();
   const authHeader = req.headers.authorization || "";
-  const bearer = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+  let bearer = "";
+  if (authHeader.startsWith("Bearer ")) {
+    bearer = authHeader.slice(7);
+  } else if (req.query && req.query.token) {
+    bearer = req.query.token;
+  }
   if (bearer !== config.appToken) {
     return res.status(401).json({ ok: false, error: "Unauthorized" });
   }
