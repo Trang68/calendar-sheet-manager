@@ -131,16 +131,16 @@ app.get("/api/events", requireToken, async (req, res) => {
     const start = new Date(now.getFullYear(), 0, 1);
     const end = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
     const events = await exportService.fetchEvents(start, end);
-    // Chuẩn hóa dữ liệu cho FullCalendar
+    // Định dạng đúng cho FullCalendar: start, end
     const result = events.map(ev => ({
       id: ev.id,
       title: ev.summary,
-      startTime: ev.start?.dateTime || ev.start?.date,
-      endTime: ev.end?.dateTime || ev.end?.date,
+      start: ev.start?.dateTime || ev.start?.date,
+      end: ev.end?.dateTime || ev.end?.date,
       description: ev.description,
       meetLink: ev.conferenceData?.entryPoints?.find(e => e.entryPointType === "video")?.uri || "",
     }));
-    res.json({ ok: true, result });
+    res.json({ ok: true, events: result });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
   }
