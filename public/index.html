@@ -282,7 +282,7 @@
       <section class="grid">
         <article class="panel">
           <h2>Calendar</h2>
-          <iframe id="calendarFrame" title="calendar"></iframe>
+          <div id="calendar"></div>
         </article>
         <article class="panel">
           <h2>Sheet</h2>
@@ -298,7 +298,7 @@
 
       const nowEl = document.getElementById("now");
       const statusEl = document.getElementById("status");
-      const calendarFrame = document.getElementById("calendarFrame");
+
       const sheetFrame = document.getElementById("sheetFrame");
 
       function tickNow() {
@@ -341,10 +341,10 @@
         );
       }
 
+
       async function loadConfig() {
         setStatus("Loading config...");
         const cfg = await api("/api/config");
-        calendarFrame.src = cfg.calendarEmbedUrl;
         sheetFrame.src = cfg.sheetEmbedUrl;
         setStatus("Ready");
       }
@@ -382,8 +382,11 @@
         }
       });
 
+
       document.getElementById("btnRefresh").addEventListener("click", () => {
-        calendarFrame.src = calendarFrame.src;
+        if (window.calendarObj) {
+          window.calendarObj.refetchEvents();
+        }
         sheetFrame.src = sheetFrame.src;
         setStatus("Views refreshed");
       });
@@ -460,7 +463,9 @@
             document.getElementById("eventMeetLink").checked = false;
 
             setTimeout(() => {
-              calendarFrame.src = calendarFrame.src;
+              if (window.calendarObj) {
+                window.calendarObj.refetchEvents();
+              }
             }, 1000);
           } catch (err) {
             setStatus(`Error: ${err.message}`);
@@ -474,6 +479,90 @@
       } else {
         setupCreateEventModal();
       }
+
+
+      // --- FullCalendar integration ---
+      function renderCalendar() {
+        const calendarEl = document.getElementById("calendar");
+        if (!calendarEl) return;
+        if (window.calendarObj) {
+          window.calendarObj.destroy();
+        }
+        window.calendarObj = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          },
+          events: async (info, successCallback, failureCallback) => {
+            try {
+              const res = await fetch('/api/events');
+              const json = await res.json();
+              if (!json.ok) throw new Error(json.error || 'Failed to fetch events');
+              // Map backend events to FullCalendar format
+              const events = (json.events || []).map(ev => ({
+                id: ev.id,
+                title: ev.title,
+                start: ev.start,
+                end: ev.end,
+                description: ev.description,
+                meetLink: ev.meetLink
+              }));
+              successCallback(events);
+            } catch (e) {
+              failureCallback(e);
+            }
+          },
+          eventClick: function(info) {
+            let html = `<b>${info.event.title}</b><br/>`;
+            if (info.event.extendedProps.meetLink) {
+              html += `<a href='${info.event.extendedProps.meetLink}' target='_blank'>Google Meet</a><br/>`;
+            }
+            if (info.event.extendedProps.description) {
+              html += `<div>${info.event.extendedProps.description}</div>`;
+            }
+            const popup = document.createElement('div');
+            popup.innerHTML = html;
+            popup.style.position = 'fixed';
+            popup.style.left = info.jsEvent.clientX + 'px';
+            popup.style.top = info.jsEvent.clientY + 'px';
+            popup.style.background = '#fff';
+            popup.style.border = '1px solid #ccc';
+            popup.style.padding = '12px';
+            popup.style.zIndex = 9999;
+            popup.style.borderRadius = '10px';
+            document.body.appendChild(popup);
+            function removePopup() {
+              popup.remove();
+              document.removeEventListener('click', removePopup, true);
+            }
+            setTimeout(() => {
+              document.addEventListener('click', removePopup, true);
+            }, 10);
+            info.jsEvent.preventDefault();
+          },
+        });
+        window.calendarObj.render();
+      }
+
+      // Load FullCalendar from CDN if not present
+      function ensureFullCalendar(cb) {
+        if (window.FullCalendar) {
+          cb();
+          return;
+        }
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css';
+        document.head.appendChild(link);
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js';
+        script.onload = cb;
+        document.body.appendChild(script);
+      }
+
+      ensureFullCalendar(renderCalendar);
 
       loadConfig().catch((err) => setStatus(`Error: ${err.message}`));
     </script>
@@ -491,7 +580,7 @@
         <label>End Time *</label>
         <input id="eventEnd" type="datetime-local" step="900" />
 
-        <label><input type="checkbox" id="eventMeetLink" /> Add Google Meet link</label>
+        <label><input type="checkbox" id="eventMeetLink" /> Add link Google Meet</label>
 
         <label>Description</label>
         <textarea id="eventDesc" placeholder="Optional event description"></textarea>
