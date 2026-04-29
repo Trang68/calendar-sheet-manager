@@ -363,6 +363,7 @@ class ExportService {
   }
 
   async fetchEvents(startDate, endDate) {
+    await this.init();
     const items = [];
     let pageToken;
     do {

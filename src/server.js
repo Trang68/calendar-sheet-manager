@@ -136,7 +136,23 @@ app.get("/api/events", requireToken, async (req, res) => {
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 1);
     const end = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
+    
+    // eslint-disable-next-line no-console
+    console.log(`[/api/events] Fetching events from ${start.toISOString()} to ${end.toISOString()}`);
+    
     const events = await exportService.fetchEvents(start, end);
+    
+    // eslint-disable-next-line no-console
+    console.log(`[/api/events] Fetched ${events ? events.length : 'null'} events`);
+    
+    if (!events) {
+      throw new Error("fetchEvents returned null");
+    }
+    
+    if (!Array.isArray(events)) {
+      throw new Error(`fetchEvents returned ${typeof events}, expected array`);
+    }
+    
     // Định dạng đúng cho FullCalendar: start, end
     const result = events.map(ev => ({
       id: ev.id,
@@ -148,6 +164,8 @@ app.get("/api/events", requireToken, async (req, res) => {
     }));
     res.json({ ok: true, events: result });
   } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error(`[/api/events] Error: ${err.message}`, err.stack);
     res.status(500).json({ ok: false, error: err.message });
   }
 });
