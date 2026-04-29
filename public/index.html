@@ -401,16 +401,21 @@
         }
       }, 6000);
 
-      const modal = document.getElementById("createEventModal");
-      const btnCreateEvent = document.getElementById("btnCreateEvent");
-      const modalCancel = document.getElementById("modalCancel");
-      const modalSubmit = document.getElementById("modalSubmit");
-
       function setupCreateEventModal() {
+        const btnCreateEvent = document.getElementById("btnCreateEvent");
+        const modal = document.getElementById("createEventModal");
+        const modalCancel = document.getElementById("modalCancel");
+        const modalSubmit = document.getElementById("modalSubmit");
+
         if (!modal || !btnCreateEvent || !modalCancel || !modalSubmit) {
           console.error("Modal elements not found:", { modal, btnCreateEvent, modalCancel, modalSubmit });
           return;
         }
+
+        if (btnCreateEvent.dataset.bound === "1") {
+          return;
+        }
+        btnCreateEvent.dataset.bound = "1";
 
         btnCreateEvent.addEventListener("click", () => {
           modal.classList.add("open");
