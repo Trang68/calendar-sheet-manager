@@ -346,7 +346,12 @@
       const sheetFrame = document.getElementById("sheetFrame");
 
       function tickNow() {
-        nowEl.textContent = new Date().toLocaleString();
+        nowEl.textContent = new Date().toLocaleString("vi-VN", {
+          timeZone: "Asia/Ho_Chi_Minh", // hoặc timezone bạn muốn
+          hour12: false,                // hiển thị 24h
+          dateStyle: "short",           // định dạng ngày
+          timeStyle: "medium"           // định dạng giờ
+        });
       }
       setInterval(tickNow, 1000);
       tickNow();
