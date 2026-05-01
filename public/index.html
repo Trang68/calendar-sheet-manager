@@ -267,7 +267,41 @@
         background: var(--brand);
         color: white;
         border-color: var(--brand);
-      }    </style>
+      }
+
+      .event-popup-buttons {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .event-popup-buttons button {
+        flex: 1;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: white;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 120ms ease;
+      }
+
+      .event-popup-buttons button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .event-popup-buttons button.edit {
+        background: var(--brand);
+        color: white;
+        border-color: var(--brand);
+      }
+
+      .event-popup-buttons button.delete {
+        background: #fee;
+        border-color: var(--accent);
+        color: var(--accent);
+      }</style>
   </head>
   <body>
     <div class="shell">
@@ -483,11 +517,73 @@
         });
       }
 
+      function setupEditEventModal() {
+        const modal = document.getElementById("editEventModal");
+        const modalCancel = document.getElementById("editModalCancel");
+        const modalSubmit = document.getElementById("editModalSubmit");
+
+        if (!modal || !modalCancel || !modalSubmit) {
+          console.error("Edit modal elements not found");
+          return;
+        }
+
+        if (modal.dataset.bound === "1") {
+          return;
+        }
+        modal.dataset.bound = "1";
+
+        modalCancel.addEventListener("click", () => {
+          modal.classList.remove("open");
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("open");
+          }
+        });
+
+        modalSubmit.addEventListener("click", async () => {
+          try {
+            const eventId = modal.dataset.eventId;
+            const title = document.getElementById("editEventTitle").value.trim();
+            const startTime = document.getElementById("editEventStart").value;
+            const endTime = document.getElementById("editEventEnd").value;
+            const description = document.getElementById("editEventDesc").value.trim();
+
+            if (!title || !startTime || !endTime) {
+              setStatus("Error: Fill all required fields");
+              return;
+            }
+
+            setStatus("Updating event...");
+            const result = await api(`/api/events/${eventId}`, {
+              method: "PUT",
+              body: { title, startTime, endTime, description },
+            });
+
+            setStatus(`Event updated: ${result.result.eventTitle}`);
+            modal.classList.remove("open");
+
+            setTimeout(() => {
+              if (window.calendarObj) {
+                window.calendarObj.refetchEvents();
+              }
+            }, 1000);
+          } catch (err) {
+            setStatus(`Error: ${err.message}`);
+          }
+        });
+      }
+
       // Setup modal event listeners
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", setupCreateEventModal);
+        document.addEventListener("DOMContentLoaded", () => {
+          setupCreateEventModal();
+          setupEditEventModal();
+        });
       } else {
         setupCreateEventModal();
+        setupEditEventModal();
       }
 
 
@@ -533,6 +629,10 @@
             if (info.event.extendedProps.description) {
               html += `<div>${info.event.extendedProps.description}</div>`;
             }
+            html += `<div class="event-popup-buttons">
+              <button class="edit" data-event-id="${info.event.id}">Edit</button>
+              <button class="delete" data-event-id="${info.event.id}">Delete</button>
+            </div>`;
             const popup = document.createElement("div");
             popup.innerHTML = html;
             popup.style.position = "fixed";
@@ -543,9 +643,47 @@
             popup.style.padding = "12px";
             popup.style.zIndex = 9999;
             popup.style.borderRadius = "10px";
-            popup.style.maxWidth = "240px";
+            popup.style.maxWidth = "260px";
             popup.style.boxShadow = "0 8px 22px rgba(0,0,0,0.2)";
             document.body.appendChild(popup);
+            
+            const editBtn = popup.querySelector(".edit");
+            const deleteBtn = popup.querySelector(".delete");
+            
+            editBtn.addEventListener("click", () => {
+              const eventId = editBtn.dataset.eventId;
+              const start = new Date(info.event.start);
+              const end = new Date(info.event.end);
+              document.getElementById("editEventTitle").value = info.event.title;
+              document.getElementById("editEventStart").value = start.toISOString().slice(0, 16);
+              document.getElementById("editEventEnd").value = end.toISOString().slice(0, 16);
+              document.getElementById("editEventDesc").value = info.event.extendedProps.description || "";
+              document.getElementById("editEventModal").dataset.eventId = eventId;
+              document.getElementById("editEventModal").classList.add("open");
+              popup.remove();
+            });
+            
+            deleteBtn.addEventListener("click", () => {
+              const eventId = deleteBtn.dataset.eventId;
+              if (confirm("Bạn có chắc chắn muốn xoá sự kiện này không?")) {
+                (async () => {
+                  try {
+                    setStatus("Deleting event...");
+                    const result = await api(`/api/events/${eventId}`, { method: "DELETE" });
+                    setStatus(`Event deleted: ${info.event.title}`);
+                    popup.remove();
+                    setTimeout(() => {
+                      if (window.calendarObj) {
+                        window.calendarObj.refetchEvents();
+                      }
+                    }, 500);
+                  } catch (err) {
+                    setStatus(`Error: ${err.message}`);
+                  }
+                })();
+              }
+            });
+            
             function removePopup() {
               popup.remove();
               document.removeEventListener("click", removePopup, true);
@@ -602,6 +740,30 @@
         <div class="modal-buttons">
           <button id="modalCancel">Cancel</button>
           <button id="modalSubmit" class="primary">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="editEventModal" class="modal">
+      <div class="modal-content">
+        <h3>Edit Calendar Event</h3>
+        <label>Event Title *</label>
+        <input id="editEventTitle" type="text" placeholder="Event name" />
+
+        <label>Start Time *</label>
+        <input id="editEventStart" type="datetime-local" step="900" />
+
+        <label>End Time *</label>
+        <input id="editEventEnd" type="datetime-local" step="900" />
+
+        <label><input type="checkbox" id="editEventMeetLink" /> Add link Google Meet</label>
+
+        <label>Description</label>
+        <textarea id="editEventDesc" placeholder="Optional event description"></textarea>
+
+        <div class="modal-buttons">
+          <button id="editModalCancel">Cancel</button>
+          <button id="editModalSubmit" class="primary">Save</button>
         </div>
       </div>
     </div>

@@ -170,6 +170,27 @@ app.get("/api/events", requireToken, async (req, res) => {
   }
 });
 
+app.put("/api/events/:eventId", requireToken, async (req, res) => {
+  try {
+    const { eventId } = req.params;
+    const payload = req.body;
+    const result = await exportService.updateEvent(eventId, payload);
+    res.json({ ok: true, result });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+app.delete("/api/events/:eventId", requireToken, async (req, res) => {
+  try {
+    const { eventId } = req.params;
+    const result = await exportService.deleteEvent(eventId);
+    res.json({ ok: true, result });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });

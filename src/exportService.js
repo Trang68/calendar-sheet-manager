@@ -502,6 +502,55 @@ class ExportService {
       eventStart: res.data.start.dateTime,
     };
   }
+
+  async updateEvent(eventId, payload) {
+    await this.init();
+
+    const { title, description, startTime, endTime } = payload;
+
+    if (!eventId || !title || !startTime || !endTime) {
+      throw new Error("Missing required fields: eventId, title, startTime, endTime");
+    }
+
+    const event = {
+      summary: title,
+      description: description || "",
+      start: { dateTime: new Date(startTime).toISOString() },
+      end: { dateTime: new Date(endTime).toISOString() },
+    };
+
+    const res = await this.calendarApi.events.update({
+      calendarId: this.config.googleCalendarId,
+      eventId: eventId,
+      requestBody: event,
+    });
+
+    return {
+      ok: true,
+      eventId: res.data.id,
+      eventTitle: res.data.summary,
+      eventStart: res.data.start.dateTime,
+    };
+  }
+
+  async deleteEvent(eventId) {
+    await this.init();
+
+    if (!eventId) {
+      throw new Error("Missing required field: eventId");
+    }
+
+    await this.calendarApi.events.delete({
+      calendarId: this.config.googleCalendarId,
+      eventId: eventId,
+    });
+
+    return {
+      ok: true,
+      eventId: eventId,
+      message: "Event deleted successfully",
+    };
+  }
 }
 
 function a1NotationToGridRange(a1, sheetId) {
