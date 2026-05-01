@@ -486,8 +486,14 @@ class ExportService {
     const event = {
       summary: title,
       description: description || "",
-      start: { dateTime: new Date(startTime).toISOString() },
-      end: { dateTime: new Date(endTime).toISOString() },
+      start: { 
+        dateTime: startTime,
+        timeZone: this.config.googleTimeZone 
+      },
+      end: { 
+        dateTime: endTime,
+        timeZone: this.config.googleTimeZone 
+      },
     };
 
     const res = await this.calendarApi.events.insert({
@@ -515,8 +521,14 @@ class ExportService {
     const event = {
       summary: title,
       description: description || "",
-      start: { dateTime: new Date(startTime).toISOString() },
-      end: { dateTime: new Date(endTime).toISOString() },
+      start: { 
+        dateTime: startTime,
+        timeZone: this.config.googleTimeZone 
+      },
+      end: { 
+        dateTime: endTime,
+        timeZone: this.config.googleTimeZone 
+      },
     };
 
     const res = await this.calendarApi.events.update({
