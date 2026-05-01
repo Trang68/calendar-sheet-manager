@@ -113,3 +113,7 @@ Important:
 - Sheet naming follows: `TongKet_<year>_<month>`.
 - Name matching uses Unicode normalization to avoid Win/Mac accent-encoding mismatches.
 - Existing fee column is preserved; export writes summary columns only.
+
+## 8) Notes
+
+- Publish version v0.0.1
