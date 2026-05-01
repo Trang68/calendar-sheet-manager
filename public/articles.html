@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài viết tiếng Nga - TAIGA Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); }
+      .shell { max-width: 1100px; margin: 0 auto; padding: 24px; }
+      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
+      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
+      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
+      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
+      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 36px; box-shadow: 0 18px 36px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
+      .hero h1 { margin: 0 0 12px; }
+      .hero p { margin: 0; line-height: 1.75; }
+      .list { display: grid; gap: 20px; }
+      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); }
+      .card h2 { margin: 0 0 10px; color: var(--brand); }
+      .card p { margin: 0; line-height: 1.75; }
+      .button { display: inline-block; margin-top: 18px; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 12px 20px; border-radius: 999px; }
+      footer { margin-top: 36px; text-align: center; color: #606b73; font-size: 0.95rem; }
+      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div>
+          <h1 class="brand">Bài viết tiếng Nga</h1>
+          <p>Trang tổng hợp bài viết mẫu về tiếng Nga, văn hóa và học tập.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="/home">Trang chủ</a>
+          <a href="/">Calendar</a>
+          <a href="/learn">Học tiếng Nga</a>
+          <a href="/contact">Liên hệ</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <h1>Nội dung mẫu cho các bài viết</h1>
+        <p>Danh sách bài viết mẫu để bạn dễ dàng thay thế bằng nội dung thực tế sau này.</p>
+      </section>
+
+      <div class="list">
+        <div class="card">
+          <h2>Bài viết 1: Bảng chữ cái Cyrillic</h2>
+          <p>Giới thiệu cách viết, phát âm và các mẹo học bảng chữ cái tiếng Nga nhanh chóng.</p>
+        </div>
+        <div class="card">
+          <h2>Bài viết 2: Văn hóa Nga cơ bản</h2>
+          <p>Những điều cần biết khi học tiếng Nga: lễ hội, cách chào hỏi và ứng xử trong giao tiếp.</p>
+        </div>
+        <div class="card">
+          <h2>Bài viết 3: Mẹo học từ vựng</h2>
+          <p>Phương pháp ghi nhớ từ vựng tiếng Nga hiệu quả cho người mới bắt đầu.</p>
+        </div>
+      </div>
+
+      <a class="button" href="/home">Quay lại trang chủ</a>
+      <footer>TAIGA Center • Nội dung mẫu.</footer>
+    </div>
+  </body>
+</html>

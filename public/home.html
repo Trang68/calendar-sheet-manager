@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAIGA Center - Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f2efe7;
+        --paper: #fffdf8;
+        --ink: #1a2432;
+        --line: #d6d2c8;
+        --brand: #1a7a5e;
+        --brand-strong: #0d5c45;
+        --accent: #e8662f;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); }
+      .shell { max-width: 1200px; margin: 0 auto; padding: 24px; }
+      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 32px; }
+      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 800; margin: 0; color: var(--brand-strong); }
+      .description { margin: 8px 0 0; opacity: 0.84; font-size: 1rem; }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
+      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
+      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
+      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 40px; box-shadow: 0 20px 40px rgba(26, 36, 50, 0.08); margin-bottom: 32px; }
+      .hero h1 { margin: 0 0 18px; font-size: clamp(2rem, 4vw, 3rem); }
+      .hero p { margin: 0 0 28px; line-height: 1.8; font-size: 1.05rem; }
+      .hero a.button { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 14px 24px; border-radius: 999px; font-weight: 700; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); }
+      .card h2 { margin: 0 0 12px; color: var(--brand); }
+      .card p { margin: 0; line-height: 1.8; }
+      .section-title { margin: 0 0 16px; font-size: 1.4rem; }
+      footer { margin-top: 40px; text-align: center; color: #5f6a70; font-size: 0.95rem; }
+      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div>
+          <h1 class="brand">TAIGA Center</h1>
+          <p class="description">Trung tâm học tiếng Nga với giải pháp trọn gói: học, tư vấn, bài viết chuyên đề và quản lý lịch học trực tuyến.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="/">Calendar</a>
+          <a href="/learn">Học tiếng Nga</a>
+          <a href="/articles">Bài viết</a>
+          <a href="/contact">Liên hệ</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <h1>Học tiếng Nga dễ dàng, bài bản và chuyên nghiệp</h1>
+        <p>TAIGA Center cung cấp chương trình học từ căn bản đến nâng cao, phù hợp với người mới bắt đầu, học viên tự học và người cần ôn thi chuyên ngành hoặc du học.</p>
+        <a class="button" href="/">Xem lịch học & quản lý sự kiện</a>
+      </section>
+
+      <section>
+        <h2 class="section-title">Dành cho bạn</h2>
+        <div class="grid">
+          <div class="card">
+            <h2>Khóa học thiết kế riêng</h2>
+            <p>Chương trình linh hoạt: giao tiếp, ngữ pháp, luyện thi, tiếng Nga thương mại. Mỗi học viên sẽ được tư vấn lộ trình cá nhân hóa.</p>
+          </div>
+          <div class="card">
+            <h2>Đội ngũ giảng viên giàu kinh nghiệm</h2>
+            <p>Giáo viên bản xứ và Việt Nam phối hợp giảng dạy, giúp bạn vừa thực hành vừa hiểu sâu ngôn ngữ và văn hóa.</p>
+          </div>
+          <div class="card">
+            <h2>Tài liệu mẫu</h2>
+            <p>Kho bài tập, bài giảng và bài viết tham khảo, phù hợp cho học viên chọn nền tảng học tập bền vững.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 32px;">
+        <h2 class="section-title">Bắt đầu ngay</h2>
+        <div class="grid">
+          <div class="card">
+            <h2>Đăng ký tư vấn</h2>
+            <p>Gửi yêu cầu tại trang liên hệ. Chúng tôi sẽ liên hệ để tư vấn khóa học phù hợp với mục tiêu của bạn.</p>
+          </div>
+          <div class="card">
+            <h2>Đọc bài viết</h2>
+            <p>Khám phá nội dung về văn hóa Nga, mẹo học nhớ từ vựng, ngữ pháp và kỹ năng nghe nói.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>TAIGA Center • Trang demo với nội dung mẫu. Bạn có thể thay đổi nội dung thực tế sau.</footer>
+    </div>
+  </body>
+</html>

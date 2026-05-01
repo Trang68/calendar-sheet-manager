@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Học tiếng Nga - TAIGA Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); }
+      .shell { max-width: 1100px; margin: 0 auto; padding: 24px; }
+      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 32px; }
+      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0; color: var(--brand-strong); }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
+      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
+      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
+      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 34px; box-shadow: 0 20px 40px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
+      .hero h1 { margin: 0 0 14px; }
+      .hero p { margin: 0; line-height: 1.8; }
+      .grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 26px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); }
+      .card h2 { margin: 0 0 12px; color: var(--brand); }
+      .card p { margin: 0; line-height: 1.7; }
+      .note { margin-top: 26px; color: #555; font-size: 0.98rem; }
+      footer { margin-top: 40px; text-align: center; color: #606b73; font-size: 0.95rem; }
+      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div>
+          <h1 class="brand">Học tiếng Nga</h1>
+          <p class="note">Khám phá chương trình học, lộ trình và nội dung mẫu dành cho học viên tiếng Nga.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="/home">Trang chủ</a>
+          <a href="/">Calendar</a>
+          <a href="/articles">Bài viết</a>
+          <a href="/contact">Liên hệ</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <h1>Lộ trình học tiếng Nga mẫu</h1>
+        <p>Trang này mô tả các giai đoạn học: bắt đầu với bảng chữ, tiếp theo là ngữ pháp căn bản, và nâng cao với hội thoại, đọc hiểu và luyện thi.</p>
+      </section>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Giai đoạn 1: Khởi đầu</h2>
+          <p>Học bảng chữ Kirin, phát âm cơ bản và câu giao tiếp đơn giản. Mục tiêu: hiểu và nói những câu ngắn, giới thiệu bản thân.</p>
+        </div>
+        <div class="card">
+          <h2>Giai đoạn 2: Cấu trúc và ngữ pháp</h2>
+          <p>Nắm vững 6 trường hợp danh từ, thì động từ, giới từ và cấu trúc câu cơ bản. Tập trung vào bài tập viết và dịch.</p>
+        </div>
+        <div class="card">
+          <h2>Giai đoạn 3: Ứng dụng thực hành</h2>
+          <p>Thực hành nghe hiểu, hội thoại và đọc báo. Học từng chủ đề: du lịch, công việc, văn hoá và cuộc sống hàng ngày.</p>
+        </div>
+      </div>
+
+      <p class="note">Nội dung đang là mẫu. Bạn có thể thay thế bằng khóa học thực tế, biểu đồ lộ trình hoặc thông tin chương trình.</p>
+      <footer>TAIGA Center • Nội dung mẫu.</footer>
+    </div>
+  </body>
+</html>

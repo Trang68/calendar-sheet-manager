@@ -191,6 +191,22 @@ app.delete("/api/events/:eventId", requireToken, async (req, res) => {
   }
 });
 
+app.get("/home", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/home.html"));
+});
+
+app.get("/learn", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/learn.html"));
+});
+
+app.get("/contact", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/contact.html"));
+});
+
+app.get("/articles", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/articles.html"));
+});
+
 app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ - TAIGA Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); }
+      .shell { max-width: 1000px; margin: 0 auto; padding: 24px; }
+      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
+      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
+      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
+      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
+      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 36px; box-shadow: 0 18px 36px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
+      .hero h1 { margin: 0 0 12px; }
+      .hero p { margin: 0; line-height: 1.8; }
+      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); margin-bottom: 20px; }
+      .card h2 { margin: 0 0 12px; color: var(--brand); }
+      .card p { margin: 0; line-height: 1.7; }
+      .button { display: inline-block; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 12px 20px; border-radius: 999px; margin-top: 18px; }
+      footer { margin-top: 32px; text-align: center; color: #606b73; font-size: 0.95rem; }
+      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <div>
+          <h1 class="brand">Liên hệ tư vấn</h1>
+          <p>Gửi yêu cầu để nhận thông tin khóa học, lộ trình và báo giá chi tiết.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="/home">Trang chủ</a>
+          <a href="/">Calendar</a>
+          <a href="/learn">Học tiếng Nga</a>
+          <a href="/articles">Bài viết</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <h1>Nhận tư vấn khóa học</h1>
+        <p>Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ để hỗ trợ bạn chọn khóa học phù hợp nhất.</p>
+      </section>
+
+      <div class="card">
+        <h2>Thông tin mẫu</h2>
+        <p>Họ tên: Nguyễn Văn A</p>
+        <p>Điện thoại: 0988 123 456</p>
+        <p>Email: email@example.com</p>
+        <p>Quan tâm khóa: Tiếng Nga giao tiếp / Tiếng Nga chuyên ngành / Luyện thi</p>
+      </div>
+
+      <div class="card">
+        <h2>Gợi ý nội dung liên hệ</h2>
+        <p>Hãy gửi yêu cầu gồm trình độ hiện tại, mục tiêu học và khung thời gian bạn muốn học. Chúng tôi sẽ tư vấn lộ trình cụ thể.</p>
+        <a class="button" href="/home">Quay lại trang chủ</a>
+      </div>
+
+      <footer>TAIGA Center • Mẫu trang liên hệ.</footer>
+    </div>
+  </body>
+</html>

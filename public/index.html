@@ -53,6 +53,23 @@
         gap: 10px;
       }
 
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+
       .title {
         font-family: "Space Grotesk", sans-serif;
         font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -310,7 +327,13 @@
           <h1 class="title"> TAIGA CENTER - 🔒 Confidential Suite</h1>
           <p class="subtitle">Managing schedule and exporting results.</p>
         </div>
-        <span class="mini" id="now"></span>
+        <nav class="nav-links">
+          <a href="/home">Home</a>
+          <a href="/learn">Học tiếng Nga</a>
+          <a href="/articles">Bài viết</a>
+          <a href="/contact">Liên hệ</a>
+          <a href="/">Calendar</a>
+        </nav>
       </header>
 
       <section class="bar">
