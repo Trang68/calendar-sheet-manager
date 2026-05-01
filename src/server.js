@@ -14,7 +14,7 @@ const config = {
   googleServiceAccountJson: process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "",
   googleCalendarId: process.env.GOOGLE_CALENDAR_ID || "",
   googleSpreadsheetId: process.env.GOOGLE_SPREADSHEET_ID || "",
-  googleTimeZone: process.env.GOOGLE_TIMEZONE || "Asia/Ho_Chi_Minh",
+  googleTimeZone: "Asia/Ho_Chi_Minh",
   sheetGid: process.env.SHEET_GID || "0",
   appToken: process.env.APP_TOKEN || "",
 };
