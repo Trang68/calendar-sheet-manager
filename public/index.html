@@ -334,6 +334,7 @@
           <a href="/contact">Liên hệ</a>
           <a href="/">Calendar</a>
         </nav>
+        <span class="mini" id="now"></span>
       </header>
 
       <section class="bar">
@@ -369,6 +370,10 @@
       const sheetFrame = document.getElementById("sheetFrame");
 
       function tickNow() {
+        if (!nowEl) {
+          return;
+        }
+
         nowEl.textContent = new Date().toLocaleString("vi-VN", {
           timeZone: "Asia/Ho_Chi_Minh", // hoặc timezone bạn muốn
           hour12: false,                // hiển thị 24h
