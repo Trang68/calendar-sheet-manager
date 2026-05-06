@@ -98,16 +98,9 @@
 
       button,
       input {
-        /* border-radius: 10px;
+        border-radius: 10px;
         border: 1px solid var(--line);
-        font: inherit; */
-        border: none;                       /* bỏ toàn bộ border mặc định */
-        border-bottom: 1px solid #ccc;      /* border dưới nhạt khi bình thường */
-        outline: none;                      /* bỏ viền mặc định khi focus */
-        transition: border-color 0.3s;      /* hiệu ứng mượt khi đổi màu */
-      }
-      input:focus {
-        border-bottom: 2.5px solid #036bb0;   /* border dưới đậm, màu xanh khi focus */
+        font: inherit;
       }
 
       button {
@@ -770,7 +763,7 @@
         <!-- <label>Start Time *</label> -->
         <input id="eventStart" type="datetime-local" step="900" />
 
-        <!-- <label>End Time *</label> -->
+        <label>End Time *</label>
         <input id="eventEnd" type="datetime-local" step="900" />
 
         <label><input type="checkbox" id="eventMeetLink" /> Add link Google Meet</label>
