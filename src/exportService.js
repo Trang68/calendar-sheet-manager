@@ -87,6 +87,16 @@ function deepEqualArray(a, b) {
   return true;
 }
 
+function countSessionEntries(cellValue) {
+  const text = normalizeDisplayText(cellValue);
+  if (!text) return 0;
+  return text
+    .split(",")
+    .map((part) => normalizeDisplayText(part))
+    .filter(Boolean)
+    .length;
+}
+
 class ExportService {
   constructor(config) {
     this.config = config;
@@ -261,10 +271,12 @@ class ExportService {
 
     const rowUpdates = {};
     const formulaCells = [];
+    const weeksForTotalSet = new Set(weeksForTotal);
+    const allClassKeys = new Set([...Object.keys(studentRowMap), ...Object.keys(classData)]);
 
-    Object.keys(classData).forEach((classKey) => {
-      const classInfo = classData[classKey];
-      const weeks = classInfo.weeks;
+    allClassKeys.forEach((classKey) => {
+      const classInfo = classData[classKey] || { displayName: "", weeks: {} };
+      const weeks = classInfo.weeks || {};
       let rowIndex = null;
       let finalDisplayName = classInfo.displayName || "";
 
@@ -291,15 +303,17 @@ class ExportService {
       for (let sheetW = 1; sheetW <= 5; sheetW += 1) {
         const overallWNum = sheetWeekNumToOverallWeekNumMap[sheetW];
         if (weeksToUpdateSet.has(overallWNum)) {
-          const colIdx = sheetW;
-          rowBuf[colIdx] = weeks[overallWNum] ? weeks[overallWNum].join(", ") : "";
+          rowBuf[sheetW] = weeks[overallWNum] ? weeks[overallWNum].join(", ") : "";
         }
       }
 
       let calculatedTotalInMonth = 0;
-      weeksForTotal.forEach((w) => {
-        if (weeks[w]) calculatedTotalInMonth += weeks[w].length;
-      });
+      for (let sheetW = 1; sheetW <= 5; sheetW += 1) {
+        const overallWNum = sheetWeekNumToOverallWeekNumMap[sheetW];
+        if (weeksForTotalSet.has(overallWNum)) {
+          calculatedTotalInMonth += countSessionEntries(rowBuf[sheetW]);
+        }
+      }
       rowBuf[6] = calculatedTotalInMonth;
     });
 
