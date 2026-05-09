@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TAIGA Center - Modernizing Class Management</title>
+    <meta name="description" content="TAIGA Center - Trung tâm đào tạo tiếng Nga chuyên nghiệp. Cung cấp các khóa học tiếng Nga từ cơ bản đến nâng cao, luyện thi TRKI, tiếng Nga thương mại và du học." />
+    <title>TAIGA Center - Trung tâm Tiếng Nga Chuyên Nghiệp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,22 +13,26 @@
     />
     <style>
       :root {
-        --brand: #0e59fade;
-        --brand-strong: #0d5c45;
+        --brand: #0e59fa;
+        --brand-strong: #0a42bd;
         --accent: #e8662f;
-        --dark-bg: #2b70f0de;
-        --light-bg: #f5f7fa;
+        --dark-bg: #1a2432;
+        --page-bg: #dbe4f0;
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html, body {
+      body {
         margin: 0;
         padding: 0;
         font-family: "Manrope", sans-serif;
-        background: #ffffff;
+        background-color: var(--page-bg);
+        background-image: 
+          radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.4), transparent 40%),
+          radial-gradient(circle at 85% 80%, rgba(14, 89, 250, 0.05), transparent 40%);
+        background-attachment: fixed;
         color: #1a2432;
       }
 
@@ -36,9 +41,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #e5e8ec;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         max-width: 1440px;
         margin: 0 auto;
+        background: rgba(219, 228, 240, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
 
       .logo {
@@ -58,6 +69,7 @@
         color: #1a2432;
         font-weight: 600;
         font-size: 0.95rem;
+        transition: color 0.2s ease;
       }
 
       .nav a:hover {
@@ -73,23 +85,22 @@
       .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* gap: 60px; */
         align-items: center;
         padding-top: 80px;
+        padding-bottom: 10px;
       }
 
       .hero-text {
         flex: 3; 
-         max-width: 85%; 
-        /* padding-right: 20px; */
+        max-width: 85%; 
       }
 
       .hero-tag {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(232, 102, 47, 0.1);
-        border: 1px solid rgba(232, 102, 47, 0.3);
+        background: #ffffff;
+        border: 1px solid rgba(232, 102, 47, 0.2);
         color: var(--accent);
         padding: 8px 16px;
         border-radius: 999px;
@@ -98,6 +109,7 @@
         margin-bottom: 36px;
         text-transform: uppercase;
         letter-spacing: 0.02em;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
       }
 
       .hero h1 {
@@ -117,7 +129,7 @@
         margin: 24px 0 0;
         font-size: 1.05rem;
         line-height: 1.7;
-        color: #555;
+        color: #475569;
         max-width: 520px;
       }
 
@@ -144,17 +156,19 @@
       .btn.primary {
         background: linear-gradient(120deg, var(--brand), var(--brand-strong));
         color: white;
+        box-shadow: 0 4px 15px rgba(14, 89, 250, 0.2);
       }
 
       .btn.primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(13, 92, 69, 0.3);
+        box-shadow: 0 8px 20px rgba(14, 89, 250, 0.3);
       }
 
       .btn.secondary {
         background: white;
         color: #1a2432;
-        border: 2px solid #e5e8ec;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
       }
 
       .btn.secondary:hover {
@@ -178,11 +192,10 @@
       }
 
       .dark-section {
-        /* background: var(--dark-bg); */
-        background: linear-gradient(to top, #1e90ff, #1a2432);
+        background: linear-gradient(to top, #1e3a8a, var(--dark-bg));
         color: white;
-        padding: 45px 0;
-        /* margin: 60px 0; */
+        padding: 60px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       }
 
       .dark-section .container {
@@ -201,33 +214,72 @@
 
       .dark-section p {
         font-size: 1.1rem;
-        color: #ccc;
-        margin: 0;
+        color: #cbd5e1;
+        margin: 0 auto 40px;
         max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
+      }
+
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .reason-item {
+        text-align: left;
+        color: #ddd;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 24px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      
+      .reason-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .reason-icon {
+        font-size: 2.4rem;
+        margin-bottom: 12px;
+      }
+
+      .reason-item strong {
+        font-size: 1.2rem;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .reason-item p {
+        font-size: 0.95rem;
+        margin: 0;
+        color: #cbd5e1;
+        line-height: 1.6;
       }
 
       .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-        padding: 20px 0;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        padding: 20px 0 60px;
       }
 
       .feature-card {
         background: white;
-        border: 1px solid #e5e8ec;
+        border: none;
         border-radius: 16px;
         padding: 32px;
         text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       }
+      
       .feature-card:hover {
-        transform: translateY(-5px); /* nổi lên một chút */
-        box-shadow: 0 8px 20px rgba(4, 64, 228, 0.2); /* bóng đậm hơn */
-        border: 1px solid rgba(53, 66, 255, 0.801); /* thêm border mờ */
-        transition: all 0.3s ease
+        transform: translateY(-6px); 
+        box-shadow: 0 12px 30px rgba(14, 89, 250, 0.12); 
       }
 
       .feature-icon {
@@ -243,7 +295,7 @@
 
       .feature-card p {
         margin: 0;
-        color: #666;
+        color: #475569;
         line-height: 1.6;
         font-size: 0.95rem;
       }
@@ -253,7 +305,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 60px;
         align-items: center;
-        padding: 80px 0;
+        padding: 40px 0 80px;
       }
 
       .solution-text h2 {
@@ -263,7 +315,7 @@
       }
 
       .solution-text p {
-        color: #666;
+        color: #475569;
         line-height: 1.8;
         margin: 0 0 20px;
       }
@@ -280,6 +332,11 @@
         gap: 12px;
         margin-bottom: 14px;
         color: #1a2432;
+        font-weight: 600;
+        background: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.02);
       }
 
       .solution-list li:before {
@@ -296,11 +353,12 @@
       }
 
       .solution-image-card {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8f0ed 100%);
+        background: white;
         border-radius: 12px;
         padding: 24px;
         text-align: center;
-        border: 1px solid #e5e8ec;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
       }
 
       .solution-image-card h4 {
@@ -312,7 +370,7 @@
       .solution-image-card p {
         margin: 0;
         font-size: 0.85rem;
-        color: #888;
+        color: #475569;
       }
 
       .stats {
@@ -322,6 +380,7 @@
         border-radius: 12px;
         text-align: center;
         grid-column: 1 / -1;
+        box-shadow: 0 8px 25px rgba(232, 102, 47, 0.3);
       }
 
       .stat-number {
@@ -338,24 +397,24 @@
 
       .categories {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
-        padding: 80px 0;
+        padding: 40px 0 80px;
       }
 
       .category-card {
-        background: linear-gradient(135deg, #f9f9f9 0%, #f2f4f7 100%);
-        border: 1px solid #e5e8ec;
+        background: white;
+        border: none;
         border-radius: 12px;
         padding: 24px;
         cursor: pointer;
         transition: all 200ms ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       }
 
       .category-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 10px 28px rgba(20, 91, 243, 0.08);
-        border-color: var(--brand);
+        box-shadow: 0 12px 30px rgba(14, 89, 250, 0.1);
       }
 
       .category-icon {
@@ -365,65 +424,115 @@
 
       .category-card h3 {
         margin: 0 0 8px;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        color: #1a2432;
       }
 
       .category-card p {
         margin: 0;
-        font-size: 0.85rem;
-        color: #888;
+        font-size: 0.9rem;
+        color: #475569;
+        line-height: 1.5;
       }
 
       .section-title {
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
-        margin: 80px 48px;
+        font-size: clamp(2rem, 3.5vw, 2.6rem);
+        margin: 80px 20px 50px;
         text-align: center;
         font-weight: 800;
+        background: linear-gradient(135deg, #1a2432 0%, var(--brand-strong) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        padding-bottom: 20px;
+        letter-spacing: -0.02em;
       }
 
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 5px;
+        background: linear-gradient(90deg, var(--brand), var(--accent));
+        border-radius: 99px;
+      }
 
-      .section-subtitle {
+      .contact-banner {
+        background: linear-gradient(120deg, var(--brand), var(--brand-strong));
+        border-radius: 20px;
+        padding: 48px;
         text-align: center;
-        color: #888;
-        margin: 0 0 40px;
-        font-size: 1.05rem;
+        color: white;
+        margin-bottom: -40px;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 20px 40px rgba(14, 89, 250, 0.25);
+      }
+
+      .contact-banner h2 {
+        font-size: 2rem;
+        margin: 0 0 16px;
+      }
+
+      .contact-banner p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin: 0 0 32px;
       }
 
       footer {
-        background: #f5f7fa;
-        border-top: 1px solid #e5e8ec;
-        padding: 40px 0;
-        margin-top: 60px;
+        background: #ffffff;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        padding: 80px 0 40px;
         text-align: center;
-        color: #888;
-        font-size: 0.9rem;
+        color: #475569;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 1024px) {
+        .features {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
       }
 
       @media (max-width: 768px) {
-        .hero {
-          grid-template-columns: 1fr;
-          padding: 40px 0;
-          gap: 40px;
-        }
-
-        .hero-text {
-          padding-right: 0;
-        }
-
         .header {
           padding: 16px 20px;
-        }
-
-        .container {
-          padding: 0 20px;
+          flex-direction: column;
+          gap: 16px;
         }
 
         .nav {
           gap: 16px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 40px 0;
+          gap: 40px;
+          text-align: center;
+        }
+
+        .hero-text {
+          max-width: 100%;
+        }
+
+        .hero-desc {
+          margin: 24px auto 0;
         }
 
         .hero-cta {
           flex-direction: column;
+          align-items: center;
+        }
+
+        .container {
+          padding: 0 20px;
         }
 
         .solution-section {
@@ -434,6 +543,15 @@
         .solution-image {
           grid-template-columns: 1fr;
         }
+        
+        .section-title {
+          margin-top: 40px;
+          margin-bottom: 24px;
+        }
+
+        .contact-banner {
+          padding: 32px 20px;
+        }
       }
     </style>
   </head>
@@ -442,60 +560,90 @@
       <div class="logo">TAIGA Center</div>
       <nav class="nav">
         <a href="#home">Trang chủ</a>
-        <a href="#features">Về chúng tôi</a>
-        <a href="#about">Khóa học</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#courses">Khóa học</a>
         <a href="#contact">Liên hệ</a>
       </nav>
     </header>
 
-    <section class="container hero">
+    <section class="container hero" id="home">
       <div class="hero-text">
-        <span class="hero-tag">✨ Learn Russian Language</span>
+        <span class="hero-tag">✨ Học Tiếng Nga Chuẩn</span>
         <h1>Học tiếng Nga <br /><span class="accent">Chuyên nghiệp</span> & Hiệu quả</h1>
         <p class="hero-desc">
           Khóa học tiếng Nga từ cơ bản đến nâng cao với giáo viên bản xứ và giáo viên Việt Nam. Chương trình đa dạng: giao tiếp, ngữ pháp, luyện thi, tiếng Nga thương mại.
         </p>
         <div class="hero-cta">
-          <button class="btn primary" onclick="alert('Liên hệ tư vấn')">Đăng ký tư vấn</button>
-          <button class="btn secondary">Xem khóa học</button>
+          <a href="#contact" class="btn primary">Đăng ký tư vấn</a>
+          <a href="#courses" class="btn secondary">Xem khóa học</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="/media/main_teacher_photo.png" alt="TAIGA Center - Smart Class Management" />
+        <img src="/media/main_teacher_photo.png" alt="Giáo viên tiếng Nga tại TAIGA Center" />
       </div>
     </section>
 
-
-    <section class="dark-section" id="features">
+    <section class="dark-section" id="about">
       <div class="container">
-        <h2 >Tại sao chọn TAIGA Center?</h2>
+        <h2>Tại sao chọn TAIGA Center?</h2>
         <p>Chúng tôi cung cấp khóa học tiếng Nga chất lượng cao với phương pháp giảng dạy hiện đại và tập trung vào thực hành thực tế.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 40px;">
-          <div style="text-align: left; color: #ddd;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">👨‍🏫</div>
+        <div class="reasons-grid">
+          <div class="reason-item">
+            <div class="reason-icon">👨‍🏫</div>
             <strong>Giáo viên bản xứ</strong>
-            <p style="font-size: 0.9rem; margin: 8px 0 0; color: #aaa;">Giáo viên tiếng Nga từ Nga và Việt Nam kinh nghiệm</p>
+            <p>Đội ngũ giáo viên tiếng Nga từ Nga và Việt Nam với nhiều năm kinh nghiệm giảng dạy.</p>
           </div>
-          <div style="text-align: left; color: #ddd;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">📚</div>
+          <div class="reason-item">
+            <div class="reason-icon">📚</div>
             <strong>Chương trình đa dạng</strong>
-            <p style="font-size: 0.9rem; margin: 8px 0 0; color: #aaa;">Từ sơ cấp đến cao cấp, luyện thi, tiếng Nga thương mại</p>
+            <p>Phục vụ mọi nhu cầu từ sơ cấp đến cao cấp, luyện thi TRKI, tiếng Nga thương mại và xuất khẩu lao động.</p>
           </div>
-          <div style="text-align: left; color: #ddd;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
+          <div class="reason-item">
+            <div class="reason-icon">🎯</div>
             <strong>Phương pháp hiệu quả</strong>
-            <p style="font-size: 0.9rem; margin: 8px 0 0; color: #aaa;">Kết hợp lý thuyết và thực hành, tập trung giao tiếp</p>
+            <p>Kết hợp nhuần nhuyễn giữa lý thuyết và thực hành, đặc biệt tập trung vào kỹ năng giao tiếp.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container" id="about">
-      <h2 class="section-title">Chương trình khóa học</h2>
+    <section class="container">
+      <h2 class="section-title">Điểm nổi bật của trung tâm</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🏫</div>
+          <h3>Chuyên gia hàng đầu</h3>
+          <p>Giáo viên đã sinh sống và học tập tại Nga với kinh nghiệm sư phạm dày dặn.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Tài liệu chuẩn quốc tế</h3>
+          <p>Sử dụng sách giáo khoa Nga chính thống và hệ thống bài tập thực hành phong phú.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Lộ trình rõ ràng</h3>
+          <p>Mục tiêu đầu ra cụ thể cho từng khóa học, thường xuyên đánh giá tiến độ của học viên.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Thực hành toàn diện</h3>
+          <p>Phát triển đồng đều 4 kỹ năng Nghe - Nói - Đọc - Viết, phá bỏ rào cản giao tiếp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🕐</div>
+          <h3>Lịch học linh hoạt</h3>
+          <p>Các khóa học khai giảng liên tục quanh năm với nhiều khung giờ: Sáng - Chiều - Tối.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="courses">
+      <h2 class="section-title">Lộ trình và Khóa học</h2>
       <div class="solution-section">
         <div class="solution-text">
-          <h2>Khóa học được thiết kế riêng</h2>
-          <p>Mỗi học viên sẽ được tư vấn lộ trình học phù hợp với mục tiêu cá nhân, từ giao tiếp hàng ngày đến luyện thi chuyên ngành.</p>
+          <h2>Khóa học được thiết kế riêng biệt</h2>
+          <p>Mỗi học viên tại TAIGA Center sẽ được tư vấn lộ trình học phù hợp nhất với trình độ hiện tại và mục tiêu cá nhân, đảm bảo tối ưu thời gian và chi phí.</p>
           <ul class="solution-list">
             <li>Tiếng Nga sơ cấp - từ A0 đến A2</li>
             <li>Tiếng Nga trung cấp - từ B1 đến B2</li>
@@ -507,7 +655,7 @@
         <div class="solution-image">
           <div class="solution-image-card stats">
             <div class="stat-number">100+</div>
-            <div class="stat-label">Học viên thành công</div>
+            <div class="stat-label">Học viên đã thành công</div>
           </div>
           <div class="solution-image-card">
             <h4>🏅 Luyện thi</h4>
@@ -517,84 +665,99 @@
             <h4>💼 Thương mại</h4>
             <p>Tiếng Nga chuyên ngành phục vụ công tác và hợp tác kinh doanh</p>
           </div>
-            <div class="solution-image-card">
-            <h4>💼 XKLĐ</h4>
-            <p>Tiếng Nga cho xuất khẩu lao động và thi chứng chỉ ở Nga</p>
+          <div class="solution-image-card">
+            <h4>✈️ XKLĐ & Định cư</h4>
+            <p>Giao tiếp cấp tốc phục vụ công việc và đời sống</p>
           </div>
           <div class="solution-image-card">
-            <h4>🚀 Du học</h4>
-            <p>Chuẩn bị du học Nga - visa + phỏng vấn</p>
+            <h4>🚀 Du học Nga</h4>
+            <p>Luyện phỏng vấn visa và hành trang văn hóa</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="container">
-      <h2 class="section-title">Tại sao học sinh chọn chúng tôi</h2>
-      <div class="features">
-        <div class="feature-card">
-          <div class="feature-icon">👨‍🏫</div>
-          <h3>Giáo viên chuyên nghiệp</h3>
-          <p>Giáo viên đã sống ở Nga với kinh nghiệm giảng dạy nhiều năm</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📖</div>
-          <h3>Tài liệu chất lượng</h3>
-          <p>Sách giáo khoa Nga chính thống, bài tập thực hành phong phú</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3>Lộ trình rõ ràng</h3>
-          <p>Mục tiêu cụ thể cho mỗi khóa học, đánh giá tiến độ đều đặn</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3>Tập trung giao tiếp</h3>
-          <p>Phương pháp thực hành nói - nghe - viết - đọc toàn diện</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🕐</div>
-          <h3>Lịch học linh hoạt</h3>
-          <p>Các khóa học quanh năm, lịch học buổi sáng - chiều - tối</p>
-        </div>
-        <!-- <div class="feature-card">
-          <div class="feature-icon">🏅</div>
-          <h3>Cấp chứng chỉ</h3>
-          <p>Hoàn thành khóa học được cấp chứng chỉ khoá học</p>
-        </div> -->
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="section-title" style="margin-top: 80px;">Các lớp học hiện có</h2>
       <div class="categories">
         <div class="category-card">
           <div class="category-icon">🥼</div>
-          <h3>Sơ cấp</h3>
-          <p>A0 - A2: Luyện cảm nhận, giao tiếp cơ bản, từ vựng hàng ngày</p>
+          <h3>Khóa Sơ cấp</h3>
+          <p>Dành cho người mới bắt đầu (A0 - A2): Xây dựng nền tảng phát âm, giao tiếp cơ bản, từ vựng hàng ngày.</p>
         </div>
         <div class="category-card">
           <div class="category-icon">📚</div>
-          <h3>Trung cấp</h3>
-          <p>B1 - B2: Nâng cao giao tiếp, ngữ pháp chi tiết, viết email</p>
+          <h3>Khóa Trung cấp</h3>
+          <p>Nâng cao kỹ năng (B1 - B2): Phản xạ giao tiếp nhanh, nắm chắc ngữ pháp phức tạp, kỹ năng viết email.</p>
         </div>
         <div class="category-card">
           <div class="category-icon">🎓</div>
-          <h3>Cao cấp</h3>
-          <p>C1 - C2: Sử dụng tiếng Nga như người bản xứ, học nâng cao</p>
+          <h3>Khóa Cao cấp</h3>
+          <p>Thành thạo như bản xứ (C1 - C2): Đọc hiểu tài liệu chuyên ngành, thuyết trình và tranh luận bằng tiếng Nga.</p>
         </div>
         <div class="category-card">
           <div class="category-icon">🏆</div>
-          <h3>Chuẩn bị thi</h3>
-          <p>Luyện thi TRKI: chiến lược thi, bài tập phỏng vấn</p>
+          <h3>Luyện thi chứng chỉ</h3>
+          <p>Chuyên sâu luyện thi TRKI các cấp độ: Cung cấp mẹo làm bài, ngân hàng đề thi đa dạng và thi thử miễn phí.</p>
         </div>
       </div>
     </section>
 
+    <div class="container" id="contact">
+      <div class="contact-banner">
+        <h2>Sẵn sàng chinh phục tiếng Nga?</h2>
+        <p>Để lại thông tin để đội ngũ TAIGA Center tư vấn lộ trình học tối ưu nhất dành riêng cho bạn.</p>
+        <a href="/contact" class="btn secondary">Liên hệ nhận tư vấn miễn phí</a>
+      </div>
+    </div>
+
     <footer>
       <div class="container">
-        <p>&copy; 2026 TAIGA Center - Trung tâm học tiếng Nga. Liên hệ: trangdang6898@gmail.com</p>
+        <div class="logo" style="margin-bottom: 16px; color: #1a2432;">TAIGA Center</div>
+        <p>&copy; 2026 TAIGA Center - Trung tâm học tiếng Nga chuyên nghiệp.</p>
+        <p>Email liên hệ: <a href="mailto:" style="color: var(--brand); text-decoration: none;"></a></p>
       </div>
     </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            
+            const header = document.querySelector('.header');
+            const headerOffset = header ? header.offsetHeight : 90;
+            
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = targetPosition - headerOffset;
+            
+            const startPosition = window.scrollY;
+            const distance = offsetPosition - startPosition;
+            const duration = 600; 
+            let start = null;
+
+            function animation(currentTime) {
+              if (start === null) start = currentTime;
+              const timeElapsed = currentTime - start;
+              const progress = Math.min(timeElapsed / duration, 1);
+              
+              const ease = progress < 0.5 
+                ? 2 * progress * progress 
+                : -1 + (4 - 2 * progress) * progress;
+              
+              window.scrollTo(0, startPosition + distance * ease);
+              
+              if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+              } else {
+                window.scrollTo(0, offsetPosition);
+              }
+            }
+            requestAnimationFrame(animation);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
