@@ -35,6 +35,20 @@
           radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%),
           linear-gradient(165deg, #f2efe7 0%, #ece6da 100%);
         font-family: "Manrope", sans-serif;
+        position: relative;
+        isolation: isolate;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../media/flag_fly.png") center center / cover no-repeat;
+        opacity: 0.14;
+        filter: blur(8px) saturate(82%);
+        transform: scale(1.05);
+        pointer-events: none;
+        z-index: -1;
       }
 
       .shell {

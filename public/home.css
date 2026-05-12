@@ -15,11 +15,25 @@
         padding: 0;
         font-family: "Manrope", sans-serif;
         background-color: var(--page-bg);
-        background-image: 
+        background-image:
           radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.4), transparent 40%),
           radial-gradient(circle at 85% 80%, rgba(14, 89, 250, 0.05), transparent 40%);
         background-attachment: fixed;
         color: #1a2432;
+        position: relative;
+        isolation: isolate;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../media/map_flag_border.png") center center / cover no-repeat;
+        opacity: 0.3;
+        filter: blur(0px) saturate(55%);
+        transform: scale(1);
+        pointer-events: none;
+        z-index: -1;
       }
 
       .header {
@@ -88,7 +102,7 @@
       }
 
       .hero-text {
-        flex: 3; 
+        flex: 3;
         max-width: 100%;
       }
 
@@ -106,7 +120,7 @@
         margin-bottom: 36px;
         text-transform: uppercase;
         letter-spacing: 0.02em;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
       }
 
       .hero h1 {
@@ -166,7 +180,7 @@
         background: white;
         color: #1a2432;
         border: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
       }
 
       .btn.secondary:hover {
@@ -175,7 +189,7 @@
       }
 
       .hero-image {
-        flex: 1; 
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -208,7 +222,7 @@
         white-space: nowrap;
         border: 2px solid rgba(255, 255, 255, 0.5);
       }
-      
+
       .floating-thought::before {
         content: '';
         position: absolute;
@@ -218,7 +232,7 @@
         border-radius: 50%;
         box-shadow: 0 4px 10px rgba(14, 89, 250, 0.1);
       }
-      
+
       .floating-thought::after {
         content: '';
         position: absolute;
@@ -234,8 +248,16 @@
         left: 5%;
         animation-delay: 0s;
       }
-      .thought-1::before { bottom: -12px; right: 30px; }
-      .thought-1::after { bottom: -22px; right: 20px; }
+
+      .thought-1::before {
+        bottom: -12px;
+        right: 30px;
+      }
+
+      .thought-1::after {
+        bottom: -22px;
+        right: 20px;
+      }
 
       .thought-2 {
         top: 45%;
@@ -243,16 +265,32 @@
         animation-delay: 1.2s;
         color: var(--accent);
       }
-      .thought-2::before { bottom: -12px; left: 30px; }
-      .thought-2::after { bottom: -22px; left: 20px; }
+
+      .thought-2::before {
+        bottom: -12px;
+        left: 30px;
+      }
+
+      .thought-2::after {
+        bottom: -22px;
+        left: 20px;
+      }
 
       .thought-3 {
         bottom: 15%;
         left: 0%;
         animation-delay: 2.5s;
       }
-      .thought-3::before { top: -12px; right: 40px; }
-      .thought-3::after { top: -22px; right: 30px; }
+
+      .thought-3::before {
+        top: -12px;
+        right: 40px;
+      }
+
+      .thought-3::after {
+        top: -22px;
+        right: 30px;
+      }
 
       .thought-4 {
         top: 10%;
@@ -260,27 +298,50 @@
         animation-delay: 0.5s;
         color: var(--accent);
       }
-      .thought-4::before { bottom: -12px; left: 20px; }
-      .thought-4::after { bottom: -22px; left: 10px; }
+
+      .thought-4::before {
+        bottom: -12px;
+        left: 20px;
+      }
+
+      .thought-4::after {
+        bottom: -22px;
+        left: 10px;
+      }
 
       .thought-5 {
         bottom: 10%;
         right: -5%;
         animation-delay: 1.8s;
       }
-      .thought-5::before { top: -12px; left: 30px; }
-      .thought-5::after { top: -22px; left: 20px; }
+
+      .thought-5::before {
+        top: -12px;
+        left: 30px;
+      }
+
+      .thought-5::after {
+        top: -22px;
+        left: 20px;
+      }
 
       @keyframes float {
-        0%, 100% { transform: translateY(0px) rotate(-2deg); }
-        50% { transform: translateY(-15px) rotate(2deg); }
+
+        0%,
+        100% {
+          transform: translateY(0px) rotate(-2deg);
+        }
+
+        50% {
+          transform: translateY(-15px) rotate(2deg);
+        }
       }
 
       .dark-section {
         background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0e59fa 100%);
         color: white;
         padding: 60px 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
       .dark-section .container {
@@ -320,7 +381,7 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: transform 0.3s ease, background 0.3s ease;
       }
-      
+
       .reason-item:hover {
         transform: translateY(-5px);
         background: rgba(255, 255, 255, 0.1);
@@ -361,10 +422,10 @@
         transition: all 0.3s ease;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       }
-      
+
       .feature-card:hover {
-        transform: translateY(-6px); 
-        box-shadow: 0 12px 30px rgba(14, 89, 250, 0.12); 
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(14, 89, 250, 0.12);
       }
 
       .feature-icon {
@@ -421,7 +482,7 @@
         background: white;
         padding: 12px 16px;
         border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
       }
 
       .solution-list li:before {
@@ -443,7 +504,7 @@
         padding: 24px;
         text-align: center;
         border: none;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
       }
 
       .solution-image-card h4 {
@@ -494,7 +555,7 @@
         padding: 24px;
         cursor: pointer;
         transition: all 200ms ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
       }
 
       .category-card:hover {
@@ -568,9 +629,16 @@
         margin: 0 0 32px;
       }
 
+      .contact-banner .btn.secondary {
+        background: linear-gradient(135deg, var(--accent) 0%, #e85f23 100%);
+        color: white;
+        letter-spacing: 1px;
+      }
+
+
       footer {
         background: #ffffff;
-        border-top: 1px solid rgba(0,0,0,0.05);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
         padding: 80px 0 40px;
         text-align: center;
         color: #475569;
@@ -588,11 +656,31 @@
           font-size: 0.9rem;
           padding: 10px 16px;
         }
-        .thought-1 { left: 0%; top: 5%; }
-        .thought-2 { right: 0%; top: 40%; }
-        .thought-3 { left: 0%; bottom: 10%; }
-        .thought-4 { right: 5%; top: 0%; }
-        .thought-5 { right: 5%; bottom: 5%; }
+
+        .thought-1 {
+          left: 0%;
+          top: 5%;
+        }
+
+        .thought-2 {
+          right: 0%;
+          top: 40%;
+        }
+
+        .thought-3 {
+          left: 0%;
+          bottom: 10%;
+        }
+
+        .thought-4 {
+          right: 5%;
+          top: 0%;
+        }
+
+        .thought-5 {
+          right: 5%;
+          bottom: 5%;
+        }
 
         .header {
           flex-direction: column;
@@ -637,7 +725,7 @@
         .solution-image {
           grid-template-columns: 1fr;
         }
-        
+
         .section-title {
           margin-top: 40px;
           margin-bottom: 24px;
