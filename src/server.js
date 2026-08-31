@@ -188,6 +188,8 @@ async function initDatabaseStore() {
   pgClient = new Client({
     connectionString: config.databaseUrl,
     ssl: { rejectUnauthorized: false },
+    connectionTimeoutMillis: 7000,
+    keepAlive: true,
   });
 
   await pgClient.connect();
