@@ -25,6 +25,7 @@ const config = {
   appUsersJson: process.env.APP_USERS_JSON || "",
   studentRateJson: process.env.STUDENT_RATE_JSON || "",
   defaultSessionRate: parseInt(process.env.DEFAULT_SESSION_RATE || "300000", 10),
+  databaseUrl: process.env.DATABASE_URL || "",
 };
 
 if (!config.googleServiceAccountJson || !config.googleCalendarId) {
@@ -159,6 +160,10 @@ const users = parseAppUsers(config.appUsersJson);
 const userMap = new Map(users.map((u) => [u.username, u]));
 const studentRateMap = parseStudentRates(config.studentRateJson);
 const paymentsStorePath = path.join(__dirname, "../data/payments.json");
+const PAYMENT_REQUESTS_KEY = "__paymentRequests";
+const PAYMENTS_STORE_DB_KEY = "payments_store";
+const useDatabaseStore = Boolean(config.databaseUrl);
+let pgClient = null;
 
 function monthKeyFromYearMonth(year, monthIndex) {
   return `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
@@ -175,23 +180,76 @@ function ensurePaymentsStoreFile() {
   }
 }
 
-function readPaymentsStore() {
-  ensurePaymentsStoreFile();
-  try {
-    const raw = fs.readFileSync(paymentsStorePath, "utf8");
-    const parsed = JSON.parse(raw || "{}");
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-      return {};
-    }
-    return parsed;
-  } catch (_err) {
-    return {};
-  }
+async function initDatabaseStore() {
+  if (!useDatabaseStore) return;
+  if (pgClient) return;
+
+  const { Client } = require("pg");
+  pgClient = new Client({
+    connectionString: config.databaseUrl,
+    ssl: { rejectUnauthorized: false },
+  });
+
+  await pgClient.connect();
+  await pgClient.query(`
+    CREATE TABLE IF NOT EXISTS app_kv_store (
+      store_key TEXT PRIMARY KEY,
+      store_value JSONB NOT NULL,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `);
 }
 
-function writePaymentsStore(store) {
-  ensurePaymentsStoreFile();
-  fs.writeFileSync(paymentsStorePath, JSON.stringify(store, null, 2));
+async function readPaymentsStore() {
+  if (!useDatabaseStore) {
+    ensurePaymentsStoreFile();
+    try {
+      const raw = fs.readFileSync(paymentsStorePath, "utf8");
+      const parsed = JSON.parse(raw || "{}");
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+        return {};
+      }
+      return parsed;
+    } catch (_err) {
+      return {};
+    }
+  }
+
+  await initDatabaseStore();
+  const res = await pgClient.query(
+    "SELECT store_value FROM app_kv_store WHERE store_key = $1",
+    [PAYMENTS_STORE_DB_KEY],
+  );
+
+  if (!res.rowCount) {
+    return {};
+  }
+
+  const value = res.rows[0].store_value;
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return {};
+  }
+
+  return value;
+}
+
+async function writePaymentsStore(store) {
+  if (!useDatabaseStore) {
+    ensurePaymentsStoreFile();
+    fs.writeFileSync(paymentsStorePath, JSON.stringify(store, null, 2));
+    return;
+  }
+
+  await initDatabaseStore();
+  await pgClient.query(
+    `
+      INSERT INTO app_kv_store (store_key, store_value, updated_at)
+      VALUES ($1, $2::jsonb, NOW())
+      ON CONFLICT (store_key)
+      DO UPDATE SET store_value = EXCLUDED.store_value, updated_at = NOW()
+    `,
+    [PAYMENTS_STORE_DB_KEY, JSON.stringify(store)],
+  );
 }
 
 function sanitizePaidWeeks(rawPaidWeeks, maxWeekCount) {
@@ -203,6 +261,21 @@ function sanitizePaidWeeks(rawPaidWeeks, maxWeekCount) {
     }
   });
   return Array.from(valid).sort((a, b) => a - b);
+}
+
+function getPaymentRequestsRef(store) {
+  if (!Array.isArray(store[PAYMENT_REQUESTS_KEY])) {
+    store[PAYMENT_REQUESTS_KEY] = [];
+  }
+  return store[PAYMENT_REQUESTS_KEY];
+}
+
+function getCurrentMonthParts() {
+  const now = new Date();
+  return {
+    year: now.getFullYear(),
+    month: now.getMonth(),
+  };
 }
 
 function parseCookies(req) {
@@ -473,19 +546,20 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       : students.filter((student) => student.studentKey === (req.user.studentKey || normalizeStudentKey(req.user.username)));
 
     const monthKey = monthKeyFromYearMonth(year, month);
-    const paymentsStore = readPaymentsStore();
+    const paymentsStore = await readPaymentsStore();
     const monthPayments = paymentsStore[monthKey] || {};
 
     const visibleStudentsWithPayment = visibleStudents.map((student) => {
       const paymentState = monthPayments[student.studentKey] || {};
       const monthlyPaid = Boolean(paymentState.monthlyPaid);
       const paidWeeks = sanitizePaidWeeks(paymentState.paidWeeks, weekStarts.length);
+      const manualPaidAmount = Math.max(0, Math.round(Number(paymentState.manualPaidAmount || 0)));
 
       const paidSessions = monthlyPaid
         ? student.sessions
         : paidWeeks.reduce((sum, weekIndex) => sum + (student.weekly[weekIndex] || 0), 0);
 
-      const paidAmount = Math.min(student.tuition, paidSessions * student.rate);
+      const paidAmount = Math.min(student.tuition, paidSessions * student.rate + manualPaidAmount);
       const outstanding = Math.max(0, student.tuition - paidAmount);
 
       return {
@@ -493,6 +567,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
         payment: {
           monthlyPaid,
           paidWeeks,
+          manualPaidAmount,
           updatedAt: paymentState.updatedAt || null,
         },
         paidAmount,
@@ -524,7 +599,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
   }
 });
 
-app.post("/api/payments/monthly", requireLogin, requireRole("teacher"), (req, res) => {
+app.post("/api/payments/monthly", requireLogin, requireRole("teacher"), async (req, res) => {
   try {
     const monthInput = req.body?.month;
     const studentKey = normalizeStudentKey(req.body?.studentKey);
@@ -536,7 +611,7 @@ app.post("/api/payments/monthly", requireLogin, requireRole("teacher"), (req, re
 
     const { year, month } = parseMonthInput(monthInput);
     const monthKey = monthKeyFromYearMonth(year, month);
-    const store = readPaymentsStore();
+    const store = await readPaymentsStore();
     store[monthKey] = store[monthKey] || {};
 
     const current = store[monthKey][studentKey] || { monthlyPaid: false, paidWeeks: [] };
@@ -546,14 +621,14 @@ app.post("/api/payments/monthly", requireLogin, requireRole("teacher"), (req, re
       updatedAt: new Date().toISOString(),
     };
 
-    writePaymentsStore(store);
+    await writePaymentsStore(store);
     return res.json({ ok: true });
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }
 });
 
-app.post("/api/payments/weekly", requireLogin, requireRole("teacher"), (req, res) => {
+app.post("/api/payments/weekly", requireLogin, requireRole("teacher"), async (req, res) => {
   try {
     const monthInput = req.body?.month;
     const studentKey = normalizeStudentKey(req.body?.studentKey);
@@ -570,7 +645,7 @@ app.post("/api/payments/weekly", requireLogin, requireRole("teacher"), (req, res
 
     const { year, month } = parseMonthInput(monthInput);
     const monthKey = monthKeyFromYearMonth(year, month);
-    const store = readPaymentsStore();
+    const store = await readPaymentsStore();
     store[monthKey] = store[monthKey] || {};
 
     const current = store[monthKey][studentKey] || { monthlyPaid: false, paidWeeks: [] };
@@ -589,8 +664,135 @@ app.post("/api/payments/weekly", requireLogin, requireRole("teacher"), (req, res
       updatedAt: new Date().toISOString(),
     };
 
-    writePaymentsStore(store);
+    await writePaymentsStore(store);
     return res.json({ ok: true });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.get("/api/payments/requests", requireLogin, requireRole("teacher", "student"), async (req, res) => {
+  try {
+    const monthInput = req.query.month;
+    const current = getCurrentMonthParts();
+    const { year, month } = monthInput
+      ? parseMonthInput(monthInput)
+      : { year: current.year, month: current.month };
+
+    const monthKey = monthKeyFromYearMonth(year, month);
+    const store = await readPaymentsStore();
+    const allRequests = getPaymentRequestsRef(store);
+
+    const userStudentKey = req.user.studentKey || normalizeStudentKey(req.user.username);
+    const requests = allRequests
+      .filter((item) => item.monthKey === monthKey)
+      .filter((item) => (req.user.role === "teacher" ? true : item.studentKey === userStudentKey))
+      .sort((a, b) => String(b.createdAt || "").localeCompare(String(a.createdAt || "")));
+
+    return res.json({
+      ok: true,
+      month: `${String(month + 1).padStart(2, "0")}/${year}`,
+      requests,
+    });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.post("/api/payments/requests", requireLogin, requireRole("teacher", "student"), async (req, res) => {
+  try {
+    const monthInput = req.body?.month;
+    const current = getCurrentMonthParts();
+    const { year, month } = monthInput
+      ? parseMonthInput(monthInput)
+      : { year: current.year, month: current.month };
+
+    const amount = Math.round(Number(req.body?.amount || 0));
+    if (!Number.isFinite(amount) || amount <= 0) {
+      throw new Error("Amount must be greater than 0");
+    }
+
+    const method = normalizeText(req.body?.method || "bank_transfer").slice(0, 40);
+    const note = normalizeText(req.body?.note || "").slice(0, 300);
+
+    const studentKey = req.user.role === "teacher"
+      ? normalizeStudentKey(req.body?.studentKey)
+      : (req.user.studentKey || normalizeStudentKey(req.user.username));
+
+    if (!studentKey) {
+      throw new Error("Missing studentKey");
+    }
+
+    const studentName = normalizeText(req.body?.studentName || req.user.displayName || req.user.username || studentKey);
+    const monthKey = monthKeyFromYearMonth(year, month);
+    const now = new Date().toISOString();
+
+    const requestItem = {
+      id: crypto.randomUUID(),
+      monthKey,
+      month: `${String(month + 1).padStart(2, "0")}/${year}`,
+      studentKey,
+      studentName,
+      amount,
+      method,
+      note,
+      status: "pending",
+      createdAt: now,
+      updatedAt: now,
+      createdBy: req.user.username,
+      reviewedBy: null,
+    };
+
+    const store = await readPaymentsStore();
+    const requests = getPaymentRequestsRef(store);
+    requests.push(requestItem);
+    await writePaymentsStore(store);
+
+    return res.json({ ok: true, request: requestItem });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.post("/api/payments/requests/:requestId/review", requireLogin, requireRole("teacher"), async (req, res) => {
+  try {
+    const requestId = normalizeText(req.params.requestId);
+    const action = normalizeText(req.body?.action).toLowerCase();
+    if (action !== "approve" && action !== "reject") {
+      throw new Error("Action must be approve or reject");
+    }
+
+    const store = await readPaymentsStore();
+    const requests = getPaymentRequestsRef(store);
+    const target = requests.find((item) => item.id === requestId);
+
+    if (!target) {
+      throw new Error("Payment request not found");
+    }
+
+    if (target.status !== "pending") {
+      throw new Error("Payment request already processed");
+    }
+
+    target.status = action === "approve" ? "approved" : "rejected";
+    target.updatedAt = new Date().toISOString();
+    target.reviewedBy = req.user.username;
+
+    if (action === "approve") {
+      store[target.monthKey] = store[target.monthKey] || {};
+      const monthData = store[target.monthKey];
+      const current = monthData[target.studentKey] || { monthlyPaid: false, paidWeeks: [] };
+      const manualPaidAmount = Math.max(0, Math.round(Number(current.manualPaidAmount || 0)));
+
+      monthData[target.studentKey] = {
+        ...current,
+        manualPaidAmount: manualPaidAmount + Math.max(0, Math.round(Number(target.amount || 0))),
+        updatedAt: target.updatedAt,
+      };
+    }
+
+    await writePaymentsStore(store);
+    return res.json({ ok: true, request: target });
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }
@@ -600,8 +802,8 @@ app.get("/api/config", requireToken, (_req, res) => {
   res.json({
     ok: true,
     calendarEmbedUrl: buildCalendarEmbedUrl(),
-    sheetEmbedUrl: buildSheetEmbedUrl(),
-    hasSheet: Boolean(config.googleSpreadsheetId),
+    sheetEmbedUrl: "",
+    hasSheet: false,
     hasAuth: Boolean(config.appToken),
   });
 });
@@ -610,32 +812,25 @@ app.get("/api/status", requireToken, (_req, res) => {
   res.json({ ok: true, lastRun });
 });
 
-app.post("/api/export/weekly-current", requireToken, requireSpreadsheetConfig, async (_req, res) => {
-  try {
-    const result = await runAndTrack(() => exportService.exportWeeklyCurrentMonth());
-    res.json({ ok: true, result });
-  } catch (err) {
-    res.status(500).json({ ok: false, error: err.message });
-  }
+app.post("/api/export/weekly-current", requireToken, (_req, res) => {
+  res.status(410).json({
+    ok: false,
+    error: "This endpoint is disabled. Use /app dashboard flow instead of Google Sheet export.",
+  });
 });
 
-app.post("/api/export/month-current", requireToken, requireSpreadsheetConfig, async (_req, res) => {
-  try {
-    const result = await runAndTrack(() => exportService.exportFullCurrentMonth());
-    res.json({ ok: true, result });
-  } catch (err) {
-    res.status(500).json({ ok: false, error: err.message });
-  }
+app.post("/api/export/month-current", requireToken, (_req, res) => {
+  res.status(410).json({
+    ok: false,
+    error: "This endpoint is disabled. Use /app dashboard flow instead of Google Sheet export.",
+  });
 });
 
-app.post("/api/export/month-custom", requireToken, requireSpreadsheetConfig, async (req, res) => {
-  try {
-    const monthInput = req.body?.month;
-    const result = await runAndTrack(() => exportService.exportFullByMonth(monthInput));
-    res.json({ ok: true, result });
-  } catch (err) {
-    res.status(500).json({ ok: false, error: err.message });
-  }
+app.post("/api/export/month-custom", requireToken, (_req, res) => {
+  res.status(410).json({
+    ok: false,
+    error: "This endpoint is disabled. Use /app dashboard flow instead of Google Sheet export.",
+  });
 });
 
 app.post("/api/events/create", requireToken, async (req, res) => {

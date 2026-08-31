@@ -53,6 +53,7 @@ Fill `.env` with:
 - `DEFAULT_SESSION_RATE` (mac dinh `300000`)
 - `APP_USERS_JSON` (danh sach tai khoan login)
 - `STUDENT_RATE_JSON` (don gia theo hoc vien)
+- `DATABASE_URL` (strongly recommended on Render to avoid data loss after restart)
 
 Example:
 
@@ -196,6 +197,9 @@ Important:
 - `GET /api/dashboard/month?month=MM/YYYY`
 - `POST /api/payments/weekly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "weekIndex": 2, "paid": true }`
 - `POST /api/payments/monthly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "paid": true }`
+- `GET /api/payments/requests?month=MM/YYYY`
+- `POST /api/payments/requests` body: `{ "month": "08/2026", "amount": 600000, "method": "bank_transfer", "note": "ck dot 1" }`
+- `POST /api/payments/requests/:requestId/review` body: `{ "action": "approve" }` (teacher only)
 - `GET /api/config`
 - `GET /api/status`
 - `POST /api/export/weekly-current`
@@ -208,6 +212,7 @@ Important:
 - Name matching uses Unicode normalization to avoid Win/Mac accent-encoding mismatches.
 - Existing fee column is preserved; export writes summary columns only.
 - Payment states are stored in `data/payments.json` (auto-created).
+- If `DATABASE_URL` is set, payment data is stored in Postgres (`app_kv_store`) and survives restarts.
 - Teacher can mark payment by week or by full month directly on `/app`.
 - Student role is read-only and only sees their own row.
 

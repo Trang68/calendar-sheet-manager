@@ -350,6 +350,7 @@
         .stats {
           grid-template-columns: 1fr;
         }
+
       }
     </style>
   </head>
@@ -497,6 +498,7 @@
         loginPanel.style.display = isLoggedIn ? "none" : "block";
         appPanel.classList.toggle("visible", isLoggedIn);
         logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
+        debtOnlyBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
 
         if (isLoggedIn) {
           document.getElementById("hello").textContent = "Xin chao, " + user.displayName;
