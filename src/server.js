@@ -175,7 +175,7 @@ const STUDENT_RATES_TABLE = "student_rates";
 const useDatabaseStore = Boolean(config.databaseUrl);
 let pgClient = null;
 let dbUnavailableUntil = 0;
-const DB_RETRY_COOLDOWN_MS = 30000;
+const DB_RETRY_COOLDOWN_MS = 5000;
 
 function monthKeyFromYearMonth(year, monthIndex) {
   return `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
@@ -934,8 +934,18 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
       throw new Error("Invalid rate");
     }
 
+    let persistedTo = "file";
+    let warning = null;
+
     if (useDatabaseStore) {
-      await upsertStudentRateToDatabase(studentKey, rate);
+      try {
+        await upsertStudentRateToDatabase(studentKey, rate);
+        persistedTo = "database";
+      } catch (err) {
+        warning = `Database unavailable, saved to fallback store: ${err.message}`;
+        // eslint-disable-next-line no-console
+        console.error("[rates] Database upsert failed, fallback to local store:", err.message);
+      }
     }
 
     const store = await readPaymentsStore();
@@ -943,7 +953,7 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
     rates[studentKey] = rate;
     await writePaymentsStore(store);
 
-    return res.json({ ok: true, studentKey, rate });
+    return res.json({ ok: true, studentKey, rate, persistedTo, warning });
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }
