@@ -17,7 +17,7 @@ const config = {
   googleServiceAccountJson: process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "",
   googleCalendarId: process.env.GOOGLE_CALENDAR_ID || "",
   googleSpreadsheetId: process.env.GOOGLE_SPREADSHEET_ID || "",
-  googleTimeZone: "Asia/Ho_Chi_Minh",
+  googleTimeZone: process.env.GOOGLE_TIMEZONE || "Asia/Ho_Chi_Minh",
   sheetGid: process.env.SHEET_GID || "0",
   appToken: process.env.APP_TOKEN || "",
   sessionSecret: process.env.SESSION_SECRET || "",
@@ -27,9 +27,9 @@ const config = {
   defaultSessionRate: parseInt(process.env.DEFAULT_SESSION_RATE || "300000", 10),
 };
 
-if (!config.googleServiceAccountJson || !config.googleCalendarId || !config.googleSpreadsheetId) {
+if (!config.googleServiceAccountJson || !config.googleCalendarId) {
   // eslint-disable-next-line no-console
-  console.error("Missing required env vars. Check GOOGLE_SERVICE_ACCOUNT_JSON, GOOGLE_CALENDAR_ID, GOOGLE_SPREADSHEET_ID.");
+  console.error("Missing required env vars. Check GOOGLE_SERVICE_ACCOUNT_JSON, GOOGLE_CALENDAR_ID.");
   process.exit(1);
 }
 
@@ -307,7 +307,18 @@ function buildCalendarEmbedUrl() {
 }
 
 function buildSheetEmbedUrl() {
+  if (!config.googleSpreadsheetId) return "";
   return `https://docs.google.com/spreadsheets/d/${config.googleSpreadsheetId}/edit?gid=${encodeURIComponent(config.sheetGid)}&rm=minimal`;
+}
+
+function requireSpreadsheetConfig(req, res, next) {
+  if (!config.googleSpreadsheetId) {
+    return res.status(400).json({
+      ok: false,
+      error: "GOOGLE_SPREADSHEET_ID is required only for legacy export-to-sheet endpoints.",
+    });
+  }
+  return next();
 }
 
 async function runAndTrack(runFn) {
@@ -590,6 +601,7 @@ app.get("/api/config", requireToken, (_req, res) => {
     ok: true,
     calendarEmbedUrl: buildCalendarEmbedUrl(),
     sheetEmbedUrl: buildSheetEmbedUrl(),
+    hasSheet: Boolean(config.googleSpreadsheetId),
     hasAuth: Boolean(config.appToken),
   });
 });
@@ -598,7 +610,7 @@ app.get("/api/status", requireToken, (_req, res) => {
   res.json({ ok: true, lastRun });
 });
 
-app.post("/api/export/weekly-current", requireToken, async (_req, res) => {
+app.post("/api/export/weekly-current", requireToken, requireSpreadsheetConfig, async (_req, res) => {
   try {
     const result = await runAndTrack(() => exportService.exportWeeklyCurrentMonth());
     res.json({ ok: true, result });
@@ -607,7 +619,7 @@ app.post("/api/export/weekly-current", requireToken, async (_req, res) => {
   }
 });
 
-app.post("/api/export/month-current", requireToken, async (_req, res) => {
+app.post("/api/export/month-current", requireToken, requireSpreadsheetConfig, async (_req, res) => {
   try {
     const result = await runAndTrack(() => exportService.exportFullCurrentMonth());
     res.json({ ok: true, result });
@@ -616,7 +628,7 @@ app.post("/api/export/month-current", requireToken, async (_req, res) => {
   }
 });
 
-app.post("/api/export/month-custom", requireToken, async (req, res) => {
+app.post("/api/export/month-custom", requireToken, requireSpreadsheetConfig, async (req, res) => {
   try {
     const monthInput = req.body?.month;
     const result = await runAndTrack(() => exportService.exportFullByMonth(monthInput));

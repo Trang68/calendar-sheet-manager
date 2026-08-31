@@ -35,11 +35,19 @@ cp .env.example .env
 
 Fill `.env` with:
 
+- Required for current `/app` dashboard:
 - `GOOGLE_SERVICE_ACCOUNT_JSON`
 - `GOOGLE_CALENDAR_ID`
+- `GOOGLE_TIMEZONE` (optional, default `Asia/Ho_Chi_Minh`)
+- `SESSION_SECRET`
+- `APP_USERS_JSON`
+
+- Optional (only if you still use legacy export-to-sheet endpoints):
 - `GOOGLE_SPREADSHEET_ID`
-- `GOOGLE_TIMEZONE`
-- optional `APP_TOKEN`
+- `SHEET_GID`
+
+- Optional:
+- `APP_TOKEN`
 - `SESSION_SECRET` (bat buoc khi deploy production)
 - `SESSION_TTL_HOURS` (mac dinh `12`)
 - `DEFAULT_SESSION_RATE` (mac dinh `300000`)
