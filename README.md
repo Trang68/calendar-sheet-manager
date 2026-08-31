@@ -40,6 +40,20 @@ Fill `.env` with:
 - `GOOGLE_SPREADSHEET_ID`
 - `GOOGLE_TIMEZONE`
 - optional `APP_TOKEN`
+- `SESSION_SECRET` (bat buoc khi deploy production)
+- `SESSION_TTL_HOURS` (mac dinh `12`)
+- `DEFAULT_SESSION_RATE` (mac dinh `300000`)
+- `APP_USERS_JSON` (danh sach tai khoan login)
+- `STUDENT_RATE_JSON` (don gia theo hoc vien)
+
+Example:
+
+```env
+SESSION_SECRET=replace_with_strong_secret
+DEFAULT_SESSION_RATE=300000
+APP_USERS_JSON=[{"username":"teacher","password":"yourStrongPwd","role":"teacher","displayName":"Co Trang"},{"username":"an.nguyen","password":"abc12345","role":"student","displayName":"An Nguyen","studentKey":"An Nguyen"}]
+STUDENT_RATE_JSON={"An Nguyen":300000,"Binh Tran":280000}
+```
 
 ## 4) Run locally
 
@@ -49,7 +63,8 @@ npm run dev
 
 Open:
 
-- `http://localhost:8080`
+- `http://localhost:8080` (landing page)
+- `http://localhost:8080/app` (dashboard login + quan ly hoc vien)
 - If `APP_TOKEN` is set, use: `http://localhost:8080/?token=YOUR_TOKEN`
 
 ## 5) Deploy always-on
@@ -66,6 +81,71 @@ Recommended:
 3. Add environment variables from `.env`
 4. Start command: `npm start`
 5. Keep service always on
+
+### Heroku quick steps
+
+Note:
+
+- Heroku no longer offers classic free dynos. You may need a paid dyno type (Eco/Basic) and billing enabled.
+
+Steps:
+
+1. Install Heroku CLI and login
+
+```bash
+heroku login
+```
+
+2. Create app
+
+```bash
+heroku create your-app-name
+```
+
+3. Set Node buildpack (usually auto-detected, but explicit is safer)
+
+```bash
+heroku buildpacks:set heroku/nodejs -a your-app-name
+```
+
+4. Add Config Vars in Heroku Dashboard (Settings > Config Vars)
+
+- `GOOGLE_SERVICE_ACCOUNT_JSON`
+- `GOOGLE_CALENDAR_ID`
+- `GOOGLE_SPREADSHEET_ID`
+- `GOOGLE_TIMEZONE`
+- `SHEET_GID`
+- `SESSION_SECRET`
+- `SESSION_TTL_HOURS`
+- `DEFAULT_SESSION_RATE`
+- `APP_USERS_JSON`
+- `STUDENT_RATE_JSON`
+- optional `APP_TOKEN`
+
+5. Deploy from git
+
+```bash
+git add .
+git commit -m "prepare heroku deployment"
+git push heroku main
+```
+
+6. Open app
+
+```bash
+heroku open -a your-app-name
+```
+
+7. Check logs if needed
+
+```bash
+heroku logs --tail -a your-app-name
+```
+
+Important for this project:
+
+- `data/payments.json` is on local disk. On Heroku dyno restart/redeploy, local disk is ephemeral.
+- For production-grade persistence, move payment states to a real DB (Postgres) or another persistent store.
 
 ### GitHub Actions -> VPS (auto deploy)
 
@@ -102,6 +182,12 @@ Important:
 ## 6) API endpoints
 
 - `GET /api/health`
+- `POST /api/auth/login`
+- `POST /api/auth/logout`
+- `GET /api/auth/me`
+- `GET /api/dashboard/month?month=MM/YYYY`
+- `POST /api/payments/weekly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "weekIndex": 2, "paid": true }`
+- `POST /api/payments/monthly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "paid": true }`
 - `GET /api/config`
 - `GET /api/status`
 - `POST /api/export/weekly-current`
@@ -113,6 +199,9 @@ Important:
 - Sheet naming follows: `TongKet_<year>_<month>`.
 - Name matching uses Unicode normalization to avoid Win/Mac accent-encoding mismatches.
 - Existing fee column is preserved; export writes summary columns only.
+- Payment states are stored in `data/payments.json` (auto-created).
+- Teacher can mark payment by week or by full month directly on `/app`.
+- Student role is read-only and only sees their own row.
 
 ## 8) Notes
 
