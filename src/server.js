@@ -180,6 +180,25 @@ function ensurePaymentsStoreFile() {
   }
 }
 
+function readPaymentsStoreFromFile() {
+  ensurePaymentsStoreFile();
+  try {
+    const raw = fs.readFileSync(paymentsStorePath, "utf8");
+    const parsed = JSON.parse(raw || "{}");
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+    return parsed;
+  } catch (_err) {
+    return {};
+  }
+}
+
+function writePaymentsStoreToFile(store) {
+  ensurePaymentsStoreFile();
+  fs.writeFileSync(paymentsStorePath, JSON.stringify(store, null, 2));
+}
+
 async function initDatabaseStore() {
   if (!useDatabaseStore) return;
   if (pgClient) return;
@@ -204,54 +223,55 @@ async function initDatabaseStore() {
 
 async function readPaymentsStore() {
   if (!useDatabaseStore) {
-    ensurePaymentsStoreFile();
-    try {
-      const raw = fs.readFileSync(paymentsStorePath, "utf8");
-      const parsed = JSON.parse(raw || "{}");
-      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-        return {};
-      }
-      return parsed;
-    } catch (_err) {
+    return readPaymentsStoreFromFile();
+  }
+
+  try {
+    await initDatabaseStore();
+    const res = await pgClient.query(
+      "SELECT store_value FROM app_kv_store WHERE store_key = $1",
+      [PAYMENTS_STORE_DB_KEY],
+    );
+
+    if (!res.rowCount) {
       return {};
     }
+
+    const value = res.rows[0].store_value;
+    if (!value || typeof value !== "object" || Array.isArray(value)) {
+      return {};
+    }
+
+    return value;
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[payments] Postgres read failed, fallback to file store:", err.message);
+    return readPaymentsStoreFromFile();
   }
-
-  await initDatabaseStore();
-  const res = await pgClient.query(
-    "SELECT store_value FROM app_kv_store WHERE store_key = $1",
-    [PAYMENTS_STORE_DB_KEY],
-  );
-
-  if (!res.rowCount) {
-    return {};
-  }
-
-  const value = res.rows[0].store_value;
-  if (!value || typeof value !== "object" || Array.isArray(value)) {
-    return {};
-  }
-
-  return value;
 }
 
 async function writePaymentsStore(store) {
   if (!useDatabaseStore) {
-    ensurePaymentsStoreFile();
-    fs.writeFileSync(paymentsStorePath, JSON.stringify(store, null, 2));
+    writePaymentsStoreToFile(store);
     return;
   }
 
-  await initDatabaseStore();
-  await pgClient.query(
-    `
-      INSERT INTO app_kv_store (store_key, store_value, updated_at)
-      VALUES ($1, $2::jsonb, NOW())
-      ON CONFLICT (store_key)
-      DO UPDATE SET store_value = EXCLUDED.store_value, updated_at = NOW()
-    `,
-    [PAYMENTS_STORE_DB_KEY, JSON.stringify(store)],
-  );
+  try {
+    await initDatabaseStore();
+    await pgClient.query(
+      `
+        INSERT INTO app_kv_store (store_key, store_value, updated_at)
+        VALUES ($1, $2::jsonb, NOW())
+        ON CONFLICT (store_key)
+        DO UPDATE SET store_value = EXCLUDED.store_value, updated_at = NOW()
+      `,
+      [PAYMENTS_STORE_DB_KEY, JSON.stringify(store)],
+    );
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[payments] Postgres write failed, fallback to file store:", err.message);
+    writePaymentsStoreToFile(store);
+  }
 }
 
 function sanitizePaidWeeks(rawPaidWeeks, maxWeekCount) {
