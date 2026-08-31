@@ -164,6 +164,8 @@ const PAYMENT_REQUESTS_KEY = "__paymentRequests";
 const PAYMENTS_STORE_DB_KEY = "payments_store";
 const useDatabaseStore = Boolean(config.databaseUrl);
 let pgClient = null;
+let dbUnavailableUntil = 0;
+const DB_RETRY_COOLDOWN_MS = 30000;
 
 function monthKeyFromYearMonth(year, monthIndex) {
   return `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
@@ -201,24 +203,39 @@ function writePaymentsStoreToFile(store) {
 
 async function initDatabaseStore() {
   if (!useDatabaseStore) return;
+  if (Date.now() < dbUnavailableUntil) {
+    throw new Error("database temporarily unavailable");
+  }
   if (pgClient) return;
 
   const { Client } = require("pg");
   pgClient = new Client({
     connectionString: config.databaseUrl,
     ssl: { rejectUnauthorized: false },
-    connectionTimeoutMillis: 7000,
+    connectionTimeoutMillis: 1500,
     keepAlive: true,
   });
 
-  await pgClient.connect();
-  await pgClient.query(`
-    CREATE TABLE IF NOT EXISTS app_kv_store (
-      store_key TEXT PRIMARY KEY,
-      store_value JSONB NOT NULL,
-      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    )
-  `);
+  try {
+    await pgClient.connect();
+    await pgClient.query(`
+      CREATE TABLE IF NOT EXISTS app_kv_store (
+        store_key TEXT PRIMARY KEY,
+        store_value JSONB NOT NULL,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+    dbUnavailableUntil = 0;
+  } catch (err) {
+    try {
+      await pgClient.end();
+    } catch (_e) {
+      // noop
+    }
+    pgClient = null;
+    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
+    throw err;
+  }
 }
 
 async function readPaymentsStore() {
@@ -246,6 +263,7 @@ async function readPaymentsStore() {
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[payments] Postgres read failed, fallback to file store:", err.message);
+    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     return readPaymentsStoreFromFile();
   }
 }
@@ -270,6 +288,7 @@ async function writePaymentsStore(store) {
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[payments] Postgres write failed, fallback to file store:", err.message);
+    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     writePaymentsStoreToFile(store);
   }
 }
