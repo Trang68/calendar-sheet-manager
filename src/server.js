@@ -171,6 +171,7 @@ const paymentsStorePath = path.join(__dirname, "../data/payments.json");
 const PAYMENT_REQUESTS_KEY = "__paymentRequests";
 const PAYMENTS_STORE_DB_KEY = "payments_store";
 const STUDENT_RATES_KEY = "__studentRates";
+const STUDENT_RATES_TABLE = "student_rates";
 const useDatabaseStore = Boolean(config.databaseUrl);
 let pgClient = null;
 let dbUnavailableUntil = 0;
@@ -234,6 +235,13 @@ async function initDatabaseStore() {
         updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `);
+    await pgClient.query(`
+      CREATE TABLE IF NOT EXISTS ${STUDENT_RATES_TABLE} (
+        student_key TEXT PRIMARY KEY,
+        rate INTEGER NOT NULL,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
     dbUnavailableUntil = 0;
   } catch (err) {
     try {
@@ -245,6 +253,42 @@ async function initDatabaseStore() {
     dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     throw err;
   }
+}
+
+async function readStudentRatesFromDatabase() {
+  if (!useDatabaseStore) return {};
+
+  try {
+    await initDatabaseStore();
+    const res = await pgClient.query(`SELECT student_key, rate FROM ${STUDENT_RATES_TABLE}`);
+    const map = {};
+    res.rows.forEach((row) => {
+      const key = normalizeStudentKey(row.student_key);
+      const rate = Number(row.rate);
+      if (key && Number.isFinite(rate) && rate > 0) {
+        map[key] = Math.round(rate);
+      }
+    });
+    return map;
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[rates] Postgres read failed:", err.message);
+    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
+    return {};
+  }
+}
+
+async function upsertStudentRateToDatabase(studentKey, rate) {
+  await initDatabaseStore();
+  await pgClient.query(
+    `
+      INSERT INTO ${STUDENT_RATES_TABLE} (student_key, rate, updated_at)
+      VALUES ($1, $2, NOW())
+      ON CONFLICT (student_key)
+      DO UPDATE SET rate = EXCLUDED.rate, updated_at = NOW()
+    `,
+    [studentKey, rate],
+  );
 }
 
 async function readPaymentsStore() {
@@ -607,6 +651,8 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
 
     const paymentsStore = await readPaymentsStore();
     const effectiveRateMap = buildEffectiveRateMap(paymentsStore);
+    const dbRateMap = await readStudentRatesFromDatabase();
+    Object.assign(effectiveRateMap, dbRateMap);
 
     const students = Array.from(studentMap.values())
       .map((item) => {
@@ -886,6 +932,10 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
     }
     if (!Number.isFinite(rate) || rate <= 0) {
       throw new Error("Invalid rate");
+    }
+
+    if (useDatabaseStore) {
+      await upsertStudentRateToDatabase(studentKey, rate);
     }
 
     const store = await readPaymentsStore();
