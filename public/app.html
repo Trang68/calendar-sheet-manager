@@ -276,6 +276,21 @@
         gap: 8px;
       }
 
+      .week-info {
+        display: grid;
+        gap: 2px;
+      }
+
+      .week-main {
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .week-days {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
       .rate-editor {
         display: flex;
         gap: 6px;
@@ -292,10 +307,10 @@
       .week-toggle,
       .month-toggle {
         border: 1px solid var(--line);
-        border-radius: 999px;
+        border-radius: 8px;
         background: #fff;
         cursor: pointer;
-        padding: 5px 10px;
+        padding: 5px 8px;
         font-size: 0.78rem;
         font-weight: 700;
       }
@@ -562,6 +577,7 @@
 
           const paidWeeks = new Set((student.payment && student.payment.paidWeeks) || []);
           const monthPaid = Boolean(student.payment && student.payment.monthlyPaid);
+          const weeklyDetails = student.weeklyDetails || [];
 
           (student.weekly || []).forEach((count, weekIndex) => {
             const td = document.createElement("td");
@@ -576,14 +592,30 @@
             const wrap = document.createElement("div");
             wrap.className = "week-cell";
 
-            const value = document.createElement("span");
-            value.textContent = String(count || 0);
-            wrap.appendChild(value);
+            const info = document.createElement("div");
+            info.className = "week-info";
+
+            const main = document.createElement("div");
+            main.className = "week-main";
+            if (count > 0) {
+              main.textContent = `${isWeekPaid ? "V" : "X"} ${count} buoi`;
+            } else {
+              main.textContent = "-";
+            }
+            info.appendChild(main);
+
+            const days = document.createElement("div");
+            days.className = "week-days";
+            days.textContent = weeklyDetails[weekIndex] || (count > 0 ? "(co du lieu)" : "");
+            info.appendChild(days);
+
+            wrap.appendChild(info);
 
             if (canEditPayment && count > 0) {
               const btn = document.createElement("button");
               btn.className = "week-toggle" + (isWeekPaid ? " on" : "");
-              btn.textContent = isWeekPaid ? "Da thu" : "Chua thu";
+              btn.textContent = isWeekPaid ? "V" : "X";
+              btn.title = isWeekPaid ? "Da thu" : "Chua thu";
               btn.dataset.action = "toggle-week";
               btn.dataset.studentKey = student.studentKey;
               btn.dataset.weekIndex = String(weekIndex);

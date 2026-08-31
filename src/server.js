@@ -75,6 +75,14 @@ function getMondayOfWeek(date) {
   return d;
 }
 
+function formatSessionDay(date, timeZone) {
+  return new Intl.DateTimeFormat("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    timeZone,
+  }).format(date);
+}
+
 function hashPassword(rawPassword) {
   return crypto.createHash("sha256").update(String(rawPassword || "")).digest("hex");
 }
@@ -582,6 +590,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
           studentName: rawName,
           sessions: 0,
           weekly: new Array(weekStarts.length).fill(0),
+          weeklyDates: Array.from({ length: weekStarts.length }, () => []),
         });
       }
 
@@ -589,6 +598,10 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       item.sessions += 1;
       if (weekIndex >= 0 && weekIndex < item.weekly.length) {
         item.weekly[weekIndex] += 1;
+        const dayLabel = formatSessionDay(eventDate, config.googleTimeZone);
+        if (!item.weeklyDates[weekIndex].includes(dayLabel)) {
+          item.weeklyDates[weekIndex].push(dayLabel);
+        }
       }
     });
 
@@ -600,6 +613,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
         const rate = effectiveRateMap[item.studentKey] || config.defaultSessionRate;
         return {
           ...item,
+          weeklyDetails: item.weeklyDates.map((days) => days.join(", ")),
           rate,
           tuition: rate * item.sessions,
         };
