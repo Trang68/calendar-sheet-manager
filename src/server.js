@@ -162,6 +162,7 @@ const studentRateMap = parseStudentRates(config.studentRateJson);
 const paymentsStorePath = path.join(__dirname, "../data/payments.json");
 const PAYMENT_REQUESTS_KEY = "__paymentRequests";
 const PAYMENTS_STORE_DB_KEY = "payments_store";
+const STUDENT_RATES_KEY = "__studentRates";
 const useDatabaseStore = Boolean(config.databaseUrl);
 let pgClient = null;
 let dbUnavailableUntil = 0;
@@ -309,6 +310,26 @@ function getPaymentRequestsRef(store) {
     store[PAYMENT_REQUESTS_KEY] = [];
   }
   return store[PAYMENT_REQUESTS_KEY];
+}
+
+function getStudentRatesRef(store) {
+  if (!store[STUDENT_RATES_KEY] || typeof store[STUDENT_RATES_KEY] !== "object" || Array.isArray(store[STUDENT_RATES_KEY])) {
+    store[STUDENT_RATES_KEY] = {};
+  }
+  return store[STUDENT_RATES_KEY];
+}
+
+function buildEffectiveRateMap(store) {
+  const map = { ...studentRateMap };
+  const runtimeRates = getStudentRatesRef(store);
+  Object.entries(runtimeRates).forEach(([studentKey, rawRate]) => {
+    const normalizedKey = normalizeStudentKey(studentKey);
+    const rate = Number(rawRate);
+    if (normalizedKey && Number.isFinite(rate) && rate > 0) {
+      map[normalizedKey] = Math.round(rate);
+    }
+  });
+  return map;
 }
 
 function getCurrentMonthParts() {
@@ -571,9 +592,12 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       }
     });
 
+    const paymentsStore = await readPaymentsStore();
+    const effectiveRateMap = buildEffectiveRateMap(paymentsStore);
+
     const students = Array.from(studentMap.values())
       .map((item) => {
-        const rate = studentRateMap[item.studentKey] || config.defaultSessionRate;
+        const rate = effectiveRateMap[item.studentKey] || config.defaultSessionRate;
         return {
           ...item,
           rate,
@@ -587,7 +611,6 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       : students.filter((student) => student.studentKey === (req.user.studentKey || normalizeStudentKey(req.user.username)));
 
     const monthKey = monthKeyFromYearMonth(year, month);
-    const paymentsStore = await readPaymentsStore();
     const monthPayments = paymentsStore[monthKey] || {};
 
     const visibleStudentsWithPayment = visibleStudents.map((student) => {
@@ -834,6 +857,29 @@ app.post("/api/payments/requests/:requestId/review", requireLogin, requireRole("
 
     await writePaymentsStore(store);
     return res.json({ ok: true, request: target });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, res) => {
+  try {
+    const studentKey = normalizeStudentKey(req.body?.studentKey);
+    const rate = Math.round(Number(req.body?.rate || 0));
+
+    if (!studentKey) {
+      throw new Error("Missing studentKey");
+    }
+    if (!Number.isFinite(rate) || rate <= 0) {
+      throw new Error("Invalid rate");
+    }
+
+    const store = await readPaymentsStore();
+    const rates = getStudentRatesRef(store);
+    rates[studentKey] = rate;
+    await writePaymentsStore(store);
+
+    return res.json({ ok: true, studentKey, rate });
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }

@@ -200,6 +200,7 @@ Important:
 - `GET /api/payments/requests?month=MM/YYYY`
 - `POST /api/payments/requests` body: `{ "month": "08/2026", "amount": 600000, "method": "bank_transfer", "note": "ck dot 1" }`
 - `POST /api/payments/requests/:requestId/review` body: `{ "action": "approve" }` (teacher only)
+- `POST /api/rates/update` body: `{ "studentKey": "an nguyen", "rate": 320000 }` (teacher only)
 - `GET /api/config`
 - `GET /api/status`
 - `POST /api/export/weekly-current`

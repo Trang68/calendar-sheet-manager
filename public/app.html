@@ -276,6 +276,19 @@
         gap: 8px;
       }
 
+      .rate-editor {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .rate-editor input {
+        width: 120px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 6px 8px;
+      }
+
       .week-toggle,
       .month-toggle {
         border: 1px solid var(--line);
@@ -583,7 +596,29 @@
           });
 
           const tdRate = document.createElement("td");
-          tdRate.textContent = formatMoney(student.rate);
+          if (canEditPayment) {
+            const editor = document.createElement("div");
+            editor.className = "rate-editor";
+
+            const rateInput = document.createElement("input");
+            rateInput.type = "number";
+            rateInput.min = "1000";
+            rateInput.step = "1000";
+            rateInput.value = String(student.rate || 0);
+            rateInput.className = "rate-input";
+            editor.appendChild(rateInput);
+
+            const saveRateBtn = document.createElement("button");
+            saveRateBtn.className = "btn light";
+            saveRateBtn.textContent = "Luu";
+            saveRateBtn.dataset.action = "save-rate";
+            saveRateBtn.dataset.studentKey = student.studentKey;
+            editor.appendChild(saveRateBtn);
+
+            tdRate.appendChild(editor);
+          } else {
+            tdRate.textContent = formatMoney(student.rate);
+          }
           tr.appendChild(tdRate);
 
           const tdTuition = document.createElement("td");
@@ -652,6 +687,16 @@
         });
       }
 
+      async function updateStudentRate(studentKey, rate) {
+        await api("/api/rates/update", {
+          method: "POST",
+          body: {
+            studentKey,
+            rate,
+          },
+        });
+      }
+
       async function loadDashboard() {
         try {
           setStatus("Dang tai du lieu...");
@@ -713,6 +758,15 @@
             await updateWeeklyPayment(studentKey, weekIndex, isPaid);
           } else if (action === "toggle-month") {
             await updateMonthlyPayment(studentKey, isPaid);
+          } else if (action === "save-rate") {
+            const row = target.closest("tr");
+            const rateInput = row ? row.querySelector(".rate-input") : null;
+            const rate = Math.round(Number(rateInput ? rateInput.value : 0));
+            if (!Number.isFinite(rate) || rate <= 0) {
+              setStatus("Loi cap nhat: Don gia phai lon hon 0");
+              return;
+            }
+            await updateStudentRate(studentKey, rate);
           }
           await loadDashboard();
         } catch (err) {
