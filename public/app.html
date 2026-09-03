@@ -37,8 +37,6 @@
       }
 
       .page {
-        width: min(1180px, 100% - 28px);
-        margin: 20px auto 30px;
         width: min(1700px, calc(100% - 36px));
         margin: 16px auto 36px;
       }
@@ -182,7 +180,6 @@
 
       .toolbar {
         display: flex;
-        gap: 10px;
         gap: 12px;
         align-items: center;
         padding: 12px 18px;
@@ -195,7 +192,6 @@
       .toolbar .toolbar-user {
         display: inline-flex;
         align-items: center;
-        padding: 12px;
         gap: 8px;
       }
 
@@ -216,12 +212,9 @@
       }
 
       .badge {
-        font-size: 0.82rem;
         font-size: 0.8rem;
         border-radius: 999px;
         border: 1px solid var(--line);
-        background: #fff;
-        padding: 6px 10px;
         background: #f8fafc;
         padding: 5px 10px;
         font-weight: 700;
@@ -254,11 +247,9 @@
 
       .status {
         margin-left: auto;
-        font-size: 0.85rem;
         font-size: 0.84rem;
         color: var(--muted);
         font-weight: 700;
-        transition: color 0.2s ease;
         white-space: nowrap;
       }
 
@@ -276,14 +267,11 @@
 
       .stats {
         display: grid;
-        grid-template-columns: repeat(5, minmax(160px, 1fr));
-        gap: 10px;
         grid-template-columns: repeat(5, minmax(180px, 1fr));
         gap: 12px;
       }
 
       .stat {
-        padding: 16px;
         padding: 16px 20px;
         background: #fff;
         border-radius: 14px;
@@ -292,8 +280,6 @@
 
       .stat .k {
         margin: 0;
-        font-size: 0.83rem;
-        color: var(--muted);
         font-size: 0.76rem;
         color: #64748b;
         font-weight: 700;
@@ -302,8 +288,6 @@
       }
 
       .stat .v {
-        margin: 8px 0 0;
-        font-size: clamp(1.2rem, 2.5vw, 2rem);
         margin: 6px 0 0;
         font-size: 1.55rem;
         font-weight: 800;
@@ -312,7 +296,6 @@
       }
 
       .table-wrap {
-        overflow: auto;
         overflow-x: auto;
         background: #fff;
         border-radius: 16px;
@@ -322,8 +305,6 @@
 
       table {
         width: 100%;
-        border-collapse: collapse;
-        min-width: 720px;
         border-collapse: separate;
         border-spacing: 0;
         min-width: 1250px;
@@ -331,10 +312,6 @@
 
       th,
       td {
-        border-bottom: 1px solid #eee2d5;
-        padding: 10px 12px;
-        text-align: left;
-        font-size: 0.92rem;
         padding: 12px 14px;
         border-bottom: 1px solid #f1ece4;
         font-size: 0.88rem;
@@ -343,7 +320,6 @@
       }
 
       th {
-        background: #f8f2e8;
         background: #fbf8f3;
         color: #475569;
         font-weight: 700;
@@ -356,8 +332,6 @@
         border-bottom: 2px solid #e8dfd2;
       }
 
-      tr:hover td {
-        background: rgba(255, 248, 238, 0.72);
       th:first-child,
       td:first-child {
         position: sticky;
@@ -368,15 +342,11 @@
         box-shadow: 3px 0 8px rgba(0, 0, 0, 0.03);
       }
 
-      td.week-zero {
-        color: #9aa4ae;
       th:first-child {
         background: #fbf8f3;
         z-index: 15;
       }
 
-      td.week-paid {
-        background: rgba(14, 146, 99, 0.15);
       tr:hover td {
         background: #fdfbf7;
       }
@@ -390,13 +360,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        gap: 8px;
       }
 
-      .week-info {
-        display: grid;
-        gap: 2px;
       .week-chip {
         all: unset;
         display: inline-flex;
@@ -413,8 +378,6 @@
         background: #faf8f5;
       }
 
-      .week-main {
-        font-size: 0.84rem;
       .week-chip:hover {
         transform: translateY(-1px);
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -449,9 +412,6 @@
         line-height: 1.2;
       }
 
-      .week-days {
-        font-size: 0.78rem;
-        color: var(--muted);
       .week-chip .chip-days {
         font-size: 0.72rem;
         color: #64748b;
@@ -476,7 +436,6 @@
       }
 
       .rate-editor input {
-        width: 120px;
         width: 86px;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -486,7 +445,6 @@
         font-variant-numeric: tabular-nums;
       }
 
-      .week-toggle,
       .rate-editor button {
         padding: 6px 10px;
         font-size: 0.8rem;
@@ -501,31 +459,21 @@
         white-space: nowrap;
         transition: all 0.15s ease;
         border: 1px solid var(--line);
-        border-radius: 8px;
         background: #fff;
-        cursor: pointer;
-        padding: 5px 8px;
-        font-size: 0.78rem;
-        font-weight: 700;
         color: #475569;
       }
 
-      .week-toggle.on,
       .month-toggle:hover {
         border-color: var(--brand);
         color: var(--brand);
       }
 
       .month-toggle.on {
-        border-color: rgba(15, 125, 91, 0.5);
         background: #0f766e;
         border-color: #0f766e;
         color: #fff;
-        background: linear-gradient(120deg, var(--brand), var(--brand-strong));
       }
 
-      .debt {
-        color: var(--danger);
       .cell-money {
         text-align: right;
         font-variant-numeric: tabular-nums;
@@ -534,9 +482,6 @@
         white-space: nowrap;
       }
 
-      .paid {
-        color: var(--brand-strong);
-        font-weight: 700;
       .cell-money.debt {
         color: #dc2626;
       }
@@ -574,13 +519,7 @@
         background: #fff7ed;
       }
 
-      .money {
-        font-weight: 700;
-        color: var(--brand-strong);
-      }
-
       .empty {
-        padding: 18px;
         padding: 24px;
         color: var(--muted);
         text-align: center;
@@ -639,13 +578,6 @@
 
       <section id="appPanel" class="app">
         <div class="panel toolbar">
-          <span id="hello"></span>
-          <span id="roleBadge" class="badge"></span>
-          <input id="monthInput" placeholder="MM/YYYY" />
-          <button id="loadBtn" class="btn primary">Tai du lieu</button>
-          <button id="thisMonthBtn" class="btn light">Thang hien tai</button>
-          <button id="debtOnlyBtn" class="btn ghost">Chi xem hoc vien con no: OFF</button>
-          <span id="status" class="status">San sang</span>
           <div class="toolbar-user">
             <span id="hello"></span>
             <span id="roleBadge" class="badge"></span>
@@ -662,30 +594,22 @@
 
         <div class="stats">
           <article class="panel stat">
-            <p class="k">Hoc vien hien thi</p>
             <p class="k">Học viên</p>
             <p class="v" id="kStudents">0</p>
           </article>
           <article class="panel stat">
-            <p class="k">Tong thoi luong</p>
             <p class="k">Tổng thời lượng</p>
             <p class="v" id="kSessions">0</p>
           </article>
           <article class="panel stat">
-            <p class="k">Hoc phi tam tinh</p>
-            <p class="v" id="kRevenue">0 VND</p>
             <p class="k">Học phí tạm tính</p>
             <p class="v" id="kRevenue">0 đ</p>
           </article>
           <article class="panel stat">
-            <p class="k">Da thu</p>
-            <p class="v paid" id="kPaid">0 VND</p>
             <p class="k">Đã thu</p>
             <p class="v paid" id="kPaid">0 đ</p>
           </article>
           <article class="panel stat">
-            <p class="k">Con no</p>
-            <p class="v debt" id="kOutstanding">0 VND</p>
             <p class="k">Còn nợ</p>
             <p class="v debt" id="kOutstanding">0 đ</p>
           </article>
@@ -729,7 +653,6 @@
       let latestPayload = null;
 
       function formatMoney(value) {
-        return Number(value || 0).toLocaleString("vi-VN") + " VND";
         return Number(value || 0).toLocaleString("vi-VN") + " đ";
       }
 
@@ -788,14 +711,6 @@
 
         theadRow.innerHTML = "";
         const heads = [
-          "Hoc vien",
-          "Tong thoi gian",
-          ...weekHeaders.map((w) => "Tuan " + w),
-          "Don gia/h",
-          "Hoc phi",
-          "Da thu",
-          "Con no",
-          "Trang thai",
           "Học viên",
           "Tổng thời gian",
           ...weekHeaders.map((w) => "Tuần " + w),
@@ -820,12 +735,10 @@
           const tr = document.createElement("tr");
 
           const baseTdName = document.createElement("td");
-          baseTdName.textContent = student.studentName;
           baseTdName.innerHTML = `<div style="font-weight:700; color:#1e293b; font-size:0.95rem;">${student.studentName}</div>`;
           tr.appendChild(baseTdName);
 
           const baseTdSessions = document.createElement("td");
-          baseTdSessions.textContent = `${student.totalHours || 0}h (${student.sessions}b)`;
           baseTdSessions.style.textAlign = "center";
           baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.75rem; color:#64748b;">${student.sessions} buổi</div>`;
           tr.appendChild(baseTdSessions);
@@ -836,38 +749,13 @@
 
           (student.weekly || []).forEach((count, weekIndex) => {
             const td = document.createElement("td");
-            const isWeekPaid = monthPaid || paidWeeks.has(weekIndex);
-            if (isWeekPaid) {
-              td.classList.add("week-paid");
-            }
             if (!count) {
-              td.classList.add("week-zero");
-            }
-
-            const wrap = document.createElement("div");
-            wrap.className = "week-cell";
-
-            const info = document.createElement("div");
-            info.className = "week-info";
-
-            const main = document.createElement("div");
-            main.className = "week-main";
-            if (count > 0) {
               td.innerHTML = '<div class="week-zero-dash">-</div>';
             } else {
               const weekHours = (student.weeklyHours && student.weeklyHours[weekIndex]) || 0;
-              main.textContent = `${weekHours}h`;
-            } else {
-              main.textContent = "-";
-            }
-            info.appendChild(main);
               const isWeekPaid = monthPaid || paidWeeks.has(weekIndex);
               const dayLabels = weeklyDetails[weekIndex] || "";
 
-            const days = document.createElement("div");
-            days.className = "week-days";
-            days.textContent = weeklyDetails[weekIndex] || (count > 0 ? "(co du lieu)" : "");
-            info.appendChild(days);
               const chip = document.createElement(canEditPayment ? "button" : "div");
               chip.className = "week-chip " + (isWeekPaid ? "paid" : "unpaid");
               if (canEditPayment) {
@@ -878,18 +766,6 @@
               }
               chip.title = `Tuần: ${weekHeaders[weekIndex]}\n• Chi tiết: ${dayLabels}\n• Bấm để ${isWeekPaid ? "hủy đã thu" : "xác nhận đã thu"}`;
 
-            wrap.appendChild(info);
-
-            if (canEditPayment && count > 0) {
-              const btn = document.createElement("button");
-              btn.className = "week-toggle" + (isWeekPaid ? " on" : "");
-              btn.textContent = isWeekPaid ? "V" : "X";
-              btn.title = isWeekPaid ? "Da thu" : "Chua thu";
-              btn.dataset.action = "toggle-week";
-              btn.dataset.studentKey = student.studentKey;
-              btn.dataset.weekIndex = String(weekIndex);
-              btn.dataset.paid = isWeekPaid ? "1" : "0";
-              wrap.appendChild(btn);
               chip.innerHTML = `
                 <div class="chip-hours">
                   <span>${isWeekPaid ? "✓" : "○"}</span>
@@ -902,8 +778,6 @@
               wrap.appendChild(chip);
               td.appendChild(wrap);
             }
-
-            td.appendChild(wrap);
             tr.appendChild(td);
           });
 
@@ -916,7 +790,6 @@
             rateInput.type = "number";
             rateInput.min = "1000";
             rateInput.step = "1000";
-            rateInput.placeholder = "Gia / 1h";
             rateInput.placeholder = "Giá / 1h";
             rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
             rateInput.className = "rate-input";
@@ -924,7 +797,6 @@
 
             const saveRateBtn = document.createElement("button");
             saveRateBtn.className = "btn light";
-            saveRateBtn.textContent = "Luu";
             saveRateBtn.textContent = "Lưu";
             saveRateBtn.dataset.action = "save-rate";
             saveRateBtn.dataset.studentKey = student.studentKey;
@@ -937,8 +809,6 @@
           tr.appendChild(tdRate);
 
           const tdTuition = document.createElement("td");
-          tdTuition.textContent = student.tuition > 0 ? formatMoney(student.tuition) : (student.rate > 0 ? "0 VND" : "-");
-          tdTuition.className = "money";
           tdTuition.className = "cell-money";
           tdTuition.textContent = student.tuition > 0 ? formatMoney(student.tuition) : (student.rate > 0 ? "0 đ" : "-");
           tr.appendChild(tdTuition);
@@ -946,13 +816,11 @@
           const tdPaid = document.createElement("td");
           tdPaid.className = "cell-money " + (student.paidAmount > 0 ? "paid" : "zero");
           tdPaid.textContent = formatMoney(student.paidAmount);
-          tdPaid.className = "paid";
           tr.appendChild(tdPaid);
 
           const tdOutstanding = document.createElement("td");
           tdOutstanding.className = "cell-money " + (student.outstanding > 0 ? "debt" : "zero");
           tdOutstanding.textContent = formatMoney(student.outstanding);
-          tdOutstanding.className = student.outstanding > 0 ? "debt" : "paid";
           tr.appendChild(tdOutstanding);
 
           const tdStatus = document.createElement("td");
@@ -960,7 +828,6 @@
           if (canEditPayment) {
             const monthBtn = document.createElement("button");
             monthBtn.className = "month-toggle" + (monthPaid ? " on" : "");
-            monthBtn.textContent = monthPaid ? "Da dong theo thang" : "Chot dong theo thang";
             monthBtn.textContent = monthPaid ? "✓ Đã thu cả tháng" : "Chốt tháng";
             monthBtn.dataset.action = "toggle-month";
             monthBtn.dataset.studentKey = student.studentKey;
@@ -970,7 +837,6 @@
             const tag = document.createElement("span");
             const ok = student.outstanding === 0;
             tag.className = "tag " + (ok ? "ok" : "wait");
-            tag.textContent = ok ? "Da hoan tat" : "Dang con no";
             tag.textContent = ok ? "✓ Đã xong" : "Đang nợ";
             tdStatus.appendChild(tag);
           }
@@ -980,7 +846,6 @@
         });
 
         document.getElementById("kStudents").textContent = String(rows.length || 0);
-        document.getElementById("kSessions").textContent = `${payload.summary.totalSessions || 0} buoi (${payload.summary.totalHours || 0}h)`;
         document.getElementById("kSessions").textContent = `${payload.summary.totalSessions || 0} buổi (${payload.summary.totalHours || 0}h)`;
         document.getElementById("kRevenue").textContent = formatMoney(payload.summary.totalRevenue || 0);
         document.getElementById("kPaid").textContent = formatMoney(payload.summary.totalPaid || 0);
