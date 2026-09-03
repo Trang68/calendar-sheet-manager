@@ -177,6 +177,31 @@ let pgClient = null;
 let dbUnavailableUntil = 0;
 const DB_RETRY_COOLDOWN_MS = 5000;
 
+let pgPool = null;
+let dbInitPromise = null;
+
+function getPgPool() {
+  if (!useDatabaseStore) return null;
+  if (!pgPool) {
+    const isLocal =
+      config.databaseUrl.includes("localhost") || config.databaseUrl.includes("127.0.0.1");
+    const { Pool } = require("pg");
+    pgPool = new Pool({
+      connectionString: config.databaseUrl,
+      ssl: isLocal ? false : { rejectUnauthorized: false },
+      connectionTimeoutMillis: 7000,
+      idleTimeoutMillis: 30000,
+      max: 10,
+    });
+
+    pgPool.on("error", (err) => {
+      // eslint-disable-next-line no-console
+      console.error("[pg-pool] Unexpected error on idle client:", err.message);
+    });
+  }
+  return pgPool;
+}
+
 function monthKeyFromYearMonth(year, monthIndex) {
   return `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
 }
@@ -215,6 +240,30 @@ async function initDatabaseStore() {
   if (!useDatabaseStore) return;
   if (Date.now() < dbUnavailableUntil) {
     throw new Error("database temporarily unavailable");
+async function ensureDatabaseInitialized() {
+  if (!useDatabaseStore) return false;
+  if (!dbInitPromise) {
+    dbInitPromise = (async () => {
+      const pool = getPgPool();
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS app_kv_store (
+          store_key TEXT PRIMARY KEY,
+          store_value JSONB NOT NULL,
+          updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+      `);
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS ${STUDENT_RATES_TABLE} (
+          student_key TEXT PRIMARY KEY,
+          rate INTEGER NOT NULL,
+          updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+      `);
+      return true;
+    })().catch((err) => {
+      dbInitPromise = null;
+      throw err;
+    });
   }
   if (pgClient) return;
 
@@ -253,6 +302,7 @@ async function initDatabaseStore() {
     dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     throw err;
   }
+  return dbInitPromise;
 }
 
 async function readStudentRatesFromDatabase() {
@@ -261,6 +311,9 @@ async function readStudentRatesFromDatabase() {
   try {
     await initDatabaseStore();
     const res = await pgClient.query(`SELECT student_key, rate FROM ${STUDENT_RATES_TABLE}`);
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    const res = await pool.query(`SELECT student_key, rate FROM ${STUDENT_RATES_TABLE}`);
     const map = {};
     res.rows.forEach((row) => {
       const key = normalizeStudentKey(row.student_key);
@@ -281,6 +334,9 @@ async function readStudentRatesFromDatabase() {
 async function upsertStudentRateToDatabase(studentKey, rate) {
   await initDatabaseStore();
   await pgClient.query(
+  await ensureDatabaseInitialized();
+  const pool = getPgPool();
+  await pool.query(
     `
       INSERT INTO ${STUDENT_RATES_TABLE} (student_key, rate, updated_at)
       VALUES ($1, $2, NOW())
@@ -292,36 +348,49 @@ async function upsertStudentRateToDatabase(studentKey, rate) {
 }
 
 async function readPaymentsStore() {
+  const fileStore = readPaymentsStoreFromFile();
   if (!useDatabaseStore) {
     return readPaymentsStoreFromFile();
+    return fileStore;
   }
 
   try {
     await initDatabaseStore();
     const res = await pgClient.query(
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    const res = await pool.query(
       "SELECT store_value FROM app_kv_store WHERE store_key = $1",
       [PAYMENTS_STORE_DB_KEY],
     );
 
     if (!res.rowCount) {
       return {};
+    if (res.rowCount > 0 && res.rows[0].store_value && typeof res.rows[0].store_value === "object") {
+      return res.rows[0].store_value;
     }
 
     const value = res.rows[0].store_value;
     if (!value || typeof value !== "object" || Array.isArray(value)) {
       return {};
+    if (Object.keys(fileStore).length > 0) {
+      await writePaymentsStore(fileStore);
     }
 
     return value;
+    return fileStore;
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[payments] Postgres read failed, fallback to file store:", err.message);
     dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     return readPaymentsStoreFromFile();
+    return fileStore;
   }
 }
 
 async function writePaymentsStore(store) {
+  writePaymentsStoreToFile(store);
+
   if (!useDatabaseStore) {
     writePaymentsStoreToFile(store);
     return;
@@ -330,6 +399,9 @@ async function writePaymentsStore(store) {
   try {
     await initDatabaseStore();
     await pgClient.query(
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    await pool.query(
       `
         INSERT INTO app_kv_store (store_key, store_value, updated_at)
         VALUES ($1, $2::jsonb, NOW())
@@ -343,6 +415,7 @@ async function writePaymentsStore(store) {
     console.error("[payments] Postgres write failed, fallback to file store:", err.message);
     dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     writePaymentsStoreToFile(store);
+    console.error("[payments] Postgres write failed, saved to file store:", err.message);
   }
 }
 
@@ -650,9 +723,32 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
     });
 
     const paymentsStore = await readPaymentsStore();
+    const fileStore = readPaymentsStoreFromFile();
+    const fallbackRates = {
+      ...getStudentRatesRef(fileStore),
+      ...getStudentRatesRef(paymentsStore),
+    };
+
     const effectiveRateMap = buildEffectiveRateMap(paymentsStore);
+    Object.entries(fallbackRates).forEach(([k, r]) => {
+      const normKey = normalizeStudentKey(k);
+      const numRate = Number(r);
+      if (normKey && Number.isFinite(numRate) && numRate > 0) {
+        effectiveRateMap[normKey] = Math.round(numRate);
+      }
+    });
+
     const dbRateMap = await readStudentRatesFromDatabase();
     Object.assign(effectiveRateMap, dbRateMap);
+
+    // Auto-sync fallback rates to Postgres student_rates table if DB is up
+    if (useDatabaseStore && Object.keys(dbRateMap).length > 0) {
+      Object.entries(fallbackRates).forEach(([k, r]) => {
+        if (!dbRateMap[k] && Number.isFinite(Number(r)) && Number(r) > 0) {
+          upsertStudentRateToDatabase(k, Math.round(Number(r))).catch(() => {});
+        }
+      });
+    }
 
     const students = Array.from(studentMap.values())
       .map((item) => {
@@ -935,6 +1031,7 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
     }
 
     let persistedTo = "file";
+    let persistedTo = useDatabaseStore ? "database" : "file";
     let warning = null;
 
     if (useDatabaseStore) {
@@ -942,12 +1039,14 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
         await upsertStudentRateToDatabase(studentKey, rate);
         persistedTo = "database";
       } catch (err) {
+        persistedTo = "fallback";
         warning = `Database unavailable, saved to fallback store: ${err.message}`;
         // eslint-disable-next-line no-console
         console.error("[rates] Database upsert failed, fallback to local store:", err.message);
       }
     }
 
+    // Always keep payments store (both local file and DB app_kv_store) updated
     const store = await readPaymentsStore();
     const rates = getStudentRatesRef(store);
     rates[studentKey] = rate;

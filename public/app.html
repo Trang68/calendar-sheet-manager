@@ -209,6 +209,20 @@
         margin-left: auto;
         font-size: 0.85rem;
         color: var(--muted);
+        font-weight: 700;
+        transition: color 0.2s ease;
+      }
+
+      .status.ok {
+        color: var(--brand-strong);
+      }
+
+      .status.warn {
+        color: var(--accent);
+      }
+
+      .status.err {
+        color: var(--danger);
       }
 
       .stats {
@@ -491,8 +505,10 @@
       }
 
       function setStatus(text) {
+      function setStatus(text, type = "normal") {
         if (statusEl) {
           statusEl.textContent = text;
+          statusEl.className = "status" + (type !== "normal" ? " " + type : "");
         }
       }
 
@@ -721,6 +737,7 @@
 
       async function updateStudentRate(studentKey, rate) {
         await api("/api/rates/update", {
+        return await api("/api/rates/update", {
           method: "POST",
           body: {
             studentKey,
@@ -730,15 +747,19 @@
       }
 
       async function loadDashboard() {
+      async function loadDashboard(showLoadingStatus = true) {
         try {
           setStatus("Dang tai du lieu...");
+          if (showLoadingStatus) setStatus("Dang tai du lieu...");
           const month = monthInput.value.trim();
           const qs = month ? "?month=" + encodeURIComponent(month) : "";
           const payload = await api("/api/dashboard/month" + qs);
           renderTable(payload);
           setStatus("Da cap nhat " + payload.month);
+          if (showLoadingStatus) setStatus("Da cap nhat " + payload.month, "ok");
         } catch (err) {
           setStatus("Loi: " + err.message);
+          setStatus("Loi: " + err.message, "err");
         }
       }
 
@@ -760,9 +781,11 @@
       });
 
       document.getElementById("loadBtn").addEventListener("click", loadDashboard);
+      document.getElementById("loadBtn").addEventListener("click", () => loadDashboard(true));
       document.getElementById("thisMonthBtn").addEventListener("click", () => {
         setCurrentMonth();
         loadDashboard();
+        loadDashboard(true);
       });
 
       debtOnlyBtn.addEventListener("click", () => {
@@ -786,23 +809,59 @@
         try {
           setStatus("Dang cap nhat thanh toan...");
           if (action === "toggle-week") {
+            setStatus("Dang cap nhat thanh toan...");
             const weekIndex = Number(target.dataset.weekIndex);
             await updateWeeklyPayment(studentKey, weekIndex, isPaid);
+            await loadDashboard(false);
+            setStatus("Da cap nhat dong hoc theo tuan", "ok");
           } else if (action === "toggle-month") {
+            setStatus("Dang cap nhat thanh toan...");
             await updateMonthlyPayment(studentKey, isPaid);
+            await loadDashboard(false);
+            setStatus("Da cap nhat chot dong theo thang", "ok");
           } else if (action === "save-rate") {
             const row = target.closest("tr");
             const rateInput = row ? row.querySelector(".rate-input") : null;
             const rate = Math.round(Number(rateInput ? rateInput.value : 0));
             if (!Number.isFinite(rate) || rate <= 0) {
               setStatus("Loi cap nhat: Don gia phai lon hon 0");
+              setStatus("Loi cap nhat: Don gia phai lon hon 0", "err");
               return;
             }
             await updateStudentRate(studentKey, rate);
+
+            const oldText = target.textContent;
+            target.textContent = "...";
+            target.disabled = true;
+
+            try {
+              setStatus("Dang luu don gia vao he thong...");
+              const res = await updateStudentRate(studentKey, rate);
+
+              let statusText = `Da luu don gia (${formatMoney(rate)})`;
+              let statusType = "ok";
+              if (res.persistedTo === "database") {
+                statusText += " - [Saved to DB (Postgres)]";
+                statusType = "ok";
+              } else if (res.persistedTo === "fallback" || res.warning) {
+                statusText += " - [Saved fallback (DB tam thoi chua san sang)]";
+                statusType = "warn";
+              } else {
+                statusText += " - [Saved to local file]";
+                statusType = "ok";
+              }
+
+              await loadDashboard(false);
+              setStatus(statusText, statusType);
+            } finally {
+              target.textContent = oldText;
+              target.disabled = false;
+            }
           }
           await loadDashboard();
         } catch (err) {
           setStatus("Loi cap nhat: " + err.message);
+          setStatus("Loi: " + err.message, "err");
         }
       });
 

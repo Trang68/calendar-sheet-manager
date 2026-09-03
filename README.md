@@ -208,6 +208,7 @@ Important:
 - `POST /api/export/month-custom` body: `{ "month": "04/2026" }`
 
 ## 7) Notes
+## 7) Notes & Database Persistence
 
 - Sheet naming follows: `TongKet_<year>_<month>`.
 - Name matching uses Unicode normalization to avoid Win/Mac accent-encoding mismatches.
@@ -220,3 +221,12 @@ Important:
 ## 8) Notes
 
 - Publish version v0.0.1
+- Source of truth for schedule: Google Calendar.
+- Payment states and custom rates are stored in PostgreSQL (`app_kv_store` và `student_rates`) when `DATABASE_URL` is set.
+- A local file store (`data/payments.json`) acts as an immediate fallback & backup store if PostgreSQL is temporarily unavailable.
+- Khi PostgreSQL kết nối lại, hệ thống tự động đồng bộ fallback rates vào database để đảm bảo không bị nhảy về đơn giá mặc định (300k).
+- **Lưu ý triển khai trên Render**:
+  - Nên dùng **Internal Database URL** (thay vì External URL) và đảm bảo Web Service và PostgreSQL cùng chung một Region (ví dụ `Singapore`).
+  - Internal Database URL có độ trễ cực thấp, kết nối ổn định không qua Internet công cộng và không tốn chi phí băng thông ngoại mạng.
+- Giáo viên có thể tick thu học phí theo từng tuần (V/X) hoặc chốt thu cả tháng trực tiếp trên `/app`.
+- Học viên đăng nhập chỉ xem được thông tin và trạng thái của chính mình.
