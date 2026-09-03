@@ -168,14 +168,10 @@ const users = parseAppUsers(config.appUsersJson);
 const userMap = new Map(users.map((u) => [u.username, u]));
 const studentRateMap = parseStudentRates(config.studentRateJson);
 const paymentsStorePath = path.join(__dirname, "../data/payments.json");
-const PAYMENT_REQUESTS_KEY = "__paymentRequests";
 const PAYMENTS_STORE_DB_KEY = "payments_store";
 const STUDENT_RATES_KEY = "__studentRates";
 const STUDENT_RATES_TABLE = "student_rates";
 const useDatabaseStore = Boolean(config.databaseUrl);
-let pgClient = null;
-let dbUnavailableUntil = 0;
-const DB_RETRY_COOLDOWN_MS = 5000;
 
 let pgPool = null;
 let dbInitPromise = null;
@@ -236,10 +232,6 @@ function writePaymentsStoreToFile(store) {
   fs.writeFileSync(paymentsStorePath, JSON.stringify(store, null, 2));
 }
 
-async function initDatabaseStore() {
-  if (!useDatabaseStore) return;
-  if (Date.now() < dbUnavailableUntil) {
-    throw new Error("database temporarily unavailable");
 async function ensureDatabaseInitialized() {
   if (!useDatabaseStore) return false;
   if (!dbInitPromise) {
@@ -265,43 +257,6 @@ async function ensureDatabaseInitialized() {
       throw err;
     });
   }
-  if (pgClient) return;
-
-  const { Client } = require("pg");
-  pgClient = new Client({
-    connectionString: config.databaseUrl,
-    ssl: { rejectUnauthorized: false },
-    connectionTimeoutMillis: 1500,
-    keepAlive: true,
-  });
-
-  try {
-    await pgClient.connect();
-    await pgClient.query(`
-      CREATE TABLE IF NOT EXISTS app_kv_store (
-        store_key TEXT PRIMARY KEY,
-        store_value JSONB NOT NULL,
-        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      )
-    `);
-    await pgClient.query(`
-      CREATE TABLE IF NOT EXISTS ${STUDENT_RATES_TABLE} (
-        student_key TEXT PRIMARY KEY,
-        rate INTEGER NOT NULL,
-        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      )
-    `);
-    dbUnavailableUntil = 0;
-  } catch (err) {
-    try {
-      await pgClient.end();
-    } catch (_e) {
-      // noop
-    }
-    pgClient = null;
-    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
-    throw err;
-  }
   return dbInitPromise;
 }
 
@@ -309,8 +264,6 @@ async function readStudentRatesFromDatabase() {
   if (!useDatabaseStore) return {};
 
   try {
-    await initDatabaseStore();
-    const res = await pgClient.query(`SELECT student_key, rate FROM ${STUDENT_RATES_TABLE}`);
     await ensureDatabaseInitialized();
     const pool = getPgPool();
     const res = await pool.query(`SELECT student_key, rate FROM ${STUDENT_RATES_TABLE}`);
@@ -326,14 +279,11 @@ async function readStudentRatesFromDatabase() {
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[rates] Postgres read failed:", err.message);
-    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
     return {};
   }
 }
 
 async function upsertStudentRateToDatabase(studentKey, rate) {
-  await initDatabaseStore();
-  await pgClient.query(
   await ensureDatabaseInitialized();
   const pool = getPgPool();
   await pool.query(
@@ -350,13 +300,10 @@ async function upsertStudentRateToDatabase(studentKey, rate) {
 async function readPaymentsStore() {
   const fileStore = readPaymentsStoreFromFile();
   if (!useDatabaseStore) {
-    return readPaymentsStoreFromFile();
     return fileStore;
   }
 
   try {
-    await initDatabaseStore();
-    const res = await pgClient.query(
     await ensureDatabaseInitialized();
     const pool = getPgPool();
     const res = await pool.query(
@@ -364,26 +311,17 @@ async function readPaymentsStore() {
       [PAYMENTS_STORE_DB_KEY],
     );
 
-    if (!res.rowCount) {
-      return {};
     if (res.rowCount > 0 && res.rows[0].store_value && typeof res.rows[0].store_value === "object") {
       return res.rows[0].store_value;
     }
 
-    const value = res.rows[0].store_value;
-    if (!value || typeof value !== "object" || Array.isArray(value)) {
-      return {};
     if (Object.keys(fileStore).length > 0) {
       await writePaymentsStore(fileStore);
     }
-
-    return value;
     return fileStore;
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error("[payments] Postgres read failed, fallback to file store:", err.message);
-    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
-    return readPaymentsStoreFromFile();
     return fileStore;
   }
 }
@@ -392,13 +330,10 @@ async function writePaymentsStore(store) {
   writePaymentsStoreToFile(store);
 
   if (!useDatabaseStore) {
-    writePaymentsStoreToFile(store);
     return;
   }
 
   try {
-    await initDatabaseStore();
-    await pgClient.query(
     await ensureDatabaseInitialized();
     const pool = getPgPool();
     await pool.query(
@@ -412,9 +347,6 @@ async function writePaymentsStore(store) {
     );
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error("[payments] Postgres write failed, fallback to file store:", err.message);
-    dbUnavailableUntil = Date.now() + DB_RETRY_COOLDOWN_MS;
-    writePaymentsStoreToFile(store);
     console.error("[payments] Postgres write failed, saved to file store:", err.message);
   }
 }
@@ -428,13 +360,6 @@ function sanitizePaidWeeks(rawPaidWeeks, maxWeekCount) {
     }
   });
   return Array.from(valid).sort((a, b) => a - b);
-}
-
-function getPaymentRequestsRef(store) {
-  if (!Array.isArray(store[PAYMENT_REQUESTS_KEY])) {
-    store[PAYMENT_REQUESTS_KEY] = [];
-  }
-  return store[PAYMENT_REQUESTS_KEY];
 }
 
 function getStudentRatesRef(store) {
@@ -891,133 +816,6 @@ app.post("/api/payments/weekly", requireLogin, requireRole("teacher"), async (re
   }
 });
 
-app.get("/api/payments/requests", requireLogin, requireRole("teacher", "student"), async (req, res) => {
-  try {
-    const monthInput = req.query.month;
-    const current = getCurrentMonthParts();
-    const { year, month } = monthInput
-      ? parseMonthInput(monthInput)
-      : { year: current.year, month: current.month };
-
-    const monthKey = monthKeyFromYearMonth(year, month);
-    const store = await readPaymentsStore();
-    const allRequests = getPaymentRequestsRef(store);
-
-    const userStudentKey = req.user.studentKey || normalizeStudentKey(req.user.username);
-    const requests = allRequests
-      .filter((item) => item.monthKey === monthKey)
-      .filter((item) => (req.user.role === "teacher" ? true : item.studentKey === userStudentKey))
-      .sort((a, b) => String(b.createdAt || "").localeCompare(String(a.createdAt || "")));
-
-    return res.json({
-      ok: true,
-      month: `${String(month + 1).padStart(2, "0")}/${year}`,
-      requests,
-    });
-  } catch (err) {
-    return res.status(400).json({ ok: false, error: err.message });
-  }
-});
-
-app.post("/api/payments/requests", requireLogin, requireRole("teacher", "student"), async (req, res) => {
-  try {
-    const monthInput = req.body?.month;
-    const current = getCurrentMonthParts();
-    const { year, month } = monthInput
-      ? parseMonthInput(monthInput)
-      : { year: current.year, month: current.month };
-
-    const amount = Math.round(Number(req.body?.amount || 0));
-    if (!Number.isFinite(amount) || amount <= 0) {
-      throw new Error("Amount must be greater than 0");
-    }
-
-    const method = normalizeText(req.body?.method || "bank_transfer").slice(0, 40);
-    const note = normalizeText(req.body?.note || "").slice(0, 300);
-
-    const studentKey = req.user.role === "teacher"
-      ? normalizeStudentKey(req.body?.studentKey)
-      : (req.user.studentKey || normalizeStudentKey(req.user.username));
-
-    if (!studentKey) {
-      throw new Error("Missing studentKey");
-    }
-
-    const studentName = normalizeText(req.body?.studentName || req.user.displayName || req.user.username || studentKey);
-    const monthKey = monthKeyFromYearMonth(year, month);
-    const now = new Date().toISOString();
-
-    const requestItem = {
-      id: crypto.randomUUID(),
-      monthKey,
-      month: `${String(month + 1).padStart(2, "0")}/${year}`,
-      studentKey,
-      studentName,
-      amount,
-      method,
-      note,
-      status: "pending",
-      createdAt: now,
-      updatedAt: now,
-      createdBy: req.user.username,
-      reviewedBy: null,
-    };
-
-    const store = await readPaymentsStore();
-    const requests = getPaymentRequestsRef(store);
-    requests.push(requestItem);
-    await writePaymentsStore(store);
-
-    return res.json({ ok: true, request: requestItem });
-  } catch (err) {
-    return res.status(400).json({ ok: false, error: err.message });
-  }
-});
-
-app.post("/api/payments/requests/:requestId/review", requireLogin, requireRole("teacher"), async (req, res) => {
-  try {
-    const requestId = normalizeText(req.params.requestId);
-    const action = normalizeText(req.body?.action).toLowerCase();
-    if (action !== "approve" && action !== "reject") {
-      throw new Error("Action must be approve or reject");
-    }
-
-    const store = await readPaymentsStore();
-    const requests = getPaymentRequestsRef(store);
-    const target = requests.find((item) => item.id === requestId);
-
-    if (!target) {
-      throw new Error("Payment request not found");
-    }
-
-    if (target.status !== "pending") {
-      throw new Error("Payment request already processed");
-    }
-
-    target.status = action === "approve" ? "approved" : "rejected";
-    target.updatedAt = new Date().toISOString();
-    target.reviewedBy = req.user.username;
-
-    if (action === "approve") {
-      store[target.monthKey] = store[target.monthKey] || {};
-      const monthData = store[target.monthKey];
-      const current = monthData[target.studentKey] || { monthlyPaid: false, paidWeeks: [] };
-      const manualPaidAmount = Math.max(0, Math.round(Number(current.manualPaidAmount || 0)));
-
-      monthData[target.studentKey] = {
-        ...current,
-        manualPaidAmount: manualPaidAmount + Math.max(0, Math.round(Number(target.amount || 0))),
-        updatedAt: target.updatedAt,
-      };
-    }
-
-    await writePaymentsStore(store);
-    return res.json({ ok: true, request: target });
-  } catch (err) {
-    return res.status(400).json({ ok: false, error: err.message });
-  }
-});
-
 app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, res) => {
   try {
     const studentKey = normalizeStudentKey(req.body?.studentKey);
@@ -1030,14 +828,12 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
       throw new Error("Invalid rate");
     }
 
-    let persistedTo = "file";
     let persistedTo = useDatabaseStore ? "database" : "file";
     let warning = null;
 
     if (useDatabaseStore) {
       try {
         await upsertStudentRateToDatabase(studentKey, rate);
-        persistedTo = "database";
       } catch (err) {
         persistedTo = "fallback";
         warning = `Database unavailable, saved to fallback store: ${err.message}`;

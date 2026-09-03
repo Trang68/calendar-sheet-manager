@@ -504,7 +504,6 @@
         return Number(value || 0).toLocaleString("vi-VN") + " VND";
       }
 
-      function setStatus(text) {
       function setStatus(text, type = "normal") {
         if (statusEl) {
           statusEl.textContent = text;
@@ -736,7 +735,6 @@
       }
 
       async function updateStudentRate(studentKey, rate) {
-        await api("/api/rates/update", {
         return await api("/api/rates/update", {
           method: "POST",
           body: {
@@ -746,19 +744,15 @@
         });
       }
 
-      async function loadDashboard() {
       async function loadDashboard(showLoadingStatus = true) {
         try {
-          setStatus("Dang tai du lieu...");
           if (showLoadingStatus) setStatus("Dang tai du lieu...");
           const month = monthInput.value.trim();
           const qs = month ? "?month=" + encodeURIComponent(month) : "";
           const payload = await api("/api/dashboard/month" + qs);
           renderTable(payload);
-          setStatus("Da cap nhat " + payload.month);
           if (showLoadingStatus) setStatus("Da cap nhat " + payload.month, "ok");
         } catch (err) {
-          setStatus("Loi: " + err.message);
           setStatus("Loi: " + err.message, "err");
         }
       }
@@ -780,11 +774,9 @@
         }
       });
 
-      document.getElementById("loadBtn").addEventListener("click", loadDashboard);
       document.getElementById("loadBtn").addEventListener("click", () => loadDashboard(true));
       document.getElementById("thisMonthBtn").addEventListener("click", () => {
         setCurrentMonth();
-        loadDashboard();
         loadDashboard(true);
       });
 
@@ -807,7 +799,6 @@
         const isPaid = target.dataset.paid === "1";
 
         try {
-          setStatus("Dang cap nhat thanh toan...");
           if (action === "toggle-week") {
             setStatus("Dang cap nhat thanh toan...");
             const weekIndex = Number(target.dataset.weekIndex);
@@ -824,11 +815,9 @@
             const rateInput = row ? row.querySelector(".rate-input") : null;
             const rate = Math.round(Number(rateInput ? rateInput.value : 0));
             if (!Number.isFinite(rate) || rate <= 0) {
-              setStatus("Loi cap nhat: Don gia phai lon hon 0");
               setStatus("Loi cap nhat: Don gia phai lon hon 0", "err");
               return;
             }
-            await updateStudentRate(studentKey, rate);
 
             const oldText = target.textContent;
             target.textContent = "...";
@@ -858,9 +847,7 @@
               target.disabled = false;
             }
           }
-          await loadDashboard();
         } catch (err) {
-          setStatus("Loi cap nhat: " + err.message);
           setStatus("Loi: " + err.message, "err");
         }
       });

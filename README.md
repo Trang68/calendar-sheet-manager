@@ -197,30 +197,12 @@ Important:
 - `GET /api/dashboard/month?month=MM/YYYY`
 - `POST /api/payments/weekly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "weekIndex": 2, "paid": true }`
 - `POST /api/payments/monthly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "paid": true }`
-- `GET /api/payments/requests?month=MM/YYYY`
-- `POST /api/payments/requests` body: `{ "month": "08/2026", "amount": 600000, "method": "bank_transfer", "note": "ck dot 1" }`
-- `POST /api/payments/requests/:requestId/review` body: `{ "action": "approve" }` (teacher only)
 - `POST /api/rates/update` body: `{ "studentKey": "an nguyen", "rate": 320000 }` (teacher only)
 - `GET /api/config`
 - `GET /api/status`
-- `POST /api/export/weekly-current`
-- `POST /api/export/month-current`
-- `POST /api/export/month-custom` body: `{ "month": "04/2026" }`
 
-## 7) Notes
 ## 7) Notes & Database Persistence
 
-- Sheet naming follows: `TongKet_<year>_<month>`.
-- Name matching uses Unicode normalization to avoid Win/Mac accent-encoding mismatches.
-- Existing fee column is preserved; export writes summary columns only.
-- Payment states are stored in `data/payments.json` (auto-created).
-- If `DATABASE_URL` is set, payment data is stored in Postgres (`app_kv_store`) and survives restarts.
-- Teacher can mark payment by week or by full month directly on `/app`.
-- Student role is read-only and only sees their own row.
-
-## 8) Notes
-
-- Publish version v0.0.1
 - Source of truth for schedule: Google Calendar.
 - Payment states and custom rates are stored in PostgreSQL (`app_kv_store` và `student_rates`) when `DATABASE_URL` is set.
 - A local file store (`data/payments.json`) acts as an immediate fallback & backup store if PostgreSQL is temporarily unavailable.
