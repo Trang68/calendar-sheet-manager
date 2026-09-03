@@ -25,7 +25,7 @@ const config = {
   appUsersJson: process.env.APP_USERS_JSON || "",
   studentRateJson: process.env.STUDENT_RATE_JSON || "",
   defaultSessionRate: parseInt(process.env.DEFAULT_SESSION_RATE || "0", 10),
-  databaseUrl: process.env.DATABASE_URL || "",
+  databaseUrl: (process.env.DATABASE_URL || "").trim().replace(/^["']|["']$/g, ""),
 };
 
 if (!config.googleServiceAccountJson || !config.googleCalendarId) {
@@ -246,10 +246,11 @@ function getPgPool() {
   if (!pgPool) {
     const isLocal =
       config.databaseUrl.includes("localhost") || config.databaseUrl.includes("127.0.0.1");
+    const hasSslDisabled = config.databaseUrl.includes("sslmode=disable");
     const { Pool } = require("pg");
     pgPool = new Pool({
       connectionString: config.databaseUrl,
-      ssl: isLocal ? false : { rejectUnauthorized: false },
+      ssl: isLocal || hasSslDisabled ? false : { rejectUnauthorized: false },
       connectionTimeoutMillis: 7000,
       idleTimeoutMillis: 30000,
       max: 10,
@@ -258,6 +259,8 @@ function getPgPool() {
     pgPool.on("error", (err) => {
       // eslint-disable-next-line no-console
       console.error("[pg-pool] Unexpected error on idle client:", err.message);
+      dbConnected = false;
+      dbLastError = err.message;
     });
   }
   return pgPool;
@@ -300,7 +303,7 @@ function writePaymentsStoreToFile(store) {
 async function ensureDatabaseInitialized() {
   if (!useDatabaseStore) {
     dbConnected = false;
-    dbLastError = "DATABASE_URL is not set";
+    dbLastError = "DATABASE_URL is not set in environment variables";
     return false;
   }
   if (!dbInitPromise) {
@@ -327,6 +330,10 @@ async function ensureDatabaseInitialized() {
       dbConnected = false;
       dbLastError = err.message;
       dbInitPromise = null;
+      if (pgPool) {
+        pgPool.end().catch(() => {});
+        pgPool = null;
+      }
       throw err;
     });
   }
@@ -841,6 +848,46 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }
+});
+
+app.get("/api/db/diagnostics", requireLogin, async (_req, res) => {
+  let poolError = null;
+  let queryTest = null;
+  if (useDatabaseStore) {
+    try {
+      await ensureDatabaseInitialized();
+      const pool = getPgPool();
+      const testRes = await pool.query("SELECT NOW() as server_time, version() as pg_version");
+      queryTest = testRes.rows[0];
+    } catch (err) {
+      poolError = err.message;
+    }
+  }
+
+  const rawUrl = config.databaseUrl || "";
+  let maskedUrl = null;
+  if (rawUrl) {
+    try {
+      const u = new URL(rawUrl);
+      maskedUrl = `${u.protocol}//${u.username ? u.username + ":***@" : ""}${u.host}${u.pathname}`;
+    } catch {
+      maskedUrl = rawUrl.substring(0, 15) + "...";
+    }
+  }
+
+  return res.json({
+    ok: true,
+    hasDatabaseUrl: Boolean(config.databaseUrl),
+    maskedUrl,
+    connected: dbConnected,
+    lastError: dbLastError || poolError,
+    queryTest,
+    tip: !config.databaseUrl
+      ? "Chưa cấu hình biến DATABASE_URL trên Render. Vui lòng vào Web Service > Environment > Thêm biến DATABASE_URL dán đường dẫn Internal Database URL từ PostgreSQL vào."
+      : dbConnected
+      ? "Đã kết nối PostgreSQL thành công! Dữ liệu được lưu vĩnh viễn, không bao giờ mất khi build lại."
+      : `Lỗi kết nối DB: ${dbLastError || poolError}. Hãy kiểm tra xem PostgreSQL trên Render có bị Suspend/hết hạn không, hoặc đường link DATABASE_URL đã đúng chưa.`,
+  });
 });
 
 app.post("/api/payments/monthly", requireLogin, requireRole("teacher"), async (req, res) => {

@@ -245,6 +245,16 @@
         color: #991b1b;
       }
 
+      #dbBadge {
+        cursor: pointer;
+        transition: transform 0.15s ease, filter 0.15s ease;
+      }
+
+      #dbBadge:hover {
+        filter: brightness(0.92);
+        transform: scale(1.02);
+      }
+
       .status {
         margin-left: auto;
         font-size: 0.84rem;
@@ -968,17 +978,18 @@
               setStatus("Dang luu don gia vao he thong...");
               const res = await updateStudentRate(studentKey, rate);
 
-              let statusText = `Da luu don gia (${formatMoney(rate)})`;
+              let statusText = `Đã lưu đơn giá (${formatMoney(rate)})`;
               let statusType = "ok";
               if (res.persistedTo === "database") {
-                statusText += " - [Saved to DB (Postgres)]";
+                statusText += " - [Lưu vào Postgres vĩnh viễn ✓]";
                 statusType = "ok";
               } else if (res.persistedTo === "fallback" || res.warning) {
-                statusText += " - [Saved fallback (DB tam thoi chua san sang)]";
+                const detail = res.warning || "DB chưa kết nối";
+                statusText += ` - ⚠️ [LƯU TẠM (SẼ MẤT KHI BUILD): ${detail}]`;
                 statusType = "warn";
               } else {
-                statusText += " - [Saved to local file]";
-                statusType = "ok";
+                statusText += " - ⚠️ [Lưu file tạm local (Chưa cài Postgres)]";
+                statusType = "warn";
               }
 
               await loadDashboard(false);
@@ -1008,6 +1019,25 @@
         }
         renderAuthState(null);
       });
+
+      const dbBadgeEl = document.getElementById("dbBadge");
+      if (dbBadgeEl) {
+        dbBadgeEl.addEventListener("click", async () => {
+          try {
+            const diag = await api("/api/db/diagnostics");
+            let msg = `=== KIỂM TRA KẾT NỐI DATABASE ===\n\n`;
+            msg += `• Cấu hình DATABASE_URL: ${diag.hasDatabaseUrl ? "ĐÃ CÓ (" + diag.maskedUrl + ")" : "CHƯA CÀI ĐẶT ❌"}\n`;
+            msg += `• Trạng thái Postgres: ${diag.connected ? "KẾT NỐI TỐT (Dữ liệu vĩnh viễn) ✅" : "THẤT BẠI (Đang lưu tạm) ⚠️"}\n`;
+            if (diag.lastError) {
+              msg += `• Chi tiết lỗi: ${diag.lastError}\n`;
+            }
+            msg += `\n👉 HƯỚNG DẪN XỬ LÝ:\n${diag.tip}`;
+            alert(msg);
+          } catch (err) {
+            alert("Không thể kiểm tra DB: " + err.message);
+          }
+        });
+      }
 
       async function boot() {
         setCurrentMonth();
