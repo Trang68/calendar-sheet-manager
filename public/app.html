@@ -446,7 +446,7 @@
             <p class="v" id="kStudents">0</p>
           </article>
           <article class="panel stat">
-            <p class="k">Tong so buoi</p>
+            <p class="k">Tong thoi luong</p>
             <p class="v" id="kSessions">0</p>
           </article>
           <article class="panel stat">
@@ -560,9 +560,9 @@
         theadRow.innerHTML = "";
         const heads = [
           "Hoc vien",
-          "Tong buoi",
+          "Tong thoi gian",
           ...weekHeaders.map((w) => "Tuan " + w),
-          "Don gia",
+          "Don gia/h",
           "Hoc phi",
           "Da thu",
           "Con no",
@@ -587,7 +587,7 @@
           tr.appendChild(baseTdName);
 
           const baseTdSessions = document.createElement("td");
-          baseTdSessions.textContent = String(student.sessions);
+          baseTdSessions.textContent = `${student.totalHours || 0}h (${student.sessions}b)`;
           tr.appendChild(baseTdSessions);
 
           const paidWeeks = new Set((student.payment && student.payment.paidWeeks) || []);
@@ -613,7 +613,8 @@
             const main = document.createElement("div");
             main.className = "week-main";
             if (count > 0) {
-              main.textContent = `${isWeekPaid ? "V" : "X"} ${count} buoi`;
+              const weekHours = (student.weeklyHours && student.weeklyHours[weekIndex]) || 0;
+              main.textContent = `${isWeekPaid ? "V" : "X"} ${weekHours}h (${count}b)`;
             } else {
               main.textContent = "-";
             }
@@ -651,7 +652,7 @@
             rateInput.type = "number";
             rateInput.min = "1000";
             rateInput.step = "1000";
-            rateInput.placeholder = "Chưa nhập";
+            rateInput.placeholder = "Gia / 1h";
             rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
             rateInput.className = "rate-input";
             editor.appendChild(rateInput);
@@ -665,7 +666,7 @@
 
             tdRate.appendChild(editor);
           } else {
-            tdRate.textContent = student.rate > 0 ? formatMoney(student.rate) : "Chưa có";
+            tdRate.textContent = student.rate > 0 ? `${formatMoney(student.rate)}/h` : "Chưa có";
           }
           tr.appendChild(tdRate);
 
@@ -706,7 +707,7 @@
         });
 
         document.getElementById("kStudents").textContent = String(rows.length || 0);
-        document.getElementById("kSessions").textContent = String(payload.summary.totalSessions || 0);
+        document.getElementById("kSessions").textContent = `${payload.summary.totalSessions || 0} buoi (${payload.summary.totalHours || 0}h)`;
         document.getElementById("kRevenue").textContent = formatMoney(payload.summary.totalRevenue || 0);
         document.getElementById("kPaid").textContent = formatMoney(payload.summary.totalPaid || 0);
         document.getElementById("kOutstanding").textContent = formatMoney(payload.summary.totalOutstanding || 0);

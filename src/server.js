@@ -83,6 +83,69 @@ function formatSessionDay(date, timeZone) {
   }).format(date);
 }
 
+function parseSessionDuration(ev) {
+  const desc = normalizeText(ev.description || "");
+  const summary = normalizeText(ev.summary || "");
+  const text = `${summary} ${desc}`.toLowerCase();
+
+  // Pattern 1: XhYp or Xh Y (e.g. 1h30, 1h30p, 1h 30m, 1h45)
+  const hMinMatch = text.match(/\b(\d+)\s*(?:h|giờ|gio|tiếng|tieng)\s*(\d+)\s*(?:p|phút|phut|m|min|mins)?\b/);
+  if (hMinMatch) {
+    const hours = parseInt(hMinMatch[1], 10);
+    const mins = parseInt(hMinMatch[2], 10);
+    const totalMinutes = hours * 60 + mins;
+    if (totalMinutes > 0 && totalMinutes <= 360) {
+      return {
+        minutes: totalMinutes,
+        hours: Number((totalMinutes / 60).toFixed(2)),
+        label: totalMinutes % 60 === 0 ? `${totalMinutes / 60}h` : `${hours}h${mins}p`,
+      };
+    }
+  }
+
+  // Pattern 2: X.Y h (e.g. 1.5h, 0.75h, 2h)
+  const decHourMatch = text.match(/\b(\d+(?:\.\d+)?)\s*(?:h|giờ|gio|tiếng|tieng)\b/);
+  if (decHourMatch) {
+    const hours = parseFloat(decHourMatch[1]);
+    const totalMinutes = Math.round(hours * 60);
+    if (totalMinutes > 0 && totalMinutes <= 360) {
+      return {
+        minutes: totalMinutes,
+        hours: Number(hours.toFixed(2)),
+        label: hours % 1 === 0 ? `${hours}h` : `${hours}h`,
+      };
+    }
+  }
+
+  // Pattern 3: X p or X phút (e.g. 45p, 45 phút, 90p, 90 phút, 30p, 45m)
+  const minMatch = text.match(/\b(\d+)\s*(?:p|phút|phut|m|min|mins)\b/);
+  if (minMatch) {
+    const mins = parseInt(minMatch[1], 10);
+    if (mins > 0 && mins <= 360) {
+      return {
+        minutes: mins,
+        hours: Number((mins / 60).toFixed(2)),
+        label: mins % 60 === 0 ? `${mins / 60}h` : (mins < 60 ? `${mins}p` : `${Math.floor(mins / 60)}h${mins % 60}p`),
+      };
+    }
+  }
+
+  // Mặc định không ghi gì là 1 giờ học chuẩn
+  return {
+    minutes: 60,
+    hours: 1.0,
+    label: "1h",
+  };
+}
+
+function cleanStudentNameFromSummary(rawSummary) {
+  return normalizeText(rawSummary || "")
+    .replace(/\(?\b\d+(?:\.\d+)?\s*(?:p|phút|phut|m|min|mins|h|giờ|gio|tiếng|tieng)\b\)?/gi, "")
+    .replace(/[-–—]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function hashPassword(rawPassword) {
   return crypto.createHash("sha256").update(String(rawPassword || "")).digest("hex");
 }
@@ -616,7 +679,8 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
     const studentMap = new Map();
 
     events.forEach((ev) => {
-      const rawName = normalizeText(ev.summary || "");
+      const rawSummary = normalizeText(ev.summary || "");
+      const rawName = cleanStudentNameFromSummary(rawSummary) || rawSummary;
       const key = normalizeStudentKey(rawName);
       if (!key) return;
 
@@ -625,25 +689,35 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
 
       const eventDate = new Date(startISO);
       const weekIndex = Math.floor((getMondayOfWeek(eventDate) - firstMonday) / (7 * 24 * 60 * 60 * 1000));
+      const duration = parseSessionDuration(ev);
 
       if (!studentMap.has(key)) {
         studentMap.set(key, {
           studentKey: key,
           studentName: rawName,
           sessions: 0,
+          totalMinutes: 0,
+          totalHours: 0,
           weekly: new Array(weekStarts.length).fill(0),
+          weeklyMinutes: new Array(weekStarts.length).fill(0),
+          weeklyHours: new Array(weekStarts.length).fill(0),
           weeklyDates: Array.from({ length: weekStarts.length }, () => []),
         });
       }
 
       const item = studentMap.get(key);
       item.sessions += 1;
+      item.totalMinutes += duration.minutes;
+      item.totalHours = Number((item.totalMinutes / 60).toFixed(2));
+
       if (weekIndex >= 0 && weekIndex < item.weekly.length) {
         item.weekly[weekIndex] += 1;
+        item.weeklyMinutes[weekIndex] += duration.minutes;
+        item.weeklyHours[weekIndex] = Number((item.weeklyMinutes[weekIndex] / 60).toFixed(2));
+
         const dayLabel = formatSessionDay(eventDate, config.googleTimeZone);
-        if (!item.weeklyDates[weekIndex].includes(dayLabel)) {
-          item.weeklyDates[weekIndex].push(dayLabel);
-        }
+        const sessionDetail = `${dayLabel} (${duration.label})`;
+        item.weeklyDates[weekIndex].push(sessionDetail);
       }
     });
 
@@ -678,11 +752,12 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
     const students = Array.from(studentMap.values())
       .map((item) => {
         const rate = effectiveRateMap[item.studentKey] || 0;
+        const tuition = Math.round(item.totalHours * rate);
         return {
           ...item,
           weeklyDetails: item.weeklyDates.map((days) => days.join(", ")),
           rate,
-          tuition: rate * item.sessions,
+          tuition,
         };
       })
       .sort((a, b) => a.studentName.localeCompare(b.studentName, "vi"));
@@ -700,15 +775,21 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       const paidWeeks = sanitizePaidWeeks(paymentState.paidWeeks, weekStarts.length);
       const manualPaidAmount = Math.max(0, Math.round(Number(paymentState.manualPaidAmount || 0)));
 
+      const paidHours = monthlyPaid
+        ? student.totalHours
+        : paidWeeks.reduce((sum, weekIndex) => sum + (student.weeklyHours[weekIndex] || 0), 0);
+
       const paidSessions = monthlyPaid
         ? student.sessions
         : paidWeeks.reduce((sum, weekIndex) => sum + (student.weekly[weekIndex] || 0), 0);
 
-      const paidAmount = Math.min(student.tuition, paidSessions * student.rate + manualPaidAmount);
+      const paidAmount = Math.min(student.tuition, Math.round(paidHours * student.rate) + manualPaidAmount);
       const outstanding = Math.max(0, student.tuition - paidAmount);
 
       return {
         ...student,
+        paidHours: Number(paidHours.toFixed(2)),
+        paidSessions,
         payment: {
           monthlyPaid,
           paidWeeks,
@@ -721,6 +802,8 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
     });
 
     const totalSessions = visibleStudentsWithPayment.reduce((sum, s) => sum + s.sessions, 0);
+    const totalMinutes = visibleStudentsWithPayment.reduce((sum, s) => sum + (s.totalMinutes || 0), 0);
+    const totalHours = Number((totalMinutes / 60).toFixed(2));
     const totalRevenue = visibleStudentsWithPayment.reduce((sum, s) => sum + s.tuition, 0);
     const totalPaid = visibleStudentsWithPayment.reduce((sum, s) => sum + s.paidAmount, 0);
     const totalOutstanding = visibleStudentsWithPayment.reduce((sum, s) => sum + s.outstanding, 0);
@@ -733,6 +816,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       summary: {
         students: visibleStudentsWithPayment.length,
         totalSessions,
+        totalHours,
         totalRevenue,
         totalPaid,
         totalOutstanding,
