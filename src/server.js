@@ -238,6 +238,8 @@ const useDatabaseStore = Boolean(config.databaseUrl);
 
 let pgPool = null;
 let dbInitPromise = null;
+let dbConnected = false;
+let dbLastError = null;
 
 function getPgPool() {
   if (!useDatabaseStore) return null;
@@ -297,6 +299,11 @@ function writePaymentsStoreToFile(store) {
 
 async function ensureDatabaseInitialized() {
   if (!useDatabaseStore) return false;
+  if (!useDatabaseStore) {
+    dbConnected = false;
+    dbLastError = "DATABASE_URL is not set";
+    return false;
+  }
   if (!dbInitPromise) {
     dbInitPromise = (async () => {
       const pool = getPgPool();
@@ -314,8 +321,12 @@ async function ensureDatabaseInitialized() {
           updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         )
       `);
+      dbConnected = true;
+      dbLastError = null;
       return true;
     })().catch((err) => {
+      dbConnected = false;
+      dbLastError = err.message;
       dbInitPromise = null;
       throw err;
     });
@@ -821,6 +832,11 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
         totalPaid,
         totalOutstanding,
       },
+      dbStatus: {
+        connected: dbConnected,
+        useDatabase: useDatabaseStore,
+        error: dbLastError,
+      },
       students: visibleStudentsWithPayment,
     });
   } catch (err) {
@@ -1071,4 +1087,26 @@ app.get("*", (_req, res) => {
 app.listen(config.port, () => {
   // eslint-disable-next-line no-console
   console.log(`Server listening on port ${config.port}`);
+  if (useDatabaseStore) {
+    // eslint-disable-next-line no-console
+    console.log("[db] DATABASE_URL detected. Testing connection to PostgreSQL...");
+    ensureDatabaseInitialized()
+      .then(() => {
+        // eslint-disable-next-line no-console
+        console.log("[db] SUCCESS: Connected to PostgreSQL! Data will persist across builds.");
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error("[db] ERROR connecting to PostgreSQL:", err.message);
+        // eslint-disable-next-line no-console
+        console.error("[db] WARNING: Data will be saved to temporary local disk and will be WIPED on next deploy!");
+      });
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn("[db] WARNING: DATABASE_URL is NOT set in environment variables!");
+    // eslint-disable-next-line no-console
+    console.warn("[db] WARNING: All data is currently saved to temporary disk (data/payments.json)!");
+    // eslint-disable-next-line no-console
+    console.warn("[db] WARNING: On Render, temporary disk is WIPED on every build/deploy!");
+  }
 });

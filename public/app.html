@@ -614,7 +614,6 @@
             main.className = "week-main";
             if (count > 0) {
               const weekHours = (student.weeklyHours && student.weeklyHours[weekIndex]) || 0;
-              main.textContent = `${isWeekPaid ? "V" : "X"} ${weekHours}h (${count}b)`;
               main.textContent = `${weekHours}h`;
             } else {
               main.textContent = "-";
