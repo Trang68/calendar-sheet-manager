@@ -298,7 +298,6 @@ function writePaymentsStoreToFile(store) {
 }
 
 async function ensureDatabaseInitialized() {
-  if (!useDatabaseStore) return false;
   if (!useDatabaseStore) {
     dbConnected = false;
     dbLastError = "DATABASE_URL is not set";

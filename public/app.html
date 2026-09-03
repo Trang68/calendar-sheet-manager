@@ -39,6 +39,8 @@
       .page {
         width: min(1180px, 100% - 28px);
         margin: 20px auto 30px;
+        width: min(1700px, calc(100% - 36px));
+        margin: 16px auto 36px;
       }
 
       .topbar {
@@ -181,36 +183,83 @@
       .toolbar {
         display: flex;
         gap: 10px;
+        gap: 12px;
+        align-items: center;
+        padding: 12px 18px;
         flex-wrap: wrap;
+        background: #fff;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+      }
+
+      .toolbar .toolbar-user {
+        display: inline-flex;
         align-items: center;
         padding: 12px;
+        gap: 8px;
+      }
+
+      .toolbar .toolbar-filters {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .toolbar input#monthInput {
+        width: 105px !important;
+        min-width: 105px;
+        max-width: 105px;
+        text-align: center;
+        font-weight: 700;
+        padding: 8px 10px;
+        border-radius: 8px;
       }
 
       .badge {
         font-size: 0.82rem;
+        font-size: 0.8rem;
         border-radius: 999px;
         border: 1px solid var(--line);
         background: #fff;
         padding: 6px 10px;
+        background: #f8fafc;
+        padding: 5px 10px;
         font-weight: 700;
+        white-space: nowrap;
       }
 
       .badge.teacher {
         border-color: rgba(15, 125, 91, 0.35);
         color: var(--brand);
+        background: #f0fdf4;
       }
 
       .badge.student {
         border-color: rgba(201, 93, 47, 0.35);
         color: var(--accent);
+        background: #fff7ed;
+      }
+
+      .badge.ok {
+        border-color: rgba(15, 125, 91, 0.4);
+        background: #ecfdf5;
+        color: #065f46;
+      }
+
+      .badge.warn {
+        border-color: rgba(220, 38, 38, 0.4);
+        background: #fef2f2;
+        color: #991b1b;
       }
 
       .status {
         margin-left: auto;
         font-size: 0.85rem;
+        font-size: 0.84rem;
         color: var(--muted);
         font-weight: 700;
         transition: color 0.2s ease;
+        white-space: nowrap;
       }
 
       .status.ok {
@@ -229,32 +278,55 @@
         display: grid;
         grid-template-columns: repeat(5, minmax(160px, 1fr));
         gap: 10px;
+        grid-template-columns: repeat(5, minmax(180px, 1fr));
+        gap: 12px;
       }
 
       .stat {
         padding: 16px;
+        padding: 16px 20px;
+        background: #fff;
+        border-radius: 14px;
+        border: 1px solid var(--line);
       }
 
       .stat .k {
         margin: 0;
         font-size: 0.83rem;
         color: var(--muted);
+        font-size: 0.76rem;
+        color: #64748b;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
       }
 
       .stat .v {
         margin: 8px 0 0;
         font-size: clamp(1.2rem, 2.5vw, 2rem);
+        margin: 6px 0 0;
+        font-size: 1.55rem;
         font-weight: 800;
+        font-variant-numeric: tabular-nums;
+        color: #0f172a;
       }
 
       .table-wrap {
         overflow: auto;
+        overflow-x: auto;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        box-shadow: 0 4px 24px rgba(16, 29, 48, 0.06);
       }
 
       table {
         width: 100%;
         border-collapse: collapse;
         min-width: 720px;
+        border-collapse: separate;
+        border-spacing: 0;
+        min-width: 1250px;
       }
 
       th,
@@ -263,28 +335,60 @@
         padding: 10px 12px;
         text-align: left;
         font-size: 0.92rem;
+        padding: 12px 14px;
+        border-bottom: 1px solid #f1ece4;
+        font-size: 0.88rem;
+        white-space: nowrap;
+        vertical-align: middle;
       }
 
       th {
         background: #f8f2e8;
+        background: #fbf8f3;
+        color: #475569;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
         position: sticky;
         top: 0;
+        z-index: 10;
+        border-bottom: 2px solid #e8dfd2;
       }
 
       tr:hover td {
         background: rgba(255, 248, 238, 0.72);
+      th:first-child,
+      td:first-child {
+        position: sticky;
+        left: 0;
+        background: #fff;
+        z-index: 5;
+        font-weight: 700;
+        box-shadow: 3px 0 8px rgba(0, 0, 0, 0.03);
       }
 
       td.week-zero {
         color: #9aa4ae;
+      th:first-child {
+        background: #fbf8f3;
+        z-index: 15;
       }
 
       td.week-paid {
         background: rgba(14, 146, 99, 0.15);
+      tr:hover td {
+        background: #fdfbf7;
       }
 
+      tr:hover td:first-child {
+        background: #fdfbf7;
+      }
+
+      /* Modern Week Interactive Chip */
       .week-cell {
         display: flex;
+        justify-content: center;
         align-items: center;
         justify-content: space-between;
         gap: 8px;
@@ -293,16 +397,76 @@
       .week-info {
         display: grid;
         gap: 2px;
+      .week-chip {
+        all: unset;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        min-width: 68px;
+        text-align: center;
+        border: 1px solid #e2d9cd;
+        background: #faf8f5;
       }
 
       .week-main {
         font-size: 0.84rem;
+      .week-chip:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .week-chip.unpaid {
+        color: #334155;
+        border-color: #e2d9cd;
+      }
+
+      .week-chip.unpaid:hover {
+        border-color: var(--accent);
+        background: #fff6f0;
+      }
+
+      .week-chip.paid {
+        background: #e6f7ef;
+        border-color: #9fe2bf;
+        color: #065f46;
+      }
+
+      .week-chip.paid:hover {
+        background: #d1fae5;
+      }
+
+      .week-chip .chip-hours {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.88rem;
         font-weight: 700;
+        line-height: 1.2;
       }
 
       .week-days {
         font-size: 0.78rem;
         color: var(--muted);
+      .week-chip .chip-days {
+        font-size: 0.72rem;
+        color: #64748b;
+        margin-top: 2px;
+        white-space: nowrap;
+      }
+
+      .week-chip.paid .chip-days {
+        color: #047857;
+      }
+
+      .week-zero-dash {
+        color: #cbd5e1;
+        font-weight: 600;
+        text-align: center;
       }
 
       .rate-editor {
@@ -313,13 +477,29 @@
 
       .rate-editor input {
         width: 120px;
+        width: 86px;
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 6px 8px;
+        text-align: right;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
       }
 
       .week-toggle,
+      .rate-editor button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
+
       .month-toggle {
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.15s ease;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #fff;
@@ -327,23 +507,47 @@
         padding: 5px 8px;
         font-size: 0.78rem;
         font-weight: 700;
+        color: #475569;
       }
 
       .week-toggle.on,
+      .month-toggle:hover {
+        border-color: var(--brand);
+        color: var(--brand);
+      }
+
       .month-toggle.on {
         border-color: rgba(15, 125, 91, 0.5);
+        background: #0f766e;
+        border-color: #0f766e;
         color: #fff;
         background: linear-gradient(120deg, var(--brand), var(--brand-strong));
       }
 
       .debt {
         color: var(--danger);
+      .cell-money {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
         font-weight: 700;
+        font-size: 0.92rem;
+        white-space: nowrap;
       }
 
       .paid {
         color: var(--brand-strong);
         font-weight: 700;
+      .cell-money.debt {
+        color: #dc2626;
+      }
+
+      .cell-money.paid {
+        color: #0f766e;
+      }
+
+      .cell-money.zero {
+        color: #94a3b8;
+        font-weight: 500;
       }
 
       .tag {
@@ -361,11 +565,13 @@
       .tag.ok {
         color: var(--brand-strong);
         border-color: rgba(15, 125, 91, 0.35);
+        background: #f0fdf4;
       }
 
       .tag.wait {
         color: var(--accent);
         border-color: rgba(201, 93, 47, 0.35);
+        background: #fff7ed;
       }
 
       .money {
@@ -375,7 +581,9 @@
 
       .empty {
         padding: 18px;
+        padding: 24px;
         color: var(--muted);
+        text-align: center;
       }
 
       @media (max-width: 840px) {
@@ -438,28 +646,48 @@
           <button id="thisMonthBtn" class="btn light">Thang hien tai</button>
           <button id="debtOnlyBtn" class="btn ghost">Chi xem hoc vien con no: OFF</button>
           <span id="status" class="status">San sang</span>
+          <div class="toolbar-user">
+            <span id="hello"></span>
+            <span id="roleBadge" class="badge"></span>
+            <span id="dbBadge" class="badge"></span>
+          </div>
+          <div class="toolbar-filters">
+            <input id="monthInput" placeholder="MM/YYYY" />
+            <button id="loadBtn" class="btn primary">Tải dữ liệu</button>
+            <button id="thisMonthBtn" class="btn light">Tháng hiện tại</button>
+            <button id="debtOnlyBtn" class="btn ghost">Chỉ xem còn nợ: OFF</button>
+          </div>
+          <span id="status" class="status">Sẵn sàng</span>
         </div>
 
         <div class="stats">
           <article class="panel stat">
             <p class="k">Hoc vien hien thi</p>
+            <p class="k">Học viên</p>
             <p class="v" id="kStudents">0</p>
           </article>
           <article class="panel stat">
             <p class="k">Tong thoi luong</p>
+            <p class="k">Tổng thời lượng</p>
             <p class="v" id="kSessions">0</p>
           </article>
           <article class="panel stat">
             <p class="k">Hoc phi tam tinh</p>
             <p class="v" id="kRevenue">0 VND</p>
+            <p class="k">Học phí tạm tính</p>
+            <p class="v" id="kRevenue">0 đ</p>
           </article>
           <article class="panel stat">
             <p class="k">Da thu</p>
             <p class="v paid" id="kPaid">0 VND</p>
+            <p class="k">Đã thu</p>
+            <p class="v paid" id="kPaid">0 đ</p>
           </article>
           <article class="panel stat">
             <p class="k">Con no</p>
             <p class="v debt" id="kOutstanding">0 VND</p>
+            <p class="k">Còn nợ</p>
+            <p class="v debt" id="kOutstanding">0 đ</p>
           </article>
         </div>
 
@@ -502,6 +730,7 @@
 
       function formatMoney(value) {
         return Number(value || 0).toLocaleString("vi-VN") + " VND";
+        return Number(value || 0).toLocaleString("vi-VN") + " đ";
       }
 
       function setStatus(text, type = "normal") {
@@ -567,6 +796,14 @@
           "Da thu",
           "Con no",
           "Trang thai",
+          "Học viên",
+          "Tổng thời gian",
+          ...weekHeaders.map((w) => "Tuần " + w),
+          "Đơn giá/h",
+          "Học phí",
+          "Đã thu",
+          "Còn nợ",
+          "Trạng thái",
         ];
         heads.forEach((label) => {
           const th = document.createElement("th");
@@ -584,10 +821,13 @@
 
           const baseTdName = document.createElement("td");
           baseTdName.textContent = student.studentName;
+          baseTdName.innerHTML = `<div style="font-weight:700; color:#1e293b; font-size:0.95rem;">${student.studentName}</div>`;
           tr.appendChild(baseTdName);
 
           const baseTdSessions = document.createElement("td");
           baseTdSessions.textContent = `${student.totalHours || 0}h (${student.sessions}b)`;
+          baseTdSessions.style.textAlign = "center";
+          baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.75rem; color:#64748b;">${student.sessions} buổi</div>`;
           tr.appendChild(baseTdSessions);
 
           const paidWeeks = new Set((student.payment && student.payment.paidWeeks) || []);
@@ -613,17 +853,30 @@
             const main = document.createElement("div");
             main.className = "week-main";
             if (count > 0) {
+              td.innerHTML = '<div class="week-zero-dash">-</div>';
+            } else {
               const weekHours = (student.weeklyHours && student.weeklyHours[weekIndex]) || 0;
               main.textContent = `${weekHours}h`;
             } else {
               main.textContent = "-";
             }
             info.appendChild(main);
+              const isWeekPaid = monthPaid || paidWeeks.has(weekIndex);
+              const dayLabels = weeklyDetails[weekIndex] || "";
 
             const days = document.createElement("div");
             days.className = "week-days";
             days.textContent = weeklyDetails[weekIndex] || (count > 0 ? "(co du lieu)" : "");
             info.appendChild(days);
+              const chip = document.createElement(canEditPayment ? "button" : "div");
+              chip.className = "week-chip " + (isWeekPaid ? "paid" : "unpaid");
+              if (canEditPayment) {
+                chip.dataset.action = "toggle-week";
+                chip.dataset.studentKey = student.studentKey;
+                chip.dataset.weekIndex = String(weekIndex);
+                chip.dataset.paid = isWeekPaid ? "1" : "0";
+              }
+              chip.title = `Tuần: ${weekHeaders[weekIndex]}\n• Chi tiết: ${dayLabels}\n• Bấm để ${isWeekPaid ? "hủy đã thu" : "xác nhận đã thu"}`;
 
             wrap.appendChild(info);
 
@@ -637,6 +890,17 @@
               btn.dataset.weekIndex = String(weekIndex);
               btn.dataset.paid = isWeekPaid ? "1" : "0";
               wrap.appendChild(btn);
+              chip.innerHTML = `
+                <div class="chip-hours">
+                  <span>${isWeekPaid ? "✓" : "○"}</span>
+                  <span>${weekHours}h</span>
+                </div>
+                <div class="chip-days">${dayLabels}</div>
+              `;
+              const wrap = document.createElement("div");
+              wrap.className = "week-cell";
+              wrap.appendChild(chip);
+              td.appendChild(wrap);
             }
 
             td.appendChild(wrap);
@@ -653,6 +917,7 @@
             rateInput.min = "1000";
             rateInput.step = "1000";
             rateInput.placeholder = "Gia / 1h";
+            rateInput.placeholder = "Giá / 1h";
             rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
             rateInput.className = "rate-input";
             editor.appendChild(rateInput);
@@ -660,6 +925,7 @@
             const saveRateBtn = document.createElement("button");
             saveRateBtn.className = "btn light";
             saveRateBtn.textContent = "Luu";
+            saveRateBtn.textContent = "Lưu";
             saveRateBtn.dataset.action = "save-rate";
             saveRateBtn.dataset.studentKey = student.studentKey;
             editor.appendChild(saveRateBtn);
@@ -673,23 +939,29 @@
           const tdTuition = document.createElement("td");
           tdTuition.textContent = student.tuition > 0 ? formatMoney(student.tuition) : (student.rate > 0 ? "0 VND" : "-");
           tdTuition.className = "money";
+          tdTuition.className = "cell-money";
+          tdTuition.textContent = student.tuition > 0 ? formatMoney(student.tuition) : (student.rate > 0 ? "0 đ" : "-");
           tr.appendChild(tdTuition);
 
           const tdPaid = document.createElement("td");
+          tdPaid.className = "cell-money " + (student.paidAmount > 0 ? "paid" : "zero");
           tdPaid.textContent = formatMoney(student.paidAmount);
           tdPaid.className = "paid";
           tr.appendChild(tdPaid);
 
           const tdOutstanding = document.createElement("td");
+          tdOutstanding.className = "cell-money " + (student.outstanding > 0 ? "debt" : "zero");
           tdOutstanding.textContent = formatMoney(student.outstanding);
           tdOutstanding.className = student.outstanding > 0 ? "debt" : "paid";
           tr.appendChild(tdOutstanding);
 
           const tdStatus = document.createElement("td");
+          tdStatus.style.textAlign = "center";
           if (canEditPayment) {
             const monthBtn = document.createElement("button");
             monthBtn.className = "month-toggle" + (monthPaid ? " on" : "");
             monthBtn.textContent = monthPaid ? "Da dong theo thang" : "Chot dong theo thang";
+            monthBtn.textContent = monthPaid ? "✓ Đã thu cả tháng" : "Chốt tháng";
             monthBtn.dataset.action = "toggle-month";
             monthBtn.dataset.studentKey = student.studentKey;
             monthBtn.dataset.paid = monthPaid ? "1" : "0";
@@ -699,6 +971,7 @@
             const ok = student.outstanding === 0;
             tag.className = "tag " + (ok ? "ok" : "wait");
             tag.textContent = ok ? "Da hoan tat" : "Dang con no";
+            tag.textContent = ok ? "✓ Đã xong" : "Đang nợ";
             tdStatus.appendChild(tag);
           }
           tr.appendChild(tdStatus);
@@ -708,6 +981,7 @@
 
         document.getElementById("kStudents").textContent = String(rows.length || 0);
         document.getElementById("kSessions").textContent = `${payload.summary.totalSessions || 0} buoi (${payload.summary.totalHours || 0}h)`;
+        document.getElementById("kSessions").textContent = `${payload.summary.totalSessions || 0} buổi (${payload.summary.totalHours || 0}h)`;
         document.getElementById("kRevenue").textContent = formatMoney(payload.summary.totalRevenue || 0);
         document.getElementById("kPaid").textContent = formatMoney(payload.summary.totalPaid || 0);
         document.getElementById("kOutstanding").textContent = formatMoney(payload.summary.totalOutstanding || 0);
@@ -851,6 +1125,14 @@
           }
         } catch (err) {
           setStatus("Loi: " + err.message, "err");
+        }
+      });
+
+      tbody.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && event.target.classList.contains("rate-input")) {
+          const row = event.target.closest("tr");
+          const btn = row ? row.querySelector('button[data-action="save-rate"]') : null;
+          if (btn) btn.click();
         }
       });
 
