@@ -652,6 +652,8 @@
             rateInput.min = "1000";
             rateInput.step = "1000";
             rateInput.value = String(student.rate || 0);
+            rateInput.placeholder = "Chưa nhập";
+            rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
             rateInput.className = "rate-input";
             editor.appendChild(rateInput);
 
@@ -665,11 +667,13 @@
             tdRate.appendChild(editor);
           } else {
             tdRate.textContent = formatMoney(student.rate);
+            tdRate.textContent = student.rate > 0 ? formatMoney(student.rate) : "Chưa có";
           }
           tr.appendChild(tdRate);
 
           const tdTuition = document.createElement("td");
           tdTuition.textContent = formatMoney(student.tuition);
+          tdTuition.textContent = student.tuition > 0 ? formatMoney(student.tuition) : (student.rate > 0 ? "0 VND" : "-");
           tdTuition.className = "money";
           tr.appendChild(tdTuition);
 

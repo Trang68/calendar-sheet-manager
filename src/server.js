@@ -25,6 +25,7 @@ const config = {
   appUsersJson: process.env.APP_USERS_JSON || "",
   studentRateJson: process.env.STUDENT_RATE_JSON || "",
   defaultSessionRate: parseInt(process.env.DEFAULT_SESSION_RATE || "300000", 10),
+  defaultSessionRate: parseInt(process.env.DEFAULT_SESSION_RATE || "0", 10),
   databaseUrl: process.env.DATABASE_URL || "",
 };
 
@@ -678,6 +679,7 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
     const students = Array.from(studentMap.values())
       .map((item) => {
         const rate = effectiveRateMap[item.studentKey] || config.defaultSessionRate;
+        const rate = effectiveRateMap[item.studentKey] || 0;
         return {
           ...item,
           weeklyDetails: item.weeklyDates.map((days) => days.join(", ")),
