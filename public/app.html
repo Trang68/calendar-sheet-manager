@@ -60,6 +60,7 @@
             <button id="loadBtn" class="btn primary">Tải dữ liệu</button>
             <button id="debtOnlyBtn" class="btn ghost">Chỉ xem còn nợ: OFF</button>
             <button id="toggleRateBtn" class="btn ghost" title="Ẩn cột đơn giá để thu gọn bảng khi chụp màn hình gửi học sinh">👁️ Ẩn đơn giá</button>
+            <button id="manageAccountsBtn" class="btn ghost" style="display:none" title="Tạo mã đăng nhập và mật khẩu cho học sinh">👥 Cấp mã học sinh</button>
           </div>
           <span id="status" class="status">Sẵn sàng</span>
         </div>
@@ -107,6 +108,41 @@
       </section>
     </main>
 
+    <!-- Modal Quản lý cấp tài khoản học sinh -->
+    <div id="accountsModal" class="modal-overlay" style="display:none">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title">👥 Quản lý & Cấp mã đăng nhập học sinh</h3>
+            <p class="modal-sub">Cấp tài khoản & mật khẩu để học sinh tự vào web tra cứu số buổi học và học phí của mình.</p>
+          </div>
+          <button id="closeAccountsModalBtn" class="modal-close-btn" title="Đóng">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-toolbar">
+            <input id="searchAccountInput" class="modal-search" placeholder="🔍 Tìm theo tên hoặc mã học sinh..." />
+            <span id="accountSaveStatus" class="account-status"></span>
+          </div>
+          <div class="modal-table-wrap">
+            <table class="account-table">
+              <thead>
+                <tr>
+                  <th style="width: 28%">Học sinh</th>
+                  <th style="width: 25%">Tài khoản</th>
+                  <th style="width: 25%">Mật khẩu</th>
+                  <th style="width: 22%; text-align: right">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="accountsTbody"></tbody>
+            </table>
+          </div>
+          <div class="modal-footer-note">
+            💡 <strong>Hướng dẫn:</strong> Điền tên đăng nhập & mật khẩu (hoặc bấm <strong>🎲</strong> để tạo nhanh) rồi bấm <strong>💾 Lưu</strong>. Sau đó bấm <strong>📋 Sao chép</strong> để gửi nhanh cho học sinh qua Zalo/Messenger!
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const loginPanel = document.getElementById("loginPanel");
       const appPanel = document.getElementById("appPanel");
@@ -122,6 +158,12 @@
       const emptyState = document.getElementById("emptyState");
       const debtOnlyBtn = document.getElementById("debtOnlyBtn");
       const toggleRateBtn = document.getElementById("toggleRateBtn");
+      const manageAccountsBtn = document.getElementById("manageAccountsBtn");
+      const accountsModal = document.getElementById("accountsModal");
+      const closeAccountsModalBtn = document.getElementById("closeAccountsModalBtn");
+      const accountsTbody = document.getElementById("accountsTbody");
+      const searchAccountInput = document.getElementById("searchAccountInput");
+      const accountSaveStatus = document.getElementById("accountSaveStatus");
 
       let currentUser = null;
       let currentMonth = "";
@@ -238,6 +280,7 @@
         logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
         debtOnlyBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
         toggleRateBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
+        manageAccountsBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
 
         if (isLoggedIn) {
           document.getElementById("hello").textContent = "Xin chào, " + user.displayName;
@@ -612,6 +655,313 @@
             alert(msg);
           } catch (err) {
             alert("Không thể kiểm tra DB: " + err.message);
+          }
+        });
+      }
+
+      // ================= Quản lý tài khoản học sinh =================
+      let studentAccountsCache = {};
+
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function getCombinedStudentList() {
+        const map = new Map();
+        if (latestPayload && Array.isArray(latestPayload.students)) {
+          latestPayload.students.forEach((s) => {
+            map.set(s.studentKey, {
+              studentKey: s.studentKey,
+              studentName: s.studentName,
+            });
+          });
+        }
+        if (studentAccountsCache) {
+          Object.keys(studentAccountsCache).forEach((k) => {
+            const acc = studentAccountsCache[k];
+            if (!map.has(k)) {
+              map.set(k, {
+                studentKey: k,
+                studentName: acc.displayName || k,
+              });
+            }
+          });
+        }
+        return Array.from(map.values()).sort((a, b) => a.studentName.localeCompare(b.studentName, "vi"));
+      }
+
+      function renderAccountsTable() {
+        if (!accountsTbody) return;
+        const students = getCombinedStudentList();
+        const query = (searchAccountInput ? searchAccountInput.value : "").trim().toLowerCase();
+
+        accountsTbody.innerHTML = "";
+
+        if (students.length === 0) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = '<td colspan="4" style="text-align:center; padding: 24px; color: var(--muted)">Chưa có dữ liệu học sinh nào. Hãy tải dữ liệu tháng trước.</td>';
+          accountsTbody.appendChild(tr);
+          return;
+        }
+
+        let visibleCount = 0;
+
+        students.forEach((s) => {
+          const acc = studentAccountsCache[s.studentKey] || null;
+          const currentUsername = acc ? acc.username : s.studentKey;
+          const currentPassword = acc ? acc.plainPassword : "";
+          const isSaved = Boolean(acc);
+
+          if (query) {
+            const matchName = s.studentName.toLowerCase().includes(query);
+            const matchKey = s.studentKey.toLowerCase().includes(query);
+            const matchUser = currentUsername.toLowerCase().includes(query);
+            if (!matchName && !matchKey && !matchUser) return;
+          }
+
+          visibleCount++;
+          const tr = document.createElement("tr");
+          tr.dataset.studentKey = s.studentKey;
+          tr.dataset.studentName = s.studentName;
+
+          tr.innerHTML = `
+            <td>
+              <div class="acc-name">${escapeHtml(s.studentName)}</div>
+              <div class="acc-key-tag">Mã: ${escapeHtml(s.studentKey)} ${isSaved ? '<span class="tag ok" style="padding:1px 6px; font-size:0.7rem;">Đã cấp</span>' : '<span class="tag wait" style="padding:1px 6px; font-size:0.7rem;">Chưa lưu</span>'}</div>
+            </td>
+            <td>
+              <input class="acc-input acc-user-val" data-key="${escapeHtml(s.studentKey)}" value="${escapeHtml(currentUsername)}" placeholder="tên đăng nhập" autocomplete="off" />
+            </td>
+            <td>
+              <div class="acc-pass-row">
+                <input class="acc-input acc-pass-val" data-key="${escapeHtml(s.studentKey)}" value="${escapeHtml(currentPassword)}" placeholder="mật khẩu" autocomplete="off" />
+                <button type="button" class="btn light btn-xs acc-gen-btn" data-key="${escapeHtml(s.studentKey)}" title="Tạo mật khẩu 6 số ngẫu nhiên">🎲</button>
+              </div>
+            </td>
+            <td style="text-align: right">
+              <div class="acc-actions">
+                <button type="button" class="btn primary btn-xs" data-action="save-acc" data-key="${escapeHtml(s.studentKey)}">💾 Lưu</button>
+                <button type="button" class="btn light btn-xs" data-action="copy-acc" data-key="${escapeHtml(s.studentKey)}" title="Sao chép thông tin gửi học sinh">📋 Copy</button>
+                ${isSaved ? `<button type="button" class="btn danger-ghost btn-xs" data-action="delete-acc" data-key="${escapeHtml(s.studentKey)}" title="Xóa tài khoản">🗑️</button>` : ""}
+              </div>
+            </td>
+          `;
+
+          accountsTbody.appendChild(tr);
+        });
+
+        if (visibleCount === 0 && query) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td colspan="4" style="text-align:center; padding: 24px; color: var(--muted)">Không tìm thấy học sinh phù hợp với từ khóa "${escapeHtml(query)}"</td>`;
+          accountsTbody.appendChild(tr);
+        }
+      }
+
+      async function openAccountsModal() {
+        if (!accountsModal) return;
+        accountsModal.style.display = "flex";
+        if (searchAccountInput) searchAccountInput.value = "";
+        if (accountSaveStatus) {
+          accountSaveStatus.textContent = "Đang tải danh sách...";
+          accountSaveStatus.className = "account-status";
+        }
+        try {
+          const res = await api("/api/student-accounts");
+          studentAccountsCache = res.accounts || {};
+          renderAccountsTable();
+          if (accountSaveStatus) accountSaveStatus.textContent = "";
+        } catch (err) {
+          if (accountSaveStatus) {
+            accountSaveStatus.textContent = "Lỗi: " + err.message;
+            accountSaveStatus.className = "account-status err";
+          }
+        }
+      }
+
+      function closeAccountsModal() {
+        if (accountsModal) accountsModal.style.display = "none";
+      }
+
+      if (manageAccountsBtn) {
+        manageAccountsBtn.addEventListener("click", openAccountsModal);
+      }
+      if (closeAccountsModalBtn) {
+        closeAccountsModalBtn.addEventListener("click", closeAccountsModal);
+      }
+      if (accountsModal) {
+        accountsModal.addEventListener("click", (e) => {
+          if (e.target === accountsModal) {
+            closeAccountsModal();
+          }
+        });
+      }
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && accountsModal && accountsModal.style.display === "flex") {
+          closeAccountsModal();
+        }
+      });
+
+      if (searchAccountInput) {
+        searchAccountInput.addEventListener("input", () => {
+          renderAccountsTable();
+        });
+      }
+
+      if (accountsTbody) {
+        accountsTbody.addEventListener("click", async (e) => {
+          const btn = e.target.closest("button");
+          if (!btn) return;
+
+          const row = btn.closest("tr");
+          if (!row) return;
+
+          const studentKey = row.dataset.studentKey;
+          const studentName = row.dataset.studentName;
+          const action = btn.dataset.action;
+
+          // 1. Tạo mật khẩu ngẫu nhiên
+          if (btn.classList.contains("acc-gen-btn")) {
+            const passInput = row.querySelector(".acc-pass-val");
+            if (passInput) {
+              const randPass = String(Math.floor(100000 + Math.random() * 900000));
+              passInput.value = randPass;
+              passInput.focus();
+            }
+            return;
+          }
+
+          // 2. Lưu tài khoản
+          if (action === "save-acc") {
+            const userInput = row.querySelector(".acc-user-val");
+            const passInput = row.querySelector(".acc-pass-val");
+            const username = (userInput ? userInput.value : "").trim();
+            const password = (passInput ? passInput.value : "").trim();
+
+            if (!username) {
+              alert("Vui lòng nhập tên đăng nhập!");
+              if (userInput) userInput.focus();
+              return;
+            }
+            if (!password) {
+              alert("Vui lòng nhập mật khẩu!");
+              if (passInput) passInput.focus();
+              return;
+            }
+
+            const oldText = btn.textContent;
+            btn.textContent = "...";
+            btn.disabled = true;
+            if (accountSaveStatus) accountSaveStatus.textContent = `Đang lưu cho ${studentName}...`;
+
+            try {
+              const res = await api("/api/student-accounts/upsert", {
+                method: "POST",
+                body: {
+                  studentKey,
+                  username,
+                  password,
+                  displayName: studentName,
+                },
+              });
+
+              studentAccountsCache[studentKey] = res.account;
+              renderAccountsTable();
+              if (accountSaveStatus) {
+                accountSaveStatus.textContent = `✓ Đã lưu tài khoản ${username} (${studentName}) thành công!`;
+                accountSaveStatus.className = "account-status ok";
+              }
+            } catch (err) {
+              alert("Lỗi khi lưu: " + err.message);
+              if (accountSaveStatus) {
+                accountSaveStatus.textContent = "Lỗi: " + err.message;
+                accountSaveStatus.className = "account-status err";
+              }
+            } finally {
+              btn.textContent = oldText;
+              btn.disabled = false;
+            }
+            return;
+          }
+
+          // 3. Sao chép thông tin gửi học sinh
+          if (action === "copy-acc") {
+            const userInput = row.querySelector(".acc-user-val");
+            const passInput = row.querySelector(".acc-pass-val");
+            const username = (userInput ? userInput.value : "").trim();
+            const password = (passInput ? passInput.value : "").trim();
+
+            if (!password) {
+              alert("Chưa có mật khẩu! Hãy nhập hoặc tạo mật khẩu trước khi sao chép.");
+              if (passInput) passInput.focus();
+              return;
+            }
+
+            const origin = window.location.origin;
+            const loginUrl = `${origin}/app`;
+            const message =
+              `Chào em ${studentName}!\n` +
+              `Dưới đây là thông tin đăng nhập tra cứu số buổi học và học phí của em:\n` +
+              `🔗 Link web: ${loginUrl}\n` +
+              `👤 Tài khoản: ${username}\n` +
+              `🔑 Mật khẩu: ${password}\n\n` +
+              `Em vào link trên rồi đăng nhập để xem chi tiết nhé!`;
+
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(message);
+              } else {
+                const ta = document.createElement("textarea");
+                ta.value = message;
+                ta.style.position = "fixed";
+                ta.style.opacity = "0";
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                document.body.removeChild(ta);
+              }
+              const oldText = btn.textContent;
+              btn.textContent = "✓ Đã copy!";
+              setTimeout(() => {
+                btn.textContent = oldText;
+              }, 2000);
+              if (accountSaveStatus) {
+                accountSaveStatus.textContent = `✓ Đã copy tin nhắn cho ${studentName}! Hãy dán (Ctrl+V) vào Zalo/Messenger.`;
+                accountSaveStatus.className = "account-status ok";
+              }
+            } catch (err) {
+              prompt("Không thể copy tự động, bạn hãy copy thủ công:", message);
+            }
+            return;
+          }
+
+          // 4. Xóa tài khoản
+          if (action === "delete-acc") {
+            if (!confirm(`Bạn có chắc muốn xóa tài khoản đăng nhập của học sinh "${studentName}" không?`)) {
+              return;
+            }
+            const oldText = btn.textContent;
+            btn.textContent = "...";
+            btn.disabled = true;
+            try {
+              await api("/api/student-accounts/" + encodeURIComponent(studentKey), { method: "DELETE" });
+              delete studentAccountsCache[studentKey];
+              renderAccountsTable();
+              if (accountSaveStatus) {
+                accountSaveStatus.textContent = `Đã xóa tài khoản của ${studentName}.`;
+                accountSaveStatus.className = "account-status ok";
+              }
+            } catch (err) {
+              alert("Lỗi khi xóa: " + err.message);
+            } finally {
+              btn.textContent = oldText;
+              btn.disabled = false;
+            }
+            return;
           }
         });
       }

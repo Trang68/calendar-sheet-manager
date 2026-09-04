@@ -562,5 +562,257 @@
         .stats {
           grid-template-columns: 1fr;
         }
+      }
 
+      /* Modal Quản lý cấp tài khoản học sinh */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.65);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 16px;
+        animation: modalFadeIn 0.2s ease-out;
+      }
+
+      @keyframes modalFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .modal-card {
+        background: var(--paper, #fffdf8);
+        border: 1px solid var(--line, #d1c6b8);
+        border-radius: 20px;
+        box-shadow: 0 24px 64px rgba(15, 23, 42, 0.25);
+        width: min(880px, 100%);
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes modalSlideUp {
+        from { transform: translateY(20px) scale(0.98); opacity: 0; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 18px 24px 14px;
+        border-bottom: 1px solid var(--line, #d1c6b8);
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      .modal-title {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.25rem;
+        color: var(--ink, #1a2432);
+      }
+
+      .modal-sub {
+        margin: 4px 0 0;
+        font-size: 0.85rem;
+        color: var(--muted, #5f6978);
+      }
+
+      .modal-close-btn {
+        background: transparent;
+        border: none;
+        font-size: 1.6rem;
+        line-height: 1;
+        color: var(--muted, #5f6978);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 8px;
+        transition: all 0.15s;
+      }
+
+      .modal-close-btn:hover {
+        background: rgba(0, 0, 0, 0.06);
+        color: var(--danger, #ba2c2c);
+      }
+
+      .modal-body {
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        overflow-y: auto;
+      }
+
+      .modal-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .modal-search {
+        flex: 1;
+        min-width: 240px;
+        padding: 8px 14px;
+        border: 1px solid var(--line, #d1c6b8);
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 0.9rem;
+        background: #fff;
+      }
+
+      .modal-search:focus {
+        outline: none;
+        border-color: var(--brand, #0f7d5b);
+        box-shadow: 0 0 0 3px rgba(15, 125, 91, 0.15);
+      }
+
+      .account-status {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--muted, #5f6978);
+      }
+
+      .account-status.ok {
+        color: var(--brand, #0f7d5b);
+      }
+
+      .account-status.err {
+        color: var(--danger, #ba2c2c);
+      }
+
+      .modal-table-wrap {
+        border: 1px solid var(--line, #d1c6b8);
+        border-radius: 12px;
+        overflow: hidden;
+        max-height: 52vh;
+        overflow-y: auto;
+        background: #fff;
+      }
+
+      .account-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+
+      .account-table th {
+        background: #f8fafc;
+        padding: 10px 14px;
+        text-align: left;
+        font-weight: 700;
+        color: var(--muted, #5f6978);
+        border-bottom: 1px solid var(--line, #d1c6b8);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      .account-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid rgba(209, 198, 184, 0.4);
+        vertical-align: middle;
+      }
+
+      .account-table tr:hover {
+        background: rgba(15, 125, 91, 0.03);
+      }
+
+      .acc-name {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 0.92rem;
+      }
+
+      .acc-key-tag {
+        font-size: 0.74rem;
+        color: #64748b;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .acc-input {
+        width: 100%;
+        padding: 6px 10px;
+        border: 1px solid var(--line, #d1c6b8);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 0.86rem;
+        background: #fff;
+      }
+
+      .acc-input:focus {
+        outline: none;
+        border-color: var(--brand, #0f7d5b);
+        box-shadow: 0 0 0 2px rgba(15, 125, 91, 0.15);
+      }
+
+      .acc-pass-row {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .acc-actions {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .btn-xs {
+        padding: 5px 9px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        border: 1px solid transparent;
+        white-space: nowrap;
+      }
+
+      .btn-xs.primary {
+        background: var(--brand, #0f7d5b);
+        color: #fff;
+      }
+
+      .btn-xs.primary:hover {
+        background: var(--brand-strong, #0a5f45);
+      }
+
+      .btn-xs.light {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        color: #1e293b;
+      }
+
+      .btn-xs.light:hover {
+        background: #e2e8f0;
+      }
+
+      .btn-xs.danger-ghost {
+        background: transparent;
+        border-color: #fecaca;
+        color: #dc2626;
+      }
+
+      .btn-xs.danger-ghost:hover {
+        background: #fef2f2;
+      }
+
+      .modal-footer-note {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 0.82rem;
+        color: #166534;
+        line-height: 1.45;
       }

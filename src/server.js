@@ -234,6 +234,8 @@ const paymentsStorePath = path.join(__dirname, "../data/payments.json");
 const PAYMENTS_STORE_DB_KEY = "payments_store";
 const STUDENT_RATES_KEY = "__studentRates";
 const STUDENT_RATES_TABLE = "student_rates";
+const STUDENT_ACCOUNTS_TABLE = "student_accounts";
+const studentAccountsPath = path.join(__dirname, "../data/student_accounts.json");
 const useDatabaseStore = Boolean(config.databaseUrl);
 
 let pgPool = null;
@@ -323,6 +325,16 @@ async function ensureDatabaseInitialized() {
           updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         )
       `);
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS ${STUDENT_ACCOUNTS_TABLE} (
+          student_key TEXT PRIMARY KEY,
+          username TEXT UNIQUE NOT NULL,
+          password_hash TEXT NOT NULL,
+          plain_password TEXT,
+          display_name TEXT,
+          updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+      `);
       dbConnected = true;
       dbLastError = null;
       return true;
@@ -375,6 +387,166 @@ async function upsertStudentRateToDatabase(studentKey, rate) {
     `,
     [studentKey, rate],
   );
+}
+
+function ensureStudentAccountsFile() {
+  const dirPath = path.dirname(studentAccountsPath);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+  if (!fs.existsSync(studentAccountsPath)) {
+    fs.writeFileSync(studentAccountsPath, JSON.stringify({}, null, 2));
+  }
+}
+
+function readStudentAccountsFromFile() {
+  ensureStudentAccountsFile();
+  try {
+    const raw = fs.readFileSync(studentAccountsPath, "utf8");
+    const parsed = JSON.parse(raw || "{}");
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+    return parsed;
+  } catch (_err) {
+    return {};
+  }
+}
+
+function writeStudentAccountsToFile(store) {
+  ensureStudentAccountsFile();
+  fs.writeFileSync(studentAccountsPath, JSON.stringify(store, null, 2));
+}
+
+async function readStudentAccounts() {
+  const fileStore = readStudentAccountsFromFile();
+  if (!useDatabaseStore) {
+    return fileStore;
+  }
+
+  try {
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    const res = await pool.query(
+      `SELECT student_key, username, password_hash, plain_password, display_name, updated_at FROM ${STUDENT_ACCOUNTS_TABLE} ORDER BY updated_at DESC`
+    );
+    const dbMap = {};
+    res.rows.forEach((row) => {
+      dbMap[row.student_key] = {
+        studentKey: row.student_key,
+        username: row.username,
+        passwordHash: row.password_hash,
+        plainPassword: row.plain_password || "",
+        displayName: row.display_name || row.student_key,
+        updatedAt: row.updated_at,
+      };
+    });
+    return { ...fileStore, ...dbMap };
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("[student_accounts] Postgres read failed, fallback to file store:", err.message);
+    return fileStore;
+  }
+}
+
+async function upsertStudentAccount({ studentKey, username, password, displayName }) {
+  const normKey = normalizeStudentKey(studentKey);
+  const normUser = normalizeText(username).toLowerCase().replace(/\s+/g, "");
+  const pHash = hashPassword(password);
+  const name = normalizeText(displayName) || studentKey;
+
+  // Local file sync
+  const fileStore = readStudentAccountsFromFile();
+  fileStore[normKey] = {
+    studentKey: normKey,
+    username: normUser,
+    passwordHash: pHash,
+    plainPassword: password,
+    displayName: name,
+    updatedAt: new Date().toISOString(),
+  };
+  writeStudentAccountsToFile(fileStore);
+
+  // Postgres sync
+  if (useDatabaseStore) {
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    await pool.query(
+      `
+        INSERT INTO ${STUDENT_ACCOUNTS_TABLE} (student_key, username, password_hash, plain_password, display_name, updated_at)
+        VALUES ($1, $2, $3, $4, $5, NOW())
+        ON CONFLICT (student_key)
+        DO UPDATE SET username = EXCLUDED.username,
+                      password_hash = EXCLUDED.password_hash,
+                      plain_password = EXCLUDED.plain_password,
+                      display_name = EXCLUDED.display_name,
+                      updated_at = NOW()
+      `,
+      [normKey, normUser, pHash, password, name],
+    );
+  }
+}
+
+async function deleteStudentAccount(studentKey) {
+  const normKey = normalizeStudentKey(studentKey);
+  const fileStore = readStudentAccountsFromFile();
+  delete fileStore[normKey];
+  writeStudentAccountsToFile(fileStore);
+
+  if (useDatabaseStore) {
+    await ensureDatabaseInitialized();
+    const pool = getPgPool();
+    await pool.query(`DELETE FROM ${STUDENT_ACCOUNTS_TABLE} WHERE student_key = $1`, [normKey]);
+  }
+}
+
+async function findStudentAccountByUsername(username) {
+  const normUser = normalizeText(username).toLowerCase().replace(/\s+/g, "");
+  if (!normUser) return null;
+
+  if (useDatabaseStore) {
+    try {
+      await ensureDatabaseInitialized();
+      const pool = getPgPool();
+      const res = await pool.query(
+        `SELECT student_key, username, password_hash, plain_password, display_name FROM ${STUDENT_ACCOUNTS_TABLE} WHERE LOWER(username) = $1 LIMIT 1`,
+        [normUser],
+      );
+      if (res.rowCount > 0) {
+        const row = res.rows[0];
+        return {
+          studentKey: row.student_key,
+          username: row.username,
+          passwordHash: row.password_hash,
+          displayName: row.display_name || row.student_key,
+          role: "student",
+        };
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("[student_accounts] DB lookup failed:", err.message);
+    }
+  }
+
+  // Fallback to file store
+  const fileStore = readStudentAccountsFromFile();
+  const foundKey = Object.keys(fileStore).find((k) => {
+    const u = (fileStore[k].username || "").toLowerCase();
+    return u === normUser;
+  });
+
+  if (foundKey) {
+    const acc = fileStore[foundKey];
+    return {
+      studentKey: acc.studentKey,
+      username: acc.username,
+      passwordHash: acc.passwordHash,
+      displayName: acc.displayName || acc.studentKey,
+      role: "student",
+    };
+  }
+
+  return null;
 }
 
 async function readPaymentsStore() {
@@ -616,10 +788,18 @@ app.post("/api/auth/login", (req, res) => {
   const username = normalizeText(req.body?.username);
   const password = String(req.body?.password || "");
   const user = userMap.get(username);
+app.post("/api/auth/login", async (req, res) => {
+  try {
+    const rawUsername = normalizeText(req.body?.username);
+    const password = String(req.body?.password || "");
+    let user = userMap.get(rawUsername);
 
   if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
     return res.status(401).json({ ok: false, error: "Sai tài khoản hoặc mật khẩu" });
   }
+    if (!user) {
+      user = await findStudentAccountByUsername(rawUsername);
+    }
 
   const token = createSessionToken(user);
   const isProd = process.env.NODE_ENV === "production";
@@ -630,6 +810,9 @@ app.post("/api/auth/login", (req, res) => {
     maxAge: config.sessionTtlHours * 60 * 60 * 1000,
     path: "/",
   });
+    if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
+      return res.status(401).json({ ok: false, error: "Sai tài khoản hoặc mật khẩu" });
+    }
 
   return res.json({
     ok: true,
@@ -639,6 +822,27 @@ app.post("/api/auth/login", (req, res) => {
       displayName: user.displayName,
     },
   });
+    const token = createSessionToken(user);
+    const isProd = process.env.NODE_ENV === "production";
+    res.cookie(SESSION_COOKIE_NAME, token, {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: isProd,
+      maxAge: config.sessionTtlHours * 60 * 60 * 1000,
+      path: "/",
+    });
+
+    return res.json({
+      ok: true,
+      user: {
+        username: user.username,
+        role: user.role,
+        displayName: user.displayName,
+      },
+    });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: "Lỗi đăng nhập: " + err.message });
+  }
 });
 
 app.post("/api/auth/logout", (_req, res) => {
@@ -995,6 +1199,80 @@ app.post("/api/rates/update", requireLogin, requireRole("teacher"), async (req, 
     await writePaymentsStore(store);
 
     return res.json({ ok: true, studentKey, rate, persistedTo, warning });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.get("/api/student-accounts", requireLogin, requireRole("teacher"), async (_req, res) => {
+  try {
+    const accounts = await readStudentAccounts();
+    return res.json({ ok: true, accounts });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+app.post("/api/student-accounts/upsert", requireLogin, requireRole("teacher"), async (req, res) => {
+  try {
+    const studentKey = normalizeStudentKey(req.body?.studentKey);
+    const username = normalizeText(req.body?.username).toLowerCase().replace(/\s+/g, "");
+    const password = String(req.body?.password || "").trim();
+    const displayName = normalizeText(req.body?.displayName);
+
+    if (!studentKey) {
+      throw new Error("Mã học sinh không hợp lệ");
+    }
+    if (!username) {
+      throw new Error("Tên đăng nhập không được để trống");
+    }
+    if (!password) {
+      throw new Error("Mật khẩu không được để trống");
+    }
+
+    if (userMap.has(username)) {
+      const existingStatic = userMap.get(username);
+      if (existingStatic.role === "teacher" || existingStatic.studentKey !== studentKey) {
+        throw new Error(`Tên đăng nhập "${username}" đã được sử dụng.`);
+      }
+    }
+
+    const existingStudent = await findStudentAccountByUsername(username);
+    if (existingStudent && existingStudent.studentKey !== studentKey) {
+      throw new Error(
+        `Tên đăng nhập "${username}" đã được cấp cho học sinh "${existingStudent.displayName || existingStudent.studentKey}". Vui lòng chọn tên khác.`
+      );
+    }
+
+    await upsertStudentAccount({
+      studentKey,
+      username,
+      password,
+      displayName,
+    });
+
+    return res.json({
+      ok: true,
+      account: {
+        studentKey,
+        username,
+        plainPassword: password,
+        displayName: displayName || studentKey,
+      },
+    });
+  } catch (err) {
+    return res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+app.delete("/api/student-accounts/:studentKey", requireLogin, requireRole("teacher"), async (req, res) => {
+  try {
+    const studentKey = normalizeStudentKey(req.params.studentKey);
+    if (!studentKey) {
+      throw new Error("Missing studentKey");
+    }
+    await deleteStudentAccount(studentKey);
+    return res.json({ ok: true, studentKey });
   } catch (err) {
     return res.status(400).json({ ok: false, error: err.message });
   }
