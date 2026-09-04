@@ -696,6 +696,15 @@
       let showRateColumn = localStorage.getItem("taiga_show_rate") === "true";
       let latestPayload = null;
 
+      function updateToggleRateBtn() {
+        if (toggleRateBtn) {
+          toggleRateBtn.textContent = showRateColumn ? "👁️ Ẩn đơn giá" : "👁️ Hiện đơn giá";
+          toggleRateBtn.title = showRateColumn
+            ? "Ẩn cột đơn giá để bảng gọn gàng hơn khi chụp ảnh màn hình gửi học sinh"
+            : "Hiện cột đơn giá để xem và sửa giá tiền";
+        }
+      }
+
       function initMonthYearSelectors() {
         if (!selectMonth || !selectYear) return;
 
@@ -757,6 +766,34 @@
       function setCurrentMonth() {
         const now = new Date();
         setSelectedMonth(now.getFullYear(), now.getMonth());
+      }
+
+      function formatMoney(value) {
+        return Number(value || 0).toLocaleString("vi-VN") + " đ";
+      }
+
+      function setStatus(text, type = "normal") {
+        if (statusEl) {
+          statusEl.textContent = text;
+          statusEl.className = "status" + (type !== "normal" ? " " + type : "");
+        }
+      }
+
+      async function api(path, options = {}) {
+        const res = await fetch(path, {
+          method: options.method || "GET",
+          headers: {
+            "Content-Type": "application/json",
+            ...(options.headers || {}),
+          },
+          credentials: "include",
+          body: options.body ? JSON.stringify(options.body) : undefined,
+        });
+        const json = await res.json();
+        if (!res.ok || !json.ok) {
+          throw new Error(json.error || "Request failed");
+        }
+        return json;
       }
 
       function renderAuthState(user) {
