@@ -1,15 +1,36 @@
-# Calendar Sheet Manager
+# TAIGA Center & CRM (calendar-sheet-manager)
 
-Single-page web app to manage your Google Calendar and export results to Google Sheets with the same flow you already use:
+Hệ thống tích hợp Website trung tâm tiếng Nga **TAIGA Center** và nền tảng quản lý học viên 1-1 (**TAIGA CRM**) tự động hóa dữ liệu từ Google Calendar.
 
-- Weekly incremental export (current month logic)
-- Full export for current month
-- Full export for a custom month (`MM/YYYY`)
+---
 
-Data remains in Google services:
+## 📌 Tổng quan dự án (Project Overview)
 
-- Source of truth for schedule: Google Calendar
-- Output/report: Google Sheets
+Dự án giải quyết bài toán quản lý lớp học kèm 1-1, tính số buổi/thời lượng học và tính học phí cho giáo viên dạy kèm (cô Trang), thay thế hoàn toàn việc nhập liệu thủ công mỗi ngày vào bảng tính:
+
+- **Nguồn dữ liệu gốc (Source of Truth):** Lịch dạy trên **Google Calendar**. Giáo viên chỉ cần lên lịch các buổi dạy (tiêu đề chứa tên học viên và thời lượng như `1h30`, `90p`...).
+- **Tự động phân tích & Tính toán:** Backend tự động đọc sự kiện từ Google Calendar API qua Service Account, phân tích thời lượng, nhóm theo thứ trong tuần (T2 - CN), tổng hợp số giờ học và nhân với đơn giá (hourly rate) riêng của từng học viên.
+- **Theo dõi học phí & Thu tiền:** Giáo viên có thể đánh dấu đã thanh toán theo từng tuần hoặc chốt thu cả tháng trực tiếp trên giao diện web.
+- **Phân quyền người dùng (Role-based Auth):**
+  - **Giáo viên (`teacher`):** Xem toàn bộ học viên, điều chỉnh đơn giá, quản lý trạng thái thanh toán, cấp tài khoản đăng nhập cho học sinh, ẩn/hiện cột đơn giá khi cần chụp màn hình đối soát.
+  - **Học viên (`student`):** Đăng nhập bằng tài khoản được cấp và chỉ xem được lịch sử học, thời lượng, học phí và trạng thái thanh toán của chính mình.
+- **Lưu trữ bền vững 2 lớp:** PostgreSQL kết hợp cơ chế tự động Fallback sang file JSON cục bộ (`data/payments.json`) nếu database mất kết nối, và tự đồng bộ ngược lại khi kết nối phục hồi.
+- **Website quảng bá trung tâm:** Cung cấp trang Landing page giới thiệu trung tâm TAIGA Center, các khóa học tiếng Nga, bảng giá và form đăng ký tư vấn.
+
+---
+
+## 🌐 Các phân hệ & Đường dẫn chính (Routing)
+
+| Đường dẫn | Phân hệ / Tính năng | Mô tả |
+| :--- | :--- | :--- |
+| `/home` | **Landing Page TAIGA Center** | Giới thiệu trung tâm, đội ngũ giáo viên, các khóa học tiếng Nga, biểu phí và form đăng ký. |
+| `/app` | **TAIGA CRM Dashboard** | Cổng quản lý học viên: Đăng nhập (Teacher/Student), chọn tháng xem thống kê, đối soát buổi học, đổi đơn giá, cấp tài khoản học sinh. |
+| `/learn` | **Tài liệu & Lộ trình** | Trang phụ giới thiệu tài liệu, lộ trình học tiếng Nga từ cơ bản đến nâng cao. |
+| `/contact` | **Trang Liên hệ** | Thông tin liên hệ và tư vấn trực tiếp của trung tâm. |
+| `/articles` | **Góc chia sẻ & Bài viết** | Các bài viết kinh nghiệm học tiếng Nga và văn hóa Nga. |
+| `/` | **Control Room (Legacy)** | Công cụ xuất dữ liệu từ Google Calendar sang Google Sheets theo tuần/tháng. |
+
+---
 
 ## 1) Prerequisites
 
@@ -188,27 +209,51 @@ Important:
 - Keep your runtime `.env` only on VPS. Do not commit `.env`.
 - If you currently use password SSH only, switch to SSH key auth first for CI/CD.
 
-## 6) API endpoints
+## 6) Danh sách API Endpoints
 
-- `GET /api/health`
-- `POST /api/auth/login`
-- `POST /api/auth/logout`
-- `GET /api/auth/me`
-- `GET /api/dashboard/month?month=MM/YYYY`
-- `POST /api/payments/weekly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "weekIndex": 2, "paid": true }`
-- `POST /api/payments/monthly` body: `{ "month": "08/2026", "studentKey": "an nguyen", "paid": true }`
-- `POST /api/rates/update` body: `{ "studentKey": "an nguyen", "rate": 320000 }` (teacher only)
-- `GET /api/config`
-- `GET /api/status`
+### Xác thực & Phiên làm việc (Auth)
+- `POST /api/auth/login` - Đăng nhập hệ thống (set cookie `taiga_session`)
+- `POST /api/auth/logout` - Đăng xuất và hủy phiên
+- `GET /api/auth/me` - Lấy thông tin user hiện tại (Role, displayName, studentKey)
 
-## 7) Notes & Database Persistence
+### Thống kê & Quản lý buổi học (CRM)
+- `GET /api/dashboard/month?month=MM/YYYY` - Lấy dữ liệu buổi học, tổng giờ và học phí (Teacher xem tất cả, Student xem của chính mình)
+- `POST /api/payments/weekly` - Đánh dấu đóng học phí theo tuần `{ month, studentKey, weekIndex, paid }` *(Teacher only)*
+- `POST /api/payments/monthly` - Chốt trạng thái đóng học phí cả tháng `{ month, studentKey, paid }` *(Teacher only)*
+- `POST /api/rates/update` - Đổi đơn giá theo giờ của học viên `{ studentKey, rate }` *(Teacher only)*
 
-- Source of truth for schedule: Google Calendar.
-- Payment states and custom rates are stored in PostgreSQL (`app_kv_store` và `student_rates`) when `DATABASE_URL` is set.
-- A local file store (`data/payments.json`) acts as an immediate fallback & backup store if PostgreSQL is temporarily unavailable.
-- Khi PostgreSQL kết nối lại, hệ thống tự động đồng bộ fallback rates vào database để đảm bảo không bị nhảy về đơn giá mặc định (300k).
-- **Lưu ý triển khai trên Render**:
+### Quản lý tài khoản học sinh (Student Accounts)
+- `GET /api/student-accounts` - Xem danh sách tài khoản học sinh *(Teacher only)*
+- `POST /api/student-accounts/upsert` - Cấp mới / đổi mật khẩu học sinh `{ username, password, studentKey, displayName }` *(Teacher only)*
+- `DELETE /api/student-accounts/:studentKey` - Xóa tài khoản đăng nhập của học sinh *(Teacher only)*
+
+### Hệ thống & Chẩn đoán
+- `GET /api/health` - Kiểm tra tình trạng server
+- `GET /api/db/diagnostics` - Kiểm tra kết nối PostgreSQL và tình trạng bảng dữ liệu
+- `GET /api/config` - Lấy cấu hình runtime công khai (yêu cầu Token)
+- `GET /api/status` - Xem trạng thái lần xuất dữ liệu gần nhất (yêu cầu Token)
+
+### Thao tác sự kiện Calendar & Export Sheets (Legacy)
+- `POST /api/export/weekly-current` - Xuất tuần hiện tại ra Google Sheet (yêu cầu Token)
+- `POST /api/export/month-current` - Xuất cả tháng hiện tại ra Google Sheet (yêu cầu Token)
+- `POST /api/export/month-custom` - Xuất tháng tùy chỉnh (`MM/YYYY`) ra Sheet (yêu cầu Token)
+- `GET /api/events` - Đọc danh sách sự kiện từ Google Calendar
+- `POST /api/events/create` - Tạo sự kiện mới lên Google Calendar
+- `PUT /api/events/:eventId` - Chỉnh sửa sự kiện trên Calendar
+- `DELETE /api/events/:eventId` - Xóa sự kiện trên Calendar
+
+---
+
+## 7) Cơ sở dữ liệu & Cơ chế Dự phòng (Database & Fallback Persistence)
+
+- **Source of truth cho lịch học:** Google Calendar.
+- **Cơ chế lưu trữ kép (Dual-layer persistence):**
+  - **PostgreSQL:** Khi có `DATABASE_URL`, hệ thống tự tạo và quản lý:
+    - `student_rates`: Lưu đơn giá tùy chỉnh theo từng học viên (`student_key`, `rate`, `updated_at`).
+    - `app_kv_store`: Lưu trạng thái thanh toán tuần/tháng theo dạng key-value.
+    - `student_accounts`: Lưu tài khoản đăng nhập của học sinh.
+  - **Fallback JSON (`data/payments.json`):** Nếu PostgreSQL tạm thời bị ngắt kết nối (hoặc chưa cấu hình), hệ thống tự động lưu vào file JSON cục bộ để không gián đoạn công việc của giáo viên.
+  - **Auto-Sync:** Khi PostgreSQL kết nối lại, hệ thống tự động đồng bộ fallback rates lên database để bảo toàn dữ liệu và không bị reset về đơn giá mặc định (300k).
+- **Lưu ý triển khai trên Render:**
   - Nên dùng **Internal Database URL** (thay vì External URL) và đảm bảo Web Service và PostgreSQL cùng chung một Region (ví dụ `Singapore`).
-  - Internal Database URL có độ trễ cực thấp, kết nối ổn định không qua Internet công cộng và không tốn chi phí băng thông ngoại mạng.
-- Giáo viên có thể tick thu học phí theo từng tuần (V/X) hoặc chốt thu cả tháng trực tiếp trên `/app`.
-- Học viên đăng nhập chỉ xem được thông tin và trạng thái của chính mình.
+  - Internal Database URL có độ trễ cực thấp (< 5ms), bảo mật nội bộ và không tính băng thông ra ngoài.
