@@ -784,44 +784,20 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true, service: "calendar-sheet-manager", now: new Date().toISOString() });
 });
 
-app.post("/api/auth/login", (req, res) => {
-  const username = normalizeText(req.body?.username);
-  const password = String(req.body?.password || "");
-  const user = userMap.get(username);
 app.post("/api/auth/login", async (req, res) => {
   try {
     const rawUsername = normalizeText(req.body?.username);
     const password = String(req.body?.password || "");
     let user = userMap.get(rawUsername);
 
-  if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
-    return res.status(401).json({ ok: false, error: "Sai tài khoản hoặc mật khẩu" });
-  }
     if (!user) {
       user = await findStudentAccountByUsername(rawUsername);
     }
 
-  const token = createSessionToken(user);
-  const isProd = process.env.NODE_ENV === "production";
-  res.cookie(SESSION_COOKIE_NAME, token, {
-    httpOnly: true,
-    sameSite: "lax",
-    secure: isProd,
-    maxAge: config.sessionTtlHours * 60 * 60 * 1000,
-    path: "/",
-  });
     if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
       return res.status(401).json({ ok: false, error: "Sai tài khoản hoặc mật khẩu" });
     }
 
-  return res.json({
-    ok: true,
-    user: {
-      username: user.username,
-      role: user.role,
-      displayName: user.displayName,
-    },
-  });
     const token = createSessionToken(user);
     const isProd = process.env.NODE_ENV === "production";
     res.cookie(SESSION_COOKIE_NAME, token, {
