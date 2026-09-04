@@ -323,6 +323,7 @@
       th,
       td {
         padding: 12px 14px;
+        padding: 10px 10px;
         border-bottom: 1px solid #f1ece4;
         font-size: 0.88rem;
         white-space: nowrap;
@@ -380,9 +381,12 @@
         justify-content: center;
         padding: 5px 10px;
         border-radius: 10px;
+        padding: 4px 8px;
+        border-radius: 8px;
         cursor: pointer;
         transition: all 0.15s ease;
         min-width: 68px;
+        min-width: 58px;
         text-align: center;
         border: 1px solid #e2d9cd;
         background: #faf8f5;
@@ -598,6 +602,7 @@
             <button id="loadBtn" class="btn primary">Tải dữ liệu</button>
             <button id="thisMonthBtn" class="btn light">Tháng hiện tại</button>
             <button id="debtOnlyBtn" class="btn ghost">Chỉ xem còn nợ: OFF</button>
+            <button id="toggleRateBtn" class="btn ghost" title="Ẩn cột đơn giá để thu gọn bảng khi chụp màn hình gửi học sinh">👁️ Ẩn đơn giá</button>
           </div>
           <span id="status" class="status">Sẵn sàng</span>
         </div>
@@ -636,6 +641,13 @@
                 <th>Da thu</th>
                 <th>Con no</th>
                 <th>Trang thai</th>
+                <th>Học viên</th>
+                <th>Tổng</th>
+                <th>Đơn giá/h</th>
+                <th>Học phí</th>
+                <th>Đã thu</th>
+                <th>Còn nợ</th>
+                <th>Trạng thái</th>
               </tr>
             </thead>
             <tbody id="tbody"></tbody>
@@ -656,11 +668,22 @@
       const tbody = document.getElementById("tbody");
       const emptyState = document.getElementById("emptyState");
       const debtOnlyBtn = document.getElementById("debtOnlyBtn");
+      const toggleRateBtn = document.getElementById("toggleRateBtn");
 
       let currentUser = null;
       let currentMonth = "";
       let showDebtOnly = false;
+      let showRateColumn = localStorage.getItem("taiga_show_rate") === "true";
       let latestPayload = null;
+
+      function updateToggleRateBtn() {
+        if (toggleRateBtn) {
+          toggleRateBtn.textContent = showRateColumn ? "👁️ Ẩn đơn giá" : "👁️ Hiện đơn giá";
+          toggleRateBtn.title = showRateColumn
+            ? "Ẩn cột đơn giá để bảng gọn gàng hơn khi chụp ảnh màn hình gửi học sinh"
+            : "Hiện cột đơn giá để xem và sửa giá tiền";
+        }
+      }
 
       function formatMoney(value) {
         return Number(value || 0).toLocaleString("vi-VN") + " đ";
@@ -704,9 +727,11 @@
         appPanel.classList.toggle("visible", isLoggedIn);
         logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
         debtOnlyBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
+        toggleRateBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
 
         if (isLoggedIn) {
           document.getElementById("hello").textContent = "Xin chao, " + user.displayName;
+          document.getElementById("hello").textContent = "Xin chào, " + user.displayName;
           const badge = document.getElementById("roleBadge");
           badge.textContent = user.role === "teacher" ? "Teacher" : "Student";
           badge.className = "badge " + user.role;
@@ -723,8 +748,10 @@
         const heads = [
           "Học viên",
           "Tổng thời gian",
+          "Tổng",
           ...weekHeaders.map((w) => "Tuần " + w),
           "Đơn giá/h",
+          ...(showRateColumn ? ["Đơn giá/h"] : []),
           "Học phí",
           "Đã thu",
           "Còn nợ",
@@ -751,6 +778,7 @@
           const baseTdSessions = document.createElement("td");
           baseTdSessions.style.textAlign = "center";
           baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.75rem; color:#64748b;">${student.sessions} buổi</div>`;
+          baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.73rem; color:#64748b;">${student.sessions}b</div>`;
           tr.appendChild(baseTdSessions);
 
           const paidWeeks = new Set((student.payment && student.payment.paidWeeks) || []);
@@ -795,6 +823,11 @@
           if (canEditPayment) {
             const editor = document.createElement("div");
             editor.className = "rate-editor";
+          if (showRateColumn) {
+            const tdRate = document.createElement("td");
+            if (canEditPayment) {
+              const editor = document.createElement("div");
+              editor.className = "rate-editor";
 
             const rateInput = document.createElement("input");
             rateInput.type = "number";
@@ -804,6 +837,14 @@
             rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
             rateInput.className = "rate-input";
             editor.appendChild(rateInput);
+              const rateInput = document.createElement("input");
+              rateInput.type = "number";
+              rateInput.min = "1000";
+              rateInput.step = "1000";
+              rateInput.placeholder = "Giá / 1h";
+              rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
+              rateInput.className = "rate-input";
+              editor.appendChild(rateInput);
 
             const saveRateBtn = document.createElement("button");
             saveRateBtn.className = "btn light";
@@ -811,10 +852,21 @@
             saveRateBtn.dataset.action = "save-rate";
             saveRateBtn.dataset.studentKey = student.studentKey;
             editor.appendChild(saveRateBtn);
+              const saveRateBtn = document.createElement("button");
+              saveRateBtn.className = "btn light";
+              saveRateBtn.textContent = "Lưu";
+              saveRateBtn.dataset.action = "save-rate";
+              saveRateBtn.dataset.studentKey = student.studentKey;
+              editor.appendChild(saveRateBtn);
 
             tdRate.appendChild(editor);
           } else {
             tdRate.textContent = student.rate > 0 ? `${formatMoney(student.rate)}/h` : "Chưa có";
+              tdRate.appendChild(editor);
+            } else {
+              tdRate.textContent = student.rate > 0 ? `${formatMoney(student.rate)}/h` : "Chưa có";
+            }
+            tr.appendChild(tdRate);
           }
           tr.appendChild(tdRate);
 
@@ -934,6 +986,16 @@
       debtOnlyBtn.addEventListener("click", () => {
         showDebtOnly = !showDebtOnly;
         debtOnlyBtn.textContent = "Chi xem hoc vien con no: " + (showDebtOnly ? "ON" : "OFF");
+        debtOnlyBtn.textContent = "Chỉ xem còn nợ: " + (showDebtOnly ? "ON" : "OFF");
+        if (latestPayload) {
+          renderTable(latestPayload);
+        }
+      });
+
+      toggleRateBtn.addEventListener("click", () => {
+        showRateColumn = !showRateColumn;
+        localStorage.setItem("taiga_show_rate", String(showRateColumn));
+        updateToggleRateBtn();
         if (latestPayload) {
           renderTable(latestPayload);
         }
@@ -1041,6 +1103,7 @@
 
       async function boot() {
         setCurrentMonth();
+        updateToggleRateBtn();
         try {
           const me = await api("/api/auth/me");
           renderAuthState(me.user);
