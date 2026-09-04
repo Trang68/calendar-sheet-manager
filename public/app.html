@@ -317,12 +317,10 @@
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
-        min-width: 1250px;
       }
 
       th,
       td {
-        padding: 12px 14px;
         padding: 10px 10px;
         border-bottom: 1px solid #f1ece4;
         font-size: 0.88rem;
@@ -379,13 +377,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5px 10px;
-        border-radius: 10px;
         padding: 4px 8px;
         border-radius: 8px;
         cursor: pointer;
         transition: all 0.15s ease;
-        min-width: 68px;
         min-width: 58px;
         text-align: center;
         border: 1px solid #e2d9cd;
@@ -634,13 +629,6 @@
           <table>
             <thead>
               <tr id="theadRow">
-                <th>Hoc vien</th>
-                <th>Tong buoi</th>
-                <th>Don gia</th>
-                <th>Hoc phi</th>
-                <th>Da thu</th>
-                <th>Con no</th>
-                <th>Trang thai</th>
                 <th>Học viên</th>
                 <th>Tổng</th>
                 <th>Đơn giá/h</th>
@@ -730,7 +718,6 @@
         toggleRateBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
 
         if (isLoggedIn) {
-          document.getElementById("hello").textContent = "Xin chao, " + user.displayName;
           document.getElementById("hello").textContent = "Xin chào, " + user.displayName;
           const badge = document.getElementById("roleBadge");
           badge.textContent = user.role === "teacher" ? "Teacher" : "Student";
@@ -747,10 +734,8 @@
         theadRow.innerHTML = "";
         const heads = [
           "Học viên",
-          "Tổng thời gian",
           "Tổng",
           ...weekHeaders.map((w) => "Tuần " + w),
-          "Đơn giá/h",
           ...(showRateColumn ? ["Đơn giá/h"] : []),
           "Học phí",
           "Đã thu",
@@ -777,7 +762,6 @@
 
           const baseTdSessions = document.createElement("td");
           baseTdSessions.style.textAlign = "center";
-          baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.75rem; color:#64748b;">${student.sessions} buổi</div>`;
           baseTdSessions.innerHTML = `<strong>${student.totalHours || 0}h</strong><div style="font-size:0.73rem; color:#64748b;">${student.sessions}b</div>`;
           tr.appendChild(baseTdSessions);
 
@@ -819,24 +803,12 @@
             tr.appendChild(td);
           });
 
-          const tdRate = document.createElement("td");
-          if (canEditPayment) {
-            const editor = document.createElement("div");
-            editor.className = "rate-editor";
           if (showRateColumn) {
             const tdRate = document.createElement("td");
             if (canEditPayment) {
               const editor = document.createElement("div");
               editor.className = "rate-editor";
 
-            const rateInput = document.createElement("input");
-            rateInput.type = "number";
-            rateInput.min = "1000";
-            rateInput.step = "1000";
-            rateInput.placeholder = "Giá / 1h";
-            rateInput.value = student.rate && student.rate > 0 ? String(student.rate) : "";
-            rateInput.className = "rate-input";
-            editor.appendChild(rateInput);
               const rateInput = document.createElement("input");
               rateInput.type = "number";
               rateInput.min = "1000";
@@ -846,12 +818,6 @@
               rateInput.className = "rate-input";
               editor.appendChild(rateInput);
 
-            const saveRateBtn = document.createElement("button");
-            saveRateBtn.className = "btn light";
-            saveRateBtn.textContent = "Lưu";
-            saveRateBtn.dataset.action = "save-rate";
-            saveRateBtn.dataset.studentKey = student.studentKey;
-            editor.appendChild(saveRateBtn);
               const saveRateBtn = document.createElement("button");
               saveRateBtn.className = "btn light";
               saveRateBtn.textContent = "Lưu";
@@ -859,16 +825,12 @@
               saveRateBtn.dataset.studentKey = student.studentKey;
               editor.appendChild(saveRateBtn);
 
-            tdRate.appendChild(editor);
-          } else {
-            tdRate.textContent = student.rate > 0 ? `${formatMoney(student.rate)}/h` : "Chưa có";
               tdRate.appendChild(editor);
             } else {
               tdRate.textContent = student.rate > 0 ? `${formatMoney(student.rate)}/h` : "Chưa có";
             }
             tr.appendChild(tdRate);
           }
-          tr.appendChild(tdRate);
 
           const tdTuition = document.createElement("td");
           tdTuition.className = "cell-money";
@@ -985,7 +947,6 @@
 
       debtOnlyBtn.addEventListener("click", () => {
         showDebtOnly = !showDebtOnly;
-        debtOnlyBtn.textContent = "Chi xem hoc vien con no: " + (showDebtOnly ? "ON" : "OFF");
         debtOnlyBtn.textContent = "Chỉ xem còn nợ: " + (showDebtOnly ? "ON" : "OFF");
         if (latestPayload) {
           renderTable(latestPayload);
