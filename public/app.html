@@ -201,11 +201,6 @@
         gap: 8px;
       }
 
-      .toolbar input#monthInput {
-        width: 105px !important;
-        min-width: 105px;
-        max-width: 105px;
-        text-align: center;
       .month-selector {
         display: inline-flex;
         align-items: center;
@@ -230,8 +225,6 @@
         padding: 6px 6px;
         font-size: 0.85rem;
         font-weight: 700;
-        padding: 8px 10px;
-        border-radius: 8px;
         background: #fff;
         color: #1e293b;
         cursor: pointer;
@@ -624,7 +617,6 @@
             <span id="dbBadge" class="badge"></span>
           </div>
           <div class="toolbar-filters">
-            <input id="monthInput" placeholder="MM/YYYY" />
             <div class="month-selector">
               <button id="prevMonthBtn" class="btn light nav-month-btn" title="Tháng trước">◀</button>
               <select id="selectMonth" class="month-select" title="Chọn tháng"></select>
@@ -633,7 +625,6 @@
             </div>
             <button id="thisMonthBtn" class="btn light">Tháng này</button>
             <button id="loadBtn" class="btn primary">Tải dữ liệu</button>
-            <button id="thisMonthBtn" class="btn light">Tháng hiện tại</button>
             <button id="debtOnlyBtn" class="btn ghost">Chỉ xem còn nợ: OFF</button>
             <button id="toggleRateBtn" class="btn ghost" title="Ẩn cột đơn giá để thu gọn bảng khi chụp màn hình gửi học sinh">👁️ Ẩn đơn giá</button>
           </div>
@@ -689,7 +680,6 @@
       const loginError = document.getElementById("loginError");
       const statusEl = document.getElementById("status");
       const logoutBtn = document.getElementById("logoutBtn");
-      const monthInput = document.getElementById("monthInput");
       const selectMonth = document.getElementById("selectMonth");
       const selectYear = document.getElementById("selectYear");
       const prevMonthBtn = document.getElementById("prevMonthBtn");
@@ -706,12 +696,6 @@
       let showRateColumn = localStorage.getItem("taiga_show_rate") === "true";
       let latestPayload = null;
 
-      function updateToggleRateBtn() {
-        if (toggleRateBtn) {
-          toggleRateBtn.textContent = showRateColumn ? "👁️ Ẩn đơn giá" : "👁️ Hiện đơn giá";
-          toggleRateBtn.title = showRateColumn
-            ? "Ẩn cột đơn giá để bảng gọn gàng hơn khi chụp ảnh màn hình gửi học sinh"
-            : "Hiện cột đơn giá để xem và sửa giá tiền";
       function initMonthYearSelectors() {
         if (!selectMonth || !selectYear) return;
 
@@ -722,10 +706,7 @@
           opt.textContent = `Tháng ${String(m).padStart(2, "0")}`;
           selectMonth.appendChild(opt);
         }
-      }
 
-      function formatMoney(value) {
-        return Number(value || 0).toLocaleString("vi-VN") + " đ";
         const now = new Date();
         const curY = now.getFullYear();
         selectYear.innerHTML = "";
@@ -739,10 +720,6 @@
         }
       }
 
-      function setStatus(text, type = "normal") {
-        if (statusEl) {
-          statusEl.textContent = text;
-          statusEl.className = "status" + (type !== "normal" ? " " + type : "");
       function setSelectedMonth(year, monthIndex) {
         const d = new Date(year, monthIndex, 1);
         const y = d.getFullYear();
@@ -764,25 +741,10 @@
           }
           selectYear.value = String(y);
         }
-      }
 
-      async function api(path, options = {}) {
-        const res = await fetch(path, {
-          method: options.method || "GET",
-          headers: {
-            "Content-Type": "application/json",
-            ...(options.headers || {}),
-          },
-          credentials: "include",
-          body: options.body ? JSON.stringify(options.body) : undefined,
-        });
-        const json = await res.json();
-        if (!res.ok || !json.ok) {
-          throw new Error(json.error || "Request failed");
         if (selectMonth) {
           selectMonth.value = String(m);
         }
-        return json;
       }
 
       function getSelectedMonthString() {
@@ -794,8 +756,6 @@
 
       function setCurrentMonth() {
         const now = new Date();
-        const month = String(now.getMonth() + 1).padStart(2, "0");
-        monthInput.value = month + "/" + now.getFullYear();
         setSelectedMonth(now.getFullYear(), now.getMonth());
       }
 
@@ -1004,7 +964,6 @@
       async function loadDashboard(showLoadingStatus = true) {
         try {
           if (showLoadingStatus) setStatus("Dang tai du lieu...");
-          const month = monthInput.value.trim();
           const month = getSelectedMonthString();
           const qs = month ? "?month=" + encodeURIComponent(month) : "";
           const payload = await api("/api/dashboard/month" + qs);
@@ -1032,11 +991,6 @@
         }
       });
 
-      document.getElementById("loadBtn").addEventListener("click", () => loadDashboard(true));
-      document.getElementById("thisMonthBtn").addEventListener("click", () => {
-        setCurrentMonth();
-        loadDashboard(true);
-      });
       if (selectMonth) {
         selectMonth.addEventListener("change", () => loadDashboard(true));
       }
