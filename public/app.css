@@ -321,6 +321,8 @@
 
       .table-wrap {
         overflow-x: auto;
+        overflow: auto;
+        max-height: max(320px, calc(100vh - 280px));
         background: #fff;
         border-radius: 16px;
         border: 1px solid var(--line);
@@ -561,6 +563,10 @@
 
         .stats {
           grid-template-columns: 1fr;
+        }
+
+        .table-wrap {
+          max-height: 65vh;
         }
       }
 
