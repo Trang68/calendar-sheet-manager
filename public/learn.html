@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Học tiếng Nga - TAIGA Center</title>
+    <meta
+      name="description"
+      content="Cổng học liệu tiếng Nga tương tác TAIGA Center: Bảng chữ cái Cyrillic phát âm chuẩn, Lộ trình học từ A0 đến B2, Sổ tay câu giao tiếp và Bí kíp 6 cách ngữ pháp."
+    />
+    <title>Học Tiếng Nga - Cổng Học Liệu & Lộ Trình Chuẩn | TAIGA Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -32,6 +38,7 @@
       footer { margin-top: 40px; text-align: center; color: #606b73; font-size: 0.95rem; }
       @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
     </style>
+    <link rel="stylesheet" href="/learn.css" />
   </head>
   <body>
     <div class="shell">
@@ -40,36 +47,955 @@
           <h1 class="brand">Học tiếng Nga</h1>
           <p class="note">Khám phá chương trình học, lộ trình và nội dung mẫu dành cho học viên tiếng Nga.</p>
         </div>
+      <!-- HEADER / TOPBAR -->
+      <header class="topbar">
+        <a href="/home" class="brand-logo">
+          <span class="brand-flag">🇷🇺</span>
+          <span class="brand-name">TAIGA Center</span>
+          <span class="brand-badge">Learning Hub</span>
+        </a>
         <nav class="nav-links">
           <a href="/home">Trang chủ</a>
           <!-- <a href="/">Calendar</a> -->
           <a href="/articles">Bài viết</a>
           <a href="/contact">Liên hệ</a>
+          <a href="/home" class="nav-item">Trang chủ</a>
+          <a href="#alphabet" class="nav-item">Bảng chữ cái</a>
+          <a href="#roadmap" class="nav-item">Lộ trình A0-B2</a>
+          <a href="#cases" class="nav-item">6 Cách</a>
+          <a href="#phrasebook" class="nav-item">Câu giao tiếp</a>
+          <a href="#quiz" class="nav-item">Mini Quiz</a>
+          <a href="/articles" class="nav-item">Bài viết</a>
+          <a href="/contact" class="nav-item">Liên hệ</a>
+          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
         </nav>
       </div>
+      </header>
 
       <section class="hero">
         <h1>Lộ trình học tiếng Nga mẫu</h1>
         <p>Trang này mô tả các giai đoạn học: bắt đầu với bảng chữ, tiếp theo là ngữ pháp căn bản, và nâng cao với hội thoại, đọc hiểu và luyện thi.</p>
+      <!-- HERO SECTION -->
+      <section class="hero-hub">
+        <div class="hero-badge-wrap">
+          <span>✨</span>
+          <span>CỔNG HỌC LIỆU & LỘ TRÌNH TIẾNG NGA TƯƠNG TÁC</span>
+        </div>
+        <h1 class="hero-title">
+          Chinh Phục Tiếng Nga <br />
+          Từ Số 0 Đến <span class="highlight">Thành Thạo</span>
+        </h1>
+        <p class="hero-desc">
+          Tài nguyên học tập độc quyền từ <strong>TAIGA Center</strong>: Khám phá bảng chữ cái Kirin với âm thanh phát âm bản ngữ,
+          nắm chắc bí kíp 6 cách danh từ, làm quen các mẫu câu giao tiếp đời sống và trải nghiệm lộ trình cá nhân hóa từ A0 đến B2.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#alphabet" class="btn primary">
+            <span>🔤</span> Bảng chữ cái tương tác
+          </a>
+          <a href="#roadmap" class="btn secondary">
+            <span>🗺️</span> Xem lộ trình A0 - B2
+          </a>
+          <a href="/contact" class="btn accent">
+            <span>🚀</span> Đăng ký tư vấn lộ trình 1-1
+          </a>
+        </div>
+
+        <!-- Quick highlights / stats -->
+        <div class="hero-stats-grid">
+          <div class="stat-box">
+            <div class="stat-icon">🔤</div>
+            <div>
+              <div class="stat-num">33</div>
+              <div class="stat-label">Chữ cái Cyrillic chuẩn âm</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">🧩</div>
+            <div>
+              <div class="stat-num">6 Cách</div>
+              <div class="stat-label">Ngữ pháp giải mã trực quan</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">🎯</div>
+            <div>
+              <div class="stat-num">4 Chặng</div>
+              <div class="stat-label">Lộ trình chuẩn CEFR & TRKI</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-icon">👨‍🏫</div>
+            <div>
+              <div class="stat-num">1-1</div>
+              <div class="stat-label">Kèm cặp bản ngữ & Việt Nam</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="grid">
         <div class="card">
           <h2>Giai đoạn 1: Khởi đầu</h2>
           <p>Học bảng chữ Kirin, phát âm cơ bản và câu giao tiếp đơn giản. Mục tiêu: hiểu và nói những câu ngắn, giới thiệu bản thân.</p>
+      <!-- SECTION 1: INTERACTIVE CYRILLIC ALPHABET -->
+      <section class="content-section" id="alphabet">
+        <div class="section-head">
+          <span class="section-tag">🎧 Tương Tác Trực Tiếp</span>
+          <h2 class="section-title">Bảng Chữ Cái Tiếng Nga (Русский Алфавит)</h2>
+          <p class="section-desc">
+            Bao gồm 33 chữ cái chuẩn. Bấm vào bất kỳ chữ cái nào để <strong>nghe phát âm chuẩn giọng Nga</strong>, xem phiên âm tiếng Việt và từ vựng ví dụ minh họa!
+          </p>
         </div>
         <div class="card">
           <h2>Giai đoạn 2: Cấu trúc và ngữ pháp</h2>
           <p>Nắm vững 6 trường hợp danh từ, thì động từ, giới từ và cấu trúc câu cơ bản. Tập trung vào bài tập viết và dịch.</p>
+
+        <div class="alphabet-wrapper">
+          <!-- Filter tabs -->
+          <div class="alphabet-filters">
+            <button class="filter-btn active" data-filter="all">Tất cả (33 chữ)</button>
+            <button class="filter-btn" data-filter="vowel">Nguyên âm (10 chữ)</button>
+            <button class="filter-btn" data-filter="consonant">Phụ âm (21 chữ)</button>
+            <button class="filter-btn" data-filter="special">Dấu đặc biệt (2 dấu)</button>
+          </div>
+
+          <!-- Letters grid -->
+          <div class="alphabet-grid" id="alphabetGrid">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Detail card of active letter -->
+          <div class="letter-detail-panel" id="letterDetail">
+            <div class="detail-main">
+              <div class="detail-char-big" id="detailChar">А а</div>
+              <div class="detail-info">
+                <span class="detail-type-badge vowel" id="detailType">Nguyên âm (Гласная)</span>
+                <h4 id="detailPhonetic">Tên chữ: "а" • Phát âm: [a]</h4>
+                <p class="detail-example" id="detailExample">
+                  Từ ví dụ: <strong>Автобус</strong> [af-tô-bus] — 🚌 Xe buýt
+                </p>
+              </div>
+            </div>
+            <div class="detail-actions">
+              <button class="btn-speak" id="btnSpeakLetter" title="Nghe phát âm chữ cái">
+                <span>🔊</span> Nghe chữ cái
+              </button>
+              <button class="btn-speak" id="btnSpeakWord" style="background:#0284c7;" title="Nghe phát âm từ ví dụ">
+                <span>🔊</span> Nghe từ vựng
+              </button>
+            </div>
+          </div>
         </div>
         <div class="card">
           <h2>Giai đoạn 3: Ứng dụng thực hành</h2>
           <p>Thực hành nghe hiểu, hội thoại và đọc báo. Học từng chủ đề: du lịch, công việc, văn hoá và cuộc sống hàng ngày.</p>
+      </section>
+
+      <!-- SECTION 2: LEARNING ROADMAP -->
+      <section class="content-section" id="roadmap">
+        <div class="section-head">
+          <span class="section-tag">🗺️ Lộ Trình Đào Tạo Bài Bản</span>
+          <h2 class="section-title">Lộ Trình Học Tiếng Nga Chuẩn Quốc Tế (A0 → B2)</h2>
+          <p class="section-desc">
+            Thiết kế khoa học bám sát khung tham chiếu Châu Âu (CEFR) và kỳ thi chứng chỉ TRKI, cam kết đầu ra rõ ràng cho từng giai đoạn.
+          </p>
         </div>
       </div>
 
       <p class="note">Nội dung đang là mẫu. Bạn có thể thay thế bằng khóa học thực tế, biểu đồ lộ trình hoặc thông tin chương trình.</p>
       <footer>TAIGA Center • Nội dung mẫu.</footer>
+        <div class="roadmap-timeline">
+          <!-- Stage 1 -->
+          <article class="roadmap-card">
+            <div class="roadmap-step-badge">1</div>
+            <div class="roadmap-header">
+              <div class="roadmap-title-wrap">
+                <h3>Chặng 1: A0 — Khởi Động & Nhập Môn Vững Chắc</h3>
+                <div class="roadmap-meta">
+                  <span>Dành cho người mới bắt đầu</span>
+                  <span>•</span>
+                  <span>Nền tảng phát âm & giao tiếp sơ khởi</span>
+                </div>
+              </div>
+              <span class="roadmap-duration">⏱️ 4 – 6 tuần (24 – 36 giờ học)</span>
+            </div>
+            <div class="roadmap-body">
+              <div class="roadmap-skills">
+                <ul>
+                  <li><strong>Làm chủ bảng chữ cái Kirin:</strong> Đọc và viết thành thạo 33 chữ cái in và viết tay.</li>
+                  <li><strong>Quy tắc ngữ âm & trọng âm:</strong> Phân biệt phụ âm cứng/mềm, hiện tượng biến âm o → a khi không có trọng âm (ударение).</li>
+                  <li><strong>Hội thoại cơ bản:</strong> Chào hỏi, cảm ơn, xin lỗi, giới thiệu họ tên, quốc tịch, nghề nghiệp và đếm số 1 – 100.</li>
+                  <li><strong>Vốn từ cốt lõi:</strong> Tích lũy 300+ từ vựng căn bản về gia đình, lớp học, đồ vật xung quanh.</li>
+                </ul>
+              </div>
+              <div class="roadmap-sidebar">
+                <div class="sidebar-label">Giáo trình tiêu chuẩn</div>
+                <div class="sidebar-val">Дорога в Россию 1 (Bài 1–5)</div>
+                <div class="sidebar-label">Mục tiêu đầu ra</div>
+                <div class="sidebar-val">Đọc đúng 100% từ vựng mới, tự giới thiệu bản thân trôi chảy 2 phút.</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="roadmap-card">
+            <div class="roadmap-step-badge">2</div>
+            <div class="roadmap-header">
+              <div class="roadmap-title-wrap">
+                <h3>Chặng 2: A1 — Giao Tiếp Thực Chiến & Nền Tảng Ngữ Pháp</h3>
+                <div class="roadmap-meta">
+                  <span>Trình độ sơ cấp cơ bản</span>
+                  <span>•</span>
+                  <span>Tự tin xử lý tình huống sinh hoạt</span>
+                </div>
+              </div>
+              <span class="roadmap-duration">⏱️ 8 – 12 tuần (48 – 60 giờ học)</span>
+            </div>
+            <div class="roadmap-body">
+              <div class="roadmap-skills">
+                <ul>
+                  <li><strong>Giải mã 4 Cách căn bản:</strong> Cách 1 (Chủ ngữ), Cách 6 (Ở đâu - где), Cách 4 (Tân ngữ - кого/что), Cách 2 (Sở hữu & Phủ định нет).</li>
+                  <li><strong>Thì của động từ:</strong> Chia động từ nhóm 1 và nhóm 2 ở thì hiện tại, quá khứ và tương lai đơn.</li>
+                  <li><strong>Tình huống đời sống:</strong> Mua sắm siêu thị, gọi món nhà hàng, hỏi đường, đi tàu điện ngầm (Metro), đặt phòng khách sạn.</li>
+                  <li><strong>Vốn từ tích lũy:</strong> Đạt 800 – 1.000 từ vựng thông dụng sinh hoạt hàng ngày.</li>
+                </ul>
+              </div>
+              <div class="roadmap-sidebar">
+                <div class="sidebar-label">Giáo trình tiêu chuẩn</div>
+                <div class="sidebar-val">Дорога в Россию 1 (Bài 6–15) + Bộ đề A1</div>
+                <div class="sidebar-label">Mục tiêu đầu ra</div>
+                <div class="sidebar-val">Đạt chứng chỉ TRKI Sơ cấp (Элементарный уровень), giao tiếp du lịch tự tin.</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="roadmap-card">
+            <div class="roadmap-step-badge">3</div>
+            <div class="roadmap-header">
+              <div class="roadmap-title-wrap">
+                <h3>Chặng 3: A2 — Làm Chủ Ngôn Ngữ & Chinh Phục TRKI-1</h3>
+                <div class="roadmap-meta">
+                  <span>Tiền trung cấp</span>
+                  <span>•</span>
+                  <span>Sẵn sàng du học hoặc làm việc cơ bản</span>
+                </div>
+              </div>
+              <span class="roadmap-duration">⏱️ 12 – 16 tuần (60 – 80 giờ học)</span>
+            </div>
+            <div class="roadmap-body">
+              <div class="roadmap-skills">
+                <ul>
+                  <li><strong>Trọn bộ 6 Cách:</strong> Bổ sung Cách 3 (Dữ cách - cho ai) và Cách 5 (Tạo cách - cùng ai, bằng phương tiện gì) của danh từ, tính từ và đại từ.</li>
+                  <li><strong>Thể động từ (Виды глаголов):</strong> Nắm vững bản chất Chưa hoàn thành thể (НСВ) và Hoàn thành thể (СВ).</li>
+                  <li><strong>Động từ chuyển động:</strong> Phân biệt cặp động từ chuyển động 1 chiều và nhiều chiều (Идти - Ходить, Ехать - Ездить).</li>
+                  <li><strong>Kỹ năng viết & đọc hiểu:</strong> Viết thư điện tử, tin nhắn công việc, đọc hiểu truyện ngắn và bản tin thời sự đơn giản.</li>
+                </ul>
+              </div>
+              <div class="roadmap-sidebar">
+                <div class="sidebar-label">Giáo trình tiêu chuẩn</div>
+                <div class="sidebar-val">Дорога в Россию 2 + Đề thi TRKI-A2</div>
+                <div class="sidebar-label">Mục tiêu đầu ra</div>
+                <div class="sidebar-val">Đủ điều kiện nhập học dự bị đại học tại các trường LB Nga hoặc làm việc với đối tác Nga.</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 4 -->
+          <article class="roadmap-card">
+            <div class="roadmap-step-badge">4</div>
+            <div class="roadmap-header">
+              <div class="roadmap-title-wrap">
+                <h3>Chặng 4: B1 – B2 — Chuyên Sâu, Thương Mại & Bản Ngữ</h3>
+                <div class="roadmap-meta">
+                  <span>Trung cấp & Cao cấp</span>
+                  <span>•</span>
+                  <span>Thành thạo công việc & dịch thuật</span>
+                </div>
+              </div>
+              <span class="roadmap-duration">⏱️ 16 – 24 tuần (Lộ trình chuyên biệt)</span>
+            </div>
+            <div class="roadmap-body">
+              <div class="roadmap-skills">
+                <ul>
+                  <li><strong>Ngữ pháp nâng cao:</strong> Câu phức liên từ, phân từ (Причастие), trạng phân từ (Деепричастие) và tiền tố động từ chuyển động.</li>
+                  <li><strong>Tiếng Nga chuyên ngành & Thương mại:</strong> Soạn thảo hợp đồng, đàm phán thương mại, thuật ngữ logistics, dầu khí, du lịch.</li>
+                  <li><strong>Thuyết trình & Phản xạ tự nhiên:</strong> Tranh luận các chủ đề xã hội, văn hóa, kinh tế; xem phim và nghe podcast Nga không phụ đề.</li>
+                  <li><strong>Luyện thi TRKI-1 & TRKI-2:</strong> Rèn luyện cấu trúc 5 bài thi: Từ vựng-Ngữ pháp, Đọc hiểu, Nghe hiểu, Viết luận và Vấn đáp.</li>
+                </ul>
+              </div>
+              <div class="roadmap-sidebar">
+                <div class="sidebar-label">Giáo trình tiêu chuẩn</div>
+                <div class="sidebar-val">Поехали 2, В добрый час! + Ngân hàng đề thi MGU</div>
+                <div class="sidebar-label">Mục tiêu đầu ra</div>
+                <div class="sidebar-val">Đạt chứng chỉ TRKI-1/2 (đủ điều kiện học thẳng đại học/thạc sĩ Nga), làm thông dịch viên.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION 3: THE 6 RUSSIAN CASES -->
+      <section class="content-section" id="cases">
+        <div class="section-head">
+          <span class="section-tag">🧩 Bí Kíp Ngữ Pháp</span>
+          <h2 class="section-title">Giải Mã 6 Cách (Падежи) Trong Tiếng Nga</h2>
+          <p class="section-desc">
+            Không cần học vẹt hàng trăm đuôi từ. Hãy nắm vững <strong>bản chất câu hỏi và tình huống sử dụng</strong> của từng cách:
+          </p>
+        </div>
+
+        <div class="cases-grid">
+          <!-- Case 1 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 1: Danh Cách</span>
+              <span class="case-name-ru">Именительный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>Кто? Что?</strong> (Ai? Cái gì?)
+            </div>
+            <div class="case-usage">
+              Là dạng nguyên thể trong từ điển. Đóng vai trò <strong>chủ ngữ</strong> thực hiện hành động chính trong câu.
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">Анна читает книгу.</div>
+                <div class="example-text-vi">Anna đang đọc sách ("Анна" là Cách 1).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="Анна читает книгу." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 2: Sinh Cách</span>
+              <span class="case-name-ru">Родительный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>Кого? Чего? Чей? Откуда?</strong> (Của ai? Không có gì?)
+            </div>
+            <div class="case-usage">
+              Chỉ <strong>sự sở hữu</strong> (nhà của bố), <strong>phủ định</strong> không có (нет + C2), số lượng (2, 3, 4 + C2 số ít), và nơi xuất phát (из, с, от).
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">У меня нет времени.</div>
+                <div class="example-text-vi">Tôi không có thời gian ("времени" là Cách 2).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="У меня нет времени." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 3: Dữ Cách</span>
+              <span class="case-name-ru">Дательный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>Кому? Чему? Сколько лет?</strong> (Cho ai? Đến ai?)
+            </div>
+            <div class="case-usage">
+              Chỉ <strong>đối tượng tiếp nhận</strong> (tặng quà cho bạn, gọi điện cho mẹ), diễn tả <strong>tuổi tác</strong> (Мне 20 лет) và trạng thái cảm xúc.
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">Я звоню другу.</div>
+                <div class="example-text-vi">Tôi đang gọi điện cho người bạn ("другу" là Cách 3).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="Я звоню другу." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+
+          <!-- Case 4 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 4: Đối Cách</span>
+              <span class="case-name-ru">Винительный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>Кого? Что? Куда?</strong> (Thấy ai? Yêu cái gì? Đi đâu?)
+            </div>
+            <div class="case-usage">
+              Chỉ <strong>tân ngữ trực tiếp</strong> chịu tác động của hành động (yêu ai, mua gì), hoặc chỉ <strong>phương hướng chuyển động</strong> (в/на + C4).
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">Я люблю русскую музыку.</div>
+                <div class="example-text-vi">Tôi yêu âm nhạc Nga ("русскую музыку" là Cách 4).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="Я люблю русскую музыку." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+
+          <!-- Case 5 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 5: Tạo Cách</span>
+              <span class="case-name-ru">Творительный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>Кем? Чем? С кем? С чем?</strong> (Với ai? Bằng cái gì?)
+            </div>
+            <div class="case-usage">
+              Chỉ <strong>công cụ/phương tiện</strong> (viết bằng bút), <strong>đi cùng với ai</strong> (с + C5) hoặc <strong>nghề nghiệp</strong> sau động từ быть, стать, работать.
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">Я пью чай с лимоном.</div>
+                <div class="example-text-vi">Tôi uống trà với chanh ("с лимоном" là Cách 5).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="Я пью чай с лимоном." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+
+          <!-- Case 6 -->
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">Cách 6: Giới Cách</span>
+              <span class="case-name-ru">Предложный падеж</span>
+            </div>
+            <div class="case-questions">
+              <span>❓ Câu hỏi:</span>
+              <strong>О ком? О чём? Где?</strong> (Về ai? Về cái gì? Ở đâu?)
+            </div>
+            <div class="case-usage">
+              <strong>Luôn luôn đi kèm giới từ</strong> (В, НА, О). Dùng để chỉ <strong>vị trí/nơi chốn</strong> (ở Hà Nội, trên bàn) và <strong>chủ đề suy nghĩ/nói chuyện</strong>.
+            </div>
+            <div class="case-example">
+              <div>
+                <div class="example-text-ru">Я живу во Вьетнаме.</div>
+                <div class="example-text-vi">Tôi sống ở Việt Nam ("во Вьетнаме" là Cách 6).</div>
+              </div>
+              <button class="btn-mini-audio" data-speech="Я живу во Вьетнаме." title="Nghe câu này">🔊</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: PHRASEBOOK -->
+      <section class="content-section" id="phrasebook">
+        <div class="section-head">
+          <span class="section-tag">🗣️ Sổ Tay Giao Tiếp Thực Tế</span>
+          <h2 class="section-title">Câu Giao Tiếp Tiếng Nga Thông Dụng (Разговорник)</h2>
+          <p class="section-desc">
+            Các mẫu câu vàng được người Nga sử dụng mỗi ngày. Có phiên âm tiếng Việt và nút bấm nghe phát âm chuẩn bản ngữ!
+          </p>
+        </div>
+
+        <div class="phrasebook-wrap">
+          <div class="phrase-tabs">
+            <button class="phrase-tab-btn active" data-topic="greetings">👋 Chào hỏi & Xã giao</button>
+            <button class="phrase-tab-btn" data-topic="dining">🍽️ Nhà hàng & Ăn uống</button>
+            <button class="phrase-tab-btn" data-topic="travel">🚇 Đi lại & Hỏi đường</button>
+            <button class="phrase-tab-btn" data-topic="shopping">🛍️ Mua sắm & Giá cả</button>
+            <button class="phrase-tab-btn" data-topic="emergency">🚨 Khẩn cấp & Cứu trợ</button>
+          </div>
+
+          <div class="phrases-list" id="phrasesList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: MINI QUIZ -->
+      <section class="content-section" id="quiz">
+        <div class="section-head">
+          <span class="section-tag">🎮 Trắc Nghiệm Tương Tác</span>
+          <h2 class="section-title">Mini Quiz: Thử Thách Trí Nhớ Tiếng Nga</h2>
+          <p class="section-desc">
+            5 câu hỏi trắc nghiệm nhanh để kiểm tra độ nhạy bén với ngôn ngữ xứ sở Bạch Dương của bạn!
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-progress-bar-wrap">
+            <div class="quiz-progress-bar" id="quizProgressBar"></div>
+          </div>
+
+          <!-- Question Box -->
+          <div id="quizQuestionBox">
+            <div class="quiz-question-counter" id="quizCounter">Câu hỏi 1 / 5</div>
+            <h3 class="quiz-question-text" id="quizText">Đang tải câu hỏi...</h3>
+
+            <div class="quiz-options-list" id="quizOptions">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div class="quiz-feedback" id="quizFeedback"></div>
+
+            <div class="quiz-nav-row">
+              <span id="quizLiveScore" style="font-size:0.9rem; font-weight:700; color:var(--muted);">Điểm: 0</span>
+              <button class="btn primary" id="btnNextQuestion" style="display:none;">Câu tiếp theo ➔</button>
+            </div>
+          </div>
+
+          <!-- Result Box -->
+          <div class="quiz-result-card" id="quizResultBox">
+            <div class="result-badge" id="resultEmoji">🎉</div>
+            <div class="result-score" id="resultScore">5 / 5 Điểm!</div>
+            <p class="result-desc" id="resultDesc">
+              Xuất sắc! Bạn có năng khiếu và trực giác ngôn ngữ rất tốt với tiếng Nga.
+            </p>
+            <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+              <button class="btn secondary" id="btnRestartQuiz">🔄 Làm lại Quiz</button>
+              <a href="/contact" class="btn primary">📞 Đăng ký học kèm 1-1</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CTA BANNER -->
+      <section class="cta-banner">
+        <div>
+          <span class="cta-tag">ĐỒNG HÀNH CÙNG BẠN</span>
+          <h2 class="cta-title">Sẵn Sàng Chinh Phục Tiếng Nga Cùng TAIGA Center?</h2>
+          <p class="cta-desc">
+            Dù bạn bắt đầu từ con số 0 hay muốn bứt phá phản xạ đàm thoại, đội ngũ giảng viên chuyên môn cao tại TAIGA Center
+            sẽ giúp bạn thiết kế lộ trình riêng biệt, hiệu quả và tràn đầy cảm hứng.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="/contact" class="btn accent" style="font-size:1.05rem; padding:14px 28px;">
+            <span>🚀</span> Đăng ký tư vấn miễn phí
+          </a>
+          <a href="tel:0988123456" class="cta-hotline">
+            <span>📞 Hotline / Zalo:</span> 0988 123 456
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-nav">
+          <a href="/home">Trang chủ</a>
+          <span>•</span>
+          <a href="#alphabet">Bảng chữ cái</a>
+          <span>•</span>
+          <a href="#roadmap">Lộ trình học</a>
+          <span>•</span>
+          <a href="#cases">6 Cách ngữ pháp</a>
+          <span>•</span>
+          <a href="#phrasebook">Câu giao tiếp</a>
+          <span>•</span>
+          <a href="/articles">Bài viết</a>
+          <span>•</span>
+          <a href="/contact">Liên hệ</a>
+          <span>•</span>
+          <a href="/app">Cổng tra cứu học viên</a>
+        </div>
+        <p>&copy; 2026 TAIGA Center — Trung tâm đào tạo tiếng Nga chuyên nghiệp. Mọi quyền được bảo lưu.</p>
+      </footer>
     </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY & AUDIO -->
+    <script>
+      /* ==========================================================================
+         1. RUSSIAN ALPHABET DATA & LOGIC
+         ========================================================================== */
+      const ALPHABET = [
+        { char: "А а", name: "а", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[a]", example: "Автобус", examplePhonetic: "[af-tô-bus]", meaning: "Xe buýt", icon: "🚌", speech: "А", wordSpeech: "Автобус" },
+        { char: "Б б", name: "бэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[b]", example: "Бабушка", examplePhonetic: "[ba-bu-shka]", meaning: "Người bà", icon: "👵", speech: "Б", wordSpeech: "Бабушка" },
+        { char: "В в", name: "вэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[v]", example: "Вода", examplePhonetic: "[va-da]", meaning: "Nước uống", icon: "💧", speech: "В", wordSpeech: "Вода" },
+        { char: "Г г", name: "гэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[g]", example: "Город", examplePhonetic: "[go-rat]", meaning: "Thành phố", icon: "🏙️", speech: "Г", wordSpeech: "Город" },
+        { char: "Д д", name: "дэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[d]", example: "Дом", examplePhonetic: "[dom]", meaning: "Ngôi nhà", icon: "🏠", speech: "Д", wordSpeech: "Дом" },
+        { char: "Е е", name: "е", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[ye / e]", example: "Еда", examplePhonetic: "[ye-da]", meaning: "Thức ăn", icon: "🍲", speech: "Е", wordSpeech: "Еда" },
+        { char: "Ё ё", name: "ё", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[yo]", example: "Ёлка", examplePhonetic: "[yol-ka]", meaning: "Cây thông Noel", icon: "🎄", speech: "Ё", wordSpeech: "Ёлка" },
+        { char: "Ж ж", name: "жэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[zh - gi/dơ]", example: "Журнал", examplePhonetic: "[zhur-nal]", meaning: "Tạp chí", icon: "📰", speech: "Ж", wordSpeech: "Журнал" },
+        { char: "З з", name: "зэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[z]", example: "Зима", examplePhonetic: "[zi-ma]", meaning: "Mùa đông", icon: "❄️", speech: "З", wordSpeech: "Зима" },
+        { char: "И и", name: "и", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[i]", example: "Игрушка", examplePhonetic: "[ig-rush-ka]", meaning: "Đồ chơi", icon: "🧸", speech: "И", wordSpeech: "Игрушка" },
+        { char: "Й й", name: "и краткое", type: "consonant", typeLabel: "Bán nguyên âm (Полугласный)", phonetic: "[y ngắn]", example: "Йогурт", examplePhonetic: "[yo-gurt]", meaning: "Sữa chua", icon: "🥛", speech: "Й", wordSpeech: "Йогурт" },
+        { char: "К к", name: "ка", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[k]", example: "Кот", examplePhonetic: "[kot]", meaning: "Con mèo", icon: "🐱", speech: "К", wordSpeech: "Кот" },
+        { char: "Л л", name: "эль", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[l]", example: "Луна", examplePhonetic: "[lu-na]", meaning: "Mặt trăng", icon: "🌙", speech: "Л", wordSpeech: "Луна" },
+        { char: "М м", name: "эм", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[m]", example: "Мама", examplePhonetic: "[ma-ma]", meaning: "Mẹ", icon: "👩", speech: "М", wordSpeech: "Мама" },
+        { char: "Н н", name: "эн", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[n]", example: "Нос", examplePhonetic: "[nos]", meaning: "Cái mũi", icon: "👃", speech: "Н", wordSpeech: "Нос" },
+        { char: "О о", name: "о", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[o / a]", example: "Окно", examplePhonetic: "[ak-no]", meaning: "Cửa sổ", icon: "🪟", speech: "О", wordSpeech: "Окно" },
+        { char: "П п", name: "пэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[p]", example: "Парк", examplePhonetic: "[park]", meaning: "Công viên", icon: "🌳", speech: "П", wordSpeech: "Парк" },
+        { char: "Р р", name: "эр", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[r rung]", example: "Россия", examplePhonetic: "[ras-si-ya]", meaning: "Nước Nga", icon: "🇷🇺", speech: "Р", wordSpeech: "Россия" },
+        { char: "С с", name: "эс", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[s]", example: "Солнце", examplePhonetic: "[son-tse]", meaning: "Mặt trời", icon: "☀️", speech: "С", wordSpeech: "Солнце" },
+        { char: "Т т", name: "тэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[t]", example: "Телефон", examplePhonetic: "[te-le-fon]", meaning: "Điện thoại", icon: "📱", speech: "Т", wordSpeech: "Телефон" },
+        { char: "У у", name: "у", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[u]", example: "Утро", examplePhonetic: "[ut-ra]", meaning: "Buổi sáng", icon: "🌅", speech: "У", wordSpeech: "Утро" },
+        { char: "Ф ф", name: "эф", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[f]", example: "Фото", examplePhonetic: "[fo-ta]", meaning: "Bức ảnh", icon: "📷", speech: "Ф", wordSpeech: "Фото" },
+        { char: "Х х", name: "ха", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[kh]", example: "Хлеб", examplePhonetic: "[khlep]", meaning: "Bánh mì", icon: "🍞", speech: "Х", wordSpeech: "Хлеб" },
+        { char: "Ц ц", name: "цэ", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[ts]", example: "Цветок", examplePhonetic: "[tsve-tok]", meaning: "Bông hoa", icon: "🌸", speech: "Ц", wordSpeech: "Цветок" },
+        { char: "Ч ч", name: "че", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[ch nhẹ]", example: "Чай", examplePhonetic: "[chay]", meaning: "Trà nóng", icon: "🍵", speech: "Ч", wordSpeech: "Чай" },
+        { char: "Ш ш", name: "ша", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[sh cứng]", example: "Школа", examplePhonetic: "[shko-la]", meaning: "Trường học", icon: "🏫", speech: "Ш", wordSpeech: "Школа" },
+        { char: "Щ щ", name: "ща", type: "consonant", typeLabel: "Phụ âm (Согласная)", phonetic: "[shch mềm]", example: "Щи", examplePhonetic: "[shchi]", meaning: "Súp bắp cải Nga", icon: "🥣", speech: "Щ", wordSpeech: "Щи" },
+        { char: "Ъ ъ", name: "твёрдый знак", type: "special", typeLabel: "Dấu cứng (Phân tách âm)", phonetic: "[Dấu cứng]", example: "Объект", examplePhonetic: "[ab-yekt]", meaning: "Công trình / Đối tượng", icon: "🧱", speech: "твёрдый знак", wordSpeech: "Объект" },
+        { char: "Ы ы", name: "ы", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[ư / i trầm]", example: "Сыр", examplePhonetic: "[syr - xưr]", meaning: "Phô mai", icon: "🧀", speech: "Ы", wordSpeech: "Сыр" },
+        { char: "Ь ь", name: "мягкий знак", type: "special", typeLabel: "Dấu mềm (Làm mềm phụ âm)", phonetic: "[Dấu mềm]", example: "День", examplePhonetic: "[den']", meaning: "Ngày / Ban ngày", icon: "📅", speech: "мягкий знак", wordSpeech: "День" },
+        { char: "Э э", name: "э", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[e]", example: "Этаж", examplePhonetic: "[e-tazh]", meaning: "Tầng nhà", icon: "🏢", speech: "Э", wordSpeech: "Этаж" },
+        { char: "Ю ю", name: "ю", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[yu]", example: "Юбка", examplePhonetic: "[yup-ka]", meaning: "Chân váy", icon: "👗", speech: "Ю", wordSpeech: "Юбка" },
+        { char: "Я я", name: "я", type: "vowel", typeLabel: "Nguyên âm (Гласная)", phonetic: "[ya]", example: "Яблоко", examplePhonetic: "[yab-la-ka]", meaning: "Quả táo", icon: "🍎", speech: "Я", wordSpeech: "Яблоко" }
+      ];
+
+      let selectedLetter = ALPHABET[0];
+
+      function speak(text) {
+        if (!("speechSynthesis" in window)) {
+          alert("Trình duyệt chưa hỗ trợ phát âm trực tiếp.");
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "ru-RU";
+        utter.rate = 0.85;
+        window.speechSynthesis.speak(utter);
+      }
+
+      function renderAlphabetGrid(filter = "all") {
+        const grid = document.getElementById("alphabetGrid");
+        grid.innerHTML = "";
+
+        const filtered = filter === "all" ? ALPHABET : ALPHABET.filter((l) => l.type === filter);
+
+        filtered.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = `letter-card ${item.type} ${selectedLetter.char === item.char ? "selected" : ""}`;
+          card.innerHTML = `
+            <div class="letter-glyph">${item.char}</div>
+            <div class="letter-phonetic">${item.phonetic}</div>
+            <div class="letter-sound-icon">🔊</div>
+          `;
+          card.addEventListener("click", () => {
+            selectLetter(item);
+            speak(item.speech);
+          });
+          grid.appendChild(card);
+        });
+      }
+
+      function selectLetter(item) {
+        selectedLetter = item;
+
+        // Update selected class
+        document.querySelectorAll(".letter-card").forEach((c) => {
+          const glyph = c.querySelector(".letter-glyph").textContent;
+          if (glyph === item.char) {
+            c.classList.add("selected");
+          } else {
+            c.classList.remove("selected");
+          }
+        });
+
+        // Update detail panel
+        document.getElementById("detailChar").textContent = item.char;
+        const typeEl = document.getElementById("detailType");
+        typeEl.textContent = item.typeLabel;
+        typeEl.className = `detail-type-badge ${item.type}`;
+
+        document.getElementById("detailPhonetic").textContent = `Tên chữ cái: "${item.name}" • Phiên âm: ${item.phonetic}`;
+        document.getElementById("detailExample").innerHTML = `
+          Từ ví dụ: <strong>${item.example}</strong> ${item.examplePhonetic} — ${item.icon} ${item.meaning}
+        `;
+      }
+
+      // Filter tabs listener
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+          e.target.classList.add("active");
+          const filter = e.target.getAttribute("data-filter");
+          renderAlphabetGrid(filter);
+        });
+      });
+
+      // Detail audio buttons
+      document.getElementById("btnSpeakLetter").addEventListener("click", () => {
+        speak(selectedLetter.speech);
+      });
+      document.getElementById("btnSpeakWord").addEventListener("click", () => {
+        speak(selectedLetter.wordSpeech);
+      });
+
+      /* ==========================================================================
+         2. PHRASEBOOK DATA & LOGIC
+         ========================================================================== */
+      const PHRASES = {
+        greetings: [
+          { ru: "Здравствуйте!", vi: "Xin chào (lịch sự, trang trọng)", phonetic: "[Zdrav-stvuy-tye]", speech: "Здравствуйте" },
+          { ru: "Привет!", vi: "Chào bạn (thân mật)", phonetic: "[Pri-vyet]", speech: "Привет" },
+          { ru: "Доброе утро!", vi: "Chào buổi sáng", phonetic: "[Do-bro-ye ut-ro]", speech: "Доброе утро" },
+          { ru: "Спасибо большое!", vi: "Cảm ơn bạn rất nhiều", phonetic: "[Spa-si-ba bal'-sho-ye]", speech: "Спасибо большое" },
+          { ru: "Пожалуйста!", vi: "Không có chi / Xin vui lòng", phonetic: "[Pa-zhal-u-sta]", speech: "Пожалуйста" },
+          { ru: "До свидания!", vi: "Tạm biệt / Hẹn gặp lại", phonetic: "[Da svi-da-ni-ya]", speech: "До свидания" },
+          { ru: "Как дела?", vi: "Bạn khỏe không? / Mọi chuyện thế nào?", phonetic: "[Kak dye-la]", speech: "Как дела" },
+          { ru: "Меня зовут...", vi: "Tên của tôi là...", phonetic: "[Min-ya za-vut]", speech: "Меня зовут" }
+        ],
+        dining: [
+          { ru: "Меню, пожалуйста.", vi: "Làm ơn cho tôi xem thực đơn.", phonetic: "[Men-yu, pa-zhal-u-sta]", speech: "Меню, пожалуйста" },
+          { ru: "Воду, пожалуйста.", vi: "Làm ơn cho tôi một chai nước.", phonetic: "[Vo-du, pa-zhal-u-sta]", speech: "Воду, пожалуйста" },
+          { ru: "Чек, пожалуйста.", vi: "Làm ơn tính tiền / cho xin hóa đơn.", phonetic: "[Chek, pa-zhal-u-sta]", speech: "Чек, пожалуйста" },
+          { ru: "Очень вкусно!", vi: "Món ăn rất ngon!", phonetic: "[O-chen' vkus-na]", speech: "Очень вкусно" },
+          { ru: "Сколько это стоит?", vi: "Cái này giá bao nhiêu tiền?", phonetic: "[Skol'-ka e-to sto-it]", speech: "Сколько это стоит" },
+          { ru: "Кофе с молоком, пожалуйста.", vi: "Cho tôi một ly cà phê sữa.", phonetic: "[Ko-fye s ma-la-kom, pa-zhal-u-sta]", speech: "Кофе с молоком, пожалуйста" }
+        ],
+        travel: [
+          { ru: "Где находится метро?", vi: "Ga tàu điện ngầm ở đâu?", phonetic: "[Gdye na-kho-dit-sya myet-ro]", speech: "Где находится метро" },
+          { ru: "Как пройти в центр?", vi: "Làm sao để đi vào trung tâm?", phonetic: "[Kak pray-ti v tsentr]", speech: "Как пройти в центр" },
+          { ru: "Один билет, пожалуйста.", vi: "Làm ơn bán cho tôi một vé.", phonetic: "[A-din bi-lyet, pa-zhal-u-sta]", speech: "Один билет, пожалуйста" },
+          { ru: "Где здесь вокзал?", vi: "Nhà ga xe lửa ở chỗ nào?", phonetic: "[Gdye zdyes' vak-zal]", speech: "Где здесь вокзал" },
+          { ru: "Поверните направо.", vi: "Hãy rẽ phải.", phonetic: "[Pa-ver-ni-tye nap-ra-va]", speech: "Поверните направо" },
+          { ru: "Я турист из Вьетнама.", vi: "Tôi là khách du lịch đến từ Việt Nam.", phonetic: "[Ya tu-rist iz V'yet-na-ma]", speech: "Я турист из Вьетнама" }
+        ],
+        shopping: [
+          { ru: "Я хочу купить это.", vi: "Tôi muốn mua món đồ này.", phonetic: "[Ya kha-chu ku-pit' e-to]", speech: "Я хочу купить это" },
+          { ru: "Можно примерить?", vi: "Tôi có thể thử món này được không?", phonetic: "[Mozh-na pri-mye-rit']", speech: "Можно примерить" },
+          { ru: "Есть другой размер?", vi: "Có kích cỡ khác không?", phonetic: "[Yest' dru-goy raz-myer]", speech: "Есть другой размер" },
+          { ru: "Можно оплатить картой?", vi: "Tôi có thể thanh toán bằng thẻ không?", phonetic: "[Mozh-na ap-la-tit' kar-toy]", speech: "Можно оплатить картой" },
+          { ru: "Это слишком дорого.", vi: "Món này đắt quá.", phonetic: "[E-to slish-kam do-ra-ga]", speech: "Это слишком дорого" },
+          { ru: "Дайте пакет, пожалуйста.", vi: "Cho tôi xin cái túi đựng.", phonetic: "[Day-tye pa-kyet, pa-zhal-u-sta]", speech: "Дайте пакет, пожалуйста" }
+        ],
+        emergency: [
+          { ru: "Помогите, пожалуйста!", vi: "Xin hãy giúp tôi với!", phonetic: "[Pa-ma-gi-tye, pa-zhal-u-sta]", speech: "Помогите, пожалуйста" },
+          { ru: "Я не говорю по-русски.", vi: "Tôi không nói được tiếng Nga.", phonetic: "[Ya nye ga-va-ryu pa-rus-ski]", speech: "Я не говорю по-русски" },
+          { ru: "Вы говорите по-английски?", vi: "Bạn có nói được tiếng Anh không?", phonetic: "[Vy ga-va-ri-tye pa-ang-liy-ski]", speech: "Вы говорите по-английски" },
+          { ru: "Где здесь аптека?", vi: "Hiệu thuốc ở đâu quanh đây?", phonetic: "[Gdye zdyes' ap-tye-ka]", speech: "Где здесь аптека" },
+          { ru: "Вызовите скорую помощь!", vi: "Hãy gọi xe cấp cứu giúp tôi!", phonetic: "[Vy-za-vi-tye sko-ru-yu po-mashch]", speech: "Вызовите скорую помощь" },
+          { ru: "Я потерял паспорт.", vi: "Tôi bị mất hộ chiếu.", phonetic: "[Ya pa-tye-ryal pas-part]", speech: "Я потерял паспорт" }
+        ]
+      };
+
+      function renderPhrases(topic = "greetings") {
+        const list = document.getElementById("phrasesList");
+        list.innerHTML = "";
+
+        const items = PHRASES[topic] || [];
+        items.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "phrase-item";
+          div.innerHTML = `
+            <div>
+              <div class="phrase-content-ru">${item.ru}</div>
+              <div class="phrase-phonetic">${item.phonetic}</div>
+              <div class="phrase-content-vi">${item.vi}</div>
+            </div>
+            <button class="btn-mini-audio" data-speech="${item.speech}" title="Nghe phát âm">🔊</button>
+          `;
+          list.appendChild(div);
+        });
+
+        // Attach audio click events
+        list.querySelectorAll(".btn-mini-audio").forEach((b) => {
+          b.addEventListener("click", () => {
+            speak(b.getAttribute("data-speech"));
+          });
+        });
+      }
+
+      // Phrase tab clicks
+      document.querySelectorAll(".phrase-tab-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".phrase-tab-btn").forEach((b) => b.classList.remove("active"));
+          const target = e.currentTarget;
+          target.classList.add("active");
+          const topic = target.getAttribute("data-topic");
+          renderPhrases(topic);
+        });
+      });
+
+      // Mini audio buttons in Case section
+      document.querySelectorAll(".case-example .btn-mini-audio").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          speak(btn.getAttribute("data-speech"));
+        });
+      });
+
+      /* ==========================================================================
+         3. MINI QUIZ DATA & LOGIC
+         ========================================================================== */
+      const QUIZ_DATA = [
+        {
+          question: 'Từ "Здравствуйте" trong tiếng Nga thường được dùng trong ngữ cảnh nào?',
+          options: [
+            "Lời chào lịch sự, trang trọng (Xin chào quý vị / thầy cô / đối tác)",
+            "Lời chúc ngon miệng trước bữa ăn",
+            "Lời tạm biệt hẹn gặp lại vào ngày mai",
+            "Lời xin lỗi khi làm phiền người khác"
+          ],
+          correct: 0,
+          explanation: 'Chính xác! "Здравствуйте" [Zdrav-stvuy-tye] là lời chào trang trọng, lịch sự nhất trong tiếng Nga, có gốc từ lời chúc sức khỏe (здравствовать).'
+        },
+        {
+          question: 'Trong tiếng Nga, từ nào dưới đây có nghĩa là "Cảm ơn"?',
+          options: [
+            "Пожалуйста [Pa-zhal-u-sta]",
+            "Спасибо [Spa-si-ba]",
+            "Извините [Iz-vi-ni-tye]",
+            "Хорошо [Kha-ra-sho]"
+          ],
+          correct: 1,
+          explanation: 'Chính xác! "Спасибо" có nghĩa là "Cảm ơn". Còn "Пожалуйста" nghĩa là "Làm ơn / Không có chi", "Извините" là "Xin lỗi".'
+        },
+        {
+          question: 'Bảng chữ cái tiếng Nga (Cyrillic) có tổng cộng bao nhiêu chữ cái?',
+          options: [
+            "26 chữ cái (giống tiếng Anh)",
+            "29 chữ cái",
+            "33 chữ cái",
+            "36 chữ cái"
+          ],
+          correct: 2,
+          explanation: 'Chính xác! Bảng chữ cái tiếng Nga gồm đúng 33 chữ cái: 10 nguyên âm, 21 phụ âm và 2 dấu đặc biệt (dấu cứng Ъ và dấu mềm Ь).'
+        },
+        {
+          question: 'Từ "Дом" [dom] trong tiếng Nga có ý nghĩa là gì?',
+          options: [
+            "Ngôi nhà",
+            "Dòng sông",
+            "Bánh mì",
+            "Người bạn"
+          ],
+          correct: 0,
+          explanation: 'Chính xác! "Дом" nghĩa là "Ngôi nhà". (Bánh mì là "Хлеб", dòng sông là "Река", người bạn là "Друг").'
+        },
+        {
+          question: 'Khi muốn nói lời "Tạm biệt" hẹn gặp lại, người Nga sử dụng câu nào?',
+          options: [
+            "Доброе утро [Do-bro-ye ut-ro]",
+            "До свидания [Da svi-da-ni-ya]",
+            "Приятного аппетита [Pri-yat-na-va a-pye-ti-ta]",
+            "Спокойной ночи [Spa-koy-nay no-chi]"
+          ],
+          correct: 1,
+          explanation: 'Chính xác! "До свидания" nghĩa là "Tạm biệt / Hẹn gặp lại". ("Спокойной ночи" là chúc ngủ ngon).'
+        }
+      ];
+
+      let currentQuizIndex = 0;
+      let quizScore = 0;
+      let answered = false;
+
+      function renderQuizQuestion() {
+        answered = false;
+        const q = QUIZ_DATA[currentQuizIndex];
+        const total = QUIZ_DATA.length;
+
+        // Progress bar
+        const progressPct = ((currentQuizIndex + 1) / total) * 100;
+        document.getElementById("quizProgressBar").style.width = `${progressPct}%`;
+
+        document.getElementById("quizCounter").textContent = `Câu hỏi ${currentQuizIndex + 1} / ${total}`;
+        document.getElementById("quizText").textContent = q.question;
+        document.getElementById("quizLiveScore").textContent = `Điểm: ${quizScore} / ${currentQuizIndex}`;
+
+        const feedbackEl = document.getElementById("quizFeedback");
+        feedbackEl.className = "quiz-feedback";
+        feedbackEl.innerHTML = "";
+
+        const nextBtn = document.getElementById("btnNextQuestion");
+        nextBtn.style.display = "none";
+
+        // Render options
+        const letters = ["A", "B", "C", "D"];
+        const optsContainer = document.getElementById("quizOptions");
+        optsContainer.innerHTML = "";
+
+        q.options.forEach((optText, idx) => {
+          const btn = document.createElement("button");
+          btn.className = "quiz-opt-btn";
+          btn.innerHTML = `
+            <span class="quiz-opt-letter">${letters[idx]}</span>
+            <span>${optText}</span>
+          `;
+          btn.addEventListener("click", () => handleAnswer(idx));
+          optsContainer.appendChild(btn);
+        });
+      }
+
+      function handleAnswer(chosenIdx) {
+        if (answered) return;
+        answered = true;
+
+        const q = QUIZ_DATA[currentQuizIndex];
+        const isCorrect = chosenIdx === q.correct;
+        if (isCorrect) quizScore++;
+
+        const optButtons = document.querySelectorAll(".quiz-opt-btn");
+        optButtons.forEach((btn, idx) => {
+          btn.disabled = true;
+          if (idx === q.correct) {
+            btn.classList.add("correct");
+          } else if (idx === chosenIdx) {
+            btn.classList.add("wrong");
+          }
+        });
+
+        // Feedback
+        const feedbackEl = document.getElementById("quizFeedback");
+        feedbackEl.className = `quiz-feedback show ${isCorrect ? "correct" : "wrong"}`;
+        feedbackEl.innerHTML = `
+          <strong>${isCorrect ? "🎉 Tuyệt vời! Bạn trả lời đúng." : "💡 Chưa chính xác rồi!"}</strong>
+          <div style="margin-top: 4px;">${q.explanation}</div>
+        `;
+
+        document.getElementById("quizLiveScore").textContent = `Điểm: ${quizScore} / ${currentQuizIndex + 1}`;
+
+        const nextBtn = document.getElementById("btnNextQuestion");
+        nextBtn.style.display = "inline-flex";
+        if (currentQuizIndex === QUIZ_DATA.length - 1) {
+          nextBtn.textContent = "Xem kết quả tổng kết ➔";
+        } else {
+          nextBtn.textContent = "Câu tiếp theo ➔";
+        }
+      }
+
+      document.getElementById("btnNextQuestion").addEventListener("click", () => {
+        if (currentQuizIndex < QUIZ_DATA.length - 1) {
+          currentQuizIndex++;
+          renderQuizQuestion();
+        } else {
+          showQuizResult();
+        }
+      });
+
+      function showQuizResult() {
+        document.getElementById("quizQuestionBox").style.display = "none";
+        const resBox = document.getElementById("quizResultBox");
+        resBox.classList.add("show");
+
+        const scoreEl = document.getElementById("resultScore");
+        const emojiEl = document.getElementById("resultEmoji");
+        const descEl = document.getElementById("resultDesc");
+
+        scoreEl.textContent = `${quizScore} / ${QUIZ_DATA.length} Điểm!`;
+
+        if (quizScore === 5) {
+          emojiEl.textContent = "🏆";
+          descEl.textContent = "Hoàn hảo! Bạn sở hữu trực giác ngôn ngữ tuyệt vời và ghi nhớ kiến thức tiếng Nga cực nhanh. Hãy bắt đầu học ngay cùng giáo viên TAIGA nhé!";
+        } else if (quizScore >= 3) {
+          emojiEl.textContent = "🌟";
+          descEl.textContent = "Khá lắm! Bạn đã nắm được những nét đặc trưng cơ bản nhất của tiếng Nga. Chỉ cần một lộ trình bài bản, bạn sẽ tiến bộ vượt bậc!";
+        } else {
+          emojiEl.textContent = "🌱";
+          descEl.textContent = "Đừng lo lắng! Tiếng Nga có bảng chữ cái và ngữ pháp hoàn toàn mới lạ. Đội ngũ TAIGA Center sẽ đồng hành cầm tay chỉ việc giúp bạn từ con số 0.";
+        }
+      }
+
+      document.getElementById("btnRestartQuiz").addEventListener("click", () => {
+        currentQuizIndex = 0;
+        quizScore = 0;
+        document.getElementById("quizResultBox").classList.remove("show");
+        document.getElementById("quizQuestionBox").style.display = "block";
+        renderQuizQuestion();
+      });
+
+      // INITIALIZE
+      document.addEventListener("DOMContentLoaded", () => {
+        renderAlphabetGrid("all");
+        selectLetter(ALPHABET[0]);
+        renderPhrases("greetings");
+        renderQuizQuestion();
+      });
+    </script>
   </body>
 </html>
