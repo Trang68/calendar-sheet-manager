@@ -1368,8 +1368,13 @@ app.get("/app", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/app.html"));
 });
 
+app.get("/roadmap", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/roadmap.html"));
+});
+
 app.get("/learn", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/learn.html"));
+  res.sendFile(path.join(__dirname, "../public/roadmap.html"));
 });
 
 app.get("/contact", (_req, res) => {

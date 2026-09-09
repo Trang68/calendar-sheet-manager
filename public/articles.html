@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài viết tiếng Nga - TAIGA Center</title>
+    <meta
+      name="description"
+      content="Kho bài viết & cẩm nang học tiếng Nga chuyên sâu từ TAIGA Center: Bảng chữ cái Cyrillic, Ngữ pháp 6 cách, Mẫu câu giao tiếp, Mẹo nhớ từ vựng và Văn hóa Nga."
+    />
+    <title>Bài Viết & Cẩm Nang Tiếng Nga | TAIGA Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -32,6 +38,7 @@
       footer { margin-top: 36px; text-align: center; color: #606b73; font-size: 0.95rem; }
       @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
     </style>
+    <link rel="stylesheet" href="/articles.css" />
   </head>
   <body>
     <div class="shell">
@@ -40,36 +47,472 @@
           <h1 class="brand">Bài viết tiếng Nga</h1>
           <p>Trang tổng hợp bài viết mẫu về tiếng Nga, văn hóa và học tập.</p>
         </div>
+      <!-- HEADER / TOPBAR -->
+      <header class="topbar">
+        <a href="/home" class="brand-logo">
+          <span class="brand-flag">🇷🇺</span>
+          <span class="brand-name">TAIGA Center</span>
+          <span class="brand-badge">Góc Chia Sẻ</span>
+        </a>
         <nav class="nav-links">
           <a href="/home">Trang chủ</a>
           <!-- <a href="/">Calendar</a> -->
           <a href="/learn">Học tiếng Nga</a>
           <a href="/contact">Liên hệ</a>
+          <a href="/home" class="nav-item">Trang chủ</a>
+          <a href="/roadmap" class="nav-item">Lộ trình học</a>
+          <a href="/articles" class="nav-item active">Bài viết</a>
+          <a href="/contact" class="nav-item">Liên hệ</a>
+          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
         </nav>
       </div>
+      </header>
 
       <section class="hero">
         <h1>Nội dung mẫu cho các bài viết</h1>
         <p>Danh sách bài viết mẫu để bạn dễ dàng thay thế bằng nội dung thực tế sau này.</p>
+      <!-- HERO SECTION -->
+      <section class="hero-articles">
+        <div class="hero-tag">
+          <span>📚</span>
+          <span>KHO TÀNG HỌC LIỆU & BÀI VIẾT CHUYÊN SÂU</span>
+        </div>
+        <h1 class="hero-title">
+          Cẩm Nang Học Tiếng Nga <br />
+          & <span class="highlight">Góc Văn Hóa Xứ Bạch Dương</span>
+        </h1>
+        <p class="hero-desc">
+          Tổng hợp các bài viết hướng dẫn chi tiết từ đội ngũ giảng viên TAIGA Center: từ phát âm bảng chữ cái Cyrillic,
+          giải mã 6 cách ngữ pháp, câu giao tiếp thực chiến cho đến bí quyết nhớ từ vựng và phong tục tập quán nước Nga.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-bar-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Tìm kiếm bài viết (ví dụ: bảng chữ cái, 6 cách, giao tiếp, từ vựng...)"
+          />
+        </div>
       </section>
 
       <div class="list">
         <div class="card">
           <h2>Bài viết 1: Bảng chữ cái Cyrillic</h2>
           <p>Giới thiệu cách viết, phát âm và các mẹo học bảng chữ cái tiếng Nga nhanh chóng.</p>
+      <!-- FILTER TABS -->
+      <div class="filters-bar">
+        <button class="filter-chip active" data-category="all">Tất cả bài viết</button>
+        <button class="filter-chip" data-category="alphabet">Bảng chữ cái & Phát âm</button>
+        <button class="filter-chip" data-category="grammar">Ngữ pháp 6 Cách</button>
+        <button class="filter-chip" data-category="phrase">Giao tiếp thực tế</button>
+        <button class="filter-chip" data-category="culture">Văn hóa & Mẹo học</button>
+      </div>
+
+      <!-- ARTICLES GRID -->
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-nav">
+          <a href="/home">Trang chủ</a>
+          <span>•</span>
+          <a href="/roadmap">Lộ trình học</a>
+          <span>•</span>
+          <a href="/articles">Bài viết</a>
+          <span>•</span>
+          <a href="/contact">Liên hệ</a>
+          <span>•</span>
+          <a href="/app">Cổng tra cứu học viên</a>
         </div>
         <div class="card">
           <h2>Bài viết 2: Văn hóa Nga cơ bản</h2>
           <p>Những điều cần biết khi học tiếng Nga: lễ hội, cách chào hỏi và ứng xử trong giao tiếp.</p>
+        <p>&copy; 2026 TAIGA Center — Trung tâm đào tạo tiếng Nga chuyên nghiệp. Mọi quyền được bảo lưu.</p>
+      </footer>
+    </div>
+
+    <!-- FULL ARTICLE READER MODAL -->
+    <div class="article-modal-overlay" id="articleModal">
+      <div class="article-modal-card">
+        <div class="modal-header">
+          <div>
+            <div id="modalCategory" class="article-category" style="margin-bottom:6px; display:inline-block;">Chủ đề</div>
+            <h2 id="modalTitle" style="margin:0; font-family:'Space Grotesk',sans-serif; color:var(--brand-strong); font-size:1.4rem;">Tiêu đề bài viết</h2>
+            <div id="modalMeta" style="font-size:0.82rem; color:var(--muted); margin-top:4px;">Tác giả & Thời gian đọc</div>
+          </div>
+          <button class="modal-close-btn" id="modalCloseBtn" title="Đóng bài viết">&times;</button>
         </div>
         <div class="card">
           <h2>Bài viết 3: Mẹo học từ vựng</h2>
           <p>Phương pháp ghi nhớ từ vựng tiếng Nga hiệu quả cho người mới bắt đầu.</p>
+        <div class="modal-body" id="modalContent">
+          <!-- Full article content injected here -->
         </div>
       </div>
+    </div>
 
       <a class="button" href="/home">Quay lại trang chủ</a>
       <footer>TAIGA Center • Nội dung mẫu.</footer>
     </div>
+    <!-- JAVASCRIPT -->
+    <script>
+      /* SPEECH SYNTHESIS HELPER */
+      function speakRussian(text) {
+        if (!("speechSynthesis" in window)) {
+          alert("Trình duyệt chưa hỗ trợ phát âm trực tiếp.");
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "ru-RU";
+        utter.rate = 0.85;
+        window.speechSynthesis.speak(utter);
+      }
+
+      /* ARTICLES DATABASE */
+      const ARTICLES = [
+        {
+          id: "alphabet-guide",
+          category: "alphabet",
+          categoryName: "Bảng chữ cái & Phát âm",
+          categoryClass: "",
+          title: "Bảng Chữ Cái Cyrillic 33 Chữ & Hướng Dẫn Phát Âm Chuẩn Bản Ngữ",
+          snippet: "Giải mã cấu trúc 33 chữ cái tiếng Nga: 10 nguyên âm, 21 phụ âm và 2 dấu đặc biệt (Ъ, Ь). Kèm theo mẹo phân biệt các âm dễ nhầm lẫn và nghe phát âm trực tiếp.",
+          author: "Giảng viên TAIGA Center",
+          readTime: "8 phút đọc",
+          content: `
+            <p>Bảng chữ cái tiếng Nga (Cyrillic - Kirin) thường là trở ngại tâm lý đầu tiên của người mới bắt đầu. Tuy nhiên, một khi bạn đã nắm vững quy tắc phiên âm, tiếng Nga lại cực kỳ logic vì <em>"viết sao đọc vậy"</em> hơn tiếng Anh rất nhiều.</p>
+            
+            <div class="article-callout">
+              💡 <strong>Cấu trúc bảng chữ cái tiếng Nga:</strong> Gồm chính xác <strong>33 chữ cái</strong>:
+              <ul>
+                <li><strong>10 Nguyên âm:</strong> А, Е, Ё, И, О, У, Ы, Э, Ю, Я</li>
+                <li><strong>21 Phụ âm:</strong> Б, В, Г, Д, Ж, З, Й, К, Л, М, Н, П, Р, С, Т, Ф, Х, Ц, Ч, Ш, Щ</li>
+                <li><strong>2 Dấu không phát âm:</strong> Ъ (Dấu cứng - Твёрдый знак) và Ь (Dấu mềm - Мягкий знак)</li>
+              </ul>
+            </div>
+
+            <h2>1. Các chữ cái nhìn giống tiếng Anh nhưng đọc khác</h2>
+            <p>Đây là nhóm chữ cái dễ gây bẫy nhất cho người mới bắt đầu:</p>
+            <ul>
+              <li><strong>В в:</strong> Nhìn giống chữ "B" tiếng Anh nhưng đọc là âm <strong>[V]</strong>. Ví dụ: <button class="speech-pill" onclick="speakRussian('Вода')">Вода [va-da] 🔊</button> (Nước).</li>
+              <li><strong>Н н:</strong> Nhìn giống chữ "H" nhưng phát âm là <strong>[N]</strong>. Ví dụ: <button class="speech-pill" onclick="speakRussian('Нос')">Нос [nos] 🔊</button> (Mũi).</li>
+              <li><strong>Р р:</strong> Nhìn giống chữ "P" nhưng đọc là <strong>[R rung]</strong>. Ví dụ: <button class="speech-pill" onclick="speakRussian('Россия')">Россия [ras-si-ya] 🔊</button> (Nước Nga).</li>
+              <li><strong>С с:</strong> Nhìn giống chữ "C" nhưng luôn đọc là <strong>[S]</strong>. Ví dụ: <button class="speech-pill" onclick="speakRussian('Солнце')">Солнце [son-tse] 🔊</button> (Mặt trời).</li>
+              <li><strong>Х х:</strong> Nhìn giống chữ "X" nhưng đọc là âm <strong>[Kh]</strong> (âm khạc sâu trong họng). Ví dụ: <button class="speech-pill" onclick="speakRussian('Хлеб')">Хлеб [khlep] 🔊</button> (Bánh mì).</li>
+            </ul>
+
+            <h2>2. Vai trò của Dấu Cứng (Ъ) và Dấu Mềm (Ь)</h2>
+            <p>Hai ký tự này không đại diện cho bất kỳ âm thanh nào nhưng có quyền năng thay đổi phát âm của phụ âm đứng trước nó:</p>
+            <ul>
+              <li><strong>Dấu mềm (Ь):</strong> Làm cho phụ âm đứng trước phát âm "mềm" đi (đầu lưỡi áp sát vòm họng trên). Ví dụ: <button class="speech-pill" onclick="speakRussian('День')">День [den'] 🔊</button> (Ngày) so với âm "n" cứng.</li>
+              <li><strong>Dấu cứng (Ъ):</strong> Đóng vai trò như một bức tường ngăn cách, giữ cho phụ âm đứng trước luôn phát âm cứng và tách biệt với nguyên âm phía sau. Ví dụ: <button class="speech-pill" onclick="speakRussian('Объект')">Объект [ab-yekt] 🔊</button> (Công trình / Đối tượng).</li>
+            </ul>
+
+            <div class="article-callout">
+              🎯 <strong>Lời khuyên từ giảng viên TAIGA:</strong> Hãy dành 3 - 5 ngày đầu tiên chỉ để luyện đọc to từng âm tiết. Khi khẩu hình và cơ lưỡi đã quen với độ rung và độ mềm của tiếng Nga, việc học ngữ pháp sau này sẽ nhẹ nhàng hơn rất nhiều!
+            </div>
+          `
+        },
+        {
+          id: "cases-demystified",
+          category: "grammar",
+          categoryName: "Ngữ pháp 6 Cách",
+          categoryClass: "grammar",
+          title: "Bí Kíp Giải Mã 6 Cách (Падежи) Trong Tiếng Nga Dễ Nhớ Nhất",
+          snippet: "Đừng học vẹt bảng chia đuôi từ khô khan! Bài viết phân tích bản chất câu hỏi, tình huống sử dụng thực tế và sơ đồ tư duy cho trọn vẹn 6 Cách trong tiếng Nga.",
+          author: "ThS. Ngôn ngữ Nga - TAIGA Center",
+          readTime: "12 phút đọc",
+          content: `
+            <p>Khi nhắc đến tiếng Nga, hầu như người học nào cũng lắc đầu ngao ngán trước hệ thống <strong>6 Cách (Падежи)</strong>. Tại sao cùng một từ "nhà" mà khi thì là <em>дом</em>, khi là <em>дома</em>, <em>дому</em>, <em>домом</em> hay <em>доме</em>?</p>
+            <p>Bản chất của tiếng Nga là ngôn ngữ hòa kết (inflected language): đuôi của danh từ sẽ biến đổi để thể hiện vai trò ngữ pháp của từ đó trong câu, thay vì dùng nhiều giới từ như tiếng Việt.</p>
+
+            <h2>Bảng tổng hợp 6 Cách qua câu hỏi cốt lõi</h2>
+
+            <h3>1. Cách 1: Danh Cách (Именительный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Кто? (Ai?) / Что? (Cái gì?)</p>
+            <p><strong>Ý nghĩa:</strong> Là dạng nguyên thể trong từ điển. Đóng vai trò là <strong>chủ ngữ</strong> tự thực hiện hành động.</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('Анна читает книгу')">Анна читает книгу 🔊</button> (Anna đọc sách — "Анна" ở Cách 1).</p>
+
+            <h3>2. Cách 2: Sinh Cách (Родительный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Кого? Чего? (Của ai? Không có cái gì?) / Откуда? (Từ đâu?)</p>
+            <p><strong>Ý nghĩa:</strong> Thể hiện quyền sở hữu (nhà của bạn), sự phủ định (không có tiền = нет денег), số lượng (2, 3, 4 cái bàn) và điểm xuất phát (từ Hà Nội = из Ханоя).</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('У меня нет времени')">У меня нет времени 🔊</button> (Tôi không có thời gian — "времени" ở Cách 2).</p>
+
+            <h3>3. Cách 3: Dữ Cách (Дательный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Кому? Чему? (Cho ai? Đến ai?) / Сколько лет? (Bao nhiêu tuổi?)</p>
+            <p><strong>Ý nghĩa:</strong> Đối tượng tiếp nhận (tặng hoa cho cô giáo), diễn đạt tuổi tác (Мне 20 лет = Tôi 20 tuổi), trạng thái cảm xúc (мне холодно = tôi thấy lạnh).</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('Я звоню другу')">Я звоню другу 🔊</button> (Tôi gọi điện cho người bạn — "другу" ở Cách 3).</p>
+
+            <h3>4. Cách 4: Đối Cách (Винительный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Кого? Что? (Thấy ai? Yêu ai?) / Куда? (Đi đến đâu?)</p>
+            <p><strong>Ý nghĩa:</strong> Là tân ngữ trực tiếp chịu tác động của hành động (mua sách, xem phim, yêu ai), hoặc chỉ hướng chuyển động vào trong / lên trên (в школу = đi vào trường).</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('Я люблю русскую музыку')">Я люблю русскую музыку 🔊</button> (Tôi yêu âm nhạc Nga — "музыку" ở Cách 4).</p>
+
+            <h3>5. Cách 5: Tạo Cách (Творительный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Кем? Чем? (Bằng cái gì?) / С кем? С чем? (Cùng với ai? Với cái gì?)</p>
+            <p><strong>Ý nghĩa:</strong> Công cụ thực hiện hành động (viết bằng bút), đi cùng với ai (с другом = cùng bạn), hoặc nói về nghề nghiệp tương lai (быть врачом = làm bác sĩ).</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('Я пью чай с лимоном')">Я пью чай с лимоном 🔊</button> (Tôi uống trà với chanh — "с лимоном" ở Cách 5).</p>
+
+            <h3>6. Cách 6: Giới Cách (Предложный падеж)</h3>
+            <p><strong>Câu hỏi:</strong> Где? (Ở đâu?) / О ком? О чём? (Về ai? Về điều gì?)</p>
+            <p><strong>Ý nghĩa:</strong> Cách duy nhất <strong>bắt buộc phải đi kèm giới từ</strong> (В, НА, О). Chỉ vị trí tĩnh tại (ở Moskva = в Москве) và chủ đề suy nghĩ, đàm thoại (nghĩ về gia đình = о семье).</p>
+            <p>Ví dụ: <button class="speech-pill" onclick="speakRussian('Я живу во Вьетнаме')">Я живу во Вьетнаме 🔊</button> (Tôi sống ở Việt Nam — "во Вьетнаме" ở Cách 6).</p>
+
+            <div class="article-callout">
+              💡 <strong>Quy tắc vàng:</strong> Học Cách theo cặp đối lập: C1 (Chủ ngữ) vs C4 (Tân ngữ); C6 (Ở đâu - tĩnh) vs C4 (Đi đến đâu - động). Bạn sẽ hiểu bản chất trong 2 tuần!
+            </div>
+          `
+        },
+        {
+          id: "daily-phrasebook",
+          category: "phrase",
+          categoryName: "Giao tiếp thực tế",
+          categoryClass: "phrase",
+          title: "Trọn Bộ 50+ Câu Giao Tiếp Tiếng Nga Thông Dụng Cho Người Mới Bắt Đầu",
+          snippet: "Cứu cánh đắc lực khi đi du lịch, công tác hoặc sinh sống tại Nga. Phân nhóm theo ngữ cảnh: Chào hỏi, Gọi món, Đi lại, Mua sắm và Tình huống khẩn cấp có phát âm.",
+          author: "Đội ngũ học thuật TAIGA",
+          readTime: "10 phút đọc",
+          content: `
+            <p>Khi mới đặt chân đến Nga, bạn chưa cần phải phân tích cấu trúc ngữ pháp phức tạp. Điều quan trọng nhất là ghi nhớ và phản xạ ngay những cụm từ giao tiếp "sống còn" dưới đây:</p>
+
+            <h2>1. Chào hỏi và Lịch thiệp (Приветствие)</h2>
+            <ul>
+              <li><button class="speech-pill" onclick="speakRussian('Здравствуйте')">Здравствуйте! 🔊</button> [Zdrav-stvuy-tye] — Xin chào lịch sự (dành cho người lớn tuổi, đối tác, giáo viên).</li>
+              <li><button class="speech-pill" onclick="speakRussian('Привет')">Привет! 🔊</button> [Pri-vyet] — Chào bạn (thân mật giữa bạn bè, người trẻ).</li>
+              <li><button class="speech-pill" onclick="speakRussian('Спасибо большое')">Спасибо большое! 🔊</button> [Spa-si-ba bal'-sho-ye] — Cảm ơn rất nhiều!</li>
+              <li><button class="speech-pill" onclick="speakRussian('Пожалуйста')">Пожалуйста! 🔊</button> [Pa-zhal-u-sta] — Làm ơn / Không có chi.</li>
+              <li><button class="speech-pill" onclick="speakRussian('До свидания')">До свидания! 🔊</button> [Da svi-da-ni-ya] — Tạm biệt / Hẹn gặp lại.</li>
+            </ul>
+
+            <h2>2. Nhà hàng & Gọi món (В ресторане)</h2>
+            <ul>
+              <li><button class="speech-pill" onclick="speakRussian('Меню, пожалуйста')">Меню, пожалуйста. 🔊</button> [Men-yu, pa-zhal-u-sta] — Làm ơn cho tôi xin thực đơn.</li>
+              <li><button class="speech-pill" onclick="speakRussian('Чек, пожалуйста')">Чек, пожалуйста. 🔊</button> [Chek, pa-zhal-u-sta] — Làm ơn cho tôi xin hóa đơn / tính tiền.</li>
+              <li><button class="speech-pill" onclick="speakRussian('Очень вкусно')">Очень вкусно! 🔊</button> [O-chen' vkus-na] — Món ăn rất ngon miệng!</li>
+              <li><button class="speech-pill" onclick="speakRussian('Воду без газа, пожалуйста')">Воду без газа, пожалуйста. 🔊</button> [Vo-du bez ga-za] — Cho tôi nước lọc không ga.</li>
+            </ul>
+
+            <h2>3. Đi lại & Hỏi đường (В городе и метро)</h2>
+            <ul>
+              <li><button class="speech-pill" onclick="speakRussian('Где находится метро?')">Где находится метро? 🔊</button> [Gdye na-kho-dit-sya myet-ro] — Ga tàu điện ngầm ở đâu?</li>
+              <li><button class="speech-pill" onclick="speakRussian('Сколько стоит билет?')">Сколько стоит билет? 🔊</button> [Skol'-ka sto-it bi-lyet] — Vé này giá bao nhiêu tiền?</li>
+              <li><button class="speech-pill" onclick="speakRussian('Поверните направо')">Поверните направо / налево. 🔊</button> — Hãy rẽ phải / rẽ trái.</li>
+            </ul>
+
+            <h2>4. Tình huống khẩn cấp (Экстренные ситуации)</h2>
+            <ul>
+              <li><button class="speech-pill" onclick="speakRussian('Помогите, пожалуйста')">Помогите, пожалуйста! 🔊</button> [Pa-ma-gi-tye] — Làm ơn cứu tôi với!</li>
+              <li><button class="speech-pill" onclick="speakRussian('Я не говорю по-русски')">Я не говорю по-русски. 🔊</button> — Tôi không nói được tiếng Nga.</li>
+              <li><button class="speech-pill" onclick="speakRussian('Где здесь аптека?')">Где здесь аптека? 🔊</button> [Gdye zdyes' ap-tye-ka] — Hiệu thuốc ở đâu quanh đây?</li>
+            </ul>
+          `
+        },
+        {
+          id: "vocabulary-tips",
+          category: "culture",
+          categoryName: "Văn hóa & Mẹo học",
+          categoryClass: "culture",
+          title: "Bí Quyết Ghi Nhớ Từ Vựng Tiếng Nga Siêu Tốc & Quy Tắc Trọng Âm",
+          snippet: "Vì sao học trước quên sau? Bật mí phương pháp ghi nhớ từ vựng theo gốc từ (Корень), hiện tượng biến âm khi không mang trọng âm (Ударение) và ứng dụng Spaced Repetition.",
+          author: "Giảng viên Phương pháp - TAIGA Center",
+          readTime: "7 phút đọc",
+          content: `
+            <p>Từ vựng tiếng Nga thường rất dài và có nhiều phụ âm đứng liền nhau khiến học viên cảm thấy khó nhớ. Dưới đây là 3 phương pháp đã được kiểm chứng giúp tăng gấp 3 lần tốc độ ghi nhớ từ vựng:</p>
+
+            <h2>1. Học theo Gốc từ (Корень слова) — 1 gốc nhớ 10 từ</h2>
+            <p>Trong tiếng Nga, từ mới được tạo ra bằng cách thêm tiền tố (приставка) và hậu tố (суффикс) vào gốc từ. Khi bạn biết gốc từ, bạn có thể đoán được nghĩa của cả một gia đình từ:</p>
+            <ul>
+              <li>Gốc <strong>-чит-</strong> (đọc): <button class="speech-pill" onclick="speakRussian('читать')">читать 🔊</button> (đọc), <button class="speech-pill" onclick="speakRussian('читатель')">читатель 🔊</button> (độc giả), <button class="speech-pill" onclick="speakRussian('прочитать')">прочитать 🔊</button> (đọc xong).</li>
+              <li>Gốc <strong>-уч-</strong> (học): <button class="speech-pill" onclick="speakRussian('учить')">учить 🔊</button> (học/dạy), <button class="speech-pill" onclick="speakRussian('учитель')">учитель 🔊</button> (thầy giáo), <button class="speech-pill" onclick="speakRussian('ученик')">ученик 🔊</button> (học sinh), <button class="speech-pill" onclick="speakRussian('учебник')">учебник 🔊</button> (sách giáo khoa).</li>
+            </ul>
+
+            <h2>2. Quy tắc trọng âm kỳ diệu (Ударение)</h2>
+            <p>Trọng âm trong tiếng Nga là yếu tố sống còn: nó có thể làm thay đổi hoàn toàn nghĩa của từ hoặc cách phát âm nguyên âm:</p>
+            <div class="article-callout">
+              ⚠️ <strong>Hiện tượng suy giảm nguyên âm (Редукция):</strong>
+              <ul>
+                <li>Chữ <strong>О</strong> khi có trọng âm đọc là <strong>[O]</strong>, nhưng khi KHÔNG mang trọng âm sẽ bị đọc nhẹ thành <strong>[A]</strong>. Ví dụ: <button class="speech-pill" onclick="speakRussian('Молоко')">Молоко [ma-la-ko] 🔊</button> (Sữa).</li>
+                <li>Chữ <strong>Е</strong> khi không có trọng âm thường bị đọc thành âm <strong>[I]</strong> nhẹ.</li>
+              </ul>
+            </div>
+
+            <h2>3. Ứng dụng phương pháp lặp lại ngắt quãng (Spaced Repetition)</h2>
+            <p>Đừng cố nhồi nhét 50 từ trong một đêm. Hãy ôn lại 10 từ mới vào ngày thứ 1, ngày thứ 3, ngày thứ 7 và ngày thứ 14. Bộ não sẽ tự động chuyển các từ này vào vùng trí nhớ dài hạn.</p>
+          `
+        },
+        {
+          id: "russian-culture-etiquette",
+          category: "culture",
+          categoryName: "Văn hóa & Mẹo học",
+          categoryClass: "culture",
+          title: "Văn Hóa Giao Tiếp & Những Phong Tục Tập Quán Đặc Sắc Của Người Nga",
+          snippet: "Những điều tối kỵ cần tránh khi giao tiếp với người Nga: Quy tắc tặng hoa số lẻ, không bắt tay qua ngưỡng cửa, và vì sao người Nga hiếm khi cười với người lạ trên phố?",
+          author: "Ban Biên Tập Văn Hóa Nga",
+          readTime: "6 phút đọc",
+          content: `
+            <p>Học một ngôn ngữ không thể tách rời việc hiểu về văn hóa. Người Nga có tâm hồn sâu sắc và ấm áp (được mệnh danh là "Tâm hồn Nga bí ẩn" - Загадочная русская душа), nhưng cũng có những quy tắc ứng xử rất đặc trưng:</p>
+
+            <h2>1. Tại sao người Nga không hay cười với người lạ?</h2>
+            <p>Khác với văn hóa phương Tây hay nụ cười xã giao, nụ cười của người Nga là biểu hiện của sự chân thành tuyệt đối. Họ không cười chỉ để giữ phép lịch sự. Nhưng một khi bạn đã trở thành bạn bè, người Nga sẽ mở lòng hết mực và sẵn sàng giúp đỡ bạn hết mình.</p>
+
+            <h2>2. Quy tắc tặng hoa: Tuyệt đối chỉ tặng số lẻ!</h2>
+            <div class="article-callout warning">
+              🌸 <strong>Quy tắc sống còn:</strong>
+              <ul>
+                <li><strong>Số lẻ (1, 3, 5, 7... bông):</strong> Tặng trong mọi dịp vui vẻ: sinh nhật, ngày lễ 8/3, hẹn hò, chúc mừng.</li>
+                <li><strong>Số chẵn (2, 4, 6... bông):</strong> Chỉ dành riêng cho tang lễ hoặc viếng nghĩa trang. Đừng bao giờ tặng bó hoa số chẵn cho người đang sống!</li>
+              </ul>
+            </div>
+
+            <h2>3. Không bao giờ bắt tay hoặc nói chuyện qua ngưỡng cửa</h2>
+            <p>Theo tín ngưỡng dân gian Nga xưa, ngưỡng cửa là ranh giới giữa sự bình yên trong nhà và thế giới bên ngoài. Bắt tay hoặc trao đồ vật qua ngưỡng cửa bị xem là điềm gở, có thể dẫn đến cãi vã hoặc xui xẻo. Hãy bước hẳn vào trong nhà hoặc bước ra ngoài trước khi bắt tay!</p>
+
+            <h2>4. Phong tục cởi áo khoác khi vào nhà và nhà hát</h2>
+            <p>Khi bước vào nhà riêng, trường học, bệnh viện hay nhà hát kịch tại Nga, việc đầu tiên bạn phải làm là cởi áo khoác dày ngoài và gửi vào phòng giữ đồ (Гардероб). Mặc áo khoác mùa đông đi lại trong phòng ấm bị coi là hành vi bất lịch sự.</p>
+          `
+        },
+        {
+          id: "trki-exam-guide",
+          category: "grammar",
+          categoryName: "Ngữ pháp 6 Cách",
+          categoryClass: "grammar",
+          title: "Cẩm Nang Ôn Thi Chứng Chỉ Năng Lực Tiếng Nga Quốc Tế TRKI (TORFL)",
+          snippet: "Cấu trúc đề thi TRKI từ cấp độ A1 đến B2 gồm những phần nào? Tiêu chuẩn đạt điểm đỗ và lộ trình luyện thi chuẩn trường Đại học Tổng hợp Quốc gia Moskva (MGU).",
+          author: "Đội ngũ Luyện thi TRKI - TAIGA Center",
+          readTime: "9 phút đọc",
+          content: `
+            <p>Chứng chỉ <strong>TRKI (Тест по русскому языку как иностранному)</strong> — còn được gọi là <strong>TORFL</strong> — là chứng chỉ quốc tế duy nhất chứng minh năng lực tiếng Nga được Bộ Giáo dục & Khoa học Liên bang Nga công nhận toàn cầu.</p>
+
+            <h2>1. Các cấp độ thi TRKI phổ biến</h2>
+            <ul>
+              <li><strong>TRKI Sơ cấp (ТЭУ - A1):</strong> Phù hợp cho người đi xuất khẩu lao động hoặc du lịch cơ bản.</li>
+              <li><strong>TRKI Cơ bản (ТБУ - A2):</strong> Đủ điều kiện xin thường trú hoặc quốc tịch Nga, học dự bị đại học.</li>
+              <li><strong>TRKI-1 (ТРКИ-1 - B1):</strong> Cấp độ bắt buộc để được nhập học chính thức vào các trường đại học tại Nga.</li>
+              <li><strong>TRKI-2 (ТРКИ-2 - B2):</strong> Tốt nghiệp đại học hoặc thạc sĩ tại Nga, đủ tư cách hành nghề dịch thuật chuyên nghiệp.</li>
+            </ul>
+
+            <h2>2. Cấu trúc 5 bài thi con trong mỗi kỳ thi TRKI</h2>
+            <p>Mỗi cấp độ TRKI đều bao gồm chính xác 5 phân môn thi độc lập:</p>
+            <ol>
+              <li><strong>Từ vựng & Ngữ pháp (Лексика. Грамматика):</strong> Thi trắc nghiệm kiểm tra khả năng chia động từ, biến cách danh từ, giới từ.</li>
+              <li><strong>Đọc hiểu (Чтение):</strong> Đọc các văn bản báo chí, thông báo, trích đoạn văn học và trả lời câu hỏi.</li>
+              <li><strong>Nghe hiểu (Аудирование):</strong> Nghe các đoạn hội thoại đời thường, phỏng vấn thời sự trên đài phát thanh Nga.</li>
+              <li><strong>Viết luận (Письмо):</strong> Viết thư, lời chúc mừng hoặc bài luận bày tỏ quan điểm theo chủ đề.</li>
+              <li><strong>Vấn đáp trực tiếp (Говорение):</strong> Đối thoại trực tiếp 1-1 với giám khảo bản ngữ về các tình huống sinh hoạt và chủ đề xã hội.</li>
+            </ol>
+
+            <div class="article-callout">
+              🎯 <strong>Tiêu chuẩn đỗ (Passing Grade):</strong> Thí sinh phải đạt tối thiểu <strong>66% điểm</strong> ở mỗi phân môn. Nếu trượt 1 môn, thí sinh được quyền thi lại riêng môn đó trong vòng 2 năm mà không cần thi lại toàn bộ.
+            </div>
+          `
+        }
+      ];
+
+      /* RENDER ARTICLES GRID */
+      function renderArticles(list) {
+        const grid = document.getElementById("articlesGrid");
+        grid.innerHTML = "";
+
+        if (list.length === 0) {
+          grid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted); font-size: 1.1rem;">
+              Không tìm thấy bài viết phù hợp với từ khóa của bạn. Hãy thử tìm kiếm từ khác nhé!
+            </div>
+          `;
+          return;
+        }
+
+        list.forEach((art) => {
+          const card = document.createElement("article");
+          card.className = "article-card";
+          card.innerHTML = `
+            <div class="article-meta">
+              <span class="article-category ${art.categoryClass}">${art.categoryName}</span>
+              <span>${art.readTime}</span>
+            </div>
+            <h3 class="article-title">${art.title}</h3>
+            <p class="article-snippet">${art.snippet}</p>
+            <div class="article-footer">
+              <span class="article-author">✍️ ${art.author}</span>
+              <button class="btn-read" onclick="openArticleModal('${art.id}')">Đọc bài viết ➔</button>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      /* FILTER & SEARCH LOGIC */
+      let currentCategory = "all";
+
+      function applyFilterAndSearch() {
+        const query = document.getElementById("searchInput").value.trim().toLowerCase();
+
+        const filtered = ARTICLES.filter((art) => {
+          const matchCat = currentCategory === "all" || art.category === currentCategory;
+          const matchQuery =
+            !query ||
+            art.title.toLowerCase().includes(query) ||
+            art.snippet.toLowerCase().includes(query) ||
+            art.categoryName.toLowerCase().includes(query);
+          return matchCat && matchQuery;
+        });
+
+        renderArticles(filtered);
+      }
+
+      document.querySelectorAll(".filter-chip").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".filter-chip").forEach((b) => b.classList.remove("active"));
+          e.target.classList.add("active");
+          currentCategory = e.target.getAttribute("data-category");
+          applyFilterAndSearch();
+        });
+      });
+
+      document.getElementById("searchInput").addEventListener("input", applyFilterAndSearch);
+
+      /* MODAL READER LOGIC */
+      window.openArticleModal = function (id) {
+        const article = ARTICLES.find((a) => a.id === id);
+        if (!article) return;
+
+        document.getElementById("modalCategory").textContent = article.categoryName;
+        document.getElementById("modalCategory").className = `article-category ${article.categoryClass}`;
+        document.getElementById("modalTitle").textContent = article.title;
+        document.getElementById("modalMeta").textContent = `Tác giả: ${article.author} • ${article.readTime}`;
+        document.getElementById("modalContent").innerHTML = article.content;
+
+        const modal = document.getElementById("articleModal");
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      };
+
+      function closeArticleModal() {
+        const modal = document.getElementById("articleModal");
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.getElementById("modalCloseBtn").addEventListener("click", closeArticleModal);
+      document.getElementById("articleModal").addEventListener("click", (e) => {
+        if (e.target.id === "articleModal") {
+          closeArticleModal();
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeArticleModal();
+      });
+
+      /* INITIALIZE */
+      document.addEventListener("DOMContentLoaded", () => {
+        renderArticles(ARTICLES);
+      });
+    </script>
   </body>
 </html>
