@@ -1373,7 +1373,6 @@ app.get("/roadmap", (_req, res) => {
 });
 
 app.get("/learn", (_req, res) => {
-  res.sendFile(path.join(__dirname, "../public/learn.html"));
   res.sendFile(path.join(__dirname, "../public/roadmap.html"));
 });
 
