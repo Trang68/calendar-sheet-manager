@@ -16,8 +16,17 @@
   </head>
   <body>
     <header class="header">
+      <div class="logo">TAIGA Center</div>
       <a href="/home" class="logo">TAIGA Center</a>
       <nav class="nav">
+        <a href="#home">Trang chủ</a>
+        <a href="/learn">Học tiếng Nga</a>
+        <a href="/roadmap">Lộ trình học</a>
+        <a href="/articles">Bài viết</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#courses">Khóa học</a>
+        <a href="#contact">Liên hệ</a>
+        <a href="/app">Đăng nhập</a>
         <a href="/home" data-nav="home">Trang chủ</a>
         <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
         <a href="/home#courses" data-nav="courses">Khóa học</a>
@@ -250,6 +259,36 @@
         });
       });
 
+      // Header show/hide on scroll
+      const mainHeader = document.querySelector('.header');
+      let isScrollingTimer;
+      let isHoveringHeader = false;
+
+      mainHeader.addEventListener('mouseenter', () => {
+        isHoveringHeader = true;
+        mainHeader.classList.remove('hidden');
+        window.clearTimeout(isScrollingTimer);
+      });
+
+      mainHeader.addEventListener('mouseleave', () => {
+        isHoveringHeader = false;
+        if (window.scrollY > 100) {
+          isScrollingTimer = setTimeout(() => {
+            mainHeader.classList.add('hidden');
+          }, 1500);
+        }
+      });
+
+      window.addEventListener('scroll', () => {
+        window.clearTimeout(isScrollingTimer);
+        mainHeader.classList.remove('hidden');
+
+        if (!isHoveringHeader && window.scrollY > 100) {
+          isScrollingTimer = setTimeout(() => {
+            mainHeader.classList.add('hidden');
+          }, 1500);
+        }
+      });
     </script>
     <script src="/site-nav.js"></script>
   </body>
