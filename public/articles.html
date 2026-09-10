@@ -3,90 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài viết tiếng Nga - TAIGA Center</title>
+    <title>Bài Viết & Cẩm Nang Tiếng Nga | TAIGA Center</title>
     <meta
       name="description"
       content="Kho bài viết & cẩm nang học tiếng Nga chuyên sâu từ TAIGA Center: Bảng chữ cái Cyrillic, Ngữ pháp 6 cách, Mẫu câu giao tiếp, Mẹo nhớ từ vựng và Văn hóa Nga."
     />
-    <title>Bài Viết & Cẩm Nang Tiếng Nga | TAIGA Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
-      * { box-sizing: border-box; }
-      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); position: relative; isolation: isolate; }
-      body::before { content: ""; position: fixed; inset: 0; background: url("../media/flag_fly.png") center center / cover no-repeat; opacity: 0.9; filter: blur(2.5px) saturate(82%); transform: scale(1.05); pointer-events: none; z-index: -1; }
-      .shell { max-width: 1100px; margin: 0 auto; padding: 24px; }
-      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
-      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
-      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
-      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
-      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 36px; box-shadow: 0 18px 36px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
-      .hero h1 { margin: 0 0 12px; }
-      .hero p { margin: 0; line-height: 1.75; }
-      .list { display: grid; gap: 20px; }
-      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); }
-      .card h2 { margin: 0 0 10px; color: var(--brand); }
-      .card p { margin: 0; line-height: 1.75; }
-      .button { display: inline-block; margin-top: 18px; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 12px 20px; border-radius: 999px; }
-      footer { margin-top: 36px; text-align: center; color: #606b73; font-size: 0.95rem; }
-      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
-    </style>
     <link rel="stylesheet" href="/articles.css" />
     <link rel="stylesheet" href="/site-nav.css" />
   </head>
   <body>
-    <!-- STANDARDIZED HEADER -->
+    <!-- STANDARDIZED TREE NAVIGATION HEADER -->
     <header class="header">
-      <a href="/home" class="logo">TAIGA Center</a>
-      <nav class="nav">
-        <a href="/home" data-nav="home">Trang chủ</a>
-        <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
-        <a href="/home#courses" data-nav="courses">Khóa học</a>
-        <a href="/articles" data-nav="articles">Bài viết</a>
-        <a href="/home#about" data-nav="about">Về chúng tôi</a>
-        <a href="/contact" data-nav="contact">Liên hệ</a>
-        <a href="/app" class="nav-login" data-nav="app">Đăng nhập</a>
-      </nav>
-      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+      <div class="header-container">
+        <a href="/home" class="logo">
+          <span>TAIGA Center</span>
+        </a>
+
+        <nav class="nav">
+          <a href="/home" class="nav-item" data-nav="home">Trang chủ</a>
+
+          <!-- Tree Dropdown 1: Chương trình học -->
+          <div class="nav-dropdown" data-dropdown="courses">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Chương trình học</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/roadmap" class="dropdown-link" data-nav="roadmap">
+                <span class="dropdown-icon">🗺️</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Lộ trình học (A0 → B2)</strong>
+                  <span class="dropdown-desc">4 chặng chuẩn quốc tế & lộ trình mục tiêu</span>
+                </div>
+              </a>
+              <a href="/home#courses" class="dropdown-link" data-nav="courses">
+                <span class="dropdown-icon">🎓</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Các khóa học tiếng Nga</strong>
+                  <span class="dropdown-desc">Sơ cấp, Trung cấp, Du học & Luyện thi TRKI</span>
+                </div>
+              </a>
+              <a href="/articles" class="dropdown-link" data-nav="articles">
+                <span class="dropdown-icon">📚</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Bài viết & Cẩm nang</strong>
+                  <span class="dropdown-desc">Bảng chữ cái, 6 cách, câu giao tiếp & mẹo học</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tree Dropdown 2: Về trung tâm -->
+          <div class="nav-dropdown" data-dropdown="about">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Về trung tâm</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/home#about" class="dropdown-link" data-nav="about">
+                <span class="dropdown-icon">🏫</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Giới thiệu TAIGA Center</strong>
+                  <span class="dropdown-desc">Đội ngũ giảng viên & phương pháp 1-1</span>
+                </div>
+              </a>
+              <a href="/contact" class="dropdown-link" data-nav="contact">
+                <span class="dropdown-icon">📞</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Liên hệ & Tư vấn</strong>
+                  <span class="dropdown-desc">Đăng ký xếp lớp & nhận tư vấn chi tiết</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="/app" class="nav-item nav-login" data-nav="app">Đăng nhập</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="language-btn" title="Chuyển ngôn ngữ" type="button">Ru-Vi</button>
+          <button class="mobile-toggle" aria-label="Mở menu" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <div class="shell">
-      <div class="topbar">
-        <div>
-          <h1 class="brand">Bài viết tiếng Nga</h1>
-          <p>Trang tổng hợp bài viết mẫu về tiếng Nga, văn hóa và học tập.</p>
-        </div>
-      <!-- HEADER / TOPBAR -->
-      <header class="topbar">
-        <a href="/home" class="brand-logo">
-          <span class="brand-flag">🇷🇺</span>
-          <span class="brand-name">TAIGA Center</span>
-          <span class="brand-badge">Góc Chia Sẻ</span>
-        </a>
-        <nav class="nav-links">
-          <a href="/home">Trang chủ</a>
-          <!-- <a href="/">Calendar</a> -->
-          <a href="/learn">Học tiếng Nga</a>
-          <a href="/contact">Liên hệ</a>
-          <a href="/home" class="nav-item">Trang chủ</a>
-          <a href="/roadmap" class="nav-item">Lộ trình học</a>
-          <a href="/articles" class="nav-item active">Bài viết</a>
-          <a href="/contact" class="nav-item">Liên hệ</a>
-          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
-        </nav>
-      </div>
-      </header>
-
-      <section class="hero">
-        <h1>Nội dung mẫu cho các bài viết</h1>
-        <p>Danh sách bài viết mẫu để bạn dễ dàng thay thế bằng nội dung thực tế sau này.</p>
       <!-- HERO SECTION -->
       <section class="hero-articles">
         <div class="hero-tag">
@@ -114,10 +123,6 @@
         </div>
       </section>
 
-      <div class="list">
-        <div class="card">
-          <h2>Bài viết 1: Bảng chữ cái Cyrillic</h2>
-          <p>Giới thiệu cách viết, phát âm và các mẹo học bảng chữ cái tiếng Nga nhanh chóng.</p>
       <!-- FILTER TABS -->
       <div class="filters-bar">
         <button class="filter-chip active" data-category="all">Tất cả bài viết</button>
@@ -145,9 +150,6 @@
           <span>•</span>
           <a href="/app">Cổng tra cứu học viên</a>
         </div>
-        <div class="card">
-          <h2>Bài viết 2: Văn hóa Nga cơ bản</h2>
-          <p>Những điều cần biết khi học tiếng Nga: lễ hội, cách chào hỏi và ứng xử trong giao tiếp.</p>
         <p>&copy; 2026 TAIGA Center — Trung tâm đào tạo tiếng Nga chuyên nghiệp. Mọi quyền được bảo lưu.</p>
       </footer>
     </div>
@@ -163,18 +165,12 @@
           </div>
           <button class="modal-close-btn" id="modalCloseBtn" title="Đóng bài viết">&times;</button>
         </div>
-        <div class="card">
-          <h2>Bài viết 3: Mẹo học từ vựng</h2>
-          <p>Phương pháp ghi nhớ từ vựng tiếng Nga hiệu quả cho người mới bắt đầu.</p>
         <div class="modal-body" id="modalContent">
           <!-- Full article content injected here -->
         </div>
       </div>
     </div>
 
-      <a class="button" href="/home">Quay lại trang chủ</a>
-      <footer>TAIGA Center • Nội dung mẫu.</footer>
-    </div>
     <!-- JAVASCRIPT -->
     <script>
       /* SPEECH SYNTHESIS HELPER */

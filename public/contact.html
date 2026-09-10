@@ -3,89 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ - TAIGA Center</title>
+    <title>Liên Hệ & Tư Vấn | TAIGA Center</title>
+    <meta
+      name="description"
+      content="Liên hệ tư vấn khóa học tiếng Nga, lộ trình học A0 đến B2 và biểu phí đào tạo 1-1 tại TAIGA Center."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
-      * { box-sizing: border-box; }
-      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); position: relative; isolation: isolate; }
-      body::before { content: ""; position: fixed; inset: 0; background: url("../media/flag_fly.png") center center / cover no-repeat; opacity: 0.6; filter: blur(0px) saturate(82%); transform: scale(1.05); pointer-events: none; z-index: -1; }
-      .shell { max-width: 1000px; margin: 0 auto; padding: 24px; }
-      .shell { max-width: 1000px; margin: 0 auto; padding: 36px 24px 60px; }
-      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
-      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
-      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
-      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
-      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 36px; box-shadow: 0 18px 36px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
-      .hero h1 { margin: 0 0 12px; }
-      .hero p { margin: 0; line-height: 1.8; }
-      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); margin-bottom: 20px; }
-      .card h2 { margin: 0 0 12px; color: var(--brand); }
-      .card p { margin: 0; line-height: 1.7; }
-      .button { display: inline-block; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 12px 20px; border-radius: 999px; margin-top: 18px; }
-      footer { margin-top: 32px; text-align: center; color: #606b73; font-size: 0.95rem; }
-      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
-    </style>
     <link rel="stylesheet" href="/site-nav.css" />
+    <style>
+      :root {
+        --bg-1: #efe6d8;
+        --bg-2: #d8e7de;
+        --paper: #fffdf8;
+        --line: #d6d2c8;
+        --ink: #1a2432;
+        --brand: #1a7a5e;
+        --brand-strong: #0d5c45;
+        --accent: #e8662f;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Manrope", sans-serif;
+        background:
+          radial-gradient(circle at 10% 10%, rgba(255, 222, 185, 0.65) 0, transparent 32%),
+          radial-gradient(circle at 90% 12%, rgba(180, 230, 205, 0.6) 0, transparent 30%),
+          linear-gradient(165deg, #f3efe8 0%, #ebe4d8 100%);
+        background-attachment: fixed;
+        color: var(--ink);
+        position: relative;
+        isolation: isolate;
+        line-height: 1.6;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../media/map_flag_border.png") center center / cover no-repeat;
+        opacity: 0.12;
+        filter: blur(1px) saturate(70%);
+        pointer-events: none;
+        z-index: -1;
+      }
+      .shell {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 36px 24px 60px;
+      }
+      .hero {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 16px 40px rgba(26, 36, 50, 0.08);
+        margin-bottom: 28px;
+        text-align: center;
+      }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #ffffff;
+        border: 1px solid rgba(232, 102, 47, 0.2);
+        color: var(--accent);
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        margin: 0 0 12px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        color: var(--brand-strong);
+      }
+      .hero p {
+        margin: 0 auto;
+        max-width: 680px;
+        color: #4b5563;
+        font-size: 1.05rem;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 12px 30px rgba(26, 36, 50, 0.06);
+      }
+      .card h2 {
+        margin: 0 0 16px;
+        color: var(--brand);
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .card p { margin: 0 0 10px; color: #374151; }
+      .card p strong { color: var(--ink); }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(120deg, var(--brand), var(--brand-strong));
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 12px 24px;
+        border-radius: 999px;
+        margin-top: 16px;
+        box-shadow: 0 4px 14px rgba(26, 122, 94, 0.25);
+        transition: transform 0.2s ease;
+      }
+      .button:hover { transform: translateY(-2px); }
+      .site-footer {
+        margin-top: 48px;
+        text-align: center;
+        color: #64748b;
+        font-size: 0.92rem;
+        padding-top: 24px;
+        border-top: 1px solid rgba(214, 210, 200, 0.6);
+      }
+      .footer-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .footer-nav a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+      @media(max-width: 768px) {
+        .contact-grid { grid-template-columns: 1fr; }
+        .hero { padding: 28px 20px; }
+      }
+    </style>
   </head>
   <body>
-    <!-- STANDARDIZED HEADER -->
+    <!-- STANDARDIZED TREE NAVIGATION HEADER -->
     <header class="header">
-      <a href="/home" class="logo">TAIGA Center</a>
-      <nav class="nav">
-        <a href="/home" data-nav="home">Trang chủ</a>
-        <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
-        <a href="/home#courses" data-nav="courses">Khóa học</a>
-        <a href="/articles" data-nav="articles">Bài viết</a>
-        <a href="/home#about" data-nav="about">Về chúng tôi</a>
-        <a href="/contact" data-nav="contact">Liên hệ</a>
-        <a href="/app" class="nav-login" data-nav="app">Đăng nhập</a>
-      </nav>
-      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+      <div class="header-container">
+        <a href="/home" class="logo">
+          <span>TAIGA Center</span>
+        </a>
+
+        <nav class="nav">
+          <a href="/home" class="nav-item" data-nav="home">Trang chủ</a>
+
+          <!-- Tree Dropdown 1: Chương trình học -->
+          <div class="nav-dropdown" data-dropdown="courses">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Chương trình học</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/roadmap" class="dropdown-link" data-nav="roadmap">
+                <span class="dropdown-icon">🗺️</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Lộ trình học (A0 → B2)</strong>
+                  <span class="dropdown-desc">4 chặng chuẩn quốc tế & lộ trình mục tiêu</span>
+                </div>
+              </a>
+              <a href="/home#courses" class="dropdown-link" data-nav="courses">
+                <span class="dropdown-icon">🎓</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Các khóa học tiếng Nga</strong>
+                  <span class="dropdown-desc">Sơ cấp, Trung cấp, Du học & Luyện thi TRKI</span>
+                </div>
+              </a>
+              <a href="/articles" class="dropdown-link" data-nav="articles">
+                <span class="dropdown-icon">📚</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Bài viết & Cẩm nang</strong>
+                  <span class="dropdown-desc">Bảng chữ cái, 6 cách, câu giao tiếp & mẹo học</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tree Dropdown 2: Về trung tâm -->
+          <div class="nav-dropdown" data-dropdown="about">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Về trung tâm</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/home#about" class="dropdown-link" data-nav="about">
+                <span class="dropdown-icon">🏫</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Giới thiệu TAIGA Center</strong>
+                  <span class="dropdown-desc">Đội ngũ giảng viên & phương pháp 1-1</span>
+                </div>
+              </a>
+              <a href="/contact" class="dropdown-link" data-nav="contact">
+                <span class="dropdown-icon">📞</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Liên hệ & Tư vấn</strong>
+                  <span class="dropdown-desc">Đăng ký xếp lớp & nhận tư vấn chi tiết</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="/app" class="nav-item nav-login" data-nav="app">Đăng nhập</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="language-btn" title="Chuyển ngôn ngữ" type="button">Ru-Vi</button>
+          <button class="mobile-toggle" aria-label="Mở menu" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <div class="shell">
-      <div class="topbar">
-        <div>
-          <h1 class="brand">Liên hệ tư vấn</h1>
-          <p>Gửi yêu cầu để nhận thông tin khóa học, lộ trình và báo giá chi tiết.</p>
-        </div>
-        <nav class="nav-links">
-          <a href="/home">Trang chủ</a>
-          <!-- <a href="/">Calendar</a> -->
-          <a href="/learn">Học tiếng Nga</a>
-          <a href="/roadmap">Lộ trình học</a>
-          <a href="/articles">Bài viết</a>
-          <a href="/app">Đăng nhập</a>
-        </nav>
-      </div>
-
       <section class="hero">
-        <h1>Nhận tư vấn khóa học</h1>
-        <p>Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ để hỗ trợ bạn chọn khóa học phù hợp nhất.</p>
+        <div class="hero-tag">
+          <span>📞</span>
+          <span>KẾT NỐI VỚI CHÚNG TÔI</span>
+        </div>
+        <h1>Liên Hệ & Tư Vấn Lộ Trình</h1>
+        <p>Đội ngũ chuyên môn TAIGA Center luôn sẵn sàng lắng nghe mục tiêu của bạn để tư vấn giáo án và lịch học 1-1 phù hợp nhất.</p>
       </section>
 
-      <div class="card">
-        <h2>Thông tin mẫu</h2>
-        <p>Họ tên: Nguyễn Văn A</p>
-        <p>Điện thoại: 0988 123 456</p>
-        <p>Email: email@example.com</p>
-        <p>Quan tâm khóa: Tiếng Nga giao tiếp / Tiếng Nga chuyên ngành / Luyện thi</p>
+      <div class="contact-grid">
+        <div class="card">
+          <h2>🏢 Thông tin trung tâm</h2>
+          <p><strong>Trung tâm:</strong> TAIGA Center — Đào tạo tiếng Nga chuyên nghiệp</p>
+          <p><strong>Hotline / Zalo:</strong> 0988 123 456</p>
+          <p><strong>Email hỗ trợ:</strong> contact@taigacenter.edu.vn</p>
+          <p><strong>Thời gian làm việc:</strong> 08:00 – 21:30 (Thứ 2 – Chủ nhật)</p>
+          <p><strong>Hình thức học:</strong> Trực tuyến 1-1 qua Google Meet hoặc Trực tiếp tại trung tâm</p>
+        </div>
+
+        <div class="card">
+          <h2>📝 Đăng ký tư vấn khóa học</h2>
+          <p>Để nhận lộ trình học chi tiết và xếp lịch kiểm tra phản xạ miễn phí cùng giảng viên bản ngữ:</p>
+          <p>• Xác định trình độ hiện tại (Mới bắt đầu A0 hay đã học qua)</p>
+          <p>• Mục tiêu cụ thể: Du học, Thương mại, TRKI hay Giao tiếp</p>
+          <a class="button" href="/roadmap#consultation">Đăng ký tư vấn 1-1 miễn phí ➔</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h2>Gợi ý nội dung liên hệ</h2>
-        <p>Hãy gửi yêu cầu gồm trình độ hiện tại, mục tiêu học và khung thời gian bạn muốn học. Chúng tôi sẽ tư vấn lộ trình cụ thể.</p>
-        <a class="button" href="/home">Quay lại trang chủ</a>
-      </div>
-
-      <footer>TAIGA Center • Mẫu trang liên hệ.</footer>
+      <footer class="site-footer">
+        <div class="footer-nav">
+          <a href="/home">Trang chủ</a>
+          <span>•</span>
+          <a href="/roadmap">Lộ trình học</a>
+          <span>•</span>
+          <a href="/articles">Bài viết</a>
+          <span>•</span>
+          <a href="/contact">Liên hệ</a>
+          <span>•</span>
+          <a href="/app">Cổng tra cứu học viên</a>
+        </div>
+        <p>&copy; 2026 TAIGA Center — Trung tâm đào tạo tiếng Nga chuyên nghiệp. Mọi quyền được bảo lưu.</p>
+      </footer>
     </div>
     <script src="/site-nav.js"></script>
   </body>

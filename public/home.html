@@ -15,27 +15,81 @@
     <link rel="stylesheet" href="/site-nav.css" />
   </head>
   <body>
+    <!-- STANDARDIZED TREE NAVIGATION HEADER -->
     <header class="header">
-      <div class="logo">TAIGA Center</div>
-      <a href="/home" class="logo">TAIGA Center</a>
-      <nav class="nav">
-        <a href="#home">Trang chủ</a>
-        <a href="/learn">Học tiếng Nga</a>
-        <a href="/roadmap">Lộ trình học</a>
-        <a href="/articles">Bài viết</a>
-        <a href="#about">Về chúng tôi</a>
-        <a href="#courses">Khóa học</a>
-        <a href="#contact">Liên hệ</a>
-        <a href="/app">Đăng nhập</a>
-        <a href="/home" data-nav="home">Trang chủ</a>
-        <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
-        <a href="/home#courses" data-nav="courses">Khóa học</a>
-        <a href="/articles" data-nav="articles">Bài viết</a>
-        <a href="/home#about" data-nav="about">Về chúng tôi</a>
-        <a href="/contact" data-nav="contact">Liên hệ</a>
-        <a href="/app" class="nav-login" data-nav="app">Đăng nhập</a>
-      </nav>
-      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+      <div class="header-container">
+        <a href="/home" class="logo">
+          <span>TAIGA Center</span>
+        </a>
+
+        <nav class="nav">
+          <a href="/home" class="nav-item" data-nav="home">Trang chủ</a>
+
+          <!-- Tree Dropdown 1: Chương trình học -->
+          <div class="nav-dropdown" data-dropdown="courses">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Chương trình học</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/roadmap" class="dropdown-link" data-nav="roadmap">
+                <span class="dropdown-icon">🗺️</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Lộ trình học (A0 → B2)</strong>
+                  <span class="dropdown-desc">4 chặng chuẩn quốc tế & lộ trình mục tiêu</span>
+                </div>
+              </a>
+              <a href="/home#courses" class="dropdown-link" data-nav="courses">
+                <span class="dropdown-icon">🎓</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Các khóa học tiếng Nga</strong>
+                  <span class="dropdown-desc">Sơ cấp, Trung cấp, Du học & Luyện thi TRKI</span>
+                </div>
+              </a>
+              <a href="/articles" class="dropdown-link" data-nav="articles">
+                <span class="dropdown-icon">📚</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Bài viết & Cẩm nang</strong>
+                  <span class="dropdown-desc">Bảng chữ cái, 6 cách, câu giao tiếp & mẹo học</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tree Dropdown 2: Về trung tâm -->
+          <div class="nav-dropdown" data-dropdown="about">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              <span>Về trung tâm</span>
+              <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/home#about" class="dropdown-link" data-nav="about">
+                <span class="dropdown-icon">🏫</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Giới thiệu TAIGA Center</strong>
+                  <span class="dropdown-desc">Đội ngũ giảng viên & phương pháp 1-1</span>
+                </div>
+              </a>
+              <a href="/contact" class="dropdown-link" data-nav="contact">
+                <span class="dropdown-icon">📞</span>
+                <div class="dropdown-text">
+                  <strong class="dropdown-title">Liên hệ & Tư vấn</strong>
+                  <span class="dropdown-desc">Đăng ký xếp lớp & nhận tư vấn chi tiết</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="/app" class="nav-item nav-login" data-nav="app">Đăng nhập</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="language-btn" title="Chuyển ngôn ngữ" type="button">Ru-Vi</button>
+          <button class="mobile-toggle" aria-label="Mở menu" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <section class="container hero" id="home">
@@ -259,36 +313,6 @@
         });
       });
 
-      // Header show/hide on scroll
-      const mainHeader = document.querySelector('.header');
-      let isScrollingTimer;
-      let isHoveringHeader = false;
-
-      mainHeader.addEventListener('mouseenter', () => {
-        isHoveringHeader = true;
-        mainHeader.classList.remove('hidden');
-        window.clearTimeout(isScrollingTimer);
-      });
-
-      mainHeader.addEventListener('mouseleave', () => {
-        isHoveringHeader = false;
-        if (window.scrollY > 100) {
-          isScrollingTimer = setTimeout(() => {
-            mainHeader.classList.add('hidden');
-          }, 1500);
-        }
-      });
-
-      window.addEventListener('scroll', () => {
-        window.clearTimeout(isScrollingTimer);
-        mainHeader.classList.remove('hidden');
-
-        if (!isHoveringHeader && window.scrollY > 100) {
-          isScrollingTimer = setTimeout(() => {
-            mainHeader.classList.add('hidden');
-          }, 1500);
-        }
-      });
     </script>
     <script src="/site-nav.js"></script>
   </body>

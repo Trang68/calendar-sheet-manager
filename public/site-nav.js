@@ -1,5 +1,5 @@
 // ==========================================================================
-// TAIGA Center - Unified Navigation & Routing Script (site-nav.js)
+// TAIGA Center - Modern Tree Navigation Script (site-nav.js)
 // ==========================================================================
 
 (function () {
@@ -7,44 +7,108 @@
     const currentPath = window.location.pathname.replace(/\/$/, '') || '/home';
     const isHomePage = currentPath === '' || currentPath === '/home' || currentPath === '/index.html';
     
-    // 1. Highlight Active Item
-    const navLinks = document.querySelectorAll('.header .nav a');
-    navLinks.forEach((link) => {
-      link.classList.remove('active');
-      const navTarget = link.getAttribute('data-nav');
-      
-      if (isHomePage && navTarget === 'home') {
-        link.classList.add('active');
-      } else if (currentPath.includes('roadmap') && navTarget === 'roadmap') {
-        link.classList.add('active');
-      } else if (currentPath.includes('learn') && navTarget === 'roadmap') {
-        link.classList.add('active');
-      } else if (currentPath.includes('articles') && navTarget === 'articles') {
-        link.classList.add('active');
-      } else if (currentPath.includes('contact') && navTarget === 'contact') {
-        link.classList.add('active');
-      } else if (currentPath.includes('app') && navTarget === 'app') {
-        link.classList.add('active');
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const nav = header.querySelector('.nav');
+    const mobileToggle = header.querySelector('.mobile-toggle');
+    const dropdowns = header.querySelectorAll('.nav-dropdown');
+    const navLinks = header.querySelectorAll('.nav a, .dropdown-link');
+
+    // 1. Mobile Hamburger Toggle
+    if (mobileToggle && nav) {
+      mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nav.classList.toggle('nav-open');
+        const isOpen = nav.classList.contains('nav-open');
+        mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    // 2. Dropdown Tree Toggle (Click & Touch support)
+    dropdowns.forEach((dropdown) => {
+      const toggleBtn = dropdown.querySelector('.dropdown-toggle');
+      if (!toggleBtn) return;
+
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other open dropdowns
+        dropdowns.forEach((other) => {
+          if (other !== dropdown) other.classList.remove('open');
+        });
+
+        dropdown.classList.toggle('open');
+        const isOpen = dropdown.classList.contains('open');
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    // Close dropdowns and mobile nav on click outside
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target)) {
+        dropdowns.forEach((d) => d.classList.remove('open'));
+        if (nav) nav.classList.remove('nav-open');
       }
     });
 
-    // 2. Click Handling for Seamless Transitions
+    // 3. Highlight Active Item & Dropdown Parent
+    function updateActive() {
+      // Clear current actives
+      header.querySelectorAll('.nav-item, .dropdown-link, .nav-dropdown').forEach((el) => {
+        el.classList.remove('active');
+      });
+
+      if (isHomePage) {
+        const homeLink = header.querySelector('[data-nav="home"]');
+        if (homeLink) homeLink.classList.add('active');
+      } else if (currentPath.includes('roadmap') || currentPath.includes('learn')) {
+        highlightTree('roadmap');
+      } else if (currentPath.includes('articles')) {
+        highlightTree('articles');
+      } else if (currentPath.includes('contact')) {
+        highlightTree('contact');
+      } else if (currentPath.includes('app')) {
+        const appLink = header.querySelector('[data-nav="app"]');
+        if (appLink) appLink.classList.add('active');
+      }
+    }
+
+    function highlightTree(navKey) {
+      const targetLink = header.querySelector(`[data-nav="${navKey}"]`);
+      if (targetLink) {
+        targetLink.classList.add('active');
+        const parentDropdown = targetLink.closest('.nav-dropdown');
+        if (parentDropdown) {
+          parentDropdown.classList.add('active');
+        }
+      }
+    }
+
+    updateActive();
+
+    // 4. Smooth Anchor Scrolling & Cross-page Navigation
     navLinks.forEach((link) => {
       link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         const navTarget = this.getAttribute('data-nav');
 
-        // Case A: Clicking "Trang chu" while already on /home
+        // Close mobile nav when link clicked
+        if (nav) nav.classList.remove('nav-open');
+        dropdowns.forEach((d) => d.classList.remove('open'));
+
+        // Case A: Clicking "Trang chu" while on /home
         if (isHomePage && (navTarget === 'home' || href === '/home' || href === '#home')) {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
           history.pushState(null, '', '/home');
-          setActive(this);
+          updateActive();
           return;
         }
 
-        // Case B: Clicking an in-page section link (Courses, About, etc.) while on /home
-        if (isHomePage && href.includes('#')) {
+        // Case B: Clicking an in-page section link (#courses, #about) while on /home
+        if (isHomePage && href && href.includes('#')) {
           const hashIndex = href.indexOf('#');
           const targetId = href.substring(hashIndex);
           const targetElem = document.querySelector(targetId);
@@ -52,12 +116,11 @@
             e.preventDefault();
             targetElem.scrollIntoView({ behavior: 'smooth' });
             history.pushState(null, '', targetId);
-            setActive(this);
             return;
           }
         }
 
-        // Case C: Clicking the current subpage again -> scroll to top
+        // Case C: Re-clicking current subpage -> scroll to top
         if (
           (currentPath.includes('roadmap') && navTarget === 'roadmap') ||
           (currentPath.includes('articles') && navTarget === 'articles') ||
@@ -67,46 +130,38 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
           return;
         }
-
-        // Other cases: normal navigation to other pages (e.g. /home#courses from /roadmap)
       });
     });
 
-    function setActive(activeLink) {
-      navLinks.forEach((l) => l.classList.remove('active'));
-      activeLink.classList.add('active');
-    }
-
-    // 3. Scroll spy on /home to update active state for #courses and #about
+    // 5. Scroll spy on /home for section links
     if (isHomePage) {
-      const observerSections = [
-        { id: 'home', nav: 'home' },
-        { id: 'about', nav: 'about' },
-        { id: 'courses', nav: 'courses' }
+      const sections = [
+        { id: 'courses', nav: 'courses' },
+        { id: 'about', nav: 'about' }
       ];
 
       window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY + 120;
-        let currentSectionNav = 'home';
+        const scrollPos = window.scrollY + 140;
+        let matched = false;
 
-        observerSections.forEach((sec) => {
+        sections.forEach((sec) => {
           const el = document.getElementById(sec.id);
-          if (el && el.offsetTop <= scrollPosition) {
-            currentSectionNav = sec.nav;
+          if (el && el.offsetTop <= scrollPos && (el.offsetTop + el.offsetHeight) > scrollPos) {
+            matched = true;
+            header.querySelectorAll('.dropdown-link, .nav-item').forEach((l) => l.classList.remove('active'));
+            highlightTree(sec.nav);
           }
         });
 
-        navLinks.forEach((link) => {
-          if (link.getAttribute('data-nav') === currentSectionNav) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
+        if (!matched && window.scrollY < 300) {
+          header.querySelectorAll('.dropdown-link, .nav-dropdown').forEach((l) => l.classList.remove('active'));
+          const homeLink = header.querySelector('[data-nav="home"]');
+          if (homeLink) homeLink.classList.add('active');
+        }
       }, { passive: true });
     }
 
-    // 4. Smooth scroll on landing with hash (e.g. redirected from /roadmap to /home#courses)
+    // 6. Smooth landing when navigating with hash from another page
     if (window.location.hash) {
       setTimeout(() => {
         const target = document.querySelector(window.location.hash);
@@ -116,8 +171,8 @@
       }, 150);
     }
 
-    // 5. Language Switcher (Ru-Vi) Button
-    const langBtn = document.querySelector('.header .language-btn');
+    // 7. Ru-Vi Language Switcher Toast
+    const langBtn = header.querySelector('.language-btn');
     if (langBtn) {
       langBtn.addEventListener('click', () => {
         showToast('🇷🇺 Tiếng Nga & Tiếng Việt: Nội dung song ngữ đang được tối ưu hóa!');
@@ -125,7 +180,6 @@
     }
   }
 
-  // Toast Helper
   function showToast(message) {
     let toast = document.querySelector('.site-toast');
     if (!toast) {
