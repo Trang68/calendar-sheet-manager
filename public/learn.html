@@ -15,24 +15,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/roadmap.css" />
+    <link rel="stylesheet" href="/site-nav.css" />
   </head>
   <body>
+    <!-- STANDARDIZED HEADER -->
+    <header class="header">
+      <a href="/home" class="logo">TAIGA Center</a>
+      <nav class="nav">
+        <a href="/home" data-nav="home">Trang chủ</a>
+        <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
+        <a href="/home#courses" data-nav="courses">Khóa học</a>
+        <a href="/articles" data-nav="articles">Bài viết</a>
+        <a href="/home#about" data-nav="about">Về chúng tôi</a>
+        <a href="/contact" data-nav="contact">Liên hệ</a>
+        <a href="/app" class="nav-login" data-nav="app">Đăng nhập</a>
+      </nav>
+      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+    </header>
+
     <div class="shell">
-      <!-- HEADER / TOPBAR -->
-      <header class="topbar">
-        <a href="/home" class="brand-logo">
-          <span class="brand-flag">🇷🇺</span>
-          <span class="brand-name">TAIGA Center</span>
-          <span class="brand-badge">Lộ Trình Đào Tạo</span>
-        </a>
-        <nav class="nav-links">
-          <a href="/home" class="nav-item">Trang chủ</a>
-          <a href="/roadmap" class="nav-item active">Lộ trình học</a>
-          <a href="/articles" class="nav-item">Bài viết</a>
-          <a href="/contact" class="nav-item">Liên hệ</a>
-          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
-        </nav>
-      </header>
 
       <!-- HERO SECTION -->
       <section class="hero-roadmap">
@@ -367,5 +368,6 @@
         <p>&copy; 2026 TAIGA Center — Trung tâm đào tạo tiếng Nga chuyên nghiệp. Mọi quyền được bảo lưu.</p>
       </footer>
     </div>
+    <script src="/site-nav.js"></script>
   </body>
 </html>

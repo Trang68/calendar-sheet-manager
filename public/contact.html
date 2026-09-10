@@ -15,7 +15,7 @@
       * { box-sizing: border-box; }
       html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); position: relative; isolation: isolate; }
       body::before { content: ""; position: fixed; inset: 0; background: url("../media/flag_fly.png") center center / cover no-repeat; opacity: 0.6; filter: blur(0px) saturate(82%); transform: scale(1.05); pointer-events: none; z-index: -1; }
-      .shell { max-width: 1000px; margin: 0 auto; padding: 24px; }
+      .shell { max-width: 1000px; margin: 0 auto; padding: 36px 24px 60px; }
       .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
       .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
       .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -31,24 +31,25 @@
       footer { margin-top: 32px; text-align: center; color: #606b73; font-size: 0.95rem; }
       @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
     </style>
+    <link rel="stylesheet" href="/site-nav.css" />
   </head>
   <body>
-    <div class="shell">
-      <div class="topbar">
-        <div>
-          <h1 class="brand">Liên hệ tư vấn</h1>
-          <p>Gửi yêu cầu để nhận thông tin khóa học, lộ trình và báo giá chi tiết.</p>
-        </div>
-        <nav class="nav-links">
-          <a href="/home">Trang chủ</a>
-          <!-- <a href="/">Calendar</a> -->
-          <a href="/learn">Học tiếng Nga</a>
-          <a href="/roadmap">Lộ trình học</a>
-          <a href="/articles">Bài viết</a>
-          <a href="/app">Đăng nhập</a>
-        </nav>
-      </div>
+    <!-- STANDARDIZED HEADER -->
+    <header class="header">
+      <a href="/home" class="logo">TAIGA Center</a>
+      <nav class="nav">
+        <a href="/home" data-nav="home">Trang chủ</a>
+        <a href="/roadmap" data-nav="roadmap">Lộ trình học</a>
+        <a href="/home#courses" data-nav="courses">Khóa học</a>
+        <a href="/articles" data-nav="articles">Bài viết</a>
+        <a href="/home#about" data-nav="about">Về chúng tôi</a>
+        <a href="/contact" data-nav="contact">Liên hệ</a>
+        <a href="/app" class="nav-login" data-nav="app">Đăng nhập</a>
+      </nav>
+      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+    </header>
 
+    <div class="shell">
       <section class="hero">
         <h1>Nhận tư vấn khóa học</h1>
         <p>Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ để hỗ trợ bạn chọn khóa học phù hợp nhất.</p>
@@ -70,5 +71,6 @@
 
       <footer>TAIGA Center • Mẫu trang liên hệ.</footer>
     </div>
+    <script src="/site-nav.js"></script>
   </body>
 </html>
