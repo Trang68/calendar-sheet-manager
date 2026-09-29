@@ -418,6 +418,7 @@ body::before {
   padding: 24px 30px;
   border-bottom: 1px solid var(--line);
   background: #ffffff;
+  flex-shrink: 0;
 }
 
 .modal-close-btn {
@@ -443,9 +444,30 @@ body::before {
 .modal-body {
   padding: 30px;
   overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
   line-height: 1.75;
   font-size: 1.05rem;
   color: var(--ink-secondary);
+  overscroll-behavior: contain;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
 }
 
 .modal-body h2 {
