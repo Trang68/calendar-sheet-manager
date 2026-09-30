@@ -7,6 +7,7 @@ const fs = require("fs");
 const { ExportService } = require("./exportService");
 
 const app = express();
+app.set("trust proxy", 1);
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "../public")));
@@ -784,8 +785,114 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true, service: "calendar-sheet-manager", now: new Date().toISOString() });
 });
 
+// ==========================================
+// BẢO MẬT & RATE LIMITING ĐĂNG NHẬP
+// ==========================================
+const LOGIN_RATE_LIMIT = {
+  MAX_FAILED_ATTEMPTS: 5,           // Tối đa 5 lần thử sai liên tiếp
+  LOCKOUT_MS: 15 * 60 * 1000,       // Khóa tạm thời 15 phút
+  WINDOW_MS: 15 * 60 * 1000,        // Cửa sổ theo dõi 15 phút
+  CLEANUP_MS: 10 * 60 * 1000,       // Dọn dẹp bộ nhớ mỗi 10 phút
+};
+
+const loginAttempts = new Map();
+
+function getClientIp(req) {
+  const forwarded = req.headers["x-forwarded-for"];
+  if (forwarded && typeof forwarded === "string") {
+    return forwarded.split(",")[0].trim();
+  }
+  return req.ip || req.socket?.remoteAddress || "unknown";
+}
+
+function checkLoginBlocked(ip) {
+  const record = loginAttempts.get(ip);
+  if (!record) return null;
+  const now = Date.now();
+  if (record.blockedUntil && record.blockedUntil > now) {
+    return Math.ceil((record.blockedUntil - now) / 1000);
+  }
+  return null;
+}
+
+function recordLoginFailure(ip) {
+  const now = Date.now();
+  let record = loginAttempts.get(ip);
+  if (!record || (now - record.firstFailedAt > LOGIN_RATE_LIMIT.WINDOW_MS && (!record.blockedUntil || record.blockedUntil <= now))) {
+    record = { count: 0, firstFailedAt: now, blockedUntil: 0 };
+  }
+  record.count += 1;
+  if (record.count >= LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS) {
+    record.blockedUntil = now + LOGIN_RATE_LIMIT.LOCKOUT_MS;
+    loginAttempts.set(ip, record);
+    return {
+      blocked: true,
+      retryAfterSec: Math.ceil(LOGIN_RATE_LIMIT.LOCKOUT_MS / 1000),
+    };
+  }
+  loginAttempts.set(ip, record);
+  return {
+    blocked: false,
+    remainingAttempts: LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS - record.count,
+  };
+}
+
+function clearLoginAttempts(ip) {
+  loginAttempts.delete(ip);
+}
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, record] of loginAttempts.entries()) {
+    const isLockoutExpired = !record.blockedUntil || record.blockedUntil <= now;
+    const isWindowExpired = (now - record.firstFailedAt) > LOGIN_RATE_LIMIT.WINDOW_MS;
+    if (isLockoutExpired && isWindowExpired) {
+      loginAttempts.delete(ip);
+    }
+  }
+}, LOGIN_RATE_LIMIT.CLEANUP_MS).unref();
+
+function generateSecurePassword(length = 10) {
+  const lower = "abcdefghjkmnpqrstuvwxyz";
+  const upper = "ABCDEFGHJKMNPQRSTUVWXYZ";
+  const digits = "23456789";
+  const allChars = lower + upper + digits;
+
+  const chars = [
+    lower[crypto.randomInt(0, lower.length)],
+    upper[crypto.randomInt(0, upper.length)],
+    digits[crypto.randomInt(0, digits.length)],
+  ];
+
+  for (let i = chars.length; i < length; i++) {
+    chars.push(allChars[crypto.randomInt(0, allChars.length)]);
+  }
+
+  for (let i = chars.length - 1; i > 0; i--) {
+    const j = crypto.randomInt(0, i + 1);
+    const temp = chars[i];
+    chars[i] = chars[j];
+    chars[j] = temp;
+  }
+
+  return chars.join("");
+}
+
 app.post("/api/auth/login", async (req, res) => {
   try {
+    const clientIp = getClientIp(req);
+    const blockedSec = checkLoginBlocked(clientIp);
+
+    if (blockedSec) {
+      const remainingMin = Math.ceil(blockedSec / 60);
+      res.set("Retry-After", String(blockedSec));
+      return res.status(429).json({
+        ok: false,
+        error: `Bạn đã đăng nhập sai quá nhiều lần. IP của bạn tạm thời bị khóa. Vui lòng thử lại sau ${remainingMin} phút.`,
+        retryAfter: blockedSec,
+      });
+    }
+
     const rawUsername = normalizeText(req.body?.username);
     const password = String(req.body?.password || "");
     let user = userMap.get(rawUsername);
@@ -795,8 +902,24 @@ app.post("/api/auth/login", async (req, res) => {
     }
 
     if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
-      return res.status(401).json({ ok: false, error: "Sai tài khoản hoặc mật khẩu" });
+      const failure = recordLoginFailure(clientIp);
+      if (failure.blocked) {
+        const remainingMin = Math.ceil(failure.retryAfterSec / 60);
+        res.set("Retry-After", String(failure.retryAfterSec));
+        return res.status(429).json({
+          ok: false,
+          error: `Bạn đã nhập sai mật khẩu ${LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS} lần liên tiếp. IP tạm thời bị khóa trong ${remainingMin} phút.`,
+          retryAfter: failure.retryAfterSec,
+        });
+      }
+
+      return res.status(401).json({
+        ok: false,
+        error: `Sai tài khoản hoặc mật khẩu. Còn ${failure.remainingAttempts} lần thử trước khi bị tạm khóa.`,
+      });
     }
+
+    clearLoginAttempts(clientIp);
 
     const token = createSessionToken(user);
     const isProd = process.env.NODE_ENV === "production";
@@ -1193,7 +1316,7 @@ app.post("/api/student-accounts/upsert", requireLogin, requireRole("teacher"), a
   try {
     const studentKey = normalizeStudentKey(req.body?.studentKey);
     const username = normalizeText(req.body?.username).toLowerCase().replace(/\s+/g, "");
-    const password = String(req.body?.password || "").trim();
+    let password = String(req.body?.password || "").trim();
     const displayName = normalizeText(req.body?.displayName);
 
     if (!studentKey) {
@@ -1203,7 +1326,7 @@ app.post("/api/student-accounts/upsert", requireLogin, requireRole("teacher"), a
       throw new Error("Tên đăng nhập không được để trống");
     }
     if (!password) {
-      throw new Error("Mật khẩu không được để trống");
+      password = generateSecurePassword(10);
     }
 
     if (userMap.has(username)) {
