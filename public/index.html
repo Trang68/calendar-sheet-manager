@@ -674,16 +674,25 @@
             }
           },
           eventClick(info) {
-            let html = `<b>${info.event.title}</b><br/>`;
+            function escapeHtml(str) {
+              return String(str || "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+            }
+            let html = `<b>${escapeHtml(info.event.title)}</b><br/>`;
             if (info.event.extendedProps.meetLink) {
-              html += `<a href='${info.event.extendedProps.meetLink}' target='_blank'>Google Meet</a><br/>`;
+              const safeMeetLink = encodeURI(info.event.extendedProps.meetLink);
+              html += `<a href='${safeMeetLink}' target='_blank' rel='noopener noreferrer'>Google Meet</a><br/>`;
             }
             if (info.event.extendedProps.description) {
-              html += `<div>${info.event.extendedProps.description}</div>`;
+              html += `<div>${escapeHtml(info.event.extendedProps.description)}</div>`;
             }
             html += `<div class="event-popup-buttons">
-              <button class="edit" data-event-id="${info.event.id}">Edit</button>
-              <button class="delete" data-event-id="${info.event.id}">Delete</button>
+              <button class="edit" data-event-id="${escapeHtml(info.event.id)}">Edit</button>
+              <button class="delete" data-event-id="${escapeHtml(info.event.id)}">Delete</button>
             </div>`;
             const popup = document.createElement("div");
             popup.innerHTML = html;

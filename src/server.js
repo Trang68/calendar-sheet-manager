@@ -723,21 +723,47 @@ function requireRole(...roles) {
   };
 }
 
-// Thay thế requireToken để hỗ trợ cả header và query string
-function requireToken(req, res, next) {
-  if (!config.appToken) return next();
-  const authHeader = req.headers.authorization || "";
-  let bearer = "";
-  if (authHeader.startsWith("Bearer ")) {
-    bearer = authHeader.slice(7);
-  } else if (req.query && req.query.token) {
-    bearer = req.query.token;
+// Bảo vệ các endpoint API nhạy cảm (Google Calendar, cấu hình): Chỉ cho phép Giáo viên đăng nhập HOẶC Bearer appToken hợp lệ
+function requireTeacherOrToken(req, res, next) {
+  // Trích xuất thông tin người dùng từ cookie phiên nếu chưa có
+  if (!req.user) {
+    const cookies = parseCookies(req);
+    const token = cookies[SESSION_COOKIE_NAME];
+    const session = verifySessionToken(token);
+    if (session) {
+      req.user = session;
+    }
   }
-  if (bearer !== config.appToken) {
-    return res.status(401).json({ ok: false, error: "Unauthorized" });
+
+  // 1. Nếu có session đăng nhập hợp lệ với role teacher -> cho qua
+  if (req.user && req.user.role === "teacher") {
+    return next();
   }
-  return next();
+
+  // 2. Nếu có token Bearer hoặc query và khớp với config.appToken (chỉ áp dụng khi APP_TOKEN được cấu hình)
+  if (config.appToken) {
+    const authHeader = req.headers.authorization || "";
+    let bearer = "";
+    if (authHeader.startsWith("Bearer ")) {
+      bearer = authHeader.slice(7).trim();
+    } else if (req.query && req.query.token) {
+      bearer = String(req.query.token).trim();
+    }
+    if (bearer && bearer === config.appToken) {
+      return next();
+    }
+  }
+
+  // 3. Nếu là học sinh đăng nhập cố tình gọi -> Chặn 403 Forbidden
+  if (req.user && req.user.role === "student") {
+    return res.status(403).json({ ok: false, error: "Forbidden: Chỉ giáo viên mới có quyền thực hiện thao tác này" });
+  }
+
+  // 4. Mặc định: Chặn toàn bộ người ngoài không xác thực -> 401 Unauthorized
+  return res.status(401).json({ ok: false, error: "Unauthorized: Yêu cầu đăng nhập tài khoản giáo viên" });
 }
+
+const requireToken = requireTeacherOrToken;
 
 function buildCalendarEmbedUrl() {
   const ctz = encodeURIComponent(config.googleTimeZone);

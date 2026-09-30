@@ -170,6 +170,15 @@
       let showRateColumn = localStorage.getItem("taiga_show_rate") === "true";
       let latestPayload = null;
 
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
       function updateToggleRateBtn() {
         if (toggleRateBtn) {
           toggleRateBtn.textContent = showRateColumn ? "👁️ Ẩn đơn giá" : "👁️ Hiện đơn giá";
@@ -321,7 +330,7 @@
           const tr = document.createElement("tr");
 
           const baseTdName = document.createElement("td");
-          baseTdName.innerHTML = `<div style="font-weight:700; color:#1e293b; font-size:0.95rem;">${student.studentName}</div>`;
+          baseTdName.innerHTML = `<div style="font-weight:700; color:#1e293b; font-size:0.95rem;">${escapeHtml(student.studentName)}</div>`;
           tr.appendChild(baseTdName);
 
           const baseTdSessions = document.createElement("td");
@@ -357,7 +366,7 @@
                   <span>${isWeekPaid ? "✓" : "○"}</span>
                   <span>${weekHours}h</span>
                 </div>
-                <div class="chip-days">${dayLabels}</div>
+                <div class="chip-days">${escapeHtml(dayLabels)}</div>
               `;
               const wrap = document.createElement("div");
               wrap.className = "week-cell";
@@ -660,15 +669,6 @@
 
       // ================= Quản lý tài khoản học sinh =================
       let studentAccountsCache = {};
-
-      function escapeHtml(str) {
-        return String(str || "")
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      }
 
       function getCombinedStudentList() {
         const map = new Map();
