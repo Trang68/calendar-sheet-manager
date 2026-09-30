@@ -7,7 +7,7 @@ const fs = require("fs");
 const { ExportService } = require("./exportService");
 
 const app = express();
-app.set("trust proxy", 1);
+app.set("trust proxy", true);
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "../public")));
@@ -815,7 +815,8 @@ app.get("/api/health", (_req, res) => {
 // BẢO MẬT & RATE LIMITING ĐĂNG NHẬP
 // ==========================================
 const LOGIN_RATE_LIMIT = {
-  MAX_FAILED_ATTEMPTS: 5,           // Tối đa 5 lần thử sai liên tiếp
+  MAX_FAILED_ATTEMPTS: 5,           // Tối đa 5 lần thử sai liên tiếp cho mỗi cặp (IP + Username)
+  MAX_IP_FAILED_ATTEMPTS: 25,       // Tối đa 25 lần thử sai từ 1 IP để chặn quét từ điển diện rộng
   LOCKOUT_MS: 15 * 60 * 1000,       // Khóa tạm thời 15 phút
   WINDOW_MS: 15 * 60 * 1000,        // Cửa sổ theo dõi 15 phút
   CLEANUP_MS: 10 * 60 * 1000,       // Dọn dẹp bộ nhớ mỗi 10 phút
@@ -824,15 +825,33 @@ const LOGIN_RATE_LIMIT = {
 const loginAttempts = new Map();
 
 function getClientIp(req) {
+  // 1. Cloudflare connecting IP (chuẩn xác nhất khi chạy sau Cloudflare proxy)
+  const cfIp = req.headers["cf-connecting-ip"];
+  if (cfIp && typeof cfIp === "string") {
+    return cfIp.trim();
+  }
+
+  // 2. Header chuẩn từ reverse proxy Nginx/Render
+  const realIp = req.headers["x-real-ip"];
+  if (realIp && typeof realIp === "string") {
+    return realIp.trim();
+  }
+
+  // 3. X-Forwarded-For: Client IP thực sự luôn nằm ở đầu danh sách
   const forwarded = req.headers["x-forwarded-for"];
   if (forwarded && typeof forwarded === "string") {
-    return forwarded.split(",")[0].trim();
+    const firstIp = forwarded.split(",")[0].trim();
+    if (firstIp) return firstIp;
   }
-  return req.ip || req.socket?.remoteAddress || "unknown";
+
+  // 4. Express req.ip (đã bật trust proxy: true)
+  if (req.ip) return req.ip;
+
+  return req.socket?.remoteAddress || "unknown";
 }
 
-function checkLoginBlocked(ip) {
-  const record = loginAttempts.get(ip);
+function checkLoginBlocked(key) {
+  const record = loginAttempts.get(key);
   if (!record) return null;
   const now = Date.now();
   if (record.blockedUntil && record.blockedUntil > now) {
@@ -841,39 +860,39 @@ function checkLoginBlocked(ip) {
   return null;
 }
 
-function recordLoginFailure(ip) {
+function recordLoginFailure(key, maxAttempts = LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS) {
   const now = Date.now();
-  let record = loginAttempts.get(ip);
+  let record = loginAttempts.get(key);
   if (!record || (now - record.firstFailedAt > LOGIN_RATE_LIMIT.WINDOW_MS && (!record.blockedUntil || record.blockedUntil <= now))) {
     record = { count: 0, firstFailedAt: now, blockedUntil: 0 };
   }
   record.count += 1;
-  if (record.count >= LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS) {
+  if (record.count >= maxAttempts) {
     record.blockedUntil = now + LOGIN_RATE_LIMIT.LOCKOUT_MS;
-    loginAttempts.set(ip, record);
+    loginAttempts.set(key, record);
     return {
       blocked: true,
       retryAfterSec: Math.ceil(LOGIN_RATE_LIMIT.LOCKOUT_MS / 1000),
     };
   }
-  loginAttempts.set(ip, record);
+  loginAttempts.set(key, record);
   return {
     blocked: false,
-    remainingAttempts: LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS - record.count,
+    remainingAttempts: maxAttempts - record.count,
   };
 }
 
-function clearLoginAttempts(ip) {
-  loginAttempts.delete(ip);
+function clearLoginAttempts(key) {
+  loginAttempts.delete(key);
 }
 
 setInterval(() => {
   const now = Date.now();
-  for (const [ip, record] of loginAttempts.entries()) {
+  for (const [key, record] of loginAttempts.entries()) {
     const isLockoutExpired = !record.blockedUntil || record.blockedUntil <= now;
     const isWindowExpired = (now - record.firstFailedAt) > LOGIN_RATE_LIMIT.WINDOW_MS;
     if (isLockoutExpired && isWindowExpired) {
-      loginAttempts.delete(ip);
+      loginAttempts.delete(key);
     }
   }
 }, LOGIN_RATE_LIMIT.CLEANUP_MS).unref();
@@ -907,19 +926,33 @@ function generateSecurePassword(length = 10) {
 app.post("/api/auth/login", async (req, res) => {
   try {
     const clientIp = getClientIp(req);
-    const blockedSec = checkLoginBlocked(clientIp);
+    const rawUsername = normalizeText(req.body?.username).toLowerCase();
+    const rateLimitKey = `${clientIp}:${rawUsername || "unknown"}`;
 
-    if (blockedSec) {
-      const remainingMin = Math.ceil(blockedSec / 60);
-      res.set("Retry-After", String(blockedSec));
+    // 1. Kiểm tra khóa IP toàn cục (ngăn chặn brute-force quét nhiều user từ 1 IP)
+    const ipBlockedSec = checkLoginBlocked(`ip:${clientIp}`);
+    if (ipBlockedSec) {
+      const remainingMin = Math.ceil(ipBlockedSec / 60);
+      res.set("Retry-After", String(ipBlockedSec));
       return res.status(429).json({
         ok: false,
-        error: `Bạn đã đăng nhập sai quá nhiều lần. IP của bạn tạm thời bị khóa. Vui lòng thử lại sau ${remainingMin} phút.`,
-        retryAfter: blockedSec,
+        error: `Địa chỉ mạng (IP) của bạn đã gửi quá nhiều yêu cầu đăng nhập sai. Vui lòng thử lại sau ${remainingMin} phút.`,
+        retryAfter: ipBlockedSec,
       });
     }
 
-    const rawUsername = normalizeText(req.body?.username);
+    // 2. Kiểm tra khóa riêng theo tài khoản trên IP này
+    const userBlockedSec = checkLoginBlocked(rateLimitKey);
+    if (userBlockedSec) {
+      const remainingMin = Math.ceil(userBlockedSec / 60);
+      res.set("Retry-After", String(userBlockedSec));
+      return res.status(429).json({
+        ok: false,
+        error: `Tài khoản '${rawUsername}' đã bị tạm khóa do nhập sai mật khẩu nhiều lần trên thiết bị/mạng này. Vui lòng thử lại sau ${remainingMin} phút.`,
+        retryAfter: userBlockedSec,
+      });
+    }
+
     const password = String(req.body?.password || "");
     let user = userMap.get(rawUsername);
 
@@ -928,13 +961,15 @@ app.post("/api/auth/login", async (req, res) => {
     }
 
     if (!user || !safeEqualString(user.passwordHash, hashPassword(password))) {
-      const failure = recordLoginFailure(clientIp);
+      // Ghi nhận thất bại cho cả user key và ip key
+      recordLoginFailure(`ip:${clientIp}`, LOGIN_RATE_LIMIT.MAX_IP_FAILED_ATTEMPTS);
+      const failure = recordLoginFailure(rateLimitKey, LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS);
       if (failure.blocked) {
         const remainingMin = Math.ceil(failure.retryAfterSec / 60);
         res.set("Retry-After", String(failure.retryAfterSec));
         return res.status(429).json({
           ok: false,
-          error: `Bạn đã nhập sai mật khẩu ${LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS} lần liên tiếp. IP tạm thời bị khóa trong ${remainingMin} phút.`,
+          error: `Bạn đã nhập sai mật khẩu ${LOGIN_RATE_LIMIT.MAX_FAILED_ATTEMPTS} lần liên tiếp. Tài khoản này tạm thời bị khóa trên mạng của bạn trong ${remainingMin} phút.`,
           retryAfter: failure.retryAfterSec,
         });
       }
@@ -945,7 +980,7 @@ app.post("/api/auth/login", async (req, res) => {
       });
     }
 
-    clearLoginAttempts(clientIp);
+    clearLoginAttempts(rateLimitKey);
 
     const token = createSessionToken(user);
     const isProd = process.env.NODE_ENV === "production";
