@@ -1568,7 +1568,7 @@ app.get("/articles", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/articles.html"));
 });
 
-app.get("/index.html", (_req, res) => {
+app.get(["/index", "/index.html"], (_req, res) => {
   res.redirect(301, "/home");
 });
 
