@@ -23,9 +23,17 @@
         <a href="/home" class="brand-logo">
           <span class="brand-flag">🇷🇺</span>
           <span class="brand-name">TAIGA Center</span>
-          <span class="brand-badge">Kiểm Tra & Luyện Tập</span>
+          <span class="brand-badge">Kiểm Tra</span>
         </a>
-        <nav class="nav-links">
+
+        <!-- Hamburger toggle button on mobile -->
+        <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Mở menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
           <a href="/home" class="nav-item">Trang chủ</a>
           <a href="/roadmap" class="nav-item">Lộ trình học</a>
           <a href="/articles" class="nav-item">Bài viết</a>
@@ -128,7 +136,8 @@
                   </div>
                   <span class="cat-badge cat-verb">5 Động từ quan trọng</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 32%;">Từ vựng & Thể</th>
@@ -178,7 +187,8 @@
                       <td><span class="vocab-example">...книги <strong>читаются</strong> очень легко</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
 
               <!-- NHÓM DANH TỪ & TÍNH TỪ -->
@@ -189,7 +199,8 @@
                   </div>
                   <span class="cat-badge cat-noun">Danh - Tính từ</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 32%;">Từ vựng & Giống</th>
@@ -239,7 +250,8 @@
                       <td><span class="vocab-example">Её герои — нормальные, <strong>живые люди</strong>...</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
 
               <!-- NHÓM CỤM TỪ CỐ ĐỊNH & THÀNH NGỮ -->
@@ -250,7 +262,8 @@
                   </div>
                   <span class="cat-badge cat-expr">Cụm từ hay gặp</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 35%;">Cụm từ tiếng Nga</th>
@@ -280,7 +293,8 @@
                       <td><span class="vocab-gram">Hậu tố bất định -то</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -646,7 +660,8 @@
                   </div>
                   <span class="cat-badge cat-verb">Cốt lõi bài đọc</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 32%;">Động từ (НСВ/СВ)</th>
@@ -711,7 +726,8 @@
                       <td><span class="vocab-example">В каждой семье эта проблема <strong>решается</strong> по-своему.</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
 
               <!-- NHÓM DANH TỪ & TÍNH TỪ -->
@@ -722,7 +738,8 @@
                   </div>
                   <span class="cat-badge cat-noun">Từ vựng theo chủ đề</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 32%;">Từ vựng</th>
@@ -772,7 +789,8 @@
                       <td><span class="vocab-example">неуверенные в себе ↔ уверенные в себе</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
 
               <!-- NHÓM THÀNH NGỮ & CỤM TỪ CỐ ĐỊNH -->
@@ -783,7 +801,8 @@
                   </div>
                   <span class="cat-badge cat-expr">Idioms & Expressions</span>
                 </div>
-                <table class="vocab-table">
+                <div class="table-responsive-wrapper">
+                  <table class="vocab-table">
                   <thead>
                     <tr>
                       <th style="width: 35%;">Cụm từ</th>
@@ -808,7 +827,8 @@
                       <td><span class="vocab-gram">(не) уверенный в силах</span></td>
                     </tr>
                   </tbody>
-                </table>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -1425,6 +1445,26 @@
         currentLesson = '1';
         updateView();
       });
+
+      // Mobile Hamburger Menu Toggle
+      const navToggleBtn = document.getElementById('navToggleBtn');
+      const navLinks = document.getElementById('navLinks');
+      if (navToggleBtn && navLinks) {
+        navToggleBtn.addEventListener('click', function() {
+          const isOpen = navLinks.classList.toggle('open');
+          navToggleBtn.classList.toggle('active', isOpen);
+          navToggleBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Đóng menu khi bấm vào link
+        navLinks.querySelectorAll('.nav-item').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggleBtn.classList.remove('active');
+            navToggleBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
     </script>
   </body>
 </html>
