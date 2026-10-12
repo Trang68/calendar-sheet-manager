@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện Tập & Kiểm Tra Tiếng Nga | TAIGA Center</title>
+    <meta
+      name="description"
+      content="Hệ thống bài test và luyện tập tiếng Nga theo trình độ A1, A2, B1, B2, C1 với 4 kỹ năng Nghe, Nói, Đọc, Viết tại TAIGA Center."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/test.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <!-- HEADER / TOPBAR -->
+      <header class="topbar">
+        <a href="/home" class="brand-logo">
+          <span class="brand-flag">🇷🇺</span>
+          <span class="brand-name">TAIGA Center</span>
+          <span class="brand-badge">Kiểm Tra & Luyện Tập</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/home" class="nav-item">Trang chủ</a>
+          <a href="/roadmap" class="nav-item">Lộ trình học</a>
+          <a href="/articles" class="nav-item">Bài viết</a>
+          <a href="/test" class="nav-item active">Kiểm tra (Test)</a>
+          <a href="/contact" class="nav-item">Liên hệ</a>
+          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
+        </nav>
+      </header>
+
+      <!-- HERO SECTION -->
+      <section class="test-hero">
+        <div class="hero-tag">
+          <span>🎯</span>
+          <span>HỆ THỐNG LUYỆN TẬP TƯƠNG TÁC 4 KỸ NĂNG</span>
+        </div>
+        <h1 class="hero-title">
+          Kho Bài Test & Luyện Đề <br />
+          Chuẩn Quốc Tế <span class="highlight">A1 - A2 - B1 - B2 - C1</span>
+        </h1>
+        <p class="hero-desc">
+          Rèn luyện phản xạ, củng cố ngữ pháp và ghi nhớ từ vựng sâu thông qua các bài đọc hiểu, nghe hiểu, trắc nghiệm tương tác chấm điểm tức thì.
+        </p>
+      </section>
+
+      <!-- LEVEL & SKILL SELECTOR -->
+      <div class="level-tabs-container">
+        <!-- Trình độ: A1 -> C1 -->
+        <div class="level-tabs" id="levelTabs">
+          <button class="level-btn" data-level="A1">A1 <span class="desc">Sơ cấp</span></button>
+          <button class="level-btn" data-level="A2">A2 <span class="desc">Cơ bản</span></button>
+          <button class="level-btn" data-level="B1">B1 <span class="desc">Trung cấp 1</span></button>
+          <button class="level-btn active" data-level="B2">B2 <span class="desc">Trung cấp 2</span></button>
+          <button class="level-btn" data-level="C1">C1 <span class="desc">Cao cấp</span></button>
+        </div>
+
+        <!-- 4 Kỹ năng: Nghe, Nói, Đọc, Viết -->
+        <div class="skill-tabs" id="skillTabs">
+          <button class="skill-btn" data-skill="listening">🎧 Nghe (Аудирование)</button>
+          <button class="skill-btn" data-skill="speaking">🗣️ Nói (Говорение)</button>
+          <button class="skill-btn active" data-skill="reading">📖 Đọc (Чтение)</button>
+          <button class="skill-btn" data-skill="writing">✍️ Viết (Письмо)</button>
+        </div>
+
+        <!-- Chọn bài học (Lessons) -->
+        <div class="lesson-picker">
+          <div style="font-weight: 700; font-size: 14px; color: var(--ink);">
+            Danh sách bài kiểm tra (<span id="currentSelectionLabel">B2 - Đọc</span>):
+          </div>
+          <div class="lesson-chips" id="lessonChips">
+            <button class="lesson-chip active" data-lesson="1">Bài 1: Семья писательницы Т. Устиновой</button>
+            <button class="lesson-chip disabled" title="Đang cập nhật">Bài 2: Экология мегаполисов (Sắp ra mắt)</button>
+            <button class="lesson-chip disabled" title="Đang cập nhật">Bài 3: Цифровая трансформация (Sắp ra mắt)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT: B2 - READING - LESSON 1 -->
+      <div id="contentB2Reading1" class="test-layout">
+        <!-- LEFT COLUMN: ĐOẠN VĂN ĐỌC HIỂU -->
+        <section class="reading-panel">
+          <div class="panel-header">
+            <div style="display: flex; gap: 8px;">
+              <span class="badge-tag badge-b2">TRÌNH ĐỘ B2</span>
+              <span class="badge-tag badge-reading">BÀI ĐỌC 1</span>
+            </div>
+            <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: 15-20 phút</span>
+          </div>
+
+          <h2 class="reading-title">Семья московской писательницы Татьяны Устиновой</h2>
+
+          <div class="reading-meta">
+            <span>📰 Nguồn: Газета «Труд»</span>
+            <span>✍️ Chủ đề: Văn học & Gia đình</span>
+          </div>
+
+          <div class="reading-text-card">
+            <p>
+              Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то rất давно у знакомых.
+            </p>
+            <p>
+              Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием.
+            </p>
+            <div class="reading-photo-caption">
+              📷 <strong>Chú thích ảnh:</strong> Т. Устинова и её загородный дом.
+            </div>
+          </div>
+
+          <!-- TỪ VỰNG CHI TIẾT THEO TỪ LOẠI (ĐỘNG TỪ, DANH TỪ, TÍNH TỪ, CỤM TỪ) -->
+          <div class="vocab-focus-box">
+            <div class="vocab-focus-title">
+              <span>💡</span> Từ vựng & Ngữ pháp cốt lõi trong bài đọc
+            </div>
+            
+            <div class="vocab-breakdown">
+              <!-- NHÓM ĐỘNG TỪ (VERBS) -->
+              <div class="vocab-category-card">
+                <div class="vocab-cat-header">
+                  <div class="vocab-cat-title">
+                    <span>⚡</span> Động từ (Глаголы)
+                  </div>
+                  <span class="cat-badge cat-verb">5 Động từ quan trọng</span>
+                </div>
+                <table class="vocab-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 32%;">Từ vựng & Thể</th>
+                      <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
+                      <th style="width: 35%;">Ví dụ trong bài</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">ссо́риться</span>
+                        <span class="vocab-gram">НСВ (с кем?)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Cãi nhau, xung đột</span></td>
+                      <td><span class="vocab-example">...где все кричат, <strong>ссорятся</strong>...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">мири́ться</span>
+                        <span class="vocab-gram">НСВ (с кем?)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Làm hòa, giảng hòa</span></td>
+                      <td><span class="vocab-example">...ссорятся и <strong>мирятся</strong>...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">печа́таться</span>
+                        <span class="vocab-gram">НСВ (bị động -ся)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Được in ấn, xuất bản</span></td>
+                      <td><span class="vocab-example">...романы <strong>печатаются</strong> на компьютере</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">создава́ться</span>
+                        <span class="vocab-gram">НСВ (bị động -ся)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Được sáng tác, tạo ra</span></td>
+                      <td><span class="vocab-example">Романы <strong>создаются</strong> здесь же...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">чита́ться</span>
+                        <span class="vocab-gram">НСВ (bị động)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Được đón đọc (dễ đọc)</span></td>
+                      <td><span class="vocab-example">...книги <strong>читаются</strong> очень легко</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- NHÓM DANH TỪ & TÍNH TỪ -->
+              <div class="vocab-category-card">
+                <div class="vocab-cat-header">
+                  <div class="vocab-cat-title">
+                    <span>🏷️</span> Danh từ & Tính từ (Существительные & Прилагательные)
+                  </div>
+                  <span class="cat-badge cat-noun">Danh - Tính từ</span>
+                </div>
+                <table class="vocab-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 32%;">Từ vựng & Giống</th>
+                      <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
+                      <th style="width: 35%;">Ví dụ trong bài</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">писа́тельница</span>
+                        <span class="vocab-gram">Danh từ (Giống cái)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Nữ nhà văn</span></td>
+                      <td><span class="vocab-example">...о семье московской <strong>писательницы</strong>...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">рома́н</span>
+                        <span class="vocab-gram">Danh từ (Giống đực)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Tiểu thuyết</span></td>
+                      <td><span class="vocab-example"><strong>Романы</strong> создаются здесь же...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">дру́жная (семья)</span>
+                        <span class="vocab-gram">Tính từ (Giống cái)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Hòa thuận, gắn kết</span></td>
+                      <td><span class="vocab-example">Вся её <strong>дружная семья</strong> живёт...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">ую́тный (дом)</span>
+                        <span class="vocab-gram">Tính từ (Giống đực)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Ấm cúng, thoải mái</span></td>
+                      <td><span class="vocab-example">...в этом <strong>уютном доме</strong>...</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="vocab-word">живы́е (люди)</span>
+                        <span class="vocab-gram">Tính từ (Số nhiều)</span>
+                      </td>
+                      <td><span class="vocab-meaning">Chân thực, sống động</span></td>
+                      <td><span class="vocab-example">Её герои — нормальные, <strong>живые люди</strong>...</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- NHÓM CỤM TỪ CỐ ĐỊNH & THÀNH NGỮ -->
+              <div class="vocab-category-card">
+                <div class="vocab-cat-header">
+                  <div class="vocab-cat-title">
+                    <span>🔗</span> Cụm từ & Ngữ pháp cố định (Коллокации)
+                  </div>
+                  <span class="cat-badge cat-expr">Cụm từ hay gặp</span>
+                </div>
+                <table class="vocab-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 35%;">Cụm từ tiếng Nga</th>
+                      <th style="width: 35%;">Nghĩa tiếng Việt</th>
+                      <th style="width: 30%;">Ngữ pháp</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="vocab-word">за́ городом</span></td>
+                      <td><span class="vocab-meaning">Ở ngoại ô, ngoài thành phố</span></td>
+                      <td><span class="vocab-gram">Giới từ за + Cách 5</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="vocab-word">друг дру́га / друг дру́гу</span></td>
+                      <td><span class="vocab-meaning">Lẫn nhau, nhau</span></td>
+                      <td><span class="vocab-gram">Cách 4 (любить) / Cách 3 (помогать)</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="vocab-word">с удово́льствием</span></td>
+                      <td><span class="vocab-meaning">Một cách thích thú, hào hứng</span></td>
+                      <td><span class="vocab-gram">Giới từ с + Cách 5</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="vocab-word">когда́-то о́чень давно́</span></td>
+                      <td><span class="vocab-meaning">Từ một thời rất xa xưa, hồi lâu rồi</span></td>
+                      <td><span class="vocab-gram">Hậu tố bất định -то</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT COLUMN: CÁC CÂU HỎI KIỂM TRA -->
+        <section class="quiz-panel">
+          <!-- CARD 1: TỪ VỰNG & ĐỊNH NGHĨA -->
+          <div class="quiz-card">
+            <div class="quiz-card-header">
+              <h3 class="quiz-section-title">
+                <span>📝</span> Phần 1: Kiểm Tra Từ Vựng & Ngữ Cảnh
+              </h3>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">4 câu</span>
+            </div>
+
+            <!-- Câu 1 -->
+            <div class="question-block" data-q="q1" data-ans="B">
+              <div class="question-prompt">
+                1. Từ <strong>«ссориться»</strong> đồng nghĩa với hành động nào dưới đây?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q1" value="A" />
+                  <span>A. Жить в согласии и любви</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="B" />
+                  <span>B. Спорить, конфликтовать và tranh cãi</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="C" />
+                  <span>C. Восстанавливать хорошие отношения</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="D" />
+                  <span>D. Готовить еду на кухне</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q1"></div>
+            </div>
+
+            <!-- Câu 2 -->
+            <div class="question-block" data-q="q2" data-ans="D">
+              <div class="question-prompt">
+                2. Nghĩa chính xác của từ <strong>«мириться»</strong> trong đoạn văn là gì?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q2" value="A" />
+                  <span>A. Tiếp tục xung đột gay gắt</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="B" />
+                  <span>B. Rời bỏ ngôi nhà để đi xa</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="C" />
+                  <span>C. Viết một cuốn tiểu thuyết mới</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="D" />
+                  <span>D. Làm hòa, giảng hòa sau khi bất đồng</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q2"></div>
+            </div>
+
+            <!-- Câu 3 -->
+            <div class="question-block" data-q="q3" data-ans="C">
+              <div class="question-prompt">
+                3. Một ngôi nhà <strong>«уютный дом»</strong> mang ý nghĩa gì?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q3" value="A" />
+                  <span>A. Một tòa nhà chọc trời hiện đại và đắt đỏ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="B" />
+                  <span>B. Một ngôi nhà hoàn toàn yên tĩnh và không có người</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="C" />
+                  <span>C. Ngôi nhà ấm cúng, thoải mái và dễ chịu</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="D" />
+                  <span>D. Ngôi nhà đổ nát và cũ kỹ</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q3"></div>
+            </div>
+
+            <!-- Câu 4 -->
+            <div class="question-block" data-q="q4" data-ans="A">
+              <div class="question-prompt">
+                4. Cụm từ <strong>«дружная семья»</strong> miêu tả gia đình như thế nào?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q4" value="A" />
+                  <span>A. Gia đình hòa thuận, yêu thương và gắn kết lẫn nhau</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="B" />
+                  <span>B. Gia đình có nhiều bạn bè đến chơi</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="C" />
+                  <span>C. Gia đình chỉ toàn nhà văn nổi tiếng</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="D" />
+                  <span>D. Gia đình thường xuyên chuyển nhà</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q4"></div>
+            </div>
+          </div>
+
+          <!-- CARD 2: NGỮ PHÁP TRỌNG ĐIỂM (CÁCH & THỂ BỊ ĐỘNG) -->
+          <div class="quiz-card">
+            <div class="quiz-card-header">
+              <h3 class="quiz-section-title">
+                <span>⚙️</span> Phần 2: Ngữ Pháp & Cấu Trúc B2
+              </h3>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">4 câu</span>
+            </div>
+
+            <!-- Câu 5 -->
+            <div class="question-block" data-q="q5" data-ans="B">
+              <div class="question-prompt">
+                5. Điền dạng thích hợp: «В этой семье все любят ________ и помогают ________.»
+                <span class="question-hint">(Gợi ý: Любить [кого? Cách 4] - Помогать [кому? Cách 3])</span>
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q5" value="A" />
+                  <span>A. друг другу / друг друга</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q5" value="B" />
+                  <span>B. друг друга / друг другу</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q5" value="C" />
+                  <span>C. друг с другом / друг о друге</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q5" value="D" />
+                  <span>D. друг от друга / друг к другу</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q5"></div>
+            </div>
+
+            <!-- Câu 6 -->
+            <div class="question-block" data-q="q6" data-ans="A">
+              <div class="question-prompt">
+                6. Chọn động từ phản thân bị động thích hợp: «Романы писательницы ________ на старом компьютере.»
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q6" value="A" />
+                  <span>A. печатаются (số nhiều)</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q6" value="B" />
+                  <span>B. печатается (số ít)</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q6" value="C" />
+                  <span>C. печатают</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q6" value="D" />
+                  <span>D. печатал</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q6"></div>
+            </div>
+
+            <!-- Câu 7 -->
+            <div class="question-block" data-q="q7" data-ans="C">
+              <div class="question-prompt">
+                7. Điền đại từ quan hệ: «Её герои — люди, с ________ мы встречаемся каждый день.»
+                <span class="question-hint">(Gợi ý: Cụm "с кем?" - Cách 5 số nhiều)</span>
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q7" value="A" />
+                  <span>A. которые</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q7" value="B" />
+                  <span>B. которых</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q7" value="C" />
+                  <span>C. которыми</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q7" value="D" />
+                  <span>D. которым</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q7"></div>
+            </div>
+
+            <!-- Câu 8 -->
+            <div class="question-block" data-q="q8" data-ans="B">
+              <div class="question-prompt">
+                8. Cụm thành ngữ cố định chỉ sự thích thú: «Книги читаются очень легко и ________.»
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q8" value="A" />
+                  <span>A. с удовольствие</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q8" value="B" />
+                  <span>B. с удовольствием</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q8" value="C" />
+                  <span>C. от удовольствия</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q8" value="D" />
+                  <span>D. в удовольствие</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q8"></div>
+            </div>
+          </div>
+
+          <!-- CARD 3: ĐỌC HIỂU CHI TIẾT (READING COMPREHENSION) -->
+          <div class="quiz-card">
+            <div class="quiz-card-header">
+              <h3 class="quiz-section-title">
+                <span>🔍</span> Phần 3: Đọc Hiểu Nội Dung Chi Tiết
+              </h3>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">2 câu</span>
+            </div>
+
+            <!-- Câu 9 -->
+            <div class="question-block" data-q="q9" data-ans="C">
+              <div class="question-prompt">
+                9. Vì sao các cuốn tiểu thuyết của T. Ustinova lại được độc giả đón đọc một cách dễ dàng và thích thú?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q9" value="A" />
+                  <span>A. Vì sách được bán với giá rất rẻ ở các vùng ngoại ô.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q9" value="B" />
+                  <span>B. Vì nhân vật đều là siêu anh hùng phi thực tế.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q9" value="C" />
+                  <span>C. Vì nhân vật là những con người bình thường, chân thực và gần gũi với đời thường.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q9" value="D" />
+                  <span>D. Vì chúng được in trên một chiếc máy tính cổ điển.</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q9"></div>
+            </div>
+
+            <!-- Câu 10 -->
+            <div class="question-block" data-q="q10" data-ans="B">
+              <div class="question-prompt">
+                10. Chi tiết nào sau đây là ĐÚNG về cuộc sống gia đình của nhà văn?
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="q10" value="A" />
+                  <span>A. Gia đình bà sống trong căn hộ chung cư cao cấp ở trung tâm Moskva.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q10" value="B" />
+                  <span>B. Cả gia đình sống trong ngôi nhà cổ lớn ở vùng ngoại ô, có chó cưng tên là Kuzya.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q10" value="C" />
+                  <span>C. Gia đình không bao giờ cãi vã hay to tiếng với nhau.</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q10" value="D" />
+                  <span>D. Bà Ustinova sáng tác sách tại văn phòng tòa soạn báo «Trud».</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-q10"></div>
+            </div>
+          </div>
+
+          <!-- SUBMIT & SCORE ACTION BAR -->
+          <div class="submit-card">
+            <div class="score-display">
+              <div class="score-circle" id="scoreValue">--</div>
+              <div class="score-text">
+                <strong id="scoreStatus">Chưa nộp bài</strong>
+                <span id="scoreDetail">Hãy hoàn thành tất cả 10 câu hỏi để xem kết quả và giải thích chi tiết.</span>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="btn-action btn-reset" id="btnReset">🔄 Làm lại</button>
+              <button class="btn-action btn-submit" id="btnSubmit">🚀 Chấm Điểm Ngay</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PLACEHOLDER FOR OTHER SELECTIONS -->
+      <div id="placeholderEmpty" class="placeholder-card">
+        <div class="placeholder-icon">🚧</div>
+        <h3 class="placeholder-title" id="placeholderTitle">Đang cập nhật nội dung</h3>
+        <p class="placeholder-desc" id="placeholderDesc">
+          Nội dung cho cấp độ và kỹ năng này đang được ban chuyên môn hoàn thiện. Bạn hãy quay lại kiểm tra mục <strong>B2 - Đọc (Bài 1)</strong> nhé!
+        </p>
+        <button class="btn-action btn-submit" id="btnBackToB2">
+          👉 Đến bài B2 - Đọc (Bài 1)
+        </button>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT XỬ LÝ TƯƠNG TÁC -->
+    <script>
+      // Dữ liệu đáp án & giải thích chi tiết
+      const quizExplanations = {
+        q1: {
+          B: "Chính xác! «ссориться» = спорить, конфликтовать (cãi nhau, tranh cãi).",
+          other: "Chưa đúng. «ссориться» có nghĩa là cãi vã, xung đột (спорить, конфликтовать)."
+        },
+        q2: {
+          D: "Chính xác! «мириться» nghĩa là làm lành, hòa giải sau khi cãi nhau.",
+          other: "Chưa đúng. «мириться» là động từ đối lập với «ссориться», có nghĩa là làm lành, giảng hòa."
+        },
+        q3: {
+          C: "Chính xác! «уютный» = удобный, приятный, тёплый (ấm cúng, dễ chịu).",
+          other: "Chưa đúng. «уютный» mang ý nghĩa là không gian ấm cúng, dễ chịu và tiện nghi."
+        },
+        q4: {
+          A: "Chính xác! «дружная семья» là gia đình hòa thuận, đoàn kết, tràn ngập tình yêu thương.",
+          other: "Chưa đúng. «дружная семья» có nghĩa là gia đình hòa thuận và gắn kết."
+        },
+        q5: {
+          B: "Chính xác! Động từ «любить» đòi hỏi Cách 4 (кого? -> друг друга). Động từ «помогать» đòi hỏi Cách 3 (кому? -> друг другу).",
+          other: "Sai cấu trúc cách. Nhớ quy tắc: Любить кого? -> друг друга (Cách 4). Помогать кому? -> друг другу (Cách 3)."
+        },
+        q6: {
+          A: "Chính xác! Chủ ngữ «Романы» là danh từ số nhiều, nên động từ phản thân chia số nhiều là «печатаются».",
+          other: "Chưa đúng. Chủ ngữ «Романы» là số nhiều nên động từ phải chia đuôi -ются («печатаются»)."
+        },
+        q7: {
+          C: "Chính xác! Cụm «с кем?» (với ai - Cách 5 số nhiều) của đại từ который là «с которыми».",
+          other: "Sai cách. Đi với giới từ «с» (với) dùng Cách 5 số nhiều: «с которыми»."
+        },
+        q8: {
+          B: "Chính xác! Cụm trạng ngữ cố định là «с удовольствием» (với niềm vui thích, say mê).",
+          other: "Chưa đúng. Cụm từ cố định trong tiếng Nga là «с удовольствием» (Cách 5)."
+        },
+        q9: {
+          C: "Chính xác! Trong bài viết: «Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги... читаются очень легко».",
+          other: "Chưa đúng theo nội dung bài đọc. Nhân vật của Ustinova là những con người bình thường, chân thực gần gũi đời thường."
+        },
+        q10: {
+          B: "Chính xác! Bài viết nêu rõ: «Вся её дружная семья живёт за городом в большом старом доме... в саду весело бегает собака Кузя».",
+          other: "Chưa đúng. Hãy đọc kỹ đoạn 1: Gia đình sống ngoại ô trong ngôi nhà cổ lớn và có chú chó tên là Kuzya."
+        }
+      };
+
+      // Xử lý chọn radio trực quan
+      document.querySelectorAll('.option-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const radio = this.querySelector('input[type="radio"]');
+          if (radio) {
+            radio.checked = true;
+            const parent = this.closest('.options-list');
+            parent.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
+            this.classList.add('selected');
+          }
+        });
+      });
+
+      // Submit chấm điểm
+      document.getElementById('btnSubmit').addEventListener('click', function() {
+        const questionBlocks = document.querySelectorAll('.question-block');
+        let score = 0;
+        let answeredCount = 0;
+
+        questionBlocks.forEach(block => {
+          const qId = block.getAttribute('data-q');
+          const correctAns = block.getAttribute('data-ans');
+          const selectedRadio = block.querySelector(`input[name="${qId}"]:checked`);
+          const msgEl = document.getElementById(`msg-${qId}`);
+
+          // Reset class
+          block.querySelectorAll('.option-item').forEach(opt => {
+            opt.classList.remove('correct', 'incorrect');
+          });
+
+          if (selectedRadio) {
+            answeredCount++;
+            const userAns = selectedRadio.value;
+            const selectedItem = selectedRadio.closest('.option-item');
+
+            if (userAns === correctAns) {
+              score++;
+              selectedItem.classList.add('correct');
+              msgEl.className = 'feedback-msg show feedback-correct';
+              msgEl.innerHTML = `✅ ${quizExplanations[qId][correctAns]}`;
+            } else {
+              selectedItem.classList.add('incorrect');
+              // Highlight the correct one
+              const correctRadio = block.querySelector(`input[name="${qId}"][value="${correctAns}"]`);
+              if (correctRadio) {
+                correctRadio.closest('.option-item').classList.add('correct');
+              }
+              msgEl.className = 'feedback-msg show feedback-wrong';
+              msgEl.innerHTML = `❌ ${quizExplanations[qId].other}`;
+            }
+          } else {
+            msgEl.className = 'feedback-msg show feedback-wrong';
+            msgEl.innerHTML = `⚠️ Bạn chưa trả lời câu này! Đáp án đúng là <strong>${correctAns}</strong>.`;
+            const correctRadio = block.querySelector(`input[name="${qId}"][value="${correctAns}"]`);
+            if (correctRadio) {
+              correctRadio.closest('.option-item').classList.add('correct');
+            }
+          }
+        });
+
+        // Hiển thị điểm số
+        const scoreCircle = document.getElementById('scoreValue');
+        const scoreStatus = document.getElementById('scoreStatus');
+        const scoreDetail = document.getElementById('scoreDetail');
+
+        scoreCircle.textContent = `${score}/10`;
+        if (score >= 8) {
+          scoreStatus.textContent = "Xuất sắc! (Отлично)";
+          scoreStatus.style.color = "#16a34a";
+          scoreDetail.textContent = `Bạn đã nắm vững toàn bộ từ vựng và cấu trúc ngữ pháp của bài đọc B2 này!`;
+        } else if (score >= 5) {
+          scoreStatus.textContent = "Khá tốt! (Хорошо)";
+          scoreStatus.style.color = "#d97706";
+          scoreDetail.textContent = `Bạn đã hiểu bài khá ổn, hãy đọc kỹ phần giải thích những câu sai để nhớ từ vựng lâu hơn nhé.`;
+        } else {
+          scoreStatus.textContent = "Cần ôn tập thêm! (Повторите)";
+          scoreStatus.style.color = "#dc2626";
+          scoreDetail.textContent = `Hãy đọc lại bài đọc văn bản và các thẻ từ vựng bên trái, sau đó thử làm lại bài nhé!`;
+        }
+      });
+
+      // Reset bài làm
+      document.getElementById('btnReset').addEventListener('click', function() {
+        document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+        document.querySelectorAll('.option-item').forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+        document.querySelectorAll('.feedback-msg').forEach(msg => {
+          msg.className = 'feedback-msg';
+          msg.innerHTML = '';
+        });
+        document.getElementById('scoreValue').textContent = '--';
+        document.getElementById('scoreStatus').textContent = 'Chưa nộp bài';
+        document.getElementById('scoreStatus').style.color = '';
+        document.getElementById('scoreDetail').textContent = 'Hãy hoàn thành tất cả 10 câu hỏi để xem kết quả và giải thích chi tiết.';
+      });
+
+      // Filter state logic: Level, Skill, Lesson
+      let currentLevel = 'B2';
+      let currentSkill = 'reading';
+      let currentLesson = '1';
+
+      function updateView() {
+        const isB2Reading1 = (currentLevel === 'B2' && currentSkill === 'reading' && currentLesson === '1');
+        const contentB2 = document.getElementById('contentB2Reading1');
+        const placeholder = document.getElementById('placeholderEmpty');
+        const labelEl = document.getElementById('currentSelectionLabel');
+
+        const skillNames = {
+          listening: 'Nghe',
+          speaking: 'Nói',
+          reading: 'Đọc',
+          writing: 'Viết'
+        };
+
+        labelEl.textContent = `${currentLevel} - ${skillNames[currentSkill] || currentSkill}`;
+
+        if (isB2Reading1) {
+          contentB2.style.display = 'grid';
+          placeholder.classList.remove('active');
+        } else {
+          contentB2.style.display = 'none';
+          placeholder.classList.add('active');
+          document.getElementById('placeholderTitle').textContent = `${currentLevel} - ${skillNames[currentSkill] || currentSkill} (Đang hoàn thiện)`;
+          document.getElementById('placeholderDesc').innerHTML = `Hệ thống đang chuẩn bị các bộ đề cho trình độ <strong>${currentLevel}</strong> phần <strong>${skillNames[currentSkill]}</strong>. Bạn có thể bấm nút bên dưới để quay lại <strong>B2 - Đọc (Bài 1)</strong> đang hoạt động sẵn sàng.`;
+        }
+      }
+
+      // Level buttons click
+      document.querySelectorAll('#levelTabs .level-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#levelTabs .level-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentLevel = this.getAttribute('data-level');
+          updateView();
+        });
+      });
+
+      // Skill buttons click
+      document.querySelectorAll('#skillTabs .skill-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#skillTabs .skill-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentSkill = this.getAttribute('data-skill');
+          updateView();
+        });
+      });
+
+      // Back to B2 button click
+      document.getElementById('btnBackToB2').addEventListener('click', function() {
+        document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-level') === 'B2');
+        });
+        document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-skill') === 'reading');
+        });
+        currentLevel = 'B2';
+        currentSkill = 'reading';
+        currentLesson = '1';
+        updateView();
+      });
+    </script>
+  </body>
+</html>
+
