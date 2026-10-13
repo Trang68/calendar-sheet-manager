@@ -1308,16 +1308,33 @@ function renderLessonLayout(lesson) {
             <span>✍️ Chủ đề: ${lesson.topic}</span>
           </div>
 
-          <!-- THANH PHÁT ÂM TOÀN BỘ ĐOẠN VĂN -->
-          <div class="article-audio-bar">
-            <div class="audio-bar-info">
-              <span>🎧 Luyện nghe đọc hiểu:</span>
-              <span style="font-size: 12px; font-weight: normal; color: var(--muted);">Giọng đọc tiếng Nga tự nhiên</span>
+          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME) -->
+          <div class="article-audio-bar" id="audioBar${submitIdSuffix}">
+            <div class="audio-bar-top">
+              <div class="audio-bar-info">
+                <span>🎧 Luyện nghe phát âm:</span>
+                <span class="audio-status-tag" id="audioStatusTag${submitIdSuffix}">Sẵn sàng</span>
+              </div>
+              <div class="audio-controls">
+                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay${submitIdSuffix}" data-article-text="${fullArticleText}" data-lesson-suffix="${submitIdSuffix}">
+                  <span class="ctrl-icon">▶</span>
+                  <span class="ctrl-text">Nghe đoạn văn</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" style="display: none;">
+                  <span>⏹</span>
+                  <span>Dừng</span>
+                </button>
+              </div>
             </div>
-            <button class="btn-read-article" id="${btnReadArticleId}" data-article-text="${fullArticleText}">
-              <span class="audio-icon">🔊</span>
-              <span class="audio-label">Nghe toàn bộ đoạn văn</span>
-            </button>
+
+            <!-- THANH TIẾN ĐỘ THỜI GIAN (PROGRESS BAR) -->
+            <div class="audio-progress-container">
+              <span class="audio-time-label" id="audioCurrentTime${submitIdSuffix}">0:00</span>
+              <div class="audio-progress-track" id="audioProgressTrack${submitIdSuffix}">
+                <div class="audio-progress-fill" id="audioProgressFill${submitIdSuffix}"></div>
+              </div>
+              <span class="audio-time-label" id="audioTotalTime${submitIdSuffix}">--:--</span>
+            </div>
           </div>
 
           <div class="reading-text-card">
@@ -1718,18 +1735,28 @@ ${allHtmlLayouts}
       }
 
       // ======================================================================
-      // HỆ THỐNG PHÁT ÂM TIẾNG NGA TỰ NHIÊN (WEB SPEECH SYNTHESIS ENGINE)
+      // HỆ THỐNG PHÁT ÂM VÀ AUDIO PLAYER ĐOẠN VĂN (PROGRESS + PLAY/PAUSE/RESUME)
       // ======================================================================
       const speechState = {
-        currentBtn: null,
         synth: window.speechSynthesis || null,
-        russianVoice: null
+        russianVoice: null,
+        currentWordBtn: null,
+        
+        // Trạng thái của Article Player
+        articlePlayer: {
+          currentSuffix: null,
+          text: '',
+          utterance: null,
+          status: 'idle', // 'idle' | 'playing' | 'paused'
+          elapsedSeconds: 0,
+          totalEstimatedSeconds: 0,
+          timerInterval: null
+        }
       };
 
       function initVoices() {
         if (!speechState.synth) return;
         const voices = speechState.synth.getVoices();
-        // Ưu tiên các giọng Russian chất lượng cao tự nhiên của Google / Microsoft / Apple
         speechState.russianVoice = 
           voices.find(v => v.lang.startsWith('ru') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online'))) ||
           voices.find(v => v.lang.startsWith('ru')) ||
@@ -1743,85 +1770,232 @@ ${allHtmlLayouts}
         }
       }
 
-      function stopSpeaking() {
-        if (!speechState.synth) return;
-        speechState.synth.cancel();
-        if (speechState.currentBtn) {
-          speechState.currentBtn.classList.remove('speaking');
-          if (speechState.currentBtn.classList.contains('btn-read-article')) {
-            speechState.currentBtn.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
+      function formatTime(sec) {
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return m + ':' + (s < 10 ? '0' : '') + s;
+      }
+
+      function updatePlayerUI(suffix) {
+        const ap = speechState.articlePlayer;
+        const btnPlay = document.getElementById('btnAudioPlay' + suffix);
+        const btnStop = document.getElementById('btnAudioStop' + suffix);
+        const statusTag = document.getElementById('audioStatusTag' + suffix);
+        const fillBar = document.getElementById('audioProgressFill' + suffix);
+        const currTimeEl = document.getElementById('audioCurrentTime' + suffix);
+        const totalTimeEl = document.getElementById('audioTotalTime' + suffix);
+
+        if (!btnPlay) return;
+
+        if (ap.status === 'playing') {
+          btnPlay.classList.add('active-play');
+          btnPlay.querySelector('.ctrl-icon').textContent = '⏸';
+          btnPlay.querySelector('.ctrl-text').textContent = 'Tạm dừng';
+          btnStop.style.display = 'inline-flex';
+          statusTag.textContent = 'Đang phát...';
+          statusTag.style.background = '#dcfce7';
+          statusTag.style.color = '#15803d';
+        } else if (ap.status === 'paused') {
+          btnPlay.classList.remove('active-play');
+          btnPlay.querySelector('.ctrl-icon').textContent = '▶';
+          btnPlay.querySelector('.ctrl-text').textContent = 'Tiếp tục';
+          btnStop.style.display = 'inline-flex';
+          statusTag.textContent = 'Đã tạm dừng';
+          statusTag.style.background = '#fef3c7';
+          statusTag.style.color = '#b45309';
+        } else { // idle
+          btnPlay.classList.remove('active-play');
+          btnPlay.querySelector('.ctrl-icon').textContent = '▶';
+          btnPlay.querySelector('.ctrl-text').textContent = 'Nghe đoạn văn';
+          btnStop.style.display = 'none';
+          statusTag.textContent = 'Sẵn sàng';
+          statusTag.style.background = 'var(--brand-light)';
+          statusTag.style.color = 'var(--brand-strong)';
+          if (fillBar) fillBar.style.width = '0%';
+          if (currTimeEl) currTimeEl.textContent = '0:00';
+          if (totalTimeEl && ap.totalEstimatedSeconds) {
+            totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
           }
-          speechState.currentBtn = null;
+        }
+
+        if (ap.status !== 'idle' && ap.totalEstimatedSeconds > 0) {
+          const percent = Math.min(100, Math.round((ap.elapsedSeconds / ap.totalEstimatedSeconds) * 100));
+          if (fillBar) fillBar.style.width = percent + '%';
+          if (currTimeEl) currTimeEl.textContent = formatTime(ap.elapsedSeconds);
+          if (totalTimeEl) totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
         }
       }
 
-      function speakRussianText(text, btnEl, isLongArticle) {
+      function stopArticlePlayer() {
+        const ap = speechState.articlePlayer;
+        if (ap.timerInterval) {
+          clearInterval(ap.timerInterval);
+          ap.timerInterval = null;
+        }
+        if (speechState.synth) {
+          speechState.synth.cancel();
+        }
+        const prevSuffix = ap.currentSuffix;
+        ap.status = 'idle';
+        ap.elapsedSeconds = 0;
+        ap.currentSuffix = null;
+        if (prevSuffix !== null) {
+          updatePlayerUI(prevSuffix);
+        }
+      }
+
+      function pauseArticlePlayer() {
+        const ap = speechState.articlePlayer;
+        if (speechState.synth && ap.status === 'playing') {
+          speechState.synth.pause();
+          if (ap.timerInterval) {
+            clearInterval(ap.timerInterval);
+            ap.timerInterval = null;
+          }
+          ap.status = 'paused';
+          updatePlayerUI(ap.currentSuffix);
+        }
+      }
+
+      function resumeArticlePlayer() {
+        const ap = speechState.articlePlayer;
+        if (speechState.synth && ap.status === 'paused') {
+          speechState.synth.resume();
+          ap.status = 'playing';
+          ap.timerInterval = setInterval(() => {
+            ap.elapsedSeconds++;
+            if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
+              ap.elapsedSeconds = ap.totalEstimatedSeconds;
+            }
+            updatePlayerUI(ap.currentSuffix);
+          }, 1000);
+          updatePlayerUI(ap.currentSuffix);
+        }
+      }
+
+      function startArticlePlayer(text, suffix) {
         if (!speechState.synth) {
-          alert('Trình duyệt của bạn chưa hỗ trợ phát âm trực tiếp. Hãy dùng Chrome, Safari hoặc Edge phiên bản mới!');
+          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
           return;
         }
 
-        // Nếu đang bấm vào đúng nút đang phát -> Dừng phát
-        if (speechState.currentBtn === btnEl) {
-          stopSpeaking();
-          return;
-        }
+        stopSpeakingWord();
+        stopArticlePlayer();
 
-        stopSpeaking();
+        const ap = speechState.articlePlayer;
+        ap.currentSuffix = suffix;
+        ap.text = text;
+        ap.status = 'playing';
+        ap.elapsedSeconds = 0;
 
-        if (!text || !text.trim()) return;
+        // Ước tính thời gian đọc: ~130 từ tiếng Nga mỗi phút ở rate 0.88 (~2.1 từ/giây)
+        const wordCount = text.split(/\\s+/).filter(Boolean).length;
+        ap.totalEstimatedSeconds = Math.max(15, Math.round(wordCount / 2.1));
 
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'ru-RU';
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
         }
-        // Tốc độ tự nhiên, rõ ràng cho người học
-        utterance.rate = isLongArticle ? 0.9 : 0.85;
+        utterance.rate = 0.88;
         utterance.pitch = 1.0;
-
-        btnEl.classList.add('speaking');
-        speechState.currentBtn = btnEl;
-        if (isLongArticle) {
-          btnEl.querySelector('.audio-label').textContent = '⏹ Dừng nghe';
-        }
+        ap.utterance = utterance;
 
         utterance.onend = function() {
-          btnEl.classList.remove('speaking');
-          if (isLongArticle) {
-            btnEl.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
-          }
-          speechState.currentBtn = null;
+          stopArticlePlayer();
         };
 
         utterance.onerror = function() {
-          btnEl.classList.remove('speaking');
-          if (isLongArticle) {
-            btnEl.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
-          }
-          speechState.currentBtn = null;
+          stopArticlePlayer();
         };
 
+        ap.timerInterval = setInterval(() => {
+          ap.elapsedSeconds++;
+          if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
+            ap.elapsedSeconds = ap.totalEstimatedSeconds;
+          }
+          updatePlayerUI(suffix);
+        }, 1000);
+
+        updatePlayerUI(suffix);
         speechState.synth.speak(utterance);
       }
 
-      // Ủy quyền sự kiện click cho các nút phát âm từ vựng / câu hỏi
+      // Phát âm từ vựng ngắn (Single word)
+      function stopSpeakingWord() {
+        if (speechState.currentWordBtn) {
+          speechState.currentWordBtn.classList.remove('speaking');
+          speechState.currentWordBtn = null;
+        }
+      }
+
+      function speakWordText(text, btnEl) {
+        if (!speechState.synth) return;
+        if (speechState.currentWordBtn === btnEl) {
+          speechState.synth.cancel();
+          stopSpeakingWord();
+          return;
+        }
+        stopSpeakingWord();
+        if (speechState.articlePlayer.status === 'playing') {
+          pauseArticlePlayer();
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ru-RU';
+        if (speechState.russianVoice) {
+          utterance.voice = speechState.russianVoice;
+        }
+        utterance.rate = 0.85;
+        btnEl.classList.add('speaking');
+        speechState.currentWordBtn = btnEl;
+
+        utterance.onend = stopSpeakingWord;
+        utterance.onerror = stopSpeakingWord;
+        speechState.synth.speak(utterance);
+      }
+
+      // Ủy quyền sự kiện click
       document.addEventListener('click', function(e) {
+        // Nút loa phát âm từ vựng / câu hỏi
         const speakBtn = e.target.closest('.btn-speak');
         if (speakBtn) {
           e.preventDefault();
           e.stopPropagation();
           const textToSpeak = speakBtn.getAttribute('data-speech') || '';
-          speakRussianText(textToSpeak, speakBtn, false);
+          speakWordText(textToSpeak, speakBtn);
           return;
         }
 
-        const readArticleBtn = e.target.closest('.btn-read-article');
-        if (readArticleBtn) {
+        // Nút Play / Pause trên thanh Audio Player đoạn văn
+        const playBtn = e.target.closest('.btn-audio-play');
+        if (playBtn) {
           e.preventDefault();
           e.stopPropagation();
-          const articleText = readArticleBtn.getAttribute('data-article-text') || '';
-          speakRussianText(articleText, readArticleBtn, true);
+          const suffix = playBtn.getAttribute('data-lesson-suffix') || '';
+          const text = playBtn.getAttribute('data-article-text') || '';
+          const ap = speechState.articlePlayer;
+
+          if (ap.currentSuffix === suffix) {
+            if (ap.status === 'playing') {
+              pauseArticlePlayer();
+            } else if (ap.status === 'paused') {
+              resumeArticlePlayer();
+            } else {
+              startArticlePlayer(text, suffix);
+            }
+          } else {
+            startArticlePlayer(text, suffix);
+          }
+          return;
+        }
+
+        // Nút Dừng (Stop) trên thanh Audio Player
+        const stopBtn = e.target.closest('.btn-audio-stop');
+        if (stopBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          stopArticlePlayer();
         }
       });
     </script>

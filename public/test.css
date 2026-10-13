@@ -1077,57 +1077,136 @@ body {
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
 }
 
-/* THANH NGHE ĐỌC TOÀN BỘ ĐOẠN VĂN (ARTICLE LISTEN BAR) */
+/* ==========================================================================
+   MINI AUDIO PLAYER BAR (THANH NGHE PHÁT THANH TIẾNG NGA CÓ PROGRESS & PAUSE)
+   ========================================================================== */
 .article-audio-bar {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.audio-bar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f8fafc;
-  border: 1px solid var(--line-light);
-  border-radius: var(--radius-md);
-  padding: 10px 16px;
-  margin-bottom: 14px;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .audio-bar-info {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.audio-status-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--brand-light);
+  color: var(--brand-strong);
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-audio-ctrl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
   color: var(--ink-secondary);
 }
 
-.btn-read-article {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.btn-audio-ctrl:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.btn-audio-play {
   background: var(--brand);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-size: 12.5px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 2px 6px rgba(26, 122, 94, 0.2);
+  color: #fff !important;
+  border-color: var(--brand);
+  box-shadow: 0 2px 8px rgba(26, 122, 94, 0.25);
 }
 
-.btn-read-article:hover {
+.btn-audio-play:hover {
   background: var(--brand-strong);
-  transform: translateY(-1px);
 }
 
-.btn-read-article.speaking {
-  background: #dc2626 !important;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+.btn-audio-play.active-play {
+  background: #d97706;
+  border-color: #d97706;
+}
+
+.btn-audio-stop {
+  color: #b91c1c;
+}
+
+.btn-audio-stop:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/* PROGRESS BAR */
+.audio-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.audio-time-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 40px;
+}
+
+.audio-progress-track {
+  flex: 1;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.audio-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--brand) 0%, #34d399 100%);
+  border-radius: 999px;
+  transition: width 0.2s linear;
 }
 
 .vocab-word-wrap {
   display: inline-flex;
   align-items: center;
 }
+
