@@ -47,14 +47,14 @@
       <section class="test-hero">
         <div class="hero-tag">
           <span>🎯</span>
-          <span>HỆ THỐNG LUYỆN TẬP TƯƠNG TÁC 4 KỸ NĂNG</span>
+          <span>HỆ THỐNG LUYỆN TẬP TƯƠNG TÁC 4 KỸ NĂNG CHUẨN QUỐC TẾ</span>
         </div>
         <h1 class="hero-title">
           Kho Bài Test & Luyện Đề <br />
           Chuẩn Quốc Tế <span class="highlight">A1 - A2 - B1 - B2 - C1</span>
         </h1>
         <p class="hero-desc">
-          Rèn luyện phản xạ, củng cố ngữ pháp và ghi nhớ từ vựng sâu thông qua các bài đọc hiểu, nghe hiểu, trắc nghiệm tương tác chấm điểm tức thì.
+          Rèn luyện phản xạ, củng cố ngữ pháp và ghi nhớ từ vựng sâu với 20 câu hỏi tương tác logic (50% tiếng Nga + 50% tiếng Việt) cho mỗi bài đọc hiểu B2.
         </p>
       </section>
 
@@ -80,26 +80,27 @@
         <!-- Chọn bài học (Lessons) -->
         <div class="lesson-picker">
           <div style="font-weight: 700; font-size: 14px; color: var(--ink);">
-            Danh sách bài kiểm tra (<span id="currentSelectionLabel">B2 - Đọc</span>):
+            Danh sách bài kiểm tra (<span id="currentSelectionLabel">B2 - Đọc (Bài 1)</span>):
           </div>
           <div class="lesson-chips" id="lessonChips">
-            <button class="lesson-chip active" data-lesson="1">Bài 1: Семья писательницы Т. Устиновой</button>
-            <button class="lesson-chip" data-lesson="2">Bài 2: Планирование семьи: один или несколько детей?</button>
-            <button class="lesson-chip" data-lesson="3">Bài 3: Пьеса «Чайка» А. П. Чехова и символ МХТ</button>
+            <button class="lesson-chip active" data-lesson="1">Bài 1: Семья писательницы Т. Устиновой (20 câu)</button>
+            <button class="lesson-chip" data-lesson="2">Bài 2: Планирование семьи (20 câu)</button>
+            <button class="lesson-chip" data-lesson="3">Bài 3: Пьеса «Чайка» А. П. Чехова и символ МХТ (20 câu)</button>
           </div>
         </div>
       </div>
 
+
       <!-- MAIN CONTENT: B2 - READING - LESSON 1 -->
-      <div id="contentB2Reading1" class="test-layout">
-        <!-- LEFT COLUMN: ĐOẠN VĂN ĐỌC HIỂU -->
+      <div id="contentB2Reading1" class="test-layout" style="">
+        <!-- LEFT COLUMN: ĐOẠN VĂN ĐỌC HIỂU & TỪ VỰNG -->
         <section class="reading-panel">
           <div class="panel-header">
             <div style="display: flex; gap: 8px;">
               <span class="badge-tag badge-b2">TRÌNH ĐỘ B2</span>
               <span class="badge-tag badge-reading">BÀI ĐỌC 1</span>
             </div>
-            <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: 15-20 phút</span>
+            <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: 25-30 phút</span>
           </div>
 
           <h2 class="reading-title">Семья московской писательницы Татьяны Устиновой</h2>
@@ -110,189 +111,192 @@
           </div>
 
           <div class="reading-text-card">
-            <p>
-              Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то rất давно у знакомых.
-            </p>
-            <p>
-              Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием.
-            </p>
+            <p>Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых.</p>
+            <p>Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием.</p>
             <div class="reading-photo-caption">
               📷 <strong>Chú thích ảnh:</strong> Т. Устинова и её загородный дом.
             </div>
           </div>
 
-          <!-- TỪ VỰNG CHI TIẾT THEO TỪ LOẠI (ĐỘNG TỪ, DANH TỪ, TÍNH TỪ, CỤM TỪ) -->
+          <!-- TỪ VỰNG & CẤU TRÚC NGỮ PHÁP TRỌNG TÂM -->
           <div class="vocab-focus-box">
             <div class="vocab-focus-title">
-              <span>💡</span> Từ vựng & Ngữ pháp cốt lõi trong bài đọc
+              <span>💡</span> Từ vựng & Cấu trúc ngữ pháp trọng tâm (Bài 1)
             </div>
-            
             <div class="vocab-breakdown">
-              <!-- NHÓM ĐỘNG TỪ (VERBS) -->
+              
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
-                    <span>⚡</span> Động từ (Глаголы)
+                    <span>⚡</span> Động từ & Dạng phản thân bị động (-ся)
                   </div>
                   <span class="cat-badge cat-verb">5 Động từ quan trọng</span>
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 32%;">Từ vựng & Thể</th>
-                      <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
-                      <th style="width: 35%;">Ví dụ trong bài</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">ссо́риться</span>
-                        <span class="vocab-gram">НСВ (с кем?)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Cãi nhau, xung đột</span></td>
-                      <td><span class="vocab-example">...где все кричат, <strong>ссорятся</strong>...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">мири́ться</span>
-                        <span class="vocab-gram">НСВ (с кем?)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Làm hòa, giảng hòa</span></td>
-                      <td><span class="vocab-example">...ссорятся и <strong>мирятся</strong>...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">печа́таться</span>
-                        <span class="vocab-gram">НСВ (bị động -ся)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Được in ấn, xuất bản</span></td>
-                      <td><span class="vocab-example">...романы <strong>печатаются</strong> на компьютере</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">создава́ться</span>
-                        <span class="vocab-gram">НСВ (bị động -ся)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Được sáng tác, tạo ra</span></td>
-                      <td><span class="vocab-example">Романы <strong>создаются</strong> здесь же...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">чита́ться</span>
-                        <span class="vocab-gram">НСВ (bị động)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Được đón đọc (dễ đọc)</span></td>
-                      <td><span class="vocab-example">...книги <strong>читаются</strong> очень легко</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Động từ</th>
+                        <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ví dụ trong bài</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">ссо́риться</span>
+                          <span class="vocab-gram">НСВ (с кем?)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Cãi nhau, xung đột</span></td>
+                        <td><span class="vocab-example">...где все кричат, <strong>ссорятся</strong>...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">мири́ться</span>
+                          <span class="vocab-gram">НСВ (с кем?)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Làm hòa, giảng hòa</span></td>
+                        <td><span class="vocab-example">...ссорятся và <strong>мирятся</strong>...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">печа́таться</span>
+                          <span class="vocab-gram">НСВ (bị động -ся)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Được in ấn, xuất bản</span></td>
+                        <td><span class="vocab-example">...романы <strong>печатаются</strong> на компьютере</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">создава́ться</span>
+                          <span class="vocab-gram">НСВ (bị động -ся)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Được sáng tác, tạo ra</span></td>
+                        <td><span class="vocab-example">Романы <strong>создаются</strong> здесь же...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">чита́ться</span>
+                          <span class="vocab-gram">НСВ (bị động)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Được đón đọc (dễ đọc)</span></td>
+                        <td><span class="vocab-example">...книги <strong>читаются</strong> очень легко</span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM DANH TỪ & TÍNH TỪ -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
-                    <span>🏷️</span> Danh từ & Tính từ (Существительные & Прилагательные)
+                    <span>🏷️</span> Danh từ & Tính từ
                   </div>
                   <span class="cat-badge cat-noun">Danh - Tính từ</span>
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 32%;">Từ vựng & Giống</th>
-                      <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
-                      <th style="width: 35%;">Ví dụ trong bài</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">писа́тельница</span>
-                        <span class="vocab-gram">Danh từ (Giống cái)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Nữ nhà văn</span></td>
-                      <td><span class="vocab-example">...о семье московской <strong>писательницы</strong>...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">рома́н</span>
-                        <span class="vocab-gram">Danh từ (Giống đực)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Tiểu thuyết</span></td>
-                      <td><span class="vocab-example"><strong>Романы</strong> создаются здесь же...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">дру́жная (семья)</span>
-                        <span class="vocab-gram">Tính từ (Giống cái)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Hòa thuận, gắn kết</span></td>
-                      <td><span class="vocab-example">Вся её <strong>дружная семья</strong> живёт...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">ую́тный (дом)</span>
-                        <span class="vocab-gram">Tính từ (Giống đực)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Ấm cúng, thoải mái</span></td>
-                      <td><span class="vocab-example">...в этом <strong>уютном доме</strong>...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">живы́е (люди)</span>
-                        <span class="vocab-gram">Tính từ (Số nhiều)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Chân thực, sống động</span></td>
-                      <td><span class="vocab-example">Её герои — нормальные, <strong>живые люди</strong>...</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Từ vựng</th>
+                        <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ví dụ trong bài</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">писа́тельница</span>
+                          <span class="vocab-gram">Danh từ (Giống cái)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Nữ nhà văn</span></td>
+                        <td><span class="vocab-example">...о семье московской <strong>писательницы</strong>...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">рома́н</span>
+                          <span class="vocab-gram">Danh từ (Giống đực)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Tiểu thuyết</span></td>
+                        <td><span class="vocab-example"><strong>Романы</strong> создаются здесь же...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">дру́жная (семья)</span>
+                          <span class="vocab-gram">Tính từ (Giống cái)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Hòa thuận, gắn kết</span></td>
+                        <td><span class="vocab-example">Вся её <strong>druzhная семья</strong> живёт...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">ую́тный (дом)</span>
+                          <span class="vocab-gram">Tính từ (Giống đực)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Ấm cúng, thoải mái</span></td>
+                        <td><span class="vocab-example">...в этом <strong>уютном доме</strong>...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">живы́е (люди)</span>
+                          <span class="vocab-gram">Tính từ (Số nhiều)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Chân thực, sống động</span></td>
+                        <td><span class="vocab-example">Её герои — нормальные, <strong>живые люди</strong>...</span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM CỤM TỪ CỐ ĐỊNH & THÀNH NGỮ -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
-                    <span>🔗</span> Cụm từ & Ngữ pháp cố định (Коллокации)
+                    <span>🔗</span> Cụm từ cố định & Quản trị cách
                   </div>
                   <span class="cat-badge cat-expr">Cụm từ hay gặp</span>
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 35%;">Cụm từ tiếng Nga</th>
-                      <th style="width: 35%;">Nghĩa tiếng Việt</th>
-                      <th style="width: 30%;">Ngữ pháp</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="vocab-word">за́ городом</span></td>
-                      <td><span class="vocab-meaning">Ở ngoại ô, ngoài thành phố</span></td>
-                      <td><span class="vocab-gram">Giới từ за + Cách 5</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="vocab-word">друг дру́га / друг дру́гу</span></td>
-                      <td><span class="vocab-meaning">Lẫn nhau, nhau</span></td>
-                      <td><span class="vocab-gram">Cách 4 (любить) / Cách 3 (помогать)</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="vocab-word">с удово́льствием</span></td>
-                      <td><span class="vocab-meaning">Một cách thích thú, hào hứng</span></td>
-                      <td><span class="vocab-gram">Giới từ с + Cách 5</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="vocab-word">когда́-то о́чень давно́</span></td>
-                      <td><span class="vocab-meaning">Từ một thời rất xa xưa, hồi lâu rồi</span></td>
-                      <td><span class="vocab-gram">Hậu tố bất định -то</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Cụm từ tiếng Nga</th>
+                        <th style="width: 33%;">Nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ngữ pháp</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">за́ городом</span>
+                          <span class="vocab-gram">Giới từ за + Cách 5</span>
+                        </td>
+                        <td><span class="vocab-meaning">Ở ngoại ô, ngoài thành phố</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">друг дру́га / друг дру́гу</span>
+                          <span class="vocab-gram">Cách 4 (любить) / Cách 3 (помогать)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Lẫn nhau, nhau</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">с удово́льствием</span>
+                          <span class="vocab-gram">Giới từ с + Cách 5</span>
+                        </td>
+                        <td><span class="vocab-meaning">Một cách thích thú, hào hứng</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">когда́-то о́чень давно́</span>
+                          <span class="vocab-gram">Hậu tố bất định -то</span>
+                        </td>
+                        <td><span class="vocab-meaning">Từ một thời rất xa xưa</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -300,297 +304,524 @@
           </div>
         </section>
 
-        <!-- RIGHT COLUMN: CÁC CÂU HỎI KIỂM TRA -->
+        <!-- RIGHT COLUMN: 20 CÂU HỎI KIỂM TRA -->
         <section class="quiz-panel">
-          <!-- CARD 1: TỪ VỰNG & ĐỊNH NGHĨA -->
+          
           <div class="quiz-card">
             <div class="quiz-card-header">
               <h3 class="quiz-section-title">
-                <span>📝</span> Phần 1: Kiểm Tra Từ Vựng & Ngữ Cảnh
+                <span>🇷🇺</span> Phần 1: Câu Hỏi & Từ Vựng Tiếng Nga (10 câu)
               </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">4 câu</span>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu RU</span>
             </div>
-
-            <!-- Câu 1 -->
-            <div class="question-block" data-q="q1" data-ans="B">
+            <div class="question-block" data-q="l1_q1" data-ans="B">
               <div class="question-prompt">
-                1. Từ <strong>«ссориться»</strong> đồng nghĩa với hành động nào dưới đây?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 1.</strong> Что означает глагол <strong>«ссориться»</strong> в контексте текста?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q1" value="A" />
-                  <span>A. Жить в согласии и любви</span>
+                  <input type="radio" name="l1_q1" value="A" />
+                  <span>A. Жить в полном согласии и никогда не спорить</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q1" value="B" />
-                  <span>B. Спорить, конфликтовать và tranh cãi</span>
+                  <input type="radio" name="l1_q1" value="B" />
+                  <span>B. Конфликтовать, спорить и выражать разногласия</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q1" value="C" />
-                  <span>C. Восстанавливать хорошие отношения</span>
+                  <input type="radio" name="l1_q1" value="C" />
+                  <span>C. Вместе готовить вкусную еду на кухне</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q1" value="D" />
-                  <span>D. Готовить еду на кухне</span>
+                  <input type="radio" name="l1_q1" value="D" />
+                  <span>D. Восстанавливать мирные дружеские отношения</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q1"></div>
+              <div class="feedback-msg" id="msg-l1_q1"></div>
             </div>
-
-            <!-- Câu 2 -->
-            <div class="question-block" data-q="q2" data-ans="D">
+            <div class="question-block" data-q="l1_q2" data-ans="B">
               <div class="question-prompt">
-                2. Nghĩa chính xác của từ <strong>«мириться»</strong> trong đoạn văn là gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 2.</strong> Какой глагол является антонимом (противоположным по значению) к слову <strong>«ссориться»</strong>?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q2" value="A" />
-                  <span>A. Tiếp tục xung đột gay gắt</span>
+                  <input type="radio" name="l1_q2" value="A" />
+                  <span>A. кричать</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q2" value="B" />
-                  <span>B. Rời bỏ ngôi nhà để đi xa</span>
+                  <input type="radio" name="l1_q2" value="B" />
+                  <span>B. мириться</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q2" value="C" />
-                  <span>C. Viết một cuốn tiểu thuyết mới</span>
+                  <input type="radio" name="l1_q2" value="C" />
+                  <span>C. печатать</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q2" value="D" />
-                  <span>D. Làm hòa, giảng hòa sau khi bất đồng</span>
+                  <input type="radio" name="l1_q2" value="D" />
+                  <span>D. играть</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q2"></div>
+              <div class="feedback-msg" id="msg-l1_q2"></div>
             </div>
-
-            <!-- Câu 3 -->
-            <div class="question-block" data-q="q3" data-ans="C">
+            <div class="question-block" data-q="l1_q3" data-ans="C">
               <div class="question-prompt">
-                3. Một ngôi nhà <strong>«уютный дом»</strong> mang ý nghĩa gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 3.</strong> Какое значение имеет прилагательное <strong>«уютный»</strong> в словосочетании «уютный дом»?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q3" value="A" />
-                  <span>A. Một tòa nhà chọc trời hiện đại và đắt đỏ</span>
+                  <input type="radio" name="l1_q3" value="A" />
+                  <span>A. Огромный и очень дорогой дворец</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q3" value="B" />
-                  <span>B. Một ngôi nhà hoàn toàn yên tĩnh và không có người</span>
+                  <input type="radio" name="l1_q3" value="B" />
+                  <span>B. Пустой дом, где никто не живёт</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q3" value="C" />
-                  <span>C. Ngôi nhà ấm cúng, thoải mái và dễ chịu</span>
+                  <input type="radio" name="l1_q3" value="C" />
+                  <span>C. Тёплый, удобный, располагающий к спокойному отдыху</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q3" value="D" />
-                  <span>D. Ngôi nhà đổ nát và cũ kỹ</span>
+                  <input type="radio" name="l1_q3" value="D" />
+                  <span>D. Старый и разрушенный дом без отопления</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q3"></div>
+              <div class="feedback-msg" id="msg-l1_q3"></div>
             </div>
-
-            <!-- Câu 4 -->
-            <div class="question-block" data-q="q4" data-ans="A">
+            <div class="question-block" data-q="l1_q4" data-ans="A">
               <div class="question-prompt">
-                4. Cụm từ <strong>«дружная семья»</strong> miêu tả gia đình như thế nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 4.</strong> Как вы понимаете выражение <strong>«дружная семья»</strong>?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q4" value="A" />
-                  <span>A. Gia đình hòa thuận, yêu thương và gắn kết lẫn nhau</span>
+                  <input type="radio" name="l1_q4" value="A" />
+                  <span>A. Семья, члены которой живут в согласии, любят и поддерживают друг друга</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q4" value="B" />
-                  <span>B. Gia đình có nhiều bạn bè đến chơi</span>
+                  <input type="radio" name="l1_q4" value="B" />
+                  <span>B. Семья, в которой все люди работают в одной компании</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q4" value="C" />
-                  <span>C. Gia đình chỉ toàn nhà văn nổi tiếng</span>
+                  <input type="radio" name="l1_q4" value="C" />
+                  <span>C. Семья, у которой очень много богатых друзей</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q4" value="D" />
-                  <span>D. Gia đình thường xuyên chuyển nhà</span>
+                  <input type="radio" name="l1_q4" value="D" />
+                  <span>D. Семья, которая часто устраивает шумные праздники для соседей</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q4"></div>
+              <div class="feedback-msg" id="msg-l1_q4"></div>
             </div>
-          </div>
-
-          <!-- CARD 2: NGỮ PHÁP TRỌNG ĐIỂM (CÁCH & THỂ BỊ ĐỘNG) -->
-          <div class="quiz-card">
-            <div class="quiz-card-header">
-              <h3 class="quiz-section-title">
-                <span>⚙️</span> Phần 2: Ngữ Pháp & Cấu Trúc B2
-              </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">4 câu</span>
-            </div>
-
-            <!-- Câu 5 -->
-            <div class="question-block" data-q="q5" data-ans="B">
+            <div class="question-block" data-q="l1_q5" data-ans="B">
               <div class="question-prompt">
-                5. Điền dạng thích hợp: «В этой семье все любят ________ и помогают ________.»
-                <span class="question-hint">(Gợi ý: Любить [кого? Cách 4] - Помогать [кому? Cách 3])</span>
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 5.</strong> Вставьте правильную форму местоимений: «В этой семье все любят ________ и помогают ________.»
+                <span class="question-hint">💡 Помните управление: любить (кого? Винительный пад.) — помогать (кому? Дательный пад.)</span>
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q5" value="A" />
+                  <input type="radio" name="l1_q5" value="A" />
                   <span>A. друг другу / друг друга</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q5" value="B" />
+                  <input type="radio" name="l1_q5" value="B" />
                   <span>B. друг друга / друг другу</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q5" value="C" />
+                  <input type="radio" name="l1_q5" value="C" />
                   <span>C. друг с другом / друг о друге</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q5" value="D" />
+                  <input type="radio" name="l1_q5" value="D" />
                   <span>D. друг от друга / друг к другу</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q5"></div>
+              <div class="feedback-msg" id="msg-l1_q5"></div>
             </div>
-
-            <!-- Câu 6 -->
-            <div class="question-block" data-q="q6" data-ans="A">
+            <div class="question-block" data-q="l1_q6" data-ans="A">
               <div class="question-prompt">
-                6. Chọn động từ phản thân bị động thích hợp: «Романы писательницы ________ на старом компьютере.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 6.</strong> Выберите правильную форму пассивного глагола: «Романы писательницы ________ здесь же, в загородном доме.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q6" value="A" />
-                  <span>A. печатаются (số nhiều)</span>
+                  <input type="radio" name="l1_q6" value="A" />
+                  <span>A. создаются</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q6" value="B" />
-                  <span>B. печатается (số ít)</span>
+                  <input type="radio" name="l1_q6" value="B" />
+                  <span>B. создаётся</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q6" value="C" />
-                  <span>C. печатают</span>
+                  <input type="radio" name="l1_q6" value="C" />
+                  <span>C. создают</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q6" value="D" />
-                  <span>D. печатал</span>
+                  <input type="radio" name="l1_q6" value="D" />
+                  <span>D. создал</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q6"></div>
+              <div class="feedback-msg" id="msg-l1_q6"></div>
             </div>
-
-            <!-- Câu 7 -->
-            <div class="question-block" data-q="q7" data-ans="C">
+            <div class="question-block" data-q="l1_q7" data-ans="C">
               <div class="question-prompt">
-                7. Điền đại từ quan hệ: «Её герои — люди, с ________ мы встречаемся каждый день.»
-                <span class="question-hint">(Gợi ý: Cụm "с кем?" - Cách 5 số nhiều)</span>
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 7.</strong> Вставьте союзное слово: «Её герои — живые люди, с ________ мы встречаемся каждый день.»
+                <span class="question-hint">💡 Конструкция: с кем? (Творительный падеж множественного числа)</span>
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q7" value="A" />
+                  <input type="radio" name="l1_q7" value="A" />
                   <span>A. которые</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q7" value="B" />
+                  <input type="radio" name="l1_q7" value="B" />
                   <span>B. которых</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q7" value="C" />
+                  <input type="radio" name="l1_q7" value="C" />
                   <span>C. которыми</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q7" value="D" />
+                  <input type="radio" name="l1_q7" value="D" />
                   <span>D. которым</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q7"></div>
+              <div class="feedback-msg" id="msg-l1_q7"></div>
             </div>
-
-            <!-- Câu 8 -->
-            <div class="question-block" data-q="q8" data-ans="B">
+            <div class="question-block" data-q="l1_q8" data-ans="B">
               <div class="question-prompt">
-                8. Cụm thành ngữ cố định chỉ sự thích thú: «Книги читаются очень легко и ________.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 8.</strong> Где живёт семья Татьяны Устиновой согласно тексту?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q8" value="A" />
-                  <span>A. с удовольствие</span>
+                  <input type="radio" name="l1_q8" value="A" />
+                  <span>A. В современной квартире в центре Москвы</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q8" value="B" />
-                  <span>B. с удовольствием</span>
+                  <input type="radio" name="l1_q8" value="B" />
+                  <span>B. За городом в большом старом доме</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q8" value="C" />
-                  <span>C. от удовольствия</span>
+                  <input type="radio" name="l1_q8" value="C" />
+                  <span>C. В гостинице в Санкт-Петербурге</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q8" value="D" />
-                  <span>D. в удовольствие</span>
+                  <input type="radio" name="l1_q8" value="D" />
+                  <span>D. На даче у своих знакомых</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q8"></div>
+              <div class="feedback-msg" id="msg-l1_q8"></div>
+            </div>
+            <div class="question-block" data-q="l1_q9" data-ans="C">
+              <div class="question-prompt">
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 9.</strong> На чём писательница печатает свои романы?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q9" value="A" />
+                  <span>A. На новейшем дорогом ноутбуке</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q9" value="B" />
+                  <span>B. На старой механической пишущей машинке</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q9" value="C" />
+                  <span>C. На старом компьютере, купленном когда-то у знакомых</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q9" value="D" />
+                  <span>D. Она пишет все романы от руки в тетрадях</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q9"></div>
+            </div>
+            <div class="question-block" data-q="l1_q10" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 10.</strong> Почему книги Татьяны Устиновой читаются очень легко и с удовольствием?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q10" value="A" />
+                  <span>A. Потому что в них мало страниц и много цветных картинок</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q10" value="B" />
+                  <span>B. Потому что её герои — нормальные, живые люди, похожие на нас</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q10" value="C" />
+                  <span>C. Потому что книги продаются по очень низкой цене</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q10" value="D" />
+                  <span>D. Потому что сюжеты рассказывают только о жизни за городом</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q10"></div>
             </div>
           </div>
-
-          <!-- CARD 3: ĐỌC HIỂU CHI TIẾT (READING COMPREHENSION) -->
+          
           <div class="quiz-card">
             <div class="quiz-card-header">
               <h3 class="quiz-section-title">
-                <span>🔍</span> Phần 3: Đọc Hiểu Nội Dung Chi Tiết
+                <span>🇻🇳</span> Phần 2: Đọc Hiểu & Phân Tích Tiếng Việt (10 câu)
               </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">2 câu</span>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu VI</span>
             </div>
-
-            <!-- Câu 9 -->
-            <div class="question-block" data-q="q9" data-ans="C">
+            <div class="question-block" data-q="l1_q11" data-ans="B">
               <div class="question-prompt">
-                9. Vì sao các cuốn tiểu thuyết của T. Ustinova lại được độc giả đón đọc một cách dễ dàng và thích thú?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 11.</strong> Ý nghĩa của cụm từ <strong>«за городом»</strong> trong câu «Вся её дружная семья живёт за городом» là gì?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q9" value="A" />
-                  <span>A. Vì sách được bán với giá rất rẻ ở các vùng ngoại ô.</span>
+                  <input type="radio" name="l1_q11" value="A" />
+                  <span>A. Trong trung tâm thủ đô sầm uất</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q9" value="B" />
-                  <span>B. Vì nhân vật đều là siêu anh hùng phi thực tế.</span>
+                  <input type="radio" name="l1_q11" value="B" />
+                  <span>B. Ở vùng ngoại ô, ngoài thành phố</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q9" value="C" />
-                  <span>C. Vì nhân vật là những con người bình thường, chân thực và gần gũi với đời thường.</span>
+                  <input type="radio" name="l1_q11" value="C" />
+                  <span>C. Ở nước ngoài</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q9" value="D" />
-                  <span>D. Vì chúng được in trên một chiếc máy tính cổ điển.</span>
+                  <input type="radio" name="l1_q11" value="D" />
+                  <span>D. Dưới một khu phố ngầm</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q9"></div>
+              <div class="feedback-msg" id="msg-l1_q11"></div>
             </div>
-
-            <!-- Câu 10 -->
-            <div class="question-block" data-q="q10" data-ans="B">
+            <div class="question-block" data-q="l1_q12" data-ans="C">
               <div class="question-prompt">
-                10. Chi tiết nào sau đây là ĐÚNG về cuộc sống gia đình của nhà văn?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 12.</strong> Cụm thành ngữ cố định <strong>«с удовольствием»</strong> thể hiện thái độ hay tâm trạng gì?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
-                  <input type="radio" name="q10" value="A" />
-                  <span>A. Gia đình bà sống trong căn hộ chung cư cao cấp ở trung tâm Moskva.</span>
+                  <input type="radio" name="l1_q12" value="A" />
+                  <span>A. Một cách miễn cưỡng, bắt buộc</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q10" value="B" />
-                  <span>B. Cả gia đình sống trong ngôi nhà cổ lớn ở vùng ngoại ô, có chó cưng tên là Kuzya.</span>
+                  <input type="radio" name="l1_q12" value="B" />
+                  <span>B. Một cách thờ ơ, không quan tâm</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q10" value="C" />
-                  <span>C. Gia đình không bao giờ cãi vã hay to tiếng với nhau.</span>
+                  <input type="radio" name="l1_q12" value="C" />
+                  <span>C. Một cách hào hứng, say mê và thích thú</span>
                 </label>
                 <label class="option-item">
-                  <input type="radio" name="q10" value="D" />
-                  <span>D. Bà Ustinova sáng tác sách tại văn phòng tòa soạn báo «Trud».</span>
+                  <input type="radio" name="l1_q12" value="D" />
+                  <span>D. Một cách vội vã, lo âu</span>
                 </label>
               </div>
-              <div class="feedback-msg" id="msg-q10"></div>
+              <div class="feedback-msg" id="msg-l1_q12"></div>
+            </div>
+            <div class="question-block" data-q="l1_q13" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 13.</strong> Trong cụm từ <strong>«когда-то очень давно»</strong>, hậu tố <strong>«-то»</strong> mang ý nghĩa ngữ pháp gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q13" value="A" />
+                  <span>A. Phủ định hoàn toàn thời gian</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q13" value="B" />
+                  <span>B. Chỉ một thời điểm bất định trong quá khứ mà người nói không nhớ rõ chính xác</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q13" value="C" />
+                  <span>C. Nhấn mạnh một mốc thời gian tương lai chắc chắn xảy ra</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q13" value="D" />
+                  <span>D. Biểu thị điều kiện giả định</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q13"></div>
+            </div>
+            <div class="question-block" data-q="l1_q14" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 14.</strong> Động từ phản thân <strong>«читаются»</strong> trong câu «книги читаются очень легко» biểu đạt ý nghĩa gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q14" value="A" />
+                  <span>A. Những cuốn sách tự biết đọc to cho mọi người nghe</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q14" value="B" />
+                  <span>B. Đặc tính của cuốn sách được viết rất cuốn hút, dễ đọc và dễ tiếp nhận</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q14" value="C" />
+                  <span>C. Sách chỉ dành riêng cho trẻ em tập đọc</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q14" value="D" />
+                  <span>D. Cuốn sách bị ép buộc phải đọc</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q14"></div>
+            </div>
+            <div class="question-block" data-q="l1_q15" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 15.</strong> Từ <strong>«живые люди»</strong> khi dùng để miêu tả các nhân vật của Ustinova có nghĩa là:
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q15" value="A" />
+                  <span>A. Những người còn đang sống và thở về mặt sinh học</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q15" value="B" />
+                  <span>B. Những nhân vật chân thực, có cảm xúc thật và gần gũi với đời thường chứ không sáo rỗng</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q15" value="C" />
+                  <span>C. Những người có sức khỏe vượt trội và bất tử</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q15" value="D" />
+                  <span>D. Những nhân vật hoạt hình vui nhộn</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q15"></div>
+            </div>
+            <div class="question-block" data-q="l1_q16" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 16.</strong> Chi tiết nào cho thấy không khí sinh hoạt trong gia đình nữ nhà văn vô cùng sôi nổi và náo nhiệt?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q16" value="A" />
+                  <span>A. Trong nhà hoàn toàn im ắng và mọi người chỉ giao tiếp bằng tin nhắn</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q16" value="B" />
+                  <span>B. Bếp liên tục nấu nướng, trẻ em nô đùa, chú chó Kuzya chạy nhảy trong vườn</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q16" value="C" />
+                  <span>C. Mọi người không bao giờ ăn cơm cùng nhau</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q16" value="D" />
+                  <span>D. Gia đình chỉ mở cửa vào các dịp lễ tết</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q16"></div>
+            </div>
+            <div class="question-block" data-q="l1_q17" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 17.</strong> Nguồn cảm hứng sáng tác cho các cuốn tiểu thuyết của T. Ustinova chủ yếu đến từ đâu?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q17" value="A" />
+                  <span>A. Những chuyến du lịch thám hiểm đến các vùng đất hoang sơ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q17" value="B" />
+                  <span>B. Chính ngôi nhà, khu vườn và những tình huống hằng ngày trong gia đình bà</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q17" value="C" />
+                  <span>C. Các vụ án mạng bí ẩn đăng trên báo nước ngoài</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q17" value="D" />
+                  <span>D. Trí tưởng tượng viễn tưởng về tương lai</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q17"></div>
+            </div>
+            <div class="question-block" data-q="l1_q18" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 18.</strong> Từ <strong>«статья»</strong> trong câu «была напечатана статья» thuộc giống gì và có nghĩa là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q18" value="A" />
+                  <span>A. Giống đực - Một cuốn từ điển</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q18" value="B" />
+                  <span>B. Giống cái - Một bài báo / bài viết</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q18" value="C" />
+                  <span>C. Giống trung - Một bức ảnh phóng sự</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q18" value="D" />
+                  <span>D. Số nhiều - Những tờ rơi quảng cáo</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q18"></div>
+            </div>
+            <div class="question-block" data-q="l1_q19" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 19.</strong> Tên tờ báo đưa tin về gia đình nhà văn Tatiana Ustinova là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q19" value="A" />
+                  <span>A. Газета «Правда»</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q19" value="B" />
+                  <span>B. Газета «Труд»</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q19" value="C" />
+                  <span>C. Газета «Известия»</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q19" value="D" />
+                  <span>D. Газета «Культура»</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q19"></div>
+            </div>
+            <div class="question-block" data-q="l1_q20" data-ans="C">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 20.</strong> Tổng kết thông điệp chính của văn bản về bí quyết thành công của nhà văn T. Ustinova là:
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l1_q20" value="A" />
+                  <span>A. Sử dụng kỹ thuật công nghệ máy tính tiên tiến nhất để viết sách</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q20" value="B" />
+                  <span>B. Sống tách biệt và không tiếp xúc với người bình thường</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q20" value="C" />
+                  <span>C. Bắt nguồn từ cuộc sống gia đình ấm áp, tràn ngập tình yêu thương và thấu hiểu con người thực tế</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l1_q20" value="D" />
+                  <span>D. Chi tiêu thật nhiều tiền cho các chiến dịch quảng cáo rầm rộ</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l1_q20"></div>
             </div>
           </div>
 
@@ -600,7 +831,7 @@
               <div class="score-circle" id="scoreValue">--</div>
               <div class="score-text">
                 <strong id="scoreStatus">Chưa nộp bài</strong>
-                <span id="scoreDetail">Hãy hoàn thành tất cả 10 câu hỏi để xem kết quả và giải thích chi tiết.</span>
+                <span id="scoreDetail">Hãy hoàn thành tất cả 20 câu hỏi (10 Nga + 10 Việt) để xem kết quả và giải thích chi tiết.</span>
               </div>
             </div>
             <div class="btn-group">
@@ -611,6 +842,7 @@
         </section>
       </div>
 
+
       <!-- MAIN CONTENT: B2 - READING - LESSON 2 -->
       <div id="contentB2Reading2" class="test-layout" style="display: none;">
         <!-- LEFT COLUMN: ĐOẠN VĂN ĐỌC HIỂU & TỪ VỰNG -->
@@ -620,39 +852,33 @@
               <span class="badge-tag badge-b2">TRÌNH ĐỘ B2</span>
               <span class="badge-tag badge-reading">BÀI ĐỌC 2</span>
             </div>
-            <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: 15-20 phút</span>
+            <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: 25-30 phút</span>
           </div>
 
           <h2 class="reading-title">Центры планирования семьи: сколько детей должно быть в семье?</h2>
 
           <div class="reading-meta">
-            <span>📰 Chủ đề: Xã hội & Gia đình hiện đại</span>
-            <span>🎯 Yêu cầu: Đọc hiểu & Nhận diện vấn đề</span>
+            <span>📰 Nguồn: Xã hội & Gia đình hiện đại</span>
+            <span>✍️ Chủ đề: Xã hội & Kế hoạch hóa gia đình</span>
           </div>
 
           <div class="reading-text-card">
-            <p>
-              Сейчас почти во всех больших городах России создаются центры планирования семьи. В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов. В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка.
-            </p>
-            <p>
-              В последнее время психологами и педагогами часто обсуждается вопрос: <strong>сколько детей должно быть в семье — один или несколько?</strong> В каждой семье эта проблема решается по-своему.
-            </p>
-            <p>
-              Многодетные семьи сейчас «вышли из моды». Считается, что один ребёнок — это удобно. Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально. Но единственные дети, особенно подростки, часто говорят о своём одиночестве. Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками.
-            </p>
-            <p>
-              Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком. Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними. Дети в больших семьях быстро становятся самостоятельными и уверенными в себе.
-            </p>
+            <p>Сейчас почти во всех больших городах России создаются центры планирования семьи. В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов. В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка.</p>
+            <p>В последнее время психологами и педагогами часто обсуждается вопрос: <strong>сколько детей должно быть в семье — один или несколько?</strong> В каждой семье эта проблема решается по-своему.</p>
+            <p>Многодетные семьи сейчас «вышли из моды». Считается, что один ребёнок — это удобно. Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально. Но единственные дети, особенно подростки, часто говорят о своём одиночестве. Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками.</p>
+            <p>Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком. Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними. Дети в больших семьях быстро становятся самостоятельными и уверенными в себе.</p>
+            <div class="reading-photo-caption">
+              🕊️ <strong>Chủ đề trọng tâm:</strong> Kế hoạch hóa gia đình & Lựa chọn số lượng con (1 con vs. đông con).
+            </div>
           </div>
 
-          <!-- TỪ VỰNG & CẤU TRÚC NGỮ PHÁP TRỌNG TÂM CỦA BÀI 2 -->
+          <!-- TỪ VỰNG & CẤU TRÚC NGỮ PHÁP TRỌNG TÂM -->
           <div class="vocab-focus-box">
             <div class="vocab-focus-title">
-              <span>💡</span> Từ vựng & Cấu trúc ngữ pháp trọng điểm (B2)
+              <span>💡</span> Từ vựng & Cấu trúc quản trị cách (Bài 2)
             </div>
-            
             <div class="vocab-breakdown">
-              <!-- NHÓM ĐỘNG TỪ CHÍNH KÈM GIỚI TỪ VÀ CÁCH -->
+              
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
@@ -662,171 +888,161 @@
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 32%;">Động từ (НСВ/СВ)</th>
-                      <th style="width: 33%;">Cấu trúc cách & Nghĩa</th>
-                      <th style="width: 35%;">Ví dụ trong bài</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">уделя́ть / удели́ть</span>
-                        <span class="vocab-gram">НСВ / СВ</span>
-                      </td>
-                      <td>
-                        <span class="vocab-meaning">Dành (thời gian, sự chú ý) cho ai</span>
-                        <span class="vocab-pronounce">уделять время / внимание <strong>кому? (Cách 3)</strong></span>
-                      </td>
-                      <td><span class="vocab-example">Одному ребёнку <strong>уделяется</strong> больше времени и внимания...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">опека́ть</span>
-                        <span class="vocab-gram">НСВ</span>
-                      </td>
-                      <td>
-                        <span class="vocab-meaning">Bao bọc, chở che, giám sát quá mức</span>
-                        <span class="vocab-pronounce">опекать <strong>кого? (Cách 4)</strong></span>
-                      </td>
-                      <td><span class="vocab-example">...постоянно <strong>опекаются</strong> своими папами, мамами...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">воспи́тывать / воспита́ть</span>
-                        <span class="vocab-gram">НСВ / СВ</span>
-                      </td>
-                      <td>
-                        <span class="vocab-meaning">Nuôi dạy, giáo dục ai</span>
-                        <span class="vocab-pronounce">воспитывать <strong>кого? (Cách 4)</strong></span>
-                      </td>
-                      <td><span class="vocab-example">...младшие дети <strong>воспитываются</strong> старшими братьями...</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">обеспе́чивать / обеспечи́ть</span>
-                        <span class="vocab-gram">НСВ / СВ</span>
-                      </td>
-                      <td>
-                        <span class="vocab-meaning">Cung cấp, chu cấp cho ai cái gì</span>
-                        <span class="vocab-pronounce">обеспечивать <strong>кого? (4) чем? (5)</strong></span>
-                      </td>
-                      <td><span class="vocab-example">...он лучше <strong>обеспечивается</strong> материально.</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">обсужда́ться / реши́ться</span>
-                        <span class="vocab-gram">Dạng bị động (-ся)</span>
-                      </td>
-                      <td>
-                        <span class="vocab-meaning">Được thảo luận / Được giải quyết</span>
-                        <span class="vocab-pronounce">вопрос обсуждается / решается</span>
-                      </td>
-                      <td><span class="vocab-example">В каждой семье эта проблема <strong>решается</strong> по-своему.</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Động từ</th>
+                        <th style="width: 33%;">Cấu trúc cách & Ý nghĩa</th>
+                        <th style="width: 35%;">Ví dụ trong bài</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">уделя́ть / удели́ть</span>
+                          <span class="vocab-gram">НСВ / СВ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Dành (thời gian, sự chú ý) cho ai (Cách 3)</span></td>
+                        <td><span class="vocab-example">Одному ребёнку <strong>уделяется</strong> больше времени...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">опека́ть</span>
+                          <span class="vocab-gram">НСВ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Bao bọc, chở che, giám sát quá mức (Cách 4)</span></td>
+                        <td><span class="vocab-example">...постоянно <strong>опекаются</strong> папами и мамами...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">воспи́тывать / воспита́ть</span>
+                          <span class="vocab-gram">НСВ / СВ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Nuôi dạy, giáo dục ai (Cách 4)</span></td>
+                        <td><span class="vocab-example">...младшие дети <strong>воспитываются</strong> старшими братьями...</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">обеспе́чивать / обеспечи́ть</span>
+                          <span class="vocab-gram">НСВ / СВ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Chu cấp cho ai cái gì: кого? (4) чем? (5)</span></td>
+                        <td><span class="vocab-example">...он лучше <strong>обеспечивается</strong> материально.</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">обсужда́ться / реши́ться</span>
+                          <span class="vocab-gram">Dạng bị động (-ся)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Được thảo luận / Được giải quyết</span></td>
+                        <td><span class="vocab-example">В каждой семье проблема <strong>решается</strong> по-своему.</span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM DANH TỪ & TÍNH TỪ -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
-                    <span>🏷️</span> Danh từ & Tính từ quan trọng
+                    <span>🏷️</span> Danh từ & Tính từ chủ đề
                   </div>
-                  <span class="cat-badge cat-noun">Từ vựng theo chủ đề</span>
+                  <span class="cat-badge cat-noun">Từ vựng gia đình</span>
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 32%;">Từ vựng</th>
-                      <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
-                      <th style="width: 35%;">Ngữ cảnh</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">плани́рование семьи́</span>
-                        <span class="vocab-gram">Danh từ ghép</span>
-                      </td>
-                      <td><span class="vocab-meaning">Kế hoạch hóa gia đình</span></td>
-                      <td><span class="vocab-example">Центры планирования семьи</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">многоде́тная семья́</span>
-                        <span class="vocab-gram">Tính từ + Danh từ</span>
-                      </td>
-                      <td><span class="vocab-meaning">Gia đình đông con</span></td>
-                      <td><span class="vocab-example">Многодетные семьи вышли из моды</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">одино́чество</span>
-                        <span class="vocab-gram">Danh từ (Giống trung)</span>
-                      </td>
-                      <td><span class="vocab-meaning">Sự cô đơn, lẻ loi</span></td>
-                      <td><span class="vocab-example">...говорят о своём одиночестве</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">самостоя́тельный</span>
-                        <span class="vocab-gram">Tính từ</span>
-                      </td>
-                      <td><span class="vocab-meaning">Tự lập, tự giác</span></td>
-                      <td><span class="vocab-example">Дети быстро становятся самостоятельными</span></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="vocab-word">уве́ренный в себе́</span>
-                        <span class="vocab-gram">Cụm tính từ</span>
-                      </td>
-                      <td><span class="vocab-meaning">Tự tin vào bản thân</span></td>
-                      <td><span class="vocab-example">неуверенные в себе ↔ уверенные в себе</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Từ vựng</th>
+                        <th style="width: 33%;">Ý nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ngữ cảnh</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">плани́рование семьи́</span>
+                          <span class="vocab-gram">Danh từ ghép</span>
+                        </td>
+                        <td><span class="vocab-meaning">Kế hoạch hóa gia đình</span></td>
+                        <td><span class="vocab-example">Центры планирования семьи</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">многоде́тная семья́</span>
+                          <span class="vocab-gram">Tính từ + Danh từ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Gia đình đông con</span></td>
+                        <td><span class="vocab-example">Многодетные семьи вышли из моды</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">одино́чество</span>
+                          <span class="vocab-gram">Danh từ (Giống trung)</span>
+                        </td>
+                        <td><span class="vocab-meaning">Sự cô đơn, lẻ loi</span></td>
+                        <td><span class="vocab-example">...говорят о своём одиночестве</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">самостоя́тельный</span>
+                          <span class="vocab-gram">Tính từ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Tự lập, tự giác</span></td>
+                        <td><span class="vocab-example">Дети быстро становятся самостоятельными</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">уве́ренный в себе́</span>
+                          <span class="vocab-gram">Cụm tính từ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Tự tin vào bản thân</span></td>
+                        <td><span class="vocab-example">неуверенные в себе ↔ уверенные в себе</span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM THÀNH NGỮ & CỤM TỪ CỐ ĐỊNH -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
-                    <span>🔗</span> Thành ngữ & Cách diễn đạt hay
+                    <span>🔗</span> Thành ngữ & Cụm từ cố định
                   </div>
                   <span class="cat-badge cat-expr">Idioms & Expressions</span>
                 </div>
                 <div class="table-responsive-wrapper">
                   <table class="vocab-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 35%;">Cụm từ</th>
-                      <th style="width: 35%;">Nghĩa tiếng Việt</th>
-                      <th style="width: 30%;">Ghi chú</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="vocab-word">вы́йти из мо́ды</span></td>
-                      <td><span class="vocab-meaning">Lỗi thời, không còn là xu hướng</span></td>
-                      <td><span class="vocab-gram">Đối nghĩa: войти в моду</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="vocab-word">по-сво́ему</span></td>
-                      <td><span class="vocab-meaning">Theo cách riêng của mình</span></td>
-                      <td><span class="vocab-gram">Trạng từ chỉ cách thức</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="vocab-word">в свои́х си́лах</span></td>
-                      <td><span class="vocab-meaning">Vào năng lực/sức lực của mình</span></td>
-                      <td><span class="vocab-gram">(не) уверенный в силах</span></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Cụm từ</th>
+                        <th style="width: 33%;">Nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ghi chú</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">вы́йти из мо́ды</span>
+                          <span class="vocab-gram">Thành ngữ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Không còn là xu hướng, lỗi thời</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">по-сво́ему</span>
+                          <span class="vocab-gram">Trạng từ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Theo cách riêng của mình</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vocab-word">в свои́х си́лах</span>
+                          <span class="vocab-gram">Cụm giới từ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Vào năng lực/sức lực của mình</span></td>
+                        <td><span class="vocab-example"></span></td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -834,142 +1050,125 @@
           </div>
         </section>
 
-        <!-- RIGHT COLUMN: CÁC CÂU HỎI KIỂM TRA BÀI 2 -->
+        <!-- RIGHT COLUMN: 20 CÂU HỎI KIỂM TRA -->
         <section class="quiz-panel">
-          <!-- CARD 1: CÂU HỎI TRỌNG TÂM & Ý CHÍNH CỦA BÀI ĐỌC -->
+          
           <div class="quiz-card">
             <div class="quiz-card-header">
               <h3 class="quiz-section-title">
-                <span>🎯</span> Phần 1: Nhận Diện Vấn Đề (а. Какая проблема обсуждается?)
+                <span>🇷🇺</span> Phần 1: Câu Hỏi & Từ Vựng Tiếng Nga (10 câu)
               </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">2 câu</span>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu RU</span>
             </div>
-
-            <!-- Câu L2_1 -->
             <div class="question-block" data-q="l2_q1" data-ans="C">
               <div class="question-prompt">
-                1. <strong>Какая главная проблема обсуждается в этом тексте?</strong> (Vấn đề chính nào được đưa ra thảo luận trong bài?)
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 1.</strong> Какая главная проблема обсуждается в этом тексте?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q1" value="A" />
-                  <span>A. Проблема нехватки квалифицированных врачей и педагогов в России</span>
+                  <span>A. Нехватка детских садов и школ в крупных городах России</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q1" value="B" />
-                  <span>B. Материальные трудности и проблемы с покупкой жилья у молодых семей</span>
+                  <span>B. Проблема жилья и ипотечных кредитов для молодых специалистов</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q1" value="C" />
-                  <span>C. Вопрос о том, сколько детей должно быть в семье — один или несколько, а также плюсы и минусы воспитания</span>
+                  <span>C. Вопрос о том, сколько детей должно быть в семье, и особенности их воспитания</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q1" value="D" />
-                  <span>D. Почему подростки часто уходят из дома из-за конфликтов с родителями</span>
+                  <span>D. Трудности в работе центров психологической помощи</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q1"></div>
             </div>
-
-            <!-- Câu L2_2 -->
             <div class="question-block" data-q="l2_q2" data-ans="B">
               <div class="question-prompt">
-                2. Cụm từ <strong>«вышли из моды»</strong> khi nói về các gia đình đông con mang ý nghĩa gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 2.</strong> Что означает метафора <strong>«вышли из моды»</strong> в отношении многодетных семей?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q2" value="A" />
-                  <span>A. Các gia đình đông con không biết cách ăn mặc thời trang</span>
+                  <span>A. Большие семьи перестали модно одеваться</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q2" value="B" />
-                  <span>B. Việc sinh nhiều con hiện nay không còn phổ biến hay được ưa chuộng như trước</span>
+                  <span>B. Иметь много детей стало непопулярным и непривычным явлением</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q2" value="C" />
-                  <span>C. Nhà nước cấm các gia đình sinh nhiều con</span>
+                  <span>C. Государство запретило иметь больше двух детей</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q2" value="D" />
-                  <span>D. Gia đình đông con đang trở thành xu hướng mới của giới trẻ</span>
+                  <span>D. Многодетные семьи стали популярнее, чем раньше</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q2"></div>
             </div>
-          </div>
-
-          <!-- CARD 2: KIỂM TRA QUẢN TRỊ CÁCH CỦA ĐỘNG TỪ (VERB GOVERNANCE) -->
-          <div class="quiz-card">
-            <div class="quiz-card-header">
-              <h3 class="quiz-section-title">
-                <span>⚙️</span> Phần 2: Cấu Trúc Quản Trị Cách Của Động Từ
-              </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">5 câu</span>
-            </div>
-
-            <!-- Câu L2_3 -->
             <div class="question-block" data-q="l2_q3" data-ans="A">
               <div class="question-prompt">
-                3. Động từ <strong>«уделять / уделить»</strong> (dành thời gian, sự chú ý) đòi hỏi cách nào? Điền vào chỗ trống:
-                <br />«Родители должны уделять больше внимания ________.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 3.</strong> Какого падежа требует глагол <strong>«уделять (внимание)»</strong>? Выберите правильный вариант: «Родители уделяют много внимания ________.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q3" value="A" />
-                  <span>A. детям (Cách 3 - Đa cách số nhiều)</span>
+                  <span>A. детям (Дательный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q3" value="B" />
-                  <span>B. детей (Cách 2 / Cách 4)</span>
+                  <span>B. детей (Родительный / Винительный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q3" value="C" />
-                  <span>C. детьми (Cách 5)</span>
+                  <span>C. детьми (Творительный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q3" value="D" />
-                  <span>D. о детях (Cách 6)</span>
+                  <span>D. о детях (Предложный падеж)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q3"></div>
             </div>
-
-            <!-- Câu L2_4 -->
             <div class="question-block" data-q="l2_q4" data-ans="C">
               <div class="question-prompt">
-                4. Chọn dạng đúng: «Бабушка всегда слишком сильно опекает ________.»
-                <span class="question-hint">(Quy tắc: Опекать кого? - Cách 4)</span>
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 4.</strong> Выберите правильную форму: «Родители чрезмерно опекают ________.»
+                <span class="question-hint">💡 Опекать (кого? Винительный падеж одушевлённых существительных)</span>
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q4" value="A" />
-                  <span>A. единственному внуку</span>
+                  <span>A. единственному сыну</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q4" value="B" />
-                  <span>B. единственным внуком</span>
+                  <span>B. единственным сыном</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q4" value="C" />
-                  <span>C. единственного внука</span>
+                  <span>C. единственного сына</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q4" value="D" />
-                  <span>D. о единственном внуке</span>
+                  <span>D. о единственном сыне</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q4"></div>
             </div>
-
-            <!-- Câu L2_5 -->
             <div class="question-block" data-q="l2_q5" data-ans="B">
               <div class="question-prompt">
-                5. Cấu trúc đầy đủ của <strong>«обеспечивать / обеспечить»</strong> là:
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 5.</strong> Какое грамматическое управление имеет глагол <strong>«обеспечивать / обеспечить»</strong>?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q5" value="A" />
-                  <span>A. кому? (3) чем? (5)</span>
+                  <span>A. кому? (3) что? (4)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q5" value="B" />
@@ -981,162 +1180,404 @@
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q5" value="D" />
-                  <span>D. кому? (3) что? (4)</span>
+                  <span>D. кого? (2) к чему? (3)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q5"></div>
             </div>
-
-            <!-- Câu L2_6 -->
-            <div class="question-block" data-q="l2_q6" data-ans="D">
+            <div class="question-block" data-q="l2_q6" data-ans="B">
               <div class="question-prompt">
-                6. Áp dụng cấu trúc «обеспечивать кого? чем?»:
-                <br />«Государство обязано обеспечить молодых специалистов ________.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 6.</strong> Вставьте правильную форму: «Семья стремится обеспечить ребёнка качественным ________.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q6" value="A" />
-                  <span>A. жильё (Cách 4)</span>
+                  <span>A. образование (В.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q6" value="B" />
-                  <span>B. жилья (Cách 2)</span>
+                  <span>B. образованием (Т.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q6" value="C" />
-                  <span>C. к жилью (Cách 3)</span>
+                  <span>C. образования (Р.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q6" value="D" />
-                  <span>D. жильём (Cách 5)</span>
+                  <span>D. к образованию (Д.п.)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q6"></div>
             </div>
-
-            <!-- Câu L2_7 -->
-            <div class="question-block" data-q="l2_q7" data-ans="B">
+            <div class="question-block" data-q="l2_q7" data-ans="C">
               <div class="question-prompt">
-                7. Dạng câu bị động trong bài: «Младшие дети воспитываются ________.»
-                <span class="question-hint">(Chủ thể hành động trong câu bị động dùng Cách 5: кем?)</span>
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 7.</strong> Кем воспитываются младшие дети в многодетных семьях согласно тексту?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q7" value="A" />
-                  <span>A. старшие братья и сёстры</span>
+                  <span>A. Только школьными учителями</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q7" value="B" />
-                  <span>B. старшими братьями и сёстрами</span>
+                  <span>B. Нянями и гувернантками</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q7" value="C" />
-                  <span>C. старших братьев и сестёр</span>
+                  <span>C. Старшими братьями и сёстрами</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q7" value="D" />
-                  <span>D. о старших братьях и сёстрах</span>
+                  <span>D. Специалистами центров планирования</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q7"></div>
             </div>
-          </div>
-
-          <!-- CARD 3: ĐỌC HIỂU CHI TIẾT & SO SÁNH -->
-          <div class="quiz-card">
-            <div class="quiz-card-header">
-              <h3 class="quiz-section-title">
-                <span>🔍</span> Phần 3: Đọc Hiểu Chi Tiết & So Sánh
-              </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">3 câu</span>
-            </div>
-
-            <!-- Câu L2_8 -->
-            <div class="question-block" data-q="l2_q8" data-ans="A">
+            <div class="question-block" data-q="l2_q8" data-ans="B">
               <div class="question-prompt">
-                8. Theo bài đọc, mặt trái (nhược điểm) khi gia đình chỉ có một con (con một) là gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 8.</strong> Почему единственные дети в семье могут чувствовать себя неуверенными в себе?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q8" value="A" />
-                  <span>A. Trẻ dễ cảm thấy cô đơn, thiếu tự tin vào bản thân vì bị người lớn bao bọc quá mức</span>
+                  <span>A. Потому что им не хватает денег на карманные расходы</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q8" value="B" />
-                  <span>B. Không được gia đình chu cấp đầy đủ về mặt vật chất</span>
+                  <span>B. Потому что они постоянно опекаются взрослыми членами семьи</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q8" value="C" />
-                  <span>C. Bị cha mẹ bỏ bê, không dành thời gian quan tâm</span>
+                  <span>C. Потому что родители никогда не уделяют им времени</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q8" value="D" />
-                  <span>D. Phải tự đi làm kiếm sống từ khi còn nhỏ</span>
+                  <span>D. Потому что они живут далеко от школы</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q8"></div>
             </div>
-
-            <!-- Câu L2_9 -->
-            <div class="question-block" data-q="l2_q9" data-ans="C">
+            <div class="question-block" data-q="l2_q9" data-ans="A">
               <div class="question-prompt">
-                9. Trẻ em lớn lên trong các gia đình đông con thường có ưu điểm nổi bật nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 9.</strong> Каким качеством быстрее овладевают дети, выросшие в больших семьях?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q9" value="A" />
-                  <span>A. Luôn được cha mẹ dành trọn vẹn 100% thời gian cho riêng mình</span>
+                  <span>A. Они быстрее становятся самостоятельными</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q9" value="B" />
-                  <span>B. Không bao giờ phải làm bất kỳ việc nhà nào</span>
+                  <span>B. Они становятся равнодушными к другим людям</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q9" value="C" />
-                  <span>C. Nhanh chóng trở nên tự lập (самостоятельными) và tự tin vào bản thân</span>
+                  <span>C. Они всегда выбирают только творческие профессии</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q9" value="D" />
-                  <span>D. Được các bác sĩ tâm lý chăm sóc đặc biệt mỗi ngày</span>
+                  <span>D. Они не любят общаться с людьми</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q9"></div>
             </div>
-
-            <!-- Câu L2_10 -->
-            <div class="question-block" data-q="l2_q10" data-ans="B">
+            <div class="question-block" data-q="l2_q10" data-ans="A">
               <div class="question-prompt">
-                10. Các cặp vợ chồng trẻ đến trung tâm kế hoạch hóa gia đình để làm gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 10.</strong> Зачем молодые люди обращаются в центры планирования семьи?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l2_q10" value="A" />
-                  <span>A. Để nhận tiền trợ cấp mua nhà từ chính phủ</span>
+                  <span>A. Чтобы получить консультацию опытных психологов, врачей и педагогов</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q10" value="B" />
-                  <span>B. Để nhận tư vấn từ các chuyên gia tâm lý, bác sĩ và nhà giáo dục về nuôi dạy con, nhà ở, tài chính</span>
+                  <span>B. Чтобы бесплатно получить квартиру от государства</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q10" value="C" />
-                  <span>C. Để đăng ký thủ tục kết hôn và mua xe mới</span>
+                  <span>C. Чтобы найти работу для всех членов семьи</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l2_q10" value="D" />
-                  <span>D. Để tìm trường đại học cho các con sau này</span>
+                  <span>D. Чтобы купить детские товары со скидкой</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l2_q10"></div>
             </div>
           </div>
+          
+          <div class="quiz-card">
+            <div class="quiz-card-header">
+              <h3 class="quiz-section-title">
+                <span>🇻🇳</span> Phần 2: Đọc Hiểu & Phân Tích Tiếng Việt (10 câu)
+              </h3>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu VI</span>
+            </div>
+            <div class="question-block" data-q="l2_q11" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 11.</strong> Khái niệm <strong>«центры планирования семьи»</strong> dịch chuẩn xác nhất sang tiếng Việt là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q11" value="A" />
+                  <span>A. Trung tâm môi giới hôn nhân và gia đình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q11" value="B" />
+                  <span>B. Trung tâm kế hoạch hóa gia đình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q11" value="C" />
+                  <span>C. Trung tâm bảo trợ xã hội trẻ mồ côi</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q11" value="D" />
+                  <span>D. Trung tâm tư vấn tài chính bất động sản</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q11"></div>
+            </div>
+            <div class="question-block" data-q="l2_q12" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 12.</strong> Từ <strong>«одиночество»</strong> (giống trung) có nghĩa là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q12" value="A" />
+                  <span>A. Sự ích kỷ, tham lam</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q12" value="B" />
+                  <span>B. Sự cô đơn, lẻ loi, thiếu người chia sẻ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q12" value="C" />
+                  <span>C. Sự tự tin thái quá</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q12" value="D" />
+                  <span>D. Sự bận rộn trong công việc</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q12"></div>
+            </div>
+            <div class="question-block" data-q="l2_q13" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 13.</strong> Từ <strong>«самостоятельный»</strong> miêu tả một đứa trẻ có phẩm chất gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q13" value="A" />
+                  <span>A. Luôn dựa dẫm và chờ người khác làm hộ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q13" value="B" />
+                  <span>B. Tự lập, tự giác, có khả năng tự giải quyết công việc của mình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q13" value="C" />
+                  <span>C. Nhút nhát và sợ chỗ đông người</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q13" value="D" />
+                  <span>D. Hay cãi lời và bướng bỉnh</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q13"></div>
+            </div>
+            <div class="question-block" data-q="l2_q14" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 14.</strong> Động từ <strong>«опекать»</strong> trong bài nói về việc cha mẹ nuôi dạy con một mang sắc thái ý nghĩa:
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q14" value="A" />
+                  <span>A. Bỏ bê con cái, không quan tâm chăm sóc</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q14" value="B" />
+                  <span>B. Bao bọc quá mức (giám sát, làm thay mọi việc khiến con mất tự lập)</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q14" value="C" />
+                  <span>C. Rèn luyện kỷ luật nghiêm khắc như quân đội</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q14" value="D" />
+                  <span>D. Cho con hoàn toàn tự do muốn làm gì tùy thích</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q14"></div>
+            </div>
+            <div class="question-block" data-q="l2_q15" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 15.</strong> Trạng từ <strong>«по-своему»</strong> trong câu «эта проблема решается по-своему» có nghĩa là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q15" value="A" />
+                  <span>A. Bắt buộc theo cùng một công thức chung giống hệt nhau</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q15" value="B" />
+                  <span>B. Theo cách riêng, quan điểm riêng của từng gia đình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q15" value="C" />
+                  <span>C. Theo chỉ thị bắt buộc của chính quyền</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q15" value="D" />
+                  <span>D. Theo lời khuyên duy nhất của bác sĩ</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q15"></div>
+            </div>
+            <div class="question-block" data-q="l2_q16" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 16.</strong> Ưu điểm lớn nhất của việc sinh duy nhất một con (con một) được đề cập trong bài là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q16" value="A" />
+                  <span>A. Đứa trẻ không bao giờ bị ốm đau</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q16" value="B" />
+                  <span>B. Tiện lợi, cha mẹ có nhiều thời gian quan tâm và chu cấp điều kiện vật chất tốt hơn cho con</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q16" value="C" />
+                  <span>C. Cha mẹ không cần phải đi làm kiếm tiền</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q16" value="D" />
+                  <span>D. Đứa trẻ chắc chắn sẽ trở thành thiên tài</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q16"></div>
+            </div>
+            <div class="question-block" data-q="l2_q17" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 17.</strong> Mặt hạn chế (nhược điểm) mà cha mẹ đông con thường phải đối mặt là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q17" value="A" />
+                  <span>A. Các con không bao giờ chịu nói chuyện với nhau</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q17" value="B" />
+                  <span>B. Cha mẹ không thể dành nhiều thời gian riêng cho từng đứa trẻ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q17" value="C" />
+                  <span>C. Trẻ em trong nhà luôn luôn nhút nhát</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q17" value="D" />
+                  <span>D. Không có trường học nào nhận dạy trẻ gia đình đông con</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q17"></div>
+            </div>
+            <div class="question-block" data-q="l2_q18" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 18.</strong> Đối tượng nào trong bài đọc thường hay bộc lộ cảm giác cô đơn nhất?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q18" value="A" />
+                  <span>A. Các bậc phụ huynh đi làm xa</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q18" value="B" />
+                  <span>B. Những đứa trẻ là con một, đặc biệt là lứa tuổi thiếu niên (подростки)</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q18" value="C" />
+                  <span>C. Những đứa em út trong gia đình đông con</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q18" value="D" />
+                  <span>D. Các bác sĩ tâm lý tại trung tâm</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q18"></div>
+            </div>
+            <div class="question-block" data-q="l2_q19" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 19.</strong> Cụm danh từ <strong>«материальные проблемы»</strong> chỉ nhóm vấn đề nào sau đây?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q19" value="A" />
+                  <span>A. Vấn đề sức khỏe tinh thần</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q19" value="B" />
+                  <span>B. Vấn đề tài chính, tiền bạc, kinh tế gia đình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q19" value="C" />
+                  <span>C. Mâu thuẫn giữa mẹ chồng và nàng dâu</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q19" value="D" />
+                  <span>D. Vấn đề bất đồng ngôn ngữ</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q19"></div>
+            </div>
+            <div class="question-block" data-q="l2_q20" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 20.</strong> Kết luận logic từ bài đọc: Việc quyết định sinh 1 hay nhiều con nên dựa trên điều gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l2_q20" value="A" />
+                  <span>A. Chạy theo xu hướng số đông của xã hội</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q20" value="B" />
+                  <span>B. Hoàn cảnh cụ thể, khả năng kinh tế và sự cân nhắc kỹ lưỡng giữa mặt tích cực và hạn chế của mỗi gia đình</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q20" value="C" />
+                  <span>C. Chỉ dựa vào ý kiến của ông bà</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l2_q20" value="D" />
+                  <span>D. Bắt buộc phải có từ 3 con trở lên</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l2_q20"></div>
+            </div>
+          </div>
 
-          <!-- SUBMIT & SCORE ACTION BAR BÀI 2 -->
+          <!-- SUBMIT & SCORE ACTION BAR -->
           <div class="submit-card">
             <div class="score-display">
               <div class="score-circle" id="scoreValueL2">--</div>
               <div class="score-text">
                 <strong id="scoreStatusL2">Chưa nộp bài</strong>
-                <span id="scoreDetailL2">Hãy hoàn thành 10 câu hỏi để xem kết quả và giải thích ngữ pháp chi tiết.</span>
+                <span id="scoreDetailL2">Hãy hoàn thành tất cả 20 câu hỏi (10 Nga + 10 Việt) để xem kết quả và giải thích chi tiết.</span>
               </div>
             </div>
             <div class="btn-group">
@@ -1146,6 +1587,7 @@
           </div>
         </section>
       </div>
+
 
       <!-- MAIN CONTENT: B2 - READING - LESSON 3 -->
       <div id="contentB2Reading3" class="test-layout" style="display: none;">
@@ -1162,35 +1604,26 @@
           <h2 class="reading-title">Пьеса «Чайка» А. П. Чехова и символ Московского Художественного театра</h2>
 
           <div class="reading-meta">
-            <span>🎭 Chủ đề: Văn học & Nghệ thuật sân khấu Nga</span>
-            <span>📖 Giáo trình: УРОК 1. ЛЮДЕЙ НЕИНТЕРЕСНЫХ В МИРЕ НЕТ...</span>
+            <span>📰 Nguồn: УРОК 1. ЛЮДЕЙ НЕИНТЕРЕСНЫХ В МИРЕ НЕТ... (Trang 17)</span>
+            <span>✍️ Chủ đề: Văn học & Nghệ thuật kịch nghệ Nga</span>
           </div>
 
           <div class="reading-text-card">
-            <p>
-              Пьеса «Чайка» была написана Антоном Павловичем Чеховым в 1896 году в Мелихове. Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию. Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель. Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути.
-            </p>
-            <p>
-              Впервые «Чайка» была поставлена в 1896 году в Санкт-Петербурге. К сожалению, пьеса не имела успеха, потому что не была понята зрителями. Антон Павлович Чехов очень переживал эту неудачу. Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить «Чайку» в Москве, Антон Павлович согласился не сразу. Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами. Так началась творческая дружба писателя с театром.
-            </p>
-            <p>
-              В 1898 году чеховская пьеса «Чайка» была поставлена на сцене Московского Художественного театра. Пьеса имела огромный успех. Она была хорошо встречена зрителями. Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра. С тех пор летящая чайка стала символом Московского Художественного театра. Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах.
-            </p>
+            <p>Пьеса «Чайка» была написана Антоном Павловичем Чеховым в 1896 году в Мелихове. Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию. Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель. Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути.</p>
+            <p>Впервые «Чайка» была поставлена в 1896 году в Санкт-Петербурге. К сожалению, пьеса не имела успеха, потому что не была понята зрителями. Антон Павлович Чехов очень переживал эту неудачу. Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить «Чайку» в Москве, Антон Павлович согласился не сразу. Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами. Так началась творческая дружба писателя с театром.</p>
+            <p>В 1898 году чеховская пьеса «Чайка» была поставлена на сцене Московского Художественного театра. Пьеса имела огромный успех. Она была хорошо встречена зрителями. Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра. С тех пор летящая чайка стала символом Московского Художественного театра. Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах.</p>
             <div class="reading-photo-caption">
-              🕊️ <strong>Câu hỏi trọng tâm (а):</strong> Какой символ имеет Московский Художественный театр и где можно увидеть этот символ?
-              <br />➔ <strong>Символ:</strong> Летящая чайка (Chim hải âu đang bay).
-              <br />➔ <strong>Где увидеть:</strong> На здании театра, на его занавесе и на театральных билетах.
+              🕊️ <strong>Câu hỏi trọng tâm (а):</strong> Символ МХТ — летящая чайка (увидеть: на здании театра, на занавесе, на театральных билетах).
             </div>
           </div>
 
-          <!-- TỪ VỰNG & CẤU TRÚC NGỮ PHÁP TRỌNG ĐIỂM (BÀI 3) -->
+          <!-- TỪ VỰNG & CẤU TRÚC NGỮ PHÁP TRỌNG TÂM -->
           <div class="vocab-focus-box">
             <div class="vocab-focus-title">
-              <span>💡</span> Từ vựng, Thể động từ & Cụm từ cố định trong bài (B2)
+              <span>💡</span> Từ vựng, Thuật ngữ Sân khấu & Ngữ pháp (Bài 3)
             </div>
-            
             <div class="vocab-breakdown">
-              <!-- NHÓM ĐỘNG TỪ CHÍNH -->
+              
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
@@ -1213,10 +1646,7 @@
                           <span class="vocab-word">поста́вить (пьесу)</span>
                           <span class="vocab-gram">СВ (bị động: поставлена)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Dàn dựng, công diễn (vở kịch)</span>
-                          <span class="vocab-pronounce">поставить пьесу на сцене</span>
-                        </td>
+                        <td><span class="vocab-meaning">Dàn dựng, công diễn vở kịch</span></td>
                         <td><span class="vocab-example">...была <strong>поставлена</strong> на сцене МХТ</span></td>
                       </tr>
                       <tr>
@@ -1224,10 +1654,7 @@
                           <span class="vocab-word">мечта́ть</span>
                           <span class="vocab-gram">НСВ (о ком? о чём?)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Mơ ước về điều gì (Cách 6)</span>
-                          <span class="vocab-pronounce">мечтать о славе (Cách 6)</span>
-                        </td>
+                        <td><span class="vocab-meaning">Mơ ước về điều gì (Cách 6)</span></td>
                         <td><span class="vocab-example">Оба они <strong>мечтают о славе</strong>...</span></td>
                       </tr>
                       <tr>
@@ -1235,21 +1662,15 @@
                           <span class="vocab-word">ве́рить</span>
                           <span class="vocab-gram">НСВ (в кого? в что?)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Tin tưởng vào điều gì (Cách 4)</span>
-                          <span class="vocab-pronounce">верить в талант, в силы</span>
-                        </td>
-                        <td><span class="vocab-example">...<strong>верят в свой талант</strong> và trong năng lực</span></td>
+                        <td><span class="vocab-meaning">Tin tưởng vào điều gì (Cách 4)</span></td>
+                        <td><span class="vocab-example">...<strong>верят в свой талант</strong> и в свои силы</span></td>
                       </tr>
                       <tr>
                         <td>
                           <span class="vocab-word">пережива́ть</span>
                           <span class="vocab-gram">НСВ (что? Cách 4)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Trăn trở, đau buồn vì điều gì</span>
-                          <span class="vocab-pronounce">переживать неудачу (Cách 4)</span>
-                        </td>
+                        <td><span class="vocab-meaning">Đau buồn, trăn trở về điều gì</span></td>
                         <td><span class="vocab-example">Чехов очень <strong>переживал эту неудачу</strong></span></td>
                       </tr>
                       <tr>
@@ -1257,10 +1678,7 @@
                           <span class="vocab-word">убеди́ться</span>
                           <span class="vocab-gram">СВ (в чём?)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Tin chắc, kiểm chứng chắc chắn</span>
-                          <span class="vocab-pronounce">убедиться, что...</span>
-                        </td>
+                        <td><span class="vocab-meaning">Tin chắc, kiểm chứng chắc chắn</span></td>
                         <td><span class="vocab-example">...и <strong>убедился</strong>, что идея была понята</span></td>
                       </tr>
                       <tr>
@@ -1268,18 +1686,13 @@
                           <span class="vocab-word">аплоди́ровать</span>
                           <span class="vocab-gram">НСВ (кому? Cách 3)</span>
                         </td>
-                        <td>
-                          <span class="vocab-meaning">Vỗ tay hoan nghênh ai</span>
-                          <span class="vocab-pronounce">зрители аплодируют артистам</span>
-                        </td>
+                        <td><span class="vocab-meaning">Vỗ tay hoan nghênh ai</span></td>
                         <td><span class="vocab-example">Они долго <strong>аплодировали</strong>...</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM DANH TỪ SÂN KHẤU & TÍNH TỪ -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
@@ -1318,7 +1731,7 @@
                           <span class="vocab-word">репети́ция</span>
                           <span class="vocab-gram">Danh từ (Giống cái)</span>
                         </td>
-                        <td><span class="vocab-meaning">Buổi tập kịch, tổng duyệt</span></td>
+                        <td><span class="vocab-meaning">Buổi tập dượt, tổng duyệt</span></td>
                         <td><span class="vocab-example">...был на репетициях спектакля</span></td>
                       </tr>
                       <tr>
@@ -1326,7 +1739,7 @@
                           <span class="vocab-word">за́навес</span>
                           <span class="vocab-gram">Danh từ (Giống đực)</span>
                         </td>
-                        <td><span class="vocab-meaning">Màn sân khấu</span></td>
+                        <td><span class="vocab-meaning">Màn sân khấu kịch</span></td>
                         <td><span class="vocab-example">...на занавесе театра</span></td>
                       </tr>
                       <tr>
@@ -1349,8 +1762,6 @@
                   </table>
                 </div>
               </div>
-
-              <!-- NHÓM CỤM TỪ CỐ ĐỊNH & THÀNH NGỮ -->
               <div class="vocab-category-card">
                 <div class="vocab-cat-header">
                   <div class="vocab-cat-title">
@@ -1362,26 +1773,35 @@
                   <table class="vocab-table">
                     <thead>
                       <tr>
-                        <th style="width: 35%;">Cụm từ</th>
-                        <th style="width: 35%;">Nghĩa tiếng Việt</th>
-                        <th style="width: 30%;">Ngữ pháp</th>
+                        <th style="width: 32%;">Cụm từ</th>
+                        <th style="width: 33%;">Nghĩa tiếng Việt</th>
+                        <th style="width: 35%;">Ngữ pháp</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><span class="vocab-word">име́ть успе́х</span></td>
-                        <td><span class="vocab-meaning">Đạt được thành công, gây tiếng vang</span></td>
-                        <td><span class="vocab-gram">иметь огромный успех ↔ не иметь успеха</span></td>
+                        <td>
+                          <span class="vocab-word">име́ть успе́х</span>
+                          <span class="vocab-gram">Thành ngữ</span>
+                        </td>
+                        <td><span class="vocab-meaning">Đạt được thành công vang dội</span></td>
+                        <td><span class="vocab-example"></span></td>
                       </tr>
                       <tr>
-                        <td><span class="vocab-word">с тех пор</span></td>
-                        <td><span class="vocab-meaning">Kể từ đó, từ thời điểm đó trở đi</span></td>
-                        <td><span class="vocab-gram">Cụm từ liên kết thời gian</span></td>
+                        <td>
+                          <span class="vocab-word">с тех пор</span>
+                          <span class="vocab-gram">Liên từ thời gian</span>
+                        </td>
+                        <td><span class="vocab-meaning">Kể từ đó trở đi</span></td>
+                        <td><span class="vocab-example"></span></td>
                       </tr>
                       <tr>
-                        <td><span class="vocab-word">быть доро́гим кому?</span></td>
+                        <td>
+                          <span class="vocab-word">быть доро́гим кому?</span>
+                          <span class="vocab-gram">Tính từ ngắn + Cách 3</span>
+                        </td>
                         <td><span class="vocab-meaning">Rất thân thương, quý giá đối với ai</span></td>
-                        <td><span class="vocab-gram">была особенно дорога Чехову (Cách 3)</span></td>
+                        <td><span class="vocab-example"></span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1391,438 +1811,534 @@
           </div>
         </section>
 
-        <!-- RIGHT COLUMN: 15 CÂU HỎI KIỂM TRA BÀI 3 -->
+        <!-- RIGHT COLUMN: 20 CÂU HỎI KIỂM TRA -->
         <section class="quiz-panel">
-          <!-- CARD 1: TỪ VỰNG & NGHĨA HIỂU (6 CÂU) -->
+          
           <div class="quiz-card">
             <div class="quiz-card-header">
               <h3 class="quiz-section-title">
-                <span>📚</span> Phần 1: Từ Vựng & Nghĩa Hiểu (Словарный запас)
+                <span>🇷🇺</span> Phần 1: Câu Hỏi & Từ Vựng Tiếng Nga (10 câu)
               </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">6 câu</span>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu RU</span>
             </div>
-
-            <!-- Câu L3_1 -->
             <div class="question-block" data-q="l3_q1" data-ans="B">
               <div class="question-prompt">
-                1. Từ <strong>«пьеса»</strong> trong bài đọc thuộc thể loại tác phẩm nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 1.</strong> Что представляет собой жанр <strong>«пьеса»</strong>?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q1" value="A" />
-                  <span>A. Một bài thơ trữ tình ngắn về loài chim hải âu</span>
+                  <span>A. Лирическое стихотворение о природе</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q1" value="B" />
-                  <span>B. Một tác phẩm kịch bản được viết để diễn trên sân khấu nhà hát</span>
+                  <span>B. Драматическое произведение, предназначенное для постановки на сцене театра</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q1" value="C" />
-                  <span>C. Một cuốn tiểu thuyết dài gồm nhiều chương hồi</span>
+                  <span>C. Научно-популярная статья об истории искусства</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q1" value="D" />
-                  <span>D. Một bài báo phê bình văn học đăng trên báo chí</span>
+                  <span>D. Музыкальное инструментальное сочинение без слов</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q1"></div>
             </div>
-
-            <!-- Câu L3_2 -->
             <div class="question-block" data-q="l3_q2" data-ans="C">
               <div class="question-prompt">
-                2. Biểu tượng <strong>«летящая чайка»</strong> có nghĩa là gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 2.</strong> Какой символ имеет Московский Художественный театр (МХТ) согласно тексту?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q2" value="A" />
-                  <span>A. Chim bồ câu trắng đậu trên cành cây</span>
+                  <span>A. Белый лебедь на воде</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q2" value="B" />
-                  <span>B. Đại bàng tung cánh trên đỉnh núi</span>
+                  <span>B. Золотая театральная маска</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q2" value="C" />
-                  <span>C. Chim hải âu đang sải cánh bay</span>
+                  <span>C. Летящая чайка</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q2" value="D" />
-                  <span>D. Chiếc thuyền buồm lướt sóng ra khơi</span>
+                  <span>D. Горящий факел искусства</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q2"></div>
             </div>
-
-            <!-- Câu L3_3 -->
             <div class="question-block" data-q="l3_q3" data-ans="A">
               <div class="question-prompt">
-                3. Từ <strong>«занавес»</strong> trong nhà hát chỉ bộ phận nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 3.</strong> Где и сегодня можно увидеть символ летящей чайки?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q3" value="A" />
-                  <span>A. Bức màn nhung lớn che sân khấu kịch</span>
+                  <span>A. На здании театра, на его занавесе и на театральных билетах</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q3" value="B" />
-                  <span>B. Vé vào cửa xem buổi biểu diễn</span>
+                  <span>B. Только на обложках чеховских книг</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q3" value="C" />
-                  <span>C. Hàng ghế ngồi của khán giả ở tầng một</span>
+                  <span>C. Исключительно на картинах в Третьяковской галерее</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q3" value="D" />
-                  <span>D. Phòng thay đồ và trang điểm của diễn viên</span>
+                  <span>D. На фасадах всех театров Санкт-Петербурга</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q3"></div>
             </div>
-
-            <!-- Câu L3_4 -->
-            <div class="question-block" data-q="l3_q4" data-ans="D">
+            <div class="question-block" data-q="l3_q4" data-ans="B">
               <div class="question-prompt">
-                4. Người làm nghề <strong>«режиссёр»</strong> trong nhà hát đảm nhận vai trò gì?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 4.</strong> Какую роль в театре выполняет <strong>режиссёр</strong>?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q4" value="A" />
-                  <span>A. Người viết kịch bản văn học</span>
+                  <span>A. Продаёт билеты зрителям в кассе театра</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q4" value="B" />
-                  <span>B. Người bán vé và kiểm soát vé vào cửa</span>
+                  <span>B. Руководит созданием спектакля, работает с артистами над воплощением замысла пьесы</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q4" value="C" />
-                  <span>C. Khán giả chuyên viết bài bình luận nghệ thuật</span>
+                  <span>C. Шьёт костюмы и наносит грим актёрам</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q4" value="D" />
-                  <span>D. Đạo diễn chỉ đạo nghệ thuật và dàn dựng toàn bộ vở diễn</span>
+                  <span>D. Пишет критические отзывы в газеты</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q4"></div>
             </div>
-
-            <!-- Câu L3_5 -->
             <div class="question-block" data-q="l3_q5" data-ans="B">
               <div class="question-prompt">
-                5. Từ <strong>«репетиция»</strong> đồng nghĩa với hoạt động nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 5.</strong> Что означает слово <strong>«репетиция»</strong> в театральном искусстве?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q5" value="A" />
-                  <span>A. Buổi diễn chính thức có bán vé cho công chúng</span>
+                  <span>A. Праздничный банкет после премьеры</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q5" value="B" />
-                  <span>B. Buổi tập dượt, chuẩn bị và khớp kịch trước khi công diễn</span>
+                  <span>B. Предварительный подготовительный процесс подготовки и отработки спектакля</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q5" value="C" />
-                  <span>C. Lễ trao giải thưởng cho tác phẩm kịch xuất sắc</span>
+                  <span>C. Закрытие театрального сезона</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q5" value="D" />
-                  <span>D. Cuộc họp báo giới thiệu cuốn sách mới</span>
+                  <span>D. Продажа сувениров перед началом действия</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q5"></div>
             </div>
-
-            <!-- Câu L3_6 -->
-            <div class="question-block" data-q="l3_q6" data-ans="A">
+            <div class="question-block" data-q="l3_q6" data-ans="B">
               <div class="question-prompt">
-                6. Cụm từ <strong>«нелёгкая судьба»</strong> miêu tả số phận như thế nào?
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 6.</strong> Какого предлога и падежа требует глагол <strong>«мечтать»</strong>? Выберите правильный вариант: «Герои мечтают ________.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q6" value="A" />
-                  <span>A. Cuộc đời nhiều gian nan, chông gai và thử thách</span>
+                  <span>A. великую славу (В.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q6" value="B" />
-                  <span>B. Cuộc sống giàu sang, an nhàn từ nhỏ</span>
+                  <span>B. о великой славе (о + П.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q6" value="C" />
-                  <span>C. Sự nghiệp nhanh chóng đạt đỉnh cao mà không cần nỗ lực</span>
+                  <span>C. к великой славе (к + Д.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q6" value="D" />
-                  <span>D. Số phận ngắn ngủi, không có gì nổi bật</span>
+                  <span>D. великой славой (Т.п.)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q6"></div>
             </div>
-          </div>
-
-          <!-- CARD 2: NGỮ PHÁP, CÁCH & THỂ ĐỘNG TỪ B2 (5 CÂU) -->
-          <div class="quiz-card">
-            <div class="quiz-card-header">
-              <h3 class="quiz-section-title">
-                <span>⚙️</span> Phần 2: Cấu Trúc Ngữ Pháp & Quản Trị Cách
-              </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">5 câu</span>
-            </div>
-
-            <!-- Câu L3_7 -->
-            <div class="question-block" data-q="l3_q7" data-ans="C">
+            <div class="question-block" data-q="l3_q7" data-ans="A">
               <div class="question-prompt">
-                7. Động từ <strong>«мечтать»</strong> (mơ ước) đòi hỏi giới từ và cách nào? Điền vào chỗ trống:
-                <br />«Молодые герои мечтают ________ и о признании.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 7.</strong> Вставьте правильную форму: «Молодые артисты свято верят ________.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q7" value="A" />
-                  <span>A. славу (Cách 4)</span>
+                  <span>A. в свой талант (в + В.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q7" value="B" />
-                  <span>B. к славе (Cách 3)</span>
+                  <span>B. о своём таланте (о + П.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q7" value="C" />
-                  <span>C. о славе (Giới từ о + Cách 6)</span>
+                  <span>C. своему таланту (Д.п.)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q7" value="D" />
-                  <span>D. славой (Cách 5)</span>
+                  <span>D. с своим талантом (Т.п.)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q7"></div>
             </div>
-
-            <!-- Câu L3_8 -->
-            <div class="question-block" data-q="l3_q8" data-ans="B">
+            <div class="question-block" data-q="l3_q8" data-ans="A">
               <div class="question-prompt">
-                8. Cấu trúc <strong>«верить»</strong> (tin tưởng vào ai/điều gì):
-                <br />«Артисты искренне верят ________.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 8.</strong> Какого падежа требует глагол <strong>«аплодировать»</strong>? Выберите правильный вариант: «Зрители долго аплодировали ________.»
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q8" value="A" />
-                  <span>A. о своём таланте (Cách 6)</span>
+                  <span>A. талантливым артистам (Дательный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q8" value="B" />
-                  <span>B. в свой талант (Giới từ в + Cách 4)</span>
+                  <span>B. талантливых артистов (Винительный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q8" value="C" />
-                  <span>C. своему таланту (Cách 3)</span>
+                  <span>C. талантливыми артистами (Творительный падеж)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q8" value="D" />
-                  <span>D. с своим талантом (Cách 5)</span>
+                  <span>D. о талантливых артистах (Предложный падеж)</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q8"></div>
             </div>
-
-            <!-- Câu L3_9 -->
-            <div class="question-block" data-q="l3_q9" data-ans="A">
+            <div class="question-block" data-q="l3_q9" data-ans="B">
               <div class="question-prompt">
-                9. Dạng bị động quá khứ ngắn (краткое причастие): «В 1898 году чеховская пьеса «Чайка» ________ на сцене МХТ.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 9.</strong> Почему первая постановка «Чайки» в Санкт-Петербурге в 1896 году потерпела неудачу?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q9" value="A" />
-                  <span>A. была поставлена (chủ ngữ «пьеса» giống cái)</span>
+                  <span>A. Актёры забыли слова роли во время спектакля</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q9" value="B" />
-                  <span>B. был поставлен (giống đực)</span>
+                  <span>B. Пьеса была новой и необычной и не была понята зрителями</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q9" value="C" />
-                  <span>C. было поставлено (giống trung)</span>
+                  <span>C. Билеты были слишком дорогими для публики</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q9" value="D" />
-                  <span>D. были поставлены (số nhiều)</span>
+                  <span>D. В зале было слишком холодно из-за зимы</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q9"></div>
             </div>
-
-            <!-- Câu L3_10 -->
-            <div class="question-block" data-q="l3_q10" data-ans="D">
+            <div class="question-block" data-q="l3_q10" data-ans="B">
               <div class="question-prompt">
-                10. Động từ <strong>«аплодировать»</strong> đòi hỏi cách nào khi chỉ người nhận tràng pháo tay?
-                <br />«После окончания спектакля зрители долго аплодировали ________.»
+                <span class="lang-badge lang-ru">🇷🇺 RU</span> <strong>Câu 10.</strong> Как отреагировали зрители на московскую премьеру «Чайки» в МХТ в 1898 году?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q10" value="A" />
-                  <span>A. артистов (Cách 2 / Cách 4)</span>
+                  <span>A. Ушли из зала до окончания действия</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q10" value="B" />
-                  <span>B. артистами (Cách 5)</span>
+                  <span>B. Долго аплодировали, бросали цветы на сцену и не хотели уходить</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q10" value="C" />
-                  <span>C. об артистах (Cách 6)</span>
+                  <span>C. Свистели и выражали недовольство</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q10" value="D" />
-                  <span>D. артистам (Cách 3 số nhiều: кому?)</span>
+                  <span>D. Сохраняли полное молчание после спектакля</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q10"></div>
             </div>
-
-            <!-- Câu L3_11 -->
-            <div class="question-block" data-q="l3_q11" data-ans="B">
+          </div>
+          
+          <div class="quiz-card">
+            <div class="quiz-card-header">
+              <h3 class="quiz-section-title">
+                <span>🇻🇳</span> Phần 2: Đọc Hiểu & Phân Tích Tiếng Việt (10 câu)
+              </h3>
+              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">10 câu VI</span>
+            </div>
+            <div class="question-block" data-q="l3_q11" data-ans="A">
               <div class="question-prompt">
-                11. Điền từ thích hợp: «Чехов пришёл на репетиции спектакля и ________, что идея пьесы понята правильно.»
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 11.</strong> Từ <strong>«занавес»</strong> trong kịch nghệ Nga có nghĩa là gì?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q11" value="A" />
-                  <span>A. сомневался (nghi ngờ)</span>
+                  <span>A. Bức rèm/màn sân khấu che khuất sàn diễn</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q11" value="B" />
-                  <span>B. убедился (tin chắc, thấy yên tâm)</span>
+                  <span>B. Tấm vé vào cổng rạp hát</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q11" value="C" />
-                  <span>C. отказался (từ chối)</span>
+                  <span>C. Bục đứng diễn thuyết của đạo diễn</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q11" value="D" />
-                  <span>D. испугался (hoảng sợ)</span>
+                  <span>D. Tờ chương trình giới thiệu diễn viên</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q11"></div>
             </div>
-          </div>
-
-          <!-- CARD 3: ĐỌC HIỂU CHI TIẾT NỘI DUNG (4 CÂU) -->
-          <div class="quiz-card">
-            <div class="quiz-card-header">
-              <h3 class="quiz-section-title">
-                <span>🔍</span> Phần 3: Đọc Hiểu Chi Tiết Tác Phẩm
-              </h3>
-              <span style="font-size: 13px; font-weight: 700; color: var(--brand);">4 câu</span>
-            </div>
-
-            <!-- Câu L3_12 -->
-            <div class="question-block" data-q="l3_q12" data-ans="A">
+            <div class="question-block" data-q="l3_q12" data-ans="B">
               <div class="question-prompt">
-                12. <strong>(Câu hỏi а trong đề)</strong> Biểu tượng của Nhà hát Nghệ thuật Moskva (MXT) là gì và có thể nhìn thấy nó ở những đâu?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 12.</strong> Ý nghĩa của cụm danh từ <strong>«нелёгкая судьба»</strong> là:
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q12" value="A" />
-                  <span>A. Chim hải âu đang bay; có thể thấy trên tòa nhà, trên rèm sân khấu và trên vé xem kịch</span>
+                  <span>A. Cuộc sống an nhàn, bình lặng</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q12" value="B" />
-                  <span>B. Chân dung của nhà văn Chekhov; chỉ thấy trong phòng bảo tàng</span>
+                  <span>B. Số phận gian nan, chông gai, đầy thăng trầm trắc trở</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q12" value="C" />
-                  <span>C. Cành hoa hồng đỏ; chỉ in trên các tờ áp-phích quảng cáo</span>
+                  <span>C. Con đường công danh thăng tiến thần tốc</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q12" value="D" />
-                  <span>D. Chiếc mặt nạ kịch nghệ; treo ở cửa vào sân khấu</span>
+                  <span>D. Cuộc đời ngắn ngủi vô vị</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q12"></div>
             </div>
-
-            <!-- Câu L3_13 -->
-            <div class="question-block" data-q="l3_q13" data-ans="C">
+            <div class="question-block" data-q="l3_q13" data-ans="B">
               <div class="question-prompt">
-                13. Vì sao buổi công diễn đầu tiên của vở «Чайка» tại Sankt-Peterburg năm 1896 lại thất bại?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 13.</strong> Động từ <strong>«убедиться»</strong> trong câu «убедился, что идея была правильно понята» mang nghĩa gì?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q13" value="A" />
-                  <span>A. Vì nhà hát bị cháy trước giờ mở màn</span>
+                  <span>A. Hoài nghi và không tin tưởng</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q13" value="B" />
-                  <span>B. Vì diễn viên chính bỏ vai vào phút chót</span>
+                  <span>B. Tận mắt chứng kiến và tin chắc, yên tâm tuyệt đối</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q13" value="C" />
-                  <span>C. Vì vở kịch quá mới lạ và chưa được khán giả Peterburg thấu hiểu</span>
+                  <span>C. Từ chối hợp tác</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q13" value="D" />
-                  <span>D. Vì chính quyền cấm công diễn vở kịch</span>
+                  <span>D. Quên đi một sự việc</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q13"></div>
             </div>
-
-            <!-- Câu L3_14 -->
             <div class="question-block" data-q="l3_q14" data-ans="B">
               <div class="question-prompt">
-                14. Vì sao vở «Чайка» lại có ý nghĩa vô cùng đặc biệt và quý giá đối với riêng bản thân văn hào Chekhov?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 14.</strong> Cụm từ <strong>«творческая профессия»</strong> chỉ nhóm nghề nghiệp nào sau đây?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q14" value="A" />
-                  <span>A. Vì đây là vở kịch duy nhất mang lại cho ông giải thưởng Nobel</span>
+                  <span>A. Kỹ sư xây dựng cầu đường</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q14" value="B" />
-                  <span>B. Vì trong tác phẩm, lần đầu tiên ông trải lòng về số phận gian nan của những người chọn con đường nghệ thuật</span>
+                  <span>B. Nghề sáng tạo nghệ thuật (nhà văn, diễn viên, họa sĩ, nhạc sĩ...)</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q14" value="C" />
-                  <span>C. Vì ông đã tự mình đảm nhận vai nam chính trên sân khấu</span>
+                  <span>C. Kế toán ngân hàng</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q14" value="D" />
-                  <span>D. Vì vở kịch được viết riêng tặng cho người mẹ của ông</span>
+                  <span>D. Công nhân sản xuất cơ khí</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q14"></div>
             </div>
-
-            <!-- Câu L3_15 -->
-            <div class="question-block" data-q="l3_q15" data-ans="D">
+            <div class="question-block" data-q="l3_q15" data-ans="B">
               <div class="question-prompt">
-                15. Phản ứng của khán giả thủ đô Moskva khi xem buổi công diễn năm 1898 tại MXT diễn ra như thế nào?
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 15.</strong> Tại sao ban đầu khi đạo diễn K. S. Stanislavski ngỏ lời đưa vở «Чайка» về Moskva, Chekhov lại do dự không đồng ý ngay?
+                
               </div>
               <div class="options-list">
                 <label class="option-item">
                   <input type="radio" name="l3_q15" value="A" />
-                  <span>A. Khán giả bỏ về sớm khi vở kịch mới diễn được nửa thời lượng</span>
+                  <span>A. Vì ông đòi mức thù lao quá cao</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q15" value="B" />
-                  <span>B. Khán giả giữ im lặng tuyệt đối và không có tràng pháo tay nào</span>
+                  <span>B. Vì ông còn rất đau buồn và ám ảnh sau thất bại đau đớn tại Peterburg năm 1896</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q15" value="C" />
-                  <span>C. Khán giả tranh cãi gay gắt và yêu cầu dừng buổi diễn</span>
+                  <span>C. Vì ông bận đi du lịch nước ngoài</span>
                 </label>
                 <label class="option-item">
                   <input type="radio" name="l3_q15" value="D" />
-                  <span>D. Vở kịch thành công vang dội; khán giả vỗ tay không ngớt, tung hoa lên sân khấu và không muốn rời nhà hát</span>
+                  <span>D. Vì ông muốn giải nghệ không viết kịch nữa</span>
                 </label>
               </div>
               <div class="feedback-msg" id="msg-l3_q15"></div>
             </div>
+            <div class="question-block" data-q="l3_q16" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 16.</strong> Hai nhân vật chính trong vở «Чайка» đại diện cho những hình tượng nào?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l3_q16" value="A" />
+                  <span>A. Một vị tướng quân đội và một thương nhân giàu có</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q16" value="B" />
+                  <span>B. Một cô gái khao khát thành minh tinh màn bạc và một chàng trai trẻ mới bước vào nghiệp văn chương</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q16" value="C" />
+                  <span>C. Hai nhà khoa học tự nhiên</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q16" value="D" />
+                  <span>D. Đôi vợ chồng nông dân già ở nông thôn</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l3_q16"></div>
+            </div>
+            <div class="question-block" data-q="l3_q17" data-ans="A">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 17.</strong> Thành ngữ <strong>«с тех пор»</strong> trong tiếng Nga tương đương với từ nối nào trong tiếng Việt?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l3_q17" value="A" />
+                  <span>A. Kể từ thời điểm đó trở đi</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q17" value="B" />
+                  <span>B. Trước đó rất lâu</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q17" value="C" />
+                  <span>C. Trong một khoảng thời gian ngắn ngủi</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q17" value="D" />
+                  <span>D. Mãi cho đến tận ngày mai</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l3_q17"></div>
+            </div>
+            <div class="question-block" data-q="l3_q18" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 18.</strong> Hành động <strong>«бросали цветы на сцену»</strong> của khán giả Moskva biểu thị điều gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l3_q18" value="A" />
+                  <span>A. Thể hiện sự phản đối kịch liệt</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q18" value="B" />
+                  <span>B. Bày tỏ lòng ái mộ, biết ơn và tôn vinh sâu sắc đối với các nghệ sĩ</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q18" value="C" />
+                  <span>C. Yêu cầu nhà hát dọn dẹp vệ sinh</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q18" value="D" />
+                  <span>D. Nghi thức tôn giáo bắt buộc</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l3_q18"></div>
+            </div>
+            <div class="question-block" data-q="l3_q19" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 19.</strong> Vở kịch «Чайка» được Anton Chekhov sáng tác vào năm nào và ở đâu?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l3_q19" value="A" />
+                  <span>A. Năm 1898 tại Moskva</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q19" value="B" />
+                  <span>B. Năm 1896 tại làng Melikhovo</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q19" value="C" />
+                  <span>C. Năm 1904 tại Badenweiler</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q19" value="D" />
+                  <span>D. Năm 1890 tại đảo Sakhalin</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l3_q19"></div>
+            </div>
+            <div class="question-block" data-q="l3_q20" data-ans="B">
+              <div class="question-prompt">
+                <span class="lang-badge lang-vi">🇻🇳 VI</span> <strong>Câu 20.</strong> Ý nghĩa biểu tượng của cánh hải âu «летящая чайка» đối với lịch sử Nhà hát Nghệ thuật Moskva (MXT) là gì?
+                
+              </div>
+              <div class="options-list">
+                <label class="option-item">
+                  <input type="radio" name="l3_q20" value="A" />
+                  <span>A. Là loài chim đặc trưng sống gần con sông Moskva</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q20" value="B" />
+                  <span>B. Biểu tượng cho bước ngoặt hồi sinh vĩ đại của nhà hát, tình bạn nghệ thuật bất hủ giữa Chekhov và MXT</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q20" value="C" />
+                  <span>C. Biểu trưng cho ước mơ di cư ra nước ngoài</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="l3_q20" value="D" />
+                  <span>D. Là hình ảnh linh vật may mắn của riêng đạo diễn Stanislavski</span>
+                </label>
+              </div>
+              <div class="feedback-msg" id="msg-l3_q20"></div>
+            </div>
           </div>
 
-          <!-- SUBMIT & SCORE ACTION BAR BÀI 3 -->
+          <!-- SUBMIT & SCORE ACTION BAR -->
           <div class="submit-card">
             <div class="score-display">
               <div class="score-circle" id="scoreValueL3">--</div>
               <div class="score-text">
                 <strong id="scoreStatusL3">Chưa nộp bài</strong>
-                <span id="scoreDetailL3">Hãy hoàn thành 15 câu hỏi để xem kết quả và giải thích ngữ pháp chi tiết.</span>
+                <span id="scoreDetailL3">Hãy hoàn thành tất cả 20 câu hỏi (10 Nga + 10 Việt) để xem kết quả và giải thích chi tiết.</span>
               </div>
             </div>
             <div class="btn-group">
@@ -1838,7 +2354,7 @@
         <div class="placeholder-icon">🚧</div>
         <h3 class="placeholder-title" id="placeholderTitle">Đang cập nhật nội dung</h3>
         <p class="placeholder-desc" id="placeholderDesc">
-          Nội dung cho cấp độ và kỹ năng này đang được ban chuyên môn hoàn thiện. Bạn hãy quay lại kiểm tra mục <strong>B2 - Đọc (Bài 1)</strong> nhé!
+          Nội dung cho cấp độ và kỹ năng này đang được ban chuyên môn hoàn thiện. Bạn hãy quay lại kiểm tra mục <strong>B2 - Đọc</strong> nhé!
         </p>
         <button class="btn-action btn-submit" id="btnBackToB2">
           👉 Đến bài B2 - Đọc (Bài 1)
@@ -1848,157 +2364,254 @@
 
     <!-- JAVASCRIPT XỬ LÝ TƯƠNG TÁC -->
     <script>
-      // Dữ liệu giải thích chi tiết cho Bài 1
       const quizExplanationsL1 = {
-        q1: {
-          B: "Chính xác! «ссориться» = спорить, конфликтовать (cãi nhau, tranh cãi).",
-          other: "Chưa đúng. «ссориться» có nghĩa là cãi vã, xung đột (спорить, конфликтовать)."
-        },
-        q2: {
-          D: "Chính xác! «мириться» nghĩa là làm lành, hòa giải sau khi cãi nhau.",
-          other: "Chưa đúng. «мириться» là động từ đối lập với «ссориться», có nghĩa là làm lành, giảng hòa."
-        },
-        q3: {
-          C: "Chính xác! «уютный» = удобный, приятный, тёплый (ấm cúng, dễ chịu).",
-          other: "Chưa đúng. «уютный» mang ý nghĩa là không gian ấm cúng, dễ chịu và tiện nghi."
-        },
-        q4: {
-          A: "Chính xác! «дружная семья» là gia đình hòa thuận, đoàn kết, tràn ngập tình yêu thương.",
-          other: "Chưa đúng. «дружная семья» có nghĩa là gia đình hòa thuận và gắn kết."
-        },
-        q5: {
-          B: "Chính xác! Động từ «любить» đòi hỏi Cách 4 (кого? -> друг друга). Động từ «помогать» đòi hỏi Cách 3 (кому? -> друг другу).",
-          other: "Sai cấu trúc cách. Nhớ quy tắc: Любить кого? -> друг друга (Cách 4). Помогать кому? -> друг другу (Cách 3)."
-        },
-        q6: {
-          A: "Chính xác! Chủ ngữ «Романы» là danh từ số nhiều, nên động từ phản thân chia số nhiều là «печатаются».",
-          other: "Chưa đúng. Chủ ngữ «Романы» là số nhiều nên động từ phải chia đuôi -ются («печатаются»)."
-        },
-        q7: {
-          C: "Chính xác! Cụm «с кем?» (với ai - Cách 5 số nhiều) của đại từ который là «с которыми».",
-          other: "Sai cách. Đi với giới từ «с» (với) dùng Cách 5 số nhiều: «с которыми»."
-        },
-        q8: {
-          B: "Chính xác! Cụm trạng ngữ cố định là «с удовольствием» (với niềm vui thích, say mê).",
-          other: "Chưa đúng. Cụm từ cố định trong tiếng Nga là «с удовольствием» (Cách 5)."
-        },
-        q9: {
-          C: "Chính xác! Trong bài viết: «Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги... читаются очень легко».",
-          other: "Chưa đúng theo nội dung bài đọc. Nhân vật của Ustinova là những con người bình thường, chân thực gần gũi đời thường."
-        },
-        q10: {
-          B: "Chính xác! Bài viết nêu rõ: «Вся её дружная семья живёт за городом в большом старом доме... в саду весело бегает собака Кузя».",
-          other: "Chưa đúng. Hãy đọc kỹ đoạn 1: Gia đình sống ngoại ô trong ngôi nhà cổ lớn và có chú chó tên là Kuzya."
-        }
-      };
+  "l1_q1": {
+    "B": "Правильно! «Ссориться» означает спорить, конфликтовать và выражать взаимные претензии.",
+    "other": "Неверно. «Ссориться» — это вступать в ссору, конфликтовать."
+  },
+  "l1_q2": {
+    "B": "Правильно! Антонимом к глаголу «ссориться» является «мириться» (восстанавливать согласие).",
+    "other": "Неверно. Противоположным по смыслу является глагол «мириться»."
+  },
+  "l1_q3": {
+    "C": "Правильно! «Уютный» — удобный, благоустроенный, приятный для жизни.",
+    "other": "Неверно. «Уютный дом» — это тёплый, приятный и удобный для жизни дом."
+  },
+  "l1_q4": {
+    "A": "Правильно! Дружная семья — это сплочённая семья, где царят любовь, взаимопомощь и согласие.",
+    "other": "Неверно. Дружная семья — это семья, сплочённая взаимной любовью и поддержкой."
+  },
+  "l1_q5": {
+    "B": "Правильно! Любить кого? -> друг друга (В.п.); Помогать кому? -> друг другу (Д.п.).",
+    "other": "Ошибка в падеже: любить кого? (друг друга), помогать кому? (друг другу)."
+  },
+  "l1_q6": {
+    "A": "Правильно! Подлежащее «романы» во множественном числе, поэтому сказуемое — «создаются».",
+    "other": "Неверно. Подлежащее «романы» (мн.ч.) требует форму глагола «создаются»."
+  },
+  "l1_q7": {
+    "C": "Правильно! Предлог «с» с одушевлёнными существительными требует Творительного падежа: с кем? -> с которыми.",
+    "other": "Ошибка в падеже. С предлогом «с» (с кем?) используется форма Т.п. мн.ч. «с которыми»."
+  },
+  "l1_q8": {
+    "B": "Правильно! В тексте прямо сказано: «Вся её дружная семья живёт за городом в большом старом доме».",
+    "other": "Неверно. По тексту семья живёт за городом в большом старом доме."
+  },
+  "l1_q9": {
+    "C": "Правильно! Текст: «...и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых».",
+    "other": "Неверно. Романы печатаются на старом компьютере, купленном у знакомых."
+  },
+  "l1_q10": {
+    "B": "Правильно! В тексте: «Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги... читаются очень легко».",
+    "other": "Неверно. Причина в том, что персонажи — настоящие, живые люди из реальной жизни."
+  },
+  "l1_q11": {
+    "B": "Chính xác! «За городом» nghĩa là ở vùng ngoại ô, ngoài phạm vi thành phố.",
+    "other": "Chưa đúng. «За городом» là cụm từ chỉ vị trí ở ngoại ô, ngoại thành."
+  },
+  "l1_q12": {
+    "C": "Chính xác! «С удовольствием» mang nghĩa là với niềm vui sướng, say mê, thích thú.",
+    "other": "Chưa đúng. «С удовольствием» diễn tả việc làm gì đó một cách rất hào hứng, thích thú."
+  },
+  "l1_q13": {
+    "B": "Chính xác! Hậu tố «-то» biểu thị ý nghĩa bất định (không xác định chính xác thời điểm trong quá khứ).",
+    "other": "Chưa đúng. «Когда-то» là đại từ/phó từ bất định chỉ một lúc nào đó trong quá khứ mà người nói không nhớ cụ thể."
+  },
+  "l1_q14": {
+    "B": "Chính xác! Dạng động từ phản thân «читается» đi kèm trạng từ «легко» chỉ đặc tính dễ đọc, văn phong trôi chảy.",
+    "other": "Chưa đúng. Đây là dạng động từ phản thân mang ý nghĩa miêu tả phẩm chất/đặc tính dễ đọc của tác phẩm."
+  },
+  "l1_q15": {
+    "B": "Chính xác! «Живые люди» trong văn học là phép ẩn dụ chỉ những nhân vật sinh động, chân thực như bước ra từ đời thực.",
+    "other": "Chưa đúng. Trong ngữ cảnh văn học, «живые люди» mang nghĩa là nhân vật sống động, chân thực và gần gũi."
+  },
+  "l1_q16": {
+    "B": "Chính xác! Bài viết miêu tả: bếp luôn nấu ăn, trẻ con chơi đùa, chó Kuzya chạy ngoài vườn, mọi người to tiếng rồi lại làm lành.",
+    "other": "Chưa đúng. Đoạn văn nêu rõ: «На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя»."
+  },
+  "l1_q17": {
+    "B": "Chính xác! Bài viết nêu rõ: «Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе...».",
+    "other": "Chưa đúng theo bài đọc. Chính ngôi nhà, khu vườn và gia đình bà là chất liệu xuất hiện trong mỗi cuốn tiểu thuyết."
+  },
+  "l1_q18": {
+    "B": "Chính xác! «Статья» là danh từ giống cái (đuôi -я), có nghĩa là bài báo, bài viết.",
+    "other": "Chưa đúng. «Статья» là danh từ giống cái, mang nghĩa là bài báo/bài viết."
+  },
+  "l1_q19": {
+    "B": "Chính xác! Câu đầu tiên của bài đọc: «Недавно в газете «Труд» была напечатана статья...».",
+    "other": "Chưa đúng. Ngay câu mở đầu văn bản có ghi: «в газете «Труд»»."
+  },
+  "l1_q20": {
+    "C": "Chính xác! Bài viết nhấn mạnh sự gắn kết gia đình, sự ấm cúng và sự chân thực đời thường chính là chìa khóa khiến sách của bà được đón nhận nồng nhiệt.",
+    "other": "Chưa đúng. Thông điệp cốt lõi là tình cảm gia đình hòa thuận và nhân vật gần gũi đời thường đã làm nên sức hút tác phẩm."
+  }
+};
 
-      // Dữ liệu giải thích chi tiết cho Bài 2
       const quizExplanationsL2 = {
-        l2_q1: {
-          C: "Chính xác! Văn bản nêu rõ: «В последнее время обсуждается вопрос: сколько детей должно быть в семье — один или несколько?».",
-          other: "Chưa đúng. Chủ đề trọng tâm của toàn bài là câu hỏi số lượng con trong gia đình (một hay nhiều con) và các khía cạnh nuôi dạy liên quan."
-        },
-        l2_q2: {
-          B: "Chính xác! «выйти из моды» = không còn là xu hướng, không còn phổ biến như trước.",
-          other: "Chưa đúng. Trong ngữ cảnh này «вышли из моды» là biện pháp ẩn dụ: các gia đình đông con hiện không còn phổ biến như xưa."
-        },
-        l2_q3: {
-          A: "Chính xác! Cấu trúc: «уделять / уделить внимание кому? (Cách 3)». Số nhiều của дети ở Cách 3 là «детям».",
-          other: "Sai quy tắc cách! Động từ «уделять внимание» bắt buộc đi với Cách 3 (кому? -> детям)."
-        },
-        l2_q4: {
-          C: "Chính xác! Cấu trúc: «опекать кого? (Cách 4 động vật sống)». «внук» ở Cách 4 là «единственного внука».",
-          other: "Sai cách! Động từ «опекать» đòi hỏi bổ ngữ trực tiếp Cách 4 (кого? -> единственного внука)."
-        },
-        l2_q5: {
-          B: "Chính xác! Cấu trúc chuẩn ngữ pháp: «обеспечивать / обеспечить кого? (Cách 4) чем? (Cách 5)» - cung cấp cho ai cái gì.",
-          other: "Chưa chính xác! Động từ «обеспечивать» đi với [кого? Cách 4] + [чем? Cách 5]."
-        },
-        l2_q6: {
-          D: "Chính xác! Áp dụng cấu trúc «обеспечить кого? чем? (Cách 5)» -> жильё (giống trung) chuyển sang Cách 5 là «жильём».",
-          other: "Sai đuôi Cách 5! Danh từ giống trung «жильё» chia ở Cách 5 là «жильём»."
-        },
-        l2_q7: {
-          B: "Chính xác! Trong câu bị động, tác nhân gây ra hành động đứng ở Cách 5 (кем? -> старшими братьями и сёстрами).",
-          other: "Sai cấu trúc bị động! Tác nhân thực hiện hành động trong câu bị động phải dùng Cách 5: «старшими братьями и сёстрами»."
-        },
-        l2_q8: {
-          A: "Chính xác! Bài viết chỉ ra: «Но единственные дети... говорят о своём одиночестве. Такие дети могут быть неуверенными в себе... потому что постоянно опекаются...».",
-          other: "Chưa đúng theo bài đọc. Mặt trái của con một là hay cô đơn và thiếu tự tin vì bị người lớn bảo bọc quá mức."
-        },
-        l2_q9: {
-          C: "Chính xác! Bài viết khẳng định: «Дети в больших семьях быстро становятся самостоятельными и уверенными в себе».",
-          other: "Chưa đúng. Điểm mạnh của trẻ trong gia đình đông con là sớm tự lập (самостоятельные) và tự tin."
-        },
-        l2_q10: {
-          B: "Chính xác! Bài viết: «В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов...».",
-          other: "Chưa đúng theo nội dung đoạn 1. Các cặp vợ chồng đến để nghe tư vấn từ các chuyên gia tâm lý, y bác sĩ và nhà giáo dục."
-        }
-      };
+  "l2_q1": {
+    "C": "Правильно! Основная тема текста — сколько детей должно быть в семье (один или несколько) и как это влияет на детей.",
+    "other": "Неверно. Главный вопрос текста — количество детей в семье и специфика их развития."
+  },
+  "l2_q2": {
+    "B": "Правильно! «Выйти из моды» означает потерять былую популярность, перестать быть общепринятым трендом.",
+    "other": "Неверно. В данном контексте это означает потерю популярности и актуальности в обществе."
+  },
+  "l2_q3": {
+    "A": "Правильно! Глагол «уделять внимание» требует Дательного падежа: кому? -> детям.",
+    "other": "Ошибка в падеже. Уделять внимание кому? — Дательный падеж (детям)."
+  },
+  "l2_q4": {
+    "C": "Правильно! Глагол «опекать» управляет Винительным падежом: кого? -> единственного сына.",
+    "other": "Неверно. Опекать кого? — Винительный падеж (единственного сына)."
+  },
+  "l2_q5": {
+    "B": "Правильно! Обеспечивать кого? (Винительный падеж) чем? (Творительный падеж).",
+    "other": "Ошибка. Стандартное управление: обеспечить кого? (4) чем? (5)."
+  },
+  "l2_q6": {
+    "B": "Правильно! Обеспечить кого? (ребёнка) чем? -> качественным образованием (Творительный падеж).",
+    "other": "Неверно. Глагол «обеспечить» требует Творительного падежа: чем? (образованием)."
+  },
+  "l2_q7": {
+    "C": "Правильно! Текст: «...в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами».",
+    "other": "Неверно. По тексту младшие дети воспитываются старшими братьями и сёстрами."
+  },
+  "l2_q8": {
+    "B": "Правильно! Причина в гиперопеке: они постоянно опекаются папами, мамами, бабушками и дедушками.",
+    "other": "Неверно. Текст указывает на чрезмерную опеку со стороны всех взрослых родственников."
+  },
+  "l2_q9": {
+    "A": "Правильно! В тексте: «Дети в больших семьях быстро становятся самостоятельными и уверенными в себе».",
+    "other": "Неверно. Главное преимущество — быстрое развитие самостоятельности и уверенности."
+  },
+  "l2_q10": {
+    "A": "Правильно! Текст: «...чтобы получить консультацию опытных психологов, врачей и педагогов».",
+    "other": "Неверно. Цель — получить консультацию квалифицированных специалистов."
+  },
+  "l2_q11": {
+    "B": "Chính xác! «Центр планирования семьи» là trung tâm kế hoạch hóa gia đình.",
+    "other": "Chưa đúng. Đây là thuật ngữ y tế - xã hội chỉ Trung tâm kế hoạch hóa gia đình."
+  },
+  "l2_q12": {
+    "B": "Chính xác! «Одиночество» nghĩa là cảm giác cô đơn, cô độc.",
+    "other": "Chưa đúng. «Одиночество» bắt nguồn từ gốc «один» (một mình), chỉ sự cô đơn, lẻ loi."
+  },
+  "l2_q13": {
+    "B": "Chính xác! «Самостоятельный» (tự lập, độc lập) là đứa trẻ tự biết chăm sóc và giải quyết việc của mình.",
+    "other": "Chưa đúng. «Самостоятельный» bắt nguồn từ «сам» (tự mình) + «стоять» (đứng vững), nghĩa là tự lập."
+  },
+  "l2_q14": {
+    "B": "Chính xác! «Опекать» trong tâm lý học giáo dục thường chỉ sự bao bọc quá mức (гиперопека).",
+    "other": "Chưa đúng. Ngữ cảnh bài viết chỉ sự chở che, bao bọc quá mức của người lớn khiến trẻ thiếu tự tin."
+  },
+  "l2_q15": {
+    "B": "Chính xác! «По-своему» có nghĩa là theo cách riêng, lối riêng của mỗi người/mỗi nhà.",
+    "other": "Chưa đúng. «По-своему» biểu thị hành động diễn ra theo cách thức riêng của chủ thể."
+  },
+  "l2_q16": {
+    "B": "Chính xác! Bài viết chỉ ra: «Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально».",
+    "other": "Chưa đúng. Ưu điểm được nêu trong bài là đứa trẻ nhận được nhiều thời gian quan tâm và điều kiện vật chất tốt hơn."
+  },
+  "l2_q17": {
+    "B": "Chính xác! Bài viết: «...родители не могут проводить много времени с каждым ребёнком».",
+    "other": "Chưa đúng. Nhược điểm của gia đình đông con là cha mẹ khó dành nhiều thời gian riêng cho từng đứa con."
+  },
+  "l2_q18": {
+    "B": "Chính xác! Trích dẫn bài đọc: «Но единственные дети, особенно подростки, часто говорят о своём одиночестве».",
+    "other": "Chưa đúng theo văn bản. Đối tượng hay chia sẻ về sự cô đơn là con một, đặc biệt là lứa tuổi thiếu niên."
+  },
+  "l2_q19": {
+    "B": "Chính xác! «Материальные проблемы» là các khó khăn liên quan đến vật chất, tài chính, tiền bạc.",
+    "other": "Chưa đúng. «Материальный» chỉ phương diện vật chất, kinh tế, tài chính."
+  },
+  "l2_q20": {
+    "B": "Chính xác! Bài viết nhấn mạnh «В каждой семье эта проблема решается по-своему», cả hai mô hình đều có ưu và nhược điểm riêng cần cân nhắc.",
+    "other": "Chưa đúng. Thông điệp bài đọc là mỗi gia đình tự quyết định dựa trên hoàn cảnh và sự thấu hiểu điểm mạnh - điểm yếu của từng mô hình."
+  }
+};
 
-      // Dữ liệu giải thích chi tiết cho Bài 3 (15 câu)
       const quizExplanationsL3 = {
-        l3_q1: {
-          B: "Chính xác! «пьеса» là tác phẩm kịch bản văn học dành riêng cho biểu diễn trên sân khấu nhà hát.",
-          other: "Chưa đúng. «пьеса» trong tiếng Nga là vở kịch bản sân khấu."
-        },
-        l3_q2: {
-          C: "Chính xác! «чайка» là chim hải âu; «летящая чайка» là hình tượng chim hải âu đang sải cánh bay.",
-          other: "Chưa đúng. «чайка» trong tiếng Nga nghĩa là chim hải âu."
-        },
-        l3_q3: {
-          A: "Chính xác! «занавес» trong nhà hát chính là bức màn lớn che sân khấu trước và sau buổi diễn.",
-          other: "Chưa đúng. «занавес» là màn sân khấu kịch."
-        },
-        l3_q4: {
-          D: "Chính xác! «режиссёр» là đạo diễn chỉ đạo dàn dựng toàn bộ vở diễn sân khấu.",
-          other: "Chưa đúng. «режиссёр» là đạo diễn sân khấu."
-        },
-        l3_q5: {
-          B: "Chính xác! «репетиция» là buổi tập dượt, tổng duyệt trước khi công diễn chính thức.",
-          other: "Chưa đúng. «репетиция» nghĩa là buổi tập dượt / duyệt kịch."
-        },
-        l3_q6: {
-          A: "Chính xác! «нелёгкая судьба» = cuộc đời gian nan, trắc trở nhiều thử thách.",
-          other: "Chưa đúng. «нелёгкая судьба» là số phận vất vả, gian nan."
-        },
-        l3_q7: {
-          C: "Chính xác! Cấu trúc: «мечтать о ком? о чём? (Cách 6)». «слава» chia ở Cách 6 là «о славе».",
-          other: "Sai cách! Động từ «мечтать» bắt buộc đi với [о + Cách 6]: «о славе»."
-        },
-        l3_q8: {
-          B: "Chính xác! Cấu trúc: «верить в кого? в что? (Giới từ в + Cách 4)». «свой талант» ở Cách 4 bất động vật là «в свой талант».",
-          other: "Sai cấu trúc! Động từ «верить» (tin vào điều gì) đi với [в + Cách 4]: «в свой талант»."
-        },
-        l3_q9: {
-          A: "Chính xác! Chủ ngữ «пьеса» là danh từ giống cái số ít, nên phân từ bị động ngắn là «была поставлена».",
-          other: "Sai giống! «пьеса» là giống cái nên dùng «была поставлена»."
-        },
-        l3_q10: {
-          D: "Chính xác! Cấu trúc: «аплодировать кому? (Cách 3)». Số nhiều của артист ở Cách 3 là «артистам».",
-          other: "Sai cách! Động từ «аплодировать» đòi hỏi Cách 3 (кому? -> артистам)."
-        },
-        l3_q11: {
-          B: "Chính xác! «убедиться, что...» = tin chắc, xác thực chắc chắn điều gì.",
-          other: "Chưa đúng ngữ cảnh. Chekhov đến xem tập kịch và tin chắc (убедился) ý tưởng của mình đã được hiểu đúng."
-        },
-        l3_q12: {
-          A: "Chính xác! Biểu tượng của MXT là «летящая чайка»; xuất hiện trên tòa nhà, rèm sân khấu và vé xem kịch.",
-          other: "Chưa đúng theo bài đọc. Biểu tượng của nhà hát là hình ảnh chim hải âu bay (летящая чайка)."
-        },
-        l3_q13: {
-          C: "Chính xác! Bài viết: «К сожалению, пьеса не имела успеха, потому что не была понята зрителями».",
-          other: "Chưa đúng theo văn bản. Buổi diễn thất bại vì khán giả Peterburg thời đó chưa hiểu được vở kịch mới lạ này."
-        },
-        l3_q14: {
-          B: "Chính xác! Bài viết: «...писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию».",
-          other: "Chưa đúng. Vở kịch đặc biệt với Chekhov vì lần đầu ông viết về số phận chông gai của những người làm nghệ thuật."
-        },
-        l3_q15: {
-          D: "Chính xác! Khán giả Moskva đón nhận nồng nhiệt: «Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра».",
-          other: "Chưa đúng theo đoạn cuối bài. Buổi diễn tại Moskva thành công vang dội (огромный успех) với tràng pháo tay không ngớt."
-        }
-      };
+  "l3_q1": {
+    "B": "Правильно! Пьеса — это литературное произведение драматического рода, написанное для театральной сцены.",
+    "other": "Неверно. Пьеса — это драматическое произведение для театра."
+  },
+  "l3_q2": {
+    "C": "Правильно! Текст: «С тех пор летящая чайка стала символом Московского Художественного театра».",
+    "other": "Неверно. Символ МХТ — летящая чайка."
+  },
+  "l3_q3": {
+    "A": "Правильно! В тексте: «Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах».",
+    "other": "Неверно. Символ изображён на здании, на занавесе и на билетах театра."
+  },
+  "l3_q4": {
+    "B": "Правильно! Режиссёр — это творческий руководитель постановки спектакля.",
+    "other": "Неверно. Режиссёр руководит постановкой спектакля и работой актёров."
+  },
+  "l3_q5": {
+    "B": "Правильно! Репетиция — предварительное исполнение спектакля для подготовки к публичному выступлению.",
+    "other": "Неверно. Репетиция — это подготовка и отработка спектакля артистами."
+  },
+  "l3_q6": {
+    "B": "Правильно! Глагол «мечтать» требует конструкции: о ком? о чём? — Предложный падеж (о славе).",
+    "other": "Ошибка в падеже: мечтать о чём? — Предложный падеж."
+  },
+  "l3_q7": {
+    "A": "Правильно! Верить в кого? в что? требует Винительного падежа: «в свой талант».",
+    "other": "Ошибка. Глагол «верить в...» требует Винительного падежа."
+  },
+  "l3_q8": {
+    "A": "Правильно! Аплодировать кому? — Дательный падеж: артистам.",
+    "other": "Ошибка в падеже. Аплодировать кому? — Дательный падеж."
+  },
+  "l3_q9": {
+    "B": "Правильно! В тексте прямо сказано: «К сожалению, пьеса не имела успеха, потому что не была понята зрителями».",
+    "other": "Неверно. Причина провала заключалась в том, что зрители не поняли новаторскую пьесу."
+  },
+  "l3_q10": {
+    "B": "Правильно! Пьеса имела огромный успех: зрители аплодировали, бросали цветы и не хотели уходить.",
+    "other": "Неверно. Спектакль в Москве имел триумфальный успех."
+  },
+  "l3_q11": {
+    "A": "Chính xác! «Занавес» là bức màn sân khấu của nhà hát.",
+    "other": "Chưa đúng. «Занавес» là màn sân khấu kịch."
+  },
+  "l3_q12": {
+    "B": "Chính xác! «Нелёгкая судьба» miêu tả cuộc đời vất vả, gian truân của những người làm nghệ thuật.",
+    "other": "Chưa đúng. «Нелёгкая судьба» nghĩa là số phận gian nan, trắc trở."
+  },
+  "l3_q13": {
+    "B": "Chính xác! «Убедиться» nghĩa là tin chắc, kiểm chứng chắc chắn điều gì đó.",
+    "other": "Chưa đúng. «Убедиться» có nghĩa là tin chắc, nắm chắc điều gì."
+  },
+  "l3_q14": {
+    "B": "Chính xác! «Творческая профессия» là nghề nghiệp mang tính sáng tạo nghệ thuật (như nhà văn, diễn viên kịch).",
+    "other": "Chưa đúng. «Творческая профессия» là các nghề sáng tạo nghệ thuật."
+  },
+  "l3_q15": {
+    "B": "Chính xác! Bài viết: «Антон Павлович Чехов очень переживал эту неудачу. Поэтому... согласился не сразу».",
+    "other": "Chưa đúng. Chekhov rất trăn trở và đau lòng trước thất bại trước đó nên ông không dám nhận lời ngay."
+  },
+  "l3_q16": {
+    "B": "Chính xác! Trích dẫn: «девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель».",
+    "other": "Chưa đúng theo văn bản. Nhân vật là một cô gái mơ làm diễn viên lớn và một nhà văn trẻ mới vào nghề."
+  },
+  "l3_q17": {
+    "A": "Chính xác! «С тех пор» nghĩa là kể từ đó, từ mốc thời gian đó trở đi.",
+    "other": "Chưa đúng. «С тех пор» tương đương với 'kể từ đó trở đi'."
+  },
+  "l3_q18": {
+    "B": "Chính xác! Tung hoa lên sân khấu kịch là cử chỉ văn hóa đẹp thể hiện sự mến mộ và thán phục tài năng diễn viên.",
+    "other": "Chưa đúng. Đây là nét đẹp văn hóa sân khấu thể hiện lòng cảm phục và tôn vinh người nghệ sĩ."
+  },
+  "l3_q19": {
+    "B": "Chính xác! Câu đầu tiên: «Пьеса «Чайка» была написана Антоном Павловичем Чеховым в 1896 году в Мелихове».",
+    "other": "Chưa đúng theo câu mở đầu bài đọc: năm 1896 tại Melikhovo."
+  },
+  "l3_q20": {
+    "B": "Chính xác! «Чайка» là tác phẩm mang lại danh tiếng lẫy lừng cho MXT, gắn liền sự ra đời và trường tồn của trường phái kịch nghệ Chekhov - Stanislavski.",
+    "other": "Chưa đúng. Cánh hải âu tượng trưng cho bước ngoặt lịch sử và tình bạn nghệ thuật vĩ đại giữa Chekhov và MXT."
+  }
+};
 
       // Hàm gắn sự kiện click cho các option-item
       function bindOptionEvents() {
@@ -2018,17 +2631,17 @@
 
       // Submit chấm điểm Bài 1
       document.getElementById('btnSubmit').addEventListener('click', function() {
-        evaluateQuiz('#contentB2Reading1', quizExplanationsL1, 'scoreValue', 'scoreStatus', 'scoreDetail', 10);
+        evaluateQuiz('#contentB2Reading1', quizExplanationsL1, 'scoreValue', 'scoreStatus', 'scoreDetail', 20);
       });
 
       // Submit chấm điểm Bài 2
       document.getElementById('btnSubmitL2').addEventListener('click', function() {
-        evaluateQuiz('#contentB2Reading2', quizExplanationsL2, 'scoreValueL2', 'scoreStatusL2', 'scoreDetailL2', 10);
+        evaluateQuiz('#contentB2Reading2', quizExplanationsL2, 'scoreValueL2', 'scoreStatusL2', 'scoreDetailL2', 20);
       });
 
       // Submit chấm điểm Bài 3
       document.getElementById('btnSubmitL3').addEventListener('click', function() {
-        evaluateQuiz('#contentB2Reading3', quizExplanationsL3, 'scoreValueL3', 'scoreStatusL3', 'scoreDetailL3', 15);
+        evaluateQuiz('#contentB2Reading3', quizExplanationsL3, 'scoreValueL3', 'scoreStatusL3', 'scoreDetailL3', 20);
       });
 
       // Hàm chấm điểm chung
@@ -2041,8 +2654,8 @@
         questionBlocks.forEach(block => {
           const qId = block.getAttribute('data-q');
           const correctAns = block.getAttribute('data-ans');
-          const selectedRadio = block.querySelector(`input[name="${qId}"]:checked`);
-          const msgEl = document.getElementById(`msg-${qId}`);
+          const selectedRadio = block.querySelector('input[name="' + qId + '"]:checked');
+          const msgEl = document.getElementById('msg-' + qId);
 
           block.querySelectorAll('.option-item').forEach(opt => opt.classList.remove('correct', 'incorrect'));
 
@@ -2054,20 +2667,20 @@
               score++;
               selectedItem.classList.add('correct');
               msgEl.className = 'feedback-msg show feedback-correct';
-              msgEl.innerHTML = `✅ ${explanations[qId][correctAns]}`;
+              msgEl.innerHTML = '✅ ' + (explanations[qId] && explanations[qId][correctAns] ? explanations[qId][correctAns] : 'Chính xác!');
             } else {
               selectedItem.classList.add('incorrect');
-              const correctRadio = block.querySelector(`input[name="${qId}"][value="${correctAns}"]`);
+              const correctRadio = block.querySelector('input[name="' + qId + '"][value="' + correctAns + '"]');
               if (correctRadio) {
                 correctRadio.closest('.option-item').classList.add('correct');
               }
               msgEl.className = 'feedback-msg show feedback-wrong';
-              msgEl.innerHTML = `❌ ${explanations[qId].other}`;
+              msgEl.innerHTML = '❌ ' + (explanations[qId] && explanations[qId].other ? explanations[qId].other : 'Chưa chính xác!');
             }
           } else {
             msgEl.className = 'feedback-msg show feedback-wrong';
-            msgEl.innerHTML = `⚠️ Bạn chưa trả lời câu này! Đáp án đúng là <strong>${correctAns}</strong>.`;
-            const correctRadio = block.querySelector(`input[name="${qId}"][value="${correctAns}"]`);
+            msgEl.innerHTML = '⚠️ Bạn chưa trả lời câu này! Đáp án đúng là <strong>' + correctAns + '</strong>.';
+            const correctRadio = block.querySelector('input[name="' + qId + '"][value="' + correctAns + '"]');
             if (correctRadio) {
               correctRadio.closest('.option-item').classList.add('correct');
             }
@@ -2078,36 +2691,36 @@
         const scoreStatus = document.getElementById(statusId);
         const scoreDetail = document.getElementById(detailId);
 
-        scoreCircle.textContent = `${score}/${total}`;
+        scoreCircle.textContent = score + '/' + total;
         const ratio = score / total;
         if (ratio >= 0.8) {
           scoreStatus.textContent = "Xuất sắc! (Отлично)";
           scoreStatus.style.color = "#16a34a";
-          scoreDetail.textContent = `Bạn đã nắm vững toàn bộ từ vựng, cấu trúc quản trị cách và ý nghĩa bài đọc!`;
+          scoreDetail.textContent = 'Bạn đã nắm vững toàn bộ từ vựng, cấu trúc quản trị cách và ý nghĩa bài đọc!';
         } else if (ratio >= 0.5) {
           scoreStatus.textContent = "Khá tốt! (Хорошо)";
           scoreStatus.style.color = "#d97706";
-          scoreDetail.textContent = `Bạn hiểu bài khá tốt, hãy xem lại các câu giải thích ngữ pháp và từ vựng để nhớ lâu hơn nhé.`;
+          scoreDetail.textContent = 'Bạn hiểu bài khá tốt, hãy xem lại các câu giải thích ngữ pháp và từ vựng để nhớ lâu hơn nhé.';
         } else {
           scoreStatus.textContent = "Cần ôn tập thêm! (Повторите)";
           scoreStatus.style.color = "#dc2626";
-          scoreDetail.textContent = `Hãy đọc kỹ bảng từ vựng bên trái, sau đó bấm Làm lại nhé!`;
+          scoreDetail.textContent = 'Hãy đọc kỹ bảng từ vựng bên trái, sau đó bấm Làm lại nhé!';
         }
       }
 
       // Reset bài 1
       document.getElementById('btnReset').addEventListener('click', function() {
-        resetQuiz('#contentB2Reading1', 'scoreValue', 'scoreStatus', 'scoreDetail', 10);
+        resetQuiz('#contentB2Reading1', 'scoreValue', 'scoreStatus', 'scoreDetail', 20);
       });
 
       // Reset bài 2
       document.getElementById('btnResetL2').addEventListener('click', function() {
-        resetQuiz('#contentB2Reading2', 'scoreValueL2', 'scoreStatusL2', 'scoreDetailL2', 10);
+        resetQuiz('#contentB2Reading2', 'scoreValueL2', 'scoreStatusL2', 'scoreDetailL2', 20);
       });
 
       // Reset bài 3
       document.getElementById('btnResetL3').addEventListener('click', function() {
-        resetQuiz('#contentB2Reading3', 'scoreValueL3', 'scoreStatusL3', 'scoreDetailL3', 15);
+        resetQuiz('#contentB2Reading3', 'scoreValueL3', 'scoreStatusL3', 'scoreDetailL3', 20);
       });
 
       function resetQuiz(containerSelector, valId, statusId, detailId, totalQuestions) {
@@ -2121,7 +2734,7 @@
         document.getElementById(valId).textContent = '--';
         document.getElementById(statusId).textContent = 'Chưa nộp bài';
         document.getElementById(statusId).style.color = '';
-        document.getElementById(detailId).textContent = `Hãy hoàn thành ${totalQuestions || 10} câu hỏi để xem kết quả và giải thích chi tiết.`;
+        document.getElementById(detailId).textContent = 'Hãy hoàn thành ' + (totalQuestions || 20) + ' câu hỏi để xem kết quả và giải thích chi tiết.';
       }
 
       // State bộ lọc: Level, Skill, Lesson
@@ -2144,7 +2757,7 @@
           writing: 'Viết'
         };
 
-        labelEl.textContent = `${currentLevel} - ${skillNames[currentSkill] || currentSkill} (Bài ${currentLesson})`;
+        labelEl.textContent = currentLevel + ' - ' + (skillNames[currentSkill] || currentSkill) + ' (Bài ' + currentLesson + ')';
 
         if (isB2Reading) {
           placeholder.classList.remove('active');
@@ -2156,8 +2769,8 @@
           contentB2L2.style.display = 'none';
           contentB2L3.style.display = 'none';
           placeholder.classList.add('active');
-          document.getElementById('placeholderTitle').textContent = `${currentLevel} - ${skillNames[currentSkill] || currentSkill} (Đang cập nhật)`;
-          document.getElementById('placeholderDesc').innerHTML = `Hệ thống đang chuẩn bị các bộ đề cho trình độ <strong>${currentLevel}</strong> phần <strong>${skillNames[currentSkill]}</strong>. Bạn có thể chọn mục <strong>B2 - Đọc</strong> để luyện tập.`;
+          document.getElementById('placeholderTitle').textContent = currentLevel + ' - ' + (skillNames[currentSkill] || currentSkill) + ' (Đang cập nhật)';
+          document.getElementById('placeholderDesc').innerHTML = 'Hệ thống đang chuẩn bị các bộ đề cho trình độ <strong>' + currentLevel + '</strong> phần <strong>' + skillNames[currentSkill] + '</strong>. Bạn có thể chọn mục <strong>B2 - Đọc</strong> để luyện tập.';
         }
       }
 
@@ -2216,7 +2829,6 @@
           navToggleBtn.setAttribute('aria-expanded', String(isOpen));
         });
 
-        // Đóng menu khi bấm vào link
         navLinks.querySelectorAll('.nav-item').forEach(link => {
           link.addEventListener('click', () => {
             navLinks.classList.remove('open');
@@ -2228,4 +2840,3 @@
     </script>
   </body>
 </html>
-
