@@ -1341,17 +1341,23 @@ function renderLessonLayout(lesson) {
                 <span class="audio-status-tag" id="audioStatusTag${submitIdSuffix}">Sẵn sàng</span>
               </div>
               <div class="audio-controls">
-                <button class="btn-audio-ctrl btn-audio-skip btn-audio-back" id="btnAudioBack${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Lùi lại 5 giây">
-                  <span>⏪</span>
-                  <span>-5s</span>
+                <button class="btn-audio-circle btn-audio-back" id="btnAudioBack${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Lùi lại 5 giây" aria-label="Lùi lại 5 giây">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                    <path d="M3 3v5h5"/>
+                    <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                  </svg>
                 </button>
                 <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Bắt đầu / Tạm dừng đọc">
                   <span class="ctrl-icon">▶</span>
                   <span class="ctrl-text">Nghe đoạn văn</span>
                 </button>
-                <button class="btn-audio-ctrl btn-audio-skip btn-audio-forward" id="btnAudioForward${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Tua tới 5 giây">
-                  <span>⏩</span>
-                  <span>+5s</span>
+                <button class="btn-audio-circle btn-audio-forward" id="btnAudioForward${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Tua tới 5 giây" aria-label="Tua tới 5 giây">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                    <path d="M21 3v5h-5"/>
+                    <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                  </svg>
                 </button>
                 <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" style="display: none;" title="Dừng hẳn bài đọc">
                   <span>⏹</span>
@@ -1360,10 +1366,10 @@ function renderLessonLayout(lesson) {
               </div>
             </div>
 
-            <!-- THANH TIẾN ĐỘ THỜI GIAN (CLICK ĐỂ TUA TỚI VỊ TRÍ BẤT KỲ) -->
+            <!-- THANH TIẾN ĐỘ THỜI GIAN -->
             <div class="audio-progress-container">
               <span class="audio-time-label" id="audioCurrentTime${submitIdSuffix}">0:00</span>
-              <div class="audio-progress-track" id="audioProgressTrack${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Bấm vào vị trí bất kỳ trên thanh để tua">
+              <div class="audio-progress-track" id="audioProgressTrack${submitIdSuffix}">
                 <div class="audio-progress-fill" id="audioProgressFill${submitIdSuffix}"></div>
               </div>
               <span class="audio-time-label" id="audioTotalTime${submitIdSuffix}">--:--</span>
@@ -1372,10 +1378,7 @@ function renderLessonLayout(lesson) {
             <!-- DÒNG HƯỚNG DẪN TƯƠNG TÁC TRỰC QUAN -->
             <div class="audio-hint-bar">
               <span class="audio-hint-text">
-                <span>👆</span> <em>Chạm/Click vào <strong>câu bất kỳ</strong> trong bài để nghe đọc từ câu đó.</em>
-              </span>
-              <span class="audio-hint-text">
-                <span>⏩</span> <em>Bấm trên thanh thời gian hoặc <strong>±5s</strong> để tua nhanh.</em>
+                <span>👆</span> <em>Chạm hoặc Click vào <strong>câu bất kỳ</strong> trong bài đọc để nghe đọc từ câu đó.</em>
               </span>
             </div>
           </div>
@@ -2080,7 +2083,7 @@ ${allHtmlLayouts}
         }
       }
 
-      function skipAudio(suffix, delta) {
+      function skipAudio(suffix, direction) {
         const ap = speechState.articlePlayer;
         const data = lessonSentenceData[suffix];
         if (!data || !data.sentences.length) return;
@@ -2090,8 +2093,35 @@ ${allHtmlLayouts}
           return;
         }
 
-        const newTime = Math.max(0, Math.min(data.totalSeconds, ap.elapsedSeconds + delta));
-        seekArticlePlayer(suffix, newTime);
+        let nextIdx = ap.currentSentenceIdx;
+        if (direction < 0) {
+          // Lùi lại: nếu câu hiện tại đã đọc hơn 2.5s thì đọc lại từ đầu câu này, nếu mới vào thì về câu trước
+          const curSent = data.sentences[ap.currentSentenceIdx];
+          const timeInCur = ap.elapsedSeconds - (curSent ? curSent.startTime : 0);
+          if (timeInCur > 2.5) {
+            nextIdx = ap.currentSentenceIdx;
+          } else {
+            nextIdx = Math.max(0, ap.currentSentenceIdx - 1);
+          }
+        } else {
+          // Tua tới câu kế tiếp
+          nextIdx = Math.min(data.sentences.length - 1, ap.currentSentenceIdx + 1);
+        }
+
+        const targetSent = data.sentences[nextIdx];
+        if (targetSent) {
+          ap.elapsedSeconds = targetSent.startTime;
+          ap.currentSentenceIdx = nextIdx;
+          if (ap.status === 'playing') {
+            playSentence(suffix, nextIdx);
+          } else {
+            clearSentenceHighlights(suffix);
+            if (targetSent.element) {
+              targetSent.element.classList.add('active-sentence');
+            }
+            updatePlayerUI(suffix);
+          }
+        }
       }
 
       // Phát âm từ vựng ngắn (Single word)
@@ -2195,48 +2225,27 @@ ${allHtmlLayouts}
           return;
         }
 
-        // 3. Click trên thanh tiến trình (Seek Track) để tua tới vị trí bất kỳ
-        const trackEl = e.target.closest('.audio-progress-track');
-        if (trackEl) {
-          e.preventDefault();
-          e.stopPropagation();
-          const suffix = trackEl.getAttribute('data-lesson-suffix') || '';
-          const data = lessonSentenceData[suffix];
-          if (!data || !data.totalSeconds) return;
-
-          const rect = trackEl.getBoundingClientRect();
-          const clickX = e.clientX - rect.left;
-          const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-          const targetSec = Math.round(ratio * data.totalSeconds);
-
-          if (speechState.articlePlayer.status === 'idle') {
-            startArticlePlayer(suffix, 0);
-          }
-          seekArticlePlayer(suffix, targetSec);
-          return;
-        }
-
-        // 4. Nút lùi 5s
+        // 3. Nút lùi 5s (hoặc lùi câu)
         const backBtn = e.target.closest('.btn-audio-back');
         if (backBtn) {
           e.preventDefault();
           e.stopPropagation();
           const suffix = backBtn.getAttribute('data-lesson-suffix') || '';
-          skipAudio(suffix, -5);
+          skipAudio(suffix, -1);
           return;
         }
 
-        // 5. Nút tua 5s
+        // 4. Nút tua 5s (hoặc câu tiếp)
         const fwdBtn = e.target.closest('.btn-audio-forward');
         if (fwdBtn) {
           e.preventDefault();
           e.stopPropagation();
           const suffix = fwdBtn.getAttribute('data-lesson-suffix') || '';
-          skipAudio(suffix, 5);
+          skipAudio(suffix, 1);
           return;
         }
 
-        // 6. Nút Play / Pause / Tiếp tục trên thanh Audio Player
+        // 5. Nút Play / Pause / Tiếp tục trên thanh Audio Player
         const playBtn = e.target.closest('.btn-audio-play');
         if (playBtn) {
           e.preventDefault();

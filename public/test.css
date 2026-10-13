@@ -1147,18 +1147,37 @@ body {
   color: var(--brand);
 }
 
-.btn-audio-skip {
-  padding: 6px 11px;
-  font-size: 12px;
-  background: #f8fafc;
+.btn-audio-circle {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid var(--line);
   color: var(--ink-secondary);
-  border-color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.btn-audio-skip:hover {
+.btn-audio-circle:hover {
   background: var(--brand-light);
   border-color: var(--brand);
   color: var(--brand-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(26, 122, 94, 0.15);
+}
+
+.btn-audio-circle:active {
+  transform: translateY(0);
+}
+
+.btn-audio-circle svg {
+  display: block;
 }
 
 .btn-audio-play {
@@ -1186,7 +1205,7 @@ body {
   border-color: #fca5a5;
 }
 
-/* PROGRESS BAR & SEEK TRACK */
+/* PROGRESS BAR (VISUAL PROGRESS TRACK) */
 .audio-progress-container {
   display: flex;
   align-items: center;
@@ -1204,18 +1223,12 @@ body {
 
 .audio-progress-track {
   flex: 1;
-  height: 9px;
+  height: 7px;
   background: #e2e8f0;
   border-radius: 999px;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
-  transition: height 0.15s ease, background-color 0.15s ease;
-}
-
-.audio-progress-track:hover {
-  height: 12px;
-  background: #cbd5e1;
+  cursor: default;
 }
 
 .audio-progress-fill {
@@ -1223,7 +1236,7 @@ body {
   width: 0%;
   background: linear-gradient(90deg, var(--brand) 0%, #10b981 100%);
   border-radius: 999px;
-  transition: width 0.15s linear;
+  transition: width 0.2s linear;
   pointer-events: none;
 }
 
@@ -1231,7 +1244,7 @@ body {
 .audio-hint-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 10px;
   padding-top: 8px;
   border-top: 1px dashed #e2e8f0;
@@ -1327,21 +1340,23 @@ body {
   .audio-controls {
     width: 100%;
     justify-content: space-between;
-    gap: 4px;
+    gap: 6px;
   }
 
   .btn-audio-ctrl {
-    padding: 6px 8px;
+    padding: 6px 10px;
     font-size: 12px;
   }
 
   .btn-audio-play {
     flex: 1;
-    min-width: 100px;
+    min-width: 110px;
   }
 
-  .btn-audio-skip {
-    padding: 6px 8px;
+  .btn-audio-circle {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
   }
 
   .audio-hint-bar {
