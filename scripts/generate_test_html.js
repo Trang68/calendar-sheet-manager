@@ -1167,6 +1167,19 @@ function cleanTextForSpeech(text) {
     .trim();
 }
 
+function splitIntoSentences(text) {
+  // Protect initials (e.g. А. П. Чехов -> А_DOT_ П_DOT_ Чехов) and common abbreviations
+  const protectedText = String(text || '')
+    .replace(/\b([А-ЯЁA-Z])\.\s*/g, '$1_DOT_ ')
+    .replace(/\b(г|т|др|пр)\.\s*/g, '$1_DOT_ ');
+
+  const rawParts = protectedText.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g) || [protectedText];
+
+  return rawParts.map(part => {
+    return part.replace(/_DOT_/g, '.').trim();
+  }).filter(Boolean);
+}
+
 function renderVocabSection(categories) {
   let html = '';
   categories.forEach(cat => {
@@ -1217,7 +1230,19 @@ function renderVocabSection(categories) {
 }
 
 function renderLessonLayout(lesson) {
-  const pTags = lesson.paragraphs.map(p => `<p>${p}</p>`).join('\n            ');
+  let sentenceCounter = 0;
+  const pTags = lesson.paragraphs.map(p => {
+    const sentences = splitIntoSentences(p);
+    const spans = sentences.map(s => {
+      const sId = `sent_${lesson.id}_${sentenceCounter}`;
+      const cleanS = cleanTextForSpeech(s);
+      const spanHtml = `<span class="readable-sentence" id="${sId}" data-lesson-id="${lesson.id}" data-sentence-index="${sentenceCounter}" data-clean-text="${cleanS}" title="👆 Bấm để nghe đọc từ câu này">${s}</span>`;
+      sentenceCounter++;
+      return spanHtml;
+    }).join(' ');
+    return `<p>${spans}</p>`;
+  }).join('\n            ');
+
   const vocabHtml = renderVocabSection(lesson.vocabCategories);
   const fullArticleText = cleanTextForSpeech(lesson.paragraphs.join(' '));
 
@@ -1308,7 +1333,7 @@ function renderLessonLayout(lesson) {
             <span>✍️ Chủ đề: ${lesson.topic}</span>
           </div>
 
-          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME) -->
+          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME + TUA ±5s + ĐỌC TƯƠNG TÁC) -->
           <div class="article-audio-bar" id="audioBar${submitIdSuffix}">
             <div class="audio-bar-top">
               <div class="audio-bar-info">
@@ -1316,24 +1341,42 @@ function renderLessonLayout(lesson) {
                 <span class="audio-status-tag" id="audioStatusTag${submitIdSuffix}">Sẵn sàng</span>
               </div>
               <div class="audio-controls">
-                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay${submitIdSuffix}" data-article-text="${fullArticleText}" data-lesson-suffix="${submitIdSuffix}">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-back" id="btnAudioBack${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Lùi lại 5 giây">
+                  <span>⏪</span>
+                  <span>-5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Bắt đầu / Tạm dừng đọc">
                   <span class="ctrl-icon">▶</span>
                   <span class="ctrl-text">Nghe đoạn văn</span>
                 </button>
-                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" style="display: none;">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-forward" id="btnAudioForward${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Tua tới 5 giây">
+                  <span>⏩</span>
+                  <span>+5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" style="display: none;" title="Dừng hẳn bài đọc">
                   <span>⏹</span>
                   <span>Dừng</span>
                 </button>
               </div>
             </div>
 
-            <!-- THANH TIẾN ĐỘ THỜI GIAN (PROGRESS BAR) -->
+            <!-- THANH TIẾN ĐỘ THỜI GIAN (CLICK ĐỂ TUA TỚI VỊ TRÍ BẤT KỲ) -->
             <div class="audio-progress-container">
               <span class="audio-time-label" id="audioCurrentTime${submitIdSuffix}">0:00</span>
-              <div class="audio-progress-track" id="audioProgressTrack${submitIdSuffix}">
+              <div class="audio-progress-track" id="audioProgressTrack${submitIdSuffix}" data-lesson-suffix="${submitIdSuffix}" title="Bấm vào vị trí bất kỳ trên thanh để tua">
                 <div class="audio-progress-fill" id="audioProgressFill${submitIdSuffix}"></div>
               </div>
               <span class="audio-time-label" id="audioTotalTime${submitIdSuffix}">--:--</span>
+            </div>
+
+            <!-- DÒNG HƯỚNG DẪN TƯƠNG TÁC TRỰC QUAN -->
+            <div class="audio-hint-bar">
+              <span class="audio-hint-text">
+                <span>👆</span> <em>Chạm/Click vào <strong>câu bất kỳ</strong> trong bài để nghe đọc từ câu đó.</em>
+              </span>
+              <span class="audio-hint-text">
+                <span>⏩</span> <em>Bấm trên thanh thời gian hoặc <strong>±5s</strong> để tua nhanh.</em>
+              </span>
             </div>
           </div>
 
@@ -1735,24 +1778,24 @@ ${allHtmlLayouts}
       }
 
       // ======================================================================
-      // HỆ THỐNG PHÁT ÂM VÀ AUDIO PLAYER ĐOẠN VĂN (PROGRESS + PLAY/PAUSE/RESUME)
+      // HỆ THỐNG PHÁT ÂM VÀ AUDIO PLAYER ĐOẠN VĂN THÔNG MINH (SENTENCE-BY-SENTENCE)
+      // TÍNH NĂNG: TUA ±5s, CLICK SEEK THANH TIẾN TRÌNH, CLICK ĐỌC CÂU BẤT KỲ, BÔI ĐEN PHÁT ÂM
       // ======================================================================
       const speechState = {
         synth: window.speechSynthesis || null,
         russianVoice: null,
         currentWordBtn: null,
         
-        // Trạng thái của Article Player
         articlePlayer: {
           currentSuffix: null,
-          text: '',
-          utterance: null,
           status: 'idle', // 'idle' | 'playing' | 'paused'
+          currentSentenceIdx: 0,
           elapsedSeconds: 0,
-          totalEstimatedSeconds: 0,
           timerInterval: null
         }
       };
+
+      const lessonSentenceData = {};
 
       function initVoices() {
         if (!speechState.synth) return;
@@ -1776,8 +1819,57 @@ ${allHtmlLayouts}
         return m + ':' + (s < 10 ? '0' : '') + s;
       }
 
+      function initSentenceData() {
+        [1, 2, 3].forEach(id => {
+          const suffix = id === 1 ? '' : (id === 2 ? 'L2' : 'L3');
+          const panel = document.getElementById('contentB2Reading' + id);
+          if (!panel) return;
+          const sentenceEls = panel.querySelectorAll('.readable-sentence');
+          let currentStart = 0;
+          const sentences = [];
+          sentenceEls.forEach((el, idx) => {
+            const text = el.getAttribute('data-clean-text') || el.textContent.trim();
+            const words = text.split(/\\s+/).filter(Boolean).length;
+            const duration = Math.max(3, Math.round(words / 2.1));
+            sentences.push({
+              index: idx,
+              id: el.id,
+              text: text,
+              duration: duration,
+              startTime: currentStart,
+              endTime: currentStart + duration,
+              element: el
+            });
+            currentStart += duration;
+          });
+          lessonSentenceData[suffix] = {
+            sentences: sentences,
+            totalSeconds: Math.max(15, currentStart)
+          };
+          const totalEl = document.getElementById('audioTotalTime' + suffix);
+          if (totalEl) {
+            totalEl.textContent = formatTime(lessonSentenceData[suffix].totalSeconds);
+          }
+        });
+      }
+
+      // Khởi tạo phân tách câu ngay sau khi tải DOM
+      initSentenceData();
+
+      function clearSentenceHighlights(suffix) {
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences) return;
+        data.sentences.forEach(s => {
+          if (s.element) s.element.classList.remove('active-sentence');
+        });
+      }
+
       function updatePlayerUI(suffix) {
+        if (suffix === null || suffix === undefined) {
+          suffix = speechState.articlePlayer.currentSuffix || '';
+        }
         const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
         const btnPlay = document.getElementById('btnAudioPlay' + suffix);
         const btnStop = document.getElementById('btnAudioStop' + suffix);
         const statusTag = document.getElementById('audioStatusTag' + suffix);
@@ -1785,7 +1877,7 @@ ${allHtmlLayouts}
         const currTimeEl = document.getElementById('audioCurrentTime' + suffix);
         const totalTimeEl = document.getElementById('audioTotalTime' + suffix);
 
-        if (!btnPlay) return;
+        if (!btnPlay || !data) return;
 
         if (ap.status === 'playing') {
           btnPlay.classList.add('active-play');
@@ -1813,16 +1905,16 @@ ${allHtmlLayouts}
           statusTag.style.color = 'var(--brand-strong)';
           if (fillBar) fillBar.style.width = '0%';
           if (currTimeEl) currTimeEl.textContent = '0:00';
-          if (totalTimeEl && ap.totalEstimatedSeconds) {
-            totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
+          if (totalTimeEl && data.totalSeconds) {
+            totalTimeEl.textContent = formatTime(data.totalSeconds);
           }
         }
 
-        if (ap.status !== 'idle' && ap.totalEstimatedSeconds > 0) {
-          const percent = Math.min(100, Math.round((ap.elapsedSeconds / ap.totalEstimatedSeconds) * 100));
+        if (ap.status !== 'idle' && data.totalSeconds > 0) {
+          const percent = Math.min(100, Math.round((ap.elapsedSeconds / data.totalSeconds) * 100));
           if (fillBar) fillBar.style.width = percent + '%';
           if (currTimeEl) currTimeEl.textContent = formatTime(ap.elapsedSeconds);
-          if (totalTimeEl) totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
+          if (totalTimeEl) totalTimeEl.textContent = formatTime(data.totalSeconds);
         }
       }
 
@@ -1836,8 +1928,12 @@ ${allHtmlLayouts}
           speechState.synth.cancel();
         }
         const prevSuffix = ap.currentSuffix;
+        if (prevSuffix !== null) {
+          clearSentenceHighlights(prevSuffix);
+        }
         ap.status = 'idle';
         ap.elapsedSeconds = 0;
+        ap.currentSentenceIdx = 0;
         ap.currentSuffix = null;
         if (prevSuffix !== null) {
           updatePlayerUI(prevSuffix);
@@ -1847,7 +1943,7 @@ ${allHtmlLayouts}
       function pauseArticlePlayer() {
         const ap = speechState.articlePlayer;
         if (speechState.synth && ap.status === 'playing') {
-          speechState.synth.pause();
+          speechState.synth.cancel();
           if (ap.timerInterval) {
             clearInterval(ap.timerInterval);
             ap.timerInterval = null;
@@ -1859,66 +1955,143 @@ ${allHtmlLayouts}
 
       function resumeArticlePlayer() {
         const ap = speechState.articlePlayer;
-        if (speechState.synth && ap.status === 'paused') {
-          speechState.synth.resume();
+        if (ap.status === 'paused' && ap.currentSuffix !== null) {
           ap.status = 'playing';
-          ap.timerInterval = setInterval(() => {
-            ap.elapsedSeconds++;
-            if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
-              ap.elapsedSeconds = ap.totalEstimatedSeconds;
-            }
-            updatePlayerUI(ap.currentSuffix);
-          }, 1000);
+          startTimer(ap.currentSuffix);
+          playSentence(ap.currentSuffix, ap.currentSentenceIdx);
           updatePlayerUI(ap.currentSuffix);
         }
       }
 
-      function startArticlePlayer(text, suffix) {
-        if (!speechState.synth) {
-          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+      function startTimer(suffix) {
+        const ap = speechState.articlePlayer;
+        if (ap.timerInterval) clearInterval(ap.timerInterval);
+        const data = lessonSentenceData[suffix];
+        ap.timerInterval = setInterval(() => {
+          if (ap.status !== 'playing') return;
+          ap.elapsedSeconds++;
+          if (data && ap.elapsedSeconds >= data.totalSeconds) {
+            ap.elapsedSeconds = data.totalSeconds;
+          }
+          updatePlayerUI(suffix);
+        }, 1000);
+      }
+
+      function playSentence(suffix, sentenceIdx) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences || sentenceIdx >= data.sentences.length) {
+          stopArticlePlayer();
           return;
         }
 
-        stopSpeakingWord();
-        stopArticlePlayer();
+        clearSentenceHighlights(suffix);
+        const item = data.sentences[sentenceIdx];
+        ap.currentSentenceIdx = sentenceIdx;
+        ap.elapsedSeconds = item.startTime;
 
-        const ap = speechState.articlePlayer;
-        ap.currentSuffix = suffix;
-        ap.text = text;
-        ap.status = 'playing';
-        ap.elapsedSeconds = 0;
+        if (item.element) {
+          item.element.classList.add('active-sentence');
+          item.element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
 
-        // Ước tính thời gian đọc: ~130 từ tiếng Nga mỗi phút ở rate 0.88 (~2.1 từ/giây)
-        const wordCount = text.split(/\\s+/).filter(Boolean).length;
-        ap.totalEstimatedSeconds = Math.max(15, Math.round(wordCount / 2.1));
+        updatePlayerUI(suffix);
 
-        const utterance = new SpeechSynthesisUtterance(text);
+        if (speechState.synth) {
+          speechState.synth.cancel();
+        }
+
+        const utterance = new SpeechSynthesisUtterance(item.text);
         utterance.lang = 'ru-RU';
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
         }
         utterance.rate = 0.88;
         utterance.pitch = 1.0;
-        ap.utterance = utterance;
 
         utterance.onend = function() {
-          stopArticlePlayer();
+          if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+          if (sentenceIdx + 1 < data.sentences.length) {
+            playSentence(suffix, sentenceIdx + 1);
+          } else {
+            stopArticlePlayer();
+          }
         };
 
         utterance.onerror = function() {
-          stopArticlePlayer();
+          if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+          if (sentenceIdx + 1 < data.sentences.length) {
+            playSentence(suffix, sentenceIdx + 1);
+          } else {
+            stopArticlePlayer();
+          }
         };
 
-        ap.timerInterval = setInterval(() => {
-          ap.elapsedSeconds++;
-          if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
-            ap.elapsedSeconds = ap.totalEstimatedSeconds;
+        speechState.synth.speak(utterance);
+      }
+
+      function startArticlePlayer(suffix, startSentenceIdx = 0) {
+        if (!speechState.synth) {
+          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+          return;
+        }
+
+        stopSpeakingWord();
+        if (speechState.articlePlayer.currentSuffix !== null && speechState.articlePlayer.currentSuffix !== suffix) {
+          stopArticlePlayer();
+        }
+
+        const ap = speechState.articlePlayer;
+        ap.currentSuffix = suffix;
+        ap.status = 'playing';
+
+        startTimer(suffix);
+        playSentence(suffix, startSentenceIdx);
+      }
+
+      function seekArticlePlayer(suffix, targetSeconds) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences.length) return;
+
+        targetSeconds = Math.max(0, Math.min(data.totalSeconds, targetSeconds));
+        ap.elapsedSeconds = targetSeconds;
+
+        let targetIdx = data.sentences.findIndex(s => targetSeconds >= s.startTime && targetSeconds < s.endTime);
+        if (targetIdx === -1) {
+          if (targetSeconds >= data.totalSeconds) {
+            stopArticlePlayer();
+            return;
+          }
+          targetIdx = 0;
+        }
+
+        ap.currentSuffix = suffix;
+        ap.currentSentenceIdx = targetIdx;
+
+        if (ap.status === 'playing') {
+          playSentence(suffix, targetIdx);
+        } else {
+          clearSentenceHighlights(suffix);
+          if (data.sentences[targetIdx].element) {
+            data.sentences[targetIdx].element.classList.add('active-sentence');
           }
           updatePlayerUI(suffix);
-        }, 1000);
+        }
+      }
 
-        updatePlayerUI(suffix);
-        speechState.synth.speak(utterance);
+      function skipAudio(suffix, delta) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences.length) return;
+
+        if (ap.status === 'idle') {
+          startArticlePlayer(suffix, 0);
+          return;
+        }
+
+        const newTime = Math.max(0, Math.min(data.totalSeconds, ap.elapsedSeconds + delta));
+        seekArticlePlayer(suffix, newTime);
       }
 
       // Phát âm từ vựng ngắn (Single word)
@@ -1947,17 +2120,54 @@ ${allHtmlLayouts}
           utterance.voice = speechState.russianVoice;
         }
         utterance.rate = 0.85;
-        btnEl.classList.add('speaking');
-        speechState.currentWordBtn = btnEl;
+        if (btnEl && btnEl.classList) {
+          btnEl.classList.add('speaking');
+          speechState.currentWordBtn = btnEl;
+        }
 
         utterance.onend = stopSpeakingWord;
         utterance.onerror = stopSpeakingWord;
         speechState.synth.speak(utterance);
       }
 
-      // Ủy quyền sự kiện click
+      // Floating Speech Bubble khi bôi đen bất kỳ từ/câu tiếng Nga nào
+      const floatingBubble = document.getElementById('floatingSpeechBubble');
+      document.addEventListener('mouseup', function(e) {
+        if (!floatingBubble) return;
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+
+        if (selectedText.length >= 2 && selectedText.length <= 200) {
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          floatingBubble.style.top = (window.scrollY + rect.top) + 'px';
+          floatingBubble.style.left = (window.scrollX + rect.left + rect.width / 2) + 'px';
+          floatingBubble.setAttribute('data-speech-text', selectedText.replace(/[«»""'']/g, ''));
+          const preview = selectedText.length > 22 ? selectedText.slice(0, 20) + '...' : selectedText;
+          floatingBubble.innerHTML = '🔊 Đọc: "' + preview + '"';
+          floatingBubble.style.display = 'flex';
+        } else {
+          if (!e.target.closest('#floatingSpeechBubble')) {
+            floatingBubble.style.display = 'none';
+          }
+        }
+      });
+
+      if (floatingBubble) {
+        floatingBubble.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const text = floatingBubble.getAttribute('data-speech-text');
+          if (text) {
+            speakWordText(text, null);
+          }
+          floatingBubble.style.display = 'none';
+        });
+      }
+
+      // Ủy quyền sự kiện click toàn trang
       document.addEventListener('click', function(e) {
-        // Nút loa phát âm từ vựng / câu hỏi
+        // 1. Nút loa phát âm từ vựng / câu hỏi
         const speakBtn = e.target.closest('.btn-speak');
         if (speakBtn) {
           e.preventDefault();
@@ -1967,13 +2177,71 @@ ${allHtmlLayouts}
           return;
         }
 
-        // Nút Play / Pause trên thanh Audio Player đoạn văn
+        // 2. Chạm/Click vào câu bất kỳ trong bài đọc
+        const sentEl = e.target.closest('.readable-sentence');
+        if (sentEl) {
+          e.preventDefault();
+          e.stopPropagation();
+          const lessonId = parseInt(sentEl.getAttribute('data-lesson-id'), 10);
+          const sentIdx = parseInt(sentEl.getAttribute('data-sentence-index'), 10);
+          const suffix = lessonId === 1 ? '' : (lessonId === 2 ? 'L2' : 'L3');
+
+          stopSpeakingWord();
+          if (speechState.articlePlayer.currentSuffix !== null && speechState.articlePlayer.currentSuffix !== suffix) {
+            stopArticlePlayer();
+          }
+
+          startArticlePlayer(suffix, sentIdx);
+          return;
+        }
+
+        // 3. Click trên thanh tiến trình (Seek Track) để tua tới vị trí bất kỳ
+        const trackEl = e.target.closest('.audio-progress-track');
+        if (trackEl) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = trackEl.getAttribute('data-lesson-suffix') || '';
+          const data = lessonSentenceData[suffix];
+          if (!data || !data.totalSeconds) return;
+
+          const rect = trackEl.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+          const targetSec = Math.round(ratio * data.totalSeconds);
+
+          if (speechState.articlePlayer.status === 'idle') {
+            startArticlePlayer(suffix, 0);
+          }
+          seekArticlePlayer(suffix, targetSec);
+          return;
+        }
+
+        // 4. Nút lùi 5s
+        const backBtn = e.target.closest('.btn-audio-back');
+        if (backBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = backBtn.getAttribute('data-lesson-suffix') || '';
+          skipAudio(suffix, -5);
+          return;
+        }
+
+        // 5. Nút tua 5s
+        const fwdBtn = e.target.closest('.btn-audio-forward');
+        if (fwdBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = fwdBtn.getAttribute('data-lesson-suffix') || '';
+          skipAudio(suffix, 5);
+          return;
+        }
+
+        // 6. Nút Play / Pause / Tiếp tục trên thanh Audio Player
         const playBtn = e.target.closest('.btn-audio-play');
         if (playBtn) {
           e.preventDefault();
           e.stopPropagation();
           const suffix = playBtn.getAttribute('data-lesson-suffix') || '';
-          const text = playBtn.getAttribute('data-article-text') || '';
           const ap = speechState.articlePlayer;
 
           if (ap.currentSuffix === suffix) {
@@ -1982,23 +2250,27 @@ ${allHtmlLayouts}
             } else if (ap.status === 'paused') {
               resumeArticlePlayer();
             } else {
-              startArticlePlayer(text, suffix);
+              startArticlePlayer(suffix, 0);
             }
           } else {
-            startArticlePlayer(text, suffix);
+            startArticlePlayer(suffix, 0);
           }
           return;
         }
 
-        // Nút Dừng (Stop) trên thanh Audio Player
+        // 7. Nút Dừng (Stop) trên thanh Audio Player
         const stopBtn = e.target.closest('.btn-audio-stop');
         if (stopBtn) {
           e.preventDefault();
           e.stopPropagation();
           stopArticlePlayer();
+          return;
         }
       });
     </script>
+
+    <!-- FLOATING SPEECH BUBBLE CHO ĐOẠN VĂN BẢN ĐƯỢC BÔI ĐEN -->
+    <div id="floatingSpeechBubble" title="Bấm để nghe phát âm đoạn văn bản đã chọn">🔊 Nghe đoạn đã chọn</div>
   </body>
 </html>
 `;

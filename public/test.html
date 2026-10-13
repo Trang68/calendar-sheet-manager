@@ -110,7 +110,7 @@
             <span>✍️ Chủ đề: Văn học & Gia đình</span>
           </div>
 
-          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME) -->
+          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME + TUA ±5s + ĐỌC TƯƠNG TÁC) -->
           <div class="article-audio-bar" id="audioBar">
             <div class="audio-bar-top">
               <div class="audio-bar-info">
@@ -118,30 +118,48 @@
                 <span class="audio-status-tag" id="audioStatusTag">Sẵn sàng</span>
               </div>
               <div class="audio-controls">
-                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay" data-article-text="Недавно в газете Труд была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых. Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием." data-lesson-suffix="">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-back" id="btnAudioBack" data-lesson-suffix="" title="Lùi lại 5 giây">
+                  <span>⏪</span>
+                  <span>-5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay" data-lesson-suffix="" title="Bắt đầu / Tạm dừng đọc">
                   <span class="ctrl-icon">▶</span>
                   <span class="ctrl-text">Nghe đoạn văn</span>
                 </button>
-                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop" data-lesson-suffix="" style="display: none;">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-forward" id="btnAudioForward" data-lesson-suffix="" title="Tua tới 5 giây">
+                  <span>⏩</span>
+                  <span>+5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop" data-lesson-suffix="" style="display: none;" title="Dừng hẳn bài đọc">
                   <span>⏹</span>
                   <span>Dừng</span>
                 </button>
               </div>
             </div>
 
-            <!-- THANH TIẾN ĐỘ THỜI GIAN (PROGRESS BAR) -->
+            <!-- THANH TIẾN ĐỘ THỜI GIAN (CLICK ĐỂ TUA TỚI VỊ TRÍ BẤT KỲ) -->
             <div class="audio-progress-container">
               <span class="audio-time-label" id="audioCurrentTime">0:00</span>
-              <div class="audio-progress-track" id="audioProgressTrack">
+              <div class="audio-progress-track" id="audioProgressTrack" data-lesson-suffix="" title="Bấm vào vị trí bất kỳ trên thanh để tua">
                 <div class="audio-progress-fill" id="audioProgressFill"></div>
               </div>
               <span class="audio-time-label" id="audioTotalTime">--:--</span>
             </div>
+
+            <!-- DÒNG HƯỚNG DẪN TƯƠNG TÁC TRỰC QUAN -->
+            <div class="audio-hint-bar">
+              <span class="audio-hint-text">
+                <span>👆</span> <em>Chạm/Click vào <strong>câu bất kỳ</strong> trong bài để nghe đọc từ câu đó.</em>
+              </span>
+              <span class="audio-hint-text">
+                <span>⏩</span> <em>Bấm trên thanh thời gian hoặc <strong>±5s</strong> để tua nhanh.</em>
+              </span>
+            </div>
           </div>
 
           <div class="reading-text-card">
-            <p>Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых.</p>
-            <p>Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием.</p>
+            <p><span class="readable-sentence" id="sent_1_0" data-lesson-id="1" data-sentence-index="0" data-clean-text="Недавно в газете Труд была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой." title="👆 Bấm để nghe đọc từ câu này">Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой.</span> <span class="readable-sentence" id="sent_1_1" data-lesson-id="1" data-sentence-index="1" data-clean-text="Вся её дружная семья живёт за городом в большом старом доме." title="👆 Bấm để nghe đọc từ câu này">Вся её дружная семья живёт за городом в большом старом доме.</span> <span class="readable-sentence" id="sent_1_2" data-lesson-id="1" data-sentence-index="2" data-clean-text="На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя." title="👆 Bấm để nghe đọc từ câu này">На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя.</span> <span class="readable-sentence" id="sent_1_3" data-lesson-id="1" data-sentence-index="3" data-clean-text="В этой семье все друг друга любят и всегда помогают друг другу." title="👆 Bấm để nghe đọc từ câu này">В этой семье все друг друга любят и всегда помогают друг другу.</span> <span class="readable-sentence" id="sent_1_4" data-lesson-id="1" data-sentence-index="4" data-clean-text="Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых." title="👆 Bấm để nghe đọc từ câu này">Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых.</span></p>
+            <p><span class="readable-sentence" id="sent_1_5" data-lesson-id="1" data-sentence-index="5" data-clean-text="Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой." title="👆 Bấm để nghe đọc từ câu này">Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой.</span> <span class="readable-sentence" id="sent_1_6" data-lesson-id="1" data-sentence-index="6" data-clean-text="Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день." title="👆 Bấm để nghe đọc từ câu này">Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день.</span> <span class="readable-sentence" id="sent_1_7" data-lesson-id="1" data-sentence-index="7" data-clean-text="Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием." title="👆 Bấm để nghe đọc từ câu này">Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием.</span></p>
             <div class="reading-photo-caption">
               📷 <strong>Chú thích ảnh:</strong> Т. Устинова и её загородный дом.
             </div>
@@ -995,7 +1013,7 @@
             <span>✍️ Chủ đề: Xã hội & Kế hoạch hóa gia đình</span>
           </div>
 
-          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME) -->
+          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME + TUA ±5s + ĐỌC TƯƠNG TÁC) -->
           <div class="article-audio-bar" id="audioBarL2">
             <div class="audio-bar-top">
               <div class="audio-bar-info">
@@ -1003,32 +1021,50 @@
                 <span class="audio-status-tag" id="audioStatusTagL2">Sẵn sàng</span>
               </div>
               <div class="audio-controls">
-                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlayL2" data-article-text="Сейчас почти во всех больших городах России создаются центры планирования семьи. В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов. В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка. В последнее время психологами и педагогами часто обсуждается вопрос: сколько детей должно быть в семье — один или несколько? В каждой семье эта проблема решается по-своему. Многодетные семьи сейчас вышли из моды. Считается, что один ребёнок — это удобно. Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально. Но единственные дети, особенно подростки, часто говорят о своём одиночестве. Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками. Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком. Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними. Дети в больших семьях быстро становятся самостоятельными и уверенными в себе." data-lesson-suffix="L2">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-back" id="btnAudioBackL2" data-lesson-suffix="L2" title="Lùi lại 5 giây">
+                  <span>⏪</span>
+                  <span>-5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlayL2" data-lesson-suffix="L2" title="Bắt đầu / Tạm dừng đọc">
                   <span class="ctrl-icon">▶</span>
                   <span class="ctrl-text">Nghe đoạn văn</span>
                 </button>
-                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStopL2" data-lesson-suffix="L2" style="display: none;">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-forward" id="btnAudioForwardL2" data-lesson-suffix="L2" title="Tua tới 5 giây">
+                  <span>⏩</span>
+                  <span>+5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStopL2" data-lesson-suffix="L2" style="display: none;" title="Dừng hẳn bài đọc">
                   <span>⏹</span>
                   <span>Dừng</span>
                 </button>
               </div>
             </div>
 
-            <!-- THANH TIẾN ĐỘ THỜI GIAN (PROGRESS BAR) -->
+            <!-- THANH TIẾN ĐỘ THỜI GIAN (CLICK ĐỂ TUA TỚI VỊ TRÍ BẤT KỲ) -->
             <div class="audio-progress-container">
               <span class="audio-time-label" id="audioCurrentTimeL2">0:00</span>
-              <div class="audio-progress-track" id="audioProgressTrackL2">
+              <div class="audio-progress-track" id="audioProgressTrackL2" data-lesson-suffix="L2" title="Bấm vào vị trí bất kỳ trên thanh để tua">
                 <div class="audio-progress-fill" id="audioProgressFillL2"></div>
               </div>
               <span class="audio-time-label" id="audioTotalTimeL2">--:--</span>
             </div>
+
+            <!-- DÒNG HƯỚNG DẪN TƯƠNG TÁC TRỰC QUAN -->
+            <div class="audio-hint-bar">
+              <span class="audio-hint-text">
+                <span>👆</span> <em>Chạm/Click vào <strong>câu bất kỳ</strong> trong bài để nghe đọc từ câu đó.</em>
+              </span>
+              <span class="audio-hint-text">
+                <span>⏩</span> <em>Bấm trên thanh thời gian hoặc <strong>±5s</strong> để tua nhanh.</em>
+              </span>
+            </div>
           </div>
 
           <div class="reading-text-card">
-            <p>Сейчас почти во всех больших городах России создаются центры планирования семьи. В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов. В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка.</p>
-            <p>В последнее время психологами и педагогами часто обсуждается вопрос: <strong>сколько детей должно быть в семье — один или несколько?</strong> В каждой семье эта проблема решается по-своему.</p>
-            <p>Многодетные семьи сейчас «вышли из моды». Считается, что один ребёнок — это удобно. Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально. Но единственные дети, особенно подростки, часто говорят о своём одиночестве. Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками.</p>
-            <p>Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком. Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними. Дети в больших семьях быстро становятся самостоятельными и уверенными в себе.</p>
+            <p><span class="readable-sentence" id="sent_2_0" data-lesson-id="2" data-sentence-index="0" data-clean-text="Сейчас почти во всех больших городах России создаются центры планирования семьи." title="👆 Bấm để nghe đọc từ câu này">Сейчас почти во всех больших городах России создаются центры планирования семьи.</span> <span class="readable-sentence" id="sent_2_1" data-lesson-id="2" data-sentence-index="1" data-clean-text="В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов." title="👆 Bấm để nghe đọc từ câu này">В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов.</span> <span class="readable-sentence" id="sent_2_2" data-lesson-id="2" data-sentence-index="2" data-clean-text="В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка." title="👆 Bấm để nghe đọc từ câu này">В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка.</span></p>
+            <p><span class="readable-sentence" id="sent_2_3" data-lesson-id="2" data-sentence-index="3" data-clean-text="В каждой семье эта проблема решается по-своему." title="👆 Bấm để nghe đọc từ câu này"></strong> В каждой семье эта проблема решается по-своему.</span></p>
+            <p><span class="readable-sentence" id="sent_2_4" data-lesson-id="2" data-sentence-index="4" data-clean-text="Многодетные семьи сейчас вышли из моды." title="👆 Bấm để nghe đọc từ câu này">Многодетные семьи сейчас «вышли из моды».</span> <span class="readable-sentence" id="sent_2_5" data-lesson-id="2" data-sentence-index="5" data-clean-text="Считается, что один ребёнок — это удобно." title="👆 Bấm để nghe đọc từ câu này">Считается, что один ребёнок — это удобно.</span> <span class="readable-sentence" id="sent_2_6" data-lesson-id="2" data-sentence-index="6" data-clean-text="Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально." title="👆 Bấm để nghe đọc từ câu này">Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально.</span> <span class="readable-sentence" id="sent_2_7" data-lesson-id="2" data-sentence-index="7" data-clean-text="Но единственные дети, особенно подростки, часто говорят о своём одиночестве." title="👆 Bấm để nghe đọc từ câu này">Но единственные дети, особенно подростки, часто говорят о своём одиночестве.</span> <span class="readable-sentence" id="sent_2_8" data-lesson-id="2" data-sentence-index="8" data-clean-text="Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками." title="👆 Bấm để nghe đọc từ câu này">Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками.</span></p>
+            <p><span class="readable-sentence" id="sent_2_9" data-lesson-id="2" data-sentence-index="9" data-clean-text="Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком." title="👆 Bấm để nghe đọc từ câu này">Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком.</span> <span class="readable-sentence" id="sent_2_10" data-lesson-id="2" data-sentence-index="10" data-clean-text="Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними." title="👆 Bấm để nghe đọc từ câu này">Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними.</span> <span class="readable-sentence" id="sent_2_11" data-lesson-id="2" data-sentence-index="11" data-clean-text="Дети в больших семьях быстро становятся самостоятельными и уверенными в себе." title="👆 Bấm để nghe đọc từ câu này">Дети в больших семьях быстро становятся самостоятельными и уверенными в себе.</span></p>
             <div class="reading-photo-caption">
               🕊️ <strong>Chủ đề trọng tâm:</strong> Kế hoạch hóa gia đình & Lựa chọn số lượng con (1 con vs. đông con).
             </div>
@@ -1868,7 +1904,7 @@
             <span>✍️ Chủ đề: Văn học & Nghệ thuật kịch nghệ Nga</span>
           </div>
 
-          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME) -->
+          <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA (PROGRESS + PAUSE / RESUME + TUA ±5s + ĐỌC TƯƠNG TÁC) -->
           <div class="article-audio-bar" id="audioBarL3">
             <div class="audio-bar-top">
               <div class="audio-bar-info">
@@ -1876,31 +1912,49 @@
                 <span class="audio-status-tag" id="audioStatusTagL3">Sẵn sàng</span>
               </div>
               <div class="audio-controls">
-                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlayL3" data-article-text="Пьеса Чайка была написана Антоном Павловичем Чеховым в 1896 году в Мелихове. Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию. Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель. Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути. Впервые Чайка была поставлена в 1896 году в Санкт-Петербурге. К сожалению, пьеса не имела успеха, потому что не была понята зрителями. Антон Павлович Чехов очень переживал эту неудачу. Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить Чайку в Москве, Антон Павлович согласился не сразу. Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами. Так началась творческая дружба писателя с театром. В 1898 году чеховская пьеса Чайка была поставлена на сцене Московского Художественного театра. Пьеса имела огромный успех. Она была хорошо встречена зрителями. Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра. С тех пор летящая чайка стала символом Московского Художественного театра. Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах." data-lesson-suffix="L3">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-back" id="btnAudioBackL3" data-lesson-suffix="L3" title="Lùi lại 5 giây">
+                  <span>⏪</span>
+                  <span>-5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlayL3" data-lesson-suffix="L3" title="Bắt đầu / Tạm dừng đọc">
                   <span class="ctrl-icon">▶</span>
                   <span class="ctrl-text">Nghe đoạn văn</span>
                 </button>
-                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStopL3" data-lesson-suffix="L3" style="display: none;">
+                <button class="btn-audio-ctrl btn-audio-skip btn-audio-forward" id="btnAudioForwardL3" data-lesson-suffix="L3" title="Tua tới 5 giây">
+                  <span>⏩</span>
+                  <span>+5s</span>
+                </button>
+                <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStopL3" data-lesson-suffix="L3" style="display: none;" title="Dừng hẳn bài đọc">
                   <span>⏹</span>
                   <span>Dừng</span>
                 </button>
               </div>
             </div>
 
-            <!-- THANH TIẾN ĐỘ THỜI GIAN (PROGRESS BAR) -->
+            <!-- THANH TIẾN ĐỘ THỜI GIAN (CLICK ĐỂ TUA TỚI VỊ TRÍ BẤT KỲ) -->
             <div class="audio-progress-container">
               <span class="audio-time-label" id="audioCurrentTimeL3">0:00</span>
-              <div class="audio-progress-track" id="audioProgressTrackL3">
+              <div class="audio-progress-track" id="audioProgressTrackL3" data-lesson-suffix="L3" title="Bấm vào vị trí bất kỳ trên thanh để tua">
                 <div class="audio-progress-fill" id="audioProgressFillL3"></div>
               </div>
               <span class="audio-time-label" id="audioTotalTimeL3">--:--</span>
             </div>
+
+            <!-- DÒNG HƯỚNG DẪN TƯƠNG TÁC TRỰC QUAN -->
+            <div class="audio-hint-bar">
+              <span class="audio-hint-text">
+                <span>👆</span> <em>Chạm/Click vào <strong>câu bất kỳ</strong> trong bài để nghe đọc từ câu đó.</em>
+              </span>
+              <span class="audio-hint-text">
+                <span>⏩</span> <em>Bấm trên thanh thời gian hoặc <strong>±5s</strong> để tua nhanh.</em>
+              </span>
+            </div>
           </div>
 
           <div class="reading-text-card">
-            <p>Пьеса «Чайка» была написана Антоном Павловичем Чеховым в 1896 году в Мелихове. Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию. Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель. Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути.</p>
-            <p>Впервые «Чайка» была поставлена в 1896 году в Санкт-Петербурге. К сожалению, пьеса не имела успеха, потому что не была понята зрителями. Антон Павлович Чехов очень переживал эту неудачу. Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить «Чайку» в Москве, Антон Павлович согласился не сразу. Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами. Так началась творческая дружба писателя с театром.</p>
-            <p>В 1898 году чеховская пьеса «Чайка» была поставлена на сцене Московского Художественного театра. Пьеса имела огромный успех. Она была хорошо встречена зрителями. Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра. С тех пор летящая чайка стала символом Московского Художественного театра. Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах.</p>
+            <p><span class="readable-sentence" id="sent_3_0" data-lesson-id="3" data-sentence-index="0" data-clean-text="Пьеса Чайка была написана Антоном Павловичем Чеховым в 1896 году в Мелихове." title="👆 Bấm để nghe đọc từ câu này">Пьеса «Чайка» была написана Антоном Павловичем Чеховым в 1896 году в Мелихове.</span> <span class="readable-sentence" id="sent_3_1" data-lesson-id="3" data-sentence-index="1" data-clean-text="Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию." title="👆 Bấm để nghe đọc từ câu này">Эта пьеса была особенно дорога Чехову, потому что в ней писатель впервые рассказал о нелёгкой судьбе людей, которые, как и сам Чехов, выбрали творческую профессию.</span> <span class="readable-sentence" id="sent_3_2" data-lesson-id="3" data-sentence-index="2" data-clean-text="Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель." title="👆 Bấm để nghe đọc từ câu này">Герои пьесы — девушка, которая мечтает стать великой актрисой, и молодой начинающий писатель.</span> <span class="readable-sentence" id="sent_3_3" data-lesson-id="3" data-sentence-index="3" data-clean-text="Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути." title="👆 Bấm để nghe đọc từ câu này">Оба они мечтают о славе, верят в свой талант и в свои силы, но ещё не знают, какие трудности встретятся им на их нелёгком пути.</span></p>
+            <p><span class="readable-sentence" id="sent_3_4" data-lesson-id="3" data-sentence-index="4" data-clean-text="Впервые Чайка была поставлена в 1896 году в Санкт-Петербурге." title="👆 Bấm để nghe đọc từ câu này">Впервые «Чайка» была поставлена в 1896 году в Санкт-Петербурге.</span> <span class="readable-sentence" id="sent_3_5" data-lesson-id="3" data-sentence-index="5" data-clean-text="К сожалению, пьеса не имела успеха, потому что не была понята зрителями." title="👆 Bấm để nghe đọc từ câu này">К сожалению, пьеса не имела успеха, потому что не была понята зрителями.</span> <span class="readable-sentence" id="sent_3_6" data-lesson-id="3" data-sentence-index="6" data-clean-text="Антон Павлович Чехов очень переживал эту неудачу." title="👆 Bấm để nghe đọc từ câu này">Антон Павлович Чехов очень переживал эту неудачу.</span> <span class="readable-sentence" id="sent_3_7" data-lesson-id="3" data-sentence-index="7" data-clean-text="Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить Чайку в Москве, Антон Павлович согласился не сразу." title="👆 Bấm để nghe đọc từ câu này">Поэтому, когда режиссёр Московского Художественного театра Константин Сергеевич Станиславский предложил Чехову поставить «Чайку» в Москве, Антон Павлович согласился не сразу.</span> <span class="readable-sentence" id="sent_3_8" data-lesson-id="3" data-sentence-index="8" data-clean-text="Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами." title="👆 Bấm để nghe đọc từ câu này">Он пришёл в театр, познакомился с артистами, читал им свою пьесу, был на репетициях спектакля и убедился, что идея его пьесы была правильно понята режиссёром и молодыми талантливыми артистами.</span> <span class="readable-sentence" id="sent_3_9" data-lesson-id="3" data-sentence-index="9" data-clean-text="Так началась творческая дружба писателя с театром." title="👆 Bấm để nghe đọc từ câu này">Так началась творческая дружба писателя с театром.</span></p>
+            <p><span class="readable-sentence" id="sent_3_10" data-lesson-id="3" data-sentence-index="10" data-clean-text="В 1898 году чеховская пьеса Чайка была поставлена на сцене Московского Художественного театра." title="👆 Bấm để nghe đọc từ câu này">В 1898 году чеховская пьеса «Чайка» была поставлена на сцене Московского Художественного театра.</span> <span class="readable-sentence" id="sent_3_11" data-lesson-id="3" data-sentence-index="11" data-clean-text="Пьеса имела огромный успех." title="👆 Bấm để nghe đọc từ câu này">Пьеса имела огромный успех.</span> <span class="readable-sentence" id="sent_3_12" data-lesson-id="3" data-sentence-index="12" data-clean-text="Она была хорошо встречена зрителями." title="👆 Bấm để nghe đọc từ câu này">Она была хорошо встречена зрителями.</span> <span class="readable-sentence" id="sent_3_13" data-lesson-id="3" data-sentence-index="13" data-clean-text="Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра." title="👆 Bấm để nghe đọc từ câu này">Они долго аплодировали, бросали цветы на сцену и не хотели уходить из театра.</span> <span class="readable-sentence" id="sent_3_14" data-lesson-id="3" data-sentence-index="14" data-clean-text="С тех пор летящая чайка стала символом Московского Художественного театра." title="👆 Bấm để nghe đọc từ câu này">С тех пор летящая чайка стала символом Московского Художественного театра.</span> <span class="readable-sentence" id="sent_3_15" data-lesson-id="3" data-sentence-index="15" data-clean-text="Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах." title="👆 Bấm để nghe đọc từ câu này">Этот символ и сейчас можно увидеть на здании этого театра, на его занавесе и на театральных билетах.</span></p>
             <div class="reading-photo-caption">
               🕊️ <strong>Câu hỏi trọng tâm (а):</strong> Символ МХТ — летящая чайка (увидеть: на здании театра, на занавесе, на театральных билетах).
             </div>
@@ -3238,24 +3292,24 @@
       }
 
       // ======================================================================
-      // HỆ THỐNG PHÁT ÂM VÀ AUDIO PLAYER ĐOẠN VĂN (PROGRESS + PLAY/PAUSE/RESUME)
+      // HỆ THỐNG PHÁT ÂM VÀ AUDIO PLAYER ĐOẠN VĂN THÔNG MINH (SENTENCE-BY-SENTENCE)
+      // TÍNH NĂNG: TUA ±5s, CLICK SEEK THANH TIẾN TRÌNH, CLICK ĐỌC CÂU BẤT KỲ, BÔI ĐEN PHÁT ÂM
       // ======================================================================
       const speechState = {
         synth: window.speechSynthesis || null,
         russianVoice: null,
         currentWordBtn: null,
         
-        // Trạng thái của Article Player
         articlePlayer: {
           currentSuffix: null,
-          text: '',
-          utterance: null,
           status: 'idle', // 'idle' | 'playing' | 'paused'
+          currentSentenceIdx: 0,
           elapsedSeconds: 0,
-          totalEstimatedSeconds: 0,
           timerInterval: null
         }
       };
+
+      const lessonSentenceData = {};
 
       function initVoices() {
         if (!speechState.synth) return;
@@ -3279,8 +3333,57 @@
         return m + ':' + (s < 10 ? '0' : '') + s;
       }
 
+      function initSentenceData() {
+        [1, 2, 3].forEach(id => {
+          const suffix = id === 1 ? '' : (id === 2 ? 'L2' : 'L3');
+          const panel = document.getElementById('contentB2Reading' + id);
+          if (!panel) return;
+          const sentenceEls = panel.querySelectorAll('.readable-sentence');
+          let currentStart = 0;
+          const sentences = [];
+          sentenceEls.forEach((el, idx) => {
+            const text = el.getAttribute('data-clean-text') || el.textContent.trim();
+            const words = text.split(/\s+/).filter(Boolean).length;
+            const duration = Math.max(3, Math.round(words / 2.1));
+            sentences.push({
+              index: idx,
+              id: el.id,
+              text: text,
+              duration: duration,
+              startTime: currentStart,
+              endTime: currentStart + duration,
+              element: el
+            });
+            currentStart += duration;
+          });
+          lessonSentenceData[suffix] = {
+            sentences: sentences,
+            totalSeconds: Math.max(15, currentStart)
+          };
+          const totalEl = document.getElementById('audioTotalTime' + suffix);
+          if (totalEl) {
+            totalEl.textContent = formatTime(lessonSentenceData[suffix].totalSeconds);
+          }
+        });
+      }
+
+      // Khởi tạo phân tách câu ngay sau khi tải DOM
+      initSentenceData();
+
+      function clearSentenceHighlights(suffix) {
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences) return;
+        data.sentences.forEach(s => {
+          if (s.element) s.element.classList.remove('active-sentence');
+        });
+      }
+
       function updatePlayerUI(suffix) {
+        if (suffix === null || suffix === undefined) {
+          suffix = speechState.articlePlayer.currentSuffix || '';
+        }
         const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
         const btnPlay = document.getElementById('btnAudioPlay' + suffix);
         const btnStop = document.getElementById('btnAudioStop' + suffix);
         const statusTag = document.getElementById('audioStatusTag' + suffix);
@@ -3288,7 +3391,7 @@
         const currTimeEl = document.getElementById('audioCurrentTime' + suffix);
         const totalTimeEl = document.getElementById('audioTotalTime' + suffix);
 
-        if (!btnPlay) return;
+        if (!btnPlay || !data) return;
 
         if (ap.status === 'playing') {
           btnPlay.classList.add('active-play');
@@ -3316,16 +3419,16 @@
           statusTag.style.color = 'var(--brand-strong)';
           if (fillBar) fillBar.style.width = '0%';
           if (currTimeEl) currTimeEl.textContent = '0:00';
-          if (totalTimeEl && ap.totalEstimatedSeconds) {
-            totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
+          if (totalTimeEl && data.totalSeconds) {
+            totalTimeEl.textContent = formatTime(data.totalSeconds);
           }
         }
 
-        if (ap.status !== 'idle' && ap.totalEstimatedSeconds > 0) {
-          const percent = Math.min(100, Math.round((ap.elapsedSeconds / ap.totalEstimatedSeconds) * 100));
+        if (ap.status !== 'idle' && data.totalSeconds > 0) {
+          const percent = Math.min(100, Math.round((ap.elapsedSeconds / data.totalSeconds) * 100));
           if (fillBar) fillBar.style.width = percent + '%';
           if (currTimeEl) currTimeEl.textContent = formatTime(ap.elapsedSeconds);
-          if (totalTimeEl) totalTimeEl.textContent = formatTime(ap.totalEstimatedSeconds);
+          if (totalTimeEl) totalTimeEl.textContent = formatTime(data.totalSeconds);
         }
       }
 
@@ -3339,8 +3442,12 @@
           speechState.synth.cancel();
         }
         const prevSuffix = ap.currentSuffix;
+        if (prevSuffix !== null) {
+          clearSentenceHighlights(prevSuffix);
+        }
         ap.status = 'idle';
         ap.elapsedSeconds = 0;
+        ap.currentSentenceIdx = 0;
         ap.currentSuffix = null;
         if (prevSuffix !== null) {
           updatePlayerUI(prevSuffix);
@@ -3350,7 +3457,7 @@
       function pauseArticlePlayer() {
         const ap = speechState.articlePlayer;
         if (speechState.synth && ap.status === 'playing') {
-          speechState.synth.pause();
+          speechState.synth.cancel();
           if (ap.timerInterval) {
             clearInterval(ap.timerInterval);
             ap.timerInterval = null;
@@ -3362,66 +3469,143 @@
 
       function resumeArticlePlayer() {
         const ap = speechState.articlePlayer;
-        if (speechState.synth && ap.status === 'paused') {
-          speechState.synth.resume();
+        if (ap.status === 'paused' && ap.currentSuffix !== null) {
           ap.status = 'playing';
-          ap.timerInterval = setInterval(() => {
-            ap.elapsedSeconds++;
-            if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
-              ap.elapsedSeconds = ap.totalEstimatedSeconds;
-            }
-            updatePlayerUI(ap.currentSuffix);
-          }, 1000);
+          startTimer(ap.currentSuffix);
+          playSentence(ap.currentSuffix, ap.currentSentenceIdx);
           updatePlayerUI(ap.currentSuffix);
         }
       }
 
-      function startArticlePlayer(text, suffix) {
-        if (!speechState.synth) {
-          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+      function startTimer(suffix) {
+        const ap = speechState.articlePlayer;
+        if (ap.timerInterval) clearInterval(ap.timerInterval);
+        const data = lessonSentenceData[suffix];
+        ap.timerInterval = setInterval(() => {
+          if (ap.status !== 'playing') return;
+          ap.elapsedSeconds++;
+          if (data && ap.elapsedSeconds >= data.totalSeconds) {
+            ap.elapsedSeconds = data.totalSeconds;
+          }
+          updatePlayerUI(suffix);
+        }, 1000);
+      }
+
+      function playSentence(suffix, sentenceIdx) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences || sentenceIdx >= data.sentences.length) {
+          stopArticlePlayer();
           return;
         }
 
-        stopSpeakingWord();
-        stopArticlePlayer();
+        clearSentenceHighlights(suffix);
+        const item = data.sentences[sentenceIdx];
+        ap.currentSentenceIdx = sentenceIdx;
+        ap.elapsedSeconds = item.startTime;
 
-        const ap = speechState.articlePlayer;
-        ap.currentSuffix = suffix;
-        ap.text = text;
-        ap.status = 'playing';
-        ap.elapsedSeconds = 0;
+        if (item.element) {
+          item.element.classList.add('active-sentence');
+          item.element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
 
-        // Ước tính thời gian đọc: ~130 từ tiếng Nga mỗi phút ở rate 0.88 (~2.1 từ/giây)
-        const wordCount = text.split(/\s+/).filter(Boolean).length;
-        ap.totalEstimatedSeconds = Math.max(15, Math.round(wordCount / 2.1));
+        updatePlayerUI(suffix);
 
-        const utterance = new SpeechSynthesisUtterance(text);
+        if (speechState.synth) {
+          speechState.synth.cancel();
+        }
+
+        const utterance = new SpeechSynthesisUtterance(item.text);
         utterance.lang = 'ru-RU';
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
         }
         utterance.rate = 0.88;
         utterance.pitch = 1.0;
-        ap.utterance = utterance;
 
         utterance.onend = function() {
-          stopArticlePlayer();
+          if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+          if (sentenceIdx + 1 < data.sentences.length) {
+            playSentence(suffix, sentenceIdx + 1);
+          } else {
+            stopArticlePlayer();
+          }
         };
 
         utterance.onerror = function() {
-          stopArticlePlayer();
+          if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+          if (sentenceIdx + 1 < data.sentences.length) {
+            playSentence(suffix, sentenceIdx + 1);
+          } else {
+            stopArticlePlayer();
+          }
         };
 
-        ap.timerInterval = setInterval(() => {
-          ap.elapsedSeconds++;
-          if (ap.elapsedSeconds >= ap.totalEstimatedSeconds) {
-            ap.elapsedSeconds = ap.totalEstimatedSeconds;
+        speechState.synth.speak(utterance);
+      }
+
+      function startArticlePlayer(suffix, startSentenceIdx = 0) {
+        if (!speechState.synth) {
+          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+          return;
+        }
+
+        stopSpeakingWord();
+        if (speechState.articlePlayer.currentSuffix !== null && speechState.articlePlayer.currentSuffix !== suffix) {
+          stopArticlePlayer();
+        }
+
+        const ap = speechState.articlePlayer;
+        ap.currentSuffix = suffix;
+        ap.status = 'playing';
+
+        startTimer(suffix);
+        playSentence(suffix, startSentenceIdx);
+      }
+
+      function seekArticlePlayer(suffix, targetSeconds) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences.length) return;
+
+        targetSeconds = Math.max(0, Math.min(data.totalSeconds, targetSeconds));
+        ap.elapsedSeconds = targetSeconds;
+
+        let targetIdx = data.sentences.findIndex(s => targetSeconds >= s.startTime && targetSeconds < s.endTime);
+        if (targetIdx === -1) {
+          if (targetSeconds >= data.totalSeconds) {
+            stopArticlePlayer();
+            return;
+          }
+          targetIdx = 0;
+        }
+
+        ap.currentSuffix = suffix;
+        ap.currentSentenceIdx = targetIdx;
+
+        if (ap.status === 'playing') {
+          playSentence(suffix, targetIdx);
+        } else {
+          clearSentenceHighlights(suffix);
+          if (data.sentences[targetIdx].element) {
+            data.sentences[targetIdx].element.classList.add('active-sentence');
           }
           updatePlayerUI(suffix);
-        }, 1000);
+        }
+      }
 
-        updatePlayerUI(suffix);
-        speechState.synth.speak(utterance);
+      function skipAudio(suffix, delta) {
+        const ap = speechState.articlePlayer;
+        const data = lessonSentenceData[suffix];
+        if (!data || !data.sentences.length) return;
+
+        if (ap.status === 'idle') {
+          startArticlePlayer(suffix, 0);
+          return;
+        }
+
+        const newTime = Math.max(0, Math.min(data.totalSeconds, ap.elapsedSeconds + delta));
+        seekArticlePlayer(suffix, newTime);
       }
 
       // Phát âm từ vựng ngắn (Single word)
@@ -3450,17 +3634,54 @@
           utterance.voice = speechState.russianVoice;
         }
         utterance.rate = 0.85;
-        btnEl.classList.add('speaking');
-        speechState.currentWordBtn = btnEl;
+        if (btnEl && btnEl.classList) {
+          btnEl.classList.add('speaking');
+          speechState.currentWordBtn = btnEl;
+        }
 
         utterance.onend = stopSpeakingWord;
         utterance.onerror = stopSpeakingWord;
         speechState.synth.speak(utterance);
       }
 
-      // Ủy quyền sự kiện click
+      // Floating Speech Bubble khi bôi đen bất kỳ từ/câu tiếng Nga nào
+      const floatingBubble = document.getElementById('floatingSpeechBubble');
+      document.addEventListener('mouseup', function(e) {
+        if (!floatingBubble) return;
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+
+        if (selectedText.length >= 2 && selectedText.length <= 200) {
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          floatingBubble.style.top = (window.scrollY + rect.top) + 'px';
+          floatingBubble.style.left = (window.scrollX + rect.left + rect.width / 2) + 'px';
+          floatingBubble.setAttribute('data-speech-text', selectedText.replace(/[«»""'']/g, ''));
+          const preview = selectedText.length > 22 ? selectedText.slice(0, 20) + '...' : selectedText;
+          floatingBubble.innerHTML = '🔊 Đọc: "' + preview + '"';
+          floatingBubble.style.display = 'flex';
+        } else {
+          if (!e.target.closest('#floatingSpeechBubble')) {
+            floatingBubble.style.display = 'none';
+          }
+        }
+      });
+
+      if (floatingBubble) {
+        floatingBubble.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const text = floatingBubble.getAttribute('data-speech-text');
+          if (text) {
+            speakWordText(text, null);
+          }
+          floatingBubble.style.display = 'none';
+        });
+      }
+
+      // Ủy quyền sự kiện click toàn trang
       document.addEventListener('click', function(e) {
-        // Nút loa phát âm từ vựng / câu hỏi
+        // 1. Nút loa phát âm từ vựng / câu hỏi
         const speakBtn = e.target.closest('.btn-speak');
         if (speakBtn) {
           e.preventDefault();
@@ -3470,13 +3691,71 @@
           return;
         }
 
-        // Nút Play / Pause trên thanh Audio Player đoạn văn
+        // 2. Chạm/Click vào câu bất kỳ trong bài đọc
+        const sentEl = e.target.closest('.readable-sentence');
+        if (sentEl) {
+          e.preventDefault();
+          e.stopPropagation();
+          const lessonId = parseInt(sentEl.getAttribute('data-lesson-id'), 10);
+          const sentIdx = parseInt(sentEl.getAttribute('data-sentence-index'), 10);
+          const suffix = lessonId === 1 ? '' : (lessonId === 2 ? 'L2' : 'L3');
+
+          stopSpeakingWord();
+          if (speechState.articlePlayer.currentSuffix !== null && speechState.articlePlayer.currentSuffix !== suffix) {
+            stopArticlePlayer();
+          }
+
+          startArticlePlayer(suffix, sentIdx);
+          return;
+        }
+
+        // 3. Click trên thanh tiến trình (Seek Track) để tua tới vị trí bất kỳ
+        const trackEl = e.target.closest('.audio-progress-track');
+        if (trackEl) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = trackEl.getAttribute('data-lesson-suffix') || '';
+          const data = lessonSentenceData[suffix];
+          if (!data || !data.totalSeconds) return;
+
+          const rect = trackEl.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+          const targetSec = Math.round(ratio * data.totalSeconds);
+
+          if (speechState.articlePlayer.status === 'idle') {
+            startArticlePlayer(suffix, 0);
+          }
+          seekArticlePlayer(suffix, targetSec);
+          return;
+        }
+
+        // 4. Nút lùi 5s
+        const backBtn = e.target.closest('.btn-audio-back');
+        if (backBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = backBtn.getAttribute('data-lesson-suffix') || '';
+          skipAudio(suffix, -5);
+          return;
+        }
+
+        // 5. Nút tua 5s
+        const fwdBtn = e.target.closest('.btn-audio-forward');
+        if (fwdBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const suffix = fwdBtn.getAttribute('data-lesson-suffix') || '';
+          skipAudio(suffix, 5);
+          return;
+        }
+
+        // 6. Nút Play / Pause / Tiếp tục trên thanh Audio Player
         const playBtn = e.target.closest('.btn-audio-play');
         if (playBtn) {
           e.preventDefault();
           e.stopPropagation();
           const suffix = playBtn.getAttribute('data-lesson-suffix') || '';
-          const text = playBtn.getAttribute('data-article-text') || '';
           const ap = speechState.articlePlayer;
 
           if (ap.currentSuffix === suffix) {
@@ -3485,22 +3764,26 @@
             } else if (ap.status === 'paused') {
               resumeArticlePlayer();
             } else {
-              startArticlePlayer(text, suffix);
+              startArticlePlayer(suffix, 0);
             }
           } else {
-            startArticlePlayer(text, suffix);
+            startArticlePlayer(suffix, 0);
           }
           return;
         }
 
-        // Nút Dừng (Stop) trên thanh Audio Player
+        // 7. Nút Dừng (Stop) trên thanh Audio Player
         const stopBtn = e.target.closest('.btn-audio-stop');
         if (stopBtn) {
           e.preventDefault();
           e.stopPropagation();
           stopArticlePlayer();
+          return;
         }
       });
     </script>
+
+    <!-- FLOATING SPEECH BUBBLE CHO ĐOẠN VĂN BẢN ĐƯỢC BÔI ĐEN -->
+    <div id="floatingSpeechBubble" title="Bấm để nghe phát âm đoạn văn bản đã chọn">🔊 Nghe đoạn đã chọn</div>
   </body>
 </html>

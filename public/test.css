@@ -1121,15 +1121,16 @@ body {
 .audio-controls {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .btn-audio-ctrl {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 7px 14px;
+  gap: 5px;
+  padding: 7px 13px;
   border-radius: 20px;
   border: 1px solid var(--line);
   background: #fff;
@@ -1144,6 +1145,20 @@ body {
 .btn-audio-ctrl:hover {
   border-color: var(--brand);
   color: var(--brand);
+}
+
+.btn-audio-skip {
+  padding: 6px 11px;
+  font-size: 12px;
+  background: #f8fafc;
+  color: var(--ink-secondary);
+  border-color: #e2e8f0;
+}
+
+.btn-audio-skip:hover {
+  background: var(--brand-light);
+  border-color: var(--brand);
+  color: var(--brand-strong);
 }
 
 .btn-audio-play {
@@ -1171,7 +1186,7 @@ body {
   border-color: #fca5a5;
 }
 
-/* PROGRESS BAR */
+/* PROGRESS BAR & SEEK TRACK */
 .audio-progress-container {
   display: flex;
   align-items: center;
@@ -1189,24 +1204,151 @@ body {
 
 .audio-progress-track {
   flex: 1;
-  height: 8px;
-  background: #f1f5f9;
+  height: 9px;
+  background: #e2e8f0;
   border-radius: 999px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: height 0.15s ease, background-color 0.15s ease;
+}
+
+.audio-progress-track:hover {
+  height: 12px;
+  background: #cbd5e1;
 }
 
 .audio-progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--brand) 0%, #34d399 100%);
+  background: linear-gradient(90deg, var(--brand) 0%, #10b981 100%);
   border-radius: 999px;
-  transition: width 0.2s linear;
+  transition: width 0.15s linear;
+  pointer-events: none;
+}
+
+/* HINT BAR BELOW AUDIO BAR */
+.audio-hint-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #e2e8f0;
+  font-size: 11.5px;
+  color: var(--muted);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.audio-hint-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.audio-hint-text strong {
+  color: var(--brand-strong);
+}
+
+/* READABLE SENTENCES IN ARTICLE TEXT */
+.readable-sentence {
+  display: inline;
+  padding: 2px 4px;
+  margin: 0 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.15s ease;
+}
+
+.readable-sentence:hover {
+  background-color: rgba(26, 122, 94, 0.12);
+  color: var(--brand-strong);
+  text-decoration: underline dotted var(--brand);
+}
+
+.readable-sentence.active-sentence {
+  background-color: #fef08a !important; /* Vàng chanh sáng, chuẩn học ngoại ngữ */
+  color: #713f12 !important;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px #facc15, 0 2px 6px rgba(234, 179, 8, 0.25);
+  border-radius: 4px;
+}
+
+/* FLOATING POPUP KHI BÔI ĐEN VĂN BẢN (SELECTION) */
+#floatingSpeechBubble {
+  position: absolute;
+  z-index: 9999;
+  display: none;
+  background: #0f172a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+  animation: popInBubble 0.15s ease-out;
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#floatingSpeechBubble:hover {
+  background: var(--brand-strong);
+  box-shadow: 0 6px 20px rgba(26, 122, 94, 0.4);
+}
+
+@keyframes popInBubble {
+  from { opacity: 0; transform: translate(-50%, -80%) scale(0.9); }
+  to { opacity: 1; transform: translate(-50%, -100%) scale(1); }
 }
 
 .vocab-word-wrap {
   display: inline-flex;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .audio-bar-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .audio-bar-info {
+    justify-content: space-between;
+  }
+
+  .audio-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .btn-audio-ctrl {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .btn-audio-play {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .btn-audio-skip {
+    padding: 6px 8px;
+  }
+
+  .audio-hint-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
 
