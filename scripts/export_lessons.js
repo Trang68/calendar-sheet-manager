@@ -27,3 +27,4 @@ if (fs.existsSync(skillsPath)) {
   const skills = JSON.parse(fs.readFileSync(skillsPath, 'utf8'));
   console.log(`Verified skills.json: ${skills.levels.join(', ')} | ${skills.skills.map(s => s.name).join(', ')}`);
 }
+
