@@ -1159,6 +1159,14 @@ const lesson3 = {
 // ============================================================================
 // HTML BUILDER HELPER
 // ============================================================================
+function cleanTextForSpeech(text) {
+  return String(text || '')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[«»""'']/g, '')
+    .replace(/<[^>]*>/g, '')
+    .trim();
+}
+
 function renderVocabSection(categories) {
   let html = '';
   categories.forEach(cat => {
@@ -1181,14 +1189,22 @@ function renderVocabSection(categories) {
                     </thead>
                     <tbody>`;
     cat.rows.forEach(r => {
+      const cleanWord = cleanTextForSpeech(r.word);
+      const cleanEx = cleanTextForSpeech(r.example || '');
       html += `
                       <tr>
                         <td>
-                          <span class="vocab-word">${r.word}</span>
+                          <div class="vocab-word-wrap">
+                            <span class="vocab-word">${r.word}</span>
+                            <button class="btn-speak" data-speech="${cleanWord}" title="Nghe phát âm: ${cleanWord}" aria-label="Nghe phát âm">🔊</button>
+                          </div>
                           <span class="vocab-gram">${r.gram || ''}</span>
                         </td>
                         <td><span class="vocab-meaning">${r.meaning}</span></td>
-                        <td><span class="vocab-example">${r.example || ''}</span></td>
+                        <td>
+                          <span class="vocab-example">${r.example || ''}</span>
+                          ${cleanEx ? `<button class="btn-speak" data-speech="${cleanEx}" style="width: 22px; height: 22px; font-size: 11px; margin-top: 4px;" title="Nghe câu ví dụ" aria-label="Nghe câu ví dụ">🔊</button>` : ''}
+                        </td>
                       </tr>`;
     });
     html += `
@@ -1203,6 +1219,7 @@ function renderVocabSection(categories) {
 function renderLessonLayout(lesson) {
   const pTags = lesson.paragraphs.map(p => `<p>${p}</p>`).join('\n            ');
   const vocabHtml = renderVocabSection(lesson.vocabCategories);
+  const fullArticleText = cleanTextForSpeech(lesson.paragraphs.join(' '));
 
   // Group questions into 2 cards:
   // Card 1: 10 câu Tiếng Nga
@@ -1224,11 +1241,13 @@ function renderLessonLayout(lesson) {
       const langBadge = q.lang === 'ru' 
         ? `<span class="lang-badge lang-ru">🇷🇺 RU</span>` 
         : `<span class="lang-badge lang-vi">🇻🇳 VI</span>`;
+      const cleanPrompt = q.lang === 'ru' ? cleanTextForSpeech(q.prompt) : '';
 
       cardHtml += `
             <div class="question-block" data-q="${q.id}" data-ans="${q.ans}">
               <div class="question-prompt">
                 ${langBadge} <strong>Câu ${qNum}.</strong> ${q.prompt}
+                ${cleanPrompt ? `<button class="btn-speak" data-speech="${cleanPrompt}" style="width: 24px; height: 24px; font-size: 11px;" title="Nghe đọc câu hỏi tiếng Nga" aria-label="Nghe câu hỏi">🔊</button>` : ''}
                 ${q.hint ? `<span class="question-hint">💡 ${q.hint}</span>` : ''}
               </div>
               <div class="options-list">`;
@@ -1267,6 +1286,7 @@ function renderLessonLayout(lesson) {
   const scoreDetailId = `scoreDetail${submitIdSuffix}`;
   const btnResetId = `btnReset${submitIdSuffix}`;
   const btnSubmitId = `btnSubmit${submitIdSuffix}`;
+  const btnReadArticleId = `btnReadArticle${submitIdSuffix}`;
 
   return `
       <!-- MAIN CONTENT: B2 - READING - LESSON ${lesson.id} -->
@@ -1286,6 +1306,18 @@ function renderLessonLayout(lesson) {
           <div class="reading-meta">
             <span>📰 Nguồn: ${lesson.source}</span>
             <span>✍️ Chủ đề: ${lesson.topic}</span>
+          </div>
+
+          <!-- THANH PHÁT ÂM TOÀN BỘ ĐOẠN VĂN -->
+          <div class="article-audio-bar">
+            <div class="audio-bar-info">
+              <span>🎧 Luyện nghe đọc hiểu:</span>
+              <span style="font-size: 12px; font-weight: normal; color: var(--muted);">Giọng đọc tiếng Nga tự nhiên</span>
+            </div>
+            <button class="btn-read-article" id="${btnReadArticleId}" data-article-text="${fullArticleText}">
+              <span class="audio-icon">🔊</span>
+              <span class="audio-label">Nghe toàn bộ đoạn văn</span>
+            </button>
           </div>
 
           <div class="reading-text-card">
@@ -1684,6 +1716,114 @@ ${allHtmlLayouts}
           });
         });
       }
+
+      // ======================================================================
+      // HỆ THỐNG PHÁT ÂM TIẾNG NGA TỰ NHIÊN (WEB SPEECH SYNTHESIS ENGINE)
+      // ======================================================================
+      const speechState = {
+        currentBtn: null,
+        synth: window.speechSynthesis || null,
+        russianVoice: null
+      };
+
+      function initVoices() {
+        if (!speechState.synth) return;
+        const voices = speechState.synth.getVoices();
+        // Ưu tiên các giọng Russian chất lượng cao tự nhiên của Google / Microsoft / Apple
+        speechState.russianVoice = 
+          voices.find(v => v.lang.startsWith('ru') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online'))) ||
+          voices.find(v => v.lang.startsWith('ru')) ||
+          null;
+      }
+
+      if (speechState.synth) {
+        initVoices();
+        if (speechState.synth.onvoiceschanged !== undefined) {
+          speechState.synth.onvoiceschanged = initVoices;
+        }
+      }
+
+      function stopSpeaking() {
+        if (!speechState.synth) return;
+        speechState.synth.cancel();
+        if (speechState.currentBtn) {
+          speechState.currentBtn.classList.remove('speaking');
+          if (speechState.currentBtn.classList.contains('btn-read-article')) {
+            speechState.currentBtn.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
+          }
+          speechState.currentBtn = null;
+        }
+      }
+
+      function speakRussianText(text, btnEl, isLongArticle) {
+        if (!speechState.synth) {
+          alert('Trình duyệt của bạn chưa hỗ trợ phát âm trực tiếp. Hãy dùng Chrome, Safari hoặc Edge phiên bản mới!');
+          return;
+        }
+
+        // Nếu đang bấm vào đúng nút đang phát -> Dừng phát
+        if (speechState.currentBtn === btnEl) {
+          stopSpeaking();
+          return;
+        }
+
+        stopSpeaking();
+
+        if (!text || !text.trim()) return;
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ru-RU';
+        if (speechState.russianVoice) {
+          utterance.voice = speechState.russianVoice;
+        }
+        // Tốc độ tự nhiên, rõ ràng cho người học
+        utterance.rate = isLongArticle ? 0.9 : 0.85;
+        utterance.pitch = 1.0;
+
+        btnEl.classList.add('speaking');
+        speechState.currentBtn = btnEl;
+        if (isLongArticle) {
+          btnEl.querySelector('.audio-label').textContent = '⏹ Dừng nghe';
+        }
+
+        utterance.onend = function() {
+          btnEl.classList.remove('speaking');
+          if (isLongArticle) {
+            btnEl.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
+          }
+          speechState.currentBtn = null;
+        };
+
+        utterance.onerror = function() {
+          btnEl.classList.remove('speaking');
+          if (isLongArticle) {
+            btnEl.querySelector('.audio-label').textContent = 'Nghe toàn bộ đoạn văn';
+          }
+          speechState.currentBtn = null;
+        };
+
+        speechState.synth.speak(utterance);
+      }
+
+      // Ủy quyền sự kiện click cho các nút phát âm từ vựng / câu hỏi
+      document.addEventListener('click', function(e) {
+        const speakBtn = e.target.closest('.btn-speak');
+        if (speakBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const textToSpeak = speakBtn.getAttribute('data-speech') || '';
+          speakRussianText(textToSpeak, speakBtn, false);
+          return;
+        }
+
+        const readArticleBtn = e.target.closest('.btn-read-article');
+        if (readArticleBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          const articleText = readArticleBtn.getAttribute('data-article-text') || '';
+          speakRussianText(articleText, readArticleBtn, true);
+        }
+      });
     </script>
   </body>
 </html>
@@ -1691,3 +1831,4 @@ ${allHtmlLayouts}
 
 fs.writeFileSync(path.join(__dirname, '../public/test.html'), fullHtml, 'utf8');
 console.log('Successfully generated public/test.html with 20 questions each (total 60 questions)!');
+
