@@ -1788,6 +1788,8 @@ ${allHtmlLayouts}
         synth: window.speechSynthesis || null,
         russianVoice: null,
         currentWordBtn: null,
+        currentUtterance: null,
+        activeSpeechToken: 0,
         
         articlePlayer: {
           currentSuffix: null,
@@ -1797,6 +1799,18 @@ ${allHtmlLayouts}
           timerInterval: null
         }
       };
+
+      function cancelCurrentSpeech() {
+        speechState.activeSpeechToken++;
+        if (speechState.currentUtterance) {
+          speechState.currentUtterance.onend = null;
+          speechState.currentUtterance.onerror = null;
+          speechState.currentUtterance = null;
+        }
+        if (speechState.synth) {
+          speechState.synth.cancel();
+        }
+      }
 
       const lessonSentenceData = {};
 
@@ -1927,9 +1941,7 @@ ${allHtmlLayouts}
           clearInterval(ap.timerInterval);
           ap.timerInterval = null;
         }
-        if (speechState.synth) {
-          speechState.synth.cancel();
-        }
+        cancelCurrentSpeech();
         const prevSuffix = ap.currentSuffix;
         if (prevSuffix !== null) {
           clearSentenceHighlights(prevSuffix);
@@ -1945,8 +1957,8 @@ ${allHtmlLayouts}
 
       function pauseArticlePlayer() {
         const ap = speechState.articlePlayer;
-        if (speechState.synth && ap.status === 'playing') {
-          speechState.synth.cancel();
+        if (ap.status === 'playing') {
+          cancelCurrentSpeech();
           if (ap.timerInterval) {
             clearInterval(ap.timerInterval);
             ap.timerInterval = null;
@@ -1988,6 +2000,10 @@ ${allHtmlLayouts}
           return;
         }
 
+        // Hủy bỏ dứt điểm phát âm cũ và vô hiệu hóa toàn bộ callback của nó
+        cancelCurrentSpeech();
+        const currentToken = speechState.activeSpeechToken;
+
         clearSentenceHighlights(suffix);
         const item = data.sentences[sentenceIdx];
         ap.currentSentenceIdx = sentenceIdx;
@@ -2000,11 +2016,8 @@ ${allHtmlLayouts}
 
         updatePlayerUI(suffix);
 
-        if (speechState.synth) {
-          speechState.synth.cancel();
-        }
-
         const utterance = new SpeechSynthesisUtterance(item.text);
+        speechState.currentUtterance = utterance;
         utterance.lang = 'ru-RU';
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
@@ -2013,7 +2026,10 @@ ${allHtmlLayouts}
         utterance.pitch = 1.0;
 
         utterance.onend = function() {
+          // Nếu đã chuyển câu mới hoặc dừng phát thì bỏ qua callback cũ
+          if (currentToken !== speechState.activeSpeechToken) return;
           if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+
           if (sentenceIdx + 1 < data.sentences.length) {
             playSentence(suffix, sentenceIdx + 1);
           } else {
@@ -2021,8 +2037,12 @@ ${allHtmlLayouts}
           }
         };
 
-        utterance.onerror = function() {
+        utterance.onerror = function(e) {
+          // Bỏ qua lỗi do chủ động ngắt (interrupted / canceled) hoặc do câu mới ghi đè
+          if (currentToken !== speechState.activeSpeechToken) return;
+          if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
           if (ap.status !== 'playing' || ap.currentSuffix !== suffix) return;
+
           if (sentenceIdx + 1 < data.sentences.length) {
             playSentence(suffix, sentenceIdx + 1);
           } else {
@@ -2095,7 +2115,6 @@ ${allHtmlLayouts}
 
         let nextIdx = ap.currentSentenceIdx;
         if (direction < 0) {
-          // Lùi lại: nếu câu hiện tại đã đọc hơn 2.5s thì đọc lại từ đầu câu này, nếu mới vào thì về câu trước
           const curSent = data.sentences[ap.currentSentenceIdx];
           const timeInCur = ap.elapsedSeconds - (curSent ? curSent.startTime : 0);
           if (timeInCur > 2.5) {
@@ -2104,7 +2123,6 @@ ${allHtmlLayouts}
             nextIdx = Math.max(0, ap.currentSentenceIdx - 1);
           }
         } else {
-          // Tua tới câu kế tiếp
           nextIdx = Math.min(data.sentences.length - 1, ap.currentSentenceIdx + 1);
         }
 
@@ -2135,7 +2153,7 @@ ${allHtmlLayouts}
       function speakWordText(text, btnEl) {
         if (!speechState.synth) return;
         if (speechState.currentWordBtn === btnEl) {
-          speechState.synth.cancel();
+          cancelCurrentSpeech();
           stopSpeakingWord();
           return;
         }
@@ -2143,8 +2161,11 @@ ${allHtmlLayouts}
         if (speechState.articlePlayer.status === 'playing') {
           pauseArticlePlayer();
         }
+        cancelCurrentSpeech();
+        const currentToken = speechState.activeSpeechToken;
 
         const utterance = new SpeechSynthesisUtterance(text);
+        speechState.currentUtterance = utterance;
         utterance.lang = 'ru-RU';
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
@@ -2155,8 +2176,12 @@ ${allHtmlLayouts}
           speechState.currentWordBtn = btnEl;
         }
 
-        utterance.onend = stopSpeakingWord;
-        utterance.onerror = stopSpeakingWord;
+        utterance.onend = function() {
+          if (currentToken === speechState.activeSpeechToken) stopSpeakingWord();
+        };
+        utterance.onerror = function() {
+          if (currentToken === speechState.activeSpeechToken) stopSpeakingWord();
+        };
         speechState.synth.speak(utterance);
       }
 
