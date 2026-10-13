@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Семья московской писательницы Татьяны Устиновой",
+    "badge": "BÀI ĐỌC 1",
+    "time": "25-30 phút",
+    "source": "Газета «Труд»",
+    "topic": "Văn học & Gia đình",
+    "file": "lesson-01.json",
+    "questionCount": 20
+  },
+  {
+    "id": 2,
+    "title": "Центры планирования семьи: сколько детей должно быть в семье?",
+    "badge": "BÀI ĐỌC 2",
+    "time": "25-30 phút",
+    "source": "Xã hội & Gia đình hiện đại",
+    "topic": "Xã hội & Kế hoạch hóa gia đình",
+    "file": "lesson-02.json",
+    "questionCount": 20
+  },
+  {
+    "id": 3,
+    "title": "Пьеса «Чайка» А. П. Чехова и символ Московского Художественного театра",
+    "badge": "BÀI ĐỌC 3",
+    "time": "25-30 phút",
+    "source": "УРОК 1. ЛЮДЕЙ НЕИНТЕРЕСНЫХ В МИРЕ НЕТ... (Trang 17)",
+    "topic": "Văn học & Nghệ thuật kịch nghệ Nga",
+    "file": "lesson-03.json",
+    "questionCount": 20
+  }
+]

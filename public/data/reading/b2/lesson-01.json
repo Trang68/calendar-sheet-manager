@@ -1,0 +1,716 @@
+{
+  "id": 1,
+  "title": "Семья московской писательницы Татьяны Устиновой",
+  "badge": "BÀI ĐỌC 1",
+  "time": "25-30 phút",
+  "source": "Газета «Труд»",
+  "topic": "Văn học & Gia đình",
+  "paragraphs": [
+    "Недавно в газете «Труд» была напечатана статья, в которой рассказывалось о семье московской писательницы Татьяны Устиновой. Вся её дружная семья живёт за городом в большом старом доме. На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя. В этой семье все друг друга любят и всегда помогают друг другу. Романы создаются здесь же, в этом уютном доме, и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых.",
+    "Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе Татьяны Устиновой. Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги Татьяны Устиновой читаются очень легко и с удовольствием."
+  ],
+  "caption": "📷 <strong>Chú thích ảnh:</strong> Т. Устинова и её загородный дом.",
+  "vocabBoxTitle": "Từ vựng & Cấu trúc ngữ pháp trọng tâm (Bài 1)",
+  "vocabCategories": [
+    {
+      "title": "Động từ & Dạng phản thân bị động (-ся)",
+      "badge": "5 Động từ quan trọng",
+      "badgeClass": "cat-verb",
+      "headers": [
+        "Động từ",
+        "Ý nghĩa tiếng Việt",
+        "Ví dụ trong bài"
+      ],
+      "rows": [
+        {
+          "word": "ссо́риться",
+          "gram": "НСВ (с кем?)",
+          "meaning": "Cãi nhau, xung đột",
+          "example": "...где все кричат, <strong>ссорятся</strong>..."
+        },
+        {
+          "word": "мири́ться",
+          "gram": "НСВ (с кем?)",
+          "meaning": "Làm hòa, giảng hòa",
+          "example": "...ссорятся và <strong>мирятся</strong>..."
+        },
+        {
+          "word": "печа́таться",
+          "gram": "НСВ (bị động -ся)",
+          "meaning": "Được in ấn, xuất bản",
+          "example": "...романы <strong>печатаются</strong> на компьютере"
+        },
+        {
+          "word": "создава́ться",
+          "gram": "НСВ (bị động -ся)",
+          "meaning": "Được sáng tác, tạo ra",
+          "example": "Романы <strong>создаются</strong> здесь же..."
+        },
+        {
+          "word": "чита́ться",
+          "gram": "НСВ (bị động)",
+          "meaning": "Được đón đọc (dễ đọc)",
+          "example": "...книги <strong>читаются</strong> очень легко"
+        }
+      ]
+    },
+    {
+      "title": "Danh từ & Tính từ",
+      "badge": "Danh - Tính từ",
+      "badgeClass": "cat-noun",
+      "headers": [
+        "Từ vựng",
+        "Ý nghĩa tiếng Việt",
+        "Ví dụ trong bài"
+      ],
+      "rows": [
+        {
+          "word": "писа́тельница",
+          "gram": "Danh từ (Giống cái)",
+          "meaning": "Nữ nhà văn",
+          "example": "...о семье московской <strong>писательницы</strong>..."
+        },
+        {
+          "word": "рома́н",
+          "gram": "Danh từ (Giống đực)",
+          "meaning": "Tiểu thuyết",
+          "example": "<strong>Романы</strong> создаются здесь же..."
+        },
+        {
+          "word": "дру́жная (семья)",
+          "gram": "Tính từ (Giống cái)",
+          "meaning": "Hòa thuận, gắn kết",
+          "example": "Вся её <strong>druzhная семья</strong> живёт..."
+        },
+        {
+          "word": "ую́тный (дом)",
+          "gram": "Tính từ (Giống đực)",
+          "meaning": "Ấm cúng, thoải mái",
+          "example": "...в этом <strong>уютном доме</strong>..."
+        },
+        {
+          "word": "живы́е (люди)",
+          "gram": "Tính từ (Số nhiều)",
+          "meaning": "Chân thực, sống động",
+          "example": "Её герои — нормальные, <strong>живые люди</strong>..."
+        }
+      ]
+    },
+    {
+      "title": "Cụm từ cố định & Quản trị cách",
+      "badge": "Cụm từ hay gặp",
+      "badgeClass": "cat-expr",
+      "headers": [
+        "Cụm từ tiếng Nga",
+        "Nghĩa tiếng Việt",
+        "Ngữ pháp"
+      ],
+      "rows": [
+        {
+          "word": "за́ городом",
+          "gram": "Giới từ за + Cách 5",
+          "meaning": "Ở ngoại ô, ngoài thành phố"
+        },
+        {
+          "word": "друг дру́га / друг дру́гу",
+          "gram": "Cách 4 (любить) / Cách 3 (помогать)",
+          "meaning": "Lẫn nhau, nhau"
+        },
+        {
+          "word": "с удово́льствием",
+          "gram": "Giới từ с + Cách 5",
+          "meaning": "Một cách thích thú, hào hứng"
+        },
+        {
+          "word": "когда́-то о́чень давно́",
+          "gram": "Hậu tố bất định -то",
+          "meaning": "Từ một thời rất xa xưa"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l1_q1",
+      "lang": "ru",
+      "prompt": "Что означает глагол <strong>«ссориться»</strong> в контексте текста?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Жить в полном согласии и никогда не спорить"
+        },
+        {
+          "key": "B",
+          "text": "B. Конфликтовать, спорить и выражать разногласия",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Вместе готовить вкусную еду на кухне"
+        },
+        {
+          "key": "D",
+          "text": "D. Восстанавливать мирные дружеские отношения"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! «Ссориться» означает спорить, конфликтовать và выражать взаимные претензии.",
+        "other": "Неверно. «Ссориться» — это вступать в ссору, конфликтовать."
+      }
+    },
+    {
+      "id": "l1_q2",
+      "lang": "ru",
+      "prompt": "Какой глагол является антонимом (противоположным по значению) к слову <strong>«ссориться»</strong>?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. кричать"
+        },
+        {
+          "key": "B",
+          "text": "B. мириться",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. печатать"
+        },
+        {
+          "key": "D",
+          "text": "D. играть"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Антонимом к глаголу «ссориться» является «мириться» (восстанавливать согласие).",
+        "other": "Неверно. Противоположным по смыслу является глагол «мириться»."
+      }
+    },
+    {
+      "id": "l1_q3",
+      "lang": "ru",
+      "prompt": "Какое значение имеет прилагательное <strong>«уютный»</strong> в словосочетании «уютный дом»?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Огромный и очень дорогой дворец"
+        },
+        {
+          "key": "B",
+          "text": "B. Пустой дом, где никто не живёт"
+        },
+        {
+          "key": "C",
+          "text": "C. Тёплый, удобный, располагающий к спокойному отдыху",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Старый и разрушенный дом без отопления"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! «Уютный» — удобный, благоустроенный, приятный для жизни.",
+        "other": "Неверно. «Уютный дом» — это тёплый, приятный и удобный для жизни дом."
+      }
+    },
+    {
+      "id": "l1_q4",
+      "lang": "ru",
+      "prompt": "Как вы понимаете выражение <strong>«дружная семья»</strong>?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Семья, члены которой живут в согласии, любят и поддерживают друг друга",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. Семья, в которой все люди работают в одной компании"
+        },
+        {
+          "key": "C",
+          "text": "C. Семья, у которой очень много богатых друзей"
+        },
+        {
+          "key": "D",
+          "text": "D. Семья, которая часто устраивает шумные праздники для соседей"
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! Дружная семья — это сплочённая семья, где царят любовь, взаимопомощь и согласие.",
+        "other": "Неверно. Дружная семья — это семья, сплочённая взаимной любовью и поддержкой."
+      }
+    },
+    {
+      "id": "l1_q5",
+      "lang": "ru",
+      "prompt": "Вставьте правильную форму местоимений: «В этой семье все любят ________ и помогают ________.»",
+      "hint": "Помните управление: любить (кого? Винительный пад.) — помогать (кому? Дательный пад.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. друг другу / друг друга"
+        },
+        {
+          "key": "B",
+          "text": "B. друг друга / друг другу",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. друг с другом / друг о друге"
+        },
+        {
+          "key": "D",
+          "text": "D. друг от друга / друг к другу"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Любить кого? -> друг друга (В.п.); Помогать кому? -> друг другу (Д.п.).",
+        "other": "Ошибка в падеже: любить кого? (друг друга), помогать кому? (друг другу)."
+      }
+    },
+    {
+      "id": "l1_q6",
+      "lang": "ru",
+      "prompt": "Выберите правильную форму пассивного глагола: «Романы писательницы ________ здесь же, в загородном доме.»",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. создаются",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. создаётся"
+        },
+        {
+          "key": "C",
+          "text": "C. создают"
+        },
+        {
+          "key": "D",
+          "text": "D. создал"
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! Подлежащее «романы» во множественном числе, поэтому сказуемое — «создаются».",
+        "other": "Неверно. Подлежащее «романы» (мн.ч.) требует форму глагола «создаются»."
+      }
+    },
+    {
+      "id": "l1_q7",
+      "lang": "ru",
+      "prompt": "Вставьте союзное слово: «Её герои — живые люди, с ________ мы встречаемся каждый день.»",
+      "hint": "Конструкция: с кем? (Творительный падеж множественного числа)",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. которые"
+        },
+        {
+          "key": "B",
+          "text": "B. которых"
+        },
+        {
+          "key": "C",
+          "text": "C. которыми",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. которым"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! Предлог «с» с одушевлёнными существительными требует Творительного падежа: с кем? -> с которыми.",
+        "other": "Ошибка в падеже. С предлогом «с» (с кем?) используется форма Т.п. мн.ч. «с которыми»."
+      }
+    },
+    {
+      "id": "l1_q8",
+      "lang": "ru",
+      "prompt": "Где живёт семья Татьяны Устиновой согласно тексту?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. В современной квартире в центре Москвы"
+        },
+        {
+          "key": "B",
+          "text": "B. За городом в большом старом доме",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. В гостинице в Санкт-Петербурге"
+        },
+        {
+          "key": "D",
+          "text": "D. На даче у своих знакомых"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! В тексте прямо сказано: «Вся её дружная семья живёт за городом в большом старом доме».",
+        "other": "Неверно. По тексту семья живёт за городом в большом старом доме."
+      }
+    },
+    {
+      "id": "l1_q9",
+      "lang": "ru",
+      "prompt": "На чём писательница печатает свои романы?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. На новейшем дорогом ноутбуке"
+        },
+        {
+          "key": "B",
+          "text": "B. На старой механической пишущей машинке"
+        },
+        {
+          "key": "C",
+          "text": "C. На старом компьютере, купленном когда-то у знакомых",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Она пишет все романы от руки в тетрадях"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! Текст: «...и печатаются на старом компьютере, который писательница купила когда-то очень давно у знакомых».",
+        "other": "Неверно. Романы печатаются на старом компьютере, купленном у знакомых."
+      }
+    },
+    {
+      "id": "l1_q10",
+      "lang": "ru",
+      "prompt": "Почему книги Татьяны Устиновой читаются очень легко и с удовольствием?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Потому что в них мало страниц и много цветных картинок"
+        },
+        {
+          "key": "B",
+          "text": "B. Потому что её герои — нормальные, живые люди, похожие на нас",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Потому что книги продаются по очень низкой цене"
+        },
+        {
+          "key": "D",
+          "text": "D. Потому что сюжеты рассказывают только о жизни за городом"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! В тексте: «Её герои — нормальные, живые люди, с которыми мы встречаемся каждый день. Поэтому книги... читаются очень легко».",
+        "other": "Неверно. Причина в том, что персонажи — настоящие, живые люди из реальной жизни."
+      }
+    },
+    {
+      "id": "l1_q11",
+      "lang": "vi",
+      "prompt": "Ý nghĩa của cụm từ <strong>«за городом»</strong> trong câu «Вся её дружная семья живёт за городом» là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Trong trung tâm thủ đô sầm uất"
+        },
+        {
+          "key": "B",
+          "text": "B. Ở vùng ngoại ô, ngoài thành phố",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Ở nước ngoài"
+        },
+        {
+          "key": "D",
+          "text": "D. Dưới một khu phố ngầm"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «За городом» nghĩa là ở vùng ngoại ô, ngoài phạm vi thành phố.",
+        "other": "Chưa đúng. «За городом» là cụm từ chỉ vị trí ở ngoại ô, ngoại thành."
+      }
+    },
+    {
+      "id": "l1_q12",
+      "lang": "vi",
+      "prompt": "Cụm thành ngữ cố định <strong>«с удовольствием»</strong> thể hiện thái độ hay tâm trạng gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Một cách miễn cưỡng, bắt buộc"
+        },
+        {
+          "key": "B",
+          "text": "B. Một cách thờ ơ, không quan tâm"
+        },
+        {
+          "key": "C",
+          "text": "C. Một cách hào hứng, say mê và thích thú",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Một cách vội vã, lo âu"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Chính xác! «С удовольствием» mang nghĩa là với niềm vui sướng, say mê, thích thú.",
+        "other": "Chưa đúng. «С удовольствием» diễn tả việc làm gì đó một cách rất hào hứng, thích thú."
+      }
+    },
+    {
+      "id": "l1_q13",
+      "lang": "vi",
+      "prompt": "Trong cụm từ <strong>«когда-то очень давно»</strong>, hậu tố <strong>«-то»</strong> mang ý nghĩa ngữ pháp gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Phủ định hoàn toàn thời gian"
+        },
+        {
+          "key": "B",
+          "text": "B. Chỉ một thời điểm bất định trong quá khứ mà người nói không nhớ rõ chính xác",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Nhấn mạnh một mốc thời gian tương lai chắc chắn xảy ra"
+        },
+        {
+          "key": "D",
+          "text": "D. Biểu thị điều kiện giả định"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Hậu tố «-то» biểu thị ý nghĩa bất định (không xác định chính xác thời điểm trong quá khứ).",
+        "other": "Chưa đúng. «Когда-то» là đại từ/phó từ bất định chỉ một lúc nào đó trong quá khứ mà người nói không nhớ cụ thể."
+      }
+    },
+    {
+      "id": "l1_q14",
+      "lang": "vi",
+      "prompt": "Động từ phản thân <strong>«читаются»</strong> trong câu «книги читаются очень легко» biểu đạt ý nghĩa gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Những cuốn sách tự biết đọc to cho mọi người nghe"
+        },
+        {
+          "key": "B",
+          "text": "B. Đặc tính của cuốn sách được viết rất cuốn hút, dễ đọc và dễ tiếp nhận",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Sách chỉ dành riêng cho trẻ em tập đọc"
+        },
+        {
+          "key": "D",
+          "text": "D. Cuốn sách bị ép buộc phải đọc"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Dạng động từ phản thân «читается» đi kèm trạng từ «легко» chỉ đặc tính dễ đọc, văn phong trôi chảy.",
+        "other": "Chưa đúng. Đây là dạng động từ phản thân mang ý nghĩa miêu tả phẩm chất/đặc tính dễ đọc của tác phẩm."
+      }
+    },
+    {
+      "id": "l1_q15",
+      "lang": "vi",
+      "prompt": "Từ <strong>«живые люди»</strong> khi dùng để miêu tả các nhân vật của Ustinova có nghĩa là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Những người còn đang sống và thở về mặt sinh học"
+        },
+        {
+          "key": "B",
+          "text": "B. Những nhân vật chân thực, có cảm xúc thật và gần gũi với đời thường chứ không sáo rỗng",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Những người có sức khỏe vượt trội và bất tử"
+        },
+        {
+          "key": "D",
+          "text": "D. Những nhân vật hoạt hình vui nhộn"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Живые люди» trong văn học là phép ẩn dụ chỉ những nhân vật sinh động, chân thực như bước ra từ đời thực.",
+        "other": "Chưa đúng. Trong ngữ cảnh văn học, «живые люди» mang nghĩa là nhân vật sống động, chân thực và gần gũi."
+      }
+    },
+    {
+      "id": "l1_q16",
+      "lang": "vi",
+      "prompt": "Chi tiết nào cho thấy không khí sinh hoạt trong gia đình nữ nhà văn vô cùng sôi nổi và náo nhiệt?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Trong nhà hoàn toàn im ắng và mọi người chỉ giao tiếp bằng tin nhắn"
+        },
+        {
+          "key": "B",
+          "text": "B. Bếp liên tục nấu nướng, trẻ em nô đùa, chú chó Kuzya chạy nhảy trong vườn",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Mọi người không bao giờ ăn cơm cùng nhau"
+        },
+        {
+          "key": "D",
+          "text": "D. Gia đình chỉ mở cửa vào các dịp lễ tết"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bài viết miêu tả: bếp luôn nấu ăn, trẻ con chơi đùa, chó Kuzya chạy ngoài vườn, mọi người to tiếng rồi lại làm lành.",
+        "other": "Chưa đúng. Đoạn văn nêu rõ: «На кухне постоянно готовится еда, дети играют, а в саду весело бегает собака Кузя»."
+      }
+    },
+    {
+      "id": "l1_q17",
+      "lang": "vi",
+      "prompt": "Nguồn cảm hứng sáng tác cho các cuốn tiểu thuyết của T. Ustinova chủ yếu đến từ đâu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Những chuyến du lịch thám hiểm đến các vùng đất hoang sơ"
+        },
+        {
+          "key": "B",
+          "text": "B. Chính ngôi nhà, khu vườn và những tình huống hằng ngày trong gia đình bà",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Các vụ án mạng bí ẩn đăng trên báo nước ngoài"
+        },
+        {
+          "key": "D",
+          "text": "D. Trí tưởng tượng viễn tưởng về tương lai"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bài viết nêu rõ: «Этот дом, сад и эта семья, где все кричат, ссорятся и мирятся, появляются в каждом романе...».",
+        "other": "Chưa đúng theo bài đọc. Chính ngôi nhà, khu vườn và gia đình bà là chất liệu xuất hiện trong mỗi cuốn tiểu thuyết."
+      }
+    },
+    {
+      "id": "l1_q18",
+      "lang": "vi",
+      "prompt": "Từ <strong>«статья»</strong> trong câu «была напечатана статья» thuộc giống gì và có nghĩa là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Giống đực - Một cuốn từ điển"
+        },
+        {
+          "key": "B",
+          "text": "B. Giống cái - Một bài báo / bài viết",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Giống trung - Một bức ảnh phóng sự"
+        },
+        {
+          "key": "D",
+          "text": "D. Số nhiều - Những tờ rơi quảng cáo"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Статья» là danh từ giống cái (đuôi -я), có nghĩa là bài báo, bài viết.",
+        "other": "Chưa đúng. «Статья» là danh từ giống cái, mang nghĩa là bài báo/bài viết."
+      }
+    },
+    {
+      "id": "l1_q19",
+      "lang": "vi",
+      "prompt": "Tên tờ báo đưa tin về gia đình nhà văn Tatiana Ustinova là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Газета «Правда»"
+        },
+        {
+          "key": "B",
+          "text": "B. Газета «Труд»",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Газета «Известия»"
+        },
+        {
+          "key": "D",
+          "text": "D. Газета «Культура»"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Câu đầu tiên của bài đọc: «Недавно в газете «Труд» была напечатана статья...».",
+        "other": "Chưa đúng. Ngay câu mở đầu văn bản có ghi: «в газете «Труд»»."
+      }
+    },
+    {
+      "id": "l1_q20",
+      "lang": "vi",
+      "prompt": "Tổng kết thông điệp chính của văn bản về bí quyết thành công của nhà văn T. Ustinova là:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Sử dụng kỹ thuật công nghệ máy tính tiên tiến nhất để viết sách"
+        },
+        {
+          "key": "B",
+          "text": "B. Sống tách biệt và không tiếp xúc với người bình thường"
+        },
+        {
+          "key": "C",
+          "text": "C. Bắt nguồn từ cuộc sống gia đình ấm áp, tràn ngập tình yêu thương và thấu hiểu con người thực tế",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Chi tiêu thật nhiều tiền cho các chiến dịch quảng cáo rầm rộ"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Chính xác! Bài viết nhấn mạnh sự gắn kết gia đình, sự ấm cúng và sự chân thực đời thường chính là chìa khóa khiến sách của bà được đón nhận nồng nhiệt.",
+        "other": "Chưa đúng. Thông điệp cốt lõi là tình cảm gia đình hòa thuận và nhân vật gần gũi đời thường đã làm nên sức hút tác phẩm."
+      }
+    }
+  ]
+}

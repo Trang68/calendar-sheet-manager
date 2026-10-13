@@ -1,0 +1,42 @@
+{
+  "levels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1"
+  ],
+  "skills": [
+    {
+      "key": "reading",
+      "name": "Đọc hiểu (Чтение)",
+      "icon": "📖"
+    },
+    {
+      "key": "listening",
+      "name": "Nghe hiểu (Аудирование)",
+      "icon": "🎧"
+    },
+    {
+      "key": "grammar",
+      "name": "Từ vựng & Ngữ pháp (Лексика & Грамматика)",
+      "icon": "📝"
+    },
+    {
+      "key": "writing",
+      "name": "Viết luận (Письмо)",
+      "icon": "✍️"
+    },
+    {
+      "key": "speaking",
+      "name": "Nói & Vấn đáp (Говорение)",
+      "icon": "🗣️"
+    }
+  ],
+  "available": {
+    "B2_reading": {
+      "count": 3,
+      "manifestUrl": "/data/reading/b2/manifest.json"
+    }
+  }
+}

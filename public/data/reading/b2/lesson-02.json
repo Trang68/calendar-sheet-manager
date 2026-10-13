@@ -1,0 +1,712 @@
+{
+  "id": 2,
+  "title": "Центры планирования семьи: сколько детей должно быть в семье?",
+  "badge": "BÀI ĐỌC 2",
+  "time": "25-30 phút",
+  "source": "Xã hội & Gia đình hiện đại",
+  "topic": "Xã hội & Kế hoạch hóa gia đình",
+  "paragraphs": [
+    "Сейчас почти во всех больших городах России создаются центры планирования семьи. В эти центры приходят молодые люди, чтобы получить консультацию опытных психологов, врачей и педагогов. В этих центрах обсуждаются наиболее важные проблемы молодой семьи: материальные проблемы, проблема жилья, проблема рождения и воспитания ребёнка.",
+    "В последнее время психологами и педагогами часто обсуждается вопрос: <strong>сколько детей должно быть в семье — один или несколько?</strong> В каждой семье эта проблема решается по-своему.",
+    "Многодетные семьи сейчас «вышли из моды». Считается, что один ребёнок — это удобно. Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально. Но единственные дети, особенно подростки, часто говорят о своём одиночестве. Такие дети могут быть неуверенными в себе, в своих силах, потому что постоянно опекаются своими папами, мамами, бабушками и дедушками.",
+    "Конечно, если в семье много детей, родители не могут проводить много времени с каждым ребёнком. Но в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами, которые играют и занимаются с ними. Дети в больших семьях быстро становятся самостоятельными и уверенными в себе."
+  ],
+  "caption": "🕊️ <strong>Chủ đề trọng tâm:</strong> Kế hoạch hóa gia đình & Lựa chọn số lượng con (1 con vs. đông con).",
+  "vocabBoxTitle": "Từ vựng & Cấu trúc quản trị cách (Bài 2)",
+  "vocabCategories": [
+    {
+      "title": "Động từ & Cấu trúc quản trị cách (Глагольное управление)",
+      "badge": "Cốt lõi bài đọc",
+      "badgeClass": "cat-verb",
+      "headers": [
+        "Động từ",
+        "Cấu trúc cách & Ý nghĩa",
+        "Ví dụ trong bài"
+      ],
+      "rows": [
+        {
+          "word": "уделя́ть / удели́ть",
+          "gram": "НСВ / СВ",
+          "meaning": "Dành (thời gian, sự chú ý) cho ai (Cách 3)",
+          "example": "Одному ребёнку <strong>уделяется</strong> больше времени..."
+        },
+        {
+          "word": "опека́ть",
+          "gram": "НСВ",
+          "meaning": "Bao bọc, chở che, giám sát quá mức (Cách 4)",
+          "example": "...постоянно <strong>опекаются</strong> папами и мамами..."
+        },
+        {
+          "word": "воспи́тывать / воспита́ть",
+          "gram": "НСВ / СВ",
+          "meaning": "Nuôi dạy, giáo dục ai (Cách 4)",
+          "example": "...младшие дети <strong>воспитываются</strong> старшими братьями..."
+        },
+        {
+          "word": "обеспе́чивать / обеспечи́ть",
+          "gram": "НСВ / СВ",
+          "meaning": "Chu cấp cho ai cái gì: кого? (4) чем? (5)",
+          "example": "...он лучше <strong>обеспечивается</strong> материально."
+        },
+        {
+          "word": "обсужда́ться / реши́ться",
+          "gram": "Dạng bị động (-ся)",
+          "meaning": "Được thảo luận / Được giải quyết",
+          "example": "В каждой семье проблема <strong>решается</strong> по-своему."
+        }
+      ]
+    },
+    {
+      "title": "Danh từ & Tính từ chủ đề",
+      "badge": "Từ vựng gia đình",
+      "badgeClass": "cat-noun",
+      "headers": [
+        "Từ vựng",
+        "Ý nghĩa tiếng Việt",
+        "Ngữ cảnh"
+      ],
+      "rows": [
+        {
+          "word": "плани́рование семьи́",
+          "gram": "Danh từ ghép",
+          "meaning": "Kế hoạch hóa gia đình",
+          "example": "Центры планирования семьи"
+        },
+        {
+          "word": "многоде́тная семья́",
+          "gram": "Tính từ + Danh từ",
+          "meaning": "Gia đình đông con",
+          "example": "Многодетные семьи вышли из моды"
+        },
+        {
+          "word": "одино́чество",
+          "gram": "Danh từ (Giống trung)",
+          "meaning": "Sự cô đơn, lẻ loi",
+          "example": "...говорят о своём одиночестве"
+        },
+        {
+          "word": "самостоя́тельный",
+          "gram": "Tính từ",
+          "meaning": "Tự lập, tự giác",
+          "example": "Дети быстро становятся самостоятельными"
+        },
+        {
+          "word": "уве́ренный в себе́",
+          "gram": "Cụm tính từ",
+          "meaning": "Tự tin vào bản thân",
+          "example": "неуверенные в себе ↔ уверенные в себе"
+        }
+      ]
+    },
+    {
+      "title": "Thành ngữ & Cụm từ cố định",
+      "badge": "Idioms & Expressions",
+      "badgeClass": "cat-expr",
+      "headers": [
+        "Cụm từ",
+        "Nghĩa tiếng Việt",
+        "Ghi chú"
+      ],
+      "rows": [
+        {
+          "word": "вы́йти из мо́ды",
+          "gram": "Thành ngữ",
+          "meaning": "Không còn là xu hướng, lỗi thời"
+        },
+        {
+          "word": "по-сво́ему",
+          "gram": "Trạng từ",
+          "meaning": "Theo cách riêng của mình"
+        },
+        {
+          "word": "в свои́х си́лах",
+          "gram": "Cụm giới từ",
+          "meaning": "Vào năng lực/sức lực của mình"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "l2_q1",
+      "lang": "ru",
+      "prompt": "Какая главная проблема обсуждается в этом тексте?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Нехватка детских садов и школ в крупных городах России"
+        },
+        {
+          "key": "B",
+          "text": "B. Проблема жилья и ипотечных кредитов для молодых специалистов"
+        },
+        {
+          "key": "C",
+          "text": "C. Вопрос о том, сколько детей должно быть в семье, и особенности их воспитания",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Трудности в работе центров психологической помощи"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! Основная тема текста — сколько детей должно быть в семье (один или несколько) и как это влияет на детей.",
+        "other": "Неверно. Главный вопрос текста — количество детей в семье и специфика их развития."
+      }
+    },
+    {
+      "id": "l2_q2",
+      "lang": "ru",
+      "prompt": "Что означает метафора <strong>«вышли из моды»</strong> в отношении многодетных семей?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Большие семьи перестали модно одеваться"
+        },
+        {
+          "key": "B",
+          "text": "B. Иметь много детей стало непопулярным и непривычным явлением",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Государство запретило иметь больше двух детей"
+        },
+        {
+          "key": "D",
+          "text": "D. Многодетные семьи стали популярнее, чем раньше"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! «Выйти из моды» означает потерять былую популярность, перестать быть общепринятым трендом.",
+        "other": "Неверно. В данном контексте это означает потерю популярности и актуальности в обществе."
+      }
+    },
+    {
+      "id": "l2_q3",
+      "lang": "ru",
+      "prompt": "Какого падежа требует глагол <strong>«уделять (внимание)»</strong>? Выберите правильный вариант: «Родители уделяют много внимания ________.»",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. детям (Дательный падеж)",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. детей (Родительный / Винительный падеж)"
+        },
+        {
+          "key": "C",
+          "text": "C. детьми (Творительный падеж)"
+        },
+        {
+          "key": "D",
+          "text": "D. о детях (Предложный падеж)"
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! Глагол «уделять внимание» требует Дательного падежа: кому? -> детям.",
+        "other": "Ошибка в падеже. Уделять внимание кому? — Дательный падеж (детям)."
+      }
+    },
+    {
+      "id": "l2_q4",
+      "lang": "ru",
+      "prompt": "Выберите правильную форму: «Родители чрезмерно опекают ________.»",
+      "hint": "Опекать (кого? Винительный падеж одушевлённых существительных)",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. единственному сыну"
+        },
+        {
+          "key": "B",
+          "text": "B. единственным сыном"
+        },
+        {
+          "key": "C",
+          "text": "C. единственного сына",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. о единственном сыне"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! Глагол «опекать» управляет Винительным падежом: кого? -> единственного сына.",
+        "other": "Неверно. Опекать кого? — Винительный падеж (единственного сына)."
+      }
+    },
+    {
+      "id": "l2_q5",
+      "lang": "ru",
+      "prompt": "Какое грамматическое управление имеет глагол <strong>«обеспечивать / обеспечить»</strong>?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. кому? (3) что? (4)"
+        },
+        {
+          "key": "B",
+          "text": "B. кого? (4) чем? (5)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. кого? (4) о чём? (6)"
+        },
+        {
+          "key": "D",
+          "text": "D. кого? (2) к чему? (3)"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Обеспечивать кого? (Винительный падеж) чем? (Творительный падеж).",
+        "other": "Ошибка. Стандартное управление: обеспечить кого? (4) чем? (5)."
+      }
+    },
+    {
+      "id": "l2_q6",
+      "lang": "ru",
+      "prompt": "Вставьте правильную форму: «Семья стремится обеспечить ребёнка качественным ________.»",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. образование (В.п.)"
+        },
+        {
+          "key": "B",
+          "text": "B. образованием (Т.п.)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. образования (Р.п.)"
+        },
+        {
+          "key": "D",
+          "text": "D. к образованию (Д.п.)"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Обеспечить кого? (ребёнка) чем? -> качественным образованием (Творительный падеж).",
+        "other": "Неверно. Глагол «обеспечить» требует Творительного падежа: чем? (образованием)."
+      }
+    },
+    {
+      "id": "l2_q7",
+      "lang": "ru",
+      "prompt": "Кем воспитываются младшие дети в многодетных семьях согласно тексту?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Только школьными учителями"
+        },
+        {
+          "key": "B",
+          "text": "B. Нянями и гувернантками"
+        },
+        {
+          "key": "C",
+          "text": "C. Старшими братьями и сёстрами",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. Специалистами центров планирования"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! Текст: «...в многодетных семьях младшие дети воспитываются старшими братьями и сёстрами».",
+        "other": "Неверно. По тексту младшие дети воспитываются старшими братьями и сёстрами."
+      }
+    },
+    {
+      "id": "l2_q8",
+      "lang": "ru",
+      "prompt": "Почему единственные дети в семье могут чувствовать себя неуверенными в себе?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Потому что им не хватает денег на карманные расходы"
+        },
+        {
+          "key": "B",
+          "text": "B. Потому что они постоянно опекаются взрослыми членами семьи",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Потому что родители никогда не уделяют им времени"
+        },
+        {
+          "key": "D",
+          "text": "D. Потому что они живут далеко от школы"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Причина в гиперопеке: они постоянно опекаются папами, мамами, бабушками и дедушками.",
+        "other": "Неверно. Текст указывает на чрезмерную опеку со стороны всех взрослых родственников."
+      }
+    },
+    {
+      "id": "l2_q9",
+      "lang": "ru",
+      "prompt": "Каким качеством быстрее овладевают дети, выросшие в больших семьях?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Они быстрее становятся самостоятельными",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. Они становятся равнодушными к другим людям"
+        },
+        {
+          "key": "C",
+          "text": "C. Они всегда выбирают только творческие профессии"
+        },
+        {
+          "key": "D",
+          "text": "D. Они не любят общаться с людьми"
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! В тексте: «Дети в больших семьях быстро становятся самостоятельными и уверенными в себе».",
+        "other": "Неверно. Главное преимущество — быстрое развитие самостоятельности и уверенности."
+      }
+    },
+    {
+      "id": "l2_q10",
+      "lang": "ru",
+      "prompt": "Зачем молодые люди обращаются в центры планирования семьи?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Чтобы получить консультацию опытных психологов, врачей и педагогов",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. Чтобы бесплатно получить квартиру от государства"
+        },
+        {
+          "key": "C",
+          "text": "C. Чтобы найти работу для всех членов семьи"
+        },
+        {
+          "key": "D",
+          "text": "D. Чтобы купить детские товары со скидкой"
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! Текст: «...чтобы получить консультацию опытных психологов, врачей и педагогов».",
+        "other": "Неверно. Цель — получить консультацию квалифицированных специалистов."
+      }
+    },
+    {
+      "id": "l2_q11",
+      "lang": "vi",
+      "prompt": "Khái niệm <strong>«центры планирования семьи»</strong> dịch chuẩn xác nhất sang tiếng Việt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Trung tâm môi giới hôn nhân và gia đình"
+        },
+        {
+          "key": "B",
+          "text": "B. Trung tâm kế hoạch hóa gia đình",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Trung tâm bảo trợ xã hội trẻ mồ côi"
+        },
+        {
+          "key": "D",
+          "text": "D. Trung tâm tư vấn tài chính bất động sản"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Центр планирования семьи» là trung tâm kế hoạch hóa gia đình.",
+        "other": "Chưa đúng. Đây là thuật ngữ y tế - xã hội chỉ Trung tâm kế hoạch hóa gia đình."
+      }
+    },
+    {
+      "id": "l2_q12",
+      "lang": "vi",
+      "prompt": "Từ <strong>«одиночество»</strong> (giống trung) có nghĩa là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Sự ích kỷ, tham lam"
+        },
+        {
+          "key": "B",
+          "text": "B. Sự cô đơn, lẻ loi, thiếu người chia sẻ",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Sự tự tin thái quá"
+        },
+        {
+          "key": "D",
+          "text": "D. Sự bận rộn trong công việc"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Одиночество» nghĩa là cảm giác cô đơn, cô độc.",
+        "other": "Chưa đúng. «Одиночество» bắt nguồn từ gốc «один» (một mình), chỉ sự cô đơn, lẻ loi."
+      }
+    },
+    {
+      "id": "l2_q13",
+      "lang": "vi",
+      "prompt": "Từ <strong>«самостоятельный»</strong> miêu tả một đứa trẻ có phẩm chất gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Luôn dựa dẫm và chờ người khác làm hộ"
+        },
+        {
+          "key": "B",
+          "text": "B. Tự lập, tự giác, có khả năng tự giải quyết công việc của mình",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Nhút nhát và sợ chỗ đông người"
+        },
+        {
+          "key": "D",
+          "text": "D. Hay cãi lời và bướng bỉnh"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Самостоятельный» (tự lập, độc lập) là đứa trẻ tự biết chăm sóc và giải quyết việc của mình.",
+        "other": "Chưa đúng. «Самостоятельный» bắt nguồn từ «сам» (tự mình) + «стоять» (đứng vững), nghĩa là tự lập."
+      }
+    },
+    {
+      "id": "l2_q14",
+      "lang": "vi",
+      "prompt": "Động từ <strong>«опекать»</strong> trong bài nói về việc cha mẹ nuôi dạy con một mang sắc thái ý nghĩa:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Bỏ bê con cái, không quan tâm chăm sóc"
+        },
+        {
+          "key": "B",
+          "text": "B. Bao bọc quá mức (giám sát, làm thay mọi việc khiến con mất tự lập)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Rèn luyện kỷ luật nghiêm khắc như quân đội"
+        },
+        {
+          "key": "D",
+          "text": "D. Cho con hoàn toàn tự do muốn làm gì tùy thích"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Опекать» trong tâm lý học giáo dục thường chỉ sự bao bọc quá mức (гиперопека).",
+        "other": "Chưa đúng. Ngữ cảnh bài viết chỉ sự chở che, bao bọc quá mức của người lớn khiến trẻ thiếu tự tin."
+      }
+    },
+    {
+      "id": "l2_q15",
+      "lang": "vi",
+      "prompt": "Trạng từ <strong>«по-своему»</strong> trong câu «эта проблема решается по-своему» có nghĩa là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Bắt buộc theo cùng một công thức chung giống hệt nhau"
+        },
+        {
+          "key": "B",
+          "text": "B. Theo cách riêng, quan điểm riêng của từng gia đình",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Theo chỉ thị bắt buộc của chính quyền"
+        },
+        {
+          "key": "D",
+          "text": "D. Theo lời khuyên duy nhất của bác sĩ"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «По-своему» có nghĩa là theo cách riêng, lối riêng của mỗi người/mỗi nhà.",
+        "other": "Chưa đúng. «По-своему» biểu thị hành động diễn ra theo cách thức riêng của chủ thể."
+      }
+    },
+    {
+      "id": "l2_q16",
+      "lang": "vi",
+      "prompt": "Ưu điểm lớn nhất của việc sinh duy nhất một con (con một) được đề cập trong bài là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Đứa trẻ không bao giờ bị ốm đau"
+        },
+        {
+          "key": "B",
+          "text": "B. Tiện lợi, cha mẹ có nhiều thời gian quan tâm và chu cấp điều kiện vật chất tốt hơn cho con",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Cha mẹ không cần phải đi làm kiếm tiền"
+        },
+        {
+          "key": "D",
+          "text": "D. Đứa trẻ chắc chắn sẽ trở thành thiên tài"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bài viết chỉ ra: «Одному ребёнку в семье уделяется больше времени и внимания, он лучше обеспечивается материально».",
+        "other": "Chưa đúng. Ưu điểm được nêu trong bài là đứa trẻ nhận được nhiều thời gian quan tâm và điều kiện vật chất tốt hơn."
+      }
+    },
+    {
+      "id": "l2_q17",
+      "lang": "vi",
+      "prompt": "Mặt hạn chế (nhược điểm) mà cha mẹ đông con thường phải đối mặt là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Các con không bao giờ chịu nói chuyện với nhau"
+        },
+        {
+          "key": "B",
+          "text": "B. Cha mẹ không thể dành nhiều thời gian riêng cho từng đứa trẻ",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Trẻ em trong nhà luôn luôn nhút nhát"
+        },
+        {
+          "key": "D",
+          "text": "D. Không có trường học nào nhận dạy trẻ gia đình đông con"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bài viết: «...родители не могут проводить много времени с каждым ребёнком».",
+        "other": "Chưa đúng. Nhược điểm của gia đình đông con là cha mẹ khó dành nhiều thời gian riêng cho từng đứa con."
+      }
+    },
+    {
+      "id": "l2_q18",
+      "lang": "vi",
+      "prompt": "Đối tượng nào trong bài đọc thường hay bộc lộ cảm giác cô đơn nhất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Các bậc phụ huynh đi làm xa"
+        },
+        {
+          "key": "B",
+          "text": "B. Những đứa trẻ là con một, đặc biệt là lứa tuổi thiếu niên (подростки)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Những đứa em út trong gia đình đông con"
+        },
+        {
+          "key": "D",
+          "text": "D. Các bác sĩ tâm lý tại trung tâm"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Trích dẫn bài đọc: «Но единственные дети, особенно подростки, часто говорят о своём одиночестве».",
+        "other": "Chưa đúng theo văn bản. Đối tượng hay chia sẻ về sự cô đơn là con một, đặc biệt là lứa tuổi thiếu niên."
+      }
+    },
+    {
+      "id": "l2_q19",
+      "lang": "vi",
+      "prompt": "Cụm danh từ <strong>«материальные проблемы»</strong> chỉ nhóm vấn đề nào sau đây?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Vấn đề sức khỏe tinh thần"
+        },
+        {
+          "key": "B",
+          "text": "B. Vấn đề tài chính, tiền bạc, kinh tế gia đình",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Mâu thuẫn giữa mẹ chồng và nàng dâu"
+        },
+        {
+          "key": "D",
+          "text": "D. Vấn đề bất đồng ngôn ngữ"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Материальные проблемы» là các khó khăn liên quan đến vật chất, tài chính, tiền bạc.",
+        "other": "Chưa đúng. «Материальный» chỉ phương diện vật chất, kinh tế, tài chính."
+      }
+    },
+    {
+      "id": "l2_q20",
+      "lang": "vi",
+      "prompt": "Kết luận logic từ bài đọc: Việc quyết định sinh 1 hay nhiều con nên dựa trên điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Chạy theo xu hướng số đông của xã hội"
+        },
+        {
+          "key": "B",
+          "text": "B. Hoàn cảnh cụ thể, khả năng kinh tế và sự cân nhắc kỹ lưỡng giữa mặt tích cực và hạn chế của mỗi gia đình",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Chỉ dựa vào ý kiến của ông bà"
+        },
+        {
+          "key": "D",
+          "text": "D. Bắt buộc phải có từ 3 con trở lên"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bài viết nhấn mạnh «В каждой семье эта проблема решается по-своему», cả hai mô hình đều có ưu và nhược điểm riêng cần cân nhắc.",
+        "other": "Chưa đúng. Thông điệp bài đọc là mỗi gia đình tự quyết định dựa trên hoàn cảnh và sự thấu hiểu điểm mạnh - điểm yếu của từng mô hình."
+      }
+    }
+  ]
+}
