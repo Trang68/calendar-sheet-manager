@@ -157,7 +157,7 @@
       // ======================================================================
       // CLIENT-SIDE STATE & CONFIGURATION
       // ======================================================================
-      let currentLevel = 'B2';
+      let currentLevel = 'A1';
       let currentSkill = 'reading';
       let currentLessonId = 1;
       let currentLessonData = null;
@@ -584,21 +584,24 @@
         if (!categories || !categories.length) return '';
         let html = '';
         categories.forEach(cat => {
+          const headers = (cat.headers && cat.headers.length >= 3) ? cat.headers : ['Từ vựng & Ngữ pháp', 'Ý nghĩa tiếng Việt', 'Ví dụ & Ngữ cảnh'];
+          const badgeClass = cat.badgeClass || 'cat-noun';
+          const badgeText = cat.badge || 'A1 Sơ cấp';
           html += `
             <div class="vocab-category-card">
               <div class="vocab-cat-header">
                 <div class="vocab-cat-title">
-                  <span>${cat.badgeClass === 'cat-verb' ? '⚡' : (cat.badgeClass === 'cat-noun' ? '🏷️' : '🔗')}</span> ${cat.title}
+                  <span>${badgeClass === 'cat-verb' ? '⚡' : (badgeClass === 'cat-noun' ? '🏷️' : '🔗')}</span> ${cat.title}
                 </div>
-                <span class="cat-badge ${cat.badgeClass}">${cat.badge}</span>
+                <span class="cat-badge ${badgeClass}">${badgeText}</span>
               </div>
               <div class="table-responsive-wrapper">
                 <table class="vocab-table">
                   <thead>
                     <tr>
-                      <th style="width: 32%;">${cat.headers[0]}</th>
-                      <th style="width: 33%;">${cat.headers[1]}</th>
-                      <th style="width: 35%;">${cat.headers[2]}</th>
+                      <th style="width: 32%;">${headers[0]}</th>
+                      <th style="width: 33%;">${headers[1]}</th>
+                      <th style="width: 35%;">${headers[2]}</th>
                     </tr>
                   </thead>
                   <tbody>`;
@@ -1356,9 +1359,21 @@
             currentManifest = await manifestRes.json();
             renderLessonNav(currentManifest);
 
-            // Nạp bài được chọn
-            const activeEntry = currentManifest.find(m => m.id === parseInt(currentLessonId, 10)) || currentManifest[0];
+            // Nạp bài đang học dở (ưu tiên bài lưu từ localStorage của trình độ & kỹ năng này)
+            let targetId = parseInt(currentLessonId, 10);
+            try {
+              const savedId = localStorage.getItem(`taiga_lesson_${currentLevel}_${currentSkill}`);
+              if (savedId) targetId = parseInt(savedId, 10);
+            } catch (e) {}
+
+            const activeEntry = currentManifest.find(m => m.id === targetId) || currentManifest[0];
             currentLessonId = activeEntry.id;
+
+            try {
+              localStorage.setItem('taiga_last_level', currentLevel);
+              localStorage.setItem('taiga_last_skill', currentSkill);
+              localStorage.setItem(`taiga_lesson_${currentLevel}_${currentSkill}`, currentLessonId);
+            } catch (e) {}
 
             const lessonRes = await fetch(currentManifestFolder + activeEntry.file);
             const lessonData = await lessonRes.json();
@@ -1423,6 +1438,9 @@
           const found = manifestList.find(m => m.id === selectedId);
           if (found) {
             currentLessonId = found.id;
+            try {
+              localStorage.setItem(`taiga_lesson_${currentLevel}_${currentSkill}`, currentLessonId);
+            } catch (e) {}
             loadLessonByFile(found.file);
             updateSelectionLabel();
             syncLessonNavState(manifestList);
@@ -1437,6 +1455,9 @@
               const target = manifestList[curIdx - 1];
               currentLessonId = target.id;
               select.value = target.id;
+              try {
+                localStorage.setItem(`taiga_lesson_${currentLevel}_${currentSkill}`, currentLessonId);
+              } catch (e) {}
               loadLessonByFile(target.file);
               updateSelectionLabel();
               syncLessonNavState(manifestList);
@@ -1452,6 +1473,9 @@
               const target = manifestList[curIdx + 1];
               currentLessonId = target.id;
               select.value = target.id;
+              try {
+                localStorage.setItem(`taiga_lesson_${currentLevel}_${currentSkill}`, currentLessonId);
+              } catch (e) {}
               loadLessonByFile(target.file);
               updateSelectionLabel();
               syncLessonNavState(manifestList);
@@ -2063,7 +2087,6 @@
 
       function selectLevel(lvl, preferredSkill) {
         currentLevel = lvl;
-        currentLessonId = 1;
 
         // 1. Cập nhật nút Level active
         document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
@@ -2074,15 +2097,19 @@
         const availableSkills = getAvailableSkillsForLevel(lvl);
 
         if (availableSkills.length > 0) {
-          // Nếu có preferredSkill và có sẵn, dùng preferredSkill
-          // Nếu kỹ năng hiện tại có sẵn trong level mới, giữ nguyên
-          // Ngược lại, tự động mở kỹ năng có sẵn đầu tiên (ví dụ 'reading' hoặc 'listening')
           if (preferredSkill && availableSkills.includes(preferredSkill)) {
             currentSkill = preferredSkill;
           } else if (!availableSkills.includes(currentSkill)) {
             currentSkill = availableSkills[0];
           }
         }
+
+        // Lấy bài học đang học dở của trình độ & kỹ năng này từ localStorage
+        let savedLessonId = null;
+        try {
+          savedLessonId = localStorage.getItem(`taiga_lesson_${currentLevel}_${currentSkill}`);
+        } catch (e) {}
+        currentLessonId = savedLessonId ? parseInt(savedLessonId, 10) : 1;
 
         // 3. Luôn đồng bộ tab kỹ năng đang active trên giao diện
         document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
@@ -2095,7 +2122,12 @@
 
       function selectSkill(skillKey) {
         currentSkill = skillKey;
-        currentLessonId = 1;
+
+        let savedLessonId = null;
+        try {
+          savedLessonId = localStorage.getItem(`taiga_lesson_${currentLevel}_${currentSkill}`);
+        } catch (e) {}
+        currentLessonId = savedLessonId ? parseInt(savedLessonId, 10) : 1;
 
         document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
           b.classList.toggle('active', b.getAttribute('data-skill') === skillKey);
@@ -2138,7 +2170,13 @@
 
       // Nạp dữ liệu ban đầu khi trang vừa tải
       document.addEventListener('DOMContentLoaded', () => {
-        selectLevel(currentLevel, currentSkill);
+        let initialLevel = 'A1';
+        let initialSkill = 'reading';
+        try {
+          initialLevel = localStorage.getItem('taiga_last_level') || 'A1';
+          initialSkill = localStorage.getItem('taiga_last_skill') || 'reading';
+        } catch (e) {}
+        selectLevel(initialLevel, initialSkill);
       });
     </script>
   </body>
