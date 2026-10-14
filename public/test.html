@@ -1937,38 +1937,76 @@
         });
       }
 
+      // ======================================================================
+      // SMART LEVEL & SKILL SELECTOR (TỰ ĐỘNG MỞ KỸ NĂNG CÓ SẴN)
+      // ======================================================================
+      function getAvailableSkillsForLevel(lvl) {
+        const skills = ['reading', 'listening', 'speaking', 'writing'];
+        return skills.filter(s => !!knownSkillManifests[`${lvl}_${s}`]);
+      }
+
+      function selectLevel(lvl, preferredSkill) {
+        currentLevel = lvl;
+        currentLessonId = 1;
+
+        // 1. Cập nhật nút Level active
+        document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-level') === lvl);
+        });
+
+        // 2. Tìm danh sách kỹ năng có sẵn cho level này
+        const availableSkills = getAvailableSkillsForLevel(lvl);
+
+        if (availableSkills.length > 0) {
+          // Nếu có preferredSkill và có sẵn, dùng preferredSkill
+          // Nếu kỹ năng hiện tại có sẵn trong level mới, giữ nguyên
+          // Ngược lại, tự động mở kỹ năng có sẵn đầu tiên (ví dụ 'reading' hoặc 'listening')
+          if (preferredSkill && availableSkills.includes(preferredSkill)) {
+            currentSkill = preferredSkill;
+          } else if (!availableSkills.includes(currentSkill)) {
+            currentSkill = availableSkills[0];
+          }
+        }
+
+        // 3. Luôn đồng bộ tab kỹ năng đang active trên giao diện
+        document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-skill') === currentSkill);
+        });
+
+        // 4. Nạp bài ngay lập tức
+        loadManifestAndLessons();
+      }
+
+      function selectSkill(skillKey) {
+        currentSkill = skillKey;
+        currentLessonId = 1;
+
+        document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-skill') === skillKey);
+        });
+
+        loadManifestAndLessons();
+      }
+
       // Tabs Level (A1 - C1)
       document.querySelectorAll('#levelTabs .level-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-          document.querySelectorAll('#levelTabs .level-btn').forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-          currentLevel = this.getAttribute('data-level');
-          loadManifestAndLessons();
+          const lvl = this.getAttribute('data-level');
+          selectLevel(lvl);
         });
       });
 
       // Tabs Skills (Nghe, Nói, Đọc, Viết)
       document.querySelectorAll('#skillTabs .skill-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-          document.querySelectorAll('#skillTabs .skill-btn').forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-          currentSkill = this.getAttribute('data-skill');
-          loadManifestAndLessons();
+          const sk = this.getAttribute('data-skill');
+          selectSkill(sk);
         });
       });
 
       // Nút quay lại B2
       document.getElementById('btnBackToB2').addEventListener('click', function() {
-        document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
-          b.classList.toggle('active', b.getAttribute('data-level') === 'B2');
-        });
-        document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
-          b.classList.toggle('active', b.getAttribute('data-skill') === 'reading');
-        });
-        currentLevel = 'B2';
-        currentSkill = 'reading';
-        currentLessonId = 1;
-        loadManifestAndLessons();
+        selectLevel('B2', 'reading');
       });
 
       // Mobile Menu Hamburger Toggle
@@ -1984,7 +2022,7 @@
 
       // Nạp dữ liệu ban đầu khi trang vừa tải
       document.addEventListener('DOMContentLoaded', () => {
-        loadManifestAndLessons();
+        selectLevel(currentLevel, currentSkill);
       });
     </script>
   </body>
