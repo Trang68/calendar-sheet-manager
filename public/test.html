@@ -72,14 +72,50 @@
           <button class="skill-btn" data-skill="writing">✍️ Viết (Письмо)</button>
         </div>
 
-        <!-- Chọn bài học (Lessons) -->
-        <div class="lesson-picker" id="lessonPickerArea">
-          <div style="font-weight: 700; font-size: 14px; color: var(--ink);">
-            Danh sách bài kiểm tra (<span id="currentSelectionLabel">B2 - Đọc (Bài 1)</span>):
+        <!-- Thanh điều hướng & chọn bài học (Lesson Navigation Bar & Progress) -->
+        <div class="lesson-nav-bar" id="lessonPickerArea">
+          <div class="lesson-nav-row">
+            <!-- Nút Bài trước -->
+            <button type="button" class="lesson-nav-btn prev-btn" id="btnPrevLesson" title="Chuyển về bài học trước">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <span class="btn-text">Bài trước</span>
+            </button>
+
+            <!-- Hộp chọn bài Dropdown hiển thị Tên bài học -->
+            <div class="lesson-dropdown-box">
+              <span class="lesson-dropdown-icon" id="lessonDropdownIcon">📖</span>
+              <select class="lesson-dropdown-select" id="lessonSelectDropdown" aria-label="Chọn bài học">
+                <!-- Sẽ được điền động qua JavaScript -->
+              </select>
+              <span class="lesson-dropdown-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </div>
+
+            <!-- Nút Bài tiếp -->
+            <button type="button" class="lesson-nav-btn next-btn" id="btnNextLesson" title="Chuyển sang bài học tiếp theo">
+              <span class="btn-text">Bài tiếp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
           </div>
-          <div class="lesson-chips" id="lessonChips">
-            <!-- Render dynamically from manifest.json -->
+
+          <!-- Thanh tiến độ bài học -->
+          <div class="lesson-progress-row">
+            <div class="lesson-progress-track">
+              <div class="lesson-progress-fill" id="lessonProgressFill" style="width: 5%;"></div>
+            </div>
+            <div class="lesson-progress-meta">
+              <span class="progress-step" id="lessonProgressStep">Bài 1 / 20</span>
+              <span class="progress-badge" id="lessonProgressPercent">5%</span>
+            </div>
           </div>
+          <span id="currentSelectionLabel" style="display: none;"></span>
         </div>
       </div>
 
@@ -1318,7 +1354,7 @@
             currentManifestFolder = manifestUrl.substring(0, manifestUrl.lastIndexOf('/') + 1);
             const manifestRes = await fetch(manifestUrl);
             currentManifest = await manifestRes.json();
-            renderLessonChips(currentManifest);
+            renderLessonNav(currentManifest);
 
             // Nạp bài được chọn
             const activeEntry = currentManifest.find(m => m.id === parseInt(currentLessonId, 10)) || currentManifest[0];
@@ -1331,6 +1367,7 @@
             activeContainer.style.display = 'grid';
             renderLesson(lessonData);
             updateSelectionLabel();
+            syncLessonNavState(currentManifest);
           } catch (err) {
             console.error('Lỗi tải dữ liệu bài học:', err);
             loadingState.style.display = 'none';
@@ -1351,25 +1388,103 @@
         }
       }
 
-      function renderLessonChips(manifestList) {
-        const chipsContainer = document.getElementById('lessonChips');
-        chipsContainer.innerHTML = '';
-        manifestList.forEach(m => {
-          const btn = document.createElement('button');
-          btn.className = 'lesson-chip' + (m.id === parseInt(currentLessonId, 10) ? ' active' : '');
-          btn.setAttribute('data-lesson-id', m.id);
-          btn.setAttribute('data-file', m.file);
-          const countLabel = m.questionCount ? ` (${m.questionCount} câu)` : (m.phraseCount ? ` (${m.phraseCount} câu)` : (m.targetWordRange ? ` (${m.targetWordRange})` : ''));
-          btn.textContent = 'Bài ' + m.id + ': ' + (m.title.length > 36 ? m.title.slice(0, 34) + '...' : m.title) + countLabel;
-          btn.addEventListener('click', () => {
-            currentLessonId = m.id;
-            document.querySelectorAll('#lessonChips .lesson-chip').forEach(c => c.classList.remove('active'));
-            btn.classList.add('active');
-            loadLessonByFile(m.file);
-            updateSelectionLabel();
-          });
-          chipsContainer.appendChild(btn);
+      function renderLessonNav(manifestList) {
+        const select = document.getElementById('lessonSelectDropdown');
+        const iconEl = document.getElementById('lessonDropdownIcon');
+        const prevBtn = document.getElementById('btnPrevLesson');
+        const nextBtn = document.getElementById('btnNextLesson');
+        if (!select || !manifestList || !manifestList.length) return;
+
+        const skillIcons = {
+          reading: '📖',
+          listening: '🎧',
+          speaking: '🗣️',
+          writing: '✍️'
+        };
+        if (iconEl) iconEl.textContent = skillIcons[currentSkill] || '📖';
+
+        select.innerHTML = '';
+        const total = manifestList.length;
+
+        manifestList.forEach((m) => {
+          const opt = document.createElement('option');
+          opt.value = m.id;
+          opt.setAttribute('data-file', m.file);
+          // Hiển thị tiêu đề bài học trang nhã, không kèm số câu:
+          opt.textContent = `Bài ${m.id} / ${total}: ${m.title}`;
+          select.appendChild(opt);
         });
+
+        select.value = currentLessonId;
+
+        // Sự kiện khi người dùng chọn bài học từ dropdown
+        select.onchange = () => {
+          const selectedId = parseInt(select.value, 10);
+          const found = manifestList.find(m => m.id === selectedId);
+          if (found) {
+            currentLessonId = found.id;
+            loadLessonByFile(found.file);
+            updateSelectionLabel();
+            syncLessonNavState(manifestList);
+          }
+        };
+
+        // Nút Bài trước
+        if (prevBtn) {
+          prevBtn.onclick = () => {
+            const curIdx = manifestList.findIndex(m => m.id === parseInt(currentLessonId, 10));
+            if (curIdx > 0) {
+              const target = manifestList[curIdx - 1];
+              currentLessonId = target.id;
+              select.value = target.id;
+              loadLessonByFile(target.file);
+              updateSelectionLabel();
+              syncLessonNavState(manifestList);
+            }
+          };
+        }
+
+        // Nút Bài tiếp
+        if (nextBtn) {
+          nextBtn.onclick = () => {
+            const curIdx = manifestList.findIndex(m => m.id === parseInt(currentLessonId, 10));
+            if (curIdx >= 0 && curIdx < manifestList.length - 1) {
+              const target = manifestList[curIdx + 1];
+              currentLessonId = target.id;
+              select.value = target.id;
+              loadLessonByFile(target.file);
+              updateSelectionLabel();
+              syncLessonNavState(manifestList);
+            }
+          };
+        }
+
+        syncLessonNavState(manifestList);
+      }
+
+      function syncLessonNavState(manifestList) {
+        const list = manifestList || currentManifest;
+        if (!list || !list.length) return;
+
+        const select = document.getElementById('lessonSelectDropdown');
+        const prevBtn = document.getElementById('btnPrevLesson');
+        const nextBtn = document.getElementById('btnNextLesson');
+        const progressFill = document.getElementById('lessonProgressFill');
+        const progressStep = document.getElementById('lessonProgressStep');
+        const progressPercent = document.getElementById('lessonProgressPercent');
+
+        const curIdx = list.findIndex(m => m.id === parseInt(currentLessonId, 10));
+        const activeIdx = curIdx >= 0 ? curIdx : 0;
+        const total = list.length;
+
+        if (select) select.value = currentLessonId;
+        if (prevBtn) prevBtn.disabled = activeIdx <= 0;
+        if (nextBtn) nextBtn.disabled = activeIdx >= total - 1;
+
+        const percent = Math.min(100, Math.round(((activeIdx + 1) / total) * 100));
+        if (progressFill) progressFill.style.width = percent + '%';
+        if (progressStep) progressStep.textContent = `Bài ${activeIdx + 1} / ${total}`;
+        if (progressPercent) progressPercent.textContent = `${percent}% hoàn thành`;
       }
 
       async function loadLessonByFile(fileName) {
@@ -1384,6 +1499,7 @@
           loadingState.style.display = 'none';
           activeContainer.style.display = 'grid';
           renderLesson(data);
+          syncLessonNavState(currentManifest);
         } catch (err) {
           console.error('Lỗi khi tải file bài:', err);
           loadingState.style.display = 'none';
