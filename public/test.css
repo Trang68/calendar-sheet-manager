@@ -382,6 +382,67 @@ body {
   box-shadow: 0 4px 12px rgba(232, 102, 47, 0.25);
 }
 
+/* Specialized Level Button in level-tabs */
+.level-btn.specialized-level-btn {
+  border-color: #d97706;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+  color: #b45309;
+}
+
+.level-btn.specialized-level-btn:hover {
+  border-color: #b45309;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.level-btn.specialized-level-btn.active {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  border-color: #b45309;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+}
+
+/* 6 Specialized Domains Tabs */
+.specialized-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.spec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  min-height: 42px;
+  border-radius: var(--radius-md, 14px);
+  border: 1.5px solid var(--line, #cbd5e1);
+  background: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-secondary, #334155);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+}
+
+.spec-btn:hover {
+  border-color: #0284c7;
+  background: #f0f9ff;
+  color: #0369a1;
+  transform: translateY(-1px);
+}
+
+.spec-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28);
+}
+
 /* ==========================================================================
    MODERN LESSON NAVIGATION BAR & PROGRESS TRACKER (PHONG CÁCH 1)
    ========================================================================== */

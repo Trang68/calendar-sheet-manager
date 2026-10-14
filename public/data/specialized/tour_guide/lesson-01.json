@@ -1,0 +1,346 @@
+{
+  "id": 1,
+  "level": "specialized",
+  "domain": "tour_guide",
+  "domainName": "HDV Du Lịch",
+  "badge": "Chuyên Ngành Du Lịch",
+  "title": "Встреча туристов в аэропорту и трансфер в отель",
+  "readingTime": "12 phút",
+  "source": "Cẩm nang Hướng dẫn viên du lịch đón khách quốc tế",
+  "topic": "Nghiệp vụ HDV: Đón đoàn tại sân bay, làm thủ tục xe đưa đón và lưu ý an toàn",
+  "vocabCategories": [
+    {
+      "title": "Thuật ngữ đón khách & Phương tiện (Трансфер и встреча)",
+      "rows": [
+        {
+          "word": "Встреча́ющий гид",
+          "gram": "danh từ nam",
+          "meaning": "Hướng dẫn viên đón đoàn",
+          "example": "Гид держит табличку с названием туроператора."
+        },
+        {
+          "word": "Тра́нсфер",
+          "gram": "danh từ nam",
+          "meaning": "Xe đưa đón sân bay về khách sạn",
+          "example": "Наш комфортабельный автобус готов к трансферу."
+        },
+        {
+          "word": "Ва́учер",
+          "gram": "danh từ nam",
+          "meaning": "Phiếu xác nhận dịch vụ du lịch",
+          "example": "Пожалуйста, предъявите ваш туристический ваучер."
+        },
+        {
+          "word": "Бага́жное отделе́ние",
+          "gram": "danh từ trung",
+          "meaning": "Khoang chứa hành lý xe bus",
+          "example": "Положите чемоданы в багажное отделение автобуса."
+        },
+        {
+          "word": "Заселе́ние в оте́ль",
+          "gram": "danh từ trung",
+          "meaning": "Làm thủ tục nhận phòng (Check-in)",
+          "example": "Заселение в номера начнётся ровно в четырнадцать часов."
+        }
+      ]
+    },
+    {
+      "title": "Mẫu câu hướng dẫn & Dặn dò (Инструктаж туристов)",
+      "rows": [
+        {
+          "word": "Добро́ пожа́ловать!",
+          "gram": "thành ngữ chào đón",
+          "meaning": "Nhiệt liệt chào mừng quý khách!",
+          "example": "Добро пожаловать в солнечный Вьетнам!"
+        },
+        {
+          "word": "Разни́ца во вре́мени",
+          "gram": "cụm danh từ",
+          "meaning": "Độ chênh lệch múi giờ",
+          "example": "Разница во времени с Москвой составляет плюс четыре часа."
+        },
+        {
+          "word": "Обме́н валю́ты",
+          "gram": "cụm danh từ",
+          "meaning": "Đổi tiền ngoại tệ",
+          "example": "Вы можете выгодно обменять доллары и рубли на вьетнамские донги на ресепшн."
+        },
+        {
+          "word": "Сим-ка́рта с интерне́том",
+          "gram": "cụm từ",
+          "meaning": "SIM điện thoại 4G/5G",
+          "example": "Купить местную сим-карту можно прямо в терминале аэропорта."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Здравствуйте, дорогие гости! Добро пожаловать во Вьетнам! Меня зовут Нгуен, я ваш сопровождающий гид от туристической компании. Поздравляю вас с успешным прибытием в международный аэропорт Камрань!",
+    "Сейчас мы пройдём на парковку, где нас ждёт большой кондиционированный автобус номер восемь. Пожалуйста, проверьте наличие всех ваших сумок и чемоданов перед тем, как сложить их в багажное отделение. Дорога до курортного города Нячанг займёт примерно сорок пять минут.",
+    "Обратите внимание: местное время опережает московское на четыре часа. Официальная валюта нашей страны — вьетнамский донг. Менять валюту в аэропорту лучше в официальных обменных пунктах или в банках города. Не рекомендуем менять деньги у частных лиц на улице.",
+    "Завтра в девять часов утра в холле вашего отеля состоится важная информационная встреча. Я подробно расскажу о правилах безопасности, медицинских страховках, а также о самых захватывающих экскурсиях: морской прогулке по островам, водопадах и грязелечебницах.",
+    "Желаю вам незабываемого и яркого отдыха на лазурном побережье Вьетнама! Если у вас возникнут любые вопросы, я круглосуточно на связи."
+  ],
+  "questions": [
+    {
+      "id": "tg1_q1",
+      "lang": "ru",
+      "prompt": "Кем работает автор приветственного обращения?",
+      "hint": "Nghề nghiệp của người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Сотрудником таможни аэропорта."
+        },
+        {
+          "key": "B",
+          "text": "Сопровождающим туристическим гидом."
+        },
+        {
+          "key": "C",
+          "text": "Администратором отеля."
+        },
+        {
+          "key": "D",
+          "text": "Водителем такси."
+        }
+      ],
+      "ans": "B",
+      "explain": "Người nói tự giới thiệu: «Меня зовут Нгуен, я ваш сопровождающий гид от туристической компании»."
+    },
+    {
+      "id": "tg1_q2",
+      "lang": "ru",
+      "prompt": "Сколько времени займёт поездка из аэропорта до Нячанга?",
+      "hint": "Thời gian xe di chuyển.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Около двадцати минут."
+        },
+        {
+          "key": "B",
+          "text": "Примерно сорок пять минут."
+        },
+        {
+          "key": "C",
+          "text": "Два часа."
+        },
+        {
+          "key": "D",
+          "text": "Полтора часа."
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài nói: «Дорога до курортного города Нячанг займёт примерно сорок пять минут»."
+    },
+    {
+      "id": "tg1_q3",
+      "lang": "ru",
+      "prompt": "На сколько часов местное время во Вьетнаме опережает московское?",
+      "hint": "Chênh lệch múi giờ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На 2 часа."
+        },
+        {
+          "key": "B",
+          "text": "На 3 часа."
+        },
+        {
+          "key": "C",
+          "text": "На 4 часа."
+        },
+        {
+          "key": "D",
+          "text": "Время совпадает."
+        }
+      ],
+      "ans": "C",
+      "explain": "HDV nêu: «местное время опережает московское на четыре часа (+4)»."
+    },
+    {
+      "id": "tg1_q4",
+      "lang": "ru",
+      "prompt": "Во сколько состоится информационная встреча в отеле?",
+      "hint": "Giờ họp đoàn sáng mai.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В 8:00 утра."
+        },
+        {
+          "key": "B",
+          "text": "В 9:00 утра."
+        },
+        {
+          "key": "C",
+          "text": "В 12:00 дня."
+        },
+        {
+          "key": "D",
+          "text": "В 18:00 вечера."
+        }
+      ],
+      "ans": "B",
+      "explain": "HDV dặn: «Завтра в девять часов утра в холле вашего отеля состоится информационная встреча»."
+    },
+    {
+      "id": "tg1_q5",
+      "lang": "ru",
+      "prompt": "Где гид НЕ рекомендует туристам менять валюту?",
+      "hint": "Nơi không nên đổi tiền.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В банках города."
+        },
+        {
+          "key": "B",
+          "text": "В официальных обменниках аэропорта."
+        },
+        {
+          "key": "C",
+          "text": "У частных лиц на улице."
+        },
+        {
+          "key": "D",
+          "text": "На ресепшн отеля."
+        }
+      ],
+      "ans": "C",
+      "explain": "HDV cảnh báo: «Не рекомендуем менять деньги у частных лиц на улице»."
+    },
+    {
+      "id": "tg1_q6",
+      "lang": "vi",
+      "prompt": "Từ «Трансфер» trong nghiệp vụ du lịch lữ hành có nghĩa là gì?",
+      "hint": "Dịch vụ di chuyển giữa các điểm.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dịch vụ giặt ủi tại phòng khách sạn."
+        },
+        {
+          "key": "B",
+          "text": "Dịch vụ xe đưa đón khách giữa sân bay và khách sạn."
+        },
+        {
+          "key": "C",
+          "text": "Vé máy bay khứ hồi."
+        },
+        {
+          "key": "D",
+          "text": "Thủ tục xin visa thị thực tại cửa khẩu."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Трансфер» là thuật ngữ chuyên ngành chỉ dịch vụ vận chuyển đưa đón du khách giữa sân bay và nơi lưu trú."
+    },
+    {
+      "id": "tg1_q7",
+      "lang": "vi",
+      "prompt": "Trước khi hành khách xếp va ly vào khoang xe bus, HDV đã yêu cầu điều gì?",
+      "hint": "Kiểm tra tư trang.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đóng thêm phí cước hành lý."
+        },
+        {
+          "key": "B",
+          "text": "Mở khóa va ly để kiểm tra an ninh."
+        },
+        {
+          "key": "C",
+          "text": "Kiểm tra kỹ lưỡng đầy đủ số lượng túi xách và va ly."
+        },
+        {
+          "key": "D",
+          "text": "Ký tên vào danh sách nhận phòng trước."
+        }
+      ],
+      "ans": "C",
+      "explain": "«Пожалуйста, проверьте наличие всех ваших сумок и чемоданов перед тем, как сложить их в багажное отделение»."
+    },
+    {
+      "id": "tg1_q8",
+      "lang": "vi",
+      "prompt": "Buổi họp thông tin (Инфо-встреча) sáng hôm sau nhằm mục đích chính gì?",
+      "hint": "Nội dung buổi phổ biến.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thu lại hộ chiếu của du khách."
+        },
+        {
+          "key": "B",
+          "text": "Phổ biến quy tắc an toàn, bảo hiểm và giới thiệu các tour tham quan."
+        },
+        {
+          "key": "C",
+          "text": "Đổi tiền Việt Nam đồng bắt buộc."
+        },
+        {
+          "key": "D",
+          "text": "Kiểm tra sức khỏe đầu vào của du khách."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung cuộc họp: «расскажу о правилах безопасности, медицинских страховках, а также о самых захватывающих экскурсиях»."
+    },
+    {
+      "id": "tg1_q9",
+      "lang": "vi",
+      "prompt": "Cụm từ «круглосуточно на связи» của HDV thể hiện cam kết gì?",
+      "hint": "Thời gian hỗ trợ khách.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ nghe máy trong giờ hành chính từ 8h đến 17h."
+        },
+        {
+          "key": "B",
+          "text": "Luôn sẵn sàng hỗ trợ khách 24/7 (ngày lẫn đêm)."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ nhắn tin qua mạng xã hội sau 20h."
+        },
+        {
+          "key": "D",
+          "text": "Khách phải trả phí khi gọi điện tư vấn."
+        }
+      ],
+      "ans": "B",
+      "explain": "«круглосуточно на связи» nghĩa là giữ liên lạc và trực hỗ trợ 24 giờ mỗi ngày (24/7)."
+    },
+    {
+      "id": "tg1_q10",
+      "lang": "vi",
+      "prompt": "Thành phố biển được nhắc đến làm điểm đến trong bài là thành phố nào?",
+      "hint": "Địa danh du lịch nổi tiếng miền Trung.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đà Nẵng."
+        },
+        {
+          "key": "B",
+          "text": "Nha Trang."
+        },
+        {
+          "key": "C",
+          "text": "Vũng Tàu."
+        },
+        {
+          "key": "D",
+          "text": "Hạ Long."
+        }
+      ],
+      "ans": "B",
+      "explain": "Sân bay Cam Ranh và cung đường đến thành phố nghỉ dưỡng Nha Trang."
+    }
+  ]
+}

@@ -486,3 +486,4 @@ const manifestPath = path.join(outputDir, 'manifest.json');
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 
 console.log(`✓ Đã tạo thành công 20 bài học Writing A1 và manifest.json tại ${outputDir}`);
+

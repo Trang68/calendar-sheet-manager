@@ -1,0 +1,340 @@
+{
+  "id": 1,
+  "level": "specialized",
+  "domain": "medicine",
+  "domainName": "Y Học & Dược",
+  "badge": "Chuyên Ngành Y Dược",
+  "title": "Осмотр пациента терапевтом: Симптомы, анамнез и лечение",
+  "readingTime": "13 phút",
+  "source": "Giáo trình Tiếng Nga Y Khoa & Giao tiếp Bác sĩ - Bệnh nhân",
+  "topic": "Khám lâm sàng: Thăm khám triệu chứng, đo huyết áp, tiền sử bệnh và kê đơn điều trị",
+  "vocabCategories": [
+    {
+      "title": "Thuật ngữ triệu chứng & Bệnh học (Симптомы и патология)",
+      "rows": [
+        {
+          "word": "Жа́лоба пацие́нта",
+          "gram": "cụm danh từ",
+          "meaning": "Lời khai triệu chứng của người bệnh",
+          "example": "Основная жалоба пациента — острая боль в области груди."
+        },
+        {
+          "word": "Анамне́з боле́зни",
+          "gram": "cụm từ",
+          "meaning": "Tiền sử bệnh học",
+          "example": "Врач тщательно собрал анамнез и историю аллергических реакций."
+        },
+        {
+          "word": "Артериа́льное давле́ние",
+          "gram": "cụm từ",
+          "meaning": "Huyết áp động mạch",
+          "example": "У пациента повышенное артериальное давление: сто сорок на девяносто."
+        },
+        {
+          "word": "Воспали́тельный проце́сс",
+          "gram": "cụm từ",
+          "meaning": "Quá trình viêm nhiễm",
+          "example": "Анализ крови показал наличие острого воспалительного процесса."
+        },
+        {
+          "word": "Диа́гноз",
+          "gram": "danh từ nam",
+          "meaning": "Chẩn đoán bệnh",
+          "example": "Предварительный диагноз — острый бронхит."
+        }
+      ]
+    },
+    {
+      "title": "Đơn thuốc & Điều trị (Рецепт и терапия)",
+      "rows": [
+        {
+          "word": "Реце́пт на лека́рство",
+          "gram": "cụm từ",
+          "meaning": "Đơn thuốc y khoa",
+          "example": "Доктор выписал рецепт на антибиотики широкого спектра действия."
+        },
+        {
+          "word": "Дозиро́вка препара́та",
+          "gram": "cụm từ",
+          "meaning": "Liều lượng thuốc dùng",
+          "example": "Строго соблюдайте назначенную дозировку: пятьсот миллиграммов в сутки."
+        },
+        {
+          "word": "Побо́чные эффе́кты",
+          "gram": "cụm từ",
+          "meaning": "Tác dụng phụ không mong muốn",
+          "example": "Среди возможных побочных эффектов отмечается лёгкая сонливость."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "В кабинет врача-терапевта городской клинической больницы обратился пациент сорока пяти лет с жалобами на общее недомогание, фебрильную температуру тела до тридцати восьми с половиной градусов и сухой надсадный кашель, продолжающийся четвёртый день.",
+    "Врач начал приём со сбора подробного анамнеза. Он уточнил, когда появились первые признаки заболевания, есть ли у пациента сопутствующие хронические заболевания сердечно-сосудистой системы и аллергия на медикаментозные препараты.",
+    "Затем доктор провёл физикальный осмотр: измерил артериальное давление и пульс, провёл аускультацию лёгких с помощью стетоскопа. При выслушивании дыхания в нижних отделах правого лёгкого были обнаружены влажные мелкопузырчатые хрипы.",
+    "Для верификации клинического диагноза пациенту было назначено рентгенологическое исследование органов грудной клетки и общий клинический анализ крови с лейкоцитарной формулой.",
+    "До получения результатов рентгенографии врач назначил антибактериальную терапию, отхаркивающие средства, обильное тёплое питьё и строгий постельный режим в течение пяти дней."
+  ],
+  "questions": [
+    {
+      "id": "med1_q1",
+      "lang": "ru",
+      "prompt": "С какими основными жалобами обратился пациент к врачу?",
+      "hint": "Triệu chứng của bệnh nhân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Боль в колене и хромота."
+        },
+        {
+          "key": "B",
+          "text": "Недомогание, температура 38,5 и сухой кашель."
+        },
+        {
+          "key": "C",
+          "text": "Ухудшение зрения и сыпь на коже."
+        },
+        {
+          "key": "D",
+          "text": "Острая зубная боль."
+        }
+      ],
+      "ans": "B",
+      "explain": "«с жалобами на общее недомогание, фебрильную температуру тела до тридцати восьми с половиной градусов и сухой кашель»."
+    },
+    {
+      "id": "med1_q2",
+      "lang": "ru",
+      "prompt": "С чего терапевт начал приём больного?",
+      "hint": "Bước đầu tiên khi khám.",
+      "options": [
+        {
+          "key": "A",
+          "text": "С немедленной операции."
+        },
+        {
+          "key": "B",
+          "text": "Со сбора подробного анамнеза болезни."
+        },
+        {
+          "key": "C",
+          "text": "С выписки больничного листа без осмотра."
+        },
+        {
+          "key": "D",
+          "text": "С направления в санаторий."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Врач начал приём со сбора подробного анамнеза»."
+    },
+    {
+      "id": "med1_q3",
+      "lang": "ru",
+      "prompt": "Какой диагностический прибор использовал врач для аускультации лёгких?",
+      "hint": "Dụng cụ nghe nhịp thở.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Термометр."
+        },
+        {
+          "key": "B",
+          "text": "Стетоскоп (фонендоскоп)."
+        },
+        {
+          "key": "C",
+          "text": "Шприц."
+        },
+        {
+          "key": "D",
+          "text": "Скальпель."
+        }
+      ],
+      "ans": "B",
+      "explain": "«провёл аускультацию лёгких с помощью стетоскопа»."
+    },
+    {
+      "id": "med1_q4",
+      "lang": "ru",
+      "prompt": "Какие дополнительные обследования были назначены для уточнения диагноза?",
+      "hint": "Chỉ định cận lâm sàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "МРТ головного мозга."
+        },
+        {
+          "key": "B",
+          "text": "Рентген грудной клетки и клинический анализ крови."
+        },
+        {
+          "key": "C",
+          "text": "УЗИ органов брюшной полости."
+        },
+        {
+          "key": "D",
+          "text": "Гастроскопия желудка."
+        }
+      ],
+      "ans": "B",
+      "explain": "«рентгенологическое исследование органов грудной клетки и общий клинический анализ крови»."
+    },
+    {
+      "id": "med1_q5",
+      "lang": "ru",
+      "prompt": "Какой режим был предписан больному на ближайшие пять дней?",
+      "hint": "Chế độ sinh hoạt.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Занятия в спортзале."
+        },
+        {
+          "key": "B",
+          "text": "Строгий постельный режим и обильное тёплое питьё."
+        },
+        {
+          "key": "C",
+          "text": "Прогулки на морозе."
+        },
+        {
+          "key": "D",
+          "text": "Сверхурочная работа в офисе."
+        }
+      ],
+      "ans": "B",
+      "explain": "«обильное тёплое питьё и строгий постельный режим в течение пяти дней»."
+    },
+    {
+      "id": "med1_q6",
+      "lang": "vi",
+      "prompt": "Từ «Анамнез» trong thuật ngữ y khoa có nghĩa là gì?",
+      "hint": "Lịch sử bệnh án.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tên một loại thuốc kháng sinh mạnh."
+        },
+        {
+          "key": "B",
+          "text": "Quá trình hỏi để thu thập tiền sử bệnh, triệu chứng và cơ địa dị ứng của bệnh nhân."
+        },
+        {
+          "key": "C",
+          "text": "Hóa đơn viện phí xuất viện."
+        },
+        {
+          "key": "D",
+          "text": "Biên bản phẫu thuật khẩn cấp."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Анамнез» (Bệnh sử) là thông tin y khoa do người bệnh cung cấp về diễn tiến bệnh tật và cơ địa trước đó."
+    },
+    {
+      "id": "med1_q7",
+      "lang": "vi",
+      "prompt": "Thao tác «Аускультация» (nghe) phổi được thực hiện nhằm phát hiện điều gì?",
+      "hint": "Âm thanh trong lồng ngực.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kiểm tra xem xương sườn có gãy không."
+        },
+        {
+          "key": "B",
+          "text": "Phát hiện tiếng rale ran bệnh lý (khò khè, ẩm, nổ) và rì rào phế nang."
+        },
+        {
+          "key": "C",
+          "text": "Đo dung tích máu trong tim."
+        },
+        {
+          "key": "D",
+          "text": "Kiểm tra nhiệt độ da lồng ngực."
+        }
+      ],
+      "ans": "B",
+      "explain": "Thao tác nghe phổi bằng ống nghe (стетоскоп) giúp phát hiện ran rít, ran ngáy, ran ẩm trong các bệnh lý hô hấp."
+    },
+    {
+      "id": "med1_q8",
+      "lang": "vi",
+      "prompt": "Vì sao bác sĩ bắt buộc phải hỏi về «аллергия на препараты» (dị ứng thuốc)?",
+      "hint": "An toàn dùng thuốc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Để tăng thêm giá tiền đơn thuốc."
+        },
+        {
+          "key": "B",
+          "text": "Để tránh nguy cơ sốc phản vệ hoặc tai biến dị ứng nguy hiểm đến tính mạng khi kê đơn."
+        },
+        {
+          "key": "C",
+          "text": "Để bệnh nhân tự chọn thuốc theo ý thích."
+        },
+        {
+          "key": "D",
+          "text": "Không có ý nghĩa quan trọng."
+        }
+      ],
+      "ans": "B",
+      "explain": "Khai thác tiền sử dị ứng thuốc là nguyên tắc an toàn tối thượng để ngăn ngừa sốc phản vệ."
+    },
+    {
+      "id": "med1_q9",
+      "lang": "vi",
+      "prompt": "Chỉ số huyết áp «140/90 mmHg» trong bài phản ánh tình trạng gì?",
+      "hint": "Huyết áp bình thường hay cao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Huyết áp thấp nguy kịch."
+        },
+        {
+          "key": "B",
+          "text": "Huyết áp tăng cao (tiền tăng huyết áp / tăng huyết áp độ 1)."
+        },
+        {
+          "key": "C",
+          "text": "Huyết áp hoàn toàn tối ưu của người trẻ."
+        },
+        {
+          "key": "D",
+          "text": "Mất mạch hoàn toàn."
+        }
+      ],
+      "ans": "B",
+      "explain": "Mức 140/90 mmHg là ngưỡng chẩn đoán tăng huyết áp theo chuẩn y tế quốc tế."
+    },
+    {
+      "id": "med1_q10",
+      "lang": "vi",
+      "prompt": "Cụm từ «побочные эффекты» trên tờ hướng dẫn sử dụng thuốc có nghĩa là gì?",
+      "hint": "Tác dụng kèm theo ngoài ý muốn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Công dụng chính chữa khỏi bệnh."
+        },
+        {
+          "key": "B",
+          "text": "Tác dụng phụ không mong muốn của dược phẩm."
+        },
+        {
+          "key": "C",
+          "text": "Hạn sử dụng ghi trên vỏ hộp."
+        },
+        {
+          "key": "D",
+          "text": "Tên công ty sản xuất."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Побочные эффекты» là tác dụng phụ ngoài ý muốn của thuốc (như buồn ngủ, khô miệng, dị ứng...)."
+    }
+  ]
+}

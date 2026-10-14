@@ -1209,3 +1209,4 @@ const manifestPath = path.join(targetDir, 'manifest.json');
 fs.writeFileSync(manifestPath, JSON.stringify(manifestList, null, 2), 'utf8');
 
 console.log(`✓ Đã tạo thành công 20 bài học A1 và cập nhật manifest.json tại ${targetDir}`);
+

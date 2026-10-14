@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Основы точных наук: Математика, законы механики и строение вещества",
+    "badge": "Chuyên Ngành KHTN (Toán - Lý - Hóa)",
+    "readingTime": "14 phút",
+    "source": "Giáo trình Tiếng Nga Khoa học Kỹ thuật dành cho sinh viên đại học",
+    "topic": "Thuật ngữ KHTN: Phân số, đạo hàm, phương trình, định luật Newton và bảng tuần hoàn nguyên tố",
+    "questionCount": 10
+  }
+]

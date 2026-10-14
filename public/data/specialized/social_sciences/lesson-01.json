@@ -1,0 +1,334 @@
+{
+  "id": 1,
+  "level": "specialized",
+  "domain": "social_sciences",
+  "domainName": "Khoa Học Xã Hội",
+  "badge": "Chuyên Ngành KH Xã Hội (Văn - Sử - Luật)",
+  "title": "Русская культура и литература XIX века: Золотой век и великие классики",
+  "readingTime": "13 phút",
+  "source": "Giáo trình Văn hóa, Văn học & Lịch sử Nga",
+  "topic": "Văn hóa & Khoa học xã hội: Thời đại hoàng kim văn học Nga, Pushkin, Tolstoy và giá trị nhân văn",
+  "vocabCategories": [
+    {
+      "title": "Thuật ngữ Văn học & Nghệ thuật (Литература и искусство)",
+      "rows": [
+        {
+          "word": "Литерату́рное направле́ние",
+          "gram": "cụm danh từ",
+          "meaning": "Trường phái / Trào lưu văn học",
+          "example": "Реализм стал ведущим литературным направлением второй половины XIX века."
+        },
+        {
+          "word": "Произведе́ние иску́сства",
+          "gram": "cụm danh từ",
+          "meaning": "Tác phẩm nghệ thuật",
+          "example": "Роман «Война и мир» — бессмертное произведение мирового искусства."
+        },
+        {
+          "word": "Главный персона́ж (геро́й)",
+          "gram": "cụm từ",
+          "meaning": "Nhân vật chính của tác phẩm",
+          "example": "Евгений Онегин — типичный герой своего времени."
+        },
+        {
+          "word": "Сюже́тная ли́ния",
+          "gram": "cụm từ",
+          "meaning": "Cốt truyện / Tuyến diễn biến",
+          "example": "Сюжетная линия повести держит читателя в напряжении."
+        }
+      ]
+    },
+    {
+      "title": "Lịch sử & Xã hội học (История и общество)",
+      "rows": [
+        {
+          "word": "Культу́рное насле́дие",
+          "gram": "cụm từ",
+          "meaning": "Di sản văn hóa dân tộc",
+          "example": "Русский язык является величайшим культурным наследием народа."
+        },
+        {
+          "word": "Истори́ческая эпо́ха",
+          "gram": "cụm từ",
+          "meaning": "Thời đại / Kỷ nguyên lịch sử",
+          "example": "Эпоха реформ девятнадцатого века изменила облик страны."
+        },
+        {
+          "word": "Гражда́нское о́бщество",
+          "gram": "cụm từ",
+          "meaning": "Xã hội dân sự",
+          "example": "Развитие институтов гражданского общества и верховенство закона."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Девятнадцатый век по праву называют «Золотым веком» русской словесности и культуры. В эту эпоху были созданы шедевры мировой литературы, оказавшие колоссальное влияние на духовное развитие человечества.",
+    "Родоначальником современного русского литературного языка считается великий поэт Александр Сергеевич Пушкин. Его роман в стихах «Евгений Онегин» знаменитый критик В. Г. Белинский назвал «энциклопедией русской жизни». Пушкин объединил богатейший народный язык с высокими европейскими поэтическими традициями.",
+    "Вторая половина столетия ознаменовалась расцветом русского психологического реализма. Романы Льва Николаевича Толстого «Война и мир» и «Анна Каренина», а также глубокие философские драмы Фёдора Михайловича Достоевского «Преступление и наказание» и «Братья Карамазовы» исследуют вечные вопросы морали, совести, веры и человеческой души.",
+    "Драматургия Антона Павловича Чехова совершила революцию в мировом театральном искусстве, открыв тонкий подтекст и поэзию обыденной человеческой жизни.",
+    "Изучение русской литературы и общественных наук позволяет глуб любого понять национальный менталитет, историю и богатство русского языка."
+  ],
+  "questions": [
+    {
+      "id": "ss1_q1",
+      "lang": "ru",
+      "prompt": "Как называют XIX век в истории русской словесности?",
+      "hint": "Tên gọi thế kỷ 19.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Серебряным веком»."
+        },
+        {
+          "key": "B",
+          "text": "«Золотым веком» русской литературы."
+        },
+        {
+          "key": "C",
+          "text": "«Бронзовым веком»."
+        },
+        {
+          "key": "D",
+          "text": "«Эпохой застоя»."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Девятнадцатый век по праву называют «Золотым веком» русской словесности»."
+    },
+    {
+      "id": "ss1_q2",
+      "lang": "ru",
+      "prompt": "Кто считается основоположником современного русского литературного языка?",
+      "hint": "Mặt trời của thi ca Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Н. В. Гоголь."
+        },
+        {
+          "key": "B",
+          "text": "А. С. Пушкин."
+        },
+        {
+          "key": "C",
+          "text": "И. С. Тургенев."
+        },
+        {
+          "key": "D",
+          "text": "М. Ю. Лермонтов."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Родоначальником современного русского литературного языка считается А. С. Пушкин»."
+    },
+    {
+      "id": "ss1_q3",
+      "lang": "ru",
+      "prompt": "Какое произведение критик Белинский назвал «энциклопедией русской жизни»?",
+      "hint": "Tác phẩm nổi tiếng của Pushkin.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Капитанская дочка»."
+        },
+        {
+          "key": "B",
+          "text": "«Евгений Онегин»."
+        },
+        {
+          "key": "C",
+          "text": "«Медный всадник»."
+        },
+        {
+          "key": "D",
+          "text": "«Руслан и Людмила»."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Его роман в стихах «Евгений Онегин» Белинский назвал «энциклопедией русской жизни»»."
+    },
+    {
+      "id": "ss1_q4",
+      "lang": "ru",
+      "prompt": "Какое литературное направление стало ведущим во второй половине XIX века?",
+      "hint": "Trào lưu văn học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Классицизм."
+        },
+        {
+          "key": "B",
+          "text": "Психологический реализм."
+        },
+        {
+          "key": "C",
+          "text": "Сюрреализм."
+        },
+        {
+          "key": "D",
+          "text": "Футуризм."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Вторая половина столетия ознаменовалась расцветом русского психологического реализма»."
+    },
+    {
+      "id": "ss1_q5",
+      "lang": "ru",
+      "prompt": "Какие бессмертные романы создал Лев Николаевич Толстой?",
+      "hint": "Đại tác phẩm của Lev Tolstoy.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Война и мир» и «Анна Каренина»."
+        },
+        {
+          "key": "B",
+          "text": "«Преступление и наказание»."
+        },
+        {
+          "key": "C",
+          "text": "«Вишнёвый сад»."
+        },
+        {
+          "key": "D",
+          "text": "«Мёртвые души»."
+        }
+      ],
+      "ans": "A",
+      "explain": "«Романы Льва Николаевича Толстого «Война и мир» и «Анна Каренина»»."
+    },
+    {
+      "id": "ss1_q6",
+      "lang": "vi",
+      "prompt": "Ý nghĩa của thuật ngữ «Реализм» (Chủ nghĩa hiện thực) trong văn học là gì?",
+      "hint": "Phương pháp sáng tác.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tưởng tượng ra những thế giới phép thuật không có thật."
+        },
+        {
+          "key": "B",
+          "text": "Miêu tả chân thực, khách quan đời sống xã hội và nội tâm con người đúng như nó tồn tại."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ viết về cuộc đời các vị vua chúa cổ đại."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ sáng tác bằng các thể thơ siêu thực trừu tượng."
+        }
+      ],
+      "ans": "B",
+      "explain": "Chủ nghĩa hiện thực (Реализм) hướng tới phản ánh khách quan, chân thực và sâu sắc các quy luật của hiện thực đời sống và tính cách điển hình trong hoàn cảnh điển hình."
+    },
+    {
+      "id": "ss1_q7",
+      "lang": "vi",
+      "prompt": "Tác phẩm «Tội ác và trừng phạt» (Преступление и наказание) của Dostoevsky xoay quanh vấn đề gì?",
+      "hint": "Tư tưởng triết học & lương tâm.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cách trồng hoa trong trang trại."
+        },
+        {
+          "key": "B",
+          "text": "Sự giằng xé lương tâm, tội lỗi và sự cứu rỗi linh hồn của nhân vật Raskolnikov."
+        },
+        {
+          "key": "C",
+          "text": "Kỹ thuật hàng hải thời kỳ cận đại."
+        },
+        {
+          "key": "D",
+          "text": "Lịch sử kiến trúc thành phố Moskva."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Tội ác và trừng phạt» phân tích sâu sắc bi kịch lương tâm, tư tưởng siêu nhân và con đường chuộc tội của Raskolnikov."
+    },
+    {
+      "id": "ss1_q8",
+      "lang": "vi",
+      "prompt": "Nhà văn Anton Chekhov đã tạo nên cuộc cách mạng trong lĩnh vực nghệ thuật nào?",
+      "hint": "Sân khấu kịch.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Điêu khắc đá cẩm thạch."
+        },
+        {
+          "key": "B",
+          "text": "Nghệ thuật sân khấu kịch nói thế giới (kịch tâm lý đời thường)."
+        },
+        {
+          "key": "C",
+          "text": "Hội họa sơn dầu phong cảnh."
+        },
+        {
+          "key": "D",
+          "text": "Múa ba-lê cổ điển."
+        }
+      ],
+      "ans": "B",
+      "explain": "Chekhov là bậc thầy cách tân nghệ thuật kịch hiện đại (với các vở như Cậu Vanya, Vườn anh đào, Hải âu)."
+    },
+    {
+      "id": "ss1_q9",
+      "lang": "vi",
+      "prompt": "Cụm từ «Культурное наследие» có ý nghĩa xã hội gì?",
+      "hint": "Di sản văn hóa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tiền gửi tiết kiệm ngân hàng."
+        },
+        {
+          "key": "B",
+          "text": "Di sản văn hóa vật thể và phi vật thể do các thế hệ tiền nhân để lại cho hậu thế."
+        },
+        {
+          "key": "C",
+          "text": "Hàng hóa tiêu dùng ngắn hạn."
+        },
+        {
+          "key": "D",
+          "text": "Quy tắc lái xe trên đường cao tốc."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Культурное наследие» (Di sản văn hóa) là những giá trị tinh thần, ngôn ngữ, nghệ thuật được gìn giữ và kế thừa qua các thế hệ."
+    },
+    {
+      "id": "ss1_q10",
+      "lang": "vi",
+      "prompt": "Vì sao việc đọc tác phẩm văn học nguyên bản tiếng Nga lại quan trọng đối với người học chuyên sâu?",
+      "hint": "Cảm thụ ngôn ngữ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Để lấy bằng lái xe."
+        },
+        {
+          "key": "B",
+          "text": "Giúp cảm nhận được chiều sâu tư duy, sắc thái ngôn ngữ tinh tế và tâm hồn Nga."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ để học thuộc lòng số liệu thống kê."
+        },
+        {
+          "key": "D",
+          "text": "Không đem lại lợi ích gì thêm."
+        }
+      ],
+      "ans": "B",
+      "explain": "Đọc nguyên tác văn học giúp nắm bắt linh hồn ngôn ngữ, vốn từ phong phú và chiều sâu văn hóa bản địa."
+    }
+  ]
+}

@@ -53,6 +53,36 @@
     "B2_reading": {
       "count": 3,
       "manifestUrl": "/data/reading/b2/manifest.json"
+    },
+    "specialized_tour_guide": {
+      "count": 1,
+      "name": "HDV Du Lịch",
+      "manifestUrl": "/data/specialized/tour_guide/manifest.json"
+    },
+    "specialized_trade_logistics": {
+      "count": 1,
+      "name": "Thương Mại XNK",
+      "manifestUrl": "/data/specialized/trade_logistics/manifest.json"
+    },
+    "specialized_retail_sales": {
+      "count": 1,
+      "name": "Bán Hàng & Chợ",
+      "manifestUrl": "/data/specialized/retail_sales/manifest.json"
+    },
+    "specialized_medicine": {
+      "count": 1,
+      "name": "Y Học & Dược",
+      "manifestUrl": "/data/specialized/medicine/manifest.json"
+    },
+    "specialized_natural_sciences": {
+      "count": 1,
+      "name": "Khoa Học Tự Nhiên",
+      "manifestUrl": "/data/specialized/natural_sciences/manifest.json"
+    },
+    "specialized_social_sciences": {
+      "count": 1,
+      "name": "Khoa Học Xã Hội",
+      "manifestUrl": "/data/specialized/social_sciences/manifest.json"
     }
   }
 }

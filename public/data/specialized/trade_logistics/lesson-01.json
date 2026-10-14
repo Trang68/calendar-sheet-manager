@@ -1,0 +1,340 @@
+{
+  "id": 1,
+  "level": "specialized",
+  "domain": "trade_logistics",
+  "domainName": "Thương Mại XNK",
+  "badge": "Chuyên Ngành Xuất Nhập Khẩu",
+  "title": "Переговоры по внешнеторговому контракту и условия Инкотермс",
+  "readingTime": "14 phút",
+  "source": "Tài liệu Nghiệp vụ Ngoại thương & Xuất nhập khẩu (ВЭД)",
+  "topic": "Đàm phán hợp đồng thương mại quốc tế, điều kiện giao hàng CIF/FOB và phương thức thanh toán L/C",
+  "vocabCategories": [
+    {
+      "title": "Thuật ngữ Ngoại thương & Hải quan (ВЭД и таможня)",
+      "rows": [
+        {
+          "word": "Вне́шнеторго́вый контра́кт",
+          "gram": "cụm danh từ",
+          "meaning": "Hợp đồng ngoại thương / mua bán quốc tế",
+          "example": "Стороны подписали внешнеторговый контракт на поставку кофе."
+        },
+        {
+          "word": "Усло́вия поста́вки",
+          "gram": "cụm danh từ",
+          "meaning": "Điều kiện giao hàng (IncoTerms)",
+          "example": "Поставка товара осуществляется на условиях CIF Владивосток."
+        },
+        {
+          "word": "Тамо́женная по́шлина",
+          "gram": "cụm từ",
+          "meaning": "Thuế hải quan / thuế nhập khẩu",
+          "example": "Ставка ввозной таможенной пошлины составляет пять процентов."
+        },
+        {
+          "word": "Коносаме́нт (Bill of Lading)",
+          "gram": "danh từ nam",
+          "meaning": "Vận đơn đường biển",
+          "example": "Морской коносамент подтверждает приём груза к перевозке."
+        },
+        {
+          "word": "Сертифика́т происхожде́ния (C/O)",
+          "gram": "cụm từ",
+          "meaning": "Chứng nhận xuất xứ hàng hóa",
+          "example": "Сертификат формы E подтверждает вьетнамское происхождение товара."
+        }
+      ]
+    },
+    {
+      "title": "Thanh toán & Chứng từ (Оплата и документы)",
+      "rows": [
+        {
+          "word": "Аккредити́в (L/C)",
+          "gram": "danh từ nam",
+          "meaning": "Thư tín dụng chứng từ",
+          "example": "Оплата производится посредством безотзывного документарного аккредитива."
+        },
+        {
+          "word": "Инво́йс (Счёт-фактура)",
+          "gram": "danh từ nam",
+          "meaning": "Hóa đơn thương mại",
+          "example": "Коммерческий инвойс содержит точную стоимость и объём партии."
+        },
+        {
+          "word": "Упако́вочный лист (Packing List)",
+          "gram": "cụm từ",
+          "meaning": "Phiếu đóng gói hàng hóa",
+          "example": "В упаковочном листе указан вес брутто и нетто каждого места."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Вьетнамская экспортная компания успешно завершила переговоры с российскими партнёрами о регулярных поставках натурального кофе робуста и сухофруктов на рынок Российской Федерации.",
+    "В ходе деловых переговоров стороны согласовали ключевые условия внешнеторгового контракта. Базисом поставки был выбран международный термин Инкотермс 2020 — FOB порт Хошимин (FOB Ho Chi Minh Port). Это означает, что продавец обязуется доставить груз в порт и погрузить его на борт морского судна, после чего все риски переходят к покупателю.",
+    "Общий объём первой пробной партии составляет пять сорокафутовых контейнеров. В качестве надёжной формы международных расчётов стороны договорились использовать безотзывный покрытый аккредитив (Letter of Credit), открытый первоклассным международным банком.",
+    "Для успешного таможенного оформления экспортер обязуется предоставить полный пакет товаросопроводительных документов: коммерческий инвойс, упаковочный лист, фитосанитарный сертификат, коносамент и сертификат происхождения товара по форме Вьетнам-ЕАЭС для получения тарифных преференций.",
+    "Соблюдение всех международных стандартов гарантирует стабильное развитие торговых отношений между Вьетнамом и Россией."
+  ],
+  "questions": [
+    {
+      "id": "tl1_q1",
+      "lang": "ru",
+      "prompt": "Какой базис поставки согласовали стороны контракта?",
+      "hint": "Điều kiện giao hàng IncoTerms.",
+      "options": [
+        {
+          "key": "A",
+          "text": "EXW (самовывоз с фабрики)."
+        },
+        {
+          "key": "B",
+          "text": "FOB порт Хошимин."
+        },
+        {
+          "key": "C",
+          "text": "DDP склад покупателя в Москве."
+        },
+        {
+          "key": "D",
+          "text": "CIF Санкт-Петербург."
+        }
+      ],
+      "ans": "B",
+      "explain": "Văn bản nêu: «Базисом поставки был выбран термин Инкотермс 2020 — FOB порт Хошимин»."
+    },
+    {
+      "id": "tl1_q2",
+      "lang": "ru",
+      "prompt": "Какую продукцию поставляет вьетнамская компания?",
+      "hint": "Mặt hàng xuất khẩu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Электронику и автомобили."
+        },
+        {
+          "key": "B",
+          "text": "Натуральный кофе робуста и сухофрукты."
+        },
+        {
+          "key": "C",
+          "text": "Одежду и обувь из кожи."
+        },
+        {
+          "key": "D",
+          "text": "Нефть и природный газ."
+        }
+      ],
+      "ans": "B",
+      "explain": "«о регулярных поставках натурального кофе робуста и сухофруктов»."
+    },
+    {
+      "id": "tl1_q3",
+      "lang": "ru",
+      "prompt": "Какая форма расчётов выбрана партнёрами?",
+      "hint": "Phương thức thanh toán quốc tế.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Оплата наличными курьеру."
+        },
+        {
+          "key": "B",
+          "text": "Безотзывный аккредитив (L/C)."
+        },
+        {
+          "key": "C",
+          "text": "Банковский чек через полгода."
+        },
+        {
+          "key": "D",
+          "text": "Бартерный обмен на зерно."
+        }
+      ],
+      "ans": "B",
+      "explain": "«договорились использовать безотзывный покрытый аккредитив (Letter of Credit)»."
+    },
+    {
+      "id": "tl1_q4",
+      "lang": "ru",
+      "prompt": "Каков объём первой пробной партии груза?",
+      "hint": "Số lượng container.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 контейнер 20 футов."
+        },
+        {
+          "key": "B",
+          "text": "5 сорокафутовых (40-ft) контейнеров."
+        },
+        {
+          "key": "C",
+          "text": "10 вагонов поезда."
+        },
+        {
+          "key": "D",
+          "text": "100 ящиков."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Общий объём первой пробной партии составляет пять сорокафутовых контейнеров»."
+    },
+    {
+      "id": "tl1_q5",
+      "lang": "ru",
+      "prompt": "Для чего необходим сертификат происхождения Вьетнам-ЕАЭС?",
+      "hint": "Mục đích giấy C/O.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Для получения тарифных преференций (снижения пошлин)."
+        },
+        {
+          "key": "B",
+          "text": "Для проверки веса контейнера."
+        },
+        {
+          "key": "C",
+          "text": "Для оплаты морского фрахта."
+        },
+        {
+          "key": "D",
+          "text": "Для рекламы товара в соцсетях."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giấy chứng nhận xuất xứ form EAEU giúp hàng hóa hưởng ưu đãi thuế quan."
+    },
+    {
+      "id": "tl1_q6",
+      "lang": "vi",
+      "prompt": "Điều kiện giao hàng FOB (Free on Board) quy định trách nhiệm của người bán đến thời điểm nào?",
+      "hint": "Ranh giới chuyển giao rủi ro.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giao hàng tới tận kho người mua ở Nga."
+        },
+        {
+          "key": "B",
+          "text": "Giao hàng và bốc hàng an toàn qua lan can tàu biển tại cảng đi."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ cần để hàng tại xưởng của người bán."
+        },
+        {
+          "key": "D",
+          "text": "Người bán phải chịu tiền cước tàu biển quốc tế."
+        }
+      ],
+      "ans": "B",
+      "explain": "FOB quy định người bán hoàn tất nghĩa vụ khi hàng đã được bốc lên boong tàu tại cảng bốc hàng chỉ định."
+    },
+    {
+      "id": "tl1_q7",
+      "lang": "vi",
+      "prompt": "Phương thức thanh toán L/C (Аккредитив) mang lại lợi ích lớn nhất nào cho cả hai bên?",
+      "hint": "Tính đảm bảo thanh toán qua ngân hàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không mất phí ngân hàng."
+        },
+        {
+          "key": "B",
+          "text": "Được nhận tiền mặt ngay lập tức tại cảng."
+        },
+        {
+          "key": "C",
+          "text": "Ngân hàng đứng ra bảo lãnh thanh toán khi người bán xuất trình đủ bộ chứng từ hợp lệ."
+        },
+        {
+          "key": "D",
+          "text": "Có thể đổi trả hàng vô điều kiện sau 1 năm."
+        }
+      ],
+      "ans": "C",
+      "explain": "Thư tín dụng L/C là cam kết thanh toán có điều kiện của ngân hàng, bảo vệ quyền lợi tối đa cho cả nhà xuất khẩu và nhập khẩu."
+    },
+    {
+      "id": "tl1_q8",
+      "lang": "vi",
+      "prompt": "Chứng từ nào sau đây là bằng chứng xác nhận việc hàng hóa đã được xếp lên tàu biển?",
+      "hint": "Vận đơn đường biển.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Коносамент (Bill of Lading)."
+        },
+        {
+          "key": "B",
+          "text": "Коммерческий инвойс."
+        },
+        {
+          "key": "C",
+          "text": "Упаковочный лист."
+        },
+        {
+          "key": "D",
+          "text": "Фитосанитарный сертификат."
+        }
+      ],
+      "ans": "A",
+      "explain": "Коносамент (Vận đơn đường biển) là bằng chứng xác nhận hãng tàu đã nhận hàng để vận chuyển."
+    },
+    {
+      "id": "tl1_q9",
+      "lang": "vi",
+      "prompt": "Chứng từ kiểm dịch thực vật (Фитосанитарный сертификат) bắt buộc đối với loại mặt hàng nào?",
+      "hint": "Nông sản thực vật.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Linh kiện máy tính điện tử."
+        },
+        {
+          "key": "B",
+          "text": "Nông sản như cà phê hạt, hoa quả sấy khô."
+        },
+        {
+          "key": "C",
+          "text": "Quần áo may sẵn."
+        },
+        {
+          "key": "D",
+          "text": "Dầu mỏ thô."
+        }
+      ],
+      "ans": "B",
+      "explain": "Mặt hàng có nguồn gốc thực vật (cà phê, hoa quả sấy) bắt buộc phải có giấy chứng nhận kiểm dịch thực vật để thông quan."
+    },
+    {
+      "id": "tl1_q10",
+      "lang": "vi",
+      "prompt": "Từ viết tắt ВЭД trong tiếng Nga đại diện cho khái niệm gì?",
+      "hint": "Hoạt động kinh tế đối ngoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hội chợ triển lãm trong nước."
+        },
+        {
+          "key": "B",
+          "text": "Văn phòng quản lý thuế nội địa."
+        },
+        {
+          "key": "C",
+          "text": "Hoạt động kinh tế đối ngoại / Xuất nhập khẩu (Внешнеэкономическая деятельность)."
+        },
+        {
+          "key": "D",
+          "text": "Hệ thống bảo hiểm xã hội."
+        }
+      ],
+      "ans": "C",
+      "explain": "ВЭД là viết tắt của «Внешнеэкономическая деятельность» (Hoạt động kinh tế đối ngoại / Ngoại thương)."
+    }
+  ]
+}

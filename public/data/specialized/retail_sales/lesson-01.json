@@ -1,0 +1,340 @@
+{
+  "id": 1,
+  "level": "specialized",
+  "domain": "retail_sales",
+  "domainName": "Bán Hàng & Chợ",
+  "badge": "Chuyên Ngành Bán Hàng Thực Chiến",
+  "title": "Торговля одеждой на рынке «Садовод»: Размеры, опт и розница",
+  "readingTime": "11 phút",
+  "source": "Sổ tay giao tiếp bán hàng thực tế tại các trung tâm thương mại & chợ Nga",
+  "topic": "Kỹ năng bán hàng: Tư vấn size số, mặc cả giá sỉ/lẻ, chất liệu vải và đóng gói vận chuyển",
+  "vocabCategories": [
+    {
+      "title": "Thuật ngữ bán hàng & Giá cả (Продажи и цены)",
+      "rows": [
+        {
+          "word": "Опто́вая цена́",
+          "gram": "cụm danh từ",
+          "meaning": "Giá bán buôn / Giá sỉ",
+          "example": "Оптовая цена действует при заказе от одного размерного ряда."
+        },
+        {
+          "word": "Ро́зница (В ро́зницу)",
+          "gram": "cụm danh từ",
+          "meaning": "Bán lẻ",
+          "example": "В розницу эта модель стоит на триста рублей дороже."
+        },
+        {
+          "word": "Разме́рный ряд (лине́йка)",
+          "gram": "cụm danh từ",
+          "meaning": "Dây size (đủ các cỡ từ S đến XL)",
+          "example": "В размерном ряду пять штук: сорок четвёртый по пятьдесят второй."
+        },
+        {
+          "word": "Ски́дка за объём",
+          "gram": "cụm từ",
+          "meaning": "Chiết khấu giảm giá theo số lượng",
+          "example": "Если возьмёте три упаковки, сделаю хорошую скидку."
+        },
+        {
+          "word": "Натура́льный хло́пок",
+          "gram": "cụm từ",
+          "meaning": "Cotton tự nhiên 100%",
+          "example": "Это дышащая ткань, сто процентов натуральный хлопок."
+        }
+      ]
+    },
+    {
+      "title": "Giao dịch & Thanh toán tại chợ (Рыночные сделки)",
+      "rows": [
+        {
+          "word": "Приме́рочная кабина",
+          "gram": "cụm từ",
+          "meaning": "Phòng thử đồ cho khách",
+          "example": "Примерочная находится прямо за шторкой."
+        },
+        {
+          "word": "Това́рный чек / Накладна́я",
+          "gram": "cụm từ",
+          "meaning": "Hóa đơn bán hàng / Biên lai",
+          "example": "Я выпишу вам товарный чек с печатью."
+        },
+        {
+          "word": "Отпра́вка ка́рго",
+          "gram": "cụm từ",
+          "meaning": "Gửi xe chở hàng liên tỉnh / cargo",
+          "example": "Мы можем упаковать коробки и отправить через карго на ваш город."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Рынок «Садовод» и торговый комплекс «Москва» в Люблино — крупнейшие центры оптовой и розничной торговли одеждой, обувью и текстилем в столице России. Здесь работают тысячи предпринимателей, в том числе представители вьетнамской диаспоры.",
+    "Для успешных продаж критически важно свободно владеть торговой лексикой. Когда покупатель подходит к торговому павильону, продавец вежливо приветствует его: «Добрый день! Что вас интересует? У нас новое поступление отличных зимних курток и тёплых толстовок!»",
+    "Если покупатель оптовик, разговор строится вокруг условий партии: «Какой объём вас интересует? Оптом от пяти штук одного артикула цена тысяча двести рублей. Если забираете всю размерную сетку — отдам по тысяче сто. Качество фабричное, наполнитель био-пух, ткань водоотталкивающая».",
+    "Для розничных покупателей важен сервис и возможность примерки: «Какой размер вы носите? Попробуйте сорок восьмой, эта модель садится идеально по фигуре. Зеркало и примерочная рядом. Оплатить можно наличными или переводом на карту».",
+    "Умение найти общий язык с клиентом, грамотно презентовать товар и уступить в цене — залог высокого торгового оборота."
+  ],
+  "questions": [
+    {
+      "id": "rs1_q1",
+      "lang": "ru",
+      "prompt": "Какие торговые комплексы названы крупнейшими в Москве?",
+      "hint": "Tên hai khu chợ lớn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "ГУМ и ЦУМ."
+        },
+        {
+          "key": "B",
+          "text": "Рынок «Садовод» и ТЦ «Москва» в Люблино."
+        },
+        {
+          "key": "C",
+          "text": "Ашан и Мега."
+        },
+        {
+          "key": "D",
+          "text": "Горбушкин двор."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Рынок «Садовод» и торговый комплекс «Москва» в Люблино — крупнейшие центры»."
+    },
+    {
+      "id": "tl1_q2",
+      "lang": "ru",
+      "prompt": "От скольких штук обычно действует оптовая цена в тексте?",
+      "hint": "Số lượng tối thiểu mua sỉ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "От 1 штуки."
+        },
+        {
+          "key": "B",
+          "text": "От 5 штук одного артикула."
+        },
+        {
+          "key": "C",
+          "text": "От 100 штук."
+        },
+        {
+          "key": "D",
+          "text": "Только от 500 штук."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Оптом от пяти штук одного артикула цена тысяча двести рублей»."
+    },
+    {
+      "id": "tl1_q3",
+      "lang": "ru",
+      "prompt": "Какой материал наполнителя курток упоминается в диалоге?",
+      "hint": "Chất liệu lót bên trong áo khoác.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Натуральная шерсть."
+        },
+        {
+          "key": "B",
+          "text": "Био-пух с водоотталкивающей тканью."
+        },
+        {
+          "key": "C",
+          "text": "Синтепон низкого качества."
+        },
+        {
+          "key": "D",
+          "text": "Поролон."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Качество фабричное, наполнитель био-пух, ткань водоотталкивающая»."
+    },
+    {
+      "id": "tl1_q4",
+      "lang": "ru",
+      "prompt": "Что предложит продавец покупателю, если тот заберёт всю размерную сетку?",
+      "hint": "Ưu đãi khi mua nguyên ri/dây.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Повысит цену."
+        },
+        {
+          "key": "B",
+          "text": "Снизит цену до 1100 рублей за штуку."
+        },
+        {
+          "key": "C",
+          "text": "Откажется продавать."
+        },
+        {
+          "key": "D",
+          "text": "Потребует предоплату за год."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Если забираете всю размерную сетку — отдам по тысяче сто (1100)»."
+    },
+    {
+      "id": "tl1_q5",
+      "lang": "ru",
+      "prompt": "Какие способы оплаты товара доступны покупателям?",
+      "hint": "Hình thức trả tiền.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только золотыми монетами."
+        },
+        {
+          "key": "B",
+          "text": "Наличными или переводом на банковскую карту."
+        },
+        {
+          "key": "C",
+          "text": "Только валютой евро."
+        },
+        {
+          "key": "D",
+          "text": "В кредит на 5 лет."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Оплатить можно наличными или переводом на карту»."
+    },
+    {
+      "id": "tl1_q6",
+      "lang": "vi",
+      "prompt": "Cụm từ «размерный ряд» (hoặc «линейка») trong buôn bán quần áo nghĩa là gì?",
+      "hint": "Dây đủ các size.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một chiếc áo duy nhất cỡ ngoại cỡ."
+        },
+        {
+          "key": "B",
+          "text": "Một dây/ri hàng gồm đầy đủ các size từ nhỏ đến lớn của cùng một mẫu."
+        },
+        {
+          "key": "C",
+          "text": "Thước dây dùng để đo quần áo."
+        },
+        {
+          "key": "D",
+          "text": "Nhãn mác may trên cổ áo."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Размерный ряд» trong bán buôn là nguyên dây (ri) sản phẩm gồm đầy đủ các size từ nhỏ đến lớn."
+    },
+    {
+      "id": "tl1_q7",
+      "lang": "vi",
+      "prompt": "Sự khác biệt căn bản giữa «опт» và «розница» là gì?",
+      "hint": "Bán buôn và bán lẻ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Опт là bán lẻ từng cái, розница là bán buôn số lượng lớn."
+        },
+        {
+          "key": "B",
+          "text": "Опт là bán sỉ/buôn số lượng nhiều giá tốt; розница là bán lẻ từng sản phẩm giá cao hơn."
+        },
+        {
+          "key": "C",
+          "text": "Cả hai đều cùng một nghĩa không khác nhau."
+        },
+        {
+          "key": "D",
+          "text": "Опт chỉ dành cho hàng lỗi thanh lý."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Опт» = bán sỉ, bán buôn số lượng lớn; «Розница» = bán lẻ từng chiếc."
+    },
+    {
+      "id": "tl1_q8",
+      "lang": "vi",
+      "prompt": "Khi khách chê giá đắt, người bán hàng có kinh nghiệm thường làm gì?",
+      "hint": "Nghệ thuật thương lượng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mắng khách và mời khách đi chỗ khác."
+        },
+        {
+          "key": "B",
+          "text": "Nhấn mạnh chất lượng vải, đường may đẹp và linh hoạt giảm nhẹ giá nếu khách lấy thêm số lượng."
+        },
+        {
+          "key": "C",
+          "text": "Giảm giá 90% ngay lập tức."
+        },
+        {
+          "key": "D",
+          "text": "Đổi sang một mặt hàng rách hỏng."
+        }
+      ],
+      "ans": "B",
+      "explain": "Kỹ năng bán hàng: giới thiệu ưu điểm chất liệu (vải cotton, chống thấm, phom dáng) và đề xuất chiết khấu khi mua số lượng."
+    },
+    {
+      "id": "tl1_q9",
+      "lang": "vi",
+      "prompt": "Từ «карго» (cargo) trong giới tiểu thương ở Nga thường dùng để chỉ việc gì?",
+      "hint": "Vận tải hàng hóa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dịch vụ đóng hàng vào bao/thùng và thuê xe tải chuyển hàng đi các tỉnh, thành phố khác."
+        },
+        {
+          "key": "B",
+          "text": "Đi ăn trưa tại căng tin chợ."
+        },
+        {
+          "key": "C",
+          "text": "Treo ma-nơ-canh trước cửa hàng."
+        },
+        {
+          "key": "D",
+          "text": "Thu tiền thuê quầy bán hàng hàng tháng."
+        }
+      ],
+      "ans": "A",
+      "explain": "«Карго» là dịch vụ vận chuyển hàng hóa trọn gói từ chợ đầu mối đi các vùng miền hoặc quốc tế."
+    },
+    {
+      "id": "tl1_q10",
+      "lang": "vi",
+      "prompt": "Cụm từ «фабричное качество» mang ý nghĩa đảm bảo gì cho khách mua?",
+      "hint": "Nguồn gốc may mặc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hàng tự may thủ công chắp vá."
+        },
+        {
+          "key": "B",
+          "text": "Hàng sản xuất chuẩn nhà máy quy chuẩn, đường kim mũi chỉ đều và chắc chắn."
+        },
+        {
+          "key": "C",
+          "text": "Hàng lỗi đã qua sử dụng."
+        },
+        {
+          "key": "D",
+          "text": "Hàng tồn kho lâu năm bị mốc."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Фабричное качество» là hàng xuất xứ nhà máy chuẩn xịn, chất lượng ổn định."
+    }
+  ]
+}
