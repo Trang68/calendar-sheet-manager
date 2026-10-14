@@ -1,0 +1,258 @@
+{
+  "id": 10,
+  "level": "A1",
+  "skill": "listening",
+  "title": "В аэропорту: Посадка на рейс",
+  "listeningTime": "12 phút",
+  "topic": "Nghe thông báo chuyến bay và làm thủ tục hải quan",
+  "dialogue": [
+    {
+      "speaker": "Диктор",
+      "text": "Внимание пассажиров! Начинается посадка на рейс двести пять в Ханой."
+    },
+    {
+      "speaker": "Пассажир",
+      "text": "Извините, девушка, к какому выходу мне нужно пройти?"
+    },
+    {
+      "speaker": "Сотрудник",
+      "text": "Покажите посадочный талон. Ваш выход номер двенадцать."
+    },
+    {
+      "speaker": "Пассажир",
+      "text": "А сколько килограммов ручной клади разрешено взять с собой?"
+    },
+    {
+      "speaker": "Сотрудник",
+      "text": "В салон самолёта разрешается ручная кладь весом до десяти килограммов."
+    },
+    {
+      "speaker": "Пассажир",
+      "text": "Хорошо, у меня только небольшой рюкзак."
+    },
+    {
+      "speaker": "Сотрудник",
+      "text": "Приготовьте ваш заграничный паспорт и талон. Приятного полёта!"
+    },
+    {
+      "speaker": "Пассажир",
+      "text": "Спасибо большое за информацию!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "Посадка на рейс в Ханой начинается у двенадцатого выхода.",
+    "hint": "Gợi ý: Tên thành phố «в Ханой» và số cổng «у двенадцатого выхода»."
+  },
+  "questions": [
+    {
+      "id": "l10_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Ханой."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «В Ханой.»."
+    },
+    {
+      "id": "l10_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "Номер 12."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «Номер 12.»."
+    },
+    {
+      "id": "l10_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "До 10 килограммов."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «До 10 килограммов.»."
+    },
+    {
+      "id": "l10_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "Заграничный паспорт и талон."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «Заграничный паспорт и талон.»."
+    },
+    {
+      "id": "l10_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thông báo hành khách lên máy bay."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Thông báo hành khách lên máy bay.."
+    },
+    {
+      "id": "l10_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ có một chiếc ba lô nhỏ."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Chỉ có một chiếc ba lô nhỏ.."
+    },
+    {
+      "id": "l10_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Cửa số 12."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Cửa số 12.."
+    },
+    {
+      "id": "l10_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Chúc chuyến bay tốt lành."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Chúc chuyến bay tốt lành.."
+    }
+  ]
+}

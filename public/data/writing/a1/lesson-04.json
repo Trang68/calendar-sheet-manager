@@ -1,0 +1,61 @@
+{
+  "id": 4,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Мой обычный день: Распорядок",
+  "writingTime": "20 phút",
+  "topic": "Một ngày thường nhật: Các mốc thời gian từ sáng đến tối",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) kể về lịch sinh hoạt trong một ngày bình thường của bạn.",
+  "requirements": [
+    "1. Nêu giờ thức dậy và các thói quen buổi sáng (tập thể dục, ăn sáng).",
+    "2. Nêu thời gian học tập hoặc làm việc buổi sáng và trưa.",
+    "3. Kể hoạt động buổi chiều và buổi tối (nghỉ ngơi, đọc sách, đi ngủ).",
+    "4. Sử dụng liên từ thời gian (утром, днём, вечером, потом)."
+  ],
+  "cliches": [
+    {
+      "ru": "Обычно я встаю в семь часов утра.",
+      "vi": "Thông thường tôi dậy lúc 7 giờ sáng."
+    },
+    {
+      "ru": "Я завтракаю и иду на занятия.",
+      "vi": "Tôi ăn sáng rồi đi học."
+    },
+    {
+      "ru": "В час дня я обедаю в столовой.",
+      "vi": "1 giờ chiều tôi ăn trưa ở căng tin."
+    },
+    {
+      "ru": "Вечером я делаю домашнее задание.",
+      "vi": "Buổi tối tôi làm bài tập về nhà."
+    },
+    {
+      "ru": "Я ложусь спать в одиннадцать часов.",
+      "vi": "Tôi đi ngủ lúc 11 giờ."
+    }
+  ],
+  "modelAnswer": "Мой день начинается рано. Обычно я встаю в семь часов утра, умываюсь и пью чай. В восемь часов я иду в университет на лекции. Днём в час я обедаю с друзьями в кафе. После пар я отдыхаю, читаю книги и делаю домашнее задание. В одиннадцать часов вечера я ложусь спать.",
+  "modelWordCount": 50,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

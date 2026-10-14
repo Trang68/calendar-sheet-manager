@@ -1,0 +1,57 @@
+{
+  "id": 8,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Мой лучший друг",
+  "writingTime": "20 phút",
+  "topic": "Người bạn thân nhất: Ngoại hình, tính cách và sở thích chung",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn ngắn (35–60 từ) miêu tả người bạn thân nhất của bạn.",
+  "requirements": [
+    "1. Tên, tuổi và bạn quen người đó trong hoàn cảnh nào.",
+    "2. Miêu tả ngoại hình và tính cách tốt bụng, vui vẻ.",
+    "3. Hai bạn thường làm gì cùng nhau khi rảnh rỗi.",
+    "4. Khẳng định giá trị của tình bạn."
+  ],
+  "cliches": [
+    {
+      "ru": "Моего лучшего друга зовут...",
+      "vi": "Bạn thân nhất của tôi tên là..."
+    },
+    {
+      "ru": "Мы познакомились в университете.",
+      "vi": "Chúng tôi quen nhau ở trường đại học."
+    },
+    {
+      "ru": "Он умный, весёлый и надёжный человек.",
+      "vi": "Bạn ấy thông minh, vui tính và đáng tin cậy."
+    },
+    {
+      "ru": "Он всегда готов помочь в трудную минуту.",
+      "vi": "Bạn ấy luôn sẵn sàng giúp đỡ lúc khó khăn."
+    }
+  ],
+  "modelAnswer": "Моего лучшего друга зовут Алексей. Мы познакомились два года назад в университете. Алексей — высокий, весёлый и очень умный парень. Он отлично учится и всегда помогает мне с трудной математикой. В свободное время мы вместе играем в футбол и слушаем рок-музыку. Я очень рад, что у меня есть такой верный друг!",
+  "modelWordCount": 50,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

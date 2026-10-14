@@ -5,8 +5,178 @@
     "title": "Знакомство и рассказ о себе",
     "badge": "A1 Nói & Vấn đáp",
     "speakingTime": "15 phút",
-    "topic": "Giao tiếp cơ bản - Giới thiệu bản thân và chào hỏi",
-    "phrasesCount": 5
+    "topic": "Giao tiếp cơ bản: Tự giới thiệu bản thân, tên tuổi và ngành học",
+    "phraseCount": 5
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Кто это? Что это? Предметы вокруг нас",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Nhận diện người & đồ vật: Luyện câu hỏi Кто это? / Что это?",
+    "phraseCount": 5
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Моя семья: Родители, братья и сёстры",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Giới thiệu gia đình: Kể về bố mẹ, anh chị em và tình cảm gia đình",
+    "phraseCount": 5
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "В ресторане: Заказ вкусного обеда",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Giao tiếp ẩm thực: Gọi món, hỏi thực đơn và thanh toán",
+    "phraseCount": 5
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "В магазине: Покупки и цены",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Mua sắm thường nhật: Hỏi giá tiền, số lượng và trả lời",
+    "phraseCount": 5
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Мой день: Утро, день и вечер",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Lịch trình hàng ngày: Thức dậy, làm việc, tập thể thao và nghỉ ngơi",
+    "phraseCount": 5
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "В городе: Как пройти в центр?",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Hỏi đường & Phương hướng: Đi thẳng, rẽ trái, rẽ phải, trạm xe buýt",
+    "phraseCount": 5
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Времена года и погода",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Thời tiết và bốn mùa: Miêu tả nắng mưa, tuyết trắng và nhiệt độ",
+    "phraseCount": 5
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "В гостинице: Размещение и сервис",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Lưu trú khách sạn: Nhận chìa khóa phòng, hỏi giờ ăn sáng và tiện ích",
+    "phraseCount": 5
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Мои увлечения и хобби",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Sở thích cá nhân: Nghe nhạc, chơi đàn guitar, thể thao và du lịch",
+    "phraseCount": 5
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "В аптеке: Описание симптомов",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Sức khỏe: Nói về triệu chứng cảm sốt, đau họng, mua thuốc",
+    "phraseCount": 5
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "На вокзале: Поездка на поезде",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Đi lại: Mua vé tàu hỏa, hỏi giờ khởi hành và tìm toa xe",
+    "phraseCount": 5
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "В гостях: Русский чай и традиции",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Văn hóa tiếp khách: Đến thăm nhà, uống trà samovar và khen ngợi",
+    "phraseCount": 5
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "В банке: Финансы и карты",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Ngân hàng: Mở thẻ thanh toán, rút tiền ATM và đổi tiền",
+    "phraseCount": 5
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "В кинотеатре: Покупка билетов",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Giải trí: Chọn phim, chọn hàng ghế và mua bỏng ngô",
+    "phraseCount": 5
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "В университете: На занятиях",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Học tập: Giảng đường, giờ học пара, kỳ thi và giảng viên",
+    "phraseCount": 5
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "В аэропорту: Регистрация на рейс",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Du lịch hàng không: Cân hành lý, vé máy bay và qua cửa an ninh",
+    "phraseCount": 5
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Спорт: Здоровый образ жизни",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Lối sống lành mạnh: Chạy bộ, tập yoga, ăn uống bổ dưỡng",
+    "phraseCount": 5
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Праздники в России: Новый год и Масленица",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Lễ hội truyền thống: Đón năm mới, tiễn mùa đông Maslenitsa",
+    "phraseCount": 5
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Итоговая самопрезентация: Я говорю по-русски!",
+    "badge": "A1 Nói & Vấn đáp",
+    "speakingTime": "15 phút",
+    "topic": "Vấn đáp A1 tổng kết: Thuyết trình toàn diện về bản thân và ước mơ",
+    "phraseCount": 5
   }
 ]
-

@@ -1,0 +1,310 @@
+{
+  "id": 9,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Наш дом и наша квартира",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Nhà ở, Phòng ốc & Tiện nghi gia đình",
+  "vocabCategories": [
+    {
+      "title": "Các phòng trong nhà (Комнаты)",
+      "rows": [
+        {
+          "word": "ку́хня",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng bếp",
+          "example": "Мама готовит на кухне."
+        },
+        {
+          "word": "спа́льня",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng ngủ",
+          "example": "В спальне стоит кровать."
+        },
+        {
+          "word": "ванная",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng tắm",
+          "example": "Ванная чистая и светлая."
+        },
+        {
+          "word": "балко́н",
+          "gram": "danh từ giống đực",
+          "meaning": "ban công",
+          "example": "На балконе растут цветы."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Мы живём в новом многоэтажном доме. Наш дом находится рядом с красивым парком.",
+    "Наша квартира расположена на пятом этаже. Здесь есть лифт, поэтому подниматься легко.",
+    "В квартире есть прихожая, кухня, гостиная và hai phòng ngủ.",
+    "Моя любимая комната — это кухня. Она светлая, там стоит холодильник, плита và bàn ăn lớn.",
+    "С балкона открывается прекрасный вид на город. Вечером мы любим смотреть на огни города."
+  ],
+  "questions": [
+    {
+      "id": "a1_r9_q1",
+      "lang": "ru",
+      "prompt": "На каком этаже находится квартира?",
+      "hint": "Tìm số tầng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На первом"
+        },
+        {
+          "key": "B",
+          "text": "На третьем"
+        },
+        {
+          "key": "C",
+          "text": "На пятом"
+        },
+        {
+          "key": "D",
+          "text": "На десятом"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Наша квартира расположена на пятом этаже» (tầng 5)."
+    },
+    {
+      "id": "a1_r9_q2",
+      "lang": "ru",
+      "prompt": "Что находится рядом с домом?",
+      "hint": "Xem vị trí xung quanh nhà.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Школа"
+        },
+        {
+          "key": "B",
+          "text": "Красивый парк"
+        },
+        {
+          "key": "C",
+          "text": "Завод"
+        },
+        {
+          "key": "D",
+          "text": "Вокзал"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Наш дом находится рядом с красивым парком»."
+    },
+    {
+      "id": "a1_r9_q3",
+      "lang": "ru",
+      "prompt": "Какая комната самая любимая у автора?",
+      "hint": "Tìm căn phòng yêu thích.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Спальня"
+        },
+        {
+          "key": "B",
+          "text": "Гостиная"
+        },
+        {
+          "key": "C",
+          "text": "Кухня"
+        },
+        {
+          "key": "D",
+          "text": "Ванная"
+        }
+      ],
+      "ans": "C",
+      "explain": "Tác giả viết: «Моя любимая комната — это кухня»."
+    },
+    {
+      "id": "a1_r9_q4",
+      "lang": "ru",
+      "prompt": "Что стоит на кухне?",
+      "hint": "Xem đồ gia dụng trong bếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Холодильник, плита и большой стол"
+        },
+        {
+          "key": "B",
+          "text": "Диван и телевизор"
+        },
+        {
+          "key": "C",
+          "text": "Кровать и шкаф"
+        },
+        {
+          "key": "D",
+          "text": "Пианино"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «Там стоит холодильник, плита và bàn ăn lớn»."
+    },
+    {
+      "id": "a1_r9_q5",
+      "lang": "ru",
+      "prompt": "Откуда открывается красивый вид на город?",
+      "hint": "Nơi ngắm nhìn thành phố.",
+      "options": [
+        {
+          "key": "A",
+          "text": "С кухни"
+        },
+        {
+          "key": "B",
+          "text": "С балкона"
+        },
+        {
+          "key": "C",
+          "text": "Из ванной"
+        },
+        {
+          "key": "D",
+          "text": "Из коридора"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «С балкона открывается прекрасный вид на город»."
+    },
+    {
+      "id": "a1_r9_q6",
+      "lang": "vi",
+      "prompt": "Từ «этаж» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Tầng trong tòa nhà.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Căn phòng"
+        },
+        {
+          "key": "B",
+          "text": "Tầng gác / tầng lầu"
+        },
+        {
+          "key": "C",
+          "text": "Cầu thang máy"
+        },
+        {
+          "key": "D",
+          "text": "Mái nhà"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Этаж» nghĩa là tầng (nhà)."
+    },
+    {
+      "id": "a1_r9_q7",
+      "lang": "vi",
+      "prompt": "Từ «лифт» chỉ tiện nghi nào trong tòa nhà cao tầng?",
+      "hint": "Phương tiện di chuyển lên xuống.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thang cuốn"
+        },
+        {
+          "key": "B",
+          "text": "Thang máy"
+        },
+        {
+          "key": "C",
+          "text": "Thang bộ"
+        },
+        {
+          "key": "D",
+          "text": "Cầu vượt"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Лифт» là thang máy."
+    },
+    {
+      "id": "a1_r9_q8",
+      "lang": "vi",
+      "prompt": "Từ «холодильник» trong phòng bếp là thiết bị gì?",
+      "hint": "Thiết bị làm mát và giữ đồ ăn tươi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lò vi sóng"
+        },
+        {
+          "key": "B",
+          "text": "Tủ lạnh"
+        },
+        {
+          "key": "C",
+          "text": "Máy rửa bát"
+        },
+        {
+          "key": "D",
+          "text": "Nồi cơm điện"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Холодильник» nghĩa là tủ lạnh."
+    },
+    {
+      "id": "a1_r9_q9",
+      "lang": "vi",
+      "prompt": "Từ «прихожая» dùng để chỉ không gian nào trong căn hộ?",
+      "hint": "Nơi đầu tiên bước vào để cởi áo khoác và giày dép.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phòng khách"
+        },
+        {
+          "key": "B",
+          "text": "Tiền sảnh, hành lang lối vào"
+        },
+        {
+          "key": "C",
+          "text": "Phòng ngủ"
+        },
+        {
+          "key": "D",
+          "text": "Gác xép"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Прихожая» là hành lang lối vào nhà/tiền sảnh."
+    },
+    {
+      "id": "a1_r9_q10",
+      "lang": "vi",
+      "prompt": "Buổi tối gia đình tác giả thích ngắm điều gì từ ban công?",
+      "hint": "Đọc câu cuối cùng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ngắm ánh đèn thành phố (огни города)"
+        },
+        {
+          "key": "B",
+          "text": "Ngắm trăng sao"
+        },
+        {
+          "key": "C",
+          "text": "Xem người đi bộ"
+        },
+        {
+          "key": "D",
+          "text": "Ngắm xe ô tô"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Смотреть на огни города» (ngắm ánh đèn lung linh của thành phố)."
+    }
+  ]
+}

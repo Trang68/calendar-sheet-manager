@@ -1,0 +1,56 @@
+{
+  "id": 11,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В аптеке: Описание симптомов",
+  "speakingTime": "15 phút",
+  "topic": "Sức khỏe: Nói về triệu chứng cảm sốt, đau họng, mua thuốc",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Здравствуйте! У меня сильно болит горло и голова.",
+      "meaning": "Chào dược sĩ! Tôi bị đau họng và đau đầu dữ dội.",
+      "phonetic": "Zdravstvuyte! U menya sil'no bolit gorlo i golova.",
+      "tips": "«Болит» dùng cho danh từ số ít (болит горло, болит голова)."
+    },
+    {
+      "id": "spk_2",
+      "text": "Какая у вас сейчас температура тела?",
+      "meaning": "Hiện tại thân nhiệt của bạn là bao nhiêu độ?",
+      "phonetic": "Kakaya u vas seychas temperatura tela?",
+      "tips": "Trọng âm «температу́ра»."
+    },
+    {
+      "id": "spk_3",
+      "text": "У меня кашель и сильный насморк.",
+      "meaning": "Tôi bị ho và sổ mũi rất nặng.",
+      "phonetic": "U menya kashel' i sil'nyy nasmork.",
+      "tips": "«Кашель» khi biến cách bị nuốt nguyên âm «е» (нет кашля)."
+    },
+    {
+      "id": "spk_4",
+      "text": "Дайте мне эффективное лекарство от простуды.",
+      "meaning": "Hãy cho tôi một loại thuốc hiệu quả trị cảm lạnh.",
+      "phonetic": "Dayte mne effektivnoye lekarstvo ot prostudy.",
+      "tips": "«От простуды» dùng Cách 2 sau giới từ «от»."
+    },
+    {
+      "id": "spk_5",
+      "text": "Принимайте этот сироп по чайной ложке после еды.",
+      "meaning": "Hãy uống si-rô này mỗi lần một thìa cà phê sau bữa ăn.",
+      "phonetic": "Prinimayte etot sirop po chaynoy lozhke posle edy.",
+      "tips": "«По чайной ложке» = mỗi lần một muỗng cà phê."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Đóng vai người bệnh mô tả triệu chứng sốt và nhờ dược sĩ tư vấn thuốc phù hợp.",
+    "sampleGuidance": [
+      "Я плохо себя чувствую... (Tôi cảm thấy không được khỏe...)",
+      "У меня температура тридцать восемь... (Tôi bị sốt 38 độ...)",
+      "Посоветуйте хорошее средство... (Hãy khuyên tôi phương thuốc tốt...)",
+      "Спасибо, я буду лечиться! (Cảm ơn, tôi sẽ điều trị theo lời dặn!)"
+    ]
+  }
+}

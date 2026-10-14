@@ -2,12 +2,201 @@
   {
     "id": 1,
     "file": "lesson-01.json",
-    "title": "Знакомьтесь: Моя семья и мой дом",
+    "title": "Здравствуйте! Давайте познакомимся",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "10 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Chào hỏi, Tên gọi & Đại từ nhân xưng",
+    "questionCount": 10
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Кто это? Что это?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "10 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Nhận diện người & Đồ vật xung quanh",
+    "questionCount": 10
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Мой, моя, моё: Чей это предмет?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "10 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Giống của danh từ & Đại từ sở hữu",
+    "questionCount": 10
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "В аудитории: Где находится?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "10 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Vị trí không gian: Ở đâu, Bên phải, Bên trái, Ở giữa",
+    "questionCount": 10
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Профессии: Кем вы работаете?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Nghề nghiệp & Công việc thường nhật",
+    "questionCount": 10
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Что вы делаете каждый день?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Các hoạt động hàng ngày & Động từ nhóm I",
+    "questionCount": 10
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Вы говорите по-русски?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Ngôn ngữ & Khả năng giao tiếp: Говорить, знать, понимать",
+    "questionCount": 10
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Моя семья: Большая и дружная",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Gia đình, Họ hàng & Tình cảm gia đình",
+    "questionCount": 10
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Наш дом и наша квартира",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Nhà ở, Phòng ốc & Tiện nghi gia đình",
+    "questionCount": 10
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Где вы живёте? Город и страна",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Nơi chốn, Quốc gia & Cách 6 vị trí (в / на)",
+    "questionCount": 10
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Один день студента: Мой распорядок дня",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Thời gian biểu trong ngày, Giờ giấc & Thói quen",
+    "questionCount": 10
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "В магазине: Продукты и покупки",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Mua sắm, Thực phẩm & Giá tiền (Сколько стоит?)",
+    "questionCount": 10
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "В кафе: Русская кухня и обед",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Ẩm thực Nga, Món ăn & Lời chúc ngon miệng",
+    "questionCount": 10
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Мой друг и его увлечения",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Sở thích cá nhân, Thể thao & Giải trí",
+    "questionCount": 10
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Какая сегодня погода? Времена года",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Thời tiết, Bốn mùa & Khí hậu nước Nga",
+    "questionCount": 10
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Что вы любите делать в свободное время?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Sở thích cá nhân & Động từ Любить",
+    "questionCount": 10
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Выходной день: Куда мы идём?",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Ngày nghỉ cuối tuần & Hướng di chuyển (Куда?)",
+    "questionCount": 10
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Письмо другу: Как я живу и учусь",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Kỹ năng viết thư & Tường thuật cuộc sống A1",
+    "questionCount": 10
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Праздники в России: Новый год и традиции",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Văn hóa, Lễ hội & Lời chúc mừng (Поздравляю!)",
+    "questionCount": 10
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Итоговый тест A1: Я говорю по-русски!",
     "badge": "A1 Đọc hiểu",
     "readingTime": "15 phút",
-    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế",
-    "topic": "Gia đình, Ngôi nhà & Nghề nghiệp",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Tổng ôn toàn diện kiến thức & Bứt phá năng lực TRKI A1",
     "questionCount": 10
   }
 ]
-

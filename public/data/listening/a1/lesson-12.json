@@ -1,0 +1,254 @@
+{
+  "id": 12,
+  "level": "A1",
+  "skill": "listening",
+  "title": "В музее: Экскурсия по залам",
+  "listeningTime": "11 phút",
+  "topic": "Nghe hướng dẫn viên thuyết minh tại bảo tàng nghệ thuật",
+  "dialogue": [
+    {
+      "speaker": "Гид",
+      "text": "Здравствуйте, дорогие гости! Мы находимся в историческом зале музея."
+    },
+    {
+      "speaker": "Турист",
+      "text": "Скажите, пожалуйста, разрешено ли фотографировать картины?"
+    },
+    {
+      "speaker": "Гид",
+      "text": "Да, можно делать фотографии, но строго без вспышки."
+    },
+    {
+      "speaker": "Турист",
+      "text": "Чья это знаменитая картина перед нами?"
+    },
+    {
+      "speaker": "Гид",
+      "text": "Это шедевр известного русского художника девятнадцатого века."
+    },
+    {
+      "speaker": "Турист",
+      "text": "Сколько времени продлится наша экскурсия?"
+    },
+    {
+      "speaker": "Гид",
+      "text": "Экскурсия продлится ровно один час. Пройдёмте в следующий зал!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "В залах музея разрешено фотографировать картины без вспышки.",
+    "hint": "Gợi ý: Cụm từ «без вспышки» (không dùng đèn flash)."
+  },
+  "questions": [
+    {
+      "id": "l12_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В историческом зале."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «В историческом зале.»."
+    },
+    {
+      "id": "l12_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "Да, но строго без вспышки."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «Да, но строго без вспышки.»."
+    },
+    {
+      "id": "l12_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "Художника 19-го века."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «Художника 19-го века.»."
+    },
+    {
+      "id": "l12_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "Один час."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «Один час.»."
+    },
+    {
+      "id": "l12_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Được chụp nhưng cấm dùng đèn flash."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Được chụp nhưng cấm dùng đèn flash.."
+    },
+    {
+      "id": "l12_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Thời gian tham quan 1 tiếng."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Thời gian tham quan 1 tiếng.."
+    },
+    {
+      "id": "l12_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Họa sĩ Nga thế kỷ 19."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Họa sĩ Nga thế kỷ 19.."
+    },
+    {
+      "id": "l12_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Đi sang phòng trưng bày kế tiếp."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Đi sang phòng trưng bày kế tiếp.."
+    }
+  ]
+}

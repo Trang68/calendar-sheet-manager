@@ -1,0 +1,56 @@
+{
+  "id": 15,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В кинотеатре: Покупка билетов",
+  "speakingTime": "15 phút",
+  "topic": "Giải trí: Chọn phim, chọn hàng ghế và mua bỏng ngô",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Какой интересный фильм сейчас идёт на экране?",
+      "meaning": "Bộ phim hấp dẫn nào đang được chiếu trên màn ảnh hiện nay?",
+      "phonetic": "Kakoy interesnyy fil'm seychas idyot na ekrane?",
+      "tips": "«Идёт фильм» là thành ngữ chỉ phim đang chiếu rạp."
+    },
+    {
+      "id": "spk_2",
+      "text": "Дайте, пожалуйста, два билета на вечерний сеанс.",
+      "meaning": "Làm ơn cho tôi hai vé xem suất chiếu buổi tối.",
+      "phonetic": "Dayte, pozhaluysta, dva bileta na vecherniy seans.",
+      "tips": "«Сеанс» mượn từ tiếng Pháp, chỉ suất chiếu."
+    },
+    {
+      "id": "spk_3",
+      "text": "Выберите места: в центре зала, седьмой ряд.",
+      "meaning": "Hãy chọn chỗ ngồi: ở giữa phòng chiếu, hàng ghế số 7.",
+      "phonetic": "Vyberite mesta: v tsentre zala, sed'moy ryad.",
+      "tips": "«Ряд» mang nghĩa hàng ghế."
+    },
+    {
+      "id": "spk_4",
+      "text": "Мы хотим купить большой попкорн и колу со льдом.",
+      "meaning": "Chúng tôi muốn mua một hộp bắp rang bơ lớn và nước ngọt có đá.",
+      "phonetic": "My khotim kupit' bol'shoy popkorn i kolu so l'dom.",
+      "tips": "«Со льдом» là cách 5 sau giới từ «со»."
+    },
+    {
+      "id": "spk_5",
+      "text": "Приятного вам просмотра фильма!",
+      "meaning": "Chúc quý khách xem phim vui vẻ!",
+      "phonetic": "Priyatnogo vam prosmotra fil'ma!",
+      "tips": "Lời chúc phổ biến trước khi vào rạp chiếu."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Mời bạn đi xem phim và nói về bộ phim bạn muốn xem cùng thời gian suất chiếu.",
+    "sampleGuidance": [
+      "Пойдём сегодня вечером в кино! (Tối nay chúng mình đi xem phim đi!)",
+      "Там идёт новая комедия... (Ở đó đang chiếu bộ phim hài mới...)",
+      "Сеанс начинается в восемь вечера... (Suất chiếu bắt đầu lúc 8 giờ tối...)",
+      "Я куплю билеты онлайн... (Tôi sẽ mua vé trực tuyến...)"
+    ]
+  }
+}

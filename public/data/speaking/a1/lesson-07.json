@@ -1,0 +1,56 @@
+{
+  "id": 7,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В городе: Как пройти в центр?",
+  "speakingTime": "15 phút",
+  "topic": "Hỏi đường & Phương hướng: Đi thẳng, rẽ trái, rẽ phải, trạm xe buýt",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Извините, скажите, где станция метро?",
+      "meaning": "Xin lỗi, cho tôi hỏi trạm tàu điện ngầm ở đâu?",
+      "phonetic": "Izvinite, skazhite, gde stantsiya metro?",
+      "tips": "«Извините» dùng lịch sự để bắt đầu hỏi đường."
+    },
+    {
+      "id": "spk_2",
+      "text": "Идите прямо до перекрёстка и поверните направо.",
+      "meaning": "Hãy đi thẳng đến ngã tư rồi rẽ sang bên phải.",
+      "phonetic": "Idite pryamo do perekryostka i povernite napravo.",
+      "tips": "«Направо» = rẽ phải, trọng âm âm tiết 2."
+    },
+    {
+      "id": "spk_3",
+      "text": "Большой театр находится на противоположной стороне.",
+      "meaning": "Nhà hát Bolshoi nằm ở phía đối diện bên kia đường.",
+      "phonetic": "Bol'shoy teatr nakhoditsya na protivopolozhnoy storone.",
+      "tips": "«Стороне» trọng âm ở chữ e cuối cùng."
+    },
+    {
+      "id": "spk_4",
+      "text": "Это далеко отсюда или можно дойти пешком?",
+      "meaning": "Chỗ đó có xa đây không hay có thể đi bộ tới được?",
+      "phonetic": "Eto daleko otsyuda ili mozhno doyti peshkom?",
+      "tips": "«Пешком» nghĩa là đi bằng hai chân (đi bộ)."
+    },
+    {
+      "id": "spk_5",
+      "text": "Пешком всего пять минут, это совсем рядом.",
+      "meaning": "Đi bộ chỉ mất năm phút thôi, ngay gần đây thôi.",
+      "phonetic": "Peshkom vsego pyat' minut, eto sovsem ryadom.",
+      "tips": "«Совсем рядом» = cực kỳ gần."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Đóng vai người hỏi đường đến một viện bảo tàng hoặc quảng trường nổi tiếng tại Nga.",
+    "sampleGuidance": [
+      "Скажите, пожалуйста, как доехать до... (Làm ơn chỉ giúp cách đi đến...)",
+      "Где находится остановка автобуса? (Trạm dừng xe buýt ở đâu?)",
+      "Сколько минут ехать на метро? (Đi tàu điện ngầm mất mấy phút?)",
+      "Большое спасибо за помощь! (Cảm ơn bạn rất nhiều vì đã giúp đỡ!)"
+    ]
+  }
+}

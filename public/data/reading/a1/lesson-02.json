@@ -1,0 +1,333 @@
+{
+  "id": 2,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Кто это? Что это?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "10 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Nhận diện người & Đồ vật xung quanh",
+  "vocabCategories": [
+    {
+      "title": "Từ hỏi cơ bản (Вопросительные слова)",
+      "rows": [
+        {
+          "word": "Кто?",
+          "gram": "đại từ nghi vấn",
+          "meaning": "Ai? (dùng cho người, động vật)",
+          "example": "Кто это? — Это студент."
+        },
+        {
+          "word": "Что?",
+          "gram": "đại từ nghi vấn (đọc là /shto/)",
+          "meaning": "Cái gì? (dùng cho đồ vật, sự vật)",
+          "example": "Что это? — Это книга."
+        },
+        {
+          "word": "Э́то",
+          "gram": "đại từ chỉ định",
+          "meaning": "Đây là, cái này là",
+          "example": "Это стол, а это стул."
+        }
+      ]
+    },
+    {
+      "title": "Danh từ đồ vật lớp học (Предметы)",
+      "rows": [
+        {
+          "word": "стол",
+          "gram": "danh từ giống đực",
+          "meaning": "cái bàn",
+          "example": "Вот стол."
+        },
+        {
+          "word": "кни́га",
+          "gram": "danh từ giống cái",
+          "meaning": "quyển sách",
+          "example": "Это интересная книга."
+        },
+        {
+          "word": "ру́чка",
+          "gram": "danh từ giống cái",
+          "meaning": "cây bút",
+          "example": "Где ручка? Вот она."
+        },
+        {
+          "word": "окно́",
+          "gram": "danh từ giống trung",
+          "meaning": "cửa sổ",
+          "example": "Там большое окно."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "— Скажите, пожалуйста, что это?\n— Это стол. А это стул.",
+    "— А что лежит на столе?\n— На столе лежит книга, тетрадь и ручка.",
+    "— Кто это там у окна?\n— Это мой друг Максим. Он тоже студент.",
+    "Вот класс. Здесь сидят студенты. Они читают и пишут.",
+    "Это наш новый словарь, а это карта мира."
+  ],
+  "questions": [
+    {
+      "id": "a1_r2_q1",
+      "lang": "ru",
+      "prompt": "Что лежит на столе?",
+      "hint": "Đọc câu trả lời ở lượt thoại thứ 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только ручка"
+        },
+        {
+          "key": "B",
+          "text": "Книга, тетрадь и ручка"
+        },
+        {
+          "key": "C",
+          "text": "Словарь и карта"
+        },
+        {
+          "key": "D",
+          "text": "Компьютер"
+        }
+      ],
+      "ans": "B",
+      "explain": "Đoạn 2 nêu: «На столе лежит книга, тетрадь и ручка»."
+    },
+    {
+      "id": "a1_r2_q2",
+      "lang": "ru",
+      "prompt": "Кто стоит у окна?",
+      "hint": "Tìm thông tin người đứng cạnh cửa sổ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Преподаватель"
+        },
+        {
+          "key": "B",
+          "text": "Максим"
+        },
+        {
+          "key": "C",
+          "text": "Антон"
+        },
+        {
+          "key": "D",
+          "text": "Анна"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Это мой друг Максим»."
+    },
+    {
+      "id": "a1_r2_q3",
+      "lang": "ru",
+      "prompt": "Слово «Что?» в русском языке произносится как:",
+      "hint": "Quy tắc phát âm đặc biệt của chữ ЧТ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "/что/"
+        },
+        {
+          "key": "B",
+          "text": "/што/"
+        },
+        {
+          "key": "C",
+          "text": "/кто/"
+        },
+        {
+          "key": "D",
+          "text": "/то/"
+        }
+      ],
+      "ans": "B",
+      "explain": "Trong tiếng Nga, «что» luôn được phát âm chuẩn là /што/."
+    },
+    {
+      "id": "a1_r2_q4",
+      "lang": "ru",
+      "prompt": "Для одушевлённых предметов (людей) мы задаём вопрос:",
+      "hint": "Từ hỏi dành cho người.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Что это?"
+        },
+        {
+          "key": "B",
+          "text": "Кто это?"
+        },
+        {
+          "key": "C",
+          "text": "Где это?"
+        },
+        {
+          "key": "D",
+          "text": "Чей это?"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Кто это?» dùng để hỏi người hoặc động vật có tri giác."
+    },
+    {
+      "id": "a1_r2_q5",
+      "lang": "ru",
+      "prompt": "Что такое «карта мира»?",
+      "hint": "Từ vựng về địa lý trong lớp học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thẻ học sinh"
+        },
+        {
+          "key": "B",
+          "text": "Bản đồ thế giới"
+        },
+        {
+          "key": "C",
+          "text": "Cuốn từ điển"
+        },
+        {
+          "key": "D",
+          "text": "Cái bàn học"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Карта мира» nghĩa là Bản đồ thế giới."
+    },
+    {
+      "id": "a1_r2_q6",
+      "lang": "vi",
+      "prompt": "Từ hỏi «Что?» được dùng trong trường hợp nào?",
+      "hint": "Đại từ nghi vấn chỉ vật.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hỏi về người (Ai?)"
+        },
+        {
+          "key": "B",
+          "text": "Hỏi về đồ vật, hiện tượng (Cái gì?)"
+        },
+        {
+          "key": "C",
+          "text": "Hỏi về nơi chốn (Ở đâu?)"
+        },
+        {
+          "key": "D",
+          "text": "Hỏi về thời gian (Khi nào?)"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Что?» có nghĩa là 'Cái gì?', dùng để hỏi về đồ vật, sự vật bất động vật."
+    },
+    {
+      "id": "a1_r2_q7",
+      "lang": "vi",
+      "prompt": "Từ «тетрадь» trong bài đọc có nghĩa là gì?",
+      "hint": "Đồ dùng học tập dùng để viết bài.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quyển vở ghi bài"
+        },
+        {
+          "key": "B",
+          "text": "Quyển sách giáo khoa"
+        },
+        {
+          "key": "C",
+          "text": "Cây bút bi"
+        },
+        {
+          "key": "D",
+          "text": "Cái thước kẻ"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Тетрадь» (danh từ giống cái đuôi -ь) nghĩa là quyển vở."
+    },
+    {
+      "id": "a1_r2_q8",
+      "lang": "vi",
+      "prompt": "Các sinh viên trong lớp học đang làm gì?",
+      "hint": "Đọc câu: «Они читают и пишут».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đang ngủ"
+        },
+        {
+          "key": "B",
+          "text": "Đang đọc và viết"
+        },
+        {
+          "key": "C",
+          "text": "Đang ăn cơm"
+        },
+        {
+          "key": "D",
+          "text": "Đang nói chuyện điện thoại"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Они читают (đọc) и пишут (viết)»."
+    },
+    {
+      "id": "a1_r2_q9",
+      "lang": "vi",
+      "prompt": "Từ «друг» trong câu «Это мой друг Максим» nghĩa là gì?",
+      "hint": "Mối quan hệ bạn bè.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thầy giáo"
+        },
+        {
+          "key": "B",
+          "text": "Anh trai"
+        },
+        {
+          "key": "C",
+          "text": "Bạn bè (bạn nam)"
+        },
+        {
+          "key": "D",
+          "text": "Bác sĩ"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Друг» là người bạn (nam), bạn nữ là «подруга»."
+    },
+    {
+      "id": "a1_r2_q10",
+      "lang": "vi",
+      "prompt": "Khi muốn hỏi 'Cái bàn ở đâu?', ta dùng từ hỏi nào?",
+      "hint": "Từ hỏi vị trí nơi chốn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Кто?"
+        },
+        {
+          "key": "B",
+          "text": "Что?"
+        },
+        {
+          "key": "C",
+          "text": "Где?"
+        },
+        {
+          "key": "D",
+          "text": "Куда?"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Где?» có nghĩa là 'Ở đâu?' (Где стол? - Cái bàn ở đâu?)."
+    }
+  ]
+}

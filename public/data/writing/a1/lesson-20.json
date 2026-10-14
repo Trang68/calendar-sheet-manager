@@ -1,0 +1,57 @@
+{
+  "id": 20,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Итоговое сочинение: Мои успехи на уровне А1",
+  "writingTime": "20 phút",
+  "topic": "Bài luận tổng kết A1: Chặng đường đã qua và mục tiêu chinh phục A2",
+  "targetWordRange": [
+    45,
+    70
+  ],
+  "task": "Viết bài luận ngắn (45–70 từ) tổng kết quá trình học tiếng Nga của bạn từ con số 0 đến hết trình độ A1.",
+  "requirements": [
+    "1. Khẳng định bạn đã hoàn thành trọn vẹn chương trình A1.",
+    "2. Kể những kỹ năng bạn đã làm chủ (đọc hiểu, nghe hội thoại, viết thư, phát âm).",
+    "3. Cảm xúc tự hào và lời tri ân gửi đến thầy cô, bạn đồng hành.",
+    "4. Cam kết tiếp tục tiến bước lên cấp độ sơ trung cấp A2."
+  ],
+  "cliches": [
+    {
+      "ru": "Я успешно завершил курс уровня А1.",
+      "vi": "Tôi đã hoàn thành thành công khóa học cấp độ A1."
+    },
+    {
+      "ru": "Теперь я умею говорить и писать по-русски.",
+      "vi": "Giờ đây tôi đã biết nói và viết bằng tiếng Nga."
+    },
+    {
+      "ru": "Русская грамматика была непростой, но интересной.",
+      "vi": "Ngữ pháp Nga không đơn giản, nhưng rất thú vị."
+    },
+    {
+      "ru": "Я готов двигаться дальше к уровню А2!",
+      "vi": "Tôi đã sẵn sàng tiến xa hơn tới cấp độ A2!"
+    }
+  ],
+  "modelAnswer": "Вот и завершился мой первый большой шаг — уровень А1 по русскому языку! Когда я только начинал, я не знал даже русского алфавита. Сейчас я уже могу читать тексты, понимать русскую речь на слух, писать письма друзьям и уверенно общаться на простые темы. Изучать русский язык было непросто, но очень увлекательно. Я горжусь своими результатами и с радостью перехожу к уровню А2!",
+  "modelWordCount": 61,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

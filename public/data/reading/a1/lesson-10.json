@@ -1,0 +1,310 @@
+{
+  "id": 10,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Где вы живёте? Город и страна",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Nơi chốn, Quốc gia & Cách 6 vị trí (в / на)",
+  "vocabCategories": [
+    {
+      "title": "Cách 6 chỉ nơi chốn (Предложный падеж)",
+      "rows": [
+        {
+          "word": "в го́роде",
+          "gram": "Cách 6",
+          "meaning": "ở trong thành phố",
+          "example": "Я живу в городе."
+        },
+        {
+          "word": "в Москве́",
+          "gram": "Cách 6",
+          "meaning": "ở Moskva",
+          "example": "Мы учимся в Москве."
+        },
+        {
+          "word": "в Хано́е",
+          "gram": "Cách 6",
+          "meaning": "ở Hà Nội",
+          "example": "Моя семья живёт в Ханое."
+        },
+        {
+          "word": "на у́лице",
+          "gram": "Cách 6",
+          "meaning": "ở trên đường phố",
+          "example": "Дети гуляют на улице."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Здравствуйте! Меня зовут Чан. Я приехал из Вьетнама.",
+    "Моя родина — Вьетнам. Мои родители сейчас живут в столице, в городе Ханое.",
+    "А я уже восемь месяцев живу и учусь в России, в Москве.",
+    "Москва — это огромный, красивый и старинный город. Я живу в студенческом общежитии на улице Академика Волгина.",
+    "Мне очень нравится жить в России. Здесь у меня много хороших друзей."
+  ],
+  "questions": [
+    {
+      "id": "a1_r10_q1",
+      "lang": "ru",
+      "prompt": "Откуда приехал Чан?",
+      "hint": "Xem câu 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Из Китая"
+        },
+        {
+          "key": "B",
+          "text": "Из Вьетнама"
+        },
+        {
+          "key": "C",
+          "text": "Из Японии"
+        },
+        {
+          "key": "D",
+          "text": "Из Кореи"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Я приехал из Вьетнама»."
+    },
+    {
+      "id": "a1_r10_q2",
+      "lang": "ru",
+      "prompt": "Где сейчас живут родители Чана?",
+      "hint": "Tìm nơi ở của bố mẹ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Москве"
+        },
+        {
+          "key": "B",
+          "text": "В Ханое"
+        },
+        {
+          "key": "C",
+          "text": "В Сайгоне"
+        },
+        {
+          "key": "D",
+          "text": "В деревне"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Мои родители сейчас живут в столице, в городе Ханое»."
+    },
+    {
+      "id": "a1_r10_q3",
+      "lang": "ru",
+      "prompt": "Сколько месяцев Чан живёт в Москве?",
+      "hint": "Tìm số tháng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Два месяца"
+        },
+        {
+          "key": "B",
+          "text": "Пять месяцев"
+        },
+        {
+          "key": "C",
+          "text": "Восемь месяцев"
+        },
+        {
+          "key": "D",
+          "text": "Один год"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «А я уже восемь месяцев живу и учусь в России»."
+    },
+    {
+      "id": "a1_r10_q4",
+      "lang": "ru",
+      "prompt": "Где живёт Чан в Москве?",
+      "hint": "Tìm nơi ở sinh viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В гостинице"
+        },
+        {
+          "key": "B",
+          "text": "В студенческом общежитии"
+        },
+        {
+          "key": "C",
+          "text": "В отдельной квартире"
+        },
+        {
+          "key": "D",
+          "text": "У друзей"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Я живу в студенческом общежитии» (ký túc xá sinh viên)."
+    },
+    {
+      "id": "a1_r10_q5",
+      "lang": "ru",
+      "prompt": "Как Чан описывает Москву?",
+      "hint": "Tìm các tính từ miêu tả Moskva.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Маленький и тихий город"
+        },
+        {
+          "key": "B",
+          "text": "Огромный, красивый и старинный город"
+        },
+        {
+          "key": "C",
+          "text": "Скучный город"
+        },
+        {
+          "key": "D",
+          "text": "Тёмный город"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Москва — это огромный, красивый и старинный город»."
+    },
+    {
+      "id": "a1_r10_q6",
+      "lang": "vi",
+      "prompt": "Từ «столица» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Thành phố trung tâm đầu não của một quốc gia.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thủ đô"
+        },
+        {
+          "key": "B",
+          "text": "Ngoại ô"
+        },
+        {
+          "key": "C",
+          "text": "Hải cảng"
+        },
+        {
+          "key": "D",
+          "text": "Tỉnh lẻ"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Столица» nghĩa là thủ đô."
+    },
+    {
+      "id": "a1_r10_q7",
+      "lang": "vi",
+      "prompt": "Từ «общежитие» có nghĩa là gì?",
+      "hint": "Nơi sinh viên các trường đại học thường ở.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khách sạn 5 sao"
+        },
+        {
+          "key": "B",
+          "text": "Ký túc xá"
+        },
+        {
+          "key": "C",
+          "text": "Nhà riêng"
+        },
+        {
+          "key": "D",
+          "text": "Phòng trọ tư nhân"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Общежитие» (viết tắt là общага) nghĩa là ký túc xá."
+    },
+    {
+      "id": "a1_r10_q8",
+      "lang": "vi",
+      "prompt": "Đuôi đặc trưng của danh từ giống đực và cái ở Cách 6 chỉ nơi chốn là gì?",
+      "hint": "Ví dụ: в город..., в Москв... .",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đuôi -е"
+        },
+        {
+          "key": "B",
+          "text": "Đuôi -у"
+        },
+        {
+          "key": "C",
+          "text": "Đuôi -ом"
+        },
+        {
+          "key": "D",
+          "text": "Đuôi -а"
+        }
+      ],
+      "ans": "A",
+      "explain": "Ở Cách 6 (Предложный падеж) chỉ nơi chốn, danh từ thường biến đổi đuôi thành -е (в городе, в Москве, в школе)."
+    },
+    {
+      "id": "a1_r10_q9",
+      "lang": "vi",
+      "prompt": "Từ «родина» mang ý nghĩa gì?",
+      "hint": "Mảnh đất thiêng liêng nơi ta sinh ra.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quê hương, tổ quốc"
+        },
+        {
+          "key": "B",
+          "text": "Trường học cũ"
+        },
+        {
+          "key": "C",
+          "text": "Ngôi nhà"
+        },
+        {
+          "key": "D",
+          "text": "Thành phố"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Родина» là quê hương, đất mẹ, tổ quốc."
+    },
+    {
+      "id": "a1_r10_q10",
+      "lang": "vi",
+      "prompt": "Giới từ nào đi với từ «улица» khi nói 'ở trên đường phố'?",
+      "hint": "Xem câu: ... улице Академика Волгина.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В"
+        },
+        {
+          "key": "B",
+          "text": "На"
+        },
+        {
+          "key": "C",
+          "text": "К"
+        },
+        {
+          "key": "D",
+          "text": "Под"
+        }
+      ],
+      "ans": "B",
+      "explain": "Với đường phố (улица), quảng trường (площадь), tiếng Nga dùng giới từ «НА» $\\rightarrow$ «на улице»."
+    }
+  ]
+}

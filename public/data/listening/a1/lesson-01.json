@@ -1,141 +1,264 @@
 {
   "id": 1,
-  "level": "A1",
-  "skill": "listening",
   "title": "В кафе: Заказ еды и напитков",
-  "listeningTime": "12 phút",
-  "topic": "Hội thoại thực tế - Gọi đồ uống tại quán cà phê",
+  "listeningTime": "10 phút",
+  "topic": "Hội thoại thực tế: Gọi đồ uống & món ăn tại quán cà phê",
   "dialogue": [
-    {"speaker": "Официант", "text": "Добрый день! Добро пожаловать в наше уютное кафе."},
-    {"speaker": "Анна", "text": "Здравствуйте! Покажите, пожалуйста, меню."},
-    {"speaker": "Официант", "text": "Вот меню. Что вы будете заказывать сегодня?"},
-    {"speaker": "Анна", "text": "Я буду зелёный чай с лимоном и вкусный яблочный пирог."},
-    {"speaker": "Максим", "text": "А мне, пожалуйста, чашку горячего чёрного кофе без сахара."},
-    {"speaker": "Официант", "text": "Хорошо. Кофе без сахара, зелёный чай и пирог. Что-нибудь ещё?"},
-    {"speaker": "Максим", "text": "Нет, спасибо, это всё. Скажите, пожалуйста, сколько это стоит?"},
-    {"speaker": "Официант", "text": "С вас триста пятьдесят рублей."},
-    {"speaker": "Анна", "text": "Вот деньги. Большое спасибо!"},
-    {"speaker": "Официант", "text": "Спасибо вам! Приятного аппетита!"}
+    {
+      "speaker": "Официант",
+      "text": "Добрый день! Добро пожаловать в наше уютное кафе."
+    },
+    {
+      "speaker": "Анна",
+      "text": "Здравствуйте! Покажите, пожалуйста, меню."
+    },
+    {
+      "speaker": "Официант",
+      "text": "Вот меню. Что вы будете заказывать сегодня?"
+    },
+    {
+      "speaker": "Анна",
+      "text": "Я буду зелёный чай с лимоном и яблочный пирог."
+    },
+    {
+      "speaker": "Максим",
+      "text": "А мне, пожалуйста, чашку чёрного кофе без сахара."
+    },
+    {
+      "speaker": "Официант",
+      "text": "Хорошо. Кофе без сахара, зелёный чай и пирог. Что-нибудь ещё?"
+    },
+    {
+      "speaker": "Максим",
+      "text": "Нет, спасибо, это всё. Скажите, пожалуйста, сколько это стоит?"
+    },
+    {
+      "speaker": "Официант",
+      "text": "С вас триста пятьдесят рублей."
+    },
+    {
+      "speaker": "Анна",
+      "text": "Вот деньги. Большое спасибо!"
+    },
+    {
+      "speaker": "Официант",
+      "text": "Спасибо вам! Приятного аппетита!"
+    }
   ],
   "dictation": {
     "title": "Chép chính tả (Диктант)",
     "instruction": "Nghe kỹ câu sau và gõ lại chính xác bằng tiếng Nga vào ô bên dưới:",
     "targetText": "Дайте, пожалуйста, зелёный чай и чёрный кофе.",
-    "hint": "Gợi ý: Hãy chú ý dấu phẩy sau «пожалуйста» và đuôi tính từ giống đực «зелёный», «чёрный»."
+    "hint": "Gợi ý: Chú ý dấu phẩy sau «пожалуйста» và đuôi tính từ «зелёный», «чёрный»."
   },
   "questions": [
     {
-      "id": "a1_l1_q1",
+      "id": "l1_q1",
       "lang": "ru",
       "prompt": "Где происходит этот диалог?",
-      "hint": "Xác định địa điểm của cuộc hội thoại.",
+      "hint": "Xác định địa điểm đối thoại.",
       "options": [
-        {"key": "A", "text": "В библиотеке."},
-        {"key": "B", "text": "В кафе."},
-        {"key": "C", "text": "В больнице."},
-        {"key": "D", "text": "В университете."}
+        {
+          "key": "A",
+          "text": "В библиотеке."
+        },
+        {
+          "key": "B",
+          "text": "В кафе."
+        },
+        {
+          "key": "C",
+          "text": "В больнице."
+        },
+        {
+          "key": "D",
+          "text": "В метро."
+        }
       ],
       "ans": "B",
-      "explain": "Đoạn đầu người phục vụ chào: «Добро пожаловать в наше уютное кафе» (Chào mừng bạn đến quán cà phê ấm cúng của chúng tôi)."
+      "explain": "Bồi bàn chào: «Добро пожаловать в наше уютное кафе» (Chào mừng bạn đến quán cà phê)."
     },
     {
-      "id": "a1_l1_q2",
+      "id": "l1_q2",
       "lang": "ru",
       "prompt": "Что заказала Анна?",
-      "hint": "Tìm món ăn và đồ uống của Anna.",
+      "hint": "Món của Anna.",
       "options": [
-        {"key": "A", "text": "Чёрный кофе и шоколад."},
-        {"key": "B", "text": "Зелёный чай с лимоном и яблочный пирог."},
-        {"key": "C", "text": "Минеральную воду и круассан."},
-        {"key": "D", "text": "Апельсиновый сок и бутерброд."}
+        {
+          "key": "A",
+          "text": "Чёрный кофе."
+        },
+        {
+          "key": "B",
+          "text": "Зелёный чай с лимоном и пирог."
+        },
+        {
+          "key": "C",
+          "text": "Воду и мороженое."
+        },
+        {
+          "key": "D",
+          "text": "Сок и суп."
+        }
       ],
       "ans": "B",
-      "explain": "Anna nói: «Я буду зелёный чай с лимоном и вкусный яблочный пирог»."
+      "explain": "Anna nói: «Я буду зелёный чай с лимоном и яблочный пирог»."
     },
     {
-      "id": "a1_l1_q3",
+      "id": "l1_q3",
       "lang": "ru",
-      "prompt": "Какой кофе хочет Максим?",
-      "hint": "Chú ý loại cà phê và có đường hay không.",
+      "prompt": "Какой кофе заказал Максим?",
+      "hint": "Maxim uống cà phê như thế nào?",
       "options": [
-        {"key": "A", "text": "Кофе с молоком и сахаром."},
-        {"key": "B", "text": "Холодный кофе."},
-        {"key": "C", "text": "Горячий чёрный кофе без сахара."},
-        {"key": "D", "text": "Сладкий кофе с корицей."}
+        {
+          "key": "A",
+          "text": "С молоком и сахаром."
+        },
+        {
+          "key": "B",
+          "text": "Холодный кофе."
+        },
+        {
+          "key": "C",
+          "text": "Чёрный кофе без сахара."
+        },
+        {
+          "key": "D",
+          "text": "С шоколадом."
+        }
       ],
       "ans": "C",
-      "explain": "Maxim nói: «А мне, пожалуйста, чашку горячего чёрного кофе без сахара» (cà phê đen nóng không đường)."
+      "explain": "Maxim yêu cầu: «чашку чёрного кофе без сахара»."
     },
     {
-      "id": "a1_l1_q4",
+      "id": "l1_q4",
       "lang": "ru",
       "prompt": "Сколько стоит весь заказ?",
-      "hint": "Tìm số tiền người phục vụ đọc.",
+      "hint": "Số tiền được thanh toán.",
       "options": [
-        {"key": "A", "text": "250 рублей."},
-        {"key": "B", "text": "300 рублей."},
-        {"key": "C", "text": "350 рублей."},
-        {"key": "D", "text": "500 рублей."}
+        {
+          "key": "A",
+          "text": "250 рублей."
+        },
+        {
+          "key": "B",
+          "text": "300 рублей."
+        },
+        {
+          "key": "C",
+          "text": "350 рублей."
+        },
+        {
+          "key": "D",
+          "text": "500 рублей."
+        }
       ],
       "ans": "C",
-      "explain": "Người phục vụ thông báo: «С вас триста пятьдесят (350) рублей»."
+      "explain": "Официант: «С вас триста пятьдесят (350) рублей»."
     },
     {
-      "id": "a1_l1_q5",
+      "id": "l1_q5",
       "lang": "vi",
-      "prompt": "Anna và Maxim gọi tổng cộng mấy món đồ uống?",
-      "hint": "Đếm số loại nước được 2 bạn gọi.",
+      "prompt": "Hai bạn Anna và Maxim gọi mấy loại đồ uống?",
+      "hint": "Đếm số loại thức uống.",
       "options": [
-        {"key": "A", "text": "1 món (chỉ có trà)."},
-        {"key": "B", "text": "2 món (1 trà xanh chanh và 1 cà phê đen)."},
-        {"key": "C", "text": "3 món (trà, cà phê và nước khoáng)."},
-        {"key": "D", "text": "4 món."}
+        {
+          "key": "A",
+          "text": "1 loại đồ uống."
+        },
+        {
+          "key": "B",
+          "text": "2 loại (trà xanh và cà phê đen)."
+        },
+        {
+          "key": "C",
+          "text": "3 loại."
+        },
+        {
+          "key": "D",
+          "text": "Không gọi đồ uống nào."
+        }
       ],
       "ans": "B",
-      "explain": "Hai bạn gọi 2 món đồ uống: 1 cốc trà xanh chanh (Anna) và 1 tách cà phê đen (Maxim)."
+      "explain": "Anna gọi trà xanh chanh, Maxim gọi cà phê đen."
     },
     {
-      "id": "a1_l1_q6",
+      "id": "l1_q6",
       "lang": "vi",
-      "prompt": "Câu chúc «Приятного аппетита!» của nhân viên có nghĩa là gì?",
-      "hint": "Lời chúc quen thuộc trong văn hóa ẩm thực Nga.",
+      "prompt": "Ý nghĩa của câu chúc «Приятного аппетита!» là gì?",
+      "hint": "Lời chúc phổ biến trên bàn ăn.",
       "options": [
-        {"key": "A", "text": "Chúc một ngày tốt lành!"},
-        {"key": "B", "text": "Chúc ngon miệng!"},
-        {"key": "C", "text": "Hẹn gặp lại lần sau!"},
-        {"key": "D", "text": "Xin cảm ơn quý khách!"}
+        {
+          "key": "A",
+          "text": "Chúc ngủ ngon!"
+        },
+        {
+          "key": "B",
+          "text": "Chúc ngon miệng!"
+        },
+        {
+          "key": "C",
+          "text": "Chúc một ngày tốt lành!"
+        },
+        {
+          "key": "D",
+          "text": "Hẹn gặp lại!"
+        }
       ],
       "ans": "B",
-      "explain": "«Приятного аппетита!» là câu chúc ngon miệng chuẩn trong tiếng Nga (tương đương Bon Appétit)."
+      "explain": "«Приятного аппетита!» có nghĩa là chúc ngon miệng."
     },
     {
-      "id": "a1_l1_q7",
+      "id": "l1_q7",
       "lang": "vi",
-      "prompt": "Trước khi gọi món, Anna đã lịch sự yêu cầu bồi bàn đưa cái gì?",
-      "hint": "Vật dụng liệt kê món ăn giá tiền.",
+      "prompt": "Cụm từ «без сахара» trong lời gọi của Maxim có nghĩa là gì?",
+      "hint": "Giới từ «без».",
       "options": [
-        {"key": "A", "text": "Hóa đơn thanh toán (счёт)."},
-        {"key": "B", "text": "Thực đơn món ăn (меню)."},
-        {"key": "C", "text": "Khăn giấy lau tay (салфетки)."},
-        {"key": "D", "text": "Ly nước lọc miễn phí."}
+        {
+          "key": "A",
+          "text": "Nhiều đường."
+        },
+        {
+          "key": "B",
+          "text": "Không đường."
+        },
+        {
+          "key": "C",
+          "text": "Đường sữa."
+        },
+        {
+          "key": "D",
+          "text": "Đường ăn kiêng."
+        }
       ],
       "ans": "B",
-      "explain": "Anna nói: «Покажите, пожалуйста, меню» (Làm ơn cho tôi xem thực đơn)."
+      "explain": "«без» nghĩa là không có: «без сахара» = không có đường."
     },
     {
-      "id": "a1_l1_q8",
+      "id": "l1_q8",
       "lang": "vi",
-      "prompt": "Từ «без сахара» trong lời gọi món của Maxim mang ý nghĩa gì?",
-      "hint": "Giới từ «без» chỉ sự không có.",
+      "prompt": "Anna đã yêu cầu nhân viên đưa vật gì trước khi gọi món?",
+      "hint": "Vật dụng xem món ăn.",
       "options": [
-        {"key": "A", "text": "Nhiều đường."},
-        {"key": "B", "text": "Không đường."},
-        {"key": "C", "text": "Đường ăn kiêng."},
-        {"key": "D", "text": "Đường phèn."}
+        {
+          "key": "A",
+          "text": "Hóa đơn thanh toán."
+        },
+        {
+          "key": "B",
+          "text": "Thực đơn (меню)."
+        },
+        {
+          "key": "C",
+          "text": "Khăn giấy."
+        },
+        {
+          "key": "D",
+          "text": "Cốc nước lọc."
+        }
       ],
       "ans": "B",
-      "explain": "«без» + Cách 2 nghĩa là 'không có', «без сахара» là không có đường."
+      "explain": "Anna nói: «Покажите, пожалуйста, меню»."
     }
   ]
 }
-

@@ -1,0 +1,56 @@
+{
+  "id": 3,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Моя семья: Родители, братья и сёстры",
+  "speakingTime": "15 phút",
+  "topic": "Giới thiệu gia đình: Kể về bố mẹ, anh chị em và tình cảm gia đình",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "У меня большая и очень дружная семья.",
+      "meaning": "Tôi có một gia đình lớn và rất hòa thuận.",
+      "phonetic": "U menya bol'shaya i ochen' druzhnaya sem'ya.",
+      "tips": "«Семья» có dấu mềm tách âm, đọc là /s'em-ya/."
+    },
+    {
+      "id": "spk_2",
+      "text": "Мой папа работает врачом в больнице.",
+      "meaning": "Bố tôi làm bác sĩ ở bệnh viện.",
+      "phonetic": "Moy papa rabotayet vrachom v bol'nitse.",
+      "tips": "«Врачом» là cách 5 công cụ chỉ nghề nghiệp."
+    },
+    {
+      "id": "spk_3",
+      "text": "Моя мама преподаёт литературу в школе.",
+      "meaning": "Mẹ tôi giảng dạy môn văn học ở trường phổ thông.",
+      "phonetic": "Moya mama prepodayot literaturu v shkole.",
+      "tips": "Chữ «ё» trong «преподаёт» luôn luôn mang trọng âm."
+    },
+    {
+      "id": "spk_4",
+      "text": "Мой старший брат учится в институте.",
+      "meaning": "Anh trai tôi đang học tại học viện.",
+      "phonetic": "Moy starshiy brat uchitsya v institute.",
+      "tips": "«Старший» có phụ âm «ш» luôn cứng."
+    },
+    {
+      "id": "spk_5",
+      "text": "Мы все любим собираться вместе по вечерам.",
+      "meaning": "Tất cả chúng tôi thích tụ họp cùng nhau vào các buổi tối.",
+      "phonetic": "My vse lyubim sobirat'sya vmeste po vecheram.",
+      "tips": "«Вместе» phát âm chữ «е» mềm: /vm'est'e/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Hãy kể về gia đình của bạn (3–5 câu): Gia đình bạn có bao nhiêu người, bố mẹ bạn làm gì và cả nhà thường làm gì vào cuối tuần.",
+    "sampleGuidance": [
+      "Моя семья состоит из четырёх человек... (Gia đình tôi gồm 4 người...)",
+      "Мои родители работают... (Bố mẹ tôi làm việc...)",
+      "У меня есть брат / сестра... (Tôi có anh/chị/em...)",
+      "В выходные мы любим гулять... (Cuối tuần chúng tôi thích đi dạo...)"
+    ]
+  }
+}

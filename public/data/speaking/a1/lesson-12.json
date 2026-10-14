@@ -1,0 +1,56 @@
+{
+  "id": 12,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "На вокзале: Поездка на поезде",
+  "speakingTime": "15 phút",
+  "topic": "Đi lại: Mua vé tàu hỏa, hỏi giờ khởi hành và tìm toa xe",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Скажите, во сколько отправляется поезд в Казань?",
+      "meaning": "Cho tôi hỏi tàu hỏa đi Kazan khởi hành lúc mấy giờ?",
+      "phonetic": "Skazhite, vo skol'ko otpravlyayetsya poyezd v Kazan'?",
+      "tips": "«Отправля́ется» nhấn trọng âm ở âm tiết thứ 3."
+    },
+    {
+      "id": "spk_2",
+      "text": "Мне нужен один билет в купейный вагон.",
+      "meaning": "Tôi cần một vé ở toa giường nằm khoang 4 chỗ.",
+      "phonetic": "Mne nuzhen odin bilet v kupeynyy vagon.",
+      "tips": "«Купейный вагон» là toa tàu có phòng khép kín thoải mái."
+    },
+    {
+      "id": "spk_3",
+      "text": "Какое у вас место: нижнее или верхнее?",
+      "meaning": "Chỗ nằm của bạn là giường tầng dưới hay tầng trên?",
+      "phonetic": "Kakoye u vas mesto: nizhneye ili verkhneye?",
+      "tips": "«Нижнее» (tầng dưới) luôn được khách đi tàu ưa chuộng hơn."
+    },
+    {
+      "id": "spk_4",
+      "text": "С какого пути и с какой платформы отходит состав?",
+      "meaning": "Đoàn tàu xuất phát từ đường ray số mấy và sân ga nào?",
+      "phonetic": "S kakogo puti i s kakoy platformy otkhodit sostav?",
+      "tips": "«Пути» là cách 2 bất quy tắc của danh từ giống đực «путь»."
+    },
+    {
+      "id": "spk_5",
+      "text": "Желаем вам приятной и лёгкой дороги!",
+      "meaning": "Chúc quý khách có một chuyến hành trình êm ái và vui vẻ!",
+      "phonetic": "Zhelayem vam priyatnoy i lyogkoy dorogi!",
+      "tips": "«Лёгкой» phát âm là /lyokhkay/ (biến âm «г» trước «к»)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Hỏi mua 1 vé tàu đi Saint Petersburg và hỏi số đường ray tàu xuất phát.",
+    "sampleGuidance": [
+      "Здравствуйте! Дайте билет до... (Xin chào! Cho tôi vé đi đến...)",
+      "Поезд отходит утром или вечером? (Tàu chạy buổi sáng hay tối?)",
+      "Сколько часов ехать? (Đi hết bao nhiêu tiếng?)",
+      "Где находится справочное бюро? (Bàn thông tin ở đâu?)"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": 10,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Почему я изучаю русский язык",
+  "writingTime": "20 phút",
+  "topic": "Lý do học tiếng Nga: Mục tiêu nghề nghiệp, văn hóa và du học",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) giải thích vì sao bạn chọn học tiếng Nga và mục tiêu tương lai.",
+  "requirements": [
+    "1. Bạn bắt đầu học tiếng Nga từ khi nào.",
+    "2. Nét đẹp của tiếng Nga (ngữ điệu, văn học, âm thanh).",
+    "3. Mục tiêu học tập (đi du học, làm việc với đối tác Nga, đi du lịch).",
+    "4. Quyết tâm rèn luyện mỗi ngày."
+  ],
+  "cliches": [
+    {
+      "ru": "Я изучаю русский язык уже...",
+      "vi": "Tôi học tiếng Nga đã được..."
+    },
+    {
+      "ru": "Русский язык очень богатый и красивый.",
+      "vi": "Tiếng Nga rất phong phú và tuyệt đẹp."
+    },
+    {
+      "ru": "Я хочу поехать учиться в Россию.",
+      "vi": "Tôi muốn sang Nga du học."
+    },
+    {
+      "ru": "Каждый день я учу новые слова.",
+      "vi": "Mỗi ngày tôi đều học từ mới."
+    }
+  ],
+  "modelAnswer": "Я изучаю русский язык уже шесть месяцев. Мне очень нравится, как звучит русская речь — она певучая и красивая. Я хочу хорошо знать русский язык, чтобы читать книги Пушкина и Чехова в оригинале. В будущем я мечтаю поехать учиться в Санкт-Петербург. Поэтому я каждый день усердно учу грамматику и новые слова!",
+  "modelWordCount": 50,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

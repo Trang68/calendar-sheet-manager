@@ -1,0 +1,56 @@
+{
+  "id": 16,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В университете: На занятиях",
+  "speakingTime": "15 phút",
+  "topic": "Học tập: Giảng đường, giờ học пара, kỳ thi và giảng viên",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Во сколько начинается наша первая пара?",
+      "meaning": "Tiết học đôi (ca học) đầu tiên của chúng ta bắt đầu lúc mấy giờ?",
+      "phonetic": "Vo skol'ko nachinayetsya nasha pervaya para?",
+      "tips": "«Пара» trong trường đại học Nga là một ca học gồm 2 tiết (90 phút)."
+    },
+    {
+      "id": "spk_2",
+      "text": "Сегодня у нас лекция по русской грамматике.",
+      "meaning": "Hôm nay chúng ta có buổi nghe giảng về ngữ pháp tiếng Nga.",
+      "phonetic": "Segodnya u nas lektsiya po russkoy grammatike.",
+      "tips": "«Лекция по + Cách 3»."
+    },
+    {
+      "id": "spk_3",
+      "text": "Профессор объясняет сложную тему очень понятно.",
+      "meaning": "Giáo sư giảng giải chủ đề phức tạp rất dễ hiểu.",
+      "phonetic": "Professor ob'yasnyayet slozhnuyu temu ochen' ponyatno.",
+      "tips": "Dấu cứng «ъ» trong «объясняет» ngắt âm rành mạch: /ab-yasnyayet/."
+    },
+    {
+      "id": "spk_4",
+      "text": "Я готовлюсь к зимней сессии и учу новые слова.",
+      "meaning": "Tôi đang chuẩn bị cho kỳ thi học kỳ mùa đông và học từ vựng mới.",
+      "phonetic": "Ya gotovlyus' k zimney sessii i uchu novyye slova.",
+      "tips": "«Сессия» là đợt thi học kỳ tập trung tại các trường Nga."
+    },
+    {
+      "id": "spk_5",
+      "text": "Желаю тебе успешно сдать все зачёты и экзамены!",
+      "meaning": "Chúc bạn vượt qua thành công tất cả các bài kiểm tra và kỳ thi!",
+      "phonetic": "Zhelayu tebe uspeshno sdat' vse zachyoty i ekzameny!",
+      "tips": "«Зачёт» là bài kiểm tra điều kiện đạt/không đạt (pass/fail)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Chia sẻ về một ngày học tập tại trường đại học của bạn bằng tiếng Nga.",
+    "sampleGuidance": [
+      "Каждый день у нас три пары... (Mỗi ngày chúng tôi học 3 ca...)",
+      "Мы внимательно слушаем преподавателя... (Chúng tôi chăm chú lắng nghe giảng viên...)",
+      "После пар мы идём в библиотеку... (Sau giờ học chúng tôi vào thư viện...)",
+      "Учиться трудно, но очень интересно! (Học tuy khó nhưng vô cùng thú vị!)"
+    ]
+  }
+}

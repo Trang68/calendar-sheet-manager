@@ -1,0 +1,57 @@
+{
+  "id": 16,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Моё любимое животное",
+  "writingTime": "20 phút",
+  "topic": "Thú cưng yêu quý: Miêu tả chú chó/mèo thông minh và đáng yêu",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn (35–60 từ) kể về con vật nuôi mà bạn yêu mến trong nhà.",
+  "requirements": [
+    "1. Tên con vật, loài (chó, mèo) và màu lông.",
+    "2. Thói quen hàng ngày và sự thông minh, hiền lành.",
+    "3. Bạn chăm sóc và chơi đùa với nó như thế nào.",
+    "4. Tình bạn gắn bó giữa bạn và con vật."
+  ],
+  "cliches": [
+    {
+      "ru": "У меня дома живёт пушистый кот.",
+      "vi": "Ở nhà tôi có một chú mèo lông xù sinh sống."
+    },
+    {
+      "ru": "Его зовут Барсик, ему два года.",
+      "vi": "Nó tên là Barsik, nó được 2 tuổi."
+    },
+    {
+      "ru": "У него белая шерсть и зелёные глаза.",
+      "vi": "Nó có bộ lông trắng và đôi mắt xanh lá."
+    },
+    {
+      "ru": "Он очень ласковый и умный.",
+      "vi": "Nó rất quấn chủ và thông minh."
+    }
+  ],
+  "modelAnswer": "У меня дома живёт замечательная собака. Её зовут Найда. Она белая с чёрными пятнами и очень добрыми глазами. Каждое утро и вечер я гуляю с ней в сквере около дома. Найда очень умная, она знает команды и любит играть с мячом. Когда я возвращаюсь из университета, она радостно встречает меня у двери!",
+  "modelWordCount": 51,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

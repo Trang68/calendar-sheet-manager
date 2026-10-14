@@ -1,0 +1,56 @@
+{
+  "id": 9,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В гостинице: Размещение и сервис",
+  "speakingTime": "15 phút",
+  "topic": "Lưu trú khách sạn: Nhận chìa khóa phòng, hỏi giờ ăn sáng và tiện ích",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Добрый день! У меня забронирован номер.",
+      "meaning": "Chào bạn! Tôi đã đặt trước một phòng.",
+      "phonetic": "Dobryy den'! U menya zabronirovan nomer.",
+      "tips": "«Забронирован» nhấn trọng âm ở âm tiết «-ни́-»."
+    },
+    {
+      "id": "spk_2",
+      "text": "Вот мой заграничный паспорт и подтверждение брони.",
+      "meaning": "Đây là hộ chiếu và giấy xác nhận đặt phòng của tôi.",
+      "phonetic": "Vot moy zagranichnyy pasport i podtverzhdeniye broni.",
+      "tips": "«Подтверждение» phát âm rõ /pattv'erzhd'en'iye/."
+    },
+    {
+      "id": "spk_3",
+      "text": "На каком этаже находится мой номер?",
+      "meaning": "Phòng của tôi nằm ở tầng mấy vậy?",
+      "phonetic": "Na kakom etazhe nakhoditsya moy nomer?",
+      "tips": "«На каком этаже» dùng cách 6 với giới từ «на»."
+    },
+    {
+      "id": "spk_4",
+      "text": "Во сколько начинается утренний завтрак?",
+      "meaning": "Bữa điểm tâm sáng bắt đầu từ mấy giờ?",
+      "phonetic": "Vo skol'ko nachinayetsya utrenniy zavtrak?",
+      "tips": "«Во сколько» là câu hỏi giờ giấc thông dụng nhất."
+    },
+    {
+      "id": "spk_5",
+      "text": "В номере есть кондиционер и фен?",
+      "meaning": "Trong phòng có máy lạnh và máy sấy tóc không?",
+      "phonetic": "V nomere yest' konditsioner i fen?",
+      "tips": "«Фен» phát âm âm /e/ mở nhẹ."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Thực hành đoạn hội thoại làm thủ tục check-in tại quầy lễ tân khách sạn Nga.",
+    "sampleGuidance": [
+      "Здравствуйте, я хочу зарегистрироваться... (Chào bạn, tôi muốn làm thủ tục nhận phòng...)",
+      "Мой номер одноместный... (Phòng của tôi là phòng đơn...)",
+      "Где находится лифт? (Thang máy nằm ở đâu?)",
+      "Спасибо за теплый приём! (Cảm ơn vì sự đón tiếp nồng hậu!)"
+    ]
+  }
+}

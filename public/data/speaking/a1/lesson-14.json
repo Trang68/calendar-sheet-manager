@@ -1,0 +1,56 @@
+{
+  "id": 14,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В банке: Финансы и карты",
+  "speakingTime": "15 phút",
+  "topic": "Ngân hàng: Mở thẻ thanh toán, rút tiền ATM và đổi tiền",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Здравствуйте! Я хочу открыть счёт в банке.",
+      "meaning": "Xin chào! Tôi muốn mở một tài khoản tại ngân hàng.",
+      "phonetic": "Zdravstvuyte! Ya khochu otkryt' schyot v banke.",
+      "tips": "«Открыть счёт» = mở tài khoản thanh toán."
+    },
+    {
+      "id": "spk_2",
+      "text": "Заполните, пожалуйста, это заявление и анкету.",
+      "meaning": "Làm ơn điền vào mẫu đơn đề nghị và tờ khai này.",
+      "phonetic": "Zapolnite, pozhaluysta, eto zayavleniye i anketu.",
+      "tips": "«Заявление» là đơn từ hành chính."
+    },
+    {
+      "id": "spk_3",
+      "text": "Где находится ближайший банкомат для снятия наличных?",
+      "meaning": "Cây ATM gần nhất để rút tiền mặt nằm ở đâu vậy?",
+      "phonetic": "Gde nakhoditsya blizhayshiy bankomat dlya snyatiya nalichnykh?",
+      "tips": "«Снятия наличных» = rút tiền mặt."
+    },
+    {
+      "id": "spk_4",
+      "text": "Комиссия за перевод денег отсутствует.",
+      "meaning": "Giao dịch chuyển tiền hoàn toàn miễn phí hoa hồng.",
+      "phonetic": "Komissiya za perevod deneg otsutstvuyet.",
+      "tips": "«Отсутствует» nuốt âm mềm, phát âm là /atsutstvuyet/."
+    },
+    {
+      "id": "spk_5",
+      "text": "Ваша карта будет готова через три рабочих дня.",
+      "meaning": "Thẻ của quý khách sẽ hoàn thành sau ba ngày làm việc.",
+      "phonetic": "Vasha karta budet gotova cherez tri rabochikh dnya.",
+      "tips": "«Рабочих дня» là cách 2 số ít sau số 3."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Đóng vai khách hàng hỏi nhân viên ngân hàng về cách rút tiền tại cây ATM và phí dịch vụ.",
+    "sampleGuidance": [
+      "Скажите, как работает этот банкомат? (Cho tôi hỏi máy ATM này hoạt động thế nào?)",
+      "Какая комиссия за снятие? (Phí rút tiền là bao nhiêu?)",
+      "Можно ли перевести деньги через телефон? (Có chuyển tiền qua điện thoại được không?)",
+      "Благодарю за консультацию! (Cảm ơn bạn đã tư vấn!)"
+    ]
+  }
+}

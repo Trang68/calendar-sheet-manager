@@ -1,0 +1,61 @@
+{
+  "id": 6,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Мой родной город",
+  "writingTime": "20 phút",
+  "topic": "Thành phố quê hương: Tên thành phố, danh lam thắng cảnh và thời tiết",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) giới thiệu về thành phố nơi bạn sinh ra và lớn lên.",
+  "requirements": [
+    "1. Tên thành phố và vị trí địa lý.",
+    "2. Những nét nổi bật (phố xá, công viên, hồ nước, viện bảo tàng).",
+    "3. Con người và nhịp sống nơi đây.",
+    "4. Bày tỏ tình yêu đối với quê hương."
+  ],
+  "cliches": [
+    {
+      "ru": "Я родился и живу в городе...",
+      "vi": "Tôi sinh ra và sống ở thành phố..."
+    },
+    {
+      "ru": "Это красивый и старинный город.",
+      "vi": "Đây là thành phố đẹp và cổ kính."
+    },
+    {
+      "ru": "Здесь много парков и музеев.",
+      "vi": "Ở đây có nhiều công viên và bảo tàng."
+    },
+    {
+      "ru": "Люди здесь добрые и приветливые.",
+      "vi": "Con người nơi đây tốt bụng và hiếu khách."
+    },
+    {
+      "ru": "Я горжусь своим городом.",
+      "vi": "Tôi tự hào về thành phố của mình."
+    }
+  ],
+  "modelAnswer": "Я живу в столице Вьетнама — в Ханое. Это древний, красивый и очень зелёный город. В центре города находится знаменитое озеро Возвращённого Меча, где любят гулять жители и туристы. В Ханое много интересных музеев, театров и уютных кафе. Люди здесь очень гостеприимные и дружелюбные. Я всей душой люблю свой родной город!",
+  "modelWordCount": 51,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

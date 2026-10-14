@@ -1,0 +1,310 @@
+{
+  "id": 11,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Один день студента: Мой распорядок дня",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Thời gian biểu trong ngày, Giờ giấc & Thói quen",
+  "vocabCategories": [
+    {
+      "title": "Buổi trong ngày & Động từ sinh hoạt",
+      "rows": [
+        {
+          "word": "просыпа́ться",
+          "gram": "động từ",
+          "meaning": "thức dậy",
+          "example": "Я просыпаюсь в семь часов."
+        },
+        {
+          "word": "за́втракать",
+          "gram": "động từ",
+          "meaning": "ăn sáng",
+          "example": "Мы завтракаем в восемь."
+        },
+        {
+          "word": "обе́дать",
+          "gram": "động từ",
+          "meaning": "ăn trưa",
+          "example": "В час дня я обедаю."
+        },
+        {
+          "word": "у́жинать",
+          "gram": "động từ",
+          "meaning": "ăn tối",
+          "example": "Вечером семья ужинает."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Обычно я просыпаюсь рано, в семь часов утра. Я умываюсь, делаю зарядку и завтракаю.",
+    "На завтрак я ем яичницу, бутерброд с сыром и пью горячий кофе с молоком.",
+    "В восемь часов я иду в университет. Занятия начинаются в половине девятого и заканчиваются в три часа дня.",
+    "После занятий я обедаю в студенческой столовой с друзьями. Еда там вкусная и недорогая.",
+    "Вечером я делаю домашнее задание, гуляю в парке, а в одиннадцать часов вечера ложусь спать."
+  ],
+  "questions": [
+    {
+      "id": "a1_r11_q1",
+      "lang": "ru",
+      "prompt": "Во сколько часов просыпается студент?",
+      "hint": "Xem giờ thức dậy.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В шесть часов"
+        },
+        {
+          "key": "B",
+          "text": "В семь часов"
+        },
+        {
+          "key": "C",
+          "text": "В восемь часов"
+        },
+        {
+          "key": "D",
+          "text": "В девять часов"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Обычно я просыпаюсь рано, в семь часов утра»."
+    },
+    {
+      "id": "a1_r11_q2",
+      "lang": "ru",
+      "prompt": "Что студент ест на завтрак?",
+      "hint": "Tìm món ăn sáng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Суп и рис"
+        },
+        {
+          "key": "B",
+          "text": "Яичницу, бутерброд с сыром и кофе"
+        },
+        {
+          "key": "C",
+          "text": "Фрукты и сок"
+        },
+        {
+          "key": "D",
+          "text": "Пиццу"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «На завтрак я ем яичницу, бутерброд с сыром и пью горячий кофе»."
+    },
+    {
+      "id": "a1_r11_q3",
+      "lang": "ru",
+      "prompt": "Где студент обедает после занятий?",
+      "hint": "Tìm nơi ăn trưa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В ресторане"
+        },
+        {
+          "key": "B",
+          "text": "Дома"
+        },
+        {
+          "key": "C",
+          "text": "В студенческой столовой"
+        },
+        {
+          "key": "D",
+          "text": "В парке"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Я обедаю в студенческой столовой с друзьями»."
+    },
+    {
+      "id": "a1_r11_q4",
+      "lang": "ru",
+      "prompt": "Во сколько часов заканчиваются занятия?",
+      "hint": "Xem giờ tan học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В два часа"
+        },
+        {
+          "key": "B",
+          "text": "В три часа дня"
+        },
+        {
+          "key": "C",
+          "text": "В пять часов"
+        },
+        {
+          "key": "D",
+          "text": "В шесть часов"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «...и заканчиваются в три часа дня»."
+    },
+    {
+      "id": "a1_r11_q5",
+      "lang": "ru",
+      "prompt": "Во сколько часов студент ложится спать?",
+      "hint": "Xem giờ đi ngủ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В десять часов"
+        },
+        {
+          "key": "B",
+          "text": "В одиннадцать часов вечера"
+        },
+        {
+          "key": "C",
+          "text": "В полночь"
+        },
+        {
+          "key": "D",
+          "text": "В девять часов"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «а в одиннадцать часов вечера ложусь спать»."
+    },
+    {
+      "id": "a1_r11_q6",
+      "lang": "vi",
+      "prompt": "Từ «зарядка» trong câu «делаю зарядку» nghĩa là gì?",
+      "hint": "Hoạt động vận động thể chất buổi sáng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sạc pin điện thoại"
+        },
+        {
+          "key": "B",
+          "text": "Tập thể dục buổi sáng"
+        },
+        {
+          "key": "C",
+          "text": "Dọn dẹp phòng"
+        },
+        {
+          "key": "D",
+          "text": "Học bài"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Делать зарядку» nghĩa là tập thể dục buổi sáng."
+    },
+    {
+      "id": "a1_r11_q7",
+      "lang": "vi",
+      "prompt": "Từ «столовая» có nghĩa là gì?",
+      "hint": "Nơi phục vụ đồ ăn trong trường học hoặc cơ quan.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Căng tin / Nhà ăn"
+        },
+        {
+          "key": "B",
+          "text": "Quán bar"
+        },
+        {
+          "key": "C",
+          "text": "Siêu thị"
+        },
+        {
+          "key": "D",
+          "text": "Phòng thí nghiệm"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Столовая» là nhà ăn / căng tin."
+    },
+    {
+      "id": "a1_r11_q8",
+      "lang": "vi",
+      "prompt": "Từ «бутерброд» bắt nguồn từ tiếng Đức nghĩa là món gì?",
+      "hint": "Bánh mì kẹp phổ biến ở Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bánh mì kẹp bơ / thịt / phô mai"
+        },
+        {
+          "key": "B",
+          "text": "Bánh bao hấp"
+        },
+        {
+          "key": "C",
+          "text": "Bánh ngọt sinh nhật"
+        },
+        {
+          "key": "D",
+          "text": "Bánh quy"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Бутерброд» là món bánh mì lát phết bơ hoặc kẹp xúc xích, phô mai."
+    },
+    {
+      "id": "a1_r11_q9",
+      "lang": "vi",
+      "prompt": "Từ «недорогая» miêu tả đặc điểm gì của đồ ăn căng tin?",
+      "hint": "Trái nghĩa với «дорогая» (đắt đỏ).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rất đắt đỏ"
+        },
+        {
+          "key": "B",
+          "text": "Giá cả phải chăng, bình dân"
+        },
+        {
+          "key": "C",
+          "text": "Khó ăn"
+        },
+        {
+          "key": "D",
+          "text": "Cay nồng"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Недорогой / недорогая» nghĩa là không đắt, giá rẻ/vừa túi tiền sinh viên."
+    },
+    {
+      "id": "a1_r11_q10",
+      "lang": "vi",
+      "prompt": "Cụm từ «половина девятого» chỉ mấy giờ?",
+      "hint": "Nửa tiếng trước 9 giờ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 giờ 30 phút"
+        },
+        {
+          "key": "B",
+          "text": "9 giờ 30 phút"
+        },
+        {
+          "key": "C",
+          "text": "7 giờ 30 phút"
+        },
+        {
+          "key": "D",
+          "text": "8 giờ đúng"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Половина девятого» nghĩa là 8 giờ rưỡi (nửa của giờ thứ 9)."
+    }
+  ]
+}

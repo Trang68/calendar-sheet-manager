@@ -3,10 +3,180 @@
     "id": 1,
     "file": "lesson-01.json",
     "title": "Письмо другу: Рассказ о себе",
-    "badge": "A1 Viết thư",
+    "badge": "A1 Viết luận",
     "writingTime": "20 phút",
-    "topic": "Viết thư thân mật - Kể về bản thân cho bạn bè",
-    "targetWordCount": "35 - 50 từ"
+    "topic": "Viết thư thân mật: Kể về bản thân, tên tuổi và quê quán",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Моя семья: Рассказ о близких",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Gia đình thân yêu: Miêu tả bố mẹ, nghề nghiệp và tình cảm gia đình",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Моя комната: Описание интерьера",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Căn phòng của tôi: Miêu tả đồ đạc, bàn học và vị trí các vật dụng",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Мой обычный день: Распорядок",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Một ngày thường nhật: Các mốc thời gian từ sáng đến tối",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "В кафе: Мой любимый обед",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Bữa ăn yêu thích: Món ăn, đồ uống và quán ăn ưa thích",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Мой родной город",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Thành phố quê hương: Tên thành phố, danh lam thắng cảnh và thời tiết",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Моё любимое время года",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Mùa yêu thích trong năm: Cảnh sắc thiên nhiên và hoạt động",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Мой лучший друг",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Người bạn thân nhất: Ngoại hình, tính cách và sở thích chung",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Как я провёл выходные",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Kỳ nghỉ cuối tuần: Những hoạt động thư giãn thú vị vừa qua",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Почему я изучаю русский язык",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Lý do học tiếng Nga: Mục tiêu nghề nghiệp, văn hóa và du học",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "В магазине продуктов: Список покупок",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Đi siêu thị: Danh sách thực phẩm và chuẩn bị bữa tiệc nhỏ",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Приглашение на день рождения",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Thư mời sinh nhật: Thời gian, địa điểm và nội dung buổi tiệc",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Письмо из отпуска: Привет с моря!",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Bưu thiếp du lịch: Kể về chuyến nghỉ mát tại biển và lời hỏi thăm",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Мой любимый праздник: Новый год",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Lễ hội Năm Mới: Phong tục trang trí cây thông và tặng quà",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "В библиотеке: Подготовка к занятиям",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Học tập tại thư viện: Mượn giáo trình và tra cứu tài liệu",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Моё любимое животное",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Thú cưng yêu quý: Miêu tả chú chó/mèo thông minh và đáng yêu",
+    "targetWordRange": "35-60 từ"
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Экскурсия по музею",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Chuyến tham quan bảo tàng: Những bức tranh và di tích lịch sử",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Спорт в моей жизни",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Thể thao và sức khỏe: Môn thể thao tập luyện và lợi ích",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Планы на летние каникулы",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Dự định kỳ nghỉ hè: Kế hoạch du lịch, nghỉ ngơi và học tập",
+    "targetWordRange": "40-65 từ"
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Итоговое сочинение: Мои успехи на уровне А1",
+    "badge": "A1 Viết luận",
+    "writingTime": "20 phút",
+    "topic": "Bài luận tổng kết A1: Chặng đường đã qua và mục tiêu chinh phục A2",
+    "targetWordRange": "45-70 từ"
   }
 ]
-

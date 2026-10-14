@@ -1,0 +1,56 @@
+{
+  "id": 10,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Мои увлечения и хобби",
+  "speakingTime": "15 phút",
+  "topic": "Sở thích cá nhân: Nghe nhạc, chơi đàn guitar, thể thao và du lịch",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Какое у тебя самое главное хобби?",
+      "meaning": "Sở thích lớn nhất của bạn là gì?",
+      "phonetic": "Kakoye u tebya samoye glavnoye khobbi?",
+      "tips": "«Хобби» là từ ngoại lai giống trung, không biến cách."
+    },
+    {
+      "id": "spk_2",
+      "text": "Я очень люблю играть на классической гитаре.",
+      "meaning": "Tôi rất thích chơi đàn guitar cổ điển.",
+      "phonetic": "Ya ochen' lyublyu igrat' na klassicheskoy gitare.",
+      "tips": "Chơi nhạc cụ dùng cấu trúc «играть на + Cách 6»."
+    },
+    {
+      "id": "spk_3",
+      "text": "По выходным я играю с друзьями в футбол.",
+      "meaning": "Vào cuối tuần tôi chơi bóng đá với bạn bè.",
+      "phonetic": "Po vykhodnym ya igrayu s druz'yami v futbol.",
+      "tips": "Chơi thể thao dùng cấu trúc «играть в + Cách 4»."
+    },
+    {
+      "id": "spk_4",
+      "text": "Моя подруга увлекается фотографией и живописью.",
+      "meaning": "Bạn gái tôi say mê môn nhiếp ảnh và hội họa.",
+      "phonetic": "Moya podruga uvlekayetsya fotografiyey i zhivopis'yu.",
+      "tips": "«Увлекается» đi với Cách 5 công cụ."
+    },
+    {
+      "id": "spk_5",
+      "text": "Путешествия по миру дарят мне море вдохновения.",
+      "meaning": "Những chuyến du lịch vòng quanh thế giới cho tôi vô vàn cảm hứng.",
+      "phonetic": "Puteshestviya po miru daryat mne more vdokhnoveniya.",
+      "tips": "«Вдохновения» có trọng âm ở âm tiết «-ве́-»."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Kể về 2 sở thích cá nhân mà bạn yêu thích nhất khi có thời gian rảnh rỗi.",
+    "sampleGuidance": [
+      "В свободное время я увлекаюсь... (Thời gian rảnh tôi say mê...)",
+      "Я люблю слушать русскую музыку... (Tôi thích nghe nhạc Nga...)",
+      "Это помогает мне отдохнуть... (Điều này giúp tôi thư giãn...)",
+      "А чем увлекаешься ты? (Còn bạn say mê điều gì?)"
+    ]
+  }
+}

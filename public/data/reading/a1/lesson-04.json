@@ -1,0 +1,333 @@
+{
+  "id": 4,
+  "level": "A1",
+  "skill": "reading",
+  "title": "В аудитории: Где находится?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "10 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Vị trí không gian: Ở đâu, Bên phải, Bên trái, Ở giữa",
+  "vocabCategories": [
+    {
+      "title": "Phó từ chỉ vị trí (Наречия места)",
+      "rows": [
+        {
+          "word": "где",
+          "gram": "từ hỏi",
+          "meaning": "ở đâu?",
+          "example": "Где находится аудитория?"
+        },
+        {
+          "word": "здесь / тут",
+          "gram": "phó từ",
+          "meaning": "ở đây",
+          "example": "Мы сидим здесь."
+        },
+        {
+          "word": "там",
+          "gram": "phó từ",
+          "meaning": "ở đằng kia, ở đó",
+          "example": "Там стоит доска."
+        },
+        {
+          "word": "спра́ва / сле́ва",
+          "gram": "phó từ",
+          "meaning": "bên phải / bên trái",
+          "example": "Справа окно, а слева дверь."
+        }
+      ]
+    },
+    {
+      "title": "Đồ đạc trong phòng học (Аудитория)",
+      "rows": [
+        {
+          "word": "доска́",
+          "gram": "danh từ giống cái",
+          "meaning": "cái bảng",
+          "example": "На доске написано слово."
+        },
+        {
+          "word": "дверь",
+          "gram": "danh từ giống cái",
+          "meaning": "cửa ra vào",
+          "example": "Дверь закрыта."
+        },
+        {
+          "word": "па́рта",
+          "gram": "danh từ giống cái",
+          "meaning": "bàn học sinh",
+          "example": "Это моя парта."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Это наша аудитория номер десять. Она большая, чистая и светлая.",
+    "Прямо висит большая доска. На доске учитель пишет новые слова.",
+    "Слева находится окно, а справа — дверь. Около окна стоит учительский стол.",
+    "В центре стоят парты. Здесь занимаются студенты.",
+    "Где сидит Анна? Анна сидит впереди. А где сидит Антон? Антон сидит сзади."
+  ],
+  "questions": [
+    {
+      "id": "a1_r4_q1",
+      "lang": "ru",
+      "prompt": "Какая аудитория номер десять?",
+      "hint": "Tìm các tính từ miêu tả phòng học ở câu đầu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Маленькая и тёмная"
+        },
+        {
+          "key": "B",
+          "text": "Большая, чистая и светлая"
+        },
+        {
+          "key": "C",
+          "text": "Старая"
+        },
+        {
+          "key": "D",
+          "text": "Шумная"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Она большая, чистая и светлая»."
+    },
+    {
+      "id": "a1_r4_q2",
+      "lang": "ru",
+      "prompt": "Что висит прямо?",
+      "hint": "Đọc câu 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Часы"
+        },
+        {
+          "key": "B",
+          "text": "Карта"
+        },
+        {
+          "key": "C",
+          "text": "Большая доска"
+        },
+        {
+          "key": "D",
+          "text": "Картина"
+        }
+      ],
+      "ans": "C",
+      "explain": "Đoạn 2 nêu rõ: «Прямо висит большая доска» (ngay phía trước treo một cái bảng lớn)."
+    },
+    {
+      "id": "a1_r4_q3",
+      "lang": "ru",
+      "prompt": "Где сидит Анна?",
+      "hint": "Xem vị trí ngồi của Anna.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Сзади"
+        },
+        {
+          "key": "B",
+          "text": "Впереди"
+        },
+        {
+          "key": "C",
+          "text": "Справа"
+        },
+        {
+          "key": "D",
+          "text": "Около двери"
+        }
+      ],
+      "ans": "B",
+      "explain": "Đoạn cuối viết: «Анна сидит впереди» (Anna ngồi phía trước)."
+    },
+    {
+      "id": "a1_r4_q4",
+      "lang": "ru",
+      "prompt": "Что находится слева в аудитории?",
+      "hint": "Xem từ «слева».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Дверь"
+        },
+        {
+          "key": "B",
+          "text": "Окно"
+        },
+        {
+          "key": "C",
+          "text": "Доска"
+        },
+        {
+          "key": "D",
+          "text": "Шкаф"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Слева находится окно, а справа — дверь»."
+    },
+    {
+      "id": "a1_r4_q5",
+      "lang": "ru",
+      "prompt": "Что делает учитель на доске?",
+      "hint": "Tìm hành động của giáo viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Рисует картину"
+        },
+        {
+          "key": "B",
+          "text": "Пишет новые слова"
+        },
+        {
+          "key": "C",
+          "text": "Читает книгу"
+        },
+        {
+          "key": "D",
+          "text": "Отдыхает"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «На доске учитель пишет новые слова» (thầy giáo viết từ mới lên bảng)."
+    },
+    {
+      "id": "a1_r4_q6",
+      "lang": "vi",
+      "prompt": "Từ «справа» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Ngược nghĩa với «слева» (bên trái).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ở bên phải"
+        },
+        {
+          "key": "B",
+          "text": "Ở bên trái"
+        },
+        {
+          "key": "C",
+          "text": "Ở đằng sau"
+        },
+        {
+          "key": "D",
+          "text": "Ở phía trên"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Справа» nghĩa là ở phía bên phải."
+    },
+    {
+      "id": "a1_r4_q7",
+      "lang": "vi",
+      "prompt": "Từ «в центре» có nghĩa là gì?",
+      "hint": "Vị trí chính giữa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ở góc phòng"
+        },
+        {
+          "key": "B",
+          "text": "Ở ngoài hiên"
+        },
+        {
+          "key": "C",
+          "text": "Ở trung tâm, ở giữa"
+        },
+        {
+          "key": "D",
+          "text": "Ở tầng hai"
+        }
+      ],
+      "ans": "C",
+      "explain": "«В центре» nghĩa là ở vị trí trung tâm, chính giữa."
+    },
+    {
+      "id": "a1_r4_q8",
+      "lang": "vi",
+      "prompt": "Từ «парта» dùng để chỉ loại bàn nào?",
+      "hint": "Bàn dùng trong trường học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bàn ăn cơm"
+        },
+        {
+          "key": "B",
+          "text": "Bàn làm việc giám đốc"
+        },
+        {
+          "key": "C",
+          "text": "Bàn học sinh / sinh viên"
+        },
+        {
+          "key": "D",
+          "text": "Bàn trà phòng khách"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Парта» là bàn học sinh/sinh viên trong lớp học."
+    },
+    {
+      "id": "a1_r4_q9",
+      "lang": "vi",
+      "prompt": "Anton ngồi ở vị trí nào trong lớp?",
+      "hint": "Đọc câu: «Антон сидит сзади».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ngồi ở dãy bàn đầu"
+        },
+        {
+          "key": "B",
+          "text": "Ngồi ở phía sau (сзади)"
+        },
+        {
+          "key": "C",
+          "text": "Ngồi cạnh cửa sổ"
+        },
+        {
+          "key": "D",
+          "text": "Ngồi cạnh giáo viên"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Сзади» nghĩa là ở phía sau."
+    },
+    {
+      "id": "a1_r4_q10",
+      "lang": "vi",
+      "prompt": "Từ «чистая» miêu tả đặc điểm gì của phòng học?",
+      "hint": "Phòng học không bị bẩn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rộng lớn"
+        },
+        {
+          "key": "B",
+          "text": "Sạch sẽ"
+        },
+        {
+          "key": "C",
+          "text": "Yên tĩnh"
+        },
+        {
+          "key": "D",
+          "text": "Ấm áp"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Чистый / чистая» nghĩa là sạch sẽ."
+    }
+  ]
+}

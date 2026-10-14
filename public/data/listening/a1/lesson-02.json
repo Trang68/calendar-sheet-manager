@@ -1,0 +1,264 @@
+{
+  "id": 2,
+  "title": "Давайте познакомимся: Как вас зовут?",
+  "listeningTime": "10 phút",
+  "topic": "Làm quen, hỏi tên tuổi, quốc tịch & ngành nghề",
+  "dialogue": [
+    {
+      "speaker": "Антон",
+      "text": "Здравствуйте! Меня зовут Антон. А как вас зовут?"
+    },
+    {
+      "speaker": "Мария",
+      "text": "Очень приятно, Антон! Меня зовут Мария."
+    },
+    {
+      "speaker": "Антон",
+      "text": "Мария, вы студентка?"
+    },
+    {
+      "speaker": "Мария",
+      "text": "Да, я студентка первого курса. Я изучаю русскую филологию. А вы?"
+    },
+    {
+      "speaker": "Антон",
+      "text": "Я тоже студент, но изучаю экономику и бизнес."
+    },
+    {
+      "speaker": "Мария",
+      "text": "Откуда вы приехали, Антон?"
+    },
+    {
+      "speaker": "Антон",
+      "text": "Я из Санкт-Петербурга. А вы откуда?"
+    },
+    {
+      "speaker": "Мария",
+      "text": "Я приехала из Казани. Москва — очень красивый город!"
+    },
+    {
+      "speaker": "Антон",
+      "text": "Да, согласен. Рад знакомству, Мария!"
+    },
+    {
+      "speaker": "Мария",
+      "text": "Я тоже очень рада!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe kỹ câu sau và gõ lại chính xác bằng tiếng Nga:",
+    "targetText": "Меня зовут Мария, я студентка первого курса.",
+    "hint": "Gợi ý: Chú ý viết hoa tên riêng «Мария» và đuôi «первого курса»."
+  },
+  "questions": [
+    {
+      "id": "l2_q1",
+      "lang": "ru",
+      "prompt": "Как зовут девушку в диалоге?",
+      "hint": "Tên bạn nữ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Анна."
+        },
+        {
+          "key": "B",
+          "text": "Мария."
+        },
+        {
+          "key": "C",
+          "text": "Елена."
+        },
+        {
+          "key": "D",
+          "text": "Ольга."
+        }
+      ],
+      "ans": "B",
+      "explain": "Cô ấy nói: «Меня зовут Мария»."
+    },
+    {
+      "id": "l2_q2",
+      "lang": "ru",
+      "prompt": "Что изучает Антон?",
+      "hint": "Ngành học của Anton.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Филологию."
+        },
+        {
+          "key": "B",
+          "text": "Экономику и бизнес."
+        },
+        {
+          "key": "C",
+          "text": "Медицину."
+        },
+        {
+          "key": "D",
+          "text": "Историю."
+        }
+      ],
+      "ans": "B",
+      "explain": "Anton nói: «Я тоже студент, но изучаю экономику и бизнес»."
+    },
+    {
+      "id": "l2_q3",
+      "lang": "ru",
+      "prompt": "Откуда приехал Антон?",
+      "hint": "Quê hương của Anton.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Из Москвы."
+        },
+        {
+          "key": "B",
+          "text": "Из Санкт-Петербурга."
+        },
+        {
+          "key": "C",
+          "text": "Из Казани."
+        },
+        {
+          "key": "D",
+          "text": "Из Владивостока."
+        }
+      ],
+      "ans": "B",
+      "explain": "Anton: «Я из Санкт-Петербурга»."
+    },
+    {
+      "id": "l2_q4",
+      "lang": "ru",
+      "prompt": "Откуда приехала Мария?",
+      "hint": "Thành phố của Maria.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Из Казани."
+        },
+        {
+          "key": "B",
+          "text": "Из Минска."
+        },
+        {
+          "key": "C",
+          "text": "Из Самары."
+        },
+        {
+          "key": "D",
+          "text": "Из Сочи."
+        }
+      ],
+      "ans": "A",
+      "explain": "Maria: «Я приехала из Казани»."
+    },
+    {
+      "id": "l2_q5",
+      "lang": "vi",
+      "prompt": "Cả Anton và Maria hiện nay đang làm gì?",
+      "hint": "Tình trạng học tập/làm việc của hai người.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cả hai đều đã đi làm bác sĩ."
+        },
+        {
+          "key": "B",
+          "text": "Cả hai đều là sinh viên đại học."
+        },
+        {
+          "key": "C",
+          "text": "Một người là giáo viên, một người là sinh viên."
+        },
+        {
+          "key": "D",
+          "text": "Họ là học sinh tiểu học."
+        }
+      ],
+      "ans": "B",
+      "explain": "Maria là sinh viên năm nhất ngữ văn, Anton là sinh viên kinh tế."
+    },
+    {
+      "id": "l2_q6",
+      "lang": "vi",
+      "prompt": "Câu nói «Рад знакомству!» biểu thị điều gì?",
+      "hint": "Thái độ trong giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rất vui được làm quen."
+        },
+        {
+          "key": "B",
+          "text": "Tạm biệt nhé."
+        },
+        {
+          "key": "C",
+          "text": "Xin thứ lỗi."
+        },
+        {
+          "key": "D",
+          "text": "Cảm ơn nhiều."
+        }
+      ],
+      "ans": "A",
+      "explain": "«Рад знакомству» = Rất vui được làm quen."
+    },
+    {
+      "id": "l2_q7",
+      "lang": "vi",
+      "prompt": "Hiện tại cuộc đối thoại này đang diễn ra ở thành phố nào?",
+      "hint": "Hai bạn đang khen thành phố nào đẹp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hà Nội."
+        },
+        {
+          "key": "B",
+          "text": "Moskva."
+        },
+        {
+          "key": "C",
+          "text": "Kazan."
+        },
+        {
+          "key": "D",
+          "text": "Peterburg."
+        }
+      ],
+      "ans": "B",
+      "explain": "Maria nhận xét: «Москва — очень красивый город!»."
+    },
+    {
+      "id": "l2_q8",
+      "lang": "vi",
+      "prompt": "Maria là sinh viên năm mấy?",
+      "hint": "Nghe từ «первого курса».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Năm nhất."
+        },
+        {
+          "key": "B",
+          "text": "Năm hai."
+        },
+        {
+          "key": "C",
+          "text": "Năm ba."
+        },
+        {
+          "key": "D",
+          "text": "Năm cuối."
+        }
+      ],
+      "ans": "A",
+      "explain": "«первого курса» = năm thứ nhất."
+    }
+  ]
+}

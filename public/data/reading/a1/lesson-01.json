@@ -2,190 +2,338 @@
   "id": 1,
   "level": "A1",
   "skill": "reading",
-  "title": "Знакомьтесь: Моя семья и мой дом",
-  "readingTime": "15 phút",
-  "topic": "Gia đình, Ngôi nhà & Nghề nghiệp",
+  "title": "Здравствуйте! Давайте познакомимся",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "10 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Chào hỏi, Tên gọi & Đại từ nhân xưng",
   "vocabCategories": [
     {
-      "title": "Danh từ chỉ người & nghề nghiệp (Существительные)",
+      "title": "Từ ngữ chào hỏi & Xã giao (Приветствия)",
       "rows": [
-        {"word": "семья́", "gram": "danh từ giống cái", "meaning": "gia đình", "example": "У меня большая и дружная семья."},
-        {"word": "роди́тели", "gram": "danh từ số nhiều", "meaning": "bố mẹ, phụ huynh", "example": "Мои родители живут в Москве."},
-        {"word": "врач", "gram": "danh từ giống đực", "meaning": "bác sĩ", "example": "Мой папа работает врачом в больнице."},
-        {"word": "учи́тельница", "gram": "danh từ giống cái", "meaning": "cô giáo, nữ giáo viên", "example": "Моя мама — учительница русского языка."}
+        {
+          "word": "Здра́вствуйте",
+          "gram": "lời chào lịch sự",
+          "meaning": "Xin chào (trang trọng)",
+          "example": "Здравствуйте, меня зовут Антон."
+        },
+        {
+          "word": "Приве́т",
+          "gram": "lời chào thân mật",
+          "meaning": "Chào bạn, chào cậu",
+          "example": "Привет, Анна!"
+        },
+        {
+          "word": "Спаси́бо",
+          "gram": "từ cảm ơn",
+          "meaning": "Cảm ơn",
+          "example": "Большое спасибо за помощь."
+        },
+        {
+          "word": "До свида́ния",
+          "gram": "lời chào tạm biệt",
+          "meaning": "Tạm biệt (hẹn gặp lại)",
+          "example": "До свидания, до завтра!"
+        }
       ]
     },
     {
-      "title": "Từ vựng về nhà cửa & đồ đạc (Дом и квартира)",
+      "title": "Đại từ nhân xưng (Личные местоимения)",
       "rows": [
-        {"word": "кварти́ра", "gram": "danh từ giống cái", "meaning": "căn hộ", "example": "Наша квартира находится на третьем этаже."},
-        {"word": "ко́мната", "gram": "danh từ giống cái", "meaning": "căn phòng", "example": "В квартире есть три светлые комнаты."},
-        {"word": "у́ютный", "gram": "tính từ", "meaning": "ấm cúng, dễ chịu", "example": "Это очень уютная и тёплая комната."},
-        {"word": "гости́ная", "gram": "danh từ giống cái", "meaning": "phòng khách", "example": "Вечером вся семья собирается в гостиной."}
-      ]
-    },
-    {
-      "title": "Động từ A1 thông dụng (Глаголы)",
-      "rows": [
-        {"word": "жить", "gram": "động từ chia nhóm I", "meaning": "sống, sinh sống", "example": "Мы живём в красивом городе."},
-        {"word": "рабо́тать", "gram": "động từ chia nhóm I", "meaning": "làm việc", "example": "Папа работает каждый день."},
-        {"word": "отдыха́ть", "gram": "động từ chia nhóm I", "meaning": "nghỉ ngơi", "example": "В воскресенье мы отдыхаем дома."}
+        {
+          "word": "я",
+          "gram": "ngôi 1 số ít",
+          "meaning": "tôi, mình",
+          "example": "Я студент."
+        },
+        {
+          "word": "ты",
+          "gram": "ngôi 2 số ít",
+          "meaning": "bạn, cậu",
+          "example": "Ты студент?"
+        },
+        {
+          "word": "он / она́",
+          "gram": "ngôi 3 số ít",
+          "meaning": "anh ấy / cô ấy",
+          "example": "Он врач, а она преподаватель."
+        },
+        {
+          "word": "мы / вы / они́",
+          "gram": "đại từ số nhiều",
+          "meaning": "chúng tôi / các bạn / họ",
+          "example": "Мы учимся вместе."
+        }
       ]
     }
   ],
   "readingText": [
-    "Здравствуйте! Меня зовут Иван, мне двадцать лет. Я студент и учусь в университете в Москве.",
-    "У меня есть семья: папа, мама và em gái Anna. Наша семья очень дружная.",
-    "Мой папа — врач. Он работает в большой городской больнице и помогает людям.",
-    "Моя мама — учительница. Она работает в школе và dạy học sinh môn tiếng Nga.",
-    "Моя сестра Анна ещё маленькая, ей десять лет. Она учится в четвёртом классе và thích vẽ tranh.",
-    "Мы живём в центре города. Наша квартира большая, светлая и очень уютная.",
-    "В квартире три комнаты: гостиная, спальня родителей и наша детская комната.",
-    "В гостиной стоит большой диван, телевизор и книжный шкаф. Мы любим читать книги.",
-    "У нас также есть кот. Его зовут Барсик. Он белый, пушистый и очень весёлый.",
-    "По выходным мы любим собираться вместе, пить чай и смотреть интересные фильмы."
+    "Здравствуйте! Давайте познакомимся. Меня зовут Антон. Я студент.",
+    "А это Анна. Она тоже студентка. Мы учимся в университете.",
+    "Вот наш преподаватель. Его зовут Виктор Сергеевич. Он очень добрый и умный человек.",
+    "— Привет, Антон! Как дела?\n— Привет, Анна! Спасибо, всё хорошо. А у тебя?\n— Отлично, спасибо!",
+    "Приятно с вами познакомиться! До свидания!"
   ],
   "questions": [
     {
       "id": "a1_r1_q1",
       "lang": "ru",
-      "prompt": "Кто такой Иван и сколько ему лет?",
-      "hint": "Đọc kỹ câu đầu tiên của bài đọc.",
+      "prompt": "Как зовут студента в тексте?",
+      "hint": "Đọc câu thứ 2 của bài.",
       "options": [
-        {"key": "A", "text": "Он врач, ему тридцать лет."},
-        {"key": "B", "text": "Он студент, ему двадцать лет."},
-        {"key": "C", "text": "Он учитель, ему двадцать пять лет."},
-        {"key": "D", "text": "Он школьник, ему десять лет."}
+        {
+          "key": "A",
+          "text": "Виктор"
+        },
+        {
+          "key": "B",
+          "text": "Антон"
+        },
+        {
+          "key": "C",
+          "text": "Иван"
+        },
+        {
+          "key": "D",
+          "text": "Максим"
+        }
       ],
       "ans": "B",
-      "explain": "Đoạn 1 nêu rõ: «Меня зовут Иван, мне двадцать лет. Я студент...» (Tôi tên là Ivan, tôi 20 tuổi. Tôi là sinh viên)."
+      "explain": "Bài viết: «Меня зовут Антон. Я студент»."
     },
     {
       "id": "a1_r1_q2",
       "lang": "ru",
-      "prompt": "Кем работает отец Ивана?",
-      "hint": "Tìm thông tin về bố (папа).",
+      "prompt": "Кто такая Анна?",
+      "hint": "Tìm thông tin về Anna ở đoạn 2.",
       "options": [
-        {"key": "A", "text": "Он работает учителем в школе."},
-        {"key": "B", "text": "Он работает инженером на заводе."},
-        {"key": "C", "text": "Он работает врачом в больнице."},
-        {"key": "D", "text": "Он не работает, он на пенсии."}
+        {
+          "key": "A",
+          "text": "Она врач."
+        },
+        {
+          "key": "B",
+          "text": "Она преподаватель."
+        },
+        {
+          "key": "C",
+          "text": "Она студентка."
+        },
+        {
+          "key": "D",
+          "text": "Она школьница."
+        }
       ],
       "ans": "C",
-      "explain": "Đoạn 3 viết: «Мой папа — врач. Он работает в большой городской больнице...»."
+      "explain": "Đoạn 2 nêu rõ: «А это Анна. Она тоже студентка»."
     },
     {
       "id": "a1_r1_q3",
       "lang": "ru",
-      "prompt": "Что преподаёт мама Ивана в школе?",
-      "hint": "Tìm môn học mà mẹ dạy.",
+      "prompt": "Кем работает Виктор Сергеевич?",
+      "hint": "Tìm nghề nghiệp của Viktor Sergeevich.",
       "options": [
-        {"key": "A", "text": "Русский язык."},
-        {"key": "B", "text": "Математику."},
-        {"key": "C", "text": "Историю."},
-        {"key": "D", "text": "Английский язык."}
+        {
+          "key": "A",
+          "text": "Он студент."
+        },
+        {
+          "key": "B",
+          "text": "Он наш преподаватель."
+        },
+        {
+          "key": "C",
+          "text": "Он инженер."
+        },
+        {
+          "key": "D",
+          "text": "Он журналист."
+        }
       ],
-      "ans": "A",
-      "explain": "Đoạn 4 viết: «Моя мама — учительница... dạy môn tiếng Nga (русский язык)»."
+      "ans": "B",
+      "explain": "Đoạn 3 viết: «Вот наш преподаватель. Его зовут Виктор Сергеевич»."
     },
     {
       "id": "a1_r1_q4",
       "lang": "ru",
-      "prompt": "Сколько комнат в квартире семьи?",
-      "hint": "Đếm số phòng được liệt kê trong bài.",
+      "prompt": "Что отвечает Антон на вопрос «Как дела?»",
+      "hint": "Xem đoạn đối thoại ngắn.",
       "options": [
-        {"key": "A", "text": "Две комнаты."},
-        {"key": "B", "text": "Три комнаты."},
-        {"key": "C", "text": "Четыре комнаты."},
-        {"key": "D", "text": "Пять комнат."}
+        {
+          "key": "A",
+          "text": "Плохо."
+        },
+        {
+          "key": "B",
+          "text": "Ничего."
+        },
+        {
+          "key": "C",
+          "text": "Спасибо, всё хорошо."
+        },
+        {
+          "key": "D",
+          "text": "Не знаю."
+        }
       ],
-      "ans": "B",
-      "explain": "Đoạn 7 khẳng định: «В квартире три комнаты: гостиная, спальня родителей и наша детская комната»."
+      "ans": "C",
+      "explain": "Anton đáp: «Спасибо, всё хорошо» (Cảm ơn, mọi chuyện đều tốt)."
     },
     {
       "id": "a1_r1_q5",
       "lang": "ru",
-      "prompt": "Как зовут домашнего кота в семье?",
-      "hint": "Tìm tên của chú mèo.",
+      "prompt": "Какое слово используется для вежливого прощания?",
+      "hint": "Từ chào tạm biệt lịch sự ở cuối bài.",
       "options": [
-        {"key": "A", "text": "Мурзик."},
-        {"key": "B", "text": "Рыжик."},
-        {"key": "C", "text": "Барсик."},
-        {"key": "D", "text": "Васька."}
+        {
+          "key": "A",
+          "text": "Привет"
+        },
+        {
+          "key": "B",
+          "text": "Здравствуйте"
+        },
+        {
+          "key": "C",
+          "text": "Пока"
+        },
+        {
+          "key": "D",
+          "text": "До свидания"
+        }
       ],
-      "ans": "C",
-      "explain": "Đoạn 9 viết: «У нас также есть кот. Его зовут Барсик»."
+      "ans": "D",
+      "explain": "«До свидания» là lời chào tạm biệt lịch sự, trang trọng."
     },
     {
       "id": "a1_r1_q6",
       "lang": "vi",
-      "prompt": "Em gái của Ivan tên là gì và bao nhiêu tuổi?",
-      "hint": "Đọc đoạn giới thiệu về người em gái (сестра).",
+      "prompt": "Cụm từ «Давайте познакомимся» có nghĩa là gì?",
+      "hint": "Động từ làm quen trong tiếng Nga.",
       "options": [
-        {"key": "A", "text": "Tên là Maria, 12 tuổi."},
-        {"key": "B", "text": "Tên là Anna, 10 tuổi."},
-        {"key": "C", "text": "Tên là Elena, 8 tuổi."},
-        {"key": "D", "text": "Tên là Olga, 10 tuổi."}
+        {
+          "key": "A",
+          "text": "Chúng ta hãy cùng ăn cơm nhé."
+        },
+        {
+          "key": "B",
+          "text": "Hãy cùng làm quen nhé."
+        },
+        {
+          "key": "C",
+          "text": "Hẹn gặp lại bạn ngày mai."
+        },
+        {
+          "key": "D",
+          "text": "Xin chào buổi sáng."
+        }
       ],
       "ans": "B",
-      "explain": "Đoạn 5 viết: «Моя сестра Анна ещё маленькая, ей десять лет»."
+      "explain": "«Давайте познакомимся» nghĩa là 'Chúng ta hãy cùng làm quen nhé'."
     },
     {
       "id": "a1_r1_q7",
       "lang": "vi",
-      "prompt": "Căn hộ của gia đình Ivan nằm ở đâu?",
-      "hint": "Tìm từ chỉ vị trí (центр).",
+      "prompt": "Từ «тоже» trong câu «Она тоже студентка» mang nghĩa gì?",
+      "hint": "Phó từ chỉ sự tương đồng.",
       "options": [
-        {"key": "A", "text": "Ở ngoại ô thành phố."},
-        {"key": "B", "text": "Ở gần bờ sông."},
-        {"key": "C", "text": "Ở trung tâm thành phố."},
-        {"key": "D", "text": "Ở một ngôi làng nhỏ."}
+        {
+          "key": "A",
+          "text": "Cũng, cũng vậy"
+        },
+        {
+          "key": "B",
+          "text": "Không phải"
+        },
+        {
+          "key": "C",
+          "text": "Rất nhiều"
+        },
+        {
+          "key": "D",
+          "text": "Ở đây"
+        }
       ],
-      "ans": "C",
-      "explain": "Đoạn 6 viết: «Мы живём в центре города» (Chúng tôi sống ở trung tâm thành phố)."
+      "ans": "A",
+      "explain": "«Тоже» nghĩa là 'cũng' (Cô ấy cũng là sinh viên nữ)."
     },
     {
       "id": "a1_r1_q8",
       "lang": "vi",
-      "prompt": "Từ nào đồng nghĩa với từ «уютный» trong bài đọc?",
-      "hint": "Tính từ miêu tả căn phòng ấm áp, dễ chịu.",
+      "prompt": "Đại từ nhân xưng nào chỉ ngôi 'chúng tôi / chúng ta'?",
+      "hint": "Xem bảng từ vựng đại từ nhân xưng.",
       "options": [
-        {"key": "A", "text": "Комфортный, удобный (tiện nghi, ấm cúng)"},
-        {"key": "B", "text": "Холодный (lạnh lẽo)"},
-        {"key": "C", "text": "Шумный (ồn ào)"},
-        {"key": "D", "text": "Тёмный (tối tăm)"}
+        {
+          "key": "A",
+          "text": "Вы"
+        },
+        {
+          "key": "B",
+          "text": "Они"
+        },
+        {
+          "key": "C",
+          "text": "Мы"
+        },
+        {
+          "key": "D",
+          "text": "Ты"
+        }
       ],
-      "ans": "A",
-      "explain": "«Уютный» có nghĩa là ấm cúng, dễ chịu, đồng nghĩa với «комфортный»."
+      "ans": "C",
+      "explain": "«Мы» là đại từ ngôi thứ nhất số nhiều (chúng tôi, chúng ta)."
     },
     {
       "id": "a1_r1_q9",
       "lang": "vi",
-      "prompt": "Gia đình Ivan thường làm gì vào các ngày cuối tuần (по выходным)?",
-      "hint": "Đọc câu cuối cùng của bài văn.",
+      "prompt": "Trong tiếng Nga, câu trả lời lịch sự khi được người khác giúp đỡ là gì?",
+      "hint": "Từ cảm ơn.",
       "options": [
-        {"key": "A", "text": "Đi du lịch xa và leo núi."},
-        {"key": "B", "text": "Tập trung cùng nhau, uống trà và xem phim."},
-        {"key": "C", "text": "Đến bệnh viện thăm bố làm việc."},
-        {"key": "D", "text": "Đi vẽ tranh ngoài công viên."}
+        {
+          "key": "A",
+          "text": "Пожалуйста"
+        },
+        {
+          "key": "B",
+          "text": "Спасибо"
+        },
+        {
+          "key": "C",
+          "text": "Привет"
+        },
+        {
+          "key": "D",
+          "text": "Пока"
+        }
       ],
       "ans": "B",
-      "explain": "Đoạn 10 viết: «По выходным мы любим собираться вместе, пить чай и смотреть интересные фильмы»."
+      "explain": "«Спасибо» nghĩa là cảm ơn."
     },
     {
       "id": "a1_r1_q10",
       "lang": "vi",
-      "prompt": "Trong phòng khách (гостиная) của căn hộ có những đồ vật gì?",
-      "hint": "Tìm các đồ vật được nhắc đến trong đoạn 8.",
+      "prompt": "Anton và Anna học tập ở đâu?",
+      "hint": "Tìm từ chỉ trường đại học.",
       "options": [
-        {"key": "A", "text": "Giường ngủ, bàn học và máy tính."},
-        {"key": "B", "text": "Tủ lạnh, bếp ga và bàn ăn."},
-        {"key": "C", "text": "Ghế sofa lớn, tivi và tủ sách."},
-        {"key": "D", "text": "Đàn piano và máy tập thể dục."}
+        {
+          "key": "A",
+          "text": "Ở trường phổ thông"
+        },
+        {
+          "key": "B",
+          "text": "Ở nhà"
+        },
+        {
+          "key": "C",
+          "text": "Ở trường đại học (университет)"
+        },
+        {
+          "key": "D",
+          "text": "Ở thư viện"
+        }
       ],
       "ans": "C",
-      "explain": "Đoạn 8 nêu: «В гостиной стоит большой диван (ghế sofa), телевизор (tivi) и книжный шкаф (tủ sách)»."
+      "explain": "Bài viết: «Мы учимся в университете» (Chúng tôi học ở trường đại học)."
     }
   ]
 }
-

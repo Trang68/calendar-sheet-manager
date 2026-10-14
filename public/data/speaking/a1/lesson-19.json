@@ -1,0 +1,56 @@
+{
+  "id": 19,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Праздники в России: Новый год и Масленица",
+  "speakingTime": "15 phút",
+  "topic": "Lễ hội truyền thống: Đón năm mới, tiễn mùa đông Maslenitsa",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Новый год — самый любимый праздник в России.",
+      "meaning": "Năm Mới là ngày lễ được yêu thích nhất ở nước Nga.",
+      "phonetic": "Novyy god — samyy lyubimyy prazdnik v Rossii.",
+      "tips": "«Праздник» nuốt chữ «д», phát âm là /prazn'ik/."
+    },
+    {
+      "id": "spk_2",
+      "text": "Мы украшаем ёлку яркими стеклянными игрушками.",
+      "meaning": "Chúng tôi trang hoàng cây thông bằng những quả cầu thủy tinh rực rỡ.",
+      "phonetic": "My ukrashayem yolku yarkimi steklyannymi igrushkami.",
+      "tips": "«Украшаем» nhấn trọng âm ở âm tiết thứ 3."
+    },
+    {
+      "id": "spk_3",
+      "text": "На Масленицу все пекут золотистые круглые блины.",
+      "meaning": "Vào lễ Maslenitsa mọi người đều rán những chiếc bánh xèo blini tròn vàng óng.",
+      "phonetic": "Na Maslenitsu vse pekut zolotistyye kruglyye bliny.",
+      "tips": "«Блины» tượng trưng cho vầng thái dương ấm áp."
+    },
+    {
+      "id": "spk_4",
+      "text": "Дети с радостью получают новогодние подарки.",
+      "meaning": "Trẻ nhỏ vui sướng nhận những phần quà mừng năm mới.",
+      "phonetic": "Deti s radost'yu poluchayut novogodniye podarki.",
+      "tips": "«С радостью» mang ý nghĩa ngập tràn hân hoan."
+    },
+    {
+      "id": "spk_5",
+      "text": "Поздравляю вас от всей души с праздником!",
+      "meaning": "Tôi xin gửi lời chúc mừng ngày lễ chân thành nhất tự đáy lòng!",
+      "phonetic": "Pozdravlyayu vas ot vsey dushi s prazdnikom!",
+      "tips": "Lời chúc trang trọng và ấm cúng nhất của người Nga."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Kể về một ngày lễ truyền thống mà bạn thích nhất (Tết cổ truyền hoặc Tết Năm Mới).",
+    "sampleGuidance": [
+      "Мой любимый праздник — это Новый год... (Lễ hội yêu thích của tôi là Năm Mới...)",
+      "В этот день мы собираемся семьёй... (Vào ngày này cả gia đình tụ họp...)",
+      "Мы готовим вкусные традиционные блюда... (Chúng tôi nấu những món ăn truyền thống ngon...)",
+      "Все дарят друг другу подарки... (Mọi người tặng quà cho nhau...)"
+    ]
+  }
+}

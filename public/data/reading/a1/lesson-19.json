@@ -1,0 +1,310 @@
+{
+  "id": 19,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Праздники в России: Новый год и традиции",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Văn hóa, Lễ hội & Lời chúc mừng (Поздравляю!)",
+  "vocabCategories": [
+    {
+      "title": "Ngày lễ & Lời chúc mừng (Праздники)",
+      "rows": [
+        {
+          "word": "пра́здник",
+          "gram": "danh từ giống đực",
+          "meaning": "ngày lễ, ngày hội",
+          "example": "Сегодня большой праздник."
+        },
+        {
+          "word": "Но́вый год",
+          "gram": "danh từ",
+          "meaning": "Năm Mới",
+          "example": "С Новым годом!"
+        },
+        {
+          "word": "пода́рок",
+          "gram": "danh từ giống đực",
+          "meaning": "món quà",
+          "example": "Дед Мороз дарит подарки."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ",
+          "meaning": "chúc mừng",
+          "example": "Поздравляю с праздником!"
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Самый любимый và kỳ diệu nhất trong năm ở Nga chính là ngày Tết Năm Mới (Новый год).",
+    "В конце декабря на улицах и площадях зажигаются праздничные огни. В каждом доме наряжают пушистую ёлку.",
+    "Главные новогодние персонажи — это добрый Дед Мороз и его внучка Снегурочка. Они дарят детям подарки.",
+    "В полночь тридцать первого декабря бьют куранты на Спасской башне Кремля. Все поднимают бокалы и говорят: «С Новым годом! С новым счастьем!»",
+    "Люди желают друг другу здоровья, любви, радости и успехов в новом году."
+  ],
+  "questions": [
+    {
+      "id": "a1_r19_q1",
+      "lang": "ru",
+      "prompt": "Какой праздник в России самый любимый?",
+      "hint": "Đọc câu đầu tiên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Пасха"
+        },
+        {
+          "key": "B",
+          "text": "Новый год"
+        },
+        {
+          "key": "C",
+          "text": "День труда"
+        },
+        {
+          "key": "D",
+          "text": "День знаний"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Самый любимый праздник в России — это Новый год»."
+    },
+    {
+      "id": "a1_r19_q2",
+      "lang": "ru",
+      "prompt": "Что наряжают в каждом доме перед праздником?",
+      "hint": "Cây thông Noel trang trí trong nhà.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Берёзу"
+        },
+        {
+          "key": "B",
+          "text": "Пушистую ёлку"
+        },
+        {
+          "key": "C",
+          "text": "Цветы"
+        },
+        {
+          "key": "D",
+          "text": "Окно"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «В каждом доме наряжают пушистую ёлку» (cây thông Noel)."
+    },
+    {
+      "id": "a1_r19_q3",
+      "lang": "ru",
+      "prompt": "Кто дарит детям подарки на Новый год в России?",
+      "hint": "Hai nhân vật huyền thoại mùa đông Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Санта-Клаус"
+        },
+        {
+          "key": "B",
+          "text": "Дед Мороз и Снегурочка"
+        },
+        {
+          "key": "C",
+          "text": "Учитель"
+        },
+        {
+          "key": "D",
+          "text": "Соседи"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Дед Мороз и его внучка Снегурочка»."
+    },
+    {
+      "id": "a1_r19_q4",
+      "lang": "ru",
+      "prompt": "Где бьют главные куранты страны в полночь?",
+      "hint": "Chiếc đồng hồ nổi tiếng trên tháp Điện Kremlin.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На Спасской башне Кремля"
+        },
+        {
+          "key": "B",
+          "text": "На вокзале"
+        },
+        {
+          "key": "C",
+          "text": "В университете"
+        },
+        {
+          "key": "D",
+          "text": "На стадионе"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «бьют куранты на Спасской башне Кремля»."
+    },
+    {
+      "id": "a1_r19_q5",
+      "lang": "ru",
+      "prompt": "Какая традиционная фраза звучит в момент наступления Нового года?",
+      "hint": "Lời chúc đón năm mới quen thuộc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«С Новым годом! С новым счастьем!»"
+        },
+        {
+          "key": "B",
+          "text": "«Спокойной ночи!»"
+        },
+        {
+          "key": "C",
+          "text": "«До свидания!»"
+        },
+        {
+          "key": "D",
+          "text": "«Приятного аппетита!»"
+        }
+      ],
+      "ans": "A",
+      "explain": "Người Nga cùng chúc tụng: «С Новым годом! С новым счастьем!»."
+    },
+    {
+      "id": "a1_r19_q6",
+      "lang": "vi",
+      "prompt": "Nhân vật «Дед Мороз» trong văn hóa Nga là ai?",
+      "hint": "Ông già mang quà đến cho trẻ em đêm giao thừa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thần Mùa Xuân"
+        },
+        {
+          "key": "B",
+          "text": "Ông Già Tuyết (Băng Giá)"
+        },
+        {
+          "key": "C",
+          "text": "Vị thần rừng"
+        },
+        {
+          "key": "D",
+          "text": "Chú hề"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Дед Мороз» là Ông Già Tuyết (ông già Băng giá) biểu tượng của năm mới Nga."
+    },
+    {
+      "id": "a1_r19_q7",
+      "lang": "vi",
+      "prompt": "Nhân vật «Снегурочка» là ai đối với Ded Moroz?",
+      "hint": "Xem từ: внучка Снегурочка.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con gái"
+        },
+        {
+          "key": "B",
+          "text": "Cháu gái (Cô bé Tuyết)"
+        },
+        {
+          "key": "C",
+          "text": "Người vợ"
+        },
+        {
+          "key": "D",
+          "text": "Chị gái"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Внучка Снегурочка» là cháu gái của Ông Già Tuyết (Cô bé Tuyết)."
+    },
+    {
+      "id": "a1_r19_q8",
+      "lang": "vi",
+      "prompt": "Từ «ёлка» trong dịp năm mới chỉ đồ vật gì?",
+      "hint": "Cây xanh lá kim trang trí đèn sao.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cây đào"
+        },
+        {
+          "key": "B",
+          "text": "Cây thông Noel"
+        },
+        {
+          "key": "C",
+          "text": "Cây mai"
+        },
+        {
+          "key": "D",
+          "text": "Cây quất"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Ёлка» là cây thông mừng năm mới."
+    },
+    {
+      "id": "a1_r19_q9",
+      "lang": "vi",
+      "prompt": "Chuông đồng hồ Kremlin («куранты») điểm bao nhiêu tiếng vào lúc giao thừa?",
+      "hint": "Đồng hồ điểm đúng 12 giờ đêm.",
+      "options": [
+        {
+          "key": "A",
+          "text": "6 tiếng"
+        },
+        {
+          "key": "B",
+          "text": "10 tiếng"
+        },
+        {
+          "key": "C",
+          "text": "12 tiếng chuông"
+        },
+        {
+          "key": "D",
+          "text": "24 tiếng"
+        }
+      ],
+      "ans": "C",
+      "explain": "Đồng hồ Spasskaya ngân vang 12 tiếng chuông chào đón thời khắc chuyển giao năm mới."
+    },
+    {
+      "id": "a1_r19_q10",
+      "lang": "vi",
+      "prompt": "Để chúc mừng ai đó nhân dịp ngày lễ, ta dùng cấu trúc nào?",
+      "hint": "Động từ chúc mừng: Поздравлять с...",
+      "options": [
+        {
+          "key": "A",
+          "text": "Поздравляю с праздником!"
+        },
+        {
+          "key": "B",
+          "text": "Спасибо за праздник!"
+        },
+        {
+          "key": "C",
+          "text": "Извините за праздник!"
+        },
+        {
+          "key": "D",
+          "text": "Где праздник?"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Поздравляю с...» là cấu trúc chúc mừng chuẩn trong tiếng Nga."
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "id": 3,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Мой, моя, моё: Чей это предмет?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "10 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Giống của danh từ & Đại từ sở hữu",
+  "vocabCategories": [
+    {
+      "title": "Đại từ sở hữu 'Của tôi' (Местоимения 'Мой')",
+      "rows": [
+        {
+          "word": "мой",
+          "gram": "giống đực",
+          "meaning": "của tôi (đi với từ giống đực)",
+          "example": "Это мой паспорт, мой друг."
+        },
+        {
+          "word": "моя́",
+          "gram": "giống cái",
+          "meaning": "của tôi (đi với từ giống cái)",
+          "example": "Это моя мама, моя комната."
+        },
+        {
+          "word": "моё",
+          "gram": "giống trung",
+          "meaning": "của tôi (đi với từ giống trung)",
+          "example": "Это моё окно, моё пальто."
+        },
+        {
+          "word": "мои́",
+          "gram": "số nhiều",
+          "meaning": "của tôi (đi với danh từ số nhiều)",
+          "example": "Это мои книги, мои друзья."
+        }
+      ]
+    },
+    {
+      "title": "Từ hỏi về sở hữu (Чей? Чья? Чьё?)",
+      "rows": [
+        {
+          "word": "Чей?",
+          "gram": "giống đực",
+          "meaning": "Của ai? (hỏi đồ giống đực)",
+          "example": "Чей это карандаш?"
+        },
+        {
+          "word": "Чья?",
+          "gram": "giống cái",
+          "meaning": "Của ai? (hỏi đồ giống cái)",
+          "example": "Чья это сумка?"
+        },
+        {
+          "word": "Чьё?",
+          "gram": "giống trung",
+          "meaning": "Của ai? (hỏi đồ giống trung)",
+          "example": "Чьё это письмо?"
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "— Чей это рюкзак?\n— Это мой рюкзак. Он синий и удобный.",
+    "— А чья это ручка на столе?\n— Это моя ручка. Спасибо!",
+    "— Чьё это яблоко?\n— Это твоё яблоко. Кушай на здоровье!",
+    "Вот мой дом. Вот моя комната. В комнате стоит мой стол и моё кресло.",
+    "А это наши фотографии. Это мои родители и моя сестра."
+  ],
+  "questions": [
+    {
+      "id": "a1_r3_q1",
+      "lang": "ru",
+      "prompt": "Какой рюкзак у студента?",
+      "hint": "Tìm tính từ miêu tả chiếc ba lô ở đoạn 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Красный и большой"
+        },
+        {
+          "key": "B",
+          "text": "Синий и удобный"
+        },
+        {
+          "key": "C",
+          "text": "Старый"
+        },
+        {
+          "key": "D",
+          "text": "Маленький"
+        }
+      ],
+      "ans": "B",
+      "explain": "Đoạn 1 nêu: «Это мой рюкзак. Он синий и удобный» (màu xanh dương và tiện lợi)."
+    },
+    {
+      "id": "a1_r3_q2",
+      "lang": "ru",
+      "prompt": "Какое местоимение согласуется со словом «комната»?",
+      "hint": "«Комната» kết thúc bằng đuôi -а (giống cái).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мой"
+        },
+        {
+          "key": "B",
+          "text": "Моё"
+        },
+        {
+          "key": "C",
+          "text": "Моя"
+        },
+        {
+          "key": "D",
+          "text": "Мои"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Комната» là danh từ giống cái nên đi với «моя» (моя комната)."
+    },
+    {
+      "id": "a1_r3_q3",
+      "lang": "ru",
+      "prompt": "Слово «яблоко» относится к какому роду?",
+      "hint": "Từ kết thúc bằng đuôi -о.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мужской род (giống đực)"
+        },
+        {
+          "key": "B",
+          "text": "Женский род (giống cái)"
+        },
+        {
+          "key": "C",
+          "text": "Средний род (giống trung)"
+        },
+        {
+          "key": "D",
+          "text": "Множественное число"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Яблоко» (quả táo) kết thúc bằng -о là danh từ giống trung (чьё это яблоко? - моё яблоко)."
+    },
+    {
+      "id": "a1_r3_q4",
+      "lang": "ru",
+      "prompt": "Вопрос «Чья это ручка?» задаётся потому, что «ручка»:",
+      "hint": "Xác định giống của từ «ручка».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мужского рода"
+        },
+        {
+          "key": "B",
+          "text": "Женского рода"
+        },
+        {
+          "key": "C",
+          "text": "Среднего рода"
+        },
+        {
+          "key": "D",
+          "text": "Во множественном числе"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Ручка» là danh từ giống cái (đuôi -а) nên dùng từ hỏi «Чья?»."
+    },
+    {
+      "id": "a1_r3_q5",
+      "lang": "ru",
+      "prompt": "Что стоит в комнате?",
+      "hint": "Đọc câu: «В комнате стоит...»",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мой стол и моё кресло"
+        },
+        {
+          "key": "B",
+          "text": "Телевизор и диван"
+        },
+        {
+          "key": "C",
+          "text": "Шкаф и кровать"
+        },
+        {
+          "key": "D",
+          "text": "Холодильник"
+        }
+      ],
+      "ans": "A",
+      "explain": "Đoạn 4 viết: «В комнате стоит мой стол и моё кресло»."
+    },
+    {
+      "id": "a1_r3_q6",
+      "lang": "vi",
+      "prompt": "Trong tiếng Nga, danh từ kết thúc bằng phụ âm cứng (ví dụ: стол, дом, брат) thuộc giống gì?",
+      "hint": "Quy tắc cơ bản nhận biết giống danh từ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giống đực (Мужской род)"
+        },
+        {
+          "key": "B",
+          "text": "Giống cái (Женский род)"
+        },
+        {
+          "key": "C",
+          "text": "Giống trung (Средний род)"
+        },
+        {
+          "key": "D",
+          "text": "Không xác định được"
+        }
+      ],
+      "ans": "A",
+      "explain": "Hầu hết danh từ tận cùng bằng phụ âm là danh từ giống đực."
+    },
+    {
+      "id": "a1_r3_q7",
+      "lang": "vi",
+      "prompt": "Để nói 'Bức thư của tôi' (письмо - giống trung), ta dùng từ nào?",
+      "hint": "Đại từ sở hữu ngôi tôi giống trung.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мой письмо"
+        },
+        {
+          "key": "B",
+          "text": "Моя письмо"
+        },
+        {
+          "key": "C",
+          "text": "Моё письмо"
+        },
+        {
+          "key": "D",
+          "text": "Мои письмо"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Письмо» là giống trung nên đi với «моё» $\\rightarrow$ «моё письмо»."
+    },
+    {
+      "id": "a1_r3_q8",
+      "lang": "vi",
+      "prompt": "Từ «кресло» trong câu «моё кресло» có nghĩa là gì?",
+      "hint": "Đồ nội thất để ngồi có chỗ để tay.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cái ghế bành, ghế tựa"
+        },
+        {
+          "key": "B",
+          "text": "Cái giường ngủ"
+        },
+        {
+          "key": "C",
+          "text": "Cái bàn làm việc"
+        },
+        {
+          "key": "D",
+          "text": "Tủ đựng quần áo"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Кресло» là ghế bành/ghế tựa (danh từ giống trung)."
+    },
+    {
+      "id": "a1_r3_q9",
+      "lang": "vi",
+      "prompt": "Đại từ sở hữu 'của bạn' (ngôi thân mật giống đực) trong tiếng Nga là gì?",
+      "hint": "Tương đương với 'your'.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Твой"
+        },
+        {
+          "key": "B",
+          "text": "Твоя"
+        },
+        {
+          "key": "C",
+          "text": "Твоё"
+        },
+        {
+          "key": "D",
+          "text": "Твои"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Твой» là đại từ sở hữu giống đực chỉ 'của bạn' (ví dụ: твой друг)."
+    },
+    {
+      "id": "a1_r3_q10",
+      "lang": "vi",
+      "prompt": "Từ hỏi «Чьи?» dùng khi nào?",
+      "hint": "Hỏi về quyền sở hữu số nhiều.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hỏi đồ vật giống đực số ít"
+        },
+        {
+          "key": "B",
+          "text": "Hỏi đồ vật giống cái số ít"
+        },
+        {
+          "key": "C",
+          "text": "Hỏi đồ vật giống trung số ít"
+        },
+        {
+          "key": "D",
+          "text": "Hỏi đồ vật số nhiều (Của ai?)"
+        }
+      ],
+      "ans": "D",
+      "explain": "«Чьи?» là từ hỏi 'của ai' dùng cho danh từ số nhiều (ví dụ: Чьи это книги?)."
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "id": 14,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Мой друг и его увлечения",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Sở thích cá nhân, Thể thao & Giải trí",
+  "vocabCategories": [
+    {
+      "title": "Sở thích & Thể thao (Хобби и спорт)",
+      "rows": [
+        {
+          "word": "игра́ть в футбо́л",
+          "gram": "cụm từ",
+          "meaning": "chơi đá bóng",
+          "example": "Мальчики играют в футбол."
+        },
+        {
+          "word": "слу́шать му́зыку",
+          "gram": "cụm từ",
+          "meaning": "nghe nhạc",
+          "example": "Я люблю слушать рок."
+        },
+        {
+          "word": "смотре́ть фи́льмы",
+          "gram": "cụm từ",
+          "meaning": "xem phim",
+          "example": "Мы смотрим кино."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ",
+          "meaning": "chụp ảnh",
+          "example": "Он любит фотографировать природу."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "У меня есть замечательный друг. Его зовут Денис. Мы дружим уже три года.",
+    "Денис — очень активный и спортивный парень. Он обожает спорт и три раза в неделю играет в футбол.",
+    "Кроме спорта, Денис отлично играет на гитаре và hát những bài hát tiếng Nga rất hay.",
+    "По субботам мы часто ходим на стадион болеть за нашу любимую футбольную команду.",
+    "Дружба — это самое ценное, что есть у человека. Я рад, что у меня есть такой верный друг!"
+  ],
+  "questions": [
+    {
+      "id": "a1_r14_q1",
+      "lang": "ru",
+      "prompt": "Как зовут друга автора?",
+      "hint": "Tìm tên người bạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Иван"
+        },
+        {
+          "key": "B",
+          "text": "Денис"
+        },
+        {
+          "key": "C",
+          "text": "Антон"
+        },
+        {
+          "key": "D",
+          "text": "Сергей"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Его зовут Денис»."
+    },
+    {
+      "id": "a1_r14_q2",
+      "lang": "ru",
+      "prompt": "Сколько лет они дружат?",
+      "hint": "Tìm thời gian kết bạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Один год"
+        },
+        {
+          "key": "B",
+          "text": "Два года"
+        },
+        {
+          "key": "C",
+          "text": "Три года"
+        },
+        {
+          "key": "D",
+          "text": "Пять лет"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Мы дружим уже три года»."
+    },
+    {
+      "id": "a1_r14_q3",
+      "lang": "ru",
+      "prompt": "Каким спортом занимается Денис три раза в неделю?",
+      "hint": "Tìm môn thể thao.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Плаванием"
+        },
+        {
+          "key": "B",
+          "text": "Футболом"
+        },
+        {
+          "key": "C",
+          "text": "Теннисом"
+        },
+        {
+          "key": "D",
+          "text": "Баскетболом"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «...и три раза в неделю играет в футбол»."
+    },
+    {
+      "id": "a1_r14_q4",
+      "lang": "ru",
+      "prompt": "На каком музыкальном инструменте играет Денис?",
+      "hint": "Nhạc cụ Denis chơi giỏi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На пианино"
+        },
+        {
+          "key": "B",
+          "text": "На скрипке"
+        },
+        {
+          "key": "C",
+          "text": "На гитаре"
+        },
+        {
+          "key": "D",
+          "text": "На барабанах"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Денис отлично играет на гитаре»."
+    },
+    {
+      "id": "a1_r14_q5",
+      "lang": "ru",
+      "prompt": "Куда ходят друзья по субботам?",
+      "hint": "Tìm địa điểm thể thao.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В кино"
+        },
+        {
+          "key": "B",
+          "text": "В музей"
+        },
+        {
+          "key": "C",
+          "text": "На стадион"
+        },
+        {
+          "key": "D",
+          "text": "В клуб"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «По субботам мы часто ходим на стадион» (sân vận động)."
+    },
+    {
+      "id": "a1_r14_q6",
+      "lang": "vi",
+      "prompt": "Từ «стадион» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Nơi diễn ra các trận thi đấu thể thao.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sân vận động"
+        },
+        {
+          "key": "B",
+          "text": "Phòng tập gym"
+        },
+        {
+          "key": "C",
+          "text": "Nhà ga xe lửa"
+        },
+        {
+          "key": "D",
+          "text": "Bến xe buýt"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Стадион» nghĩa là sân vận động."
+    },
+    {
+      "id": "a1_r14_q7",
+      "lang": "vi",
+      "prompt": "Động từ «болеть за команду» có nghĩa là gì?",
+      "hint": "Hành động của cổ động viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bị ốm vì thời tiết"
+        },
+        {
+          "key": "B",
+          "text": "Cổ vũ, ủng hộ cho đội bóng"
+        },
+        {
+          "key": "C",
+          "text": "Mua vé xem bóng đá"
+        },
+        {
+          "key": "D",
+          "text": "Làm huấn luyện viên"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Болеть за...» nghĩa là cổ vũ, làm fan hâm mộ của đội bóng."
+    },
+    {
+      "id": "a1_r14_q8",
+      "lang": "vi",
+      "prompt": "Khi nói 'chơi đàn guitar', giới từ nào đi với 'играть'?",
+      "hint": "Xem cụm từ: играть ... гитаре.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Играть в гитару"
+        },
+        {
+          "key": "B",
+          "text": "Играть на гитаре"
+        },
+        {
+          "key": "C",
+          "text": "Играть с гитарой"
+        },
+        {
+          "key": "D",
+          "text": "Играть за гитару"
+        }
+      ],
+      "ans": "B",
+      "explain": "Chơi nhạc cụ trong tiếng Nga dùng: «играть НА + Cách 6» (играть на гитаре, на пианино). Chơi thể thao dùng «играть В + Cách 4» (играть в футбол)."
+    },
+    {
+      "id": "a1_r14_q9",
+      "lang": "vi",
+      "prompt": "Từ «верный друг» có nghĩa là gì?",
+      "hint": "Phẩm chất tốt đẹp của người bạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Người bạn giàu có"
+        },
+        {
+          "key": "B",
+          "text": "Người bạn trung thành, thủy chung"
+        },
+        {
+          "key": "C",
+          "text": "Người bạn hài hước"
+        },
+        {
+          "key": "D",
+          "text": "Người bạn mới quen"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Верный друг» là người bạn trung thành, đáng tin cậy."
+    },
+    {
+      "id": "a1_r14_q10",
+      "lang": "vi",
+      "prompt": "Từ «дружба» mang ý nghĩa gì?",
+      "hint": "Tình cảm giữa những người bạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tình bạn"
+        },
+        {
+          "key": "B",
+          "text": "Tình yêu"
+        },
+        {
+          "key": "C",
+          "text": "Tình đồng nghiệp"
+        },
+        {
+          "key": "D",
+          "text": "Gia đình"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Дружба» nghĩa là tình bạn."
+    }
+  ]
+}

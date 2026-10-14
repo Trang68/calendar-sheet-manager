@@ -1,0 +1,57 @@
+{
+  "id": 11,
+  "level": "A1",
+  "skill": "writing",
+  "title": "В магазине продуктов: Список покупок",
+  "writingTime": "20 phút",
+  "topic": "Đi siêu thị: Danh sách thực phẩm và chuẩn bị bữa tiệc nhỏ",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn ngắn (35–60 từ) kể về việc bạn đi siêu thị mua sắm thực phẩm cho gia đình.",
+  "requirements": [
+    "1. Nêu lý do đi mua sắm (chuẩn bị bữa tối, sinh nhật).",
+    "2. Liệt kê các thực phẩm đã mua (sữa, bánh mì, phô mai, rau quả).",
+    "3. Cách thanh toán (tiền mặt hay thẻ ngân hàng).",
+    "4. Nhận xét về chất lượng hàng hóa."
+  ],
+  "cliches": [
+    {
+      "ru": "Сегодня я пошёл в большой супермаркет.",
+      "vi": "Hôm nay tôi đã đến một siêu thị lớn."
+    },
+    {
+      "ru": "Мне нужно было купить продукты на ужин.",
+      "vi": "Tôi cần mua thực phẩm cho bữa tối."
+    },
+    {
+      "ru": "Я купил молоко, свежий хлеб и сыр.",
+      "vi": "Tôi đã mua sữa, bánh mì tươi và phô mai."
+    },
+    {
+      "ru": "Я оплатил покупки картой на кассе.",
+      "vi": "Tôi thanh toán các món đồ bằng thẻ tại quầy thu ngân."
+    }
+  ],
+  "modelAnswer": "Сегодня днём я пошёл в большой супермаркет около дома. Мне нужно было купить продукты для праздничного ужина. Я выбрал свежий белый хлеб, сыр, молоко, спелые яблоки и килограмм куриного мяса. На кассе я быстро расплатился банковской картой. Все продукты оказались очень свежими и качественными. Вечером мы приготовили вкусный ужин!",
+  "modelWordCount": 49,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "id": 18,
+  "level": "A1",
+  "skill": "listening",
+  "title": "Телефонный разговор: Приглашение в кино",
+  "listeningTime": "10 phút",
+  "topic": "Gọi điện thoại mời bạn bè đi xem phim chiếu rạp",
+  "dialogue": [
+    {
+      "speaker": "Артём",
+      "text": "Алло! Привет, Даша! Это Артём."
+    },
+    {
+      "speaker": "Даша",
+      "text": "Привет, Артём! Рада тебя слышать. Что нового?"
+    },
+    {
+      "speaker": "Артём",
+      "text": "Ты свободна в пятницу вечером? В кинотеатре идёт новый фильм."
+    },
+    {
+      "speaker": "Даша",
+      "text": "В пятницу я свободна после шести часов. А какой это фильм?"
+    },
+    {
+      "speaker": "Артём",
+      "text": "Это очень интересная фантастическая комедия."
+    },
+    {
+      "speaker": "Даша",
+      "text": "Здорово! Во сколько начинается сеанс?"
+    },
+    {
+      "speaker": "Артём",
+      "text": "Сеанс в семь вечера. Давай встретимся у входа в кинотеатр в без двадцати семь."
+    },
+    {
+      "speaker": "Даша",
+      "text": "Договорились! До встречи в пятницу!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "Сеанс начинается в семь вечера у входа в кинотеатр.",
+    "hint": "Gợi ý: Từ «сеанс» và giờ «в семь вечера»."
+  },
+  "questions": [
+    {
+      "id": "l18_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В пятницу вечером."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «В пятницу вечером.»."
+    },
+    {
+      "id": "l18_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "Фантастическая комедия."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «Фантастическая комедия.»."
+    },
+    {
+      "id": "l18_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "В 19:00 (в 7 вечера)."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «В 19:00 (в 7 вечера).»."
+    },
+    {
+      "id": "l18_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "В 18:40 (без двадцати семь)."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «В 18:40 (без двадцати семь).»."
+    },
+    {
+      "id": "l18_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gọi điện rủ bạn gái đi xem phim."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Gọi điện rủ bạn gái đi xem phim.."
+    },
+    {
+      "id": "l18_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Rảnh rỗi sau 18 giờ."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Rảnh rỗi sau 18 giờ.."
+    },
+    {
+      "id": "l18_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Phim hài viễn tưởng."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Phim hài viễn tưởng.."
+    },
+    {
+      "id": "l18_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Hẹn gặp lúc 18h40 trước rạp."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Hẹn gặp lúc 18h40 trước rạp.."
+    }
+  ]
+}

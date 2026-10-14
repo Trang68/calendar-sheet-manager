@@ -1,0 +1,264 @@
+{
+  "id": 5,
+  "title": "В аптеке: Лекарства и здоровье",
+  "listeningTime": "10 phút",
+  "topic": "Mua thuốc cảm sốt & hỏi thăm tình trạng sức khỏe",
+  "dialogue": [
+    {
+      "speaker": "Фармацевт",
+      "text": "Здравствуйте! Что у вас случилось?"
+    },
+    {
+      "speaker": "Пациент",
+      "text": "Здравствуйте! У меня сильно болит голова и болит горло."
+    },
+    {
+      "speaker": "Фармацевт",
+      "text": "У вас есть температура?"
+    },
+    {
+      "speaker": "Пациент",
+      "text": "Да, утром была тридцать семь и пять (37,5)."
+    },
+    {
+      "speaker": "Фармацевт",
+      "text": "Понятно, это простуда. Вот эффективные таблетки от боли и спрей для горла."
+    },
+    {
+      "speaker": "Пациент",
+      "text": "Как нужно принимать эти таблетки?"
+    },
+    {
+      "speaker": "Фармацевт",
+      "text": "Принимайте по одной таблетке два раза в день после еды."
+    },
+    {
+      "speaker": "Пациент",
+      "text": "Спасибо! И дайте ещё витамин С, пожалуйста."
+    },
+    {
+      "speaker": "Фармацевт",
+      "text": "Вот витамин С. Пейте много горячего чая и выздоравливайте!"
+    },
+    {
+      "speaker": "Пациент",
+      "text": "Большое вам спасибо за помощь!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe kỹ liều lượng uống thuốc và gõ lại:",
+    "targetText": "Принимайте по одной таблетке два раза в день после еды.",
+    "hint": "Gợi ý: Chú ý giới từ «после еды» (sau khi ăn) và «два раза в день»."
+  },
+  "questions": [
+    {
+      "id": "l5_q1",
+      "lang": "ru",
+      "prompt": "Что болит у пациента?",
+      "hint": "Triệu chứng của bệnh nhân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Болит нога и рука."
+        },
+        {
+          "key": "B",
+          "text": "Болит голова и горло."
+        },
+        {
+          "key": "C",
+          "text": "Болит живот."
+        },
+        {
+          "key": "D",
+          "text": "Болит зуб."
+        }
+      ],
+      "ans": "B",
+      "explain": "Пациент: «У меня сильно болит голова и болит горло»."
+    },
+    {
+      "id": "l5_q2",
+      "lang": "ru",
+      "prompt": "Какая температура была у пациента утром?",
+      "hint": "Nhiệt độ cơ thể.",
+      "options": [
+        {
+          "key": "A",
+          "text": "36,6."
+        },
+        {
+          "key": "B",
+          "text": "37,5."
+        },
+        {
+          "key": "C",
+          "text": "38,5."
+        },
+        {
+          "key": "D",
+          "text": "39,0."
+        }
+      ],
+      "ans": "B",
+      "explain": "Пациент: «утром была тридцать семь и пять (37,5)»."
+    },
+    {
+      "id": "l5_q3",
+      "lang": "ru",
+      "prompt": "Как нужно принимать таблетки?",
+      "hint": "Liều lượng uống.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Три раза в день до еды."
+        },
+        {
+          "key": "B",
+          "text": "По одной таблетке два раза в день после еды."
+        },
+        {
+          "key": "C",
+          "text": "Только на ночь."
+        },
+        {
+          "key": "D",
+          "text": "Один раз в неделю."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Принимайте по одной таблетке два раза в день после еды»."
+    },
+    {
+      "id": "l5_q4",
+      "lang": "ru",
+      "prompt": "Что ещё купил пациент?",
+      "hint": "Món bổ sung bệnh nhân mua.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Антибиотики."
+        },
+        {
+          "key": "B",
+          "text": "Витамин С."
+        },
+        {
+          "key": "C",
+          "text": "Бинт и пластырь."
+        },
+        {
+          "key": "D",
+          "text": "Капли для глаз."
+        }
+      ],
+      "ans": "B",
+      "explain": "Пациент: «И дайте ещё витамин С, пожалуйста»."
+    },
+    {
+      "id": "l5_q5",
+      "lang": "vi",
+      "prompt": "Dược sĩ khuyên bệnh nhân nên uống gì để mau khỏi?",
+      "hint": "Lời khuyên sinh hoạt của dược sĩ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nước ngọt có gas."
+        },
+        {
+          "key": "B",
+          "text": "Nhiều trà nóng."
+        },
+        {
+          "key": "C",
+          "text": "Nước đá lạnh."
+        },
+        {
+          "key": "D",
+          "text": "Cà phê đậm đặc."
+        }
+      ],
+      "ans": "B",
+      "explain": "Фармацевт: «Пейте много горячего чая и выздоравливайте!»"
+    },
+    {
+      "id": "l5_q6",
+      "lang": "vi",
+      "prompt": "Cụm từ «после еды» chỉ thời điểm uống thuốc nào?",
+      "hint": "Trước hay sau ăn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trước bữa ăn."
+        },
+        {
+          "key": "B",
+          "text": "Sau khi ăn."
+        },
+        {
+          "key": "C",
+          "text": "Trong khi ăn."
+        },
+        {
+          "key": "D",
+          "text": "Uống khi bụng đói."
+        }
+      ],
+      "ans": "B",
+      "explain": "«после еды» = sau bữa ăn."
+    },
+    {
+      "id": "l5_q7",
+      "lang": "vi",
+      "prompt": "Lời chúc «Выздоравливайте!» mang thông điệp gì?",
+      "hint": "Chúc bệnh nhân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chúc mau bình phục / mau khỏe lại!"
+        },
+        {
+          "key": "B",
+          "text": "Chúc may mắn!"
+        },
+        {
+          "key": "C",
+          "text": "Chúc chuyến đi tốt đẹp!"
+        },
+        {
+          "key": "D",
+          "text": "Chúc mừng sinh nhật!"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Выздоравливайте!» = Chúc mau chóng khỏi bệnh."
+    },
+    {
+      "id": "l5_q8",
+      "lang": "vi",
+      "prompt": "Căn bệnh mà người bệnh mắc phải là gì?",
+      "hint": "Từ «простуда».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bong gân chân."
+        },
+        {
+          "key": "B",
+          "text": "Cảm lạnh thông thường."
+        },
+        {
+          "key": "C",
+          "text": "Đau dạ dày mạn tính."
+        },
+        {
+          "key": "D",
+          "text": "Dị ứng phấn hoa."
+        }
+      ],
+      "ans": "B",
+      "explain": "«простуда» nghĩa là cảm lạnh thông thường."
+    }
+  ]
+}

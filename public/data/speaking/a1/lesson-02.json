@@ -1,0 +1,56 @@
+{
+  "id": 2,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Кто это? Что это? Предметы вокруг нас",
+  "speakingTime": "15 phút",
+  "topic": "Nhận diện người & đồ vật: Luyện câu hỏi Кто это? / Что это?",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Скажите, пожалуйста, кто это?",
+      "meaning": "Làm ơn cho tôi hỏi, đây là ai?",
+      "phonetic": "Skazhite, pozhaluysta, kto eto?",
+      "tips": "Ngữ điệu câu hỏi có từ để hỏi (IK-2), nhấn mạnh vào «кто»."
+    },
+    {
+      "id": "spk_2",
+      "text": "Это наш новый преподаватель физики.",
+      "meaning": "Đây là giảng viên môn vật lý mới của chúng tôi.",
+      "phonetic": "Eto nash novyy prepodavatel' fiziki.",
+      "tips": "«Преподаватель» nhấn trọng âm ở âm tiết cuối «-тель» mềm."
+    },
+    {
+      "id": "spk_3",
+      "text": "А что лежит на столе справа?",
+      "meaning": "Còn cái gì đang nằm ở trên bàn phía bên phải?",
+      "phonetic": "A chto lezhit na stole sprava?",
+      "tips": "«что» phát âm là /shto/, không đọc là /ch-to/."
+    },
+    {
+      "id": "spk_4",
+      "text": "Там лежат учебник, тетрадь и ручка.",
+      "meaning": "Ở đó có sách giáo khoa, vở ghi và bút mực.",
+      "phonetic": "Tam lezhat uchebnik, tetrad' i ruchka.",
+      "tips": "«Тетрадь» kết thúc bằng chữ d mềm, đọc là /t'etrat'/."
+    },
+    {
+      "id": "spk_5",
+      "text": "Чей это красивый синий рюкзак?",
+      "meaning": "Chiếc ba lô màu xanh dương đẹp đẽ này là của ai?",
+      "phonetic": "Chey eto krasivyy siniy ryukzak?",
+      "tips": "«Рюкзак» đọc biến âm /r'ugzak/, ngữ điệu nhấn ở «чей»."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Hãy mô tả 3–4 đồ vật đang ở xung quanh bạn trong phòng học hoặc trên bàn làm việc bằng tiếng Nga.",
+    "sampleGuidance": [
+      "Это мой рабочий стол... (Đây là bàn làm việc của tôi...)",
+      "Здесь лежат книга и тетрадь... (Ở đây có sách và vở...)",
+      "Справа стоит компьютер... (Bên phải có máy tính...)",
+      "Это очень нужные вещи... (Đây là những vật dụng rất cần thiết...)"
+    ]
+  }
+}

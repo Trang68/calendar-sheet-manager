@@ -1,0 +1,333 @@
+{
+  "id": 5,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Профессии: Кем вы работаете?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Nghề nghiệp & Công việc thường nhật",
+  "vocabCategories": [
+    {
+      "title": "Danh từ chỉ nghề nghiệp (Профессии)",
+      "rows": [
+        {
+          "word": "врач",
+          "gram": "danh từ",
+          "meaning": "bác sĩ",
+          "example": "Мой папа — врач."
+        },
+        {
+          "word": "инжене́р",
+          "gram": "danh từ",
+          "meaning": "kỹ sư",
+          "example": "Он опытный инженер."
+        },
+        {
+          "word": "учи́тель",
+          "gram": "danh từ",
+          "meaning": "giáo viên (nam)",
+          "example": "Учитель объясняет урок."
+        },
+        {
+          "word": "журнали́ст",
+          "gram": "danh từ",
+          "meaning": "nhà báo",
+          "example": "Она талантливый журналист."
+        }
+      ]
+    },
+    {
+      "title": "Động từ về công việc (Работа)",
+      "rows": [
+        {
+          "word": "рабо́тать",
+          "gram": "động từ nhóm I",
+          "meaning": "làm việc",
+          "example": "Где вы работаете?"
+        },
+        {
+          "word": "заво́д",
+          "gram": "danh từ",
+          "meaning": "nhà máy, xí nghiệp",
+          "example": "Он работает на заводе."
+        },
+        {
+          "word": "больни́ца",
+          "gram": "danh từ",
+          "meaning": "bệnh viện",
+          "example": "Врач работает в больнице."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Каждый человек имеет свою профессию. Кем работают мои друзья?",
+    "Мой друг Борис — инженер. Он работает на большом автомобильном заводе.",
+    "Елена — врач. Она работает в центральной больнице и лечит людей.",
+    "Сергей — журналист. Он пишет интересные статьи для газеты и журналов.",
+    "А я пока студент. Я учусь и мечтаю стать программистом."
+  ],
+  "questions": [
+    {
+      "id": "a1_r5_q1",
+      "lang": "ru",
+      "prompt": "Кем работает Борис?",
+      "hint": "Tìm tên Boris ở đoạn 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Врач"
+        },
+        {
+          "key": "B",
+          "text": "Инженер"
+        },
+        {
+          "key": "C",
+          "text": "Журналист"
+        },
+        {
+          "key": "D",
+          "text": "Программист"
+        }
+      ],
+      "ans": "B",
+      "explain": "Đoạn 2 nêu rõ: «Мой друг Борис — инженер»."
+    },
+    {
+      "id": "a1_r5_q2",
+      "lang": "ru",
+      "prompt": "Где работает Елена?",
+      "hint": "Tìm nơi làm việc của Elena.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В школе"
+        },
+        {
+          "key": "B",
+          "text": "На заводе"
+        },
+        {
+          "key": "C",
+          "text": "В центральной больнице"
+        },
+        {
+          "key": "D",
+          "text": "В банке"
+        }
+      ],
+      "ans": "C",
+      "explain": "Đoạn 3 viết: «Елена — врач. Она работает в центральной больнице»."
+    },
+    {
+      "id": "a1_r5_q3",
+      "lang": "ru",
+      "prompt": "Что делает журналист Сергей?",
+      "hint": "Tìm công việc của Sergei.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Лечит людей"
+        },
+        {
+          "key": "B",
+          "text": "Строит дома"
+        },
+        {
+          "key": "C",
+          "text": "Пишет статьи для газеты"
+        },
+        {
+          "key": "D",
+          "text": "Учит детей"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Сергей — журналист. Он пишет интересные статьи для газеты»."
+    },
+    {
+      "id": "a1_r5_q4",
+      "lang": "ru",
+      "prompt": "Кем мечтает стать автор текста?",
+      "hint": "Đọc câu cuối cùng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Инженером"
+        },
+        {
+          "key": "B",
+          "text": "Программистом"
+        },
+        {
+          "key": "C",
+          "text": "Врачом"
+        },
+        {
+          "key": "D",
+          "text": "Учителем"
+        }
+      ],
+      "ans": "B",
+      "explain": "Tác giả chia sẻ: «Я учусь и мечтаю стать программистом» (ước mơ trở thành lập trình viên)."
+    },
+    {
+      "id": "a1_r5_q5",
+      "lang": "ru",
+      "prompt": "Какое слово обозначает человека, который лечит больных?",
+      "hint": "Từ vựng chỉ người chữa bệnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Инженер"
+        },
+        {
+          "key": "B",
+          "text": "Учитель"
+        },
+        {
+          "key": "C",
+          "text": "Врач"
+        },
+        {
+          "key": "D",
+          "text": "Студент"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Врач» (bác sĩ) là người khám chữa bệnh."
+    },
+    {
+      "id": "a1_r5_q6",
+      "lang": "vi",
+      "prompt": "Từ «завод» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Nơi kỹ sư Boris làm việc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trường học"
+        },
+        {
+          "key": "B",
+          "text": "Nhà máy, xí nghiệp"
+        },
+        {
+          "key": "C",
+          "text": "Rạp chiếu phim"
+        },
+        {
+          "key": "D",
+          "text": "Quán ăn"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Завод» nghĩa là nhà máy / xí nghiệp."
+    },
+    {
+      "id": "a1_r5_q7",
+      "lang": "vi",
+      "prompt": "Động từ «лечить» trong câu «лечит людей» có nghĩa là gì?",
+      "hint": "Hành động của bác sĩ đối với bệnh nhân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dạy học"
+        },
+        {
+          "key": "B",
+          "text": "Chữa bệnh, điều trị"
+        },
+        {
+          "key": "C",
+          "text": "Bán thuốc"
+        },
+        {
+          "key": "D",
+          "text": "Nấu ăn"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Лечить» nghĩa là chữa bệnh, điều trị cho con người."
+    },
+    {
+      "id": "a1_r5_q8",
+      "lang": "vi",
+      "prompt": "Từ «статья» mà nhà báo viết có nghĩa là gì?",
+      "hint": "Sản phẩm của nhà báo trên báo chí.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bản tin / bài báo"
+        },
+        {
+          "key": "B",
+          "text": "Cuốn tiểu thuyết"
+        },
+        {
+          "key": "C",
+          "text": "Bức tranh vẽ"
+        },
+        {
+          "key": "D",
+          "text": "Bản hợp đồng"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Статья» là bài báo, bài viết chuyên luận."
+    },
+    {
+      "id": "a1_r5_q9",
+      "lang": "vi",
+      "prompt": "Khi muốn hỏi 'Bạn làm nghề gì?', người Nga hỏi thế nào?",
+      "hint": "Mẫu câu hỏi nghề nghiệp chuẩn A1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Кто вы по профессии? / Кем вы работаете?"
+        },
+        {
+          "key": "B",
+          "text": "Где вы живёте?"
+        },
+        {
+          "key": "C",
+          "text": "Сколько это стоит?"
+        },
+        {
+          "key": "D",
+          "text": "Как вас зовут?"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Кто вы по профессии?» hoặc «Кем вы работаете?» là câu hỏi nghề nghiệp."
+    },
+    {
+      "id": "a1_r5_q10",
+      "lang": "vi",
+      "prompt": "Tác giả của bài viết hiện đang làm nghề gì?",
+      "hint": "Đọc câu: «А я пока...»",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đã đi làm kỹ sư"
+        },
+        {
+          "key": "B",
+          "text": "Hiện vẫn đang là sinh viên"
+        },
+        {
+          "key": "C",
+          "text": "Làm nghề dạy học"
+        },
+        {
+          "key": "D",
+          "text": "Làm phóng viên"
+        }
+      ],
+      "ans": "B",
+      "explain": "Tác giả viết: «А я пока студент» (Còn tôi hiện vẫn đang là sinh viên)."
+    }
+  ]
+}

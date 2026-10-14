@@ -1,0 +1,57 @@
+{
+  "id": 19,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Планы на летние каникулы",
+  "writingTime": "20 phút",
+  "topic": "Dự định kỳ nghỉ hè: Kế hoạch du lịch, nghỉ ngơi và học tập",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) chia sẻ về những dự định của bạn trong kỳ nghỉ hè sắp tới.",
+  "requirements": [
+    "1. Nêu thời gian kỳ nghỉ hè bắt đầu sau khi thi xong.",
+    "2. Địa điểm bạn dự định đến thăm (về quê, ra biển, đi leo núi).",
+    "3. Kế hoạch trau dồi bản thân (đọc sách, học ngoại ngữ).",
+    "4. Kỳ vọng về một mùa hè tràn ngập kỷ niệm đẹp."
+  ],
+  "cliches": [
+    {
+      "ru": "Скоро начнутся долгожданные летние каникулы.",
+      "vi": "Kỳ nghỉ hè mong đợi bấy lâu sắp bắt đầu rồi."
+    },
+    {
+      "ru": "Сначала я поеду в родную деревню к бабушке.",
+      "vi": "Trước tiên tôi sẽ về làng quê thăm bà."
+    },
+    {
+      "ru": "Потом мы с друзьями отправимся в поход.",
+      "vi": "Sau đó tôi cùng bạn bè sẽ lên đường đi cắm trại."
+    },
+    {
+      "ru": "Я надеюсь отлично провести это лето!",
+      "vi": "Tôi hy vọng sẽ trải qua một mùa hè thật tuyệt!"
+    }
+  ],
+  "modelAnswer": "Скоро закончатся экзамены и начнутся долгожданные летние каникулы. В июле я планирую поехать на две недели на морское побережье, чтобы плавать, загорать и дышать чистым морским воздухом. В августе я буду отдыхать в деревне у бабушки, читать интересные книги и продолжать изучать русский язык. Уверен, что это лето будет ярким и незабываемым!",
+  "modelWordCount": 52,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "id": 20,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Итоговый тест A1: Я говорю по-русски!",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "15 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Tổng ôn toàn diện kiến thức & Bứt phá năng lực TRKI A1",
+  "vocabCategories": [
+    {
+      "title": "Tổng hợp từ vựng chìa khóa A1 (Ключевые слова)",
+      "rows": [
+        {
+          "word": "студе́нт / студе́нтка",
+          "gram": "danh từ",
+          "meaning": "sinh viên nam / sinh viên nữ",
+          "example": "Мы студенты."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ",
+          "meaning": "học tập",
+          "example": "Они учатся в университете."
+        },
+        {
+          "word": "знать",
+          "gram": "động từ",
+          "meaning": "biết",
+          "example": "Я знаю русский язык."
+        },
+        {
+          "word": "свобо́дно",
+          "gram": "phó từ",
+          "meaning": "lưu loát, tự do",
+          "example": "Он свободно говорит."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Здравствуйте! Меня зовут Антон. Я хочу подвести итоги моего первого года изучения русского языка.",
+    "Когда я только приехал в Россию, я знал только слова «Привет» và «Спасибо». Всё вокруг казалось новым и сложным.",
+    "Сейчас я уже хорошо понимаю преподавателей на уроках, свободно ориентируюсь в городе và могу легко заказать еду в кафе.",
+    "У меня много друзей из разных стран: из Вьетнама, Китая, Франции и России. Мы вместе готовим обед, гуляем по Москве и поём песни под гитару.",
+    "Русский язык открыл для меня целый новый мир культуры, литературы и дружбы. Я с гордостью могу сказать: «Я говорю по-русски!»"
+  ],
+  "questions": [
+    {
+      "id": "a1_r20_q1",
+      "lang": "ru",
+      "prompt": "Что знал Антон, когда только приехал в Россию?",
+      "hint": "Xem câu 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Всю грамматику"
+        },
+        {
+          "key": "B",
+          "text": "Только слова «Привет» и «Спасибо»"
+        },
+        {
+          "key": "C",
+          "text": "Много стихов"
+        },
+        {
+          "key": "D",
+          "text": "Ничего не знал"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Когда я только приехал в Россию, я знал только слова «Привет» và «Спасибо»»."
+    },
+    {
+      "id": "a1_r20_q2",
+      "lang": "ru",
+      "prompt": "Что Антон умеет делать сейчас?",
+      "hint": "Xem sự tiến bộ của Anton ở đoạn 3.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только читать алфавит"
+        },
+        {
+          "key": "B",
+          "text": "Понимает учителей, ориентируется в городе и может заказать еду"
+        },
+        {
+          "key": "C",
+          "text": "Пишет научные книги"
+        },
+        {
+          "key": "D",
+          "text": "Не говорит по-русски"
+        }
+      ],
+      "ans": "B",
+      "explain": "Đoạn 3 liệt kê: «хорошо понимаю преподавателей... ориентируюсь в городе... могу легко заказать еду»."
+    },
+    {
+      "id": "a1_r20_q3",
+      "lang": "ru",
+      "prompt": "Из каких стран друзья Антона?",
+      "hint": "Xem danh sách quốc gia bạn bè.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только из Англии"
+        },
+        {
+          "key": "B",
+          "text": "Из Вьетнама, Китая, Франции и России"
+        },
+        {
+          "key": "C",
+          "text": "Из Америки"
+        },
+        {
+          "key": "D",
+          "text": "Из Африки"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «из разных стран: из Вьетнама, Китая, Франции и России»."
+    },
+    {
+      "id": "a1_r20_q4",
+      "lang": "ru",
+      "prompt": "Что открыл русский язык для Антона?",
+      "hint": "Đọc đoạn cuối cùng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Бизнес"
+        },
+        {
+          "key": "B",
+          "text": "Новый мир культуры, литературы и дружбы"
+        },
+        {
+          "key": "C",
+          "text": "Новую работу на заводе"
+        },
+        {
+          "key": "D",
+          "text": "Секреты математики"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Русский язык открыл для меня целый новый мир культуры, литературы и дружбы»."
+    },
+    {
+      "id": "a1_r20_q5",
+      "lang": "ru",
+      "prompt": "Какую гордую фразу может сказать студент в конце курса A1?",
+      "hint": "Xem câu kết của bài.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Я не знаю русский язык»"
+        },
+        {
+          "key": "B",
+          "text": "«Я говорю по-русски!»"
+        },
+        {
+          "key": "C",
+          "text": "«Русский язык слишком лёгкий»"
+        },
+        {
+          "key": "D",
+          "text": "«До свидания навсегда»"
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu kết: «Я с гордостью могу сказать: «Я говорю по-русски!»»."
+    },
+    {
+      "id": "a1_r20_q6",
+      "lang": "vi",
+      "prompt": "Cụm từ «подвести итоги» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Hoạt động nhìn nhận lại kết quả sau một quá trình.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lên kế hoạch mới"
+        },
+        {
+          "key": "B",
+          "text": "Tổng kết, điểm lại kết quả"
+        },
+        {
+          "key": "C",
+          "text": "Bắt đầu làm bài"
+        },
+        {
+          "key": "D",
+          "text": "Bỏ cuộc giữa chừng"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Подвести итоги» nghĩa là tổng kết, đúc kết kết quả."
+    },
+    {
+      "id": "a1_r20_q7",
+      "lang": "vi",
+      "prompt": "Từ «свободно» trong câu «свободно ориентируюсь в городе» nghĩa là gì?",
+      "hint": "Khả năng định hướng dễ dàng, tự tin.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một cách dễ dàng, tự tin, không bị lạc"
+        },
+        {
+          "key": "B",
+          "text": "Miễn phí vé xe"
+        },
+        {
+          "key": "C",
+          "text": "Chậm chạp"
+        },
+        {
+          "key": "D",
+          "text": "Đi lung tung"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Свободно ориентироваться» nghĩa là tự tin định hướng đường xá, không gặp trở ngại."
+    },
+    {
+      "id": "a1_r20_q8",
+      "lang": "vi",
+      "prompt": "Cụm từ «петь песни под гитару» chỉ hoạt động gì?",
+      "hint": "Hoạt động văn nghệ sinh viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hát theo tiếng đệm đàn guitar"
+        },
+        {
+          "key": "B",
+          "text": "Mua đàn guitar"
+        },
+        {
+          "key": "C",
+          "text": "Dạy đàn guitar"
+        },
+        {
+          "key": "D",
+          "text": "Nghe đài radio"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Петь под гитару» là hát trên nền đệm đàn guitar."
+    },
+    {
+      "id": "a1_r20_q9",
+      "lang": "vi",
+      "prompt": "Từ «с гордостью» thể hiện cảm xúc gì của người nói?",
+      "hint": "Cảm giác tự hào về nỗ lực bản thân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Với nỗi buồn bã"
+        },
+        {
+          "key": "B",
+          "text": "Với niềm tự hào hãnh diện"
+        },
+        {
+          "key": "C",
+          "text": "Với sự sợ hãi"
+        },
+        {
+          "key": "D",
+          "text": "Với vẻ thờ ơ"
+        }
+      ],
+      "ans": "B",
+      "explain": "«С гордостью» nghĩa là với niềm tự hào, hãnh diện."
+    },
+    {
+      "id": "a1_r20_q10",
+      "lang": "vi",
+      "prompt": "Trình độ A1 (Sơ cấp - ТРКИ Элементарный) chứng nhận người học có thể làm được điều gì?",
+      "hint": "Mục tiêu của cấp độ A1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ biết nói xin chào và đếm từ 1 đến 10"
+        },
+        {
+          "key": "B",
+          "text": "Giao tiếp cơ bản về bản thân, gia đình, mua sắm, học tập và nơi ở"
+        },
+        {
+          "key": "C",
+          "text": "Viết luận văn thạc sĩ"
+        },
+        {
+          "key": "D",
+          "text": "Dịch tiểu thuyết chuyên ngành"
+        }
+      ],
+      "ans": "B",
+      "explain": "Chuẩn TRKI A1 chứng nhận khả năng giao tiếp sơ cấp tự tin trong các tình huống thiết yếu hàng ngày."
+    }
+  ]
+}

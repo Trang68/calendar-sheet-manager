@@ -1,0 +1,56 @@
+{
+  "id": 18,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Спорт: Здоровый образ жизни",
+  "speakingTime": "15 phút",
+  "topic": "Lối sống lành mạnh: Chạy bộ, tập yoga, ăn uống bổ dưỡng",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Я веду активный и здоровый образ жизни.",
+      "meaning": "Tôi duy trì lối sống năng động và lành mạnh.",
+      "phonetic": "Ya vedu aktivnyy i zdorovyy obraz zhizni.",
+      "tips": "Cụm từ cố định «здоровый образ жизни» (ЗОЖ)."
+    },
+    {
+      "id": "spk_2",
+      "text": "Каждое утро я бегаю в парке полчаса.",
+      "meaning": "Mỗi buổi sáng tôi chạy bộ trong công viên nửa tiếng.",
+      "phonetic": "Kazhdoye utro ya begayu v parke polchasa.",
+      "tips": "«Полчаса» = nửa giờ đồng hồ."
+    },
+    {
+      "id": "spk_3",
+      "text": "Правильное питание очень важно для здоровья.",
+      "meaning": "Chế độ dinh dưỡng đúng đắn rất quan trọng đối với sức khỏe.",
+      "phonetic": "Pravil'noye pitaniye ochen' vazhno dlya zdorov'ya.",
+      "tips": "«Питание» = dinh dưỡng, ăn uống."
+    },
+    {
+      "id": "spk_4",
+      "text": "Я стараюсь пить два литра чистой воды в день.",
+      "meaning": "Tôi cố gắng uống hai lít nước tinh khiết mỗi ngày.",
+      "phonetic": "Ya starayus' pit' dva litra chistoy vody v den'.",
+      "tips": "«Два литра» là cách 2 số ít sau số 2."
+    },
+    {
+      "id": "spk_5",
+      "text": "Спорт помогает мне быть бодрым и энергичным.",
+      "meaning": "Thể thao giúp tôi luôn sảng khoái và tràn đầy năng lượng.",
+      "phonetic": "Sport pomogayet mne byt' bodrym i energichnym.",
+      "tips": "«Энергичным» đọc phụ âm mềm «г» /en'erg'ichnym/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Kể về các thói quen rèn luyện sức khỏe mỗi ngày của bạn bằng tiếng Nga.",
+    "sampleGuidance": [
+      "Для меня спорт очень важен... (Đối với tôi thể thao rất quan trọng...)",
+      "Я люблю плавать и кататься на велосипеде... (Tôi thích bơi và đi xe đạp...)",
+      "Я не ем вредную еду... (Tôi không ăn đồ ăn có hại cho sức khỏe...)",
+      "Чувствую себя отлично! (Tôi cảm thấy cơ thể tuyệt vời!)"
+    ]
+  }
+}

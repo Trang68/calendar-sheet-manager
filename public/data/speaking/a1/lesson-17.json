@@ -1,0 +1,56 @@
+{
+  "id": 17,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В аэропорту: Регистрация на рейс",
+  "speakingTime": "15 phút",
+  "topic": "Du lịch hàng không: Cân hành lý, vé máy bay và qua cửa an ninh",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Предъявите, пожалуйста, ваш паспорт и билет.",
+      "meaning": "Làm ơn xuất trình hộ chiếu và vé máy bay của quý khách.",
+      "phonetic": "Pred'yavite, pozhaluysta, vash pasport i bilet.",
+      "tips": "«Предъявите» có dấu cứng «ъ», đọc ngắt giọng."
+    },
+    {
+      "id": "spk_2",
+      "text": "Поставьте ваш чемодан на весы для взвешивания.",
+      "meaning": "Mời bạn đặt va ly lên bàn cân để kiểm tra trọng lượng.",
+      "phonetic": "Postav'te vash chemodan na vesy dlya vzveshivaniya.",
+      "tips": "«Весы́» mang nghĩa cái cân, trọng âm âm tiết 2."
+    },
+    {
+      "id": "spk_3",
+      "text": "У вас нет перевеса, багаж весит двадцать килограммов.",
+      "meaning": "Hành lý không bị quá cước, nặng đúng hai mươi kilogram.",
+      "phonetic": "U vas net perevesa, bagazh vesit dvadtsat' kilogrammov.",
+      "tips": "«Перевес» = hành lý quá cân quy định."
+    },
+    {
+      "id": "spk_4",
+      "text": "Вот ваш посадочный талон. Посадка у выхода номер шесть.",
+      "meaning": "Đây là thẻ lên máy bay. Cửa khởi hành là cửa số sáu.",
+      "phonetic": "Vot vash posadochnyy talon. Posadka u vykhoda nomer shest'.",
+      "tips": "«Посадочный талон» = Boarding pass."
+    },
+    {
+      "id": "spk_5",
+      "text": "Желаем вам приятного полёта и мягкой посадки!",
+      "meaning": "Chúc quý khách có một chuyến bay êm đẹp và hạ cánh an toàn!",
+      "phonetic": "Zhelayem vam priyatnogo polyota i myagkoy posadki!",
+      "tips": "«Мягкой» biến âm «г» thành /kh/: /m'yakhkay/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Thực hành hội thoại với nhân viên quầy thủ tục sân bay khi gửi hành lý.",
+    "sampleGuidance": [
+      "Здравствуйте, я лечу в Ханой... (Xin chào, tôi bay về Hà Nội...)",
+      "Можно место возле иллюминатора? (Cho tôi chỗ ngồi cạnh cửa sổ được không?)",
+      "Сколько мест багажа разрешено? (Được gửi mấy kiện hành lý?)",
+      "Спасибо, всего доброго! (Cảm ơn, chúc mọi điều tốt lành!)"
+    ]
+  }
+}

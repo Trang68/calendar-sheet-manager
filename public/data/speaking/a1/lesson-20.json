@@ -1,0 +1,56 @@
+{
+  "id": 20,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Итоговая самопрезентация: Я говорю по-русски!",
+  "speakingTime": "15 phút",
+  "topic": "Vấn đáp A1 tổng kết: Thuyết trình toàn diện về bản thân và ước mơ",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Здравствуйте, уважаемые экзаменаторы!",
+      "meaning": "Kính chào quý vị giám khảo đáng kính!",
+      "phonetic": "Zdravstvuyte, uvazhayemyye ekzamenatory!",
+      "tips": "Mở đầu bài thi vấn đáp trang trọng và đĩnh đạc."
+    },
+    {
+      "id": "spk_2",
+      "text": "Сегодня я с радостью хочу рассказать о себе.",
+      "meaning": "Hôm nay em rất vui mừng được trình bày về bản thân mình.",
+      "phonetic": "Segodnya ya s radost'yu khochu rasskazat' o sebe.",
+      "tips": "«Рассказать о себе» dùng Cách 6."
+    },
+    {
+      "id": "spk_3",
+      "text": "Я успешно изучил все темы начального уровня А1.",
+      "meaning": "Em đã hoàn thành xuất sắc tất cả các chủ đề của trình độ sơ cấp A1.",
+      "phonetic": "Ya uspeshno izuchil vse temy nachal'nogo urovnya A1.",
+      "tips": "«Уровня» là dạng cách 2 của «уровень»."
+    },
+    {
+      "id": "spk_4",
+      "text": "Я могу свободно общаться в простых жизненных ситуациях.",
+      "meaning": "Em có thể giao tiếp tự tin trong các tình huống đời sống thường nhật.",
+      "phonetic": "Ya mogu svobodno obshchat'sya v prostykh zhiznennykh situatsiyakh.",
+      "tips": "«Общаться» đuôi mềm «-ться» phát âm /-tsa/."
+    },
+    {
+      "id": "spk_5",
+      "text": "Я продолжаю учить русский язык и мечтаю поехать в Россию!",
+      "meaning": "Em sẽ tiếp tục học tiếng Nga và mơ ước một ngày được đặt chân đến nước Nga!",
+      "phonetic": "Ya prodolzhayu uchit' russkiy yazyk i mechtayu poyekhat' v Rossiyu!",
+      "tips": "«В Россию» dùng Cách 4 chỉ phương hướng sau «поехать»."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Bài thi nói tổng kết A1: Hãy thực hiện bài thuyết trình tự giới thiệu bản thân trong 1 phút (tên, xuất thân, quá trình học tiếng Nga và lý do bạn yêu thích nước Nga).",
+    "sampleGuidance": [
+      "Меня зовут... Я приехал из Вьетнама... (Tên em là... Em đến từ Việt Nam...)",
+      "Я изучаю русский язык, потому что... (Em học tiếng Nga bởi vì...)",
+      "Русский язык очень богатый и красивый... (Tiếng Nga rất phong phú và tuyệt đẹp...)",
+      "Спасибо за внимание и поддержку! (Xin cảm ơn sự chú ý lắng nghe và đồng hành của quý thầy cô!)"
+    ]
+  }
+}

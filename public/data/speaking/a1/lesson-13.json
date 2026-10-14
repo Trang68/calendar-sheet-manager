@@ -1,0 +1,56 @@
+{
+  "id": 13,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В гостях: Русский чай и традиции",
+  "speakingTime": "15 phút",
+  "topic": "Văn hóa tiếp khách: Đến thăm nhà, uống trà samovar và khen ngợi",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Проходите в дом, чувствуйте себя как дома!",
+      "meaning": "Mời vào trong nhà, bạn hãy cứ tự nhiên như ở nhà mình nhé!",
+      "phonetic": "Prokhodite v dom, chuvstvuyte sebya kak doma!",
+      "tips": "«Чувствуйте» đọc nuốt âm «в» đầu tiên: /chustvuyte/."
+    },
+    {
+      "id": "spk_2",
+      "text": "Спасибо за приглашение! Это вам цветы и торт.",
+      "meaning": "Cảm ơn vì lời mời! Đây là hoa và bánh kem gửi tặng gia đình.",
+      "phonetic": "Spasibo za priglasheniye! Eto vam tsvety i tort.",
+      "tips": "Người Nga có văn hóa mang quà nhỏ khi đến chơi nhà."
+    },
+    {
+      "id": "spk_3",
+      "text": "Садитесь за стол, чайник уже закипел.",
+      "meaning": "Mời ngồi vào bàn, ấm nước đã sôi rồi đấy.",
+      "phonetic": "Sadites' za stol, chaynink uzhe zakipel.",
+      "tips": "«Чайник» đọc êm dịu, trọng âm «ча́йник»."
+    },
+    {
+      "id": "spk_4",
+      "text": "Попробуйте домашние пироги с яблоками и мёдом.",
+      "meaning": "Bạn hãy nếm thử món bánh pỉ-rốc táo mật ong nhà làm nhé.",
+      "phonetic": "Poprobuyte domashniye pirogi s yablokami i myodom.",
+      "tips": "«Пироги́» có trọng âm ở chữ «и» cuối."
+    },
+    {
+      "id": "spk_5",
+      "text": "Всё очень вкусно, вы замечательная хозяйка!",
+      "meaning": "Mọi món đều rất ngon, bác thực sự là một nữ chủ nhà tuyệt vời!",
+      "phonetic": "Vsyo ochen' vkusno, vy zamechatel'naya khozyayka!",
+      "tips": "Lời khen ngợi lịch thiệp dành cho nữ chủ nhà."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Nói lời cảm ơn và khen ngợi lòng mến khách khi được mời đến chơi nhà một người bạn Nga.",
+    "sampleGuidance": [
+      "Большое спасибо за тёплый приём... (Cảm ơn nhiều vì sự đón tiếp ấm áp...)",
+      "У вас очень красивый и уютный дом... (Nhà bạn rất đẹp và ấm cúng...)",
+      "Пирог был невероятно вкусным... (Bánh pỉ-rốc ngon không thể tin nổi...)",
+      "Приглашаю вас в гости ко мне! (Tôi mời bạn dịp tới ghé thăm nhà tôi!)"
+    ]
+  }
+}

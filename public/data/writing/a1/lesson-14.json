@@ -1,0 +1,57 @@
+{
+  "id": 14,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Мой любимый праздник: Новый год",
+  "writingTime": "20 phút",
+  "topic": "Lễ hội Năm Mới: Phong tục trang trí cây thông và tặng quà",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) kể về cách bạn và gia đình chuẩn bị đón Tết Năm Mới.",
+  "requirements": [
+    "1. Khẳng định Năm Mới là ngày lễ kỳ diệu và được chờ đợi nhất.",
+    "2. Miêu tả việc trang hoàng cây thông và nhà cửa.",
+    "3. Kể các món ăn truyền thống trong đêm giao thừa.",
+    "4. Lời chúc tụng và trao gửi quà tặng may mắn."
+  ],
+  "cliches": [
+    {
+      "ru": "Новый год — это волшебный праздник.",
+      "vi": "Năm Mới là một ngày lễ kỳ diệu."
+    },
+    {
+      "ru": "Мы украшаем новогоднюю ёлку игрушками.",
+      "vi": "Chúng tôi trang trí cây thông bằng đồ chơi."
+    },
+    {
+      "ru": "Мама готовит вкусные салаты и пироги.",
+      "vi": "Mẹ chuẩn bị những món salad và bánh pỉ-rốc ngon."
+    },
+    {
+      "ru": "Под бой часов мы загадываем желания.",
+      "vi": "Dưới tiếng chuông đồng hồ chúng tôi ước nguyện."
+    }
+  ],
+  "modelAnswer": "Новый год — мой самый любимый праздник в году. В конце декабря мы всей семьёй украшаем пушистую зелёную ёлку разноцветными шарами и гирляндами. В новогоднюю ночь мама готовит традиционные салаты и горячие блюда. Ровно в полночь мы чокаемся бокалами, поздравляем друг друга и дарим подарки. Это время настоящей радости и тепла!",
+  "modelWordCount": 49,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

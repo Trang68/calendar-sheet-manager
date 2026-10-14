@@ -1,0 +1,61 @@
+{
+  "id": 5,
+  "level": "A1",
+  "skill": "writing",
+  "title": "В кафе: Мой любимый обед",
+  "writingTime": "20 phút",
+  "topic": "Bữa ăn yêu thích: Món ăn, đồ uống và quán ăn ưa thích",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn ngắn (35–60 từ) kể về quán ăn bạn thích và những món bạn hay gọi.",
+  "requirements": [
+    "1. Nêu tên hoặc địa điểm quán ăn bạn hay đến.",
+    "2. Kể tên các món ăn và thức uống yêu thích.",
+    "3. Nhận xét về hương vị và giá cả món ăn.",
+    "4. Lời rủ bạn bè cùng ghé quán."
+  ],
+  "cliches": [
+    {
+      "ru": "Я часто хожу в это кафе.",
+      "vi": "Tôi hay đến quán cà phê này."
+    },
+    {
+      "ru": "Моё любимое блюдо — это...",
+      "vi": "Món ăn yêu thích của tôi là..."
+    },
+    {
+      "ru": "Здесь готовят очень вкусно.",
+      "vi": "Ở đây nấu ăn rất ngon."
+    },
+    {
+      "ru": "Цены здесь совсем невысокие.",
+      "vi": "Giá cả ở đây không hề đắt."
+    },
+    {
+      "ru": "Советую всем попробовать!",
+      "vi": "Khuyên mọi người nên thử!"
+    }
+  ],
+  "modelAnswer": "Я очень люблю ходить в уютное кафе возле нашего университета. Там всегда играет приятная музыка. На обед я обычно заказываю горячий мясной суп, салат и зелёный чай. Еда здесь всегда свежая и невероятно вкусная, а цены совсем недорогие. Я рекомендую моим друзьям обязательно посетить это прекрасное место!",
+  "modelWordCount": 47,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

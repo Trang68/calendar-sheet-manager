@@ -1,0 +1,56 @@
+{
+  "id": 5,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В магазине: Покупки и цены",
+  "speakingTime": "15 phút",
+  "topic": "Mua sắm thường nhật: Hỏi giá tiền, số lượng và trả lời",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Здравствуйте! Сколько стоит килограмм яблок?",
+      "meaning": "Xin chào! Một cân táo này giá bao nhiêu?",
+      "phonetic": "Zdravstvuyte! Skol'ko stoit kilogramm yablok?",
+      "tips": "Ngữ điệu hỏi giá tiền nhấn mạnh vào «Сколько»."
+    },
+    {
+      "id": "spk_2",
+      "text": "Килограмм красных яблок стоит сто рублей.",
+      "meaning": "Một cân táo đỏ có giá một trăm rúp.",
+      "phonetic": "Kilogramm krasnykh yablok stoit sto rubley.",
+      "tips": "«Рублей» là dạng cách 2 số nhiều sau số 100."
+    },
+    {
+      "id": "spk_3",
+      "text": "Взвесьте мне, пожалуйста, полкило сыра.",
+      "meaning": "Làm ơn cân giúp tôi nửa cân phô mai.",
+      "phonetic": "Vzves'te mne, pozhaluysta, polkilo syra.",
+      "tips": "«Полкило» là cách nói tắt thông dụng của nửa kilogram."
+    },
+    {
+      "id": "spk_4",
+      "text": "Можно оплатить покупку банковской картой?",
+      "meaning": "Tôi có thể thanh toán bằng thẻ ngân hàng được không?",
+      "phonetic": "Mozhno oplatit' pokupku bankovskoy kartoy?",
+      "tips": "«Банковской картой» ở cách 5 công cụ."
+    },
+    {
+      "id": "spk_5",
+      "text": "Конечно, приложите карту к терминалу.",
+      "meaning": "Tất nhiên rồi, mời bạn chạm thẻ vào máy thanh toán.",
+      "phonetic": "Konechno, prilozhite kartu k terminalu.",
+      "tips": "«Конечно» đọc biến âm «чн» thành /shn/: /kan'eshna/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Hãy mô tả bạn đi chợ mua hoa quả và đồ ăn: hỏi giá 2 mặt hàng và phương thức thanh toán bằng thẻ.",
+    "sampleGuidance": [
+      "Скажите, сколько стоит... (Cho tôi hỏi, giá bao nhiêu...)",
+      "Дайте мне, пожалуйста, два килограмма... (Cho tôi xin 2 cân...)",
+      "У вас есть свежий хлеб? (Ở đây có bánh mì tươi không?)",
+      "Я оплачу картой... (Tôi sẽ trả bằng thẻ...)"
+    ]
+  }
+}

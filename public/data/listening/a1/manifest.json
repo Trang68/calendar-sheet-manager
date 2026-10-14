@@ -4,9 +4,179 @@
     "file": "lesson-01.json",
     "title": "В кафе: Заказ еды и напитков",
     "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hội thoại thực tế: Gọi đồ uống & món ăn tại quán cà phê",
+    "questionCount": 8
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Давайте познакомимся: Как вас зовут?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Làm quen, hỏi tên tuổi, quốc tịch & ngành nghề",
+    "questionCount": 8
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "В библиотеке: Где лежит книга?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hỏi vị trí đồ dùng & mượn sách trong thư viện",
+    "questionCount": 8
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "В магазине одежды: Какой размер?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Mua sắm quần áo, thử size và màu sắc",
+    "questionCount": 8
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "В аптеке: Лекарства и здоровье",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Mua thuốc cảm sốt & hỏi thăm tình trạng sức khỏe",
+    "questionCount": 8
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Мой рабочий день: С утра до вечера",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Kể về lịch trình biểu hàng ngày của một chuyên viên IT",
+    "questionCount": 8
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "На вокзале: Покупка билета на поезд",
+    "badge": "A1 Nghe hiểu",
     "listeningTime": "12 phút",
-    "topic": "Hội thoại thực tế - Gọi đồ uống tại quán cà phê",
+    "topic": "Mua vé tàu hỏa đi Saint Petersburg tại nhà ga",
+    "questionCount": 8
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "В гостинице: Регистрация и номер",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Thủ tục nhận phòng tại khách sạn (Check-in)",
+    "questionCount": 8
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Семья и родственники: Кто кем работает?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Trò chuyện về các thành viên gia đình và nghề nghiệp",
+    "questionCount": 8
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "В аэропорту: Посадка на рейс",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Nghe thông báo chuyến bay và làm thủ tục hải quan",
+    "questionCount": 8
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Погода на выходные: Прогноз синоптиков",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Nghe bản tin dự báo thời tiết mùa đông và cuối tuần",
+    "questionCount": 8
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "В музее: Экскурсия по залам",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Nghe hướng dẫn viên thuyết minh tại bảo tàng nghệ thuật",
+    "questionCount": 8
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "У врача: Осмотр и рекомендации",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Khám sức khỏe tổng quát và đơn thuốc bác sĩ",
+    "questionCount": 8
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Спорт и хобби: Чем ты увлекаешься?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Nói về môn thể thao yêu thích và rèn luyện thân thể",
+    "questionCount": 8
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "В банке: Обмен валюты",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Đổi tiền ngoại tệ và mở tài khoản thẻ tại ngân hàng",
+    "questionCount": 8
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "В такси: Как проехать в центр?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Gọi xe taxi và chỉ đường đến Nhà hát Lớn Bolshoi",
+    "questionCount": 8
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "В ресторане: Традиционный русский обед",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Thưởng thức các món súp củ dền borscht, bánh kếp blini",
+    "questionCount": 8
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Телефонный разговор: Приглашение в кино",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Gọi điện thoại mời bạn bè đi xem phim chiếu rạp",
+    "questionCount": 8
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Праздник Новый год: Поздравления и подарки",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "11 phút",
+    "topic": "Không khí đón năm mới, cây thông và ông già tuyết Ded Moroz",
+    "questionCount": 8
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Итоговый экзамен: Диалог с преподавателем",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Phần thi vấn đáp kết thúc khóa học tiếng Nga trình độ A1",
     "questionCount": 8
   }
 ]
-

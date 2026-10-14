@@ -1,0 +1,56 @@
+{
+  "id": 6,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Мой день: Утро, день и вечер",
+  "speakingTime": "15 phút",
+  "topic": "Lịch trình hàng ngày: Thức dậy, làm việc, tập thể thao và nghỉ ngơi",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Обычно я просыпаюсь в семь часов утра.",
+      "meaning": "Thông thường tôi thức dậy lúc bảy giờ sáng.",
+      "phonetic": "Obychno ya prosypayus' v sem' chasov utra.",
+      "tips": "«Обычно» mang nghĩa thói quen lặp lại thường xuyên."
+    },
+    {
+      "id": "spk_2",
+      "text": "Я чищу зубы, умываюсь и делаю зарядку.",
+      "meaning": "Tôi đánh răng, rửa mặt và tập thể dục buổi sáng.",
+      "phonetic": "Ya chishchu zuby, umyvayus' i delayu zaryadku.",
+      "tips": "«Чищу» biến âm /chishchu/, «умываюсь» âm mềm."
+    },
+    {
+      "id": "spk_3",
+      "text": "В восемь часов я завтракаю и иду на работу.",
+      "meaning": "Lúc tám giờ tôi ăn sáng và đi làm việc.",
+      "phonetic": "V vosem' chasov ya zavtrakayu i idu na rabotu.",
+      "tips": "«Иду на работу» dùng giới từ «на» với công việc."
+    },
+    {
+      "id": "spk_4",
+      "text": "После работы я хожу в тренажёрный зал.",
+      "meaning": "Sau giờ làm tôi thường đến phòng tập thể hình.",
+      "phonetic": "Posle raboty ya khozhu v trenazhyornyy zal.",
+      "tips": "«Тренажёрный» trọng âm vào «ё»."
+    },
+    {
+      "id": "spk_5",
+      "text": "Вечером я отдыхаю и ложусь спать в одиннадцать.",
+      "meaning": "Buổi tối tôi nghỉ ngơi và đi ngủ lúc mười một giờ.",
+      "phonetic": "Vecherom ya otdykhayu i lozhus' spat' v odinnadtsat'.",
+      "tips": "«Ложусь спать» đọc liền mạch tự nhiên."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Kể ngắn gọn về một ngày điển hình của bạn từ sáng đến tối (3–5 câu).",
+    "sampleGuidance": [
+      "Утром я встаю в... (Buổi sáng tôi thức dậy lúc...)",
+      "Днём я работаю / учусь... (Ban ngày tôi làm việc / học...)",
+      "В час дня я обедаю... (Lúc 1 giờ trưa tôi ăn trưa...)",
+      "Вечером я люблю... (Buổi tối tôi thích...)"
+    ]
+  }
+}

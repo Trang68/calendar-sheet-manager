@@ -1,0 +1,264 @@
+{
+  "id": 4,
+  "title": "В магазине одежды: Какой размер?",
+  "listeningTime": "11 phút",
+  "topic": "Mua sắm quần áo, thử size và màu sắc",
+  "dialogue": [
+    {
+      "speaker": "Продавец",
+      "text": "Здравствуйте! Чем я могу вам помочь?"
+    },
+    {
+      "speaker": "Покупатель",
+      "text": "Здравствуйте! Я ищу тёплый зимний свитер."
+    },
+    {
+      "speaker": "Продавец",
+      "text": "Какой цвет вы предпочитаете?"
+    },
+    {
+      "speaker": "Покупатель",
+      "text": "Мне нравится синий или тёмно-серый."
+    },
+    {
+      "speaker": "Продавец",
+      "text": "Какой у вас размер одежды?"
+    },
+    {
+      "speaker": "Покупатель",
+      "text": "Размер М, сорок восьмой."
+    },
+    {
+      "speaker": "Продавец",
+      "text": "Вот отличный синий свитер из натуральной шерсти. Примерьте его."
+    },
+    {
+      "speaker": "Покупатель",
+      "text": "Где у вас примерочная кабина?"
+    },
+    {
+      "speaker": "Продавец",
+      "text": "Примерочные кабины находятся прямо и налево."
+    },
+    {
+      "speaker": "Покупатель",
+      "text": "Свитер подошёл идеально! Я его покупаю."
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe và gõ lại chính xác câu sau:",
+    "targetText": "Примерочные кабины находятся прямо и налево.",
+    "hint": "Gợi ý: Chú ý chính tả «находятся» và phương hướng «прямо и налево»."
+  },
+  "questions": [
+    {
+      "id": "l4_q1",
+      "lang": "ru",
+      "prompt": "Что ищет покупатель?",
+      "hint": "Món đồ khách cần mua.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Летнюю рубашку."
+        },
+        {
+          "key": "B",
+          "text": "Тёплый зимний свитер."
+        },
+        {
+          "key": "C",
+          "text": "Кожаную куртку."
+        },
+        {
+          "key": "D",
+          "text": "Чёрные брюки."
+        }
+      ],
+      "ans": "B",
+      "explain": "Покупатель: «Я ищу тёплый зимний свитер»."
+    },
+    {
+      "id": "l4_q2",
+      "lang": "ru",
+      "prompt": "Какой размер одежды у покупателя?",
+      "hint": "Kích cỡ áo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Размер S (44)."
+        },
+        {
+          "key": "B",
+          "text": "Размер M (48)."
+        },
+        {
+          "key": "C",
+          "text": "Размер L (52)."
+        },
+        {
+          "key": "D",
+          "text": "Размер XL (56)."
+        }
+      ],
+      "ans": "B",
+      "explain": "Покупатель: «Размер М, сорок восьмой»."
+    },
+    {
+      "id": "l4_q3",
+      "lang": "ru",
+      "prompt": "Из какого материала сделан свитер?",
+      "hint": "Chất liệu áo len.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Из хлопка."
+        },
+        {
+          "key": "B",
+          "text": "Из натуральной шерсти."
+        },
+        {
+          "key": "C",
+          "text": "Из шёлка."
+        },
+        {
+          "key": "D",
+          "text": "Из синтетики."
+        }
+      ],
+      "ans": "B",
+      "explain": "Продавец: «свитер из натуральной шерсти» (len tự nhiên)."
+    },
+    {
+      "id": "l4_q4",
+      "lang": "ru",
+      "prompt": "Где находятся примерочные кабины?",
+      "hint": "Vị trí phòng thử đồ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Справа у кассы."
+        },
+        {
+          "key": "B",
+          "text": "Прямо и налево."
+        },
+        {
+          "key": "C",
+          "text": "На втором этаже."
+        },
+        {
+          "key": "D",
+          "text": "Рядом со входом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Продавец: «Примерочные кабины находятся прямо и налево»."
+    },
+    {
+      "id": "l4_q5",
+      "lang": "vi",
+      "prompt": "Người mua thích những gam màu nào cho áo len?",
+      "hint": "Nghe màu sắc khách hàng yêu cầu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đỏ hoặc vàng."
+        },
+        {
+          "key": "B",
+          "text": "Xanh dương hoặc xám sẫm."
+        },
+        {
+          "key": "C",
+          "text": "Trắng tinh khôi."
+        },
+        {
+          "key": "D",
+          "text": "Xanh lá cây rực rỡ."
+        }
+      ],
+      "ans": "B",
+      "explain": "«синий или тёмно-серый» = xanh dương hoặc xám sẫm."
+    },
+    {
+      "id": "l4_q6",
+      "lang": "vi",
+      "prompt": "Từ «Примерочная» trong hội thoại có nghĩa là gì?",
+      "hint": "Căn phòng thử quần áo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quầy thanh toán."
+        },
+        {
+          "key": "B",
+          "text": "Phòng thử đồ."
+        },
+        {
+          "key": "C",
+          "text": "Kho hàng."
+        },
+        {
+          "key": "D",
+          "text": "Cửa thoát hiểm."
+        }
+      ],
+      "ans": "B",
+      "explain": "«Примерочная» là phòng thử đồ trong cửa hàng quần áo."
+    },
+    {
+      "id": "l4_q7",
+      "lang": "vi",
+      "prompt": "Kết quả sau khi người mua mặc thử chiếc áo là gì?",
+      "hint": "Lời nhận xét của khách.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Áo quá chật."
+        },
+        {
+          "key": "B",
+          "text": "Áo quá dài."
+        },
+        {
+          "key": "C",
+          "text": "Áo vừa vặn hoàn hảo và khách quyết định mua."
+        },
+        {
+          "key": "D",
+          "text": "Khách chê đắt và đi về."
+        }
+      ],
+      "ans": "C",
+      "explain": "Khách khen: «Свитер подошёл идеально! Я его покупаю»."
+    },
+    {
+      "id": "l4_q8",
+      "lang": "vi",
+      "prompt": "Từ «налево» mang nghĩa chỉ hướng nào?",
+      "hint": "Phương hướng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rẽ phải."
+        },
+        {
+          "key": "B",
+          "text": "Sang bên trái."
+        },
+        {
+          "key": "C",
+          "text": "Đi thẳng."
+        },
+        {
+          "key": "D",
+          "text": "Quay lại."
+        }
+      ],
+      "ans": "B",
+      "explain": "«налево» = sang bên trái."
+    }
+  ]
+}

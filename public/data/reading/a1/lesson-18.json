@@ -1,0 +1,305 @@
+{
+  "id": 18,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Письмо другу: Как я живу и учусь",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Kỹ năng viết thư & Tường thuật cuộc sống A1",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng viết thư (Структура письма)",
+      "rows": [
+        {
+          "word": "Дорого́й друг",
+          "gram": "lời xưng hô",
+          "meaning": "Bạn thân mến",
+          "example": "Дорогой друг Иван!"
+        },
+        {
+          "word": "Напиши́ мне",
+          "gram": "mệnh lệnh",
+          "meaning": "Hãy viết thư cho tôi",
+          "example": "Напиши мне ответ."
+        },
+        {
+          "word": "Жду отве́та",
+          "gram": "cụm từ",
+          "meaning": "Tôi đợi thư trả lời",
+          "example": "С нетерпением жду ответа."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Здравствуй, дорогой друг Алексей!",
+    "Большое спасибо за твоё письмо. Я был очень рад получить от тебя весточку.",
+    "Ты спрашиваешь, как я живу в Москве. У меня всё замечательно! Я уже привык к жизни здесь.",
+    "В университете у нас отличные преподаватели. Мы учим грамматику, читаем тексты и каждый день говорим по-русски.",
+    "В свободное время я часто хожу на выставки или гуляю по старым улицам города. Москва — прекрасна!",
+    "Как твои дела? Как твоя учёба? Напиши мне обо всём!\nКрепко обнимаю,\nТвой друг Минх."
+  ],
+  "questions": [
+    {
+      "id": "a1_r18_q1",
+      "lang": "ru",
+      "prompt": "Кому адресовано это письмо?",
+      "hint": "Xem tên người nhận ở đầu thư.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Антону"
+        },
+        {
+          "key": "B",
+          "text": "Алексею"
+        },
+        {
+          "key": "C",
+          "text": "Виктору"
+        },
+        {
+          "key": "D",
+          "text": "Борису"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bức thư mở đầu: «Здравствуй, дорогой друг Алексей!»."
+    },
+    {
+      "id": "a1_r18_q2",
+      "lang": "ru",
+      "prompt": "Кто написал это письмо?",
+      "hint": "Xem chữ ký ở cuối thư.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Минх"
+        },
+        {
+          "key": "B",
+          "text": "Иван"
+        },
+        {
+          "key": "C",
+          "text": "Дэвид"
+        },
+        {
+          "key": "D",
+          "text": "Сергей"
+        }
+      ],
+      "ans": "A",
+      "explain": "Cuối thư ký tên: «Твой друг Минх»."
+    },
+    {
+      "id": "a1_r18_q3",
+      "lang": "ru",
+      "prompt": "Где сейчас живёт и учится Минх?",
+      "hint": "Tìm địa điểm sống của Minh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Лондоне"
+        },
+        {
+          "key": "B",
+          "text": "В Москве"
+        },
+        {
+          "key": "C",
+          "text": "В Ханое"
+        },
+        {
+          "key": "D",
+          "text": "В Париже"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Ты спрашиваешь, как я живу в Москве»."
+    },
+    {
+      "id": "a1_r18_q4",
+      "lang": "ru",
+      "prompt": "Куда Минх часто ходит в свободное время?",
+      "hint": "Xem hoạt động rảnh rỗi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В клубы"
+        },
+        {
+          "key": "B",
+          "text": "На выставки и гуляет по старым улицам"
+        },
+        {
+          "key": "C",
+          "text": "На стадион"
+        },
+        {
+          "key": "D",
+          "text": "В больницу"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «я часто хожу на выставки или гуляю по старым улицам города»."
+    },
+    {
+      "id": "a1_r18_q5",
+      "lang": "ru",
+      "prompt": "Какая фраза часто используется в конце дружеского письма?",
+      "hint": "Lời tạm biệt ấm áp cuối thư.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Здравствуйте!"
+        },
+        {
+          "key": "B",
+          "text": "Крепко обнимаю / Твой друг"
+        },
+        {
+          "key": "C",
+          "text": "Сколько это стоит?"
+        },
+        {
+          "key": "D",
+          "text": "Приятного аппетита!"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Крепко обнимаю / Твой друг» là lời chào kết thư thân thiết."
+    },
+    {
+      "id": "a1_r18_q6",
+      "lang": "vi",
+      "prompt": "Từ «весточка» trong câu «получить весточку» có nghĩa là gì?",
+      "hint": "Từ thân mật chỉ tin tức/tin nhắn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Món quà lớn"
+        },
+        {
+          "key": "B",
+          "text": "Tin tức, lá thư ngắn từ ai đó"
+        },
+        {
+          "key": "C",
+          "text": "Lời trách móc"
+        },
+        {
+          "key": "D",
+          "text": "Bản hợp đồng"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Весточка» nghĩa là mẩu tin tức, tin nhắn tốt lành từ bạn bè."
+    },
+    {
+      "id": "a1_r18_q7",
+      "lang": "vi",
+      "prompt": "Từ «привыкнуть» trong câu «Я уже привык» có nghĩa là gì?",
+      "hint": "Trạng thái sau một thời gian thích nghi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đã quen với cuộc sống ở đây"
+        },
+        {
+          "key": "B",
+          "text": "Vẫn còn bỡ ngỡ"
+        },
+        {
+          "key": "C",
+          "text": "Muốn quay về"
+        },
+        {
+          "key": "D",
+          "text": "Bị ốm"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Я привык» nghĩa là 'Tôi đã quen rồi'."
+    },
+    {
+      "id": "a1_r18_q8",
+      "lang": "vi",
+      "prompt": "Từ «выставка» trong câu «хожу на выставки» có nghĩa là gì?",
+      "hint": "Nơi trưng bày các tác phẩm hoặc hiện vật.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Triển lãm"
+        },
+        {
+          "key": "B",
+          "text": "Hội chợ việc làm"
+        },
+        {
+          "key": "C",
+          "text": "Buổi hòa nhạc"
+        },
+        {
+          "key": "D",
+          "text": "Rạp xiếc"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Выставка» nghĩa là triển lãm."
+    },
+    {
+      "id": "a1_r18_q9",
+      "lang": "vi",
+      "prompt": "Cụm từ «Крепко обнимаю» ở cuối thư thể hiện điều gì?",
+      "hint": "Tình cảm thân thiết khi ôm bạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trang trọng xa cách"
+        },
+        {
+          "key": "B",
+          "text": "Cái ôm nồng ấm, thân thương"
+        },
+        {
+          "key": "C",
+          "text": "Lời xin lỗi"
+        },
+        {
+          "key": "D",
+          "text": "Lời hẹn giờ gặp"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Крепко обнимаю» (Ôm bạn thật chặt) là cách chào kết thư bạn bè rất phổ biến ở Nga."
+    },
+    {
+      "id": "a1_r18_q10",
+      "lang": "vi",
+      "prompt": "Cấu trúc mở đầu thư thân mật cho bạn nam là gì?",
+      "hint": "Tính từ дорогой đi với giống đực.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Дорогой друг..."
+        },
+        {
+          "key": "B",
+          "text": "Дорогая подруга..."
+        },
+        {
+          "key": "C",
+          "text": "Уважаемый господин..."
+        },
+        {
+          "key": "D",
+          "text": "Дорогие друзья..."
+        }
+      ],
+      "ans": "A",
+      "explain": "«Дорогой друг + [Tên bạn nam]» là lời chào chuẩn thân mật trong thư tiếng Nga."
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "id": 13,
+  "level": "A1",
+  "skill": "reading",
+  "title": "В кафе: Русская кухня и обед",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Ẩm thực Nga, Món ăn & Lời chúc ngon miệng",
+  "vocabCategories": [
+    {
+      "title": "Các món ăn truyền thống Nga (Русские блюда)",
+      "rows": [
+        {
+          "word": "борщ",
+          "gram": "danh từ giống đực",
+          "meaning": "súp củ dền đỏ Nga",
+          "example": "Борщ со сметаной очень вкусный."
+        },
+        {
+          "word": "пельме́ни",
+          "gram": "danh từ số nhiều",
+          "meaning": "bánh xếp thịt kiểu Nga",
+          "example": "Горячие пельмени."
+        },
+        {
+          "word": "блины́",
+          "gram": "danh từ số nhiều",
+          "meaning": "bánh xèo blini của Nga",
+          "example": "Блины с мёдом."
+        },
+        {
+          "word": "морс",
+          "gram": "danh từ giống đực",
+          "meaning": "nước quả rừng mát ngọt",
+          "example": "Ягодный морс."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Сегодня суббота. Мы с друзьями решили пообедать в уютном ресторане русской кухни.",
+    "В меню много традиционных блюд. На первое я заказал знаменитый русский борщ со сметаной.",
+    "На второе друзья взяли сибирские пельмени, а я выбрал жареную рыбу с картофельным пюре.",
+    "На десерт мы попробовали сладкие блины с клубничным вареньем và uống nước quả rừng (морс).",
+    "— Приятного аппетита! — сказали мы друг другу. Обед был просто великолепным!"
+  ],
+  "questions": [
+    {
+      "id": "a1_r13_q1",
+      "lang": "ru",
+      "prompt": "В какой день недели друзья пошли в ресторан?",
+      "hint": "Tìm thứ trong tuần ở câu 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В пятницу"
+        },
+        {
+          "key": "B",
+          "text": "В субботу"
+        },
+        {
+          "key": "C",
+          "text": "В воскресенье"
+        },
+        {
+          "key": "D",
+          "text": "В среду"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Сегодня суббота...» (Hôm nay là thứ Bảy)."
+    },
+    {
+      "id": "a1_r13_q2",
+      "lang": "ru",
+      "prompt": "Что автор заказал на первое блюдо?",
+      "hint": "Món đầu tiên (món súp).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Салат"
+        },
+        {
+          "key": "B",
+          "text": "Борщ со сметаной"
+        },
+        {
+          "key": "C",
+          "text": "Пельмени"
+        },
+        {
+          "key": "D",
+          "text": "Блины"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «На первое я заказал знаменитый русский борщ со сметаной»."
+    },
+    {
+      "id": "a1_r13_q3",
+      "lang": "ru",
+      "prompt": "Что друзья взяли на второе?",
+      "hint": "Món thứ hai (món chính).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Сибирские пельмени"
+        },
+        {
+          "key": "B",
+          "text": "Пиццу"
+        },
+        {
+          "key": "C",
+          "text": "Бургер"
+        },
+        {
+          "key": "D",
+          "text": "Кашу"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «На второе друзья взяли сибирские пельмени»."
+    },
+    {
+      "id": "a1_r13_q4",
+      "lang": "ru",
+      "prompt": "Какой десерт ели друзья?",
+      "hint": "Món tráng miệng ngọt ngào.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Мороженое"
+        },
+        {
+          "key": "B",
+          "text": "Торт"
+        },
+        {
+          "key": "C",
+          "text": "Сладкие блины с вареньем"
+        },
+        {
+          "key": "D",
+          "text": "Шоколад"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «На десерт мы попробовали сладкие блины с клубничным вареньем»."
+    },
+    {
+      "id": "a1_r13_q5",
+      "lang": "ru",
+      "prompt": "Что означает пожелание «Приятного аппетита!»?",
+      "hint": "Lời chúc trước khi ăn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chúc ngon miệng"
+        },
+        {
+          "key": "B",
+          "text": "Chúc ngủ ngon"
+        },
+        {
+          "key": "C",
+          "text": "Chúc may mắn"
+        },
+        {
+          "key": "D",
+          "text": "Chúc mừng sinh nhật"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Приятного аппетита!» nghĩa là chúc ăn ngon miệng."
+    },
+    {
+      "id": "a1_r13_q6",
+      "lang": "vi",
+      "prompt": "Món «борщ» của Nga được nấu từ loại củ đặc trưng nào tạo màu đỏ?",
+      "hint": "Loại củ màu đỏ tím thơm ngon.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cà rốt"
+        },
+        {
+          "key": "B",
+          "text": "Củ dền đỏ"
+        },
+        {
+          "key": "C",
+          "text": "Củ cải trắng"
+        },
+        {
+          "key": "D",
+          "text": "Cà chua"
+        }
+      ],
+      "ans": "B",
+      "explain": "Borsch là món súp củ dền đỏ nổi tiếng khắp thế giới của ẩm thực Đông Âu."
+    },
+    {
+      "id": "a1_r13_q7",
+      "lang": "vi",
+      "prompt": "«Сметана» thường ăn kèm với súp Borsch là gì?",
+      "hint": "Sản phẩm từ sữa lên men đặc trưng của Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Váng sữa chua (kem chua - sour cream)"
+        },
+        {
+          "key": "B",
+          "text": "Phô mai que"
+        },
+        {
+          "key": "C",
+          "text": "Bơ thực vật"
+        },
+        {
+          "key": "D",
+          "text": "Sữa đặc"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Сметана» là kem chua (sour cream), linh hồn của ẩm thực Nga."
+    },
+    {
+      "id": "a1_r13_q8",
+      "lang": "vi",
+      "prompt": "Món «пельмени» có nét tương đồng với món ăn nào của châu Á?",
+      "hint": "Vỏ bột mì bọc nhân thịt bên trong luộc chín.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bánh chưng"
+        },
+        {
+          "key": "B",
+          "text": "Bánh sủi cảo / hoành thánh"
+        },
+        {
+          "key": "C",
+          "text": "Nem rán"
+        },
+        {
+          "key": "D",
+          "text": "Bánh mì kẹp"
+        }
+      ],
+      "ans": "B",
+      "explain": "Pelmeni là bánh xếp nhân thịt luộc, rất giống sủi cảo."
+    },
+    {
+      "id": "a1_r13_q9",
+      "lang": "vi",
+      "prompt": "Thức uống «морс» trong bài được làm từ nguyên liệu gì?",
+      "hint": "Nguyên liệu từ rừng nước Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lá trà xanh"
+        },
+        {
+          "key": "B",
+          "text": "Các loại quả mọng rừng (dâu dại, nam việt quất...)"
+        },
+        {
+          "key": "C",
+          "text": "Hạt cà phê"
+        },
+        {
+          "key": "D",
+          "text": "Sữa bò"
+        }
+      ],
+      "ans": "B",
+      "explain": "Mors là thức uống nấu từ quả dâu rừng (cranberry, lingonberry...)."
+    },
+    {
+      "id": "a1_r13_q10",
+      "lang": "vi",
+      "prompt": "Từ «десерт» trong một bữa ăn dùng để chỉ điều gì?",
+      "hint": "Món ăn cuối cùng sau món chính.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Món khai vị"
+        },
+        {
+          "key": "B",
+          "text": "Món tráng miệng"
+        },
+        {
+          "key": "C",
+          "text": "Món súp lỏng"
+        },
+        {
+          "key": "D",
+          "text": "Khăn ăn"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Десерт» là món tráng miệng (bánh ngọt, hoa quả...)."
+    }
+  ]
+}

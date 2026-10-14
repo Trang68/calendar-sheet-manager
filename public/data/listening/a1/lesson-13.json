@@ -1,0 +1,254 @@
+{
+  "id": 13,
+  "level": "A1",
+  "skill": "listening",
+  "title": "У врача: Осмотр и рекомендации",
+  "listeningTime": "11 phút",
+  "topic": "Khám sức khỏe tổng quát và đơn thuốc bác sĩ",
+  "dialogue": [
+    {
+      "speaker": "Врач",
+      "text": "Добрый день! На что вы жалуетесь?"
+    },
+    {
+      "speaker": "Больной",
+      "text": "Здравствуйте, доктор. У меня уже три дня сильный кашель."
+    },
+    {
+      "speaker": "Врач",
+      "text": "Давайте я послушаю ваше дыхание. Дышите глубже... Не дышите..."
+    },
+    {
+      "speaker": "Больной",
+      "text": "Доктор, это грипп или бронхит?"
+    },
+    {
+      "speaker": "Врач",
+      "text": "В лёгких всё чисто. Это трахеит. Я выпишу вам сироп от кашля."
+    },
+    {
+      "speaker": "Больной",
+      "text": "Мне нужен больничный лист для работы?"
+    },
+    {
+      "speaker": "Врач",
+      "text": "Да, я выпишу больничный лист на пять дней. Соблюдайте постельный режим!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "Врач выписал сироп от кашля и больничный лист на пять дней.",
+    "hint": "Gợi ý: Từ «больничный лист» (giấy nghỉ ốm hưởng BHXH)."
+  },
+  "questions": [
+    {
+      "id": "l13_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Сильный кашель 3 дня."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «Сильный кашель 3 дня.»."
+    },
+    {
+      "id": "l13_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "Дышите глубже."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «Дышите глубже.»."
+    },
+    {
+      "id": "l13_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "Сироп от кашля."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «Сироп от кашля.»."
+    },
+    {
+      "id": "l13_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "На 5 дней."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «На 5 дней.»."
+    },
+    {
+      "id": "l13_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bệnh nhân ho nhiều trong 3 ngày."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Bệnh nhân ho nhiều trong 3 ngày.."
+    },
+    {
+      "id": "l13_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Nghe nhịp thở phổi của người bệnh."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Nghe nhịp thở phổi của người bệnh.."
+    },
+    {
+      "id": "l13_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Nghỉ ngơi tại giường bệnh."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Nghỉ ngơi tại giường bệnh.."
+    },
+    {
+      "id": "l13_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Cấp giấy nghỉ ốm 5 ngày."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Cấp giấy nghỉ ốm 5 ngày.."
+    }
+  ]
+}

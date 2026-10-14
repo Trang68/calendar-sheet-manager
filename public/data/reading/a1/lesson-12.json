@@ -1,0 +1,309 @@
+{
+  "id": 12,
+  "level": "A1",
+  "skill": "reading",
+  "title": "В магазине: Продукты и покупки",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Mua sắm, Thực phẩm & Giá tiền (Сколько стоит?)",
+  "vocabCategories": [
+    {
+      "title": "Thực phẩm thông dụng (Продукты)",
+      "rows": [
+        {
+          "word": "хлеб",
+          "gram": "danh từ giống đực",
+          "meaning": "bánh mì",
+          "example": "Купи свежий хлеб."
+        },
+        {
+          "word": "молоко́",
+          "gram": "danh từ giống trung",
+          "meaning": "sữa tươi",
+          "example": "Я пью молоко каждый день."
+        },
+        {
+          "word": "сыр",
+          "gram": "danh từ giống đực",
+          "meaning": "phô mai",
+          "example": "Вкусный сыр."
+        },
+        {
+          "word": "я́блоко",
+          "gram": "danh từ giống trung",
+          "meaning": "quả táo",
+          "example": "Свежие яблоки."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "— Здравствуйте! Чем я могу вам помочь?\n— Здравствуйте! Скажите, пожалуйста, сколько стоит этот белый хлеб?\n— Хлеб стоит сорок рублей.",
+    "— Дайте, пожалуйста, одну буханку хлеба, пакет молока и кусок сыра.",
+    "— Вот, пожалуйста. Что-нибудь ещё?\n— Да, взвесьте, пожалуйста, один килограмм красных яблок.\n— Хорошо. С вас всего двести пятьдесят рублей.",
+    "— Вот деньги.\n— Ваша сдача и чек. Спасибо за покупку, приходите ещё!"
+  ],
+  "questions": [
+    {
+      "id": "a1_r12_q1",
+      "lang": "ru",
+      "prompt": "Сколько стоит белый хлеб?",
+      "hint": "Xem giá bánh mì ở lượt thoại đầu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "20 рублей"
+        },
+        {
+          "key": "B",
+          "text": "30 рублей"
+        },
+        {
+          "key": "C",
+          "text": "40 рублей"
+        },
+        {
+          "key": "D",
+          "text": "50 рублей"
+        }
+      ],
+      "ans": "C",
+      "explain": "Người bán trả lời: «Хлеб стоит сорок (40) рублей»."
+    },
+    {
+      "id": "a1_r12_q2",
+      "lang": "ru",
+      "prompt": "Сколько яблок попросил покупатель?",
+      "hint": "Tìm lượng táo mua.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Один килограмм"
+        },
+        {
+          "key": "B",
+          "text": "Два килограмма"
+        },
+        {
+          "key": "C",
+          "text": "Три яблока"
+        },
+        {
+          "key": "D",
+          "text": "Полкило"
+        }
+      ],
+      "ans": "A",
+      "explain": "Khách nói: «Взвесьте, пожалуйста, один килограмм красных яблок»."
+    },
+    {
+      "id": "a1_r12_q3",
+      "lang": "ru",
+      "prompt": "Какова общая стоимость всей покупки?",
+      "hint": "Xem tổng số tiền.",
+      "options": [
+        {
+          "key": "A",
+          "text": "150 рублей"
+        },
+        {
+          "key": "B",
+          "text": "200 рублей"
+        },
+        {
+          "key": "C",
+          "text": "250 рублей"
+        },
+        {
+          "key": "D",
+          "text": "300 рублей"
+        }
+      ],
+      "ans": "C",
+      "explain": "Thu ngân báo: «С вас всего двести пятьдесят (250) рублей»."
+    },
+    {
+      "id": "a1_r12_q4",
+      "lang": "ru",
+      "prompt": "Что продавец отдаёт покупателю вместе с чеком?",
+      "hint": "Tiền thừa trả lại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Подарок"
+        },
+        {
+          "key": "B",
+          "text": "Сдачу"
+        },
+        {
+          "key": "C",
+          "text": "Ещё одно яблоко"
+        },
+        {
+          "key": "D",
+          "text": "Сумку"
+        }
+      ],
+      "ans": "B",
+      "explain": "Thu ngân nói: «Ваша сдача (tiền thừa) и чек»."
+    },
+    {
+      "id": "a1_r12_q5",
+      "lang": "ru",
+      "prompt": "Какая фраза используется для вопроса о цене?",
+      "hint": "Câu hỏi giá tiền.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Сколько это стоит?"
+        },
+        {
+          "key": "B",
+          "text": "Где это лежит?"
+        },
+        {
+          "key": "C",
+          "text": "Кто это сделал?"
+        },
+        {
+          "key": "D",
+          "text": "Как дела?"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Сколько это стоит?» là câu hỏi 'Cái này giá bao nhiêu?'."
+    },
+    {
+      "id": "a1_r12_q6",
+      "lang": "vi",
+      "prompt": "Từ «сдача» trong việc mua bán có nghĩa là gì?",
+      "hint": "Số tiền gửi lại khi trả thừa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hóa đơn thanh toán"
+        },
+        {
+          "key": "B",
+          "text": "Tiền thừa trả lại"
+        },
+        {
+          "key": "C",
+          "text": "Phiếu giảm giá"
+        },
+        {
+          "key": "D",
+          "text": "Tiền boa (tip)"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Сдача» là tiền thừa trả lại cho khách."
+    },
+    {
+      "id": "a1_r12_q7",
+      "lang": "vi",
+      "prompt": "Từ «чек» có nghĩa là gì?",
+      "hint": "Giấy in xác nhận mua hàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hóa đơn, biên lai tính tiền"
+        },
+        {
+          "key": "B",
+          "text": "Túi nilon"
+        },
+        {
+          "key": "C",
+          "text": "Thẻ ngân hàng"
+        },
+        {
+          "key": "D",
+          "text": "Tiền xu"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Чек» là hóa đơn / biên lai thanh toán."
+    },
+    {
+      "id": "a1_r12_q8",
+      "lang": "vi",
+      "prompt": "Lượng từ «буханка» đi với danh từ nào?",
+      "hint": "Đơn vị đếm bánh mì dạng ổ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sữa"
+        },
+        {
+          "key": "B",
+          "text": "Táo"
+        },
+        {
+          "key": "C",
+          "text": "Bánh mì (ổ/ổ bánh mì)"
+        },
+        {
+          "key": "D",
+          "text": "Nước khoáng"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Буханка хлеба» là một ổ bánh mì tròn/chữ nhật."
+    },
+    {
+      "id": "a1_r12_q9",
+      "lang": "vi",
+      "prompt": "Động từ «взвесить» (vui lòng cân giúp) dùng khi mua mặt hàng nào?",
+      "hint": "Mặt hàng tính theo kg.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sách báo"
+        },
+        {
+          "key": "B",
+          "text": "Hoa quả, thịt cá theo cân"
+        },
+        {
+          "key": "C",
+          "text": "Nước uống đóng chai"
+        },
+        {
+          "key": "D",
+          "text": "Quần áo"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Взвесить» nghĩa là cân (trọng lượng)."
+    },
+    {
+      "id": "a1_r12_q10",
+      "lang": "vi",
+      "prompt": "Người bán hàng nói «Приходите ещё!» để bày tỏ điều gì?",
+      "hint": "Lời chào mời lịch sự của người Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nhắc khách trả thêm tiền"
+        },
+        {
+          "key": "B",
+          "text": "Mời lần sau lại ghé mua hàng"
+        },
+        {
+          "key": "C",
+          "text": "Yêu cầu khách đi nhanh"
+        },
+        {
+          "key": "D",
+          "text": "Báo cửa hàng sắp đóng cửa"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Приходите ещё!» nghĩa là 'Lần sau quý khách lại ghé nhé!'."
+    }
+  ]
+}

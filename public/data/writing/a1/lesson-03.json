@@ -1,0 +1,65 @@
+{
+  "id": 3,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Моя комната: Описание интерьера",
+  "writingTime": "20 phút",
+  "topic": "Căn phòng của tôi: Miêu tả đồ đạc, bàn học và vị trí các vật dụng",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn ngắn miêu tả căn phòng ngủ hoặc góc học tập của bạn (35–60 từ).",
+  "requirements": [
+    "1. Giới thiệu căn phòng rộng hay hẹp, sáng sủa và ấm cúng.",
+    "2. Miêu tả vị trí các đồ nội thất chính (bàn học, giường, tủ sách, máy tính).",
+    "3. Sử dụng các trạng từ chỉ vị trí (слева, справа, в центре, на столе).",
+    "4. Bày tỏ cảm xúc của bạn về căn phòng."
+  ],
+  "cliches": [
+    {
+      "ru": "Это моя комната.",
+      "vi": "Đây là phòng của tôi."
+    },
+    {
+      "ru": "Она светлая и уютная.",
+      "vi": "Nó rất sáng sủa và ấm cúng."
+    },
+    {
+      "ru": "Справа у окна стоит большой стол.",
+      "vi": "Bên phải cạnh cửa sổ có một chiếc bàn lớn."
+    },
+    {
+      "ru": "На столе стоит мой компьютер.",
+      "vi": "Trên bàn có máy tính của tôi."
+    },
+    {
+      "ru": "Слева находится книжный шкаф.",
+      "vi": "Bên trái là tủ sách."
+    },
+    {
+      "ru": "Мне нравится здесь отдыхать.",
+      "vi": "Tôi thích nghỉ ngơi ở đây."
+    }
+  ],
+  "modelAnswer": "Это моя комната. Она небольшая, но очень светлая и уютная. В центре комнаты стоит удобный диван. Справа у окна находится мой письменный стол. На столе стоят ноутбук и лампа. Слева висит книжная полка, где лежат мои учебники. Мне очень нравится здесь учиться и отдыхать после занятий.",
+  "modelWordCount": 48,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

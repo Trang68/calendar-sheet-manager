@@ -1,0 +1,310 @@
+{
+  "id": 15,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Какая сегодня погода? Времена года",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Thời tiết, Bốn mùa & Khí hậu nước Nga",
+  "vocabCategories": [
+    {
+      "title": "Bốn mùa trong năm (Времена года)",
+      "rows": [
+        {
+          "word": "зима́ / зимо́й",
+          "gram": "danh từ / phó từ",
+          "meaning": "mùa đông / vào mùa đông",
+          "example": "Зимой идёт снег."
+        },
+        {
+          "word": "весна́ / весно́й",
+          "gram": "danh từ / phó từ",
+          "meaning": "mùa xuân / vào mùa xuân",
+          "example": "Весной цветут деревья."
+        },
+        {
+          "word": "ле́то / ле́том",
+          "gram": "danh từ / phó từ",
+          "meaning": "mùa hè / vào mùa hè",
+          "example": "Летом тепло и солнечно."
+        },
+        {
+          "word": "о́сень / о́сенью",
+          "gram": "danh từ / phó từ",
+          "meaning": "mùa thu / vào mùa thu",
+          "example": "Осенью идёт дождь."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "В России есть четыре времени года: зима, весна, лето и осень. Каждое время года прекрасно по-своему.",
+    "Зима в России холодная и снежная. На улице мороз, везде лежит белый пушистый снег. Люди катаются на лыжах и коньках.",
+    "Весной природа просыпается. Тает снег, светит яркое солнце và cây cối đâm chồi nảy lộc.",
+    "Лето — самое тёплое время года. Температура поднимается до тридцати градусов. Все едут отдыхать на море или на дачу.",
+    "Осенью деревья становятся золотыми и красными. Часто идут дожди, но это очень поэтичное время."
+  ],
+  "questions": [
+    {
+      "id": "a1_r15_q1",
+      "lang": "ru",
+      "prompt": "Сколько времён года в России?",
+      "hint": "Đếm các mùa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Два"
+        },
+        {
+          "key": "B",
+          "text": "Три"
+        },
+        {
+          "key": "C",
+          "text": "Четыре"
+        },
+        {
+          "key": "D",
+          "text": "Пять"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «В России есть четыре времени года»."
+    },
+    {
+      "id": "a1_r15_q2",
+      "lang": "ru",
+      "prompt": "Какая погода зимой в России?",
+      "hint": "Xem đoạn 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Жаркая и душная"
+        },
+        {
+          "key": "B",
+          "text": "Холодная и снежная"
+        },
+        {
+          "key": "C",
+          "text": "Дождливая"
+        },
+        {
+          "key": "D",
+          "text": "Тёплая"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Зима в России холодная и снежная» (lạnh giá và nhiều tuyết)."
+    },
+    {
+      "id": "a1_r15_q3",
+      "lang": "ru",
+      "prompt": "Что делают люди зимой на улице?",
+      "hint": "Các môn thể thao mùa đông.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Купаются в море"
+        },
+        {
+          "key": "B",
+          "text": "Катаются на лыжах и коньках"
+        },
+        {
+          "key": "C",
+          "text": "Загорают"
+        },
+        {
+          "key": "D",
+          "text": "Собирают грибы"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Люди катаются на лыжах и коньках» (trượt tuyết và trượt băng)."
+    },
+    {
+      "id": "a1_r15_q4",
+      "lang": "ru",
+      "prompt": "Куда едут люди отдыхать летом?",
+      "hint": "Xem nơi nghỉ mát mùa hè.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В горы на снег"
+        },
+        {
+          "key": "B",
+          "text": "На море или на дачу"
+        },
+        {
+          "key": "C",
+          "text": "В библиотеку"
+        },
+        {
+          "key": "D",
+          "text": "Сидят дома"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Все едут отдыхать на море или на дачу» (ra biển hoặc về nhà nghỉ ngoại ô)."
+    },
+    {
+      "id": "a1_r15_q5",
+      "lang": "ru",
+      "prompt": "Какими становятся деревья осенью?",
+      "hint": "Màu sắc mùa thu vàng nước Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Зелёными"
+        },
+        {
+          "key": "B",
+          "text": "Белыми"
+        },
+        {
+          "key": "C",
+          "text": "Золотыми и красными"
+        },
+        {
+          "key": "D",
+          "text": "Чёрными"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Осенью деревья становятся золотыми и красными» (vàng óng và đỏ)."
+    },
+    {
+      "id": "a1_r15_q6",
+      "lang": "vi",
+      "prompt": "Từ «мороз» trong tiếng Nga chỉ hiện tượng thời tiết nào?",
+      "hint": "Thời tiết mùa đông Nga dưới 0 độ C.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nắng gay gắt"
+        },
+        {
+          "key": "B",
+          "text": "Băng giá, rét buốt"
+        },
+        {
+          "key": "C",
+          "text": "Mưa rào"
+        },
+        {
+          "key": "D",
+          "text": "Gió nồm"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Мороз» nghĩa là trời rét căm căm, đóng băng dưới 0 độ C."
+    },
+    {
+      "id": "a1_r15_q7",
+      "lang": "vi",
+      "prompt": "Từ «снег» có nghĩa là gì?",
+      "hint": "Hiện tượng trắng xóa rơi vào mùa đông.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hạt mưa"
+        },
+        {
+          "key": "B",
+          "text": "Tuyết"
+        },
+        {
+          "key": "C",
+          "text": "Sương mù"
+        },
+        {
+          "key": "D",
+          "text": "Mưa đá"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Снег» nghĩa là tuyết."
+    },
+    {
+      "id": "a1_r15_q8",
+      "lang": "vi",
+      "prompt": "Từ «дача» của người Nga là địa điểm nào?",
+      "hint": "Nơi nghỉ ngơi trồng cây cuối tuần ở ngoại ô.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Căn hộ cao ốc trung tâm"
+        },
+        {
+          "key": "B",
+          "text": "Ngôi nhà vườn nghỉ dưỡng ở ngoại ô"
+        },
+        {
+          "key": "C",
+          "text": "Nhà máy"
+        },
+        {
+          "key": "D",
+          "text": "Khách sạn"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Дача» là nét văn hóa đặc trưng của Nga: ngôi nhà gỗ có vườn ở ngoại ô để nghỉ mát."
+    },
+    {
+      "id": "a1_r15_q9",
+      "lang": "vi",
+      "prompt": "Mùa nào trong năm được xem là 'mùa thu vàng' (Золотая осень) của nước Nga?",
+      "hint": "Mùa cây cối chuyển màu lá.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Зима"
+        },
+        {
+          "key": "B",
+          "text": "Весна"
+        },
+        {
+          "key": "C",
+          "text": "Лето"
+        },
+        {
+          "key": "D",
+          "text": "Осень"
+        }
+      ],
+      "ans": "D",
+      "explain": "«Осень» là mùa thu vàng trứ danh trong thi ca và hội họa Nga."
+    },
+    {
+      "id": "a1_r15_q10",
+      "lang": "vi",
+      "prompt": "Để hỏi 'Thời tiết hôm nay thế nào?', ta dùng câu nào?",
+      "hint": "Câu hỏi thời tiết thông dụng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Какая сегодня погода?"
+        },
+        {
+          "key": "B",
+          "text": "Сколько сейчас времени?"
+        },
+        {
+          "key": "C",
+          "text": "Куда вы идёте?"
+        },
+        {
+          "key": "D",
+          "text": "Кто сегодня дежурный?"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Какая сегодня погода?» nghĩa là 'Hôm nay thời tiết thế nào?'."
+    }
+  ]
+}

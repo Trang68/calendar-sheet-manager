@@ -1,0 +1,310 @@
+{
+  "id": 7,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Вы говорите по-русски?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Ngôn ngữ & Khả năng giao tiếp: Говорить, знать, понимать",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng về ngôn ngữ (Языки и наречия)",
+      "rows": [
+        {
+          "word": "по-ру́сски",
+          "gram": "phó từ",
+          "meaning": "bằng tiếng Nga",
+          "example": "Я говорю по-русски."
+        },
+        {
+          "word": "по-вьетна́мски",
+          "gram": "phó từ",
+          "meaning": "bằng tiếng Việt",
+          "example": "Он понимает по-вьетнамски."
+        },
+        {
+          "word": "хорошо́ / пло́хо",
+          "gram": "phó từ",
+          "meaning": "tốt, giỏi / kém, tồi",
+          "example": "Она хорошо говорит."
+        },
+        {
+          "word": "чуть-чу́ть",
+          "gram": "phó từ",
+          "meaning": "một chút, một ít",
+          "example": "Я знаю чуть-чуть."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "— Здравствуйте! Скажите, пожалуйста, вы говорите по-русски?\n— Да, я говорю по-русски, но пока ещё немного медленно.",
+    "Меня зовут Дэвид. Я приехал из Англии. Мой родной язык — английский.",
+    "Сейчас я живу в Москве и изучаю русский язык в институте. Русский язык очень красивый, но трудный.",
+    "Моя подруга Линь из Вьетнама. Она говорит по-вьетнамски, по-английски и уже хорошо понимает по-русски.",
+    "Мы часто говорим по-русски на уроках, потому что практика очень важна."
+  ],
+  "questions": [
+    {
+      "id": "a1_r7_q1",
+      "lang": "ru",
+      "prompt": "Откуда приехал Дэвид?",
+      "hint": "Đọc đoạn 2.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Из Франции"
+        },
+        {
+          "key": "B",
+          "text": "Из Англии"
+        },
+        {
+          "key": "C",
+          "text": "Из Вьетнама"
+        },
+        {
+          "key": "D",
+          "text": "Из России"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Меня зовут Дэвид. Я приехал из Англии»."
+    },
+    {
+      "id": "a1_r7_q2",
+      "lang": "ru",
+      "prompt": "Какой родной язык у Дэвида?",
+      "hint": "Ngôn ngữ mẹ đẻ của David.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Русский"
+        },
+        {
+          "key": "B",
+          "text": "Вьетнамский"
+        },
+        {
+          "key": "C",
+          "text": "Английский"
+        },
+        {
+          "key": "D",
+          "text": "Немецкий"
+        }
+      ],
+      "ans": "C",
+      "explain": "David nói: «Мой родной язык — английский»."
+    },
+    {
+      "id": "a1_r7_q3",
+      "lang": "ru",
+      "prompt": "На скольких языках говорит Линь?",
+      "hint": "Đếm số ngôn ngữ Linh biết.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только на одном"
+        },
+        {
+          "key": "B",
+          "text": "По-вьетнамски, по-английски и понимает по-русски"
+        },
+        {
+          "key": "C",
+          "text": "На пяти языках"
+        },
+        {
+          "key": "D",
+          "text": "Она не говорит"
+        }
+      ],
+      "ans": "B",
+      "explain": "Linh nói tiếng Việt, tiếng Anh và hiểu tốt tiếng Nga."
+    },
+    {
+      "id": "a1_r7_q4",
+      "lang": "ru",
+      "prompt": "Что Дэвид думает о русском языке?",
+      "hint": "Xem nhận xét về tiếng Nga ở đoạn 3.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Он некрасивый"
+        },
+        {
+          "key": "B",
+          "text": "Он очень красивый, но трудный"
+        },
+        {
+          "key": "C",
+          "text": "Он очень лёгкий"
+        },
+        {
+          "key": "D",
+          "text": "Он скучный"
+        }
+      ],
+      "ans": "B",
+      "explain": "David nhận xét: «Русский язык очень красивый, но трудный» (rất hay nhưng khó)."
+    },
+    {
+      "id": "a1_r7_q5",
+      "lang": "ru",
+      "prompt": "Почему студенты часто говорят по-русски на уроках?",
+      "hint": "Đọc câu cuối cùng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Потому что практика очень важна"
+        },
+        {
+          "key": "B",
+          "text": "Потому что они не знают других слов"
+        },
+        {
+          "key": "C",
+          "text": "Потому что это игра"
+        },
+        {
+          "key": "D",
+          "text": "Потому что так надо"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «Потому что практика очень важна» (vì luyện tập thực hành rất quan trọng)."
+    },
+    {
+      "id": "a1_r7_q6",
+      "lang": "vi",
+      "prompt": "Từ «медленно» trong câu «говорю ещё немного медленно» nghĩa là gì?",
+      "hint": "Trái nghĩa với «быстро» (nhanh).",
+      "options": [
+        {
+          "key": "A",
+          "text": "Trôi chảy"
+        },
+        {
+          "key": "B",
+          "text": "Chậm chạp, từ tốn"
+        },
+        {
+          "key": "C",
+          "text": "Lưu loát"
+        },
+        {
+          "key": "D",
+          "text": "Rất nhanh"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Медленно» nghĩa là chậm, từ từ."
+    },
+    {
+      "id": "a1_r7_q7",
+      "lang": "vi",
+      "prompt": "Cụm từ «родной язык» có nghĩa là gì?",
+      "hint": "Tiếng nói của dân tộc mình từ lúc sinh ra.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ngoại ngữ thứ hai"
+        },
+        {
+          "key": "B",
+          "text": "Tiếng mẹ đẻ"
+        },
+        {
+          "key": "C",
+          "text": "Tiếng lóng"
+        },
+        {
+          "key": "D",
+          "text": "Ngôn ngữ cổ đại"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Родной язык» là tiếng mẹ đẻ."
+    },
+    {
+      "id": "a1_r7_q8",
+      "lang": "vi",
+      "prompt": "Phó từ «чуть-чуть» tương đương với từ nào sau đây?",
+      "hint": "Chỉ mức độ rất nhỏ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Немного (một chút)"
+        },
+        {
+          "key": "B",
+          "text": "Очень много"
+        },
+        {
+          "key": "C",
+          "text": "Всегда"
+        },
+        {
+          "key": "D",
+          "text": "Никогда"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Чуть-чуть» nghĩa là một chút, một ít (đồng nghĩa với немного)."
+    },
+    {
+      "id": "a1_r7_q9",
+      "lang": "vi",
+      "prompt": "Động từ «говорить» đi với dạng nào sau đây khi nói về ngôn ngữ?",
+      "hint": "Dạng phó từ bắt đầu bằng по-.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Говорить русский"
+        },
+        {
+          "key": "B",
+          "text": "Говорить по-русски"
+        },
+        {
+          "key": "C",
+          "text": "Говорить в русский"
+        },
+        {
+          "key": "D",
+          "text": "Говорить на русский"
+        }
+      ],
+      "ans": "B",
+      "explain": "Trong tiếng Nga chuẩn: «говорить по-русски» (nói bằng tiếng Nga)."
+    },
+    {
+      "id": "a1_r7_q10",
+      "lang": "vi",
+      "prompt": "Từ «трудный» có nghĩa là gì?",
+      "hint": "Miêu tả sự không dễ dàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dễ hiểu"
+        },
+        {
+          "key": "B",
+          "text": "Khó khăn, phức tạp"
+        },
+        {
+          "key": "C",
+          "text": "Ngắn gọn"
+        },
+        {
+          "key": "D",
+          "text": "Vui vẻ"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Трудный» nghĩa là khó, gian nan."
+    }
+  ]
+}

@@ -1359,7 +1359,7 @@
           btn.className = 'lesson-chip' + (m.id === parseInt(currentLessonId, 10) ? ' active' : '');
           btn.setAttribute('data-lesson-id', m.id);
           btn.setAttribute('data-file', m.file);
-          const countLabel = m.questionCount ? ` (${m.questionCount} câu)` : (m.phrasesCount ? ` (${m.phrasesCount} mẫu câu)` : '');
+          const countLabel = m.questionCount ? ` (${m.questionCount} câu)` : (m.phraseCount ? ` (${m.phraseCount} câu)` : (m.targetWordRange ? ` (${m.targetWordRange})` : ''));
           btn.textContent = 'Bài ' + m.id + ': ' + (m.title.length > 36 ? m.title.slice(0, 34) + '...' : m.title) + countLabel;
           btn.addEventListener('click', () => {
             currentLessonId = m.id;

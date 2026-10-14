@@ -1,0 +1,57 @@
+{
+  "id": 9,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Как я провёл выходные",
+  "writingTime": "20 phút",
+  "topic": "Kỳ nghỉ cuối tuần: Những hoạt động thư giãn thú vị vừa qua",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn ngắn (40–65 từ) kể về những việc bạn đã làm vào thứ Bảy và Chủ nhật vừa rồi.",
+  "requirements": [
+    "1. Kể hoạt động vào thứ Bảy (dọn dẹp, đi chơi, mua sắm).",
+    "2. Kể hoạt động vào Chủ nhật (gặp bạn bè, xem phim, về thăm gia đình).",
+    "3. Cảm xúc sau những ngày nghỉ ngơi.",
+    "4. Sử dụng thì quá khứ của động từ (отдыхал, гулял, читал)."
+  ],
+  "cliches": [
+    {
+      "ru": "В прошлые выходные я отлично отдохнул.",
+      "vi": "Cuối tuần vừa rồi tôi đã nghỉ ngơi rất tuyệt."
+    },
+    {
+      "ru": "В субботу я ходил в кино с друзьями.",
+      "vi": "Thứ Bảy tôi đã đi xem phim cùng bạn bè."
+    },
+    {
+      "ru": "В воскресенье мы гуляли в парке.",
+      "vi": "Chủ nhật chúng tôi đã đi dạo trong công viên."
+    },
+    {
+      "ru": "Это были замечательные выходные!",
+      "vi": "Đó là những ngày cuối tuần thật tuyệt vời!"
+    }
+  ],
+  "modelAnswer": "В прошлые выходные я замечательно отдохнул. В субботу утром я выспался, сделал уборку в комнате, а днём пошёл в кинотеатр смотреть новый фильм. В воскресенье погода была тёплой, поэтому мы с друзьями долго гуляли в центральном парке и ели мороженое. Я набрался сил перед новой учебной неделей!",
+  "modelWordCount": 47,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

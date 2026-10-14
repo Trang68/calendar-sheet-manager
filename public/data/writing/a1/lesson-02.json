@@ -1,0 +1,61 @@
+{
+  "id": 2,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Моя семья: Рассказ о близких",
+  "writingTime": "20 phút",
+  "topic": "Gia đình thân yêu: Miêu tả bố mẹ, nghề nghiệp và tình cảm gia đình",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết một đoạn văn ngắn (35–60 từ) giới thiệu về các thành viên trong gia đình bạn.",
+  "requirements": [
+    "1. Nêu số lượng thành viên trong gia đình (bố, mẹ, anh chị em).",
+    "2. Giới thiệu nghề nghiệp của bố và mẹ.",
+    "3. Nêu hoạt động hoặc sở thích chung của cả gia đình vào cuối tuần.",
+    "4. Khẳng định tình cảm yêu thương, gắn bó."
+  ],
+  "cliches": [
+    {
+      "ru": "У меня дружная семья.",
+      "vi": "Tôi có một gia đình hòa thuận."
+    },
+    {
+      "ru": "Мой папа работает...",
+      "vi": "Bố tôi làm việc..."
+    },
+    {
+      "ru": "Моя мама — учительница.",
+      "vi": "Mẹ tôi là giáo viên."
+    },
+    {
+      "ru": "В выходные мы гуляем вместе.",
+      "vi": "Cuối tuần chúng tôi cùng đi dạo."
+    },
+    {
+      "ru": "Я очень люблю свою семью.",
+      "vi": "Tôi rất yêu gia đình của mình."
+    }
+  ],
+  "modelAnswer": "У меня большая и дружная семья. Нас четыре человека: папа, мама, младшая сестра и я. Мой папа работает инженером, а мама работает врачом в городской больнице. Моя сестра учится в школе. По выходным мы любим готовить вкусный обед и смотреть фильмы вместе. Я очень люблю мою семью!",
+  "modelWordCount": 48,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": 18,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Спорт в моей жизни",
+  "writingTime": "20 phút",
+  "topic": "Thể thao và sức khỏe: Môn thể thao tập luyện và lợi ích",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) kể về vai trò của thể thao và môn thể thao bạn thường chơi.",
+  "requirements": [
+    "1. Nêu môn thể thao bạn chơi (bóng đá, bơi, chạy bộ, cầu lông).",
+    "2. Tần suất tập luyện mỗi tuần và địa điểm tập.",
+    "3. Lợi ích sức khỏe và tinh thần mà thể thao mang lại.",
+    "4. Lời khuyên mọi người nên năng rèn luyện."
+  ],
+  "cliches": [
+    {
+      "ru": "Спорт играет важную роль в моей жизни.",
+      "vi": "Thể thao đóng vai trò quan trọng trong đời sống tôi."
+    },
+    {
+      "ru": "Я занимаюсь плаванием три раза в неделю.",
+      "vi": "Tôi tập bơi ba lần một tuần."
+    },
+    {
+      "ru": "Спорт даёт мне бодрость и энергию.",
+      "vi": "Thể thao tiếp cho tôi sự tỉnh táo và năng lượng."
+    },
+    {
+      "ru": "Здоровый образ жизни необходим каждому.",
+      "vi": "Lối sống lành mạnh là điều cần thiết cho mọi người."
+    }
+  ],
+  "modelAnswer": "Спорт занимает важное место в моей жизни. Я считаю, что физическая активность необходима каждому человеку для хорошего здоровья. Два раза в неделю я хожу в бассейн и плаваю, а по субботам играю в футбол с друзьями на стадионе. Спорт помогает мне снять стресс после учёбы, быть бодрым, сильным и жизнерадостным!",
+  "modelWordCount": 49,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

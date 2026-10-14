@@ -1,0 +1,56 @@
+{
+  "id": 8,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Времена года и погода",
+  "speakingTime": "15 phút",
+  "topic": "Thời tiết và bốn mùa: Miêu tả nắng mưa, tuyết trắng và nhiệt độ",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Какая сегодня прекрасная тёплая погода!",
+      "meaning": "Thời tiết hôm nay thật ấm áp và tuyệt vời làm sao!",
+      "phonetic": "Kakaya segodnya prekrasnaya tyoplaya pogoda!",
+      "tips": "«Сегодня» phát âm là /s'evodn'a/ (chữ «г» đọc như «в»)."
+    },
+    {
+      "id": "spk_2",
+      "text": "Летом в Москве тепло и светит яркое солнце.",
+      "meaning": "Vào mùa hè ở Moskva ấm áp và mặt trời chiếu sáng rực rỡ.",
+      "phonetic": "Letom v Moskve teplo i svetit yarkoye solntse.",
+      "tips": "«Солнце» nuốt chữ «л», phát âm là /sontse/."
+    },
+    {
+      "id": "spk_3",
+      "text": "Зимой часто идёт снег и дует холодный ветер.",
+      "meaning": "Mùa đông tuyết thường rơi và gió lạnh thổi mạnh.",
+      "phonetic": "Zimoy chasto idyot sneg i duyet kholodnyy veter.",
+      "tips": "«Снег» tận cùng đọc biến âm /sn'ek/."
+    },
+    {
+      "id": "spk_4",
+      "text": "Сегодня на улице минус десять градусов мороза.",
+      "meaning": "Hôm nay ngoài trời âm mười độ lạnh cóng.",
+      "phonetic": "Segodnya na ulitse minus desyat' gradusov moroza.",
+      "tips": "«Градусов» là cách 2 số nhiều sau số 10."
+    },
+    {
+      "id": "spk_5",
+      "text": "Осенью идут дожди, а деревья становятся жёлтыми.",
+      "meaning": "Mùa thu thường có mưa và cây cối ngả sang màu vàng óng.",
+      "phonetic": "Osen'yu idut dozhdi, a derev'ya stanovyatsya zhyoltymi.",
+      "tips": "«Осенью» có dấu mềm tách âm /os'en'yu/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Mô tả thời tiết của mùa bạn thích nhất trong năm bằng tiếng Nga (3–4 câu).",
+    "sampleGuidance": [
+      "Моё любимое время года — это... (Mùa yêu thích của tôi là...)",
+      "В это время года на улице... (Vào mùa này ngoài trời...)",
+      "Светит солнце / идёт снег... (Trời có nắng / tuyết rơi...)",
+      "Я очень люблю гулять, потому что... (Tôi rất thích đi dạo vì...)"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": 13,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Письмо из отпуска: Привет с моря!",
+  "writingTime": "20 phút",
+  "topic": "Bưu thiếp du lịch: Kể về chuyến nghỉ mát tại biển và lời hỏi thăm",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết một bưu thiếp hoặc lá thư ngắn (40–65 từ) gửi cho bạn từ khu nghỉ dưỡng ven biển.",
+  "requirements": [
+    "1. Nêu địa điểm bạn đang đi nghỉ (bãi biển, thành phố Nha Trang, Đà Nẵng, Sochi).",
+    "2. Miêu tả thời tiết nắng ấm, nước biển trong xanh.",
+    "3. Kể các hoạt động (tắm biển, phơi nắng, ăn hải sản).",
+    "4. Hứa sẽ gửi quà lưu niệm và lời chúc tốt lành."
+  ],
+  "cliches": [
+    {
+      "ru": "Привет из солнечного города!",
+      "vi": "Gửi lời chào từ thành phố đầy nắng!"
+    },
+    {
+      "ru": "Я сейчас отдыхаю на море.",
+      "vi": "Hiện tại tôi đang nghỉ mát ngoài biển."
+    },
+    {
+      "ru": "Погода здесь великолепная и тёплая.",
+      "vi": "Thời tiết ở đây tuyệt đẹp và ấm áp."
+    },
+    {
+      "ru": "Каждый день я купаюсь и загораю.",
+      "vi": "Mỗi ngày tôi đều tắm biển và tắm nắng."
+    },
+    {
+      "ru": "Скоро увидимся!",
+      "vi": "Sớm gặp lại bạn nhé!"
+    }
+  ],
+  "modelAnswer": "Привет, Виктор!\nПередаю тебе огромный тёплый привет из Дананга! Я сейчас отдыхаю на море. Погода здесь просто чудесная: каждый день светит жаркое солнце, а море чистое и тёплое. Утром я плаваю, а вечером гуляю по набережной и ем вкусные морепродукты. Я купил для тебя красивый сувенир. Скоро вернусь и всё расскажу!\nТвой друг.",
+  "modelWordCount": 52,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

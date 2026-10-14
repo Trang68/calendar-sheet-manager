@@ -1,0 +1,258 @@
+{
+  "id": 17,
+  "level": "A1",
+  "skill": "listening",
+  "title": "В ресторане: Традиционный русский обед",
+  "listeningTime": "12 phút",
+  "topic": "Thưởng thức các món súp củ dền borscht, bánh kếp blini",
+  "dialogue": [
+    {
+      "speaker": "Официант",
+      "text": "Здравствуйте! Вы готовы сделать заказ?"
+    },
+    {
+      "speaker": "Гость",
+      "text": "Да. Посоветуйте, пожалуйста, традиционные русские блюда."
+    },
+    {
+      "speaker": "Официант",
+      "text": "Рекомендую классический борщ со сметаной и домашние пельмени."
+    },
+    {
+      "speaker": "Гость",
+      "text": "Прекрасно! Принесите одну порцию борща и пельмени с говядиной."
+    },
+    {
+      "speaker": "Официант",
+      "text": "Что будете пить? У нас есть ягодный морс и квас."
+    },
+    {
+      "speaker": "Гость",
+      "text": "Один бокал холодного морса, пожалуйста."
+    },
+    {
+      "speaker": "Официант",
+      "text": "А на десерт желаете горячие русские блины с мёдом?"
+    },
+    {
+      "speaker": "Гость",
+      "text": "Да, с удовольствием попробую!"
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "Гость заказал классический борщ со сметаной и ягодный морс.",
+    "hint": "Gợi ý: Từ «борщ со сметаной» và thức uống «ягодный морс»."
+  },
+  "questions": [
+    {
+      "id": "l17_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Борщ и пельмени."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «Борщ и пельмени.»."
+    },
+    {
+      "id": "l17_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "С говядиной."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «С говядиной.»."
+    },
+    {
+      "id": "l17_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "Ягодный морс."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «Ягодный морс.»."
+    },
+    {
+      "id": "l17_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "Блины с мёдом."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «Блины с мёдом.»."
+    },
+    {
+      "id": "l17_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Súp borscht ăn kèm kem chua smetana."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Súp borscht ăn kèm kem chua smetana.."
+    },
+    {
+      "id": "l17_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Sủi cảo nhân thịt bò."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Sủi cảo nhân thịt bò.."
+    },
+    {
+      "id": "l17_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Nước dâu rừng (mors)."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Nước dâu rừng (mors).."
+    },
+    {
+      "id": "l17_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Bánh kếp blini với mật ong."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Bánh kếp blini với mật ong.."
+    }
+  ]
+}

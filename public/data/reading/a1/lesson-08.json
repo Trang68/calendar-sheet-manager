@@ -1,0 +1,310 @@
+{
+  "id": 8,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Моя семья: Большая и дружная",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Gia đình, Họ hàng & Tình cảm gia đình",
+  "vocabCategories": [
+    {
+      "title": "Thành viên gia đình (Члены семьи)",
+      "rows": [
+        {
+          "word": "па́па / оте́ц",
+          "gram": "danh từ giống đực",
+          "meaning": "bố, ba, cha",
+          "example": "Мой папа добрый."
+        },
+        {
+          "word": "ма́ма / мать",
+          "gram": "danh từ giống cái",
+          "meaning": "mẹ, má",
+          "example": "Мама вкусно готовит."
+        },
+        {
+          "word": "брат / сестра́",
+          "gram": "danh từ",
+          "meaning": "anh (em) trai / chị (em) gái",
+          "example": "У меня есть старший брат."
+        },
+        {
+          "word": "де́душка / ба́бушка",
+          "gram": "danh từ",
+          "meaning": "ông nội, ngoại / bà nội, ngoại",
+          "example": "Дедушка и бабушка на пенсии."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "У меня большая и дружная семья. Нас пять человек: папа, мама, старший брат, младшая сестра и я.",
+    "Моего папу зовут Андрей. Он работает инженером. Мою маму зовут Светлана, она преподаватель музыки.",
+    "Мой брат Виктор уже взрослый, ему двадцать четыре года. Он программист и работает в крупной компании.",
+    "Моей сестре Маше всего восемь лет, она учится во втором классе. Она очень любит рисовать кошек.",
+    "По воскресеньям мы все вместе собираемся на обед. Мы очень любим нашу семью!"
+  ],
+  "questions": [
+    {
+      "id": "a1_r8_q1",
+      "lang": "ru",
+      "prompt": "Сколько человек в семье автора?",
+      "hint": "Đọc câu: «Нас... человек».",
+      "options": [
+        {
+          "key": "A",
+          "text": "Три человека"
+        },
+        {
+          "key": "B",
+          "text": "Четыре человека"
+        },
+        {
+          "key": "C",
+          "text": "Пять человек"
+        },
+        {
+          "key": "D",
+          "text": "Шесть человек"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Нас пять человек»."
+    },
+    {
+      "id": "a1_r8_q2",
+      "lang": "ru",
+      "prompt": "Кем работает мама Светлана?",
+      "hint": "Tìm nghề của mẹ.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Инженер"
+        },
+        {
+          "key": "B",
+          "text": "Преподаватель музыки"
+        },
+        {
+          "key": "C",
+          "text": "Врач"
+        },
+        {
+          "key": "D",
+          "text": "Программист"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Мою маму зовут Светлана, она преподаватель музыки»."
+    },
+    {
+      "id": "a1_r8_q3",
+      "lang": "ru",
+      "prompt": "Сколько лет младшей сестре Маше?",
+      "hint": "Tìm tuổi của Masha.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Пять лет"
+        },
+        {
+          "key": "B",
+          "text": "Восемь лет"
+        },
+        {
+          "key": "C",
+          "text": "Десять лет"
+        },
+        {
+          "key": "D",
+          "text": "Двенадцать лет"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Моей сестре Маше всего восемь лет»."
+    },
+    {
+      "id": "a1_r8_q4",
+      "lang": "ru",
+      "prompt": "Что любит рисовать Маша?",
+      "hint": "Xem sở thích vẽ của cô bé.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Машины"
+        },
+        {
+          "key": "B",
+          "text": "Цветы"
+        },
+        {
+          "key": "C",
+          "text": "Кошек"
+        },
+        {
+          "key": "D",
+          "text": "Дома"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «Она очень любит рисовать кошек» (vẽ mèo)."
+    },
+    {
+      "id": "a1_r8_q5",
+      "lang": "ru",
+      "prompt": "Когда семья собирается вместе на обед?",
+      "hint": "Tìm ngày trong tuần.",
+      "options": [
+        {
+          "key": "A",
+          "text": "По понедельникам"
+        },
+        {
+          "key": "B",
+          "text": "По пятницам"
+        },
+        {
+          "key": "C",
+          "text": "По воскресеньям"
+        },
+        {
+          "key": "D",
+          "text": "Каждый вечер"
+        }
+      ],
+      "ans": "C",
+      "explain": "Bài viết: «По воскресеньям мы все вместе собираемся на обед» (vào các ngày chủ nhật)."
+    },
+    {
+      "id": "a1_r8_q6",
+      "lang": "vi",
+      "prompt": "Từ «старший брат» có nghĩa là gì?",
+      "hint": "Phân biệt старший và младший.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Em trai nhỏ"
+        },
+        {
+          "key": "B",
+          "text": "Anh trai lớn"
+        },
+        {
+          "key": "C",
+          "text": "Bác ruột"
+        },
+        {
+          "key": "D",
+          "text": "Bạn thân"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Старший брат» là anh trai lớn (ngược lại: младший брат là em trai)."
+    },
+    {
+      "id": "a1_r8_q7",
+      "lang": "vi",
+      "prompt": "Tính từ «дружная» trong «дружная семья» mang ý nghĩa gì?",
+      "hint": "Gia đình yêu thương gắn kết.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giàu có"
+        },
+        {
+          "key": "B",
+          "text": "Hòa thuận, gắn bó, đoàn kết"
+        },
+        {
+          "key": "C",
+          "text": "Nghiêm khắc"
+        },
+        {
+          "key": "D",
+          "text": "Đông đúc"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Дружная семья» là gia đình hòa thuận, đầm ấm, yêu thương nhau."
+    },
+    {
+      "id": "a1_r8_q8",
+      "lang": "vi",
+      "prompt": "Anh trai Viktor làm nghề gì?",
+      "hint": "Đọc đoạn về Viktor.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bác sĩ"
+        },
+        {
+          "key": "B",
+          "text": "Giáo viên"
+        },
+        {
+          "key": "C",
+          "text": "Lập trình viên (программист)"
+        },
+        {
+          "key": "D",
+          "text": "Nhà báo"
+        }
+      ],
+      "ans": "C",
+      "explain": "Viktor là lập trình viên (программист) làm việc cho công ty lớn."
+    },
+    {
+      "id": "a1_r8_q9",
+      "lang": "vi",
+      "prompt": "Từ «воскресенье» chỉ thứ mấy trong tuần?",
+      "hint": "Ngày nghỉ cuối tuần.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thứ Bảy"
+        },
+        {
+          "key": "B",
+          "text": "Chủ Nhật"
+        },
+        {
+          "key": "C",
+          "text": "Thứ Hai"
+        },
+        {
+          "key": "D",
+          "text": "Thứ Sáu"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Воскресенье» là ngày Chủ Nhật."
+    },
+    {
+      "id": "a1_r8_q10",
+      "lang": "vi",
+      "prompt": "Mẹ của tác giả tên là gì?",
+      "hint": "Tìm tên Svetlana.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Anna"
+        },
+        {
+          "key": "B",
+          "text": "Svetlana"
+        },
+        {
+          "key": "C",
+          "text": "Elena"
+        },
+        {
+          "key": "D",
+          "text": "Maria"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Мою маму зовут Светлана»."
+    }
+  ]
+}

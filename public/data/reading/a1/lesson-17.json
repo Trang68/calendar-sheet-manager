@@ -1,0 +1,310 @@
+{
+  "id": 17,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Выходной день: Куда мы идём?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Ngày nghỉ cuối tuần & Hướng di chuyển (Куда?)",
+  "vocabCategories": [
+    {
+      "title": "Địa điểm giải trí cuối tuần (Куда? - Cách 4)",
+      "rows": [
+        {
+          "word": "в парк",
+          "gram": "Cách 4",
+          "meaning": "đến công viên",
+          "example": "Мы идём в парк."
+        },
+        {
+          "word": "в теа́тр",
+          "gram": "Cách 4",
+          "meaning": "đến nhà hát",
+          "example": "Вечером я иду в театр."
+        },
+        {
+          "word": "в музе́й",
+          "gram": "Cách 4",
+          "meaning": "đến viện bảo tàng",
+          "example": "В воскресенье мы идём в музей."
+        },
+        {
+          "word": "на конце́рт",
+          "gram": "Cách 4",
+          "meaning": "đến buổi hòa nhạc",
+          "example": "Билеты на концерт."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Воскресенье — это мой любимый день. В этот день не нужно рано вставать и идти на занятия.",
+    "Вчера мы с друзьями решили, куда мы пойдём в воскресенье.",
+    "Сначала утром мы пойдём в Третьяковскую галерею. Там выставлены шедевры великих русских художников.",
+    "Днём мы погуляем в парке Горького, поедим мороженое и покатаемся на велосипедах.",
+    "А вечером у нас есть билеты в Большой театр на знаменитый балет «Лебединое озеро». Это будет незабываемый день!"
+  ],
+  "questions": [
+    {
+      "id": "a1_r17_q1",
+      "lang": "ru",
+      "prompt": "Куда утром пойдут друзья?",
+      "hint": "Tìm tên phòng tranh nổi tiếng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В зоопарк"
+        },
+        {
+          "key": "B",
+          "text": "В Третьяковскую галерею"
+        },
+        {
+          "key": "C",
+          "text": "В магазин"
+        },
+        {
+          "key": "D",
+          "text": "В кино"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Сначала утром мы пойдём в Третьяковскую галерею»."
+    },
+    {
+      "id": "a1_r17_q2",
+      "lang": "ru",
+      "prompt": "В каком парке друзья будут гулять днём?",
+      "hint": "Tìm tên công viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В парке Сокольники"
+        },
+        {
+          "key": "B",
+          "text": "В парке Горького"
+        },
+        {
+          "key": "C",
+          "text": "В парке Коломенское"
+        },
+        {
+          "key": "D",
+          "text": "В парке Зарядье"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Днём мы погуляем в парке Горького»."
+    },
+    {
+      "id": "a1_r17_q3",
+      "lang": "ru",
+      "prompt": "На какой балет у друзей есть билеты вечером?",
+      "hint": "Tên vở ballet huyền thoại của Tchaikovsky.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Щелкунчик»"
+        },
+        {
+          "key": "B",
+          "text": "«Лебединое озеро»"
+        },
+        {
+          "key": "C",
+          "text": "«Спящая красавица»"
+        },
+        {
+          "key": "D",
+          "text": "«Жизель»"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «на знаменитый балет «Лебединое озеро»» (Hồ Thiên Nga)."
+    },
+    {
+      "id": "a1_r17_q4",
+      "lang": "ru",
+      "prompt": "В какой театр пойдут друзья?",
+      "hint": "Nhà hát lớn nhất Moscow.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Большой театр"
+        },
+        {
+          "key": "B",
+          "text": "В Малый театр"
+        },
+        {
+          "key": "C",
+          "text": "В МХАТ"
+        },
+        {
+          "key": "D",
+          "text": "В Театр сатиры"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «билеты в Большой театр»."
+    },
+    {
+      "id": "a1_r17_q5",
+      "lang": "ru",
+      "prompt": "Вопрос «Куда?» используется для обозначения:",
+      "hint": "Hướng đến đâu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Места нахождения (Где?)"
+        },
+        {
+          "key": "B",
+          "text": "Направления движения (Đến đâu?)"
+        },
+        {
+          "key": "C",
+          "text": "Времени (Когда?)"
+        },
+        {
+          "key": "D",
+          "text": "Цены (Сколько?)"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Куда?» có nghĩa là 'Đi đâu / Về đâu?' (chỉ hướng di chuyển)."
+    },
+    {
+      "id": "a1_r17_q6",
+      "lang": "vi",
+      "prompt": "Phòng tranh «Третьяковская галерея» nổi tiếng thế giới trưng bày điều gì?",
+      "hint": "Tác phẩm nghệ thuật tạo hình.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bộ sưu tập tranh của các họa sĩ Nga kiệt xuất"
+        },
+        {
+          "key": "B",
+          "text": "Xe ô tô cổ"
+        },
+        {
+          "key": "C",
+          "text": "Vũ khí chiến tranh"
+        },
+        {
+          "key": "D",
+          "text": "Động vật quý hiếm"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bảo tàng Tretyakov là kho tàng hội họa Nga lớn nhất thế giới."
+    },
+    {
+      "id": "a1_r17_q7",
+      "lang": "vi",
+      "prompt": "Vở ballet «Лебединое озеро» có tên tiếng Việt là gì?",
+      "hint": "Tác phẩm của nhà soạn nhạc Tchaikovsky.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kẹp Hạt Dẻ"
+        },
+        {
+          "key": "B",
+          "text": "Hồ Thiên Nga"
+        },
+        {
+          "key": "C",
+          "text": "Người Đẹp Ngủ Trong Rừng"
+        },
+        {
+          "key": "D",
+          "text": "Romeo và Juliet"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Лебединое озеро» nghĩa là 'Hồ Thiên Nga'."
+    },
+    {
+      "id": "a1_r17_q8",
+      "lang": "vi",
+      "prompt": "Nhà hát «Большой театр» nằm ở thành phố nào của Nga?",
+      "hint": "Nhà hát Bolshoi ở thủ đô.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Saint-Petersburg"
+        },
+        {
+          "key": "B",
+          "text": "Moskva"
+        },
+        {
+          "key": "C",
+          "text": "Kazan"
+        },
+        {
+          "key": "D",
+          "text": "Sochi"
+        }
+      ],
+      "ans": "B",
+      "explain": "Nhà hát Bolshoi là biểu tượng văn hóa rực rỡ nằm tại thủ đô Moskva."
+    },
+    {
+      "id": "a1_r17_q9",
+      "lang": "vi",
+      "prompt": "Từ «шедевр» trong bài đọc mang ý nghĩa gì?",
+      "hint": "Tác phẩm đạt đỉnh cao nghệ thuật.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bức vẽ thử"
+        },
+        {
+          "key": "B",
+          "text": "Kiệt tác, tuyệt tác"
+        },
+        {
+          "key": "C",
+          "text": "Bản sao chép"
+        },
+        {
+          "key": "D",
+          "text": "Tranh biếm họa"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Шедевр» nghĩa là kiệt tác nghệ thuật."
+    },
+    {
+      "id": "a1_r17_q10",
+      "lang": "vi",
+      "prompt": "Từ «велосипед» là phương tiện gì?",
+      "hint": "Phương tiện hai bánh dùng sức đạp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xe máy"
+        },
+        {
+          "key": "B",
+          "text": "Xe đạp"
+        },
+        {
+          "key": "C",
+          "text": "Tàu điện ngầm"
+        },
+        {
+          "key": "D",
+          "text": "Xe buýt"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Велосипед» là xe đạp (кататься на велосипеде: đi xe đạp)."
+    }
+  ]
+}

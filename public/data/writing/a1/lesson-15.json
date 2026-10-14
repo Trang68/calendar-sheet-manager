@@ -1,0 +1,57 @@
+{
+  "id": 15,
+  "level": "A1",
+  "skill": "writing",
+  "title": "В библиотеке: Подготовка к занятиям",
+  "writingTime": "20 phút",
+  "topic": "Học tập tại thư viện: Mượn giáo trình và tra cứu tài liệu",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn ngắn (35–60 từ) kể về việc bạn đến thư viện trường học tập và mượn sách.",
+  "requirements": [
+    "1. Nêu thời điểm và lý do bạn đến thư viện (ôn thi, tìm sách).",
+    "2. Miêu tả không gian yên tĩnh và số lượng sách phong phú.",
+    "3. Kể việc trao đổi với thủ thư và mượn từ điển/giáo trình.",
+    "4. Cảm nghĩ về lợi ích của việc đọc sách."
+  ],
+  "cliches": [
+    {
+      "ru": "Вчера я ходил в университетскую библиотеку.",
+      "vi": "Hôm qua tôi đã đến thư viện trường đại học."
+    },
+    {
+      "ru": "Там очень тихо и удобно заниматься.",
+      "vi": "Ở đó rất yên tĩnh và thuận tiện học bài."
+    },
+    {
+      "ru": "Я взял большой русско-вьетнамский словарь.",
+      "vi": "Tôi đã mượn một cuốn từ điển Nga-Việt lớn."
+    },
+    {
+      "ru": "Чтение помогает мне лучше знать язык.",
+      "vi": "Đọc sách giúp tôi giỏi ngôn ngữ hơn."
+    }
+  ],
+  "modelAnswer": "После занятий я часто хожу в нашу университетскую библиотеку. Там всегда царит тишина и порядок. Я показал библиотекарю свой студенческий билет и взял новый учебник по грамматике и русско-английский словарь. В читальном зале я просидел два часа, делая конспекты к семинару. Библиотека — это лучшее место для серьёзной учёбы!",
+  "modelWordCount": 47,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

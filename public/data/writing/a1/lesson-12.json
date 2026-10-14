@@ -1,0 +1,61 @@
+{
+  "id": 12,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Приглашение на день рождения",
+  "writingTime": "20 phút",
+  "topic": "Thư mời sinh nhật: Thời gian, địa điểm và nội dung buổi tiệc",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết một bức thư ngắn (35–60 từ) mời bạn bè đến dự tiệc sinh nhật của bạn.",
+  "requirements": [
+    "1. Lời mời nhiệt tình và nêu lý do (tiệc sinh nhật).",
+    "2. Nêu chính xác thời gian và địa điểm tổ chức.",
+    "3. Kể sơ qua các hoạt động trong tiệc (ăn bánh ga-tô, nghe nhạc, trò chơi).",
+    "4. Đề nghị bạn xác nhận có thể đến hay không."
+  ],
+  "cliches": [
+    {
+      "ru": "Дорогой друг, приглашаю тебя на мой праздник!",
+      "vi": "Bạn thân mến, mời bạn đến ngày vui của tôi!"
+    },
+    {
+      "ru": "В эту субботу у меня день рождения.",
+      "vi": "Thứ Bảy tuần này là sinh nhật của tôi."
+    },
+    {
+      "ru": "Праздник начнётся в шесть часов вечера.",
+      "vi": "Bữa tiệc sẽ bắt đầu lúc 6 giờ tối."
+    },
+    {
+      "ru": "Мы будем есть торт и петь песни.",
+      "vi": "Chúng ta sẽ ăn bánh kem và hát hò."
+    },
+    {
+      "ru": "Жду тебя с нетерпением!",
+      "vi": "Rất mong chờ bạn đến!"
+    }
+  ],
+  "modelAnswer": "Дорогая Анна!\nВ эту субботу, двадцатого октября, у меня день рождения. Я приглашаю тебя в гости! Праздник начнётся в шесть часов вечера в кафе «Сказка». Мы будем есть праздничный торт, пить чай, слушать весёлую музыку и танцевать. Напиши мне, пожалуйста, сможешь ли ты прийти. Очень жду тебя!\nТвой друг Олег.",
+  "modelWordCount": 50,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

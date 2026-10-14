@@ -1,0 +1,57 @@
+{
+  "id": 17,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Экскурсия по музею",
+  "writingTime": "20 phút",
+  "topic": "Chuyến tham quan bảo tàng: Những bức tranh và di tích lịch sử",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Viết đoạn văn (40–65 từ) kể về trải nghiệm tham quan một viện bảo tàng nghệ thuật hoặc lịch sử.",
+  "requirements": [
+    "1. Nêu tên bảo tàng và thời gian bạn đến thăm.",
+    "2. Những hiện vật hoặc bức tranh bạn ấn tượng nhất.",
+    "3. Lắng nghe thuyết minh của hướng dẫn viên.",
+    "4. Nhận xét và cảm xúc sau chuyến đi."
+  ],
+  "cliches": [
+    {
+      "ru": "Недавно мы всем классом посетили музей.",
+      "vi": "Mới đây cả lớp chúng tôi đã đến thăm bảo tàng."
+    },
+    {
+      "ru": "Экскурсовод рассказал много интересного.",
+      "vi": "Hướng dẫn viên đã kể nhiều điều lý thú."
+    },
+    {
+      "ru": "Мне очень понравились старинные картины.",
+      "vi": "Tôi rất thích những bức tranh cổ kính."
+    },
+    {
+      "ru": "Это была познавательная поездка.",
+      "vi": "Đó là một chuyến đi mở mang nhiều kiến thức."
+    }
+  ],
+  "modelAnswer": "В прошлую пятницу мы с преподавателем ходили в Государственный исторический музей. Там собраны тысячи уникальных старинных экспонатов: древние монеты, оружие, книги и картины. Экскурсовод очень увлекательно рассказывал о богатой культуре и истории страны. Я узнал много нового и сделал прекрасные снимки на память. Эта экскурсия произвела на меня огромное впечатление!",
+  "modelWordCount": 49,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "id": 16,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Что вы любите делать в свободное время?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Sở thích cá nhân & Động từ Любить",
+  "vocabCategories": [
+    {
+      "title": "Động từ 'Thích' & Hành động (Глагол Любить)",
+      "rows": [
+        {
+          "word": "люби́ть",
+          "gram": "я люблю, ты любишь",
+          "meaning": "yêu, thích",
+          "example": "Я люблю спорт."
+        },
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ",
+          "meaning": "đi du lịch",
+          "example": "Мы любим путешествовать."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ",
+          "meaning": "đi dạo",
+          "example": "Вечером я гуляю в парке."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Свободное время — это прекрасная возможность отдохнуть и заняться любимым делом.",
+    "Моя подруга Катя очень любит читать русскую классику. Она прочитала много романов Толстого và thơ của Puskin.",
+    "Её брат Олег любит компьютеры. В свободное время он создаёт сайты и изучает программирование.",
+    "А я люблю путешествовать. Летом я ездил в Санкт-Петербург. Это великолепный город музеев, мостов и белых ночей.",
+    "А как вы проводите своё свободное время? Что вы любите делать?"
+  ],
+  "questions": [
+    {
+      "id": "a1_r16_q1",
+      "lang": "ru",
+      "prompt": "Что любит делать Катя в свободное время?",
+      "hint": "Xem sở thích của Katya.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Смотреть футбол"
+        },
+        {
+          "key": "B",
+          "text": "Читать русскую классику"
+        },
+        {
+          "key": "C",
+          "text": "Готовить еду"
+        },
+        {
+          "key": "D",
+          "text": "Танцевать"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Катя очень любит читать русскую классику»."
+    },
+    {
+      "id": "a1_r16_q2",
+      "lang": "ru",
+      "prompt": "Чем увлекается Олег?",
+      "hint": "Tìm sở thích của Oleg.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Компьютерами и программированием"
+        },
+        {
+          "key": "B",
+          "text": "Плаванием"
+        },
+        {
+          "key": "C",
+          "text": "Музыкой"
+        },
+        {
+          "key": "D",
+          "text": "Стихами"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «Олег любит компьютеры... создаёт сайты и изучает программирование»."
+    },
+    {
+      "id": "a1_r16_q3",
+      "lang": "ru",
+      "prompt": "Куда ездил автор летом?",
+      "hint": "Tìm thành phố du lịch.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Сочи"
+        },
+        {
+          "key": "B",
+          "text": "В Санкт-Петербург"
+        },
+        {
+          "key": "C",
+          "text": "В Казань"
+        },
+        {
+          "key": "D",
+          "text": "В Париж"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Летом я ездил в Санкт-Петербург»."
+    },
+    {
+      "id": "a1_r16_q4",
+      "lang": "ru",
+      "prompt": "Как автор описывает Санкт-Петербург?",
+      "hint": "Tìm nét nổi tiếng của thành phố này.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Город музеев, мостов и белых ночей"
+        },
+        {
+          "key": "B",
+          "text": "Маленькая деревня"
+        },
+        {
+          "key": "C",
+          "text": "Скучное место"
+        },
+        {
+          "key": "D",
+          "text": "Жаркий курорт"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «Это великолепный город музеев, мостов и белых ночей» (thành phố bảo tàng, những cây cầu và đêm trắng)."
+    },
+    {
+      "id": "a1_r16_q5",
+      "lang": "ru",
+      "prompt": "Форма глагола «любить» для местоимения «я»:",
+      "hint": "Chia động từ любить ngôi tôi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Любишь"
+        },
+        {
+          "key": "B",
+          "text": "Любит"
+        },
+        {
+          "key": "C",
+          "text": "Люблю"
+        },
+        {
+          "key": "D",
+          "text": "Любим"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Я люблю» (có biến âm б $\\rightarrow$ бл)."
+    },
+    {
+      "id": "a1_r16_q6",
+      "lang": "vi",
+      "prompt": "Hiện tượng «белые ночи» (đêm trắng) nổi tiếng ở thành phố nào của Nga?",
+      "hint": "Thành phố cố đô phương Bắc của Nga.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Moskva"
+        },
+        {
+          "key": "B",
+          "text": "Saint-Petersburg"
+        },
+        {
+          "key": "C",
+          "text": "Vladivostok"
+        },
+        {
+          "key": "D",
+          "text": "Novosibirsk"
+        }
+      ],
+      "ans": "B",
+      "explain": "Hiện tượng Đêm trắng (mặt trời không lặn hẳn vào mùa hè) trứ danh của Saint-Petersburg."
+    },
+    {
+      "id": "a1_r16_q7",
+      "lang": "vi",
+      "prompt": "Động từ «путешествовать» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Đi khám phá các vùng đất mới.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đi du lịch, đi phượt"
+        },
+        {
+          "key": "B",
+          "text": "Đi học"
+        },
+        {
+          "key": "C",
+          "text": "Đi siêu thị"
+        },
+        {
+          "key": "D",
+          "text": "Đi khám bệnh"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Путешествовать» nghĩa là đi du lịch."
+    },
+    {
+      "id": "a1_r16_q8",
+      "lang": "vi",
+      "prompt": "Từ «классика» trong «русская классика» chỉ điều gì?",
+      "hint": "Tác phẩm văn học có giá trị mẫu mực vượt thời gian.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Văn học kinh điển / cổ điển"
+        },
+        {
+          "key": "B",
+          "text": "Báo lá cải"
+        },
+        {
+          "key": "C",
+          "text": "Truyện tranh"
+        },
+        {
+          "key": "D",
+          "text": "Sách bài tập"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Русская классика» là nền văn học kinh điển Nga (Tolstoy, Pushkin, Chekhov...)."
+    },
+    {
+      "id": "a1_r16_q9",
+      "lang": "vi",
+      "prompt": "Từ «мост» trong tiếng Nga có nghĩa là gì?",
+      "hint": "Công trình bắc qua dòng sông.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cái cầu"
+        },
+        {
+          "key": "B",
+          "text": "Tàu thủy"
+        },
+        {
+          "key": "C",
+          "text": "Bờ đê"
+        },
+        {
+          "key": "D",
+          "text": "Bến cảng"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Мост» nghĩa là cây cầu."
+    },
+    {
+      "id": "a1_r16_q10",
+      "lang": "vi",
+      "prompt": "Sau động từ «любить», động từ đi kèm phải để ở dạng nào?",
+      "hint": "Dạng chia hay dạng nguyên mẫu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dạng nguyên mẫu (Инфинитив)"
+        },
+        {
+          "key": "B",
+          "text": "Dạng chia theo ngôi"
+        },
+        {
+          "key": "C",
+          "text": "Dạng quá khứ"
+        },
+        {
+          "key": "D",
+          "text": "Dạng mệnh lệnh"
+        }
+      ],
+      "ans": "A",
+      "explain": "Sau любить là động từ nguyên mẫu: ví dụ: «Я люблю читать», «Мы любим гулять»."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": 4,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В ресторане: Заказ вкусного обеда",
+  "speakingTime": "15 phút",
+  "topic": "Giao tiếp ẩm thực: Gọi món, hỏi thực đơn và thanh toán",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Web Speech Recognition. Nhấn nút Loa 🔊 để nghe phát âm chuẩn, sau đó nhấn nút Mic 🎙️ để phát âm và nhận phản hồi chấm điểm trực tiếp!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Официант, принесите нам меню, пожалуйста.",
+      "meaning": "Bồi bàn ơi, làm ơn mang cho chúng tôi thực đơn.",
+      "phonetic": "Ofitsiant, prinesite nam menyu, pozhaluysta.",
+      "tips": "Từ «меню» là danh từ bất biến giống trung."
+    },
+    {
+      "id": "spk_2",
+      "text": "Что вы нам посоветуете на первое?",
+      "meaning": "Bạn gợi ý cho chúng tôi món khai vị / món súp nào?",
+      "phonetic": "Chto vy nam posovetuyete na pervoye?",
+      "tips": "«На первое» mang nghĩa là món súp đầu tiên trong bữa ăn Nga."
+    },
+    {
+      "id": "spk_3",
+      "text": "Я буду горячий борщ со сметаной.",
+      "meaning": "Tôi sẽ dùng món súp củ dền nóng với kem chua.",
+      "phonetic": "Ya budu goryachiy borshch so smetanoy.",
+      "tips": "Âm «щ» trong «борщ» là âm xuýt mềm dài: /borshch/."
+    },
+    {
+      "id": "spk_4",
+      "text": "Дайте, пожалуйста, минеральную воду без газа.",
+      "meaning": "Làm ơn cho tôi một chai nước khoáng không ga.",
+      "phonetic": "Dayte, pozhaluysta, mineral'nuyu vodu bez gaza.",
+      "tips": "«Без газа» là cách 2 sau giới từ «без»."
+    },
+    {
+      "id": "spk_5",
+      "text": "Принесите, пожалуйста, счёт. Спасибо!",
+      "meaning": "Làm ơn mang hóa đơn thanh toán cho tôi. Xin cảm ơn!",
+      "phonetic": "Prinesite, pozhaluysta, schyot. Spasibo!",
+      "tips": "«Счёт» đọc phát âm như chữ «щ»: /shchot/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Đóng vai khách hàng tại nhà hàng Nga, hãy gọi 1 món súp, 1 món chính, 1 đồ uống và yêu cầu tính tiền.",
+    "sampleGuidance": [
+      "Здравствуйте! Дайте мне, пожалуйста... (Xin chào! Cho tôi xin...)",
+      "На первое я хочу заказать... (Món đầu tiên tôi muốn gọi...)",
+      "А пить я буду... (Còn uống thì tôi sẽ dùng...)",
+      "Сколько это стоит? Принесите счёт... (Bao nhiêu tiền? Cho tôi xin hóa đơn...)"
+    ]
+  }
+}

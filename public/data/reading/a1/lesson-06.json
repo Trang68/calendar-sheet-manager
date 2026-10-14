@@ -1,0 +1,309 @@
+{
+  "id": 6,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Что вы делаете каждый день?",
+  "badge": "A1 Đọc hiểu",
+  "readingTime": "12 phút",
+  "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+  "topic": "Các hoạt động hàng ngày & Động từ nhóm I",
+  "vocabCategories": [
+    {
+      "title": "Động từ nhóm I thì hiện tại (Глаголы I спряжения)",
+      "rows": [
+        {
+          "word": "чита́ть",
+          "gram": "я читаю, ты читаешь",
+          "meaning": "đọc",
+          "example": "Я читаю газету."
+        },
+        {
+          "word": "писа́ть",
+          "gram": "я пишу, ты пишешь",
+          "meaning": "viết",
+          "example": "Студент пишет письмо."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "я понимаю, ты понимаешь",
+          "meaning": "hiểu",
+          "example": "Вы понимаете по-русски?"
+        },
+        {
+          "word": "де́лать",
+          "gram": "я делаю, ты делаешь",
+          "meaning": "làm",
+          "example": "Что ты делаешь вечером?"
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Каждый день студенты много занимаются. Утром они слушают лекции.",
+    "Преподаватель объясняет правило, а студенты внимательно слушают.",
+    "Потом они читают тексты и отвечают на вопросы. Дома они делают домашнее задание.",
+    "Вечером Антон отдыхает, слушает музыку и читает интересные книги."
+  ],
+  "questions": [
+    {
+      "id": "a1_r6_q1",
+      "lang": "ru",
+      "prompt": "Что делают студенты утром?",
+      "hint": "Đọc câu 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Спят"
+        },
+        {
+          "key": "B",
+          "text": "Слушают лекции"
+        },
+        {
+          "key": "C",
+          "text": "Гуляют в парке"
+        },
+        {
+          "key": "D",
+          "text": "Смотрят фильм"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Утром они слушают лекции»."
+    },
+    {
+      "id": "a1_r6_q2",
+      "lang": "ru",
+      "prompt": "Что делает преподаватель на уроке?",
+      "hint": "Tìm hành động của thầy giáo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Объясняет правило"
+        },
+        {
+          "key": "B",
+          "text": "Отдыхает"
+        },
+        {
+          "key": "C",
+          "text": "Пишет письмо домой"
+        },
+        {
+          "key": "D",
+          "text": "Поёт песню"
+        }
+      ],
+      "ans": "A",
+      "explain": "Bài viết: «Преподаватель объясняет правило» (giải thích quy tắc)."
+    },
+    {
+      "id": "a1_r6_q3",
+      "lang": "ru",
+      "prompt": "Форма глагола «читать» для местоимения «я»:",
+      "hint": "Chia động từ nhóm I cho ngôi я.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Читает"
+        },
+        {
+          "key": "B",
+          "text": "Читаешь"
+        },
+        {
+          "key": "C",
+          "text": "Читаю"
+        },
+        {
+          "key": "D",
+          "text": "Читают"
+        }
+      ],
+      "ans": "C",
+      "explain": "Động từ nhóm I ngôi «я» có đuôi -ю $\\rightarrow$ «я читаю»."
+    },
+    {
+      "id": "a1_r6_q4",
+      "lang": "ru",
+      "prompt": "Что делает Антон вечером?",
+      "hint": "Xem đoạn cuối.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Работает на заводе"
+        },
+        {
+          "key": "B",
+          "text": "Отдыхает, слушает музыку и читает"
+        },
+        {
+          "key": "C",
+          "text": "Спит весь вечер"
+        },
+        {
+          "key": "D",
+          "text": "Пишет тест"
+        }
+      ],
+      "ans": "B",
+      "explain": "Bài viết: «Вечером Антон отдыхает, слушает музыку и читает»."
+    },
+    {
+      "id": "a1_r6_q5",
+      "lang": "ru",
+      "prompt": "Что означает наречие «внимательно»?",
+      "hint": "Cách thức lắng nghe bài giảng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Нhanh chóng"
+        },
+        {
+          "key": "B",
+          "text": "Chăm chú, chú ý"
+        },
+        {
+          "key": "C",
+          "text": "Ồn ào"
+        },
+        {
+          "key": "D",
+          "text": "Chậm chạp"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Внимательно» nghĩa là chăm chú, tập trung."
+    },
+    {
+      "id": "a1_r6_q6",
+      "lang": "vi",
+      "prompt": "Động từ «отвечать» trong câu «отвечают на вопросы» nghĩa là gì?",
+      "hint": "Hành động phản hồi câu hỏi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đặt câu hỏi"
+        },
+        {
+          "key": "B",
+          "text": "Trả lời câu hỏi"
+        },
+        {
+          "key": "C",
+          "text": "Bỏ qua câu hỏi"
+        },
+        {
+          "key": "D",
+          "text": "Quên câu hỏi"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Отвечать на вопросы» là trả lời các câu hỏi."
+    },
+    {
+      "id": "a1_r6_q7",
+      "lang": "vi",
+      "prompt": "Cụm từ «домашнее задание» có nghĩa là gì?",
+      "hint": "Việc cần làm ở nhà sau buổi học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Việc nhà (lau dọn)"
+        },
+        {
+          "key": "B",
+          "text": "Bài tập về nhà"
+        },
+        {
+          "key": "C",
+          "text": "Nấu bữa tối"
+        },
+        {
+          "key": "D",
+          "text": "Đi chợ mua thức ăn"
+        }
+      ],
+      "ans": "B",
+      "explain": "«Домашнее задание» nghĩa là bài tập về nhà."
+    },
+    {
+      "id": "a1_r6_q8",
+      "lang": "vi",
+      "prompt": "Ngôi «мы» (chúng tôi) đi với đuôi động từ nhóm I nào?",
+      "hint": "Đuôi chia hiện tại của ngôi chúng tôi.",
+      "options": [
+        {
+          "key": "A",
+          "text": "-ем / -ём"
+        },
+        {
+          "key": "B",
+          "text": "-ете"
+        },
+        {
+          "key": "C",
+          "text": "-ут / -ют"
+        },
+        {
+          "key": "D",
+          "text": "-ите"
+        }
+      ],
+      "ans": "A",
+      "explain": "Ngôi «мы» chia với đuôi -ем/-ём (ví dụ: мы читаем, мы делаем)."
+    },
+    {
+      "id": "a1_r6_q9",
+      "lang": "vi",
+      "prompt": "Từ «утром» chỉ thời điểm nào trong ngày?",
+      "hint": "Buổi đầu tiên trong ngày.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vào buổi sáng"
+        },
+        {
+          "key": "B",
+          "text": "Vào buổi trưa"
+        },
+        {
+          "key": "C",
+          "text": "Vào buổi chiều"
+        },
+        {
+          "key": "D",
+          "text": "Vào ban đêm"
+        }
+      ],
+      "ans": "A",
+      "explain": "«Утром» nghĩa là vào buổi sáng."
+    },
+    {
+      "id": "a1_r6_q10",
+      "lang": "vi",
+      "prompt": "Từ «каждый день» có nghĩa là gì?",
+      "hint": "Tần suất diễn ra hàng ngày.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hàng tuần"
+        },
+        {
+          "key": "B",
+          "text": "Hàng tháng"
+        },
+        {
+          "key": "C",
+          "text": "Mỗi ngày, hàng ngày"
+        },
+        {
+          "key": "D",
+          "text": "Thỉnh thoảng"
+        }
+      ],
+      "ans": "C",
+      "explain": "«Каждый день» nghĩa là mỗi ngày, ngày nào cũng vậy."
+    }
+  ]
+}

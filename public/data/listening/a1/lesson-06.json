@@ -1,0 +1,266 @@
+{
+  "id": 6,
+  "level": "A1",
+  "skill": "listening",
+  "title": "Мой рабочий день: С утра до вечера",
+  "listeningTime": "11 phút",
+  "topic": "Kể về lịch trình biểu hàng ngày của một chuyên viên IT",
+  "dialogue": [
+    {
+      "speaker": "Иван",
+      "text": "Алексей, во сколько ты обычно встаёшь утром?"
+    },
+    {
+      "speaker": "Алексей",
+      "text": "Я встаю рано, в семь часов утра. Делаю зарядку и пью кофе."
+    },
+    {
+      "speaker": "Иван",
+      "text": "Когда начинается твой рабочий день?"
+    },
+    {
+      "speaker": "Алексей",
+      "text": "Работа в офисе начинается ровно в девять часов."
+    },
+    {
+      "speaker": "Иван",
+      "text": "А где ты обедаешь?"
+    },
+    {
+      "speaker": "Алексей",
+      "text": "В час дня я обедаю в нашей столовой с коллегами."
+    },
+    {
+      "speaker": "Иван",
+      "text": "Во сколько ты возвращаешься домой?"
+    },
+    {
+      "speaker": "Алексей",
+      "text": "В шесть вечера я заканчиваю работу и еду домой на метро."
+    },
+    {
+      "speaker": "Иван",
+      "text": "Что ты делаешь вечером?"
+    },
+    {
+      "speaker": "Алексей",
+      "text": "Вечером я отдыхаю, читаю книги или смотрю фильмы."
+    }
+  ],
+  "dictation": {
+    "title": "Chép chính tả (Диктант)",
+    "instruction": "Nghe câu audio và viết lại chính xác bằng tiếng Nga vào ô bên dưới:",
+    "targetText": "Я встаю в семь часов утра и делаю утреннюю зарядку.",
+    "hint": "Gợi ý: Chú ý số từ «в семь часов» và tính từ «утреннюю»."
+  },
+  "questions": [
+    {
+      "id": "l6_q1",
+      "lang": "ru",
+      "prompt": "Вопрос 1 по диалогу: что упомянуто?",
+      "hint": "Tìm chi tiết trong lời thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В 7:00 утра."
+        },
+        {
+          "key": "B",
+          "text": "Другой вариант ответа."
+        },
+        {
+          "key": "C",
+          "text": "Неверная информация."
+        },
+        {
+          "key": "D",
+          "text": "В тексте не сказано."
+        }
+      ],
+      "ans": "A",
+      "explain": "Chi tiết được nêu chính xác trong lời thoại: «В 7:00 утра.»."
+    },
+    {
+      "id": "l6_q2",
+      "lang": "ru",
+      "prompt": "Вопрос 2: уточните факт из беседы.",
+      "hint": "Chi tiết thứ hai trong đối thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Не подходит по смыслу."
+        },
+        {
+          "key": "B",
+          "text": "В 9:00 часов."
+        },
+        {
+          "key": "C",
+          "text": "Ошибочное утверждение."
+        },
+        {
+          "key": "D",
+          "text": "Никто не говорил об этом."
+        }
+      ],
+      "ans": "B",
+      "explain": "Câu trả lời chuẩn theo bài nghe: «В 9:00 часов.»."
+    },
+    {
+      "id": "l6_q3",
+      "lang": "ru",
+      "prompt": "Вопрос 3: выберите правильное действие или предмет.",
+      "hint": "Quan sát thông tin người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Совершенно другой факт."
+        },
+        {
+          "key": "B",
+          "text": "Ошибка в деталях."
+        },
+        {
+          "key": "C",
+          "text": "В столовой."
+        },
+        {
+          "key": "D",
+          "text": "Ничего подобного."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chính xác theo nội dung hội thoại: «В столовой.»."
+    },
+    {
+      "id": "l6_q4",
+      "lang": "ru",
+      "prompt": "Вопрос 4: каков финал или важный вывод разговора?",
+      "hint": "Phần kết của đoạn hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Планы отменились."
+        },
+        {
+          "key": "B",
+          "text": "Собеседники поспорили."
+        },
+        {
+          "key": "C",
+          "text": "Не удалось договориться."
+        },
+        {
+          "key": "D",
+          "text": "На метро."
+        }
+      ],
+      "ans": "D",
+      "explain": "Kết thúc đoạn hội thoại xác nhận: «На метро.»."
+    },
+    {
+      "id": "l6_q5",
+      "lang": "vi",
+      "prompt": "Chủ đề chính của đoạn hội thoại nghe được là gì?",
+      "hint": "Khái quát bối cảnh giao tiếp.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sinh hoạt hàng ngày và công việc."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi về thời tiết."
+        },
+        {
+          "key": "C",
+          "text": "Học ngữ pháp nâng cao C1."
+        },
+        {
+          "key": "D",
+          "text": "Đặt vé máy bay khẩn cấp."
+        }
+      ],
+      "ans": "A",
+      "explain": "Hội thoại xoay quanh chủ đề: Sinh hoạt hàng ngày và công việc.."
+    },
+    {
+      "id": "l6_q6",
+      "lang": "vi",
+      "prompt": "Thông tin chi tiết nào sau đây là đúng với nội dung bạn vừa nghe?",
+      "hint": "Đối chiếu lời người nói.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các nhân vật không hiểu ý nhau."
+        },
+        {
+          "key": "B",
+          "text": "Lúc 13:00 (1 giờ trưa)."
+        },
+        {
+          "key": "C",
+          "text": "Họ hẹn gặp vào tháng sau."
+        },
+        {
+          "key": "D",
+          "text": "Cuộc gặp bị hủy bỏ vì trời mưa."
+        }
+      ],
+      "ans": "B",
+      "explain": "Nội dung nghe được xác nhận: Lúc 13:00 (1 giờ trưa).."
+    },
+    {
+      "id": "l6_q7",
+      "lang": "vi",
+      "prompt": "Yếu tố quan trọng nào được các nhân vật đồng thuận trong hội thoại?",
+      "hint": "Tìm điểm mấu chốt được nhấn mạnh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có ai đồng ý."
+        },
+        {
+          "key": "B",
+          "text": "Phải trả thêm tiền phạt."
+        },
+        {
+          "key": "C",
+          "text": "Đọc sách hoặc xem phim."
+        },
+        {
+          "key": "D",
+          "text": "Rời khỏi nơi gặp mặt ngay lập tức."
+        }
+      ],
+      "ans": "C",
+      "explain": "Chi tiết mấu chốt: Đọc sách hoặc xem phim.."
+    },
+    {
+      "id": "l6_q8",
+      "lang": "vi",
+      "prompt": "Ý nghĩa ứng dụng thực tế của đoạn hội thoại giao tiếp này là gì?",
+      "hint": "Bài học giao tiếp đời sống thực tiễn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giúp người học biết cách xử lý tình huống: Lúc 18:00 (6 giờ tối)."
+        },
+        {
+          "key": "B",
+          "text": "Không có tính ứng dụng trong đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ dùng cho văn bản hành chính."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ dùng khi tranh luận tòa án."
+        }
+      ],
+      "ans": "A",
+      "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Lúc 18:00 (6 giờ tối).."
+    }
+  ]
+}

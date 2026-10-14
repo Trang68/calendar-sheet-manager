@@ -1,0 +1,57 @@
+{
+  "id": 7,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Моё любимое время года",
+  "writingTime": "20 phút",
+  "topic": "Mùa yêu thích trong năm: Cảnh sắc thiên nhiên và hoạt động",
+  "targetWordRange": [
+    35,
+    60
+  ],
+  "task": "Viết đoạn văn (35–60 từ) kể về mùa mà bạn yêu thích nhất và lý do vì sao.",
+  "requirements": [
+    "1. Nêu rõ mùa bạn thích nhất (mùa xuân, hạ, thu hay đông).",
+    "2. Miêu tả đặc điểm thời tiết của mùa đó (nắng, gió, mưa, nhiệt độ).",
+    "3. Kể những hoạt động bạn thường làm trong mùa này.",
+    "4. Lý do vì sao mùa này mang lại niềm vui cho bạn."
+  ],
+  "cliches": [
+    {
+      "ru": "Моё любимое время года — осень.",
+      "vi": "Mùa yêu thích của tôi là mùa thu."
+    },
+    {
+      "ru": "Погода очень комфортная и мягкая.",
+      "vi": "Thời tiết rất dễ chịu và dịu nhẹ."
+    },
+    {
+      "ru": "Листья на деревьях становятся жёлтыми.",
+      "vi": "Lá trên cây chuyển sang màu vàng."
+    },
+    {
+      "ru": "Я люблю гулять по аллеям парка.",
+      "vi": "Tôi thích đi dạo trên các lối đi công viên."
+    }
+  ],
+  "modelAnswer": "Моё самое любимое время года — это золотая осень. В это время уже нет летней жары, погода становится приятной и прохладной. Деревья в парках становятся жёлтыми и красными. Я обожаю гулять по красивым улицам, дышать свежим воздухом и делать красивые фотографии природы. Осень дарит мне спокойствие и радость.",
+  "modelWordCount": 47,
+  "rubric": [
+    {
+      "criteria": "Bố cục & Lời chào",
+      "desc": "Có lời chào mở đầu và kết thúc phù hợp với thể loại bài viết."
+    },
+    {
+      "criteria": "Nội dung & Thông tin",
+      "desc": "Trả lời đầy đủ các yêu cầu đề bài, thông tin mạch lạc và hợp lý."
+    },
+    {
+      "criteria": "Ngữ pháp & Biến cách",
+      "desc": "Chia động từ hiện tại đúng, đại từ và danh từ phù hợp quy tắc sơ cấp."
+    },
+    {
+      "criteria": "Dung lượng từ",
+      "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
+    }
+  ]
+}
