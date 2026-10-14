@@ -632,13 +632,16 @@
         return cardHtml;
       }
 
-      function renderLesson(lesson) {
+      // ======================================================================
+      // LESSON RENDERERS FOR READING, LISTENING, SPEAKING, WRITING
+      // ======================================================================
+      function renderReadingLesson(lesson) {
         currentLessonData = lesson;
         stopArticlePlayer();
 
-        // 1. Chia câu bài đọc
+        const rawParagraphs = lesson.paragraphs || lesson.readingText || [];
         let sentenceCounter = 0;
-        const pTags = lesson.paragraphs.map(p => {
+        const pTags = rawParagraphs.map(p => {
           const sentences = splitIntoSentences(p);
           const spans = sentences.map(s => {
             const sId = `sent_${sentenceCounter}`;
@@ -650,26 +653,25 @@
           return `<p>${spans}</p>`;
         }).join('\n            ');
 
-        // 2. Từ vựng & câu hỏi
         const vocabHtml = renderVocabSection(lesson.vocabCategories);
-        const ruQuestions = lesson.questions.filter(q => q.lang === 'ru');
-        const viQuestions = lesson.questions.filter(q => q.lang === 'vi');
+        const allQuestions = lesson.questions || [];
+        const ruQuestions = allQuestions.filter(q => q.lang === 'ru');
+        const viQuestions = allQuestions.filter(q => q.lang === 'vi');
 
         const card1Html = renderQuestionCard(
           `<span>🇷🇺</span> Phần 1: Câu Hỏi & Từ Vựng Tiếng Nga (${ruQuestions.length} câu)`,
           `${ruQuestions.length} câu RU`,
           ruQuestions,
-          lesson.questions
+          allQuestions
         );
 
         const card2Html = renderQuestionCard(
           `<span>🇻🇳</span> Phần 2: Đọc Hiểu & Phân Tích Tiếng Việt (${viQuestions.length} câu)`,
           `${viQuestions.length} câu VI`,
           viQuestions,
-          lesson.questions
+          allQuestions
         );
 
-        // 3. Toàn bộ Layout của bài
         const container = document.getElementById('activeLessonContainer');
         container.innerHTML = `
           <!-- LEFT COLUMN: ĐOẠN VĂN ĐỌC HIỂU & TỪ VỰNG -->
@@ -677,16 +679,16 @@
             <div class="panel-header">
               <div style="display: flex; gap: 8px;">
                 <span class="badge-tag badge-b2">TRÌNH ĐỘ ${currentLevel}</span>
-                <span class="badge-tag badge-reading">${lesson.badge}</span>
+                <span class="badge-tag badge-reading">${lesson.badge || 'Đọc hiểu'}</span>
               </div>
-              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: ${lesson.time}</span>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: ${lesson.time || lesson.readingTime || '15 phút'}</span>
             </div>
 
             <h2 class="reading-title">${lesson.title}</h2>
 
             <div class="reading-meta">
-              <span>📰 Nguồn: ${lesson.source}</span>
-              <span>✍️ Chủ đề: ${lesson.topic}</span>
+              <span>📰 Nguồn: ${lesson.source || 'Giáo trình tiếng Nga'}</span>
+              <span>✍️ Chủ đề: ${lesson.topic || ''}</span>
             </div>
 
             <!-- THANH AUDIO PLAYER PHÁT THANH ĐOẠN VĂN TIẾNG NGA -->
@@ -753,7 +755,7 @@
             </div>
           </section>
 
-          <!-- RIGHT COLUMN: 20 CÂU HỎI TRẮC NGHIỆM & KẾT QUẢ -->
+          <!-- RIGHT COLUMN: CÂU HỎI TRẮC NGHIỆM & KẾT QUẢ -->
           <section class="quiz-panel">
             ${card1Html}
             ${card2Html}
@@ -765,7 +767,7 @@
                 <div class="score-text score-info">
                   <div class="score-title-sub">Kết Quả Bài Kiểm Tra</div>
                   <strong class="score-status" id="scoreStatus">Chưa nộp bài</strong>
-                  <span class="score-desc" id="scoreDetail">Hãy hoàn thành ${lesson.questions.length} câu hỏi để xem kết quả và giải thích chi tiết.</span>
+                  <span class="score-desc" id="scoreDetail">Hãy hoàn thành ${allQuestions.length} câu hỏi để xem kết quả và giải thích chi tiết.</span>
                 </div>
               </div>
               <div class="btn-group action-buttons">
@@ -791,8 +793,464 @@
           </section>
         `;
 
-        // 4. Khởi tạo mốc thời gian từng câu cho Audio Player
         initSentenceTimings();
+      }
+
+      function renderListeningLesson(lesson) {
+        currentLessonData = lesson;
+        stopArticlePlayer();
+
+        const allQuestions = lesson.questions || [];
+        const ruQuestions = allQuestions.filter(q => q.lang === 'ru');
+        const viQuestions = allQuestions.filter(q => q.lang === 'vi');
+
+        const card1Html = renderQuestionCard(
+          `<span>🇷🇺</span> Phần 1: Nghe Hiểu Tiếng Nga (${ruQuestions.length} câu)`,
+          `${ruQuestions.length} câu RU`,
+          ruQuestions,
+          allQuestions
+        );
+
+        const card2Html = renderQuestionCard(
+          `<span>🇻🇳</span> Phần 2: Nghe Hiểu & Phân Tích Tiếng Việt (${viQuestions.length} câu)`,
+          `${viQuestions.length} câu VI`,
+          viQuestions,
+          allQuestions
+        );
+
+        let dialogueHtml = '';
+        (lesson.dialogue || []).forEach((line, idx) => {
+          const sId = `sent_${idx}`;
+          const cleanText = cleanTextForSpeech(line.text);
+          dialogueHtml += `
+            <div class="dialogue-item">
+              <span class="speaker-badge">${line.speaker}</span>
+              <div class="dialogue-content readable-sentence" id="${sId}" data-sentence-index="${idx}" data-clean-text="${cleanText}">
+                ${line.text}
+              </div>
+              <div class="dialogue-ctrls">
+                <button type="button" class="btn-speak" data-speech="${cleanText}" title="Nghe câu này">🔊</button>
+              </div>
+            </div>`;
+        });
+
+        const container = document.getElementById('activeLessonContainer');
+        container.innerHTML = `
+          <!-- LEFT COLUMN: AUDIO PLAYER & DIALOGUE & DICTATION -->
+          <section class="reading-panel">
+            <div class="panel-header">
+              <div style="display: flex; gap: 8px;">
+                <span class="badge-tag badge-b2">TRÌNH ĐỘ ${currentLevel}</span>
+                <span class="badge-tag badge-reading">🎧 ${lesson.badge || 'Nghe hiểu'}</span>
+              </div>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: ${lesson.listeningTime || '12 phút'}</span>
+            </div>
+
+            <h2 class="reading-title">${lesson.title}</h2>
+            <div class="reading-meta">
+              <span>🎧 Kỹ năng: Nghe hiểu ${currentLevel}</span>
+              <span>✍️ Chủ đề: ${lesson.topic || ''}</span>
+            </div>
+
+            <!-- AUDIO PLAYER -->
+            <div class="article-audio-bar" id="audioBar">
+              <div class="audio-bar-top">
+                <div class="audio-bar-info">
+                  <span>🎧 Phát đoạn hội thoại:</span>
+                  <span class="audio-status-tag" id="audioStatusTag">Sẵn sàng</span>
+                </div>
+                <div class="audio-controls">
+                  <button class="btn-audio-circle btn-audio-back" id="btnAudioBack" title="Lùi lại 5 giây" aria-label="Lùi lại 5 giây">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                      <path d="M3 3v5h5"/>
+                      <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                    </svg>
+                  </button>
+                  <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay" title="Bắt đầu / Tạm dừng đọc">
+                    <span class="ctrl-icon">▶</span>
+                    <span class="ctrl-text">Nghe hội thoại</span>
+                  </button>
+                  <button class="btn-audio-circle btn-audio-forward" id="btnAudioForward" title="Tua tới 5 giây" aria-label="Tua tới 5 giây">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                      <path d="M21 3v5h-5"/>
+                      <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                    </svg>
+                  </button>
+                  <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop" style="display: none;" title="Dừng phát">
+                    <span>⏹</span>
+                    <span>Dừng</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="audio-progress-container">
+                <span class="audio-time-label" id="audioCurrentTime">0:00</span>
+                <div class="audio-progress-track" id="audioProgressTrack">
+                  <div class="audio-progress-fill" id="audioProgressFill"></div>
+                </div>
+                <span class="audio-time-label" id="audioTotalTime">--:--</span>
+              </div>
+
+              <div class="audio-hint-bar">
+                <span class="audio-hint-text">
+                  <span>💡</span> <em>Mẹo: Hãy bấm nghe toàn bộ hội thoại từ 1-2 lần để trả lời câu hỏi bên phải.</em>
+                </span>
+              </div>
+            </div>
+
+            <!-- DIALOGUE CARD -->
+            <div class="reading-text-card" style="margin-top: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 16px; font-family: 'Space Grotesk', sans-serif; color: var(--ink);">
+                  📜 Lời thoại hội thoại (Транскрипт)
+                </h3>
+                <button type="button" class="btn-toggle-transcript" id="btnToggleTranscript">
+                  <span>👁️</span> <span id="lblToggleTranscript">Ẩn lời thoại (Luyện nghe)</span>
+                </button>
+              </div>
+              <div class="dialogue-wrapper" id="dialogueContainer">
+                ${dialogueHtml}
+              </div>
+            </div>
+
+            <!-- DICTATION CARD (CHÉP CHÍNH TẢ) -->
+            ${lesson.dictation ? `
+              <div class="dictation-card">
+                <div class="dictation-title">
+                  <span>✍️</span> ${lesson.dictation.title}
+                  <button type="button" class="btn-speak" data-speech="${cleanTextForSpeech(lesson.dictation.targetText)}" style="margin-left: 8px; width: auto; height: 28px; padding: 0 10px; border-radius: 14px; font-size: 12px;" title="Nghe câu chép chính tả">🔊 Nghe câu mẫu</button>
+                </div>
+                <p style="font-size: 13px; color: var(--muted); margin: 0 0 6px 0;">${lesson.dictation.instruction}</p>
+                <div class="dictation-input-row">
+                  <input type="text" class="dictation-input" id="dictationInput" placeholder="Gõ lại câu tiếng Nga bạn nghe được..." autocomplete="off" />
+                  <button type="button" class="btn-dictation-check" id="btnCheckDictation">Kiểm tra</button>
+                </div>
+                <div class="dictation-feedback" id="dictationFeedback"></div>
+                <p style="font-size: 12px; color: var(--muted); margin: 6px 0 0 0;"><em>${lesson.dictation.hint || ''}</em></p>
+              </div>
+            ` : ''}
+          </section>
+
+          <!-- RIGHT COLUMN: QUIZ QUESTIONS & SCORE -->
+          <section class="quiz-panel">
+            <div class="panel-header">
+              <span class="badge-tag badge-ru">BÀI THI NGHE HIỂU</span>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Tổng số: ${allQuestions.length} câu</span>
+            </div>
+
+            ${card1Html}
+            ${card2Html}
+
+            <!-- BẢNG TỔNG KẾT & NỘP BÀI -->
+            <div class="submit-card score-card">
+              <div class="score-display score-grid">
+                <div class="score-circle" id="scoreValue">--</div>
+                <div class="score-text score-info">
+                  <div class="score-title-sub">Kết Quả Bài Nghe</div>
+                  <strong class="score-status" id="scoreStatus">Chưa nộp bài</strong>
+                  <span class="score-desc" id="scoreDetail">Hãy hoàn thành ${allQuestions.length} câu hỏi để xem kết quả và giải thích chi tiết.</span>
+                </div>
+              </div>
+              <div class="btn-group action-buttons">
+                <button type="button" class="btn-action btn-submit btn-primary" id="btnSubmit">
+                  <svg class="btn-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>Nộp Bài & Chấm Điểm</span>
+                </button>
+                <button type="button" class="btn-action btn-reset btn-secondary" id="btnReset">
+                  <svg class="btn-action-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                  </svg>
+                  <span>Làm Lại</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        `;
+
+        initSentenceTimings();
+      }
+
+      function renderSpeakingLesson(lesson) {
+        currentLessonData = lesson;
+        stopArticlePlayer();
+
+        let phrasesHtml = '';
+        (lesson.shadowingPhrases || []).forEach((p, idx) => {
+          const cleanText = cleanTextForSpeech(p.text);
+          phrasesHtml += `
+            <div class="shadowing-phrase-box" id="phraseBox_${p.id}">
+              <div class="phrase-top-row">
+                <div class="phrase-ru-text">
+                  <span style="color: var(--brand); font-size: 13px; font-weight: 800; margin-right: 6px;">#${idx + 1}</span>
+                  ${p.text}
+                </div>
+                <div class="phrase-actions">
+                  <button type="button" class="btn-speak" data-speech="${cleanText}" title="Nghe giọng đọc mẫu">🔊</button>
+                  <button type="button" class="btn-mic" data-target-text="${cleanText}" data-result-id="result_${p.id}" title="Bấm để nói và chấm điểm AI">🎙️</button>
+                </div>
+              </div>
+              <div class="phrase-phonetic">🗣️ ${p.phonetic}</div>
+              <div class="phrase-meaning">🇻🇳 ${p.meaning}</div>
+              ${p.tips ? `<div class="phrase-tips">💡 ${p.tips}</div>` : ''}
+              <div class="speech-result-panel" id="result_${p.id}"></div>
+            </div>`;
+        });
+
+        const freePrompt = lesson.freeSpeakingPrompt || {};
+        let guidanceHtml = '';
+        if (freePrompt.sampleGuidance) {
+          guidanceHtml = freePrompt.sampleGuidance.map(g => `<li style="margin-bottom: 4px;"><code>${g}</code></li>`).join('');
+        }
+
+        const container = document.getElementById('activeLessonContainer');
+        container.innerHTML = `
+          <!-- LEFT COLUMN: SHADOWING PRONUNCIATION -->
+          <section class="reading-panel">
+            <div class="panel-header">
+              <div style="display: flex; gap: 8px;">
+                <span class="badge-tag badge-b2">TRÌNH ĐỘ ${currentLevel}</span>
+                <span class="badge-tag badge-reading">🗣️ ${lesson.badge || 'Nói & Vấn đáp'}</span>
+              </div>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: ${lesson.speakingTime || '15 phút'}</span>
+            </div>
+
+            <h2 class="reading-title">${lesson.title}</h2>
+            <div class="reading-meta">
+              <span>🗣️ Kỹ năng: Luyện phát âm & Giao tiếp ${currentLevel}</span>
+              <span>✍️ Chủ đề: ${lesson.topic || ''}</span>
+            </div>
+
+            <div class="shadowing-card">
+              <h3 style="margin: 0 0 6px 0; font-size: 16px; font-family: 'Space Grotesk', sans-serif; color: var(--brand-strong);">
+                🎙️ Phần 1: Luyện phát âm & Nhại giọng (Shadowing AI)
+              </h3>
+              <p style="font-size: 13px; color: var(--muted); margin: 0 0 16px 0;">
+                Bấm 🔊 để nghe chuẩn ngữ điệu người Nga, sau đó bấm <strong>Mic 🎙️</strong> và nói vào microphone. Trình duyệt sẽ nhận diện và chấm điểm từng từ hoàn toàn miễn phí!
+              </p>
+              ${phrasesHtml}
+            </div>
+          </section>
+
+          <!-- RIGHT COLUMN: FREE RECORDING MONOLOGUE -->
+          <section class="reading-panel">
+            <div class="panel-header">
+              <span class="badge-tag badge-ru">PHÒNG THU ÂM BẢN THÂN</span>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Ghi âm không giới hạn</span>
+            </div>
+
+            <div class="free-recorder-card">
+              <h3 style="margin: 0 0 8px 0; font-size: 16px; font-family: 'Space Grotesk', sans-serif; color: var(--ink);">
+                🎙️ Phần 2: ${freePrompt.title || 'Luyện nói tự do (Монолог)'}
+              </h3>
+              <p style="font-size: 14.5px; color: var(--ink); line-height: 1.5; margin: 0 0 12px 0;">
+                <strong>Đề bài:</strong> ${freePrompt.task || 'Hãy tự giới thiệu bản thân bằng tiếng Nga.'}
+              </p>
+
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); padding: 14px; margin-bottom: 16px;">
+                <strong style="font-size: 13px; color: var(--brand-strong); display: block; margin-bottom: 6px;">Gợi ý các mẫu câu:</strong>
+                <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: var(--muted);">
+                  ${guidanceHtml}
+                </ul>
+              </div>
+
+              <!-- RECORDER ACTION -->
+              <div class="recorder-controls-row">
+                <button type="button" class="btn-record-main" id="btnToggleRecord">
+                  <span id="recordIcon">🔴</span>
+                  <span id="recordLabel">Bắt đầu thu âm</span>
+                </button>
+                <div class="record-timer-badge" id="recordTimer">00:00</div>
+              </div>
+
+              <div id="audioPlaybackWrap" style="margin-top: 18px; display: none;">
+                <strong style="font-size: 13px; color: var(--ink); display: block; margin-bottom: 6px;">🎧 Bản ghi âm giọng nói của bạn:</strong>
+                <audio id="recordedAudioPlayer" controls style="width: 100%; border-radius: 8px; margin-top: 4px;"></audio>
+                <div style="margin-top: 8px; font-size: 12px; color: #16a34a; font-weight: 600;">
+                  ✓ Ghi âm hoàn tất! Bạn có thể bấm nghe lại để tự đánh giá ngữ điệu và phát âm của mình.
+                </div>
+              </div>
+            </div>
+
+            <!-- TIÊU CHÍ ĐÁNH GIÁ NÓI A1 -->
+            <div class="shadowing-card" style="margin-top: 20px;">
+              <h4 style="margin: 0 0 8px 0; font-size: 14px; font-family: 'Space Grotesk', sans-serif; color: var(--ink);">
+                📋 Tiêu chí đánh giá kỹ năng Nói (TRKI)
+              </h4>
+              <ul style="margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); line-height: 1.6;">
+                <li><strong>Phát âm:</strong> Phân biệt rõ nguyên âm có trọng âm và không trọng âm (o/a).</li>
+                <li><strong>Ngữ điệu (Интонация):</strong> Lên giọng ở câu hỏi không từ hỏi, xuống giọng ở câu trần thuật.</li>
+                <li><strong>Tính liên tục:</strong> Nói trôi chảy các cụm từ giới thiệu tên, tuổi, nơi ở mà không bị ngập ngừng quá lâu.</li>
+              </ul>
+            </div>
+          </section>
+        `;
+      }
+
+      function renderWritingLesson(lesson) {
+        currentLessonData = lesson;
+        stopArticlePlayer();
+
+        let clichesHtml = '';
+        if (lesson.cliches) {
+          clichesHtml = lesson.cliches.map(c => `
+            <button type="button" class="cliche-chip" data-insert="${c.ru}" title="${c.vi}">
+              <span>${c.ru}</span>
+            </button>
+          `).join('');
+        }
+
+        let reqsHtml = '';
+        if (lesson.requirements) {
+          reqsHtml = lesson.requirements.map(r => `<li style="margin-bottom: 4px;">${r}</li>`).join('');
+        }
+
+        let rubricHtml = '';
+        if (lesson.rubric) {
+          rubricHtml = lesson.rubric.map(rb => `
+            <div class="rubric-item">
+              <strong>${rb.criteria}</strong>
+              <span style="color: var(--muted);">${rb.desc}</span>
+            </div>
+          `).join('');
+        }
+
+        const container = document.getElementById('activeLessonContainer');
+        container.innerHTML = `
+          <!-- LEFT COLUMN: TASK PROMPT & CLICHES -->
+          <section class="reading-panel">
+            <div class="panel-header">
+              <div style="display: flex; gap: 8px;">
+                <span class="badge-tag badge-b2">TRÌNH ĐỘ ${currentLevel}</span>
+                <span class="badge-tag badge-reading">✍️ ${lesson.badge || 'Viết luận'}</span>
+              </div>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Thời gian: ${lesson.writingTime || '20 phút'}</span>
+            </div>
+
+            <h2 class="reading-title">${lesson.title}</h2>
+            <div class="reading-meta">
+              <span>✍️ Kỹ năng: Viết thư thân mật ${currentLevel}</span>
+              <span>🎯 Dung lượng: ${lesson.targetWordRange ? lesson.targetWordRange[0] + ' - ' + lesson.targetWordRange[1] + ' từ' : '35 - 60 từ'}</span>
+            </div>
+
+            <div class="writing-card">
+              <h3 style="margin: 0 0 8px 0; font-size: 16px; font-family: 'Space Grotesk', sans-serif; color: var(--ink);">
+                📝 Đề bài (Задание)
+              </h3>
+              <p style="font-size: 14.5px; color: var(--ink); line-height: 1.5; margin: 0 0 10px 0;">
+                ${lesson.task || ''}
+              </p>
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 16px;">
+                <strong style="font-size: 13px; color: var(--brand-strong); display: block; margin-bottom: 6px;">Yêu cầu cần có trong bài:</strong>
+                <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: var(--muted);">
+                  ${reqsHtml}
+                </ul>
+              </div>
+
+              <h4 style="margin: 0 0 6px 0; font-size: 13.5px; font-family: 'Space Grotesk', sans-serif; color: var(--brand-strong);">
+                💡 Gợi ý mẫu câu A1 (Bấm vào để chèn nhanh vào bài):
+              </h4>
+              <div class="cliches-cloud" id="clichesCloud">
+                ${clichesHtml}
+              </div>
+            </div>
+          </section>
+
+          <!-- RIGHT COLUMN: SMART ESSAY EDITOR & VIRTUAL KEYBOARD -->
+          <section class="reading-panel">
+            <div class="panel-header">
+              <span class="badge-tag badge-ru">KHUNG SOẠN THẢO BÀI VIẾT</span>
+              <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Hỗ trợ bàn phím tiếng Nga</span>
+            </div>
+
+            <div class="writing-card">
+              <div class="essay-editor-wrap">
+                <textarea class="essay-textarea" id="essayTextarea" placeholder="Bắt đầu viết thư tiếng Nga của bạn tại đây... (Ví dụ: Привет, дорогой Иван!)..."></textarea>
+                <div class="live-word-meter">
+                  <span>Số từ hiện tại:</span>
+                  <div class="word-count-badge" id="wordCountBadge">0 từ (Mục tiêu: 35-60 từ)</div>
+                </div>
+              </div>
+
+              <!-- BÀN PHÍM ẢO TIẾNG NGA (VIRTUAL RUSSIAN KEYBOARD) -->
+              <div class="virtual-kb-wrapper">
+                <div class="virtual-kb-header">
+                  <span>⌨️ Bàn phím ảo tiếng Nga (ЙЦУКЕН)</span>
+                  <span style="font-size: 11px; color: var(--muted);">Bấm phím để chèn ký tự</span>
+                </div>
+                <div class="kb-grid" id="virtualKeyboard">
+                  <div class="kb-row">
+                    ${['й','ц','у','к','е','н','г','ш','щ','з','х','ъ'].map(k => `<button type="button" class="kb-key" data-char="${k}">${k}</button>`).join('')}
+                  </div>
+                  <div class="kb-row">
+                    ${['ф','ы','в','а','п','р','о','л','д','ж','э'].map(k => `<button type="button" class="kb-key" data-char="${k}">${k}</button>`).join('')}
+                  </div>
+                  <div class="kb-row">
+                    <button type="button" class="kb-key kb-key-wide" id="kbShiftBtn">⇧ Shift</button>
+                    ${['я','ч','с','м','и','т','ь','б','ю'].map(k => `<button type="button" class="kb-key" data-char="${k}">${k}</button>`).join('')}
+                    <button type="button" class="kb-key kb-key-wide" id="kbBackspaceBtn">⌫ Xóa</button>
+                  </div>
+                  <div class="kb-row">
+                    <button type="button" class="kb-key kb-key-space" id="kbSpaceBtn">␣ Dấu cách (Space)</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACTION SUBMIT ESSAY -->
+              <div style="margin-top: 18px; display: flex; justify-content: flex-end; gap: 10px;">
+                <button type="button" class="btn-action btn-submit btn-primary" id="btnSubmitWriting">
+                  <span>🚀 Nộp Bài & Xem Bài Mẫu Chuẩn</span>
+                </button>
+              </div>
+
+              <!-- MODEL ANSWER & RUBRICS -->
+              <div class="model-answer-card" id="modelAnswerCard">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <strong style="color: var(--brand-strong); font-size: 15px; font-family: 'Space Grotesk', sans-serif;">
+                    🌟 Bài Viết Mẫu Chuẩn (Образец письма)
+                  </strong>
+                  <span style="font-size: 12px; color: var(--muted); font-weight: 600;">${lesson.modelWordCount || 51} từ</span>
+                </div>
+                <div class="model-text-box">
+                  ${lesson.modelAnswer || ''}
+                </div>
+                <strong style="color: var(--ink); font-size: 13.5px; display: block; margin-top: 14px;">
+                  📊 Barem tiêu chuẩn tự đánh giá (Критерии оценки):
+                </strong>
+                <div class="rubric-grid">
+                  ${rubricHtml}
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+
+        const textarea = document.getElementById('essayTextarea');
+        if (textarea) {
+          textarea.addEventListener('input', updateWordCount);
+        }
+      }
+
+      function renderLesson(lesson) {
+        currentLessonData = lesson;
+        const skill = lesson.skill || (currentSkill || 'reading');
+        if (skill === 'listening') {
+          renderListeningLesson(lesson);
+        } else if (skill === 'speaking') {
+          renderSpeakingLesson(lesson);
+        } else if (skill === 'writing') {
+          renderWritingLesson(lesson);
+        } else {
+          renderReadingLesson(lesson);
+        }
       }
 
       function initSentenceTimings() {
@@ -829,22 +1287,36 @@
       // ======================================================================
       // DATA LOADER & VIEW CONTROLLER
       // ======================================================================
+      let currentManifestFolder = '/data/reading/b2/';
+      const knownSkillManifests = {
+        'A1_reading': '/data/reading/a1/manifest.json',
+        'A1_listening': '/data/listening/a1/manifest.json',
+        'A1_speaking': '/data/speaking/a1/manifest.json',
+        'A1_writing': '/data/writing/a1/manifest.json',
+        'B2_reading': '/data/reading/b2/manifest.json'
+      };
+
       async function loadManifestAndLessons() {
-        const isReading = (currentSkill === 'reading');
         const lessonPicker = document.getElementById('lessonPickerArea');
         const activeContainer = document.getElementById('activeLessonContainer');
         const emptyPlaceholder = document.getElementById('placeholderEmpty');
         const loadingState = document.getElementById('lessonLoadingState');
 
-        // Hiện tại data có sẵn cho B2 reading
-        if (currentLevel === 'B2' && isReading) {
+        stopArticlePlayer();
+        stopSpeakingWord();
+
+        const skillKey = `${currentLevel}_${currentSkill}`;
+        const manifestUrl = knownSkillManifests[skillKey];
+
+        if (manifestUrl) {
           emptyPlaceholder.style.display = 'none';
           lessonPicker.style.display = 'block';
           loadingState.style.display = 'block';
           activeContainer.style.display = 'none';
 
           try {
-            const manifestRes = await fetch('/data/reading/b2/manifest.json');
+            currentManifestFolder = manifestUrl.substring(0, manifestUrl.lastIndexOf('/') + 1);
+            const manifestRes = await fetch(manifestUrl);
             currentManifest = await manifestRes.json();
             renderLessonChips(currentManifest);
 
@@ -852,7 +1324,7 @@
             const activeEntry = currentManifest.find(m => m.id === parseInt(currentLessonId, 10)) || currentManifest[0];
             currentLessonId = activeEntry.id;
 
-            const lessonRes = await fetch('/data/reading/b2/' + activeEntry.file);
+            const lessonRes = await fetch(currentManifestFolder + activeEntry.file);
             const lessonData = await lessonRes.json();
 
             loadingState.style.display = 'none';
@@ -874,7 +1346,7 @@
 
           const skillName = skillDisplayNames[currentSkill] || currentSkill;
           document.getElementById('placeholderTitle').textContent = currentLevel + ' - ' + skillName + ' (Đang cập nhật)';
-          document.getElementById('placeholderDesc').innerHTML = 'Hệ thống đang chuẩn bị các bộ đề chất lượng cao cho trình độ <strong>' + currentLevel + '</strong> phần <strong>' + skillName + '</strong>. Bạn có thể chọn mục <strong>B2 - Đọc hiểu</strong> để luyện tập ngay nhé!';
+          document.getElementById('placeholderDesc').innerHTML = 'Hệ thống đang chuẩn bị các bộ đề chất lượng cao cho trình độ <strong>' + currentLevel + '</strong> phần <strong>' + skillName + '</strong>. Bạn có thể chọn mục <strong>A1</strong> (Nghe, Nói, Đọc, Viết) hoặc <strong>B2 - Đọc hiểu</strong> để luyện tập ngay nhé!';
           updateSelectionLabel();
         }
       }
@@ -887,7 +1359,8 @@
           btn.className = 'lesson-chip' + (m.id === parseInt(currentLessonId, 10) ? ' active' : '');
           btn.setAttribute('data-lesson-id', m.id);
           btn.setAttribute('data-file', m.file);
-          btn.textContent = 'Bài ' + m.id + ': ' + (m.title.length > 36 ? m.title.slice(0, 34) + '...' : m.title) + ' (' + m.questionCount + ' câu)';
+          const countLabel = m.questionCount ? ` (${m.questionCount} câu)` : (m.phrasesCount ? ` (${m.phrasesCount} mẫu câu)` : '');
+          btn.textContent = 'Bài ' + m.id + ': ' + (m.title.length > 36 ? m.title.slice(0, 34) + '...' : m.title) + countLabel;
           btn.addEventListener('click', () => {
             currentLessonId = m.id;
             document.querySelectorAll('#lessonChips .lesson-chip').forEach(c => c.classList.remove('active'));
@@ -906,7 +1379,7 @@
         activeContainer.style.display = 'none';
 
         try {
-          const res = await fetch('/data/reading/b2/' + fileName);
+          const res = await fetch(currentManifestFolder + fileName);
           const data = await res.json();
           loadingState.style.display = 'none';
           activeContainer.style.display = 'grid';
@@ -921,6 +1394,214 @@
         const labelEl = document.getElementById('currentSelectionLabel');
         const skillName = skillDisplayNames[currentSkill] || currentSkill;
         labelEl.textContent = currentLevel + ' - ' + skillName + ' (Bài ' + currentLessonId + ')';
+      }
+
+      // ======================================================================
+      // INTERACTIVE SKILL HELPERS (SPEECH RECOGNITION, MEDIA RECORDER, KEYBOARD)
+      // ======================================================================
+      let isKbShift = false;
+      let speechRec = null;
+      let activeSpeakingBtn = null;
+      let mediaRecorder = null;
+      let recordedChunks = [];
+      let recordTimerInterval = null;
+      let recordSeconds = 0;
+
+      function compareRussianSpeech(spoken, target) {
+        const cleanSpoken = cleanTextForSpeech(spoken).toLowerCase().split(/\s+/).filter(Boolean);
+        const cleanTarget = cleanTextForSpeech(target).toLowerCase().split(/\s+/).filter(Boolean);
+
+        let matchCount = 0;
+        const renderedWords = cleanTarget.map(tWord => {
+          if (cleanSpoken.includes(tWord)) {
+            matchCount++;
+            return `<span class="diff-word-ok" style="color: #16a34a; font-weight: 700;">${tWord}</span>`;
+          } else {
+            return `<span class="diff-word-miss" style="color: #dc2626; text-decoration: underline wavy #dc2626;">${tWord}</span>`;
+          }
+        });
+
+        const percent = Math.min(100, Math.round((matchCount / Math.max(1, cleanTarget.length)) * 100));
+        return {
+          percent: percent,
+          html: renderedWords.join(' '),
+          spokenText: spoken
+        };
+      }
+
+      function handleSpeechRecognition(btn) {
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const resultId = btn.getAttribute('data-result-id');
+        const targetText = btn.getAttribute('data-target-text') || '';
+        const resultEl = document.getElementById(resultId);
+
+        if (!SpeechRec) {
+          alert('Trình duyệt của bạn chưa hỗ trợ Web Speech Recognition. Vui lòng mở trang trên Google Chrome hoặc Microsoft Edge để trải nghiệm tính năng này!');
+          return;
+        }
+
+        if (activeSpeakingBtn === btn) {
+          if (speechRec) speechRec.stop();
+          btn.classList.remove('listening');
+          activeSpeakingBtn = null;
+          return;
+        }
+
+        if (activeSpeakingBtn) {
+          activeSpeakingBtn.classList.remove('listening');
+          if (speechRec) speechRec.stop();
+        }
+
+        speechRec = new SpeechRec();
+        speechRec.lang = 'ru-RU';
+        speechRec.continuous = false;
+        speechRec.interimResults = false;
+
+        btn.classList.add('listening');
+        activeSpeakingBtn = btn;
+        if (resultEl) {
+          resultEl.style.display = 'block';
+          resultEl.innerHTML = '<em>🎙️ Đang lắng nghe giọng của bạn qua micro... Hãy nói to và rõ ràng câu tiếng Nga!</em>';
+        }
+
+        speechRec.onresult = function(e) {
+          btn.classList.remove('listening');
+          activeSpeakingBtn = null;
+          const transcript = e.results[0][0].transcript;
+          const res = compareRussianSpeech(transcript, targetText);
+
+          let badgeColor = res.percent >= 80 ? '#16a34a' : (res.percent >= 50 ? '#d97706' : '#dc2626');
+          let starRating = res.percent >= 80 ? '⭐⭐⭐ Xuất sắc!' : (res.percent >= 50 ? '⭐⭐ Khá tốt!' : '⭐ Cần luyện thêm!');
+
+          if (resultEl) {
+            resultEl.innerHTML = `
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <strong style="color: ${badgeColor}; font-size: 14px;">Độ chính xác: ${res.percent}% (${starRating})</strong>
+              </div>
+              <div style="margin-bottom: 4px; font-size: 13px;"><strong>Máy nhận diện:</strong> "${transcript}"</div>
+              <div style="font-size: 13px;"><strong>So khớp từ vựng:</strong> ${res.html}</div>
+            `;
+          }
+        };
+
+        speechRec.onerror = function(err) {
+          btn.classList.remove('listening');
+          activeSpeakingBtn = null;
+          if (resultEl) {
+            resultEl.innerHTML = '<span style="color: #dc2626;">⚠️ Chưa nghe rõ giọng nói hoặc microphone bị ngắt kết nối. Vui lòng bấm mic và thử lại!</span>';
+          }
+        };
+
+        speechRec.onend = function() {
+          btn.classList.remove('listening');
+          activeSpeakingBtn = null;
+        };
+
+        try {
+          speechRec.start();
+        } catch (err) {
+          btn.classList.remove('listening');
+          activeSpeakingBtn = null;
+        }
+      }
+
+      async function toggleFreeRecording() {
+        const btn = document.getElementById('btnToggleRecord');
+        const iconEl = document.getElementById('recordIcon');
+        const labelEl = document.getElementById('recordLabel');
+        const timerEl = document.getElementById('recordTimer');
+        const playbackWrap = document.getElementById('audioPlaybackWrap');
+        const audioPlayer = document.getElementById('recordedAudioPlayer');
+
+        if (mediaRecorder && mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+          if (recordTimerInterval) {
+            clearInterval(recordTimerInterval);
+            recordTimerInterval = null;
+          }
+          btn.classList.remove('recording');
+          if (iconEl) iconEl.textContent = '🔴';
+          if (labelEl) labelEl.textContent = 'Thu âm lại';
+          return;
+        }
+
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          recordedChunks = [];
+          mediaRecorder = new MediaRecorder(stream);
+
+          mediaRecorder.ondataavailable = e => {
+            if (e.data.size > 0) recordedChunks.push(e.data);
+          };
+
+          mediaRecorder.onstop = () => {
+            const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+            const audioUrl = URL.createObjectURL(blob);
+            if (audioPlayer) audioPlayer.src = audioUrl;
+            if (playbackWrap) playbackWrap.style.display = 'block';
+            stream.getTracks().forEach(track => track.stop());
+          };
+
+          mediaRecorder.start();
+          recordSeconds = 0;
+          if (timerEl) timerEl.textContent = '00:00';
+          btn.classList.add('recording');
+          if (iconEl) iconEl.textContent = '⏹️';
+          if (labelEl) labelEl.textContent = 'Dừng thu âm';
+
+          recordTimerInterval = setInterval(() => {
+            recordSeconds++;
+            const m = Math.floor(recordSeconds / 60);
+            const s = recordSeconds % 60;
+            if (timerEl) {
+              timerEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+            }
+          }, 1000);
+        } catch (err) {
+          alert('Không thể truy cập microphone. Vui lòng cho phép quyền truy cập micro trên trình duyệt để ghi âm!');
+        }
+      }
+
+      function insertAtCursor(myField, myValue) {
+        if (!myField) return;
+        if (myField.selectionStart || myField.selectionStart == '0') {
+          const startPos = myField.selectionStart;
+          const endPos = myField.selectionEnd;
+          myField.value = myField.value.substring(0, startPos)
+            + myValue
+            + myField.value.substring(endPos, myField.value.length);
+          myField.selectionStart = startPos + myValue.length;
+          myField.selectionEnd = startPos + myValue.length;
+        } else {
+          myField.value += myValue;
+        }
+        myField.focus();
+        updateWordCount();
+      }
+
+      function updateWordCount() {
+        const textarea = document.getElementById('essayTextarea');
+        const badge = document.getElementById('wordCountBadge');
+        if (!textarea || !badge) return;
+        const words = textarea.value.trim().split(/\s+/).filter(Boolean).length;
+        badge.textContent = words + ' từ (Mục tiêu: 35-60 từ)';
+        if (words >= 35) {
+          badge.classList.add('ok');
+        } else {
+          badge.classList.remove('ok');
+        }
+      }
+
+      function toggleKbShift() {
+        isKbShift = !isKbShift;
+        const shiftBtn = document.getElementById('kbShiftBtn');
+        if (shiftBtn) {
+          shiftBtn.classList.toggle('active-shift', isKbShift);
+        }
+        document.querySelectorAll('#virtualKeyboard .kb-key[data-char]').forEach(btn => {
+          const char = btn.getAttribute('data-char');
+          btn.textContent = isKbShift ? char.toUpperCase() : char.toLowerCase();
+        });
       }
 
       // ======================================================================
@@ -1088,6 +1769,135 @@
         if (resetBtn) {
           e.preventDefault();
           resetQuiz();
+          return;
+        }
+
+        // 9. Nút Ẩn / Hiện lời thoại nghe
+        const toggleTranscriptBtn = e.target.closest('#btnToggleTranscript');
+        if (toggleTranscriptBtn) {
+          e.preventDefault();
+          const dialogueWrap = document.getElementById('dialogueContainer');
+          const lbl = document.getElementById('lblToggleTranscript');
+          if (dialogueWrap) {
+            const isHidden = (dialogueWrap.style.display === 'none');
+            dialogueWrap.style.display = isHidden ? 'flex' : 'none';
+            if (lbl) {
+              lbl.textContent = isHidden ? 'Ẩn lời thoại (Luyện nghe)' : 'Hiện lời thoại (Xem đáp án)';
+            }
+          }
+          return;
+        }
+
+        // 10. Nút Kiểm tra chép chính tả (Dictation)
+        const checkDictationBtn = e.target.closest('#btnCheckDictation');
+        if (checkDictationBtn) {
+          e.preventDefault();
+          const inputEl = document.getElementById('dictationInput');
+          const feedbackEl = document.getElementById('dictationFeedback');
+          if (!inputEl || !feedbackEl || !currentLessonData || !currentLessonData.dictation) return;
+
+          const userInput = inputEl.value.trim();
+          const target = currentLessonData.dictation.targetText.trim();
+          const cleanUser = cleanTextForSpeech(userInput).toLowerCase();
+          const cleanTarget = cleanTextForSpeech(target).toLowerCase();
+
+          feedbackEl.style.display = 'block';
+          if (cleanUser === cleanTarget) {
+            feedbackEl.style.background = '#dcfce7';
+            feedbackEl.style.color = '#15803d';
+            feedbackEl.style.border = '1px solid #86efac';
+            feedbackEl.innerHTML = '🎉 <strong>Xuất sắc!</strong> Bạn đã chép chính tả chính xác 100% từng chữ cái!';
+          } else {
+            feedbackEl.style.background = '#fee2e2';
+            feedbackEl.style.color = '#b91c1c';
+            feedbackEl.style.border = '1px solid #fca5a5';
+            feedbackEl.innerHTML = `
+              <div style="margin-bottom: 4px;">❌ <strong>Chưa hoàn toàn chính xác!</strong></div>
+              <div><strong>Câu bạn đã gõ:</strong> "${userInput || '(Chưa gõ)'}"</div>
+              <div><strong>Câu mẫu chuẩn:</strong> "${target}"</div>
+            `;
+          }
+          return;
+        }
+
+        // 11. Nút Mic luyện phát âm (Shadowing AI)
+        const micBtn = e.target.closest('.btn-mic');
+        if (micBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          handleSpeechRecognition(micBtn);
+          return;
+        }
+
+        // 12. Nút Thu âm tự do
+        const recordBtn = e.target.closest('#btnToggleRecord');
+        if (recordBtn) {
+          e.preventDefault();
+          toggleFreeRecording();
+          return;
+        }
+
+        // 13. Nút chèn mẫu câu gợi ý (Клише)
+        const clicheBtn = e.target.closest('.cliche-chip');
+        if (clicheBtn) {
+          e.preventDefault();
+          const textToInsert = clicheBtn.getAttribute('data-insert') || '';
+          const textarea = document.getElementById('essayTextarea');
+          if (textarea) {
+            insertAtCursor(textarea, textToInsert + ' ');
+          }
+          return;
+        }
+
+        // 14. Bàn phím ảo tiếng Nga (Virtual Keyboard)
+        const kbKey = e.target.closest('.kb-key');
+        if (kbKey) {
+          e.preventDefault();
+          const textarea = document.getElementById('essayTextarea');
+          if (!textarea) return;
+
+          if (kbKey.id === 'kbShiftBtn') {
+            toggleKbShift();
+            return;
+          }
+
+          if (kbKey.id === 'kbBackspaceBtn') {
+            const startPos = textarea.selectionStart;
+            const endPos = textarea.selectionEnd;
+            if (startPos === endPos && startPos > 0) {
+              textarea.value = textarea.value.substring(0, startPos - 1) + textarea.value.substring(endPos);
+              textarea.selectionStart = textarea.selectionEnd = startPos - 1;
+            } else if (startPos !== endPos) {
+              textarea.value = textarea.value.substring(0, startPos) + textarea.value.substring(endPos);
+              textarea.selectionStart = textarea.selectionEnd = startPos;
+            }
+            textarea.focus();
+            updateWordCount();
+            return;
+          }
+
+          if (kbKey.id === 'kbSpaceBtn') {
+            insertAtCursor(textarea, ' ');
+            return;
+          }
+
+          const char = kbKey.getAttribute('data-char');
+          if (char) {
+            const finalChar = isKbShift ? char.toUpperCase() : char.toLowerCase();
+            insertAtCursor(textarea, finalChar);
+          }
+          return;
+        }
+
+        // 15. Nút Nộp Bài Viết
+        const submitWritingBtn = e.target.closest('#btnSubmitWriting');
+        if (submitWritingBtn) {
+          e.preventDefault();
+          const modelCard = document.getElementById('modelAnswerCard');
+          if (modelCard) {
+            modelCard.style.display = 'block';
+            modelCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
           return;
         }
       });

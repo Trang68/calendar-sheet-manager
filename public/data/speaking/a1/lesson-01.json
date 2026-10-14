@@ -1,0 +1,56 @@
+{
+  "id": 1,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Знакомство и рассказ о себе",
+  "speakingTime": "15 phút",
+  "topic": "Giao tiếp cơ bản - Giới thiệu bản thân và chào hỏi",
+  "intro": "Luyện phát âm chuẩn xác từng âm tiết tiếng Nga với công nghệ AI Speech-to-Text miễn phí. Nhấn nút Loa để nghe mẫu, sau đó nhấn nút Mic 🎙️ để nói và chấm điểm tức thì!",
+  "shadowingPhrases": [
+    {
+      "id": "spk_1",
+      "text": "Здравствуйте! Меня зовут Антон.",
+      "meaning": "Xin chào! Tôi tên là Anton.",
+      "phonetic": "Zdravstvuyte! Menya zovut Anton.",
+      "tips": "Phát âm rõ âm «Здрав-», nuốt nhẹ chữ «в» thứ nhất: /zdrastvuytye/."
+    },
+    {
+      "id": "spk_2",
+      "text": "Я студент, я учусь в университете.",
+      "meaning": "Tôi là sinh viên, tôi học ở trường đại học.",
+      "phonetic": "Ya student, ya uchus' v universitete.",
+      "tips": "Dấu mềm «сь» trong «учусь» phát âm nhẹ và êm."
+    },
+    {
+      "id": "spk_3",
+      "text": "Я изучаю русский язык уже один год.",
+      "meaning": "Tôi học tiếng Nga đã được một năm.",
+      "phonetic": "Ya izuchayu russkiy yazyk uzhe odin god.",
+      "tips": "Trọng âm rơi vào «язы́к», «русский» phát âm âm s kéo dài."
+    },
+    {
+      "id": "spk_4",
+      "text": "В свободное время я люблю читать книги.",
+      "meaning": "Vào thời gian rảnh rỗi tôi thích đọc sách.",
+      "phonetic": "V svobodnoye vremya ya lyublyu chitat' knigi.",
+      "tips": "«Люблю» phát âm môi chu tròn, âm «б» bật nhẹ."
+    },
+    {
+      "id": "spk_5",
+      "text": "Очень приятно с вами познакомиться!",
+      "meaning": "Rất vui được làm quen với bạn/các bạn!",
+      "phonetic": "Ochen' priyatno s vami poznakomit'sya!",
+      "tips": "«Познакомиться» phát âm đuôi «-ться» như âm /-tsa/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог)",
+    "task": "Hãy tự giới thiệu về bản thân bằng tiếng Nga (khoảng 3–5 câu): tên bạn, bạn làm nghề gì, sống ở đâu và bạn thích làm gì trong thời gian rảnh.",
+    "sampleGuidance": [
+      "Меня зовут... (Tôi tên là...)",
+      "Я живу в городе... (Tôi sống ở thành phố...)",
+      "Я работаю... / Я учусь... (Tôi làm việc... / Tôi học...)",
+      "В свободное время я люблю... (Thời gian rảnh tôi thích...)"
+    ]
+  }
+}

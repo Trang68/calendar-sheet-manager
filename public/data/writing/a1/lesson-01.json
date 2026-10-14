@@ -1,0 +1,35 @@
+{
+  "id": 1,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Письмо другу: Рассказ о себе",
+  "writingTime": "20 phút",
+  "topic": "Viết thư thân mật - Kể về bản thân cho bạn bè",
+  "targetWordRange": [35, 60],
+  "task": "Bạn hãy viết một bức thư ngắn (từ 35 đến 60 từ) gửi cho một người bạn Nga tên là Ivan để làm quen.",
+  "requirements": [
+    "1. Lời chào bạn thân mật (Привет / Здравствуй).",
+    "2. Giới thiệu tên, tuổi và nơi bạn đang sinh sống.",
+    "3. Giới thiệu nghề nghiệp hoặc trường học của bạn.",
+    "4. Kể một hoặc hai sở thích khi rảnh rỗi (thể thao, đọc sách, âm nhạc...).",
+    "5. Lời chào tạm biệt thân thiện (Пока / До встречи)."
+  ],
+  "cliches": [
+    {"ru": "Привет, Иван!", "vi": "Chào Ivan!"},
+    {"ru": "Меня зовут...", "vi": "Tôi tên là..."},
+    {"ru": "Мне двадцать лет.", "vi": "Tôi 20 tuổi."},
+    {"ru": "Я живу во Вьетнаме, в Ханое.", "vi": "Tôi sống ở Việt Nam, tại Hà Nội."},
+    {"ru": "Я студент, я учусь в университете.", "vi": "Tôi là sinh viên, tôi học đại học."},
+    {"ru": "В свободное время я люблю читать.", "vi": "Rảnh rỗi tôi thích đọc sách."},
+    {"ru": "А как твои дела? Напиши мне!", "vi": "Còn bạn thế nào? Hãy viết cho tôi nhé!"},
+    {"ru": "До скорой встречи! Пока!", "vi": "Hẹn sớm gặp lại! Tạm biệt!"}
+  ],
+  "modelAnswer": "Привет, дорогой Иван!\n\nМеня зовут Минх. Мне двадцать лет. Я живу во Вьетнаме, в красивом городе Ханой. Я студент и учусь в университете. Я очень люблю изучать русский язык. В свободное время я люблю играть в футбол и слушать хорошую музыку.\n\nА как твои дела? Напиши мне ответ!\nПока,\nТвой друг Минх.",
+  "modelWordCount": 51,
+  "rubric": [
+    {"criteria": "Bố cục & Lời chào", "desc": "Có lời chào mở đầu (Привет...) và kết thư (Пока / До встречи...)."},
+    {"criteria": "Nội dung & Thông tin", "desc": "Cung cấp đủ: tên, tuổi, nơi ở, nghề nghiệp/học tập, sở thích."},
+    {"criteria": "Ngữ pháp & Biến cách", "desc": "Chia động từ hiện tại đúng (живу, учусь, люблю), đại từ chuẩn xác."},
+    {"criteria": "Dung lượng từ", "desc": "Đạt từ 35 đến 60 từ theo đúng tiêu chuẩn khảo thí A1."}
+  ]
+}

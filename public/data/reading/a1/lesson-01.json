@@ -1,0 +1,190 @@
+{
+  "id": 1,
+  "level": "A1",
+  "skill": "reading",
+  "title": "Знакомьтесь: Моя семья и мой дом",
+  "readingTime": "15 phút",
+  "topic": "Gia đình, Ngôi nhà & Nghề nghiệp",
+  "vocabCategories": [
+    {
+      "title": "Danh từ chỉ người & nghề nghiệp (Существительные)",
+      "rows": [
+        {"word": "семья́", "gram": "danh từ giống cái", "meaning": "gia đình", "example": "У меня большая и дружная семья."},
+        {"word": "роди́тели", "gram": "danh từ số nhiều", "meaning": "bố mẹ, phụ huynh", "example": "Мои родители живут в Москве."},
+        {"word": "врач", "gram": "danh từ giống đực", "meaning": "bác sĩ", "example": "Мой папа работает врачом в больнице."},
+        {"word": "учи́тельница", "gram": "danh từ giống cái", "meaning": "cô giáo, nữ giáo viên", "example": "Моя мама — учительница русского языка."}
+      ]
+    },
+    {
+      "title": "Từ vựng về nhà cửa & đồ đạc (Дом и квартира)",
+      "rows": [
+        {"word": "кварти́ра", "gram": "danh từ giống cái", "meaning": "căn hộ", "example": "Наша квартира находится на третьем этаже."},
+        {"word": "ко́мната", "gram": "danh từ giống cái", "meaning": "căn phòng", "example": "В квартире есть три светлые комнаты."},
+        {"word": "у́ютный", "gram": "tính từ", "meaning": "ấm cúng, dễ chịu", "example": "Это очень уютная и тёплая комната."},
+        {"word": "гости́ная", "gram": "danh từ giống cái", "meaning": "phòng khách", "example": "Вечером вся семья собирается в гостиной."}
+      ]
+    },
+    {
+      "title": "Động từ A1 thông dụng (Глаголы)",
+      "rows": [
+        {"word": "жить", "gram": "động từ chia nhóm I", "meaning": "sống, sinh sống", "example": "Мы живём в красивом городе."},
+        {"word": "рабо́тать", "gram": "động từ chia nhóm I", "meaning": "làm việc", "example": "Папа работает каждый день."},
+        {"word": "отдыха́ть", "gram": "động từ chia nhóm I", "meaning": "nghỉ ngơi", "example": "В воскресенье мы отдыхаем дома."}
+      ]
+    }
+  ],
+  "readingText": [
+    "Здравствуйте! Меня зовут Иван, мне двадцать лет. Я студент и учусь в университете в Москве.",
+    "У меня есть семья: папа, мама và em gái Anna. Наша семья очень дружная.",
+    "Мой папа — врач. Он работает в большой городской больнице и помогает людям.",
+    "Моя мама — учительница. Она работает в школе và dạy học sinh môn tiếng Nga.",
+    "Моя сестра Анна ещё маленькая, ей десять лет. Она учится в четвёртом классе và thích vẽ tranh.",
+    "Мы живём в центре города. Наша квартира большая, светлая и очень уютная.",
+    "В квартире три комнаты: гостиная, спальня родителей и наша детская комната.",
+    "В гостиной стоит большой диван, телевизор и книжный шкаф. Мы любим читать книги.",
+    "У нас также есть кот. Его зовут Барсик. Он белый, пушистый и очень весёлый.",
+    "По выходным мы любим собираться вместе, пить чай и смотреть интересные фильмы."
+  ],
+  "questions": [
+    {
+      "id": "a1_r1_q1",
+      "lang": "ru",
+      "prompt": "Кто такой Иван и сколько ему лет?",
+      "hint": "Đọc kỹ câu đầu tiên của bài đọc.",
+      "options": [
+        {"key": "A", "text": "Он врач, ему тридцать лет."},
+        {"key": "B", "text": "Он студент, ему двадцать лет."},
+        {"key": "C", "text": "Он учитель, ему двадцать пять лет."},
+        {"key": "D", "text": "Он школьник, ему десять лет."}
+      ],
+      "ans": "B",
+      "explain": "Đoạn 1 nêu rõ: «Меня зовут Иван, мне двадцать лет. Я студент...» (Tôi tên là Ivan, tôi 20 tuổi. Tôi là sinh viên)."
+    },
+    {
+      "id": "a1_r1_q2",
+      "lang": "ru",
+      "prompt": "Кем работает отец Ивана?",
+      "hint": "Tìm thông tin về bố (папа).",
+      "options": [
+        {"key": "A", "text": "Он работает учителем в школе."},
+        {"key": "B", "text": "Он работает инженером на заводе."},
+        {"key": "C", "text": "Он работает врачом в больнице."},
+        {"key": "D", "text": "Он не работает, он на пенсии."}
+      ],
+      "ans": "C",
+      "explain": "Đoạn 3 viết: «Мой папа — врач. Он работает в большой городской больнице...»."
+    },
+    {
+      "id": "a1_r1_q3",
+      "lang": "ru",
+      "prompt": "Что преподаёт мама Ивана в школе?",
+      "hint": "Tìm môn học mà mẹ dạy.",
+      "options": [
+        {"key": "A", "text": "Русский язык."},
+        {"key": "B", "text": "Математику."},
+        {"key": "C", "text": "Историю."},
+        {"key": "D", "text": "Английский язык."}
+      ],
+      "ans": "A",
+      "explain": "Đoạn 4 viết: «Моя мама — учительница... dạy môn tiếng Nga (русский язык)»."
+    },
+    {
+      "id": "a1_r1_q4",
+      "lang": "ru",
+      "prompt": "Сколько комнат в квартире семьи?",
+      "hint": "Đếm số phòng được liệt kê trong bài.",
+      "options": [
+        {"key": "A", "text": "Две комнаты."},
+        {"key": "B", "text": "Три комнаты."},
+        {"key": "C", "text": "Четыре комнаты."},
+        {"key": "D", "text": "Пять комнат."}
+      ],
+      "ans": "B",
+      "explain": "Đoạn 7 khẳng định: «В квартире три комнаты: гостиная, спальня родителей и наша детская комната»."
+    },
+    {
+      "id": "a1_r1_q5",
+      "lang": "ru",
+      "prompt": "Как зовут домашнего кота в семье?",
+      "hint": "Tìm tên của chú mèo.",
+      "options": [
+        {"key": "A", "text": "Мурзик."},
+        {"key": "B", "text": "Рыжик."},
+        {"key": "C", "text": "Барсик."},
+        {"key": "D", "text": "Васька."}
+      ],
+      "ans": "C",
+      "explain": "Đoạn 9 viết: «У нас также есть кот. Его зовут Барсик»."
+    },
+    {
+      "id": "a1_r1_q6",
+      "lang": "vi",
+      "prompt": "Em gái của Ivan tên là gì và bao nhiêu tuổi?",
+      "hint": "Đọc đoạn giới thiệu về người em gái (сестра).",
+      "options": [
+        {"key": "A", "text": "Tên là Maria, 12 tuổi."},
+        {"key": "B", "text": "Tên là Anna, 10 tuổi."},
+        {"key": "C", "text": "Tên là Elena, 8 tuổi."},
+        {"key": "D", "text": "Tên là Olga, 10 tuổi."}
+      ],
+      "ans": "B",
+      "explain": "Đoạn 5 viết: «Моя сестра Анна ещё маленькая, ей десять лет»."
+    },
+    {
+      "id": "a1_r1_q7",
+      "lang": "vi",
+      "prompt": "Căn hộ của gia đình Ivan nằm ở đâu?",
+      "hint": "Tìm từ chỉ vị trí (центр).",
+      "options": [
+        {"key": "A", "text": "Ở ngoại ô thành phố."},
+        {"key": "B", "text": "Ở gần bờ sông."},
+        {"key": "C", "text": "Ở trung tâm thành phố."},
+        {"key": "D", "text": "Ở một ngôi làng nhỏ."}
+      ],
+      "ans": "C",
+      "explain": "Đoạn 6 viết: «Мы живём в центре города» (Chúng tôi sống ở trung tâm thành phố)."
+    },
+    {
+      "id": "a1_r1_q8",
+      "lang": "vi",
+      "prompt": "Từ nào đồng nghĩa với từ «уютный» trong bài đọc?",
+      "hint": "Tính từ miêu tả căn phòng ấm áp, dễ chịu.",
+      "options": [
+        {"key": "A", "text": "Комфортный, удобный (tiện nghi, ấm cúng)"},
+        {"key": "B", "text": "Холодный (lạnh lẽo)"},
+        {"key": "C", "text": "Шумный (ồn ào)"},
+        {"key": "D", "text": "Тёмный (tối tăm)"}
+      ],
+      "ans": "A",
+      "explain": "«Уютный» có nghĩa là ấm cúng, dễ chịu, đồng nghĩa với «комфортный»."
+    },
+    {
+      "id": "a1_r1_q9",
+      "lang": "vi",
+      "prompt": "Gia đình Ivan thường làm gì vào các ngày cuối tuần (по выходным)?",
+      "hint": "Đọc câu cuối cùng của bài văn.",
+      "options": [
+        {"key": "A", "text": "Đi du lịch xa và leo núi."},
+        {"key": "B", "text": "Tập trung cùng nhau, uống trà và xem phim."},
+        {"key": "C", "text": "Đến bệnh viện thăm bố làm việc."},
+        {"key": "D", "text": "Đi vẽ tranh ngoài công viên."}
+      ],
+      "ans": "B",
+      "explain": "Đoạn 10 viết: «По выходным мы любим собираться вместе, пить чай и смотреть интересные фильмы»."
+    },
+    {
+      "id": "a1_r1_q10",
+      "lang": "vi",
+      "prompt": "Trong phòng khách (гостиная) của căn hộ có những đồ vật gì?",
+      "hint": "Tìm các đồ vật được nhắc đến trong đoạn 8.",
+      "options": [
+        {"key": "A", "text": "Giường ngủ, bàn học và máy tính."},
+        {"key": "B", "text": "Tủ lạnh, bếp ga và bàn ăn."},
+        {"key": "C", "text": "Ghế sofa lớn, tivi và tủ sách."},
+        {"key": "D", "text": "Đàn piano và máy tập thể dục."}
+      ],
+      "ans": "C",
+      "explain": "Đoạn 8 nêu: «В гостиной стоит большой диван (ghế sofa), телевизор (tivi) и книжный шкаф (tủ sách)»."
+    }
+  ]
+}

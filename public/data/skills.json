@@ -34,6 +34,22 @@
     }
   ],
   "available": {
+    "A1_reading": {
+      "count": 1,
+      "manifestUrl": "/data/reading/a1/manifest.json"
+    },
+    "A1_listening": {
+      "count": 1,
+      "manifestUrl": "/data/listening/a1/manifest.json"
+    },
+    "A1_speaking": {
+      "count": 1,
+      "manifestUrl": "/data/speaking/a1/manifest.json"
+    },
+    "A1_writing": {
+      "count": 1,
+      "manifestUrl": "/data/writing/a1/manifest.json"
+    },
     "B2_reading": {
       "count": 3,
       "manifestUrl": "/data/reading/b2/manifest.json"

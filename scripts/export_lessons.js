@@ -26,5 +26,15 @@ const skillsPath = path.join(__dirname, '../public/data/skills.json');
 if (fs.existsSync(skillsPath)) {
   const skills = JSON.parse(fs.readFileSync(skillsPath, 'utf8'));
   console.log(`Verified skills.json: ${skills.levels.join(', ')} | ${skills.skills.map(s => s.name).join(', ')}`);
+
+  Object.entries(skills.available).forEach(([key, info]) => {
+    const manifestFullPath = path.join(__dirname, '../public', info.manifestUrl);
+    if (fs.existsSync(manifestFullPath)) {
+      const mList = JSON.parse(fs.readFileSync(manifestFullPath, 'utf8'));
+      console.log(`  ✓ Available [${key}]: ${mList.length} lessons in ${info.manifestUrl}`);
+    } else {
+      console.error(`  ✗ Missing manifest: ${manifestFullPath}`);
+    }
+  });
 }
 
