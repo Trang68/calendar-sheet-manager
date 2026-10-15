@@ -268,35 +268,42 @@
         totalSeconds: 0
       };
 
-      // Tốc độ đọc dành riêng cho bài đọc phần Reading (1.0x chuẩn hoặc 0.75x đọc chậm)
-      let readingPlaybackRate = 1.0;
+      // Tốc độ phát âm dành cho bài đọc và bài nghe (1.0x chuẩn hoặc 0.75x nghe/đọc chậm)
+      let audioPlaybackRate = 1.0;
       try {
-        const savedRate = localStorage.getItem('taiga_reading_speed');
+        const savedRate = localStorage.getItem('taiga_audio_speed') || localStorage.getItem('taiga_reading_speed');
         if (savedRate && (savedRate === '0.75' || savedRate === '1' || savedRate === '1.0')) {
-          readingPlaybackRate = parseFloat(savedRate);
+          audioPlaybackRate = parseFloat(savedRate);
         }
       } catch (e) {}
+      let readingPlaybackRate = audioPlaybackRate; // Tương thích ngược
 
-      function setReadingPlaybackRate(newRate) {
-        readingPlaybackRate = parseFloat(newRate);
+      function setAudioPlaybackRate(newRate) {
+        audioPlaybackRate = parseFloat(newRate);
+        readingPlaybackRate = audioPlaybackRate;
         try {
-          localStorage.setItem('taiga_reading_speed', readingPlaybackRate.toString());
+          localStorage.setItem('taiga_audio_speed', audioPlaybackRate.toString());
+          localStorage.setItem('taiga_reading_speed', audioPlaybackRate.toString());
         } catch (e) {}
 
-        // Đồng bộ giao diện nút tốc độ
-        document.querySelectorAll('#readingSpeedControl .btn-speed-opt').forEach(btn => {
+        // Đồng bộ giao diện nút tốc độ cho cả bài đọc và bài nghe
+        document.querySelectorAll('.audio-speed-control .btn-speed-opt').forEach(btn => {
           const btnSpeed = parseFloat(btn.getAttribute('data-speed'));
-          btn.classList.toggle('active', btnSpeed === readingPlaybackRate);
+          btn.classList.toggle('active', btnSpeed === audioPlaybackRate);
         });
 
         // Tính lại thời lượng các câu
         initSentenceTimings();
 
-        // Nếu bài đọc đang phát, áp dụng tốc độ mới ngay cho câu hiện tại
+        // Nếu bài đọc/hội thoại đang phát, áp dụng tốc độ mới ngay cho câu hiện tại
         const ap = speechState.articlePlayer;
         if (ap.status === 'playing') {
           playSentence(ap.currentSentenceIdx);
         }
+      }
+
+      function setReadingPlaybackRate(newRate) {
+        setAudioPlaybackRate(newRate);
       }
 
       function initVoices() {
@@ -485,9 +492,9 @@
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
         }
-        // Tùy chọn tốc độ: ở các bài đọc Reading áp dụng readingPlaybackRate (1x hoặc 0.75x)
-        const isReadingMode = (currentSkill === 'reading' || !['listening', 'speaking', 'writing'].includes(currentSkill));
-        utterance.rate = isReadingMode ? (readingPlaybackRate || 1.0) : 0.88;
+        // Tùy chọn tốc độ: ở bài đọc Reading và bài nghe Listening áp dụng audioPlaybackRate (1.0x hoặc 0.75x)
+        const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
+        utterance.rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
         utterance.pitch = 1.0;
 
         utterance.onend = function() {
@@ -603,7 +610,8 @@
         if (speechState.russianVoice) {
           utterance.voice = speechState.russianVoice;
         }
-        utterance.rate = 0.85;
+        const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
+        utterance.rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.85;
         if (btnEl && btnEl.classList) {
           btnEl.classList.add('speaking');
           speechState.currentWordBtn = btnEl;
@@ -816,8 +824,8 @@
                   </button>
                   <div class="audio-speed-control" id="readingSpeedControl" role="group" aria-label="Chọn tốc độ đọc bài">
                     <span class="speed-title">Tốc độ:</span>
-                    <button type="button" class="btn-speed-opt ${readingPlaybackRate === 1 ? 'active' : ''}" data-speed="1" title="Tốc độ bình thường (1.0x)">1.0x</button>
-                    <button type="button" class="btn-speed-opt ${readingPlaybackRate === 0.75 ? 'active' : ''}" data-speed="0.75" title="Tốc độ đọc chậm (0.75x)">0.75x</button>
+                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 1 ? 'active' : ''}" data-speed="1" title="Tốc độ bình thường (1.0x)">1.0x</button>
+                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 0.75 ? 'active' : ''}" data-speed="0.75" title="Tốc độ đọc chậm (0.75x)">0.75x</button>
                   </div>
                 </div>
               </div>
@@ -980,6 +988,11 @@
                     <span>⏹</span>
                     <span>Dừng</span>
                   </button>
+                  <div class="audio-speed-control" id="listeningSpeedControl" role="group" aria-label="Chọn tốc độ phát hội thoại">
+                    <span class="speed-title">Tốc độ:</span>
+                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 1 ? 'active' : ''}" data-speed="1" title="Tốc độ bình thường (1.0x)">1.0x</button>
+                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 0.75 ? 'active' : ''}" data-speed="0.75" title="Tốc độ nghe chậm (0.75x)">0.75x</button>
+                  </div>
                 </div>
               </div>
 
@@ -1355,8 +1368,8 @@
         const sentenceEls = document.querySelectorAll('#activeLessonContainer .readable-sentence');
         let currentStart = 0;
         const sentences = [];
-        const isReadingMode = (currentSkill === 'reading' || !['listening', 'speaking', 'writing'].includes(currentSkill));
-        const effectiveRate = isReadingMode ? (readingPlaybackRate || 1.0) : 0.88;
+        const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
+        const effectiveRate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
 
         sentenceEls.forEach((el, idx) => {
           const text = el.getAttribute('data-clean-text') || el.textContent.trim();
@@ -1996,14 +2009,14 @@
           return;
         }
 
-        // 6b. Chọn tốc độ đọc (Chỉ cho bài đọc Reading: 1.0x chuẩn hoặc 0.75x đọc chậm)
+        // 6b. Chọn tốc độ phát âm (Bài đọc Reading & Bài nghe Listening: 1.0x chuẩn hoặc 0.75x chậm)
         const speedBtn = e.target.closest('.btn-speed-opt');
         if (speedBtn) {
           e.preventDefault();
           e.stopPropagation();
           const speed = speedBtn.getAttribute('data-speed');
           if (speed) {
-            setReadingPlaybackRate(speed);
+            setAudioPlaybackRate(speed);
           }
           return;
         }
