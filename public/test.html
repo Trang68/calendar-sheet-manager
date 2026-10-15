@@ -293,7 +293,7 @@
       }
 
       // ======================================================================
-      // SPEECH STATE & ROBUST AUDIO ENGINE (ANTI-CASCADING CANCELLATION)
+      // SPEECH STATE & ROBUST AUDIO ENGINE (ANTI-CASCADING CANCELLATION & MAC CHROME REPAIR)
       // ======================================================================
       const speechState = {
         synth: window.speechSynthesis || null,
@@ -301,6 +301,7 @@
         currentWordBtn: null,
         currentUtterance: null,
         activeSpeechToken: 0,
+        fallbackAudio: null,
         
         articlePlayer: {
           status: 'idle', // 'idle' | 'playing' | 'paused'
@@ -353,19 +354,109 @@
         setAudioPlaybackRate(newRate);
       }
 
+      // Đánh thức & gỡ treo cho Web Speech API trên Chrome macOS khi người dùng tương tác
+      function wakeUpSpeechEngine() {
+        if (!speechState.synth) return;
+        try {
+          if (speechState.synth.paused) {
+            speechState.synth.resume();
+          }
+        } catch (e) {}
+      }
+
       function initVoices() {
         if (!speechState.synth) return;
-        const voices = speechState.synth.getVoices();
-        speechState.russianVoice = 
-          voices.find(v => v.lang.startsWith('ru') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Online'))) ||
-          voices.find(v => v.lang.startsWith('ru')) ||
-          null;
+        try {
+          const voices = speechState.synth.getVoices() || [];
+          if (!voices.length) return;
+
+          // Chuẩn hóa và lọc danh sách giọng tiếng Nga (ru-RU, ru_RU, ru, hoặc tên chứa Russian/русский)
+          const ruVoices = voices.filter(v => {
+            const lang = (v.lang || '').toLowerCase().replace('_', '-');
+            const name = (v.name || '').toLowerCase();
+            return lang.startsWith('ru') || name.includes('russian') || name.includes('русск');
+          });
+
+          if (ruVoices.length > 0) {
+            // Trên macOS Chrome: Ưu tiên giọng cục bộ (Milena, Yuri, localService: true)
+            // Giọng mạng Google online trên Chrome Mac thường bị timeout hoặc không phản hồi
+            speechState.russianVoice = 
+              ruVoices.find(v => v.localService) ||
+              ruVoices.find(v => v.name.includes('Milena') || v.name.includes('Yuri')) ||
+              ruVoices.find(v => v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google')) ||
+              ruVoices[0];
+          }
+        } catch (e) {}
       }
 
       if (speechState.synth) {
         initVoices();
-        if (speechState.synth.onvoiceschanged !== undefined) {
+        try {
+          if (typeof speechState.synth.addEventListener === 'function') {
+            speechState.synth.addEventListener('voiceschanged', initVoices);
+          }
           speechState.synth.onvoiceschanged = initVoices;
+        } catch (e) {}
+      }
+
+      // Phát âm dự phòng qua HTML5 Audio (Google TTS MP3) nếu macOS/Chrome không có giọng Nga hoặc Web Speech bị lỗi
+      function playAudioFallback(rawText, rate, onEnd, onError) {
+        stopAudioFallback();
+        try {
+          const clean = cleanTextForSpeech(rawText);
+          if (!clean) {
+            if (onEnd) onEnd();
+            return;
+          }
+          const chunk = clean.slice(0, 200);
+          const encoded = encodeURIComponent(chunk);
+          const audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ru&q=${encoded}`;
+          
+          const audio = new Audio(audioUrl);
+          speechState.fallbackAudio = audio;
+          if (rate && rate > 0) {
+            audio.playbackRate = rate;
+          }
+
+          audio.onended = function() {
+            if (speechState.fallbackAudio === audio) {
+              speechState.fallbackAudio = null;
+            }
+            if (onEnd) onEnd();
+          };
+
+          audio.onerror = function(err) {
+            if (speechState.fallbackAudio === audio) {
+              speechState.fallbackAudio = null;
+            }
+            if (onError) onError(err);
+            else if (onEnd) onEnd();
+          };
+
+          const p = audio.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(err => {
+              if (speechState.fallbackAudio === audio) {
+                speechState.fallbackAudio = null;
+              }
+              if (onError) onError(err);
+              else if (onEnd) onEnd();
+            });
+          }
+        } catch (err) {
+          stopAudioFallback();
+          if (onError) onError(err);
+          else if (onEnd) onEnd();
+        }
+      }
+
+      function stopAudioFallback() {
+        if (speechState.fallbackAudio) {
+          try {
+            speechState.fallbackAudio.pause();
+            speechState.fallbackAudio.currentTime = 0;
+          } catch (e) {}
+          speechState.fallbackAudio = null;
         }
       }
 
@@ -377,13 +468,19 @@
           clearTimeout(wordSpeechTimeout);
           wordSpeechTimeout = null;
         }
+        stopAudioFallback();
         if (speechState.currentUtterance) {
           speechState.currentUtterance.onend = null;
           speechState.currentUtterance.onerror = null;
+          speechState.currentUtterance.onstart = null;
           speechState.currentUtterance = null;
         }
+        window.__taigaActiveUtterance = null;
         if (speechState.synth) {
-          speechState.synth.cancel();
+          try {
+            speechState.synth.cancel();
+            speechState.synth.resume();
+          } catch (e) {}
         }
       }
 
@@ -509,6 +606,11 @@
       }
 
       function playSentence(sentenceIdx) {
+        wakeUpSpeechEngine();
+        if (!speechState.russianVoice) {
+          initVoices();
+        }
+
         const ap = speechState.articlePlayer;
         const data = lessonSentenceData;
         if (!data || !data.sentences || sentenceIdx >= data.sentences.length) {
@@ -516,8 +618,6 @@
           return;
         }
 
-        // Hủy phát âm cũ và vô hiệu hóa callback
-        cancelCurrentSpeech();
         const currentToken = speechState.activeSpeechToken;
 
         clearSentenceHighlights();
@@ -533,50 +633,85 @@
         updatePlayerUI();
 
         const cleanSentenceText = cleanTextForSpeech(item.text);
-        const utterance = new SpeechSynthesisUtterance(cleanSentenceText);
-        speechState.currentUtterance = utterance;
-        utterance.lang = 'ru-RU';
-        if (speechState.russianVoice) {
-          utterance.voice = speechState.russianVoice;
-        }
-        // Tùy chọn tốc độ: ở bài đọc Reading và bài nghe Listening áp dụng audioPlaybackRate (1.0x hoặc 0.75x)
         const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
-        utterance.rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
-        utterance.pitch = 1.0;
+        const rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
 
-        utterance.onend = function() {
+        const nextSentence = function() {
           if (currentToken !== speechState.activeSpeechToken) return;
           if (ap.status !== 'playing') return;
 
           if (sentenceIdx + 1 < data.sentences.length) {
-            playSentence(sentenceIdx + 1);
+            // Khoảng nghỉ tự nhiên 120ms giữa các câu để Chrome Mac xử lý buffer âm thanh mượt mà
+            setTimeout(() => {
+              if (currentToken === speechState.activeSpeechToken && ap.status === 'playing') {
+                playSentence(sentenceIdx + 1);
+              }
+            }, 120);
           } else {
             stopArticlePlayer();
           }
         };
 
-        utterance.onerror = function(e) {
-          if (currentToken !== speechState.activeSpeechToken) return;
-          if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
-          if (ap.status !== 'playing') return;
-
-          if (sentenceIdx + 1 < data.sentences.length) {
-            playSentence(sentenceIdx + 1);
-          } else {
-            stopArticlePlayer();
-          }
-        };
-
-        speechState.synth.speak(utterance);
-      }
-
-      function startArticlePlayer(startSentenceIdx = 0) {
-        if (!speechState.synth) {
-          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+        // Nếu máy không có giọng Nga hoặc không hỗ trợ Web Speech -> Dùng fallback HTML5 Audio
+        if (!speechState.synth || !speechState.russianVoice) {
+          playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
           return;
         }
 
+        try {
+          wakeUpSpeechEngine();
+          const utterance = new SpeechSynthesisUtterance(cleanSentenceText);
+          speechState.currentUtterance = utterance;
+          window.__taigaActiveUtterance = utterance;
+          utterance.lang = 'ru-RU';
+          if (speechState.russianVoice) {
+            utterance.voice = speechState.russianVoice;
+          }
+          utterance.rate = rate;
+          utterance.pitch = 1.0;
+
+          let hasStarted = false;
+          utterance.onstart = function() {
+            hasStarted = true;
+          };
+
+          utterance.onend = function() {
+            if (window.__taigaActiveUtterance === utterance) {
+              window.__taigaActiveUtterance = null;
+            }
+            nextSentence();
+          };
+
+          utterance.onerror = function(e) {
+            if (window.__taigaActiveUtterance === utterance) {
+              window.__taigaActiveUtterance = null;
+            }
+            if (currentToken !== speechState.activeSpeechToken) return;
+            if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
+            if (ap.status !== 'playing') return;
+
+            // Chuyển sang Audio Fallback nếu Chrome báo lỗi phát âm
+            playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
+          };
+
+          speechState.synth.speak(utterance);
+
+          // Watchdog: nếu Chrome Mac bị đơ không phát (onstart không chạy sau 900ms)
+          setTimeout(() => {
+            if (currentToken === speechState.activeSpeechToken && !hasStarted && ap.status === 'playing' && ap.currentSentenceIdx === sentenceIdx) {
+              try { speechState.synth.cancel(); } catch (err) {}
+              playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
+            }
+          }, 900);
+        } catch (err) {
+          playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
+        }
+      }
+
+      function startArticlePlayer(startSentenceIdx = 0) {
+        wakeUpSpeechEngine();
         stopSpeakingWord();
+        cancelCurrentSpeech();
         const ap = speechState.articlePlayer;
         ap.status = 'playing';
 
@@ -628,6 +763,7 @@
           clearTimeout(wordSpeechTimeout);
           wordSpeechTimeout = null;
         }
+        stopAudioFallback();
         if (speechState.currentWordBtn) {
           speechState.currentWordBtn.classList.remove('speaking');
           speechState.currentWordBtn = null;
@@ -635,7 +771,10 @@
       }
 
       function speakWordText(rawText, btnEl) {
-        if (!speechState.synth) return;
+        wakeUpSpeechEngine();
+        if (!speechState.russianVoice) {
+          initVoices();
+        }
         const text = cleanTextForSpeech(rawText);
         if (!text) return;
 
@@ -644,6 +783,7 @@
           stopSpeakingWord();
           return;
         }
+
         stopSpeakingWord();
         if (speechState.articlePlayer.status === 'playing') {
           pauseArticlePlayer();
@@ -651,27 +791,19 @@
         cancelCurrentSpeech();
         const currentToken = speechState.activeSpeechToken;
 
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechState.currentUtterance = utterance;
-        utterance.lang = 'ru-RU';
-        if (speechState.russianVoice) {
-          utterance.voice = speechState.russianVoice;
-        }
-        const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
-        utterance.rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.85;
         if (btnEl && btnEl.classList) {
           btnEl.classList.add('speaking');
           speechState.currentWordBtn = btnEl;
         }
 
-        const handleComplete = function() {
+        const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
+        const rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.85;
+
+        const handleDone = function() {
           if (currentToken === speechState.activeSpeechToken) {
             stopSpeakingWord();
           }
         };
-
-        utterance.onend = handleComplete;
-        utterance.onerror = handleComplete;
 
         // Watchdog Timeout: Tính toán thời lượng tối đa cho câu nói, tự động dọn dẹp nếu TTS bị nghẽn
         const wordCount = text.split(/\s+/).filter(Boolean).length;
@@ -683,7 +815,61 @@
           }
         }, maxDurationMs);
 
-        speechState.synth.speak(utterance);
+        // Trường hợp máy không có voice tiếng Nga hoặc không hỗ trợ Web Speech
+        if (!speechState.synth || !speechState.russianVoice) {
+          playAudioFallback(text, rate, handleDone, handleDone);
+          return;
+        }
+
+        // Tạo khoảng đệm 50ms sau khi cancel() để tránh race condition trên Chrome Mac
+        setTimeout(() => {
+          if (currentToken !== speechState.activeSpeechToken) return;
+          try {
+            wakeUpSpeechEngine();
+            const utterance = new SpeechSynthesisUtterance(text);
+            speechState.currentUtterance = utterance;
+            window.__taigaActiveUtterance = utterance;
+            utterance.lang = 'ru-RU';
+            if (speechState.russianVoice) {
+              utterance.voice = speechState.russianVoice;
+            }
+            utterance.rate = rate;
+            utterance.pitch = 1.0;
+
+            let hasStarted = false;
+            utterance.onstart = function() {
+              hasStarted = true;
+            };
+
+            utterance.onend = function() {
+              if (window.__taigaActiveUtterance === utterance) {
+                window.__taigaActiveUtterance = null;
+              }
+              handleDone();
+            };
+
+            utterance.onerror = function(e) {
+              if (window.__taigaActiveUtterance === utterance) {
+                window.__taigaActiveUtterance = null;
+              }
+              if (currentToken !== speechState.activeSpeechToken) return;
+              if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
+              playAudioFallback(text, rate, handleDone, handleDone);
+            };
+
+            speechState.synth.speak(utterance);
+
+            // Chrome Mac Watchdog: nếu sau 800ms mà Chrome không kích hoạt onstart (loa bị treo)
+            setTimeout(() => {
+              if (currentToken === speechState.activeSpeechToken && !hasStarted && speechState.currentWordBtn === btnEl) {
+                try { speechState.synth.cancel(); } catch (err) {}
+                playAudioFallback(text, rate, handleDone, handleDone);
+              }
+            }, 800);
+          } catch (err) {
+            playAudioFallback(text, rate, handleDone, handleDone);
+          }
+        }, 50);
       }
 
       // ======================================================================

@@ -111,17 +111,134 @@
     </div>
     <!-- JAVASCRIPT -->
     <script>
-      /* SPEECH SYNTHESIS HELPER */
+      /* SPEECH SYNTHESIS & ROBUST AUDIO ENGINE (CHROME ON MAC FIX) */
+      let russianVoiceArticles = null;
+      let activeUtteranceArticles = null;
+      let fallbackAudioArticles = null;
+
+      function initArticlesVoices() {
+        if (!("speechSynthesis" in window)) return;
+        try {
+          const voices = window.speechSynthesis.getVoices() || [];
+          if (!voices.length) return;
+          const ruVoices = voices.filter(v => {
+            const lang = (v.lang || '').toLowerCase().replace('_', '-');
+            const name = (v.name || '').toLowerCase();
+            return lang.startsWith('ru') || name.includes('russian') || name.includes('русск');
+          });
+          if (ruVoices.length > 0) {
+            russianVoiceArticles = 
+              ruVoices.find(v => v.localService) ||
+              ruVoices.find(v => v.name.includes('Milena') || v.name.includes('Yuri')) ||
+              ruVoices.find(v => v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google')) ||
+              ruVoices[0];
+          }
+        } catch (e) {}
+      }
+
+      if ("speechSynthesis" in window) {
+        initArticlesVoices();
+        try {
+          if (typeof window.speechSynthesis.addEventListener === 'function') {
+            window.speechSynthesis.addEventListener('voiceschanged', initArticlesVoices);
+          }
+          window.speechSynthesis.onvoiceschanged = initArticlesVoices;
+        } catch (e) {}
+      }
+
+      function stopArticlesFallbackAudio() {
+        if (fallbackAudioArticles) {
+          try {
+            fallbackAudioArticles.pause();
+            fallbackAudioArticles.currentTime = 0;
+          } catch (e) {}
+          fallbackAudioArticles = null;
+        }
+      }
+
+      function playArticlesAudioFallback(text) {
+        stopArticlesFallbackAudio();
+        try {
+          const clean = String(text || '').replace(/[«»“”„"''`]/g, ' ').replace(/\s+/g, ' ').trim();
+          if (!clean) return;
+          const chunk = clean.slice(0, 200);
+          const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ru&q=${encodeURIComponent(chunk)}`;
+          const audio = new Audio(url);
+          fallbackAudioArticles = audio;
+          audio.playbackRate = 0.88;
+          audio.onended = () => { if (fallbackAudioArticles === audio) fallbackAudioArticles = null; };
+          audio.onerror = () => { if (fallbackAudioArticles === audio) fallbackAudioArticles = null; };
+          const p = audio.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(() => { if (fallbackAudioArticles === audio) fallbackAudioArticles = null; });
+          }
+        } catch (e) {
+          stopArticlesFallbackAudio();
+        }
+      }
+
       function speakRussian(text) {
-        if (!("speechSynthesis" in window)) {
-          alert("Trình duyệt chưa hỗ trợ phát âm trực tiếp.");
+        if (!text) return;
+        // Đánh thức engine trên Chrome
+        if ("speechSynthesis" in window) {
+          try {
+            if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+          } catch (e) {}
+        }
+        if (!russianVoiceArticles) {
+          initArticlesVoices();
+        }
+
+        stopArticlesFallbackAudio();
+
+        if (!("speechSynthesis" in window) || !russianVoiceArticles) {
+          playArticlesAudioFallback(text);
           return;
         }
-        window.speechSynthesis.cancel();
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = "ru-RU";
-        utter.rate = 0.85;
-        window.speechSynthesis.speak(utter);
+
+        try {
+          if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.resume();
+          }
+        } catch (e) {}
+
+        setTimeout(() => {
+          try {
+            const utter = new SpeechSynthesisUtterance(text);
+            activeUtteranceArticles = utter;
+            window.__activeUtteranceArticles = utter;
+            utter.lang = "ru-RU";
+            if (russianVoiceArticles) {
+              utter.voice = russianVoiceArticles;
+            }
+            utter.rate = 0.85;
+
+            let started = false;
+            utter.onstart = () => { started = true; };
+            utter.onend = () => {
+              activeUtteranceArticles = null;
+              window.__activeUtteranceArticles = null;
+            };
+            utter.onerror = (e) => {
+              activeUtteranceArticles = null;
+              window.__activeUtteranceArticles = null;
+              if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
+              playArticlesAudioFallback(text);
+            };
+
+            window.speechSynthesis.speak(utter);
+
+            setTimeout(() => {
+              if (!started) {
+                try { window.speechSynthesis.cancel(); } catch (err) {}
+                playArticlesAudioFallback(text);
+              }
+            }, 800);
+          } catch (err) {
+            playArticlesAudioFallback(text);
+          }
+        }, 50);
       }
 
       /* ARTICLES DATABASE */
