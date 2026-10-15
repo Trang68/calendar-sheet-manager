@@ -669,7 +669,7 @@
     },
     {
       "id": "l4_q20",
-      "lang": "ru",
+      "lang": "vi",
       "prompt": "Ý nghĩa nhân văn và triết lý sâu sắc nhất mà Chekhov muốn gửi gắm qua truyện ngắn «Открытие» là gì?",
       "options": [
         {
@@ -695,6 +695,587 @@
         "C": "Chính xác! Chekhov châm biếm thói ích kỷ tầm thường của tầng lớp thị dân: ngoài miệng thì ca ngợi thi ca nghệ thuật cao quý, nhưng khi thấy nghệ thuật đi kèm đói nghèo, gian khổ thì vội vàng ôm lấy chăn êm nệm ấm, tiền bạc và thở phào nhẹ nhõm.",
         "other": "Chưa chính xác. Tác phẩm mang tính châm biếm triết lý về sự thực dụng của con người trước nghệ thuật."
       }
+    },
+    {
+      "id": "l4_q21",
+      "lang": "vi",
+      "prompt": "Nhân vật Bakhromkin trong tác phẩm được giới thiệu là người thuộc tầng lớp xã hội nào và có điều kiện kinh tế ra sao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Một họa sĩ tự do nghèo khó đang vật lộn mưu sinh"
+        },
+        {
+          "key": "B",
+          "text": "B. Một kỹ sư thành đạt, quan chức trọng vọng, có nhà riêng, kẻ hầu người hạ và tài chính dư dả",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Một thương nhân buôn bán tranh ảnh nghệ thuật tại Moskva"
+        },
+        {
+          "key": "D",
+          "text": "D. Một sinh viên tốt nghiệp trường kỹ thuật đang tìm việc làm"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Ngay câu đầu truyện viết: «Инженер Бахромкин, важный господин...». Ông có bàn làm việc riêng, kẻ hầu mang bữa tối, phòng ngủ êm ấm, xì gà đắt tiền và sổ séc.",
+        "other": "Chưa chính xác. Bakhromkin là một kỹ sư có địa vị cao trong xã hội, sống rất sung túc."
+      }
+    },
+    {
+      "id": "l4_q22",
+      "lang": "ru",
+      "prompt": "Сколько лет было инженеру Бахромкину, когда он неожиданно осознал, что у него открылся талант к рисованию?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. 20–25 лет"
+        },
+        {
+          "key": "B",
+          "text": "B. 40 лет"
+        },
+        {
+          "key": "C",
+          "text": "C. 52 года",
+          "correct": true
+        },
+        {
+          "key": "D",
+          "text": "D. 65 лет"
+        }
+      ],
+      "ans": "C",
+      "expl": {
+        "C": "Правильно! В тексте герой восклицает: «Пятьдесят два года жил на свете и не думал, что у меня есть таланты, и вдруг... талант открылся!».",
+        "other": "Неверно. Бахромкину было 52 года, когда он обнаружил свои художественные способности."
+      }
+    },
+    {
+      "id": "l4_q23",
+      "lang": "vi",
+      "prompt": "Điều gì đã bất ngờ cắt ngang lúc Bakhromkin đang say sưa vẽ tranh và tự đắc chiêm ngưỡng tài năng của mình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Bút chì bị gãy ngòi và hết giấy vẽ"
+        },
+        {
+          "key": "B",
+          "text": "B. Người hầu mang bữa ăn tối vào phòng làm việc của ông",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Có người quen đến gõ cửa rủ đi xem kịch"
+        },
+        {
+          "key": "D",
+          "text": "D. Trời đổ mưa to và sấm chớp dữ dội"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Chi tiết trong bài: «Слуга, который принёс ужин в кабинет Бахромкину, помешал ему рисовать дальше и восхищаться своими рисунками».",
+        "other": "Chưa chính xác. Người đầy tớ mang cơm tối vào phòng đã làm gián đoạn việc vẽ tranh của ông."
+      }
+    },
+    {
+      "id": "l4_q24",
+      "lang": "ru",
+      "prompt": "Чем занимался Бахромкин в дни своей молодости, что было связано с миром искусства?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Профессионально учился в Академии художеств в Петербурге"
+        },
+        {
+          "key": "B",
+          "text": "B. Много читал, играл в домашнем любительском театре, пел и рисовал декорации",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Публиковал критические статьи о поэтах в литературных журналах"
+        },
+        {
+          "key": "D",
+          "text": "D. Работал декоратором в императорском Большом театре"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! В тексте: «В молодости, правда, он много читал, играл в домашнем театре, пел, рисовал декорации».",
+        "other": "Неверно. В юности он участвовал в домашнем любительском театре, рисовал декорации и пел."
+      }
+    },
+    {
+      "id": "l4_q25",
+      "lang": "vi",
+      "prompt": "Ở độ tuổi ngoài 50, Bakhromkin vẫn duy trì những thói quen và phẩm chất văn hóa nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Ông hoàn toàn không quan tâm đến sách vở và nghệ thuật"
+        },
+        {
+          "key": "B",
+          "text": "B. Ông vẫn đọc nhiều sách, mê xem kịch, thuộc lòng nhiều bài thơ hay, ăn nói lưu loát và hóm hỉnh",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Ông dành toàn bộ thời gian rảnh rỗi để đánh cờ và chơi bài"
+        },
+        {
+          "key": "D",
+          "text": "D. Ông mở lớp dạy vẽ tranh cho trẻ em nghèo"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Đoạn văn ghi rõ: «Сейчас он продолжал много читать, любил театр, знал наизусть хорошие стихи, удачно шутил и хорошо говорил».",
+        "other": "Chưa chính xác. Bakhromkin là người có học thức, ham đọc sách, thích xem kịch và thuộc nhiều thơ."
+      }
+    },
+    {
+      "id": "l4_q26",
+      "lang": "ru",
+      "prompt": "Какая реплика раскрывает чрезмерное самодовольство и наивную самоуверенность героя?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. «Только природа может сделать такое с человечеством...»"
+        },
+        {
+          "key": "B",
+          "text": "B. «А что, может быть, я ещё умею стихи и романы писать?»",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. «Мама, зачем ты это сделала?»"
+        },
+        {
+          "key": "D",
+          "text": "D. «У художников и поэтов не бывает лошадей...»"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Едва нарисовав два наброска, герой тут же вообразил себя не только великим художником, но и потенциальным автором гениальных романов и стихов.",
+        "other": "Неверно. Фраза «может быть, я ещё умею стихи и романы писать?» прямо подчёркивает комическую самовлюблённость персонажа."
+      }
+    },
+    {
+      "id": "l4_q27",
+      "lang": "vi",
+      "prompt": "Theo hình dung của Bakhromkin, vì sao người nghệ sĩ (họa sĩ, nhà thơ) ban đêm đi về nhà bắt buộc phải đi bộ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Vì họ thích tản bộ để tìm kiếm cảm hứng sáng tác thơ văn"
+        },
+        {
+          "key": "B",
+          "text": "B. Vì họ nghèo túng, không có tiền mua hoặc thuê xe ngựa riêng",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Vì đường phố về đêm bị cấm xe ngựa qua lại"
+        },
+        {
+          "key": "D",
+          "text": "D. Vì bác sĩ khuyên họ nên đi bộ để rèn luyện sức khỏe"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Bakhromkin nghĩ: «У художников и поэтов не бывает лошадей, поэтому, хочешь не хочешь, надо идти пешком».",
+        "other": "Chưa chính xác. Bakhromkin gắn liền hình ảnh thi sĩ/họa sĩ với sự túng thiếu, không có ngựa xe."
+      }
+    },
+    {
+      "id": "l4_q28",
+      "lang": "ru",
+      "prompt": "С чем сравнивает Бахромкин степень своего удивления от внезапно проявившегося таланта?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Он удивился бы меньше, если бы нашёл деньги в старом пальто или стал большим начальником.",
+          "correct": true
+        },
+        {
+          "key": "B",
+          "text": "B. Он удивился бы так же, если бы выиграл миллион в лотерею."
+        },
+        {
+          "key": "C",
+          "text": "C. Он сравнил своё удивление с падением метеорита."
+        },
+        {
+          "key": "D",
+          "text": "D. Он вообще ничему не удивился, так как всегда знал себе цену."
+        }
+      ],
+      "ans": "A",
+      "expl": {
+        "A": "Правильно! В тексте: «Он удивился бы гораздо меньше, если бы нашёл у себя в старом пальто деньги или стал бы большим начальником».",
+        "other": "Неверно. Автор подчёркивает, что находка денег или карьерный взлёт для Бахромкина были бы более привычным и естественным делом."
+      }
+    },
+    {
+      "id": "l4_q29",
+      "lang": "vi",
+      "prompt": "Hai vật dụng nào trong các ngăn kéo bàn làm việc của Bakhromkin là biểu tượng cho cuộc sống tư sản no đủ, đối nghịch với người nghệ sĩ nghèo?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Hộp bút lông và tập giấy vẽ đắt tiền"
+        },
+        {
+          "key": "B",
+          "text": "B. Những điếu xì gà đắt giá (ngăn giữa) và cuốn sổ séc ngân hàng (ngăn dưới)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Khẩu súng lục và chiếc đồng hồ quả quýt bằng vàng"
+        },
+        {
+          "key": "D",
+          "text": "D. Tập thư tình cũ và chiếc gương soi viền bạc"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Tác phẩm miêu tả: «в среднем ящике стола нет дорогих сигар, а в нижнем ящике — нет чековой книжки».",
+        "other": "Chưa chính xác. Xì gà đắt tiền và sổ séc là hai biểu tượng vật chất của sự giàu sang trong bàn làm việc của ông."
+      }
+    },
+    {
+      "id": "l4_q30",
+      "lang": "ru",
+      "prompt": "Какое значение имеет устойчивое сочетание <strong>«хочешь не хочешь»</strong> в предложении: <em>«У художников не бывает лошадей, поэтому, хочешь не хочешь, надо идти пешком»</em>?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. По собственному горячему желанию"
+        },
+        {
+          "key": "B",
+          "text": "B. Волей-неволей, неизбежно, в силу необходимости",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. В зависимости от погоды на улице"
+        },
+        {
+          "key": "D",
+          "text": "D. С разрешения городской полиции"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Идиома «хочешь не хочешь» означает: независимо от желания, неизбежно, приходится делать.",
+        "other": "Неверно. «Хочешь не хочешь» — это русский фразеологизм, означающий «волей-неволей, обязательно»."
+      }
+    },
+    {
+      "id": "l4_q31",
+      "lang": "vi",
+      "prompt": "Cụm từ miêu tả ánh mắt của người phụ nữ già «с кислыми глазами» gợi lên ấn tượng gì cho người đọc?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Đôi mắt long lanh, sắc sảo và thông minh"
+        },
+        {
+          "key": "B",
+          "text": "B. Đôi mắt lờ đờ, đượm vẻ cáu kỉnh, chán chường và cạn kiệt sinh khí của tuổi già",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Đôi mắt bị dị ứng vì thời tiết giao mùa"
+        },
+        {
+          "key": "D",
+          "text": "D. Đôi mắt biết cười và luôn tràn đầy hy vọng"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Trong tiếng Nga, «кислый» (chua) khi dùng cho ánh mắt hay khuôn mặt biểu thị sự ủ rũ, cau có, buồn rầu và mất đi sự sống động tươi vui.",
+        "other": "Chưa chính xác. «Кислые глаза» thể hiện vẻ mặt cáu bẳn, ủ rũ, già nua thiếu sinh khí."
+      }
+    },
+    {
+      "id": "l4_q32",
+      "lang": "ru",
+      "prompt": "Какого управления требует выражение <strong>«способности к чему»</strong>? Выберите грамматически верный вариант:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Способности на рисовании (на + П.п.)"
+        },
+        {
+          "key": "B",
+          "text": "B. Способности к рисованию (к + Д.п.)",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Способности для рисования (для + Р.п.)"
+        },
+        {
+          "key": "D",
+          "text": "D. Способности с рисованием (с + Т.п.)"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Слово «способность / способности» требует предлога «к» + Дательный падеж (к музыке, к рисованию, к языкам).",
+        "other": "Ошибка в падеже. Правильно: способности к чему? — к рисованию (Дательный падеж)."
+      }
+    },
+    {
+      "id": "l4_q33",
+      "lang": "vi",
+      "prompt": "Hành động người mẹ của Bakhromkin hôn tay người nhà thơ nghèo trên phố có ý nghĩa gì đối với nhận thức thời thơ ấu của nhân vật?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Giúp ông nhận ra người thi sĩ là họ hàng thân cận của gia đình"
+        },
+        {
+          "key": "B",
+          "text": "B. Khắc sâu vào tâm trí cậu bé bài học rằng thi ca và nghệ thuật được xã hội tôn kính tột bậc, vượt lên trên vẻ ngoài bần hàn",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Khiến cậu bé sợ hãi và không dám gặp gỡ người lạ ngoài đường"
+        },
+        {
+          "key": "D",
+          "text": "D. Khiến cậu bé quyết định theo học nghề làm thơ ngay từ nhỏ"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Câu chuyện giải thích: «Тогда Бахромкин понял, что многие люди с большим уважением относятся к поэтам, художникам, композиторам».",
+        "other": "Chưa chính xác. Hành động của người mẹ đã dạy cho cậu bé sự tôn kính xã hội dành cho các tài năng nghệ thuật."
+      }
+    },
+    {
+      "id": "l4_q34",
+      "lang": "ru",
+      "prompt": "Выберите правильную форму глагола совершенного вида: <em>«Бахромкин долго думал, потом посмотрел на рисунок и от неожиданности ________ (вскочить).»</em>",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. вскакивал"
+        },
+        {
+          "key": "B",
+          "text": "B. вскочил",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. вскочит"
+        },
+        {
+          "key": "D",
+          "text": "D. вскочивший"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Однократное внезапное действие в прошлом требует глагола совершенного вида прошедшего времени: «вскочил» (bật dậy).",
+        "other": "Ошибка вида глагола. Действие произошло внезапно и однократно: вскочил (СВ)."
+      }
+    },
+    {
+      "id": "l4_q35",
+      "lang": "vi",
+      "prompt": "Thủ pháp nghệ thuật nào được Chekhov sử dụng khi để Bakhromkin vẽ bức tranh đầu bà lão già nua ngay cạnh bức tranh đầu cô gái trẻ đẹp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Thủ pháp ẩn dụ trừu tượng"
+        },
+        {
+          "key": "B",
+          "text": "B. Thủ pháp tương phản, đối lập gay gắt giữa sự nở rộ của thanh xuân và sự tàn phai khắc nghiệt của thời gian",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Thủ pháp nhân cách hóa đồ vật"
+        },
+        {
+          "key": "D",
+          "text": "D. Thủ pháp lãng mạn hóa cái nghèo"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Việc đặt hai bức chân dung cạnh nhau làm nổi bật sự tàn phá tàn nhẫn của thời gian đối với nhan sắc và cuộc đời con người.",
+        "other": "Chưa chính xác. Đây là thủ pháp đối lập tương phản (контраст) kinh điển trong văn chương Chekhov."
+      }
+    },
+    {
+      "id": "l4_q36",
+      "lang": "ru",
+      "prompt": "Какое слово в тексте характеризует комнату бедного художника как крайне неприятную и неуютную?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Просторная и светлая"
+        },
+        {
+          "key": "B",
+          "text": "B. Маленькая, грязная, с холодной и жёсткой постелью",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Роскошная и украшенная картинами"
+        },
+        {
+          "key": "D",
+          "text": "D. Уютная и тёплая"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! В тексте: «комната маленькая и грязная, постель холодная и жёсткая».",
+        "other": "Неверно. Комната в дешёвой гостинице описана как маленькая, холодная и грязная."
+      }
+    },
+    {
+      "id": "l4_q37",
+      "lang": "vi",
+      "prompt": "Phản ứng của Bakhromkin khi leo lên chiếc giường ấm áp, mềm mại ở cuối truyện thể hiện điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Ông cảm thấy ân hận vì đã không theo đuổi đam mê nghệ thuật"
+        },
+        {
+          "key": "B",
+          "text": "B. Sự thở phào nhẹ nhõm, tự mãn của một kẻ thực dụng coi chiếc giường êm, tiền bạc và sự an nhàn quý giá hơn danh vọng nghệ thuật gian khổ",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Nỗi tuyệt vọng vì bị xã hội ruồng bỏ"
+        },
+        {
+          "key": "D",
+          "text": "D. Quyết tâm ngày mai sẽ đi mua màu vẽ và giá vẽ tranh"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! Câu kết truyện làm bộc lộ trọn vẹn bản chất tiểu tư sản: Bakhromkin thấy may mắn vì không có tài năng, để khỏi phải chịu cảnh nghèo đói của người nghệ sĩ.",
+        "other": "Chưa chính xác. Bakhromkin không hề ân hận mà ngược lại, ông thở phào tự mãn vì mình giàu có và ấm êm."
+      }
+    },
+    {
+      "id": "l4_q38",
+      "lang": "ru",
+      "prompt": "К какому литературному жанру относится произведение А. П. Чехова «Открытие»?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Историческая трагедия"
+        },
+        {
+          "key": "B",
+          "text": "B. Сатирический психологический рассказ с глубоким морально-философским подтекстом",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Фантастическая сказка"
+        },
+        {
+          "key": "D",
+          "text": "D. Научно-популярный очерк"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! «Открытие» — образец чеховской тонкой сатиры и глубокого психологического анализа мещанской натуры.",
+        "other": "Неверно. Жанр произведения — сатирический рассказ с философским смыслом."
+      }
+    },
+    {
+      "id": "l4_q39",
+      "lang": "vi",
+      "prompt": "Thành ngữ tiếng Nga «знать наизусть» có nghĩa là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Biết sơ qua qua lời kể của người khác"
+        },
+        {
+          "key": "B",
+          "text": "B. Học thuộc lòng, nhớ như in từng câu từng chữ",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Đọc sách phải dùng kính lúp"
+        },
+        {
+          "key": "D",
+          "text": "D. Hiểu sai lệch nội dung tác phẩm"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Chính xác! «Знать наизусть» nghĩa là học thuộc lòng (thơ ca, quy tắc, bài hát), có thể đọc lại trôi chảy không cần nhìn văn bản.",
+        "other": "Chưa chính xác. «Знать наизусть» là học thuộc lòng từng chữ."
+      }
+    },
+    {
+      "id": "l4_q40",
+      "lang": "ru",
+      "prompt": "Какая главная мысль Чехова раскрывается через сопоставление романтических иллюзий и бытовой реальности?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A. Искусство доступно только людям дворянского происхождения"
+        },
+        {
+          "key": "B",
+          "text": "B. Обыватель любит рассуждать о высоком искусстве лишь до тех пор, пока оно не угрожает его личному материальному комфорту",
+          "correct": true
+        },
+        {
+          "key": "C",
+          "text": "C. Рисовать портреты гораздо труднее, чем писать романы"
+        },
+        {
+          "key": "D",
+          "text": "D. Каждый чиновник в глубине души является великим поэтом"
+        }
+      ],
+      "ans": "B",
+      "expl": {
+        "B": "Правильно! Чехов гениально разоблачает лицемерие сытого обывателя: восхищаться искусством со стороны легко, но разделить страдания и нищету творца сытый мещанин никогда не захочет.",
+        "other": "Неверно. Главный посыл автора — обыватель готов восхищаться творчеством, но всегда выберет материальный комфорт."
+      }
     }
   ]
 }
+
