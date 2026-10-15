@@ -28,5 +28,15 @@
     "topic": "Văn học & Nghệ thuật kịch nghệ Nga",
     "file": "lesson-03.json",
     "questionCount": 20
+  },
+  {
+    "id": 4,
+    "title": "Рассказ А. П. Чехова «Открытие»",
+    "badge": "BÀI ĐỌC 4",
+    "time": "25-30 phút",
+    "source": "По рассказу А. П. Чехова (Giáo trình tiếng Nga)",
+    "topic": "Văn học & Triết lý nhân sinh: Nghệ thuật và Hiện thực",
+    "file": "lesson-04.json",
+    "questionCount": 20
   }
 ]
