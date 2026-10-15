@@ -1036,3 +1036,4 @@ domains.forEach(d => {
 });
 
 console.log('✓ Hoàn tất tạo 6 chuyên ngành tiếng Nga thực chiến!');
+

@@ -94,12 +94,12 @@
               <span class="btn-text">Bài trước</span>
             </button>
 
-            <!-- Hộp chọn bài Dropdown hiển thị Tên bài học -->
-            <div class="lesson-dropdown-box">
+            <!-- Nút chọn bài hiển thị Tên bài học & mở Bảng chọn bài Adaptive -->
+            <div class="lesson-dropdown-box" id="lessonDropdownTrigger">
               <span class="lesson-dropdown-icon" id="lessonDropdownIcon">📖</span>
-              <select class="lesson-dropdown-select" id="lessonSelectDropdown" aria-label="Chọn bài học">
-                <!-- Sẽ được điền động qua JavaScript -->
-              </select>
+              <button type="button" class="lesson-dropdown-btn" id="lessonDropdownBtn" aria-haspopup="dialog" aria-expanded="false" title="Nhấp để mở bảng chọn 20 bài học">
+                <span class="lesson-display-text" id="lessonDisplayText">Bài 1 / 20: Đang tải bài học...</span>
+              </button>
               <span class="lesson-dropdown-arrow">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="6 9 12 15 18 9"></polyline>
@@ -127,6 +127,53 @@
             </div>
           </div>
           <span id="currentSelectionLabel" style="display: none;"></span>
+        </div>
+
+        <!-- BẢNG CHỌN BÀI HỌC THÍCH ỨNG (ADAPTIVE LESSON PICKER MODAL & BOTTOM SHEET) -->
+        <div class="lesson-modal-overlay" id="lessonPickerModal" aria-hidden="true" style="display: none;">
+          <div class="lesson-modal-card" id="lessonModalCard" role="dialog" aria-modal="true" aria-labelledby="lessonModalTitle">
+            <!-- Mobile Drag Handle Bar -->
+            <div class="mobile-drag-handle"><span></span></div>
+
+            <!-- Modal Header -->
+            <div class="lesson-modal-header">
+              <div class="lesson-modal-title-wrap">
+                <div class="lesson-modal-badge" id="modalLevelBadge">TRÌNH ĐỘ A1 • ĐỌC HIỂU</div>
+                <h3 class="lesson-modal-title" id="lessonModalTitle">Chọn bài học (20 bài)</h3>
+              </div>
+              <button type="button" class="lesson-modal-close" id="btnCloseLessonPicker" aria-label="Đóng bảng chọn bài">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Filter Tabs theo Chặng (4 chặng: 1-5, 6-10, 11-15, 16-20) -->
+            <div class="lesson-phase-tabs" id="lessonPhaseTabs">
+              <button type="button" class="phase-chip active" data-phase="all">Tất cả bài</button>
+              <button type="button" class="phase-chip" data-phase="1">Bài 1 - 5</button>
+              <button type="button" class="phase-chip" data-phase="2">Bài 6 - 10</button>
+              <button type="button" class="phase-chip" data-phase="3">Bài 11 - 15</button>
+              <button type="button" class="phase-chip" data-phase="4">Bài 16 - 20</button>
+            </div>
+
+            <!-- Lưới các bài học -->
+            <div class="lesson-grid-scroll" id="lessonGridScroll">
+              <div class="lesson-grid-container" id="lessonGridContainer">
+                <!-- Sẽ được tạo động qua JS -->
+              </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="lesson-modal-footer">
+              <div class="footer-active-info">
+                <span class="active-dot"></span>
+                <span id="footerActiveLessonTitle">Đang học: Bài 1</span>
+              </div>
+              <span class="footer-tip-text">Chạm vào bài để học ngay</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1500,12 +1547,106 @@
         }
       }
 
+      // ======================================================================
+      // ADAPTIVE LESSON PICKER MODAL & BOTTOM SHEET CONTROLLER
+      // ======================================================================
+      let activeLessonPhase = 'all';
+
+      function openLessonPicker() {
+        const modal = document.getElementById('lessonPickerModal');
+        const triggerBtn = document.getElementById('lessonDropdownBtn');
+        if (!modal) return;
+        modal.style.display = 'flex';
+        void modal.offsetWidth; // force reflow for CSS transition
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        if (triggerBtn) {
+          triggerBtn.classList.add('active');
+          triggerBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        // Tự động cuộn đến bài học đang học dở
+        setTimeout(() => {
+          const activeCard = modal.querySelector('.lesson-card-item.active');
+          if (activeCard) {
+            activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }, 120);
+      }
+
+      function closeLessonPicker() {
+        const modal = document.getElementById('lessonPickerModal');
+        const triggerBtn = document.getElementById('lessonDropdownBtn');
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        if (triggerBtn) {
+          triggerBtn.classList.remove('active');
+          triggerBtn.setAttribute('aria-expanded', 'false');
+        }
+        setTimeout(() => {
+          if (!modal.classList.contains('open')) {
+            modal.style.display = 'none';
+          }
+        }, 240);
+      }
+
+      function renderLessonGrid(manifestList, phase = 'all') {
+        const grid = document.getElementById('lessonGridContainer');
+        if (!grid || !manifestList || !manifestList.length) return;
+        grid.innerHTML = '';
+
+        let filtered = manifestList;
+        if (phase === '1') filtered = manifestList.filter(m => m.id >= 1 && m.id <= 5);
+        else if (phase === '2') filtered = manifestList.filter(m => m.id >= 6 && m.id <= 10);
+        else if (phase === '3') filtered = manifestList.filter(m => m.id >= 11 && m.id <= 15);
+        else if (phase === '4') filtered = manifestList.filter(m => m.id >= 16 && m.id <= 20);
+
+        const getStorageKey = () => currentLevel === 'specialized' 
+          ? `taiga_lesson_spec_${currentDomain}` 
+          : `taiga_lesson_${currentLevel}_${currentSkill}`;
+
+        filtered.forEach(m => {
+          const isActive = m.id === parseInt(currentLessonId, 10);
+          const numStr = m.id < 10 ? '0' + m.id : '' + m.id;
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.className = `lesson-card-item ${isActive ? 'active' : ''}`;
+          card.setAttribute('data-lesson-id', m.id);
+          card.setAttribute('data-file', m.file);
+          card.innerHTML = `
+            <div class="lesson-card-num">${numStr}</div>
+            <div class="lesson-card-content">
+              <div class="lesson-card-title">${m.title}</div>
+              ${isActive ? '<span class="lesson-active-tag">● Đang học</span>' : ''}
+            </div>
+          `;
+          card.onclick = () => {
+            currentLessonId = m.id;
+            try {
+              localStorage.setItem(getStorageKey(), currentLessonId);
+            } catch (e) {}
+            closeLessonPicker();
+            loadLessonByFile(m.file);
+            updateSelectionLabel();
+            syncLessonNavState(manifestList);
+          };
+          grid.appendChild(card);
+        });
+      }
+
       function renderLessonNav(manifestList) {
-        const select = document.getElementById('lessonSelectDropdown');
         const iconEl = document.getElementById('lessonDropdownIcon');
+        const triggerBtn = document.getElementById('lessonDropdownBtn');
         const prevBtn = document.getElementById('btnPrevLesson');
         const nextBtn = document.getElementById('btnNextLesson');
-        if (!select || !manifestList || !manifestList.length) return;
+        const modalBadge = document.getElementById('modalLevelBadge');
+        const modalTitle = document.getElementById('lessonModalTitle');
+        const phaseTabs = document.getElementById('lessonPhaseTabs');
+        const closeBtn = document.getElementById('btnCloseLessonPicker');
+        const modalOverlay = document.getElementById('lessonPickerModal');
+
+        if (!manifestList || !manifestList.length) return;
 
         const skillIcons = {
           reading: '📖',
@@ -1522,37 +1663,75 @@
         const iconKey = currentLevel === 'specialized' ? currentDomain : currentSkill;
         if (iconEl) iconEl.textContent = skillIcons[iconKey] || '📖';
 
-        select.innerHTML = '';
         const total = manifestList.length;
 
-        manifestList.forEach((m) => {
-          const opt = document.createElement('option');
-          opt.value = m.id;
-          opt.setAttribute('data-file', m.file);
-          opt.textContent = `Bài ${m.id} / ${total}: ${m.title}`;
-          select.appendChild(opt);
+        // Cập nhật Badge & Tiêu đề Modal
+        if (modalBadge) {
+          if (currentLevel === 'specialized') {
+            const domainName = specializedDisplayNames[currentDomain] || currentDomain;
+            modalBadge.textContent = 'CHUYÊN NGÀNH • ' + domainName.toUpperCase();
+          } else {
+            const skillName = skillDisplayNames[currentSkill] || currentSkill;
+            modalBadge.textContent = 'TRÌNH ĐỘ ' + currentLevel + ' • ' + skillName.toUpperCase();
+          }
+        }
+        if (modalTitle) {
+          modalTitle.textContent = `Danh sách bài học (${total} bài)`;
+        }
+
+        // Hiện / ẩn bộ lọc chặng nếu số bài <= 5
+        if (phaseTabs) {
+          phaseTabs.style.display = total > 5 ? 'flex' : 'none';
+        }
+
+        // Đặt lại tab chặng về 'all'
+        activeLessonPhase = 'all';
+        document.querySelectorAll('#lessonPhaseTabs .phase-chip').forEach(chip => {
+          chip.classList.toggle('active', chip.getAttribute('data-phase') === 'all');
         });
 
-        select.value = currentLessonId;
+        // Vẽ các thẻ bài học
+        renderLessonGrid(manifestList, activeLessonPhase);
+
+        // Mở modal khi bấm vào ô chọn bài
+        if (triggerBtn) {
+          triggerBtn.onclick = (e) => {
+            e.stopPropagation();
+            openLessonPicker();
+          };
+        }
+
+        // Đóng modal khi bấm nút X
+        if (closeBtn) {
+          closeBtn.onclick = (e) => {
+            e.stopPropagation();
+            closeLessonPicker();
+          };
+        }
+
+        // Đóng khi click ngoài nền overlay
+        if (modalOverlay) {
+          modalOverlay.onclick = (e) => {
+            if (e.target === modalOverlay) {
+              closeLessonPicker();
+            }
+          };
+        }
+
+        // Sự kiện lọc bài theo chặng (Phase chips)
+        document.querySelectorAll('#lessonPhaseTabs .phase-chip').forEach(chip => {
+          chip.onclick = (e) => {
+            e.stopPropagation();
+            const phase = chip.getAttribute('data-phase');
+            activeLessonPhase = phase;
+            document.querySelectorAll('#lessonPhaseTabs .phase-chip').forEach(c => c.classList.toggle('active', c === chip));
+            renderLessonGrid(manifestList, activeLessonPhase);
+          };
+        });
 
         const getStorageKey = () => currentLevel === 'specialized' 
           ? `taiga_lesson_spec_${currentDomain}` 
           : `taiga_lesson_${currentLevel}_${currentSkill}`;
-
-        // Sự kiện khi người dùng chọn bài học từ dropdown
-        select.onchange = () => {
-          const selectedId = parseInt(select.value, 10);
-          const found = manifestList.find(m => m.id === selectedId);
-          if (found) {
-            currentLessonId = found.id;
-            try {
-              localStorage.setItem(getStorageKey(), currentLessonId);
-            } catch (e) {}
-            loadLessonByFile(found.file);
-            updateSelectionLabel();
-            syncLessonNavState(manifestList);
-          }
-        };
 
         // Nút Bài trước
         if (prevBtn) {
@@ -1561,7 +1740,6 @@
             if (curIdx > 0) {
               const target = manifestList[curIdx - 1];
               currentLessonId = target.id;
-              select.value = target.id;
               try {
                 localStorage.setItem(getStorageKey(), currentLessonId);
               } catch (e) {}
@@ -1579,7 +1757,6 @@
             if (curIdx >= 0 && curIdx < manifestList.length - 1) {
               const target = manifestList[curIdx + 1];
               currentLessonId = target.id;
-              select.value = target.id;
               try {
                 localStorage.setItem(getStorageKey(), currentLessonId);
               } catch (e) {}
@@ -1597,18 +1774,45 @@
         const list = manifestList || currentManifest;
         if (!list || !list.length) return;
 
-        const select = document.getElementById('lessonSelectDropdown');
+        const displayEl = document.getElementById('lessonDisplayText');
         const prevBtn = document.getElementById('btnPrevLesson');
         const nextBtn = document.getElementById('btnNextLesson');
         const progressFill = document.getElementById('lessonProgressFill');
         const progressStep = document.getElementById('lessonProgressStep');
         const progressPercent = document.getElementById('lessonProgressPercent');
+        const footerTitle = document.getElementById('footerActiveLessonTitle');
 
         const curIdx = list.findIndex(m => m.id === parseInt(currentLessonId, 10));
         const activeIdx = curIdx >= 0 ? curIdx : 0;
         const total = list.length;
+        const activeEntry = list[activeIdx] || list[0];
 
-        if (select) select.value = currentLessonId;
+        if (displayEl && activeEntry) {
+          displayEl.textContent = `Bài ${activeEntry.id} / ${total}: ${activeEntry.title}`;
+        }
+        if (footerTitle && activeEntry) {
+          footerTitle.textContent = `Đang học: Bài ${activeEntry.id} - ${activeEntry.title}`;
+        }
+
+        // Cập nhật trạng thái active card trong bảng bài học
+        document.querySelectorAll('#lessonGridContainer .lesson-card-item').forEach(card => {
+          const cardId = parseInt(card.getAttribute('data-lesson-id'), 10);
+          const isAct = cardId === activeEntry.id;
+          card.classList.toggle('active', isAct);
+          const content = card.querySelector('.lesson-card-content');
+          if (content) {
+            let tag = content.querySelector('.lesson-active-tag');
+            if (isAct && !tag) {
+              const span = document.createElement('span');
+              span.className = 'lesson-active-tag';
+              span.textContent = '● Đang học';
+              content.appendChild(span);
+            } else if (!isAct && tag) {
+              tag.remove();
+            }
+          }
+        });
+
         if (prevBtn) prevBtn.disabled = activeIdx <= 0;
         if (nextBtn) nextBtn.disabled = activeIdx >= total - 1;
 
@@ -2348,6 +2552,13 @@
           navToggleBtn.setAttribute('aria-expanded', String(isOpen));
         });
       }
+
+      // Phím Esc đóng modal chọn bài học
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLessonPicker();
+        }
+      });
 
       // Nạp dữ liệu ban đầu khi trang vừa tải
       document.addEventListener('DOMContentLoaded', () => {
