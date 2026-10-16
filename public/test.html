@@ -334,6 +334,8 @@
           localStorage.setItem('taiga_reading_speed', audioPlaybackRate.toString());
         } catch (e) {}
 
+        initVoices();
+
         // Đồng bộ giao diện nút tốc độ cho cả bài đọc và bài nghe
         document.querySelectorAll('.audio-speed-control .btn-speed-opt').forEach(btn => {
           const btnSpeed = parseFloat(btn.getAttribute('data-speed'));
@@ -364,29 +366,43 @@
         } catch (e) {}
       }
 
-      function initVoices() {
-        if (!speechState.synth) return;
+      function getRussianVoice(targetRate = 1.0) {
+        if (!speechState.synth) return null;
         try {
           const voices = speechState.synth.getVoices() || [];
-          if (!voices.length) return;
+          if (!voices.length) return null;
 
-          // Chuẩn hóa và lọc danh sách giọng tiếng Nga (ru-RU, ru_RU, ru, hoặc tên chứa Russian/русский)
           const ruVoices = voices.filter(v => {
             const lang = (v.lang || '').toLowerCase().replace('_', '-');
             const name = (v.name || '').toLowerCase();
             return lang.startsWith('ru') || name.includes('russian') || name.includes('русск');
           });
+          if (!ruVoices.length) return null;
 
-          if (ruVoices.length > 0) {
-            // Trên macOS Chrome: Ưu tiên giọng cục bộ (Milena, Yuri, localService: true)
-            // Giọng mạng Google online trên Chrome Mac thường bị timeout hoặc không phản hồi
-            speechState.russianVoice = 
-              ruVoices.find(v => v.localService) ||
-              ruVoices.find(v => v.name.includes('Milena') || v.name.includes('Yuri')) ||
-              ruVoices.find(v => v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google')) ||
-              ruVoices[0];
+          // Nếu người học chọn tốc độ chậm (< 1.0, ví dụ 0.75x):
+          // Các giọng "Online (Natural)" của Microsoft Edge / Google Chrome là streaming từ Cloud,
+          // Web Speech API trên trình duyệt bỏ qua utterance.rate đối với giọng Online này.
+          // Do đó khi cần tốc độ chậm, ưu tiên giọng Local/Desktop thực sự tuân theo utterance.rate!
+          if (targetRate < 0.95) {
+            const localVoice = ruVoices.find(v => v.localService) ||
+                               ruVoices.find(v => v.name.includes('Milena') || v.name.includes('Yuri') || v.name.includes('Desktop')) ||
+                               ruVoices.find(v => !v.name.includes('Online') && !v.name.includes('Natural'));
+            if (localVoice) return localVoice;
           }
-        } catch (e) {}
+
+          // Tốc độ bình thường 1.0x: ưu tiên local hoặc các giọng chất lượng cao
+          return ruVoices.find(v => v.localService) ||
+                 ruVoices.find(v => v.name.includes('Milena') || v.name.includes('Yuri')) ||
+                 ruVoices.find(v => v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Google')) ||
+                 ruVoices[0];
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function initVoices() {
+        if (!speechState.synth) return;
+        speechState.russianVoice = getRussianVoice(audioPlaybackRate);
       }
 
       if (speechState.synth) {
@@ -652,8 +668,13 @@
           }
         };
 
-        // Nếu máy không có giọng Nga hoặc không hỗ trợ Web Speech -> Dùng fallback HTML5 Audio
-        if (!speechState.synth || !speechState.russianVoice) {
+        const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
+
+        // Nếu máy không có giọng Nga hoặc không hỗ trợ Web Speech
+        // HOẶC nếu người học chọn tốc độ chậm (< 1.0) mà trình duyệt chỉ có giọng Online (Edge/Chrome Online Natural bỏ qua utterance.rate)
+        // -> Dùng fallback HTML5 Audio với audio.playbackRate = rate để đảm bảo 100% làm chậm được âm thanh!
+        const isOnlineOnlyVoice = voiceToUse && !voiceToUse.localService && (voiceToUse.name.includes('Online') || voiceToUse.name.includes('Natural'));
+        if (!speechState.synth || !voiceToUse || (rate < 0.95 && isOnlineOnlyVoice)) {
           playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
           return;
         }
@@ -664,8 +685,8 @@
           speechState.currentUtterance = utterance;
           window.__taigaActiveUtterance = utterance;
           utterance.lang = 'ru-RU';
-          if (speechState.russianVoice) {
-            utterance.voice = speechState.russianVoice;
+          if (voiceToUse) {
+            utterance.voice = voiceToUse;
           }
           utterance.rate = rate;
           utterance.pitch = 1.0;
@@ -815,8 +836,12 @@
           }
         }, maxDurationMs);
 
+        const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
+        const isOnlineOnlyVoice = voiceToUse && !voiceToUse.localService && (voiceToUse.name.includes('Online') || voiceToUse.name.includes('Natural'));
+
         // Trường hợp máy không có voice tiếng Nga hoặc không hỗ trợ Web Speech
-        if (!speechState.synth || !speechState.russianVoice) {
+        // HOẶC nếu người dùng chọn đọc chậm mà giọng duy nhất là giọng Online (bỏ qua utterance.rate)
+        if (!speechState.synth || !voiceToUse || (rate < 0.95 && isOnlineOnlyVoice)) {
           playAudioFallback(text, rate, handleDone, handleDone);
           return;
         }
@@ -830,8 +855,8 @@
             speechState.currentUtterance = utterance;
             window.__taigaActiveUtterance = utterance;
             utterance.lang = 'ru-RU';
-            if (speechState.russianVoice) {
-              utterance.voice = speechState.russianVoice;
+            if (voiceToUse) {
+              utterance.voice = voiceToUse;
             }
             utterance.rate = rate;
             utterance.pitch = 1.0;
