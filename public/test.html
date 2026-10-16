@@ -345,10 +345,15 @@
         // Tính lại thời lượng các câu
         initSentenceTimings();
 
-        // Nếu bài đọc/hội thoại đang phát, áp dụng tốc độ mới ngay cho câu hiện tại
+        // Nếu bài đọc/hội thoại đang phát, lập tức ngắt câu cũ và phát lại câu hiện tại với tốc độ mới
         const ap = speechState.articlePlayer;
         if (ap.status === 'playing') {
-          playSentence(ap.currentSentenceIdx);
+          cancelCurrentSpeech();
+          setTimeout(() => {
+            if (ap.status === 'playing') {
+              playSentence(ap.currentSentenceIdx);
+            }
+          }, 80);
         }
       }
 
@@ -634,6 +639,8 @@
           return;
         }
 
+        // Hủy phát âm cũ và vô hiệu hóa các callback trước đó (tránh dồn hàng đợi hoặc next câu giả)
+        cancelCurrentSpeech();
         const currentToken = speechState.activeSpeechToken;
 
         clearSentenceHighlights();
@@ -648,16 +655,25 @@
 
         updatePlayerUI();
 
+        if (!speechState.synth) {
+          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
+          stopArticlePlayer();
+          return;
+        }
+
         const cleanSentenceText = cleanTextForSpeech(item.text);
         const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
-        const rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
+        let rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
+        // Hiệu chỉnh tốc độ 0.75x thành 0.70x để người học cảm nhận được sự chậm rãi rõ rệt
+        if (rate === 0.75) {
+          rate = 0.70;
+        }
 
         const nextSentence = function() {
           if (currentToken !== speechState.activeSpeechToken) return;
           if (ap.status !== 'playing') return;
 
           if (sentenceIdx + 1 < data.sentences.length) {
-            // Khoảng nghỉ tự nhiên 120ms giữa các câu để Chrome Mac xử lý buffer âm thanh mượt mà
             setTimeout(() => {
               if (currentToken === speechState.activeSpeechToken && ap.status === 'playing') {
                 playSentence(sentenceIdx + 1);
@@ -670,15 +686,6 @@
 
         const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
 
-        // Nếu máy không có giọng Nga hoặc không hỗ trợ Web Speech
-        // HOẶC nếu người học chọn tốc độ chậm (< 1.0) mà trình duyệt chỉ có giọng Online (Edge/Chrome Online Natural bỏ qua utterance.rate)
-        // -> Dùng fallback HTML5 Audio với audio.playbackRate = rate để đảm bảo 100% làm chậm được âm thanh!
-        const isOnlineOnlyVoice = voiceToUse && !voiceToUse.localService && (voiceToUse.name.includes('Online') || voiceToUse.name.includes('Natural'));
-        if (!speechState.synth || !voiceToUse || (rate < 0.95 && isOnlineOnlyVoice)) {
-          playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
-          return;
-        }
-
         try {
           wakeUpSpeechEngine();
           const utterance = new SpeechSynthesisUtterance(cleanSentenceText);
@@ -690,11 +697,6 @@
           }
           utterance.rate = rate;
           utterance.pitch = 1.0;
-
-          let hasStarted = false;
-          utterance.onstart = function() {
-            hasStarted = true;
-          };
 
           utterance.onend = function() {
             if (window.__taigaActiveUtterance === utterance) {
@@ -711,21 +713,22 @@
             if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
             if (ap.status !== 'playing') return;
 
-            // Chuyển sang Audio Fallback nếu Chrome báo lỗi phát âm
-            playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
+            console.warn('Speech synthesis error on sentence', sentenceIdx, e);
+            if (sentenceIdx + 1 < data.sentences.length) {
+              setTimeout(() => {
+                if (currentToken === speechState.activeSpeechToken && ap.status === 'playing') {
+                  playSentence(sentenceIdx + 1);
+                }
+              }, 400);
+            } else {
+              stopArticlePlayer();
+            }
           };
 
           speechState.synth.speak(utterance);
-
-          // Watchdog: nếu Chrome Mac bị đơ không phát (onstart không chạy sau 900ms)
-          setTimeout(() => {
-            if (currentToken === speechState.activeSpeechToken && !hasStarted && ap.status === 'playing' && ap.currentSentenceIdx === sentenceIdx) {
-              try { speechState.synth.cancel(); } catch (err) {}
-              playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
-            }
-          }, 900);
         } catch (err) {
-          playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
+          console.warn('SpeechSynthesis exception on sentence', sentenceIdx, err);
+          nextSentence();
         }
       }
 
@@ -837,16 +840,12 @@
         }, maxDurationMs);
 
         const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
-        const isOnlineOnlyVoice = voiceToUse && !voiceToUse.localService && (voiceToUse.name.includes('Online') || voiceToUse.name.includes('Natural'));
 
-        // Trường hợp máy không có voice tiếng Nga hoặc không hỗ trợ Web Speech
-        // HOẶC nếu người dùng chọn đọc chậm mà giọng duy nhất là giọng Online (bỏ qua utterance.rate)
-        if (!speechState.synth || !voiceToUse || (rate < 0.95 && isOnlineOnlyVoice)) {
-          playAudioFallback(text, rate, handleDone, handleDone);
+        if (!speechState.synth) {
+          handleDone();
           return;
         }
 
-        // Tạo khoảng đệm 50ms sau khi cancel() để tránh race condition trên Chrome Mac
         setTimeout(() => {
           if (currentToken !== speechState.activeSpeechToken) return;
           try {
@@ -858,13 +857,8 @@
             if (voiceToUse) {
               utterance.voice = voiceToUse;
             }
-            utterance.rate = rate;
+            utterance.rate = rate === 0.75 ? 0.70 : rate;
             utterance.pitch = 1.0;
-
-            let hasStarted = false;
-            utterance.onstart = function() {
-              hasStarted = true;
-            };
 
             utterance.onend = function() {
               if (window.__taigaActiveUtterance === utterance) {
@@ -877,22 +871,12 @@
               if (window.__taigaActiveUtterance === utterance) {
                 window.__taigaActiveUtterance = null;
               }
-              if (currentToken !== speechState.activeSpeechToken) return;
-              if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
-              playAudioFallback(text, rate, handleDone, handleDone);
+              handleDone();
             };
 
             speechState.synth.speak(utterance);
-
-            // Chrome Mac Watchdog: nếu sau 800ms mà Chrome không kích hoạt onstart (loa bị treo)
-            setTimeout(() => {
-              if (currentToken === speechState.activeSpeechToken && !hasStarted && speechState.currentWordBtn === btnEl) {
-                try { speechState.synth.cancel(); } catch (err) {}
-                playAudioFallback(text, rate, handleDone, handleDone);
-              }
-            }, 800);
           } catch (err) {
-            playAudioFallback(text, rate, handleDone, handleDone);
+            handleDone();
           }
         }, 50);
       }
