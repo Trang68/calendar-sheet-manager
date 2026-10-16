@@ -241,6 +241,16 @@
       // ======================================================================
       // TEXT & SPEECH HELPER FUNCTIONS
       // ======================================================================
+      function extractYouTubeId(urlOrId) {
+        if (!urlOrId) return null;
+        const str = String(urlOrId).trim();
+        if (/^[a-zA-Z0-9_-]{11}$/.test(str)) {
+          return str;
+        }
+        const match = str.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+        return match ? match[1] : null;
+      }
+
       function cleanTextForSpeech(text) {
         if (!text) return '';
         let str = String(text);
@@ -1200,58 +1210,85 @@
               <span>✍️ Chủ đề: ${lesson.topic || ''}</span>
             </div>
 
-            <!-- AUDIO PLAYER -->
-            <div class="article-audio-bar" id="audioBar">
-              <div class="audio-bar-top">
-                <div class="audio-bar-info">
-                  <span>🎧 Phát đoạn hội thoại:</span>
-                  <span class="audio-status-tag" id="audioStatusTag">Sẵn sàng</span>
-                </div>
-                <div class="audio-controls">
-                  <button class="btn-audio-circle btn-audio-back" id="btnAudioBack" title="Lùi lại 5 giây" aria-label="Lùi lại 5 giây">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-                      <path d="M3 3v5h5"/>
-                      <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
-                    </svg>
-                  </button>
-                  <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay" title="Bắt đầu / Tạm dừng đọc">
-                    <span class="ctrl-icon">▶</span>
-                    <span class="ctrl-text">Nghe hội thoại</span>
-                  </button>
-                  <button class="btn-audio-circle btn-audio-forward" id="btnAudioForward" title="Tua tới 5 giây" aria-label="Tua tới 5 giây">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
-                      <path d="M21 3v5h-5"/>
-                      <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
-                    </svg>
-                  </button>
-                  <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop" style="display: none;" title="Dừng phát">
-                    <span>⏹</span>
-                    <span>Dừng</span>
-                  </button>
-                  <div class="audio-speed-control" id="listeningSpeedControl" role="group" aria-label="Chọn tốc độ phát hội thoại">
-                    <span class="speed-title">Tốc độ:</span>
-                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 1 ? 'active' : ''}" data-speed="1" title="Tốc độ bình thường (1.0x)">1.0x</button>
-                    <button type="button" class="btn-speed-opt ${audioPlaybackRate === 0.75 ? 'active' : ''}" data-speed="0.75" title="Tốc độ nghe chậm (0.75x)">0.75x</button>
+            <!-- MEDIA SECTION (YOUTUBE EMBED HOẶC AUDIO PLAYER) -->
+            ${(function() {
+              const ytId = extractYouTubeId(lesson.youtubeId || lesson.videoUrl);
+              if (ytId) {
+                return `
+                  <div class="youtube-player-card">
+                    <div class="youtube-header-bar">
+                      <span class="youtube-badge">▶ Video Bài Nghe YouTube</span>
+                      <span class="youtube-channel">📺 ${lesson.videoChannel || 'Kênh: Tiếng Nga Học'}</span>
+                    </div>
+                    <div class="youtube-responsive-wrapper">
+                      <iframe 
+                        src="https://www.youtube-nocookie.com/embed/${ytId}?rel=0&enablejsapi=1" 
+                        title="${lesson.title || 'Bài nghe tiếng Nga'}" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                    <div class="youtube-player-tips">
+                      <span>💡 <strong>Mẹo luyện nghe:</strong> Quan sát khẩu hình người bản xứ, có thể bật phụ đề tiếng Nga (CC) và chỉnh tốc độ (0.75x, 1.0x) trực tiếp trên trình phát YouTube để làm bài tập bên phải.</span>
+                    </div>
+                  </div>
+                `;
+              }
+              return `
+                <div class="article-audio-bar" id="audioBar">
+                  <div class="audio-bar-top">
+                    <div class="audio-bar-info">
+                      <span>🎧 Phát đoạn hội thoại:</span>
+                      <span class="audio-status-tag" id="audioStatusTag">Sẵn sàng</span>
+                    </div>
+                    <div class="audio-controls">
+                      <button class="btn-audio-circle btn-audio-back" id="btnAudioBack" title="Lùi lại 5 giây" aria-label="Lùi lại 5 giây">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                          <path d="M3 3v5h5"/>
+                          <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                        </svg>
+                      </button>
+                      <button class="btn-audio-ctrl btn-audio-play" id="btnAudioPlay" title="Bắt đầu / Tạm dừng đọc">
+                        <span class="ctrl-icon">▶</span>
+                        <span class="ctrl-text">Nghe hội thoại</span>
+                      </button>
+                      <button class="btn-audio-circle btn-audio-forward" id="btnAudioForward" title="Tua tới 5 giây" aria-label="Tua tới 5 giây">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                          <path d="M21 3v5h-5"/>
+                          <text x="12" y="15" font-size="7.5" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" text-anchor="middle" fill="currentColor" stroke="none">5</text>
+                        </svg>
+                      </button>
+                      <button class="btn-audio-ctrl btn-audio-stop" id="btnAudioStop" style="display: none;" title="Dừng phát">
+                        <span>⏹</span>
+                        <span>Dừng</span>
+                      </button>
+                      <div class="audio-speed-control" id="listeningSpeedControl" role="group" aria-label="Chọn tốc độ phát hội thoại">
+                        <span class="speed-title">Tốc độ:</span>
+                        <button type="button" class="btn-speed-opt ${audioPlaybackRate === 1 ? 'active' : ''}" data-speed="1" title="Tốc độ bình thường (1.0x)">1.0x</button>
+                        <button type="button" class="btn-speed-opt ${audioPlaybackRate === 0.75 ? 'active' : ''}" data-speed="0.75" title="Tốc độ nghe chậm (0.75x)">0.75x</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="audio-progress-container">
+                    <span class="audio-time-label" id="audioCurrentTime">0:00</span>
+                    <div class="audio-progress-track" id="audioProgressTrack">
+                      <div class="audio-progress-fill" id="audioProgressFill"></div>
+                    </div>
+                    <span class="audio-time-label" id="audioTotalTime">--:--</span>
+                  </div>
+
+                  <div class="audio-hint-bar">
+                    <span class="audio-hint-text">
+                      <span>💡</span> <em>Mẹo: Hãy bấm nghe toàn bộ hội thoại từ 1-2 lần để trả lời câu hỏi bên phải.</em>
+                    </span>
                   </div>
                 </div>
-              </div>
-
-              <div class="audio-progress-container">
-                <span class="audio-time-label" id="audioCurrentTime">0:00</span>
-                <div class="audio-progress-track" id="audioProgressTrack">
-                  <div class="audio-progress-fill" id="audioProgressFill"></div>
-                </div>
-                <span class="audio-time-label" id="audioTotalTime">--:--</span>
-              </div>
-
-              <div class="audio-hint-bar">
-                <span class="audio-hint-text">
-                  <span>💡</span> <em>Mẹo: Hãy bấm nghe toàn bộ hội thoại từ 1-2 lần để trả lời câu hỏi bên phải.</em>
-                </span>
-              </div>
-            </div>
+              `;
+            })()}
 
             <!-- DIALOGUE CARD -->
             <div class="reading-text-card" style="margin-top: 20px;">

@@ -66,10 +66,11 @@
     "id": 8,
     "file": "lesson-08.json",
     "title": "В гостинице: Регистрация и номер",
-    "badge": "A1 Nghe hiểu",
+    "badge": "🎬 Video YouTube",
     "listeningTime": "10 phút",
     "topic": "Thủ tục nhận phòng tại khách sạn (Check-in)",
-    "questionCount": 8
+    "questionCount": 8,
+    "hasVideo": true
   },
   {
     "id": 9,
