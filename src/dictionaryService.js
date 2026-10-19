@@ -157,6 +157,118 @@ class DictionaryService {
     return /[\u0400-\u04FF]/.test(str);
   }
 
+  getRussianLemmaCandidates(word) {
+    const w = this.stripStress(word).toLowerCase().trim().replace(/ё/g, "е");
+    if (w.length < 3) return [];
+    const candidates = new Set();
+
+    // 1. Dạng chia thì của động từ (verb endings) -> -ать, -ять, -ить, -еть, -овать, -евать, -ти, -ся
+    const verbSuffixes = [
+      { s: "ает", r: ["ать"] },
+      { s: "яет", r: ["ять"] },
+      { s: "ует", r: ["овать", "евать"] },
+      { s: "юет", r: ["евать"] },
+      { s: "аешь", r: ["ать"] },
+      { s: "яешь", r: ["ять"] },
+      { s: "аем", r: ["ать"] },
+      { s: "яем", r: ["ять"] },
+      { s: "аете", r: ["ать"] },
+      { s: "яете", r: ["ять"] },
+      { s: "ают", r: ["ать"] },
+      { s: "яют", r: ["ять"] },
+      { s: "аю", r: ["ать"] },
+      { s: "яю", r: ["ять"] },
+      { s: "ит", r: ["ить", "еть"] },
+      { s: "ишь", r: ["ить", "еть"] },
+      { s: "им", r: ["ить", "еть"] },
+      { s: "ите", r: ["ить", "еть"] },
+      { s: "ят", r: ["ить", "еть"] },
+      { s: "ат", r: ["ать", "ить"] },
+      { s: "ал", r: ["ать"] },
+      { s: "ала", r: ["ать"] },
+      { s: "ало", r: ["ать"] },
+      { s: "али", r: ["ать"] },
+      { s: "ил", r: ["ить"] },
+      { s: "ила", r: ["ить"] },
+      { s: "ило", r: ["ить"] },
+      { s: "или", r: ["ить"] },
+      { s: "ел", r: ["еть"] },
+      { s: "ела", r: ["еть"] },
+      { s: "ели", r: ["еть"] },
+      { s: "ут", r: ["ти", "ть"] },
+      { s: "ет", r: ["еть", "ить", "ать"] },
+      { s: "ем", r: ["еть", "ить", "ать"] },
+      { s: "ешь", r: ["еть", "ить", "ать"] },
+    ];
+
+    let base = w;
+    let isReflexive = false;
+    if (base.endsWith("ся") || base.endsWith("сь")) {
+      isReflexive = true;
+      base = base.slice(0, -2);
+    }
+
+    for (const suf of verbSuffixes) {
+      if (base.endsWith(suf.s)) {
+        const stem = base.slice(0, -suf.s.length);
+        for (const rep of suf.r) {
+          candidates.add(stem + rep + (isReflexive ? "ся" : ""));
+        }
+      }
+    }
+
+    // 2. Biến cách danh từ và tính từ (noun & adjective declension endings)
+    const nounAdjSuffixes = [
+      { s: "ами", r: ["", "а", "я", "о", "е"] },
+      { s: "ями", r: ["", "а", "я", "о", "е"] },
+      { s: "ого", r: ["ый", "ий", "ой"] },
+      { s: "его", r: ["ый", "ий", "ой"] },
+      { s: "ому", r: ["ый", "ий", "ой"] },
+      { s: "ему", r: ["ый", "ий", "ой"] },
+      { s: "ыми", r: ["ый", "ий", "ой"] },
+      { s: "ими", r: ["ый", "ий", "ой"] },
+      { s: "ую", r: ["ая", "яя", "ый"] },
+      { s: "юю", r: ["яя", "ий"] },
+      { s: "ая", r: ["ый", "ий", "ой"] },
+      { s: "яя", r: ["ый", "ий", "ой"] },
+      { s: "ое", r: ["ый", "ий", "ой"] },
+      { s: "ее", r: ["ый", "ий", "ой"] },
+      { s: "ые", r: ["ый", "ий", "ой"] },
+      { s: "ие", r: ["ый", "ий", "ой"] },
+      { s: "ой", r: ["а", "я", "ь", "", "ый"] },
+      { s: "ей", r: ["", "ь", "я", "е"] },
+      { s: "ом", r: ["", "а", "о"] },
+      { s: "ем", r: ["", "я", "е"] },
+      { s: "ах", r: ["", "а", "о"] },
+      { s: "ях", r: ["", "я", "е"] },
+      { s: "ов", r: [""] },
+      { s: "ев", r: [""] },
+      { s: "ам", r: ["", "а", "о"] },
+      { s: "ям", r: ["", "я", "е"] },
+      { s: "ы", r: ["", "а"] },
+      { s: "и", r: ["", "ь", "я", "а"] },
+      { s: "а", r: ["", "о"] },
+      { s: "я", r: ["", "е"] },
+      { s: "у", r: ["а"] },
+      { s: "ю", r: ["я"] },
+      { s: "е", r: ["", "а", "о", "я"] },
+    ];
+
+    for (const suf of nounAdjSuffixes) {
+      if (w.endsWith(suf.s)) {
+        const stem = w.slice(0, -suf.s.length);
+        for (const rep of suf.r) {
+          if (stem.length + rep.length >= 2) {
+            candidates.add(stem + rep);
+          }
+        }
+      }
+    }
+
+    candidates.delete(w);
+    return Array.from(candidates);
+  }
+
   search(query, options = {}) {
     if (!this.isLoaded) this.init();
     const qRaw = String(query || "").trim();
@@ -177,6 +289,7 @@ class DictionaryService {
     }
 
     const exactMatch = [];
+    const lemmaMatches = [];
     const prefixMatch = [];
     const wordBoundaryMatch = [];
     const containsMatch = [];
@@ -206,7 +319,23 @@ class DictionaryService {
       }
     }
 
-    const combined = [...exactMatch, ...prefixMatch, ...wordBoundaryMatch, ...containsMatch, ...meaningMatch];
+    // Nếu là từ tiếng Nga và chưa có exact match, tìm dạng từ gốc (lemmatization)
+    if (dir === "ru-vi" && exactMatch.length === 0 && this.ruViMap) {
+      const candidates = this.getRussianLemmaCandidates(qClean);
+      for (const cand of candidates) {
+        if (this.ruViMap.has(cand)) {
+          const item = this.ruViMap.get(cand);
+          if (!lemmaMatches.some((m) => m.id === item.id)) {
+            lemmaMatches.push({
+              ...item,
+              _isLemmaOf: qRaw,
+            });
+          }
+        }
+      }
+    }
+
+    const combined = [...exactMatch, ...lemmaMatches, ...prefixMatch, ...wordBoundaryMatch, ...containsMatch, ...meaningMatch];
     const results = combined.slice(0, limit);
 
     return {
@@ -330,22 +459,68 @@ class DictionaryService {
     if (!q) return null;
     try {
       const isRu = this.isCyrillic(q);
-      const pair = isRu ? "ru|vi" : "vi|ru";
+      const sl = from === "auto" ? (isRu ? "ru" : "vi") : from;
+      const tl = to || (isRu ? "vi" : "ru");
+
+      // 1. Động cơ chính: Google Translate GTX (phản hồi siêu nhanh ~200ms, không giới hạn hạn mức miễn phí)
+      try {
+        const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&dt=bd&q=${encodeURIComponent(q)}`;
+        const gtxRes = await fetch(gtxUrl, {
+          headers: { "User-Agent": "Mozilla/5.0" },
+          signal: AbortSignal.timeout(6000),
+        });
+        if (gtxRes.ok) {
+          const gtxJson = await gtxRes.json();
+          const translatedText = gtxJson[0] ? gtxJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
+          if (translatedText) {
+            const matches = [];
+            if (gtxJson[1] && Array.isArray(gtxJson[1])) {
+              gtxJson[1].forEach((block) => {
+                const pos = block[0]; // e.g. "động từ"
+                (block[2] || []).slice(0, 3).forEach((item) => {
+                  matches.push({
+                    segment: q,
+                    translation: `${item[0]} (${pos})`,
+                  });
+                });
+              });
+            }
+            return {
+              translatedText,
+              matches: matches.length > 0 ? matches : [{ segment: q, translation: translatedText }],
+              engine: "google",
+            };
+          }
+        }
+      } catch (gtxErr) {
+        console.warn("[DictionaryService] Google GTX translate failed, trying fallback:", gtxErr.message);
+      }
+
+      // 2. Động cơ dự phòng: MyMemory Translated API
+      const pair = `${sl}|${tl}`;
       const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${pair}`;
-      const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
-      if (!res.ok) return null;
-      const json = await res.json();
-      if (json && json.responseData && json.responseData.translatedText) {
-        return {
-          translatedText: json.responseData.translatedText,
-          matches: (json.matches || []).slice(0, 3).map((m) => ({
-            segment: m.segment,
-            translation: m.translation,
-          })),
-        };
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0" },
+        signal: AbortSignal.timeout(6000),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json && json.responseData && json.responseData.translatedText) {
+          const trans = json.responseData.translatedText;
+          if (!trans.includes("MYMEMORY WARNING")) {
+            return {
+              translatedText: trans,
+              matches: (json.matches || []).slice(0, 3).map((m) => ({
+                segment: m.segment,
+                translation: m.translation,
+              })),
+              engine: "mymemory",
+            };
+          }
+        }
       }
     } catch (e) {
-      console.warn("[DictionaryService] Online translate failed:", e.message);
+      console.warn("[DictionaryService] Online translate failed completely:", e.message);
     }
     return null;
   }

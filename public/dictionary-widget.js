@@ -225,7 +225,7 @@
         clearTimeout(this.searchDebounceTimer);
         this.searchDebounceTimer = setTimeout(() => {
           this.handleSearch(val.trim());
-        }, 180);
+        }, 280);
       });
 
       this.clearBtn.addEventListener("click", () => {
@@ -434,13 +434,17 @@
         const pron = item.pron ? `<span class="dict-card-pron">${this.escapeHtml(item.pron)}</span>` : "";
         const pos = item.pos ? `<span class="dict-card-pos">${this.escapeHtml(item.pos)}</span>` : "";
         const exFirst = item.ex ? item.ex.split("\n")[0] : "";
+        const lemmaBadge = item._isLemmaOf
+          ? `<span class="dict-card-lemma-badge" style="background:#e0f2fe; color:#0369a1; font-size:0.75rem; padding:2px 7px; border-radius:4px; font-weight:600; margin-left:6px;" title="Dạng nguyên mẫu của từ '${this.escapeHtml(item._isLemmaOf)}'">Dạng gốc của "${this.escapeHtml(item._isLemmaOf)}"</span>`
+          : "";
 
         html += `
           <div class="dict-result-card" data-word="${this.escapeHtml(item.ru || item.vi)}" data-dir="${item.dir || dir}">
             <div class="dict-card-head">
-              <div style="display: flex; align-items: baseline; gap: 6px;">
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 <span class="dict-card-word">${this.escapeHtml(primaryWord)}</span>
                 ${pron}
+                ${lemmaBadge}
               </div>
               ${pos}
             </div>
@@ -450,7 +454,23 @@
         `;
       });
 
+      // Nút dịch nhanh nguyên văn câu/từ bằng Google Translate
+      html += `
+        <div class="dict-online-shortcut" style="text-align: center; margin-top: 14px; padding: 10px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">
+          <button id="dictBtnForceTranslate" style="background: none; border: none; color: #2563eb; font-weight: 600; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+            <span>🌐</span> Dịch trực tuyến nguyên văn "<strong>${this.escapeHtml(query)}</strong>" ➔
+          </button>
+        </div>
+      `;
+
       this.resultsEl.innerHTML = html;
+
+      const forceBtn = this.resultsEl.querySelector("#dictBtnForceTranslate");
+      if (forceBtn) {
+        forceBtn.addEventListener("click", () => {
+          this.renderOnlineFallback(query);
+        });
+      }
 
       this.resultsEl.querySelectorAll(".dict-result-card").forEach((card) => {
         card.addEventListener("click", () => {
@@ -464,7 +484,7 @@
     async renderOnlineFallback(query) {
       this.resultsEl.innerHTML = `
         <div class="dict-fallback-card">
-          <div class="dict-fallback-badge">🌐 Tra cứu trực tuyến</div>
+          <div class="dict-fallback-badge">🌐 Dịch tự động trực tuyến</div>
           <div class="dict-fallback-text">Đang dịch từ "<strong>${this.escapeHtml(query)}</strong>"...</div>
         </div>
       `;
@@ -474,14 +494,15 @@
         const data = await res.json();
         if (data && data.ok && data.result) {
           const trans = data.result.translatedText || "Không tìm thấy kết quả.";
+          const engineLabel = data.result.engine === "google" ? "Google Translate" : "Song ngữ AI";
           this.resultsEl.innerHTML = `
             <div class="dict-fallback-card">
-              <div class="dict-fallback-badge">🌐 Dịch tự động song ngữ</div>
-              <h3 style="margin: 4px 0; font-size: 1.2rem; color: #1e3a8a;">${this.escapeHtml(query)}</h3>
-              <div style="font-size: 1rem; font-weight: 700; color: #047857; margin-top: 4px;">➔ ${this.escapeHtml(trans)}</div>
+              <div class="dict-fallback-badge">🌐 Dịch trực tuyến (${engineLabel})</div>
+              <h3 style="margin: 6px 0 4px 0; font-size: 1.25rem; color: #1e3a8a;">${this.escapeHtml(query)}</h3>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #047857; margin-top: 6px; line-height: 1.4;">➔ ${this.escapeHtml(trans)}</div>
               ${
                 data.result.matches && data.result.matches.length > 1
-                  ? `<div style="margin-top: 8px; font-size: 0.8rem; color: #64748b;">
+                  ? `<div style="margin-top: 10px; font-size: 0.82rem; color: #64748b; background: #f8fafc; padding: 8px 10px; border-radius: 6px;">
                       <b>Các bản dịch khác:</b>
                       <ul style="margin: 4px 0 0 16px; padding: 0;">
                         ${data.result.matches
@@ -492,14 +513,26 @@
                     </div>`
                   : ""
               }
-              <div style="margin-top: 10px; display: flex; gap: 8px;">
-                <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Phát âm">🔊</button>
+              <div style="margin-top: 12px; display: flex; gap: 8px;">
+                <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Nghe phát âm" style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">🔊 Nghe</button>
+                <button class="dict-action-btn" id="dictFallbackCopyBtn" title="Sao chép bản dịch" style="border: 1px solid #cbd5e1; background: #fff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">📋 Sao chép</button>
               </div>
             </div>
           `;
           const spkBtn = this.resultsEl.querySelector("#dictFallbackSpeakBtn");
           if (spkBtn) {
             spkBtn.addEventListener("click", () => this.speak(query));
+          }
+          const copyBtn = this.resultsEl.querySelector("#dictFallbackCopyBtn");
+          if (copyBtn) {
+            copyBtn.addEventListener("click", () => {
+              if (navigator.clipboard) {
+                navigator.clipboard.writeText(trans).then(() => {
+                  copyBtn.textContent = "✓ Đã chép";
+                  setTimeout(() => { copyBtn.textContent = "📋 Sao chép"; }, 2000);
+                });
+              }
+            });
           }
         } else {
           this.resultsEl.innerHTML = `
