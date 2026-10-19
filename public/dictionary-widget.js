@@ -407,6 +407,7 @@
       try {
         const dir = this.currentDir;
         const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=${dir}&limit=25`);
+        if (!res.ok) throw new Error("Search API error");
         const data = await res.json();
 
         if (data && data.ok && data.results && data.results.length > 0) {
@@ -416,11 +417,8 @@
           this.renderOnlineFallback(query);
         }
       } catch (err) {
-        this.resultsEl.innerHTML = `
-          <div style="text-align: center; padding: 20px; color: #ef4444;">
-            <p>Có lỗi khi tra từ. Vui lòng thử lại.</p>
-          </div>
-        `;
+        // Fallback to online translation if server offline or search returns empty
+        this.renderOnlineFallback(query);
       }
     }
 
@@ -489,65 +487,102 @@
         </div>
       `;
 
+      let trans = null;
+      let engineLabel = "Google Translate";
+      let matches = [];
+
+      // 1. Thử gọi backend /api/dict/translate
       try {
         const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}`);
-        const data = await res.json();
-        if (data && data.ok && data.result) {
-          const trans = data.result.translatedText || "Không tìm thấy kết quả.";
-          const engineLabel = data.result.engine === "google" ? "Google Translate" : "Song ngữ AI";
-          this.resultsEl.innerHTML = `
-            <div class="dict-fallback-card">
-              <div class="dict-fallback-badge">🌐 Dịch trực tuyến (${engineLabel})</div>
-              <h3 style="margin: 6px 0 4px 0; font-size: 1.25rem; color: #1e3a8a;">${this.escapeHtml(query)}</h3>
-              <div style="font-size: 1.05rem; font-weight: 700; color: #047857; margin-top: 6px; line-height: 1.4;">➔ ${this.escapeHtml(trans)}</div>
-              ${
-                data.result.matches && data.result.matches.length > 1
-                  ? `<div style="margin-top: 10px; font-size: 0.82rem; color: #64748b; background: #f8fafc; padding: 8px 10px; border-radius: 6px;">
-                      <b>Các bản dịch khác:</b>
-                      <ul style="margin: 4px 0 0 16px; padding: 0;">
-                        ${data.result.matches
-                          .slice(1)
-                          .map((m) => `<li>${this.escapeHtml(m.translation)}</li>`)
-                          .join("")}
-                      </ul>
-                    </div>`
-                  : ""
-              }
-              <div style="margin-top: 12px; display: flex; gap: 8px;">
-                <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Nghe phát âm" style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">🔊 Nghe</button>
-                <button class="dict-action-btn" id="dictFallbackCopyBtn" title="Sao chép bản dịch" style="border: 1px solid #cbd5e1; background: #fff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">📋 Sao chép</button>
-              </div>
-            </div>
-          `;
-          const spkBtn = this.resultsEl.querySelector("#dictFallbackSpeakBtn");
-          if (spkBtn) {
-            spkBtn.addEventListener("click", () => this.speak(query));
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.ok && data.result && data.result.translatedText) {
+            trans = data.result.translatedText;
+            engineLabel = data.result.engine === "mymemory" ? "Song ngữ AI" : "Google Translate";
+            matches = data.result.matches || [];
           }
-          const copyBtn = this.resultsEl.querySelector("#dictFallbackCopyBtn");
-          if (copyBtn) {
-            copyBtn.addEventListener("click", () => {
-              if (navigator.clipboard) {
-                navigator.clipboard.writeText(trans).then(() => {
-                  copyBtn.textContent = "✓ Đã chép";
-                  setTimeout(() => { copyBtn.textContent = "📋 Sao chép"; }, 2000);
-                });
-              }
-            });
-          }
-        } else {
-          this.resultsEl.innerHTML = `
-            <div class="dict-empty-state">
-              <span class="dict-empty-icon">🔍</span>
-              <p class="dict-empty-title">Không tìm thấy từ "${this.escapeHtml(query)}"</p>
-              <p class="dict-empty-sub">Hãy kiểm tra chính tả hoặc thử tìm một từ tương tự.</p>
-            </div>
-          `;
         }
       } catch (e) {
+        // Backend offline, tiếp tục thử trực tiếp từ client
+      }
+
+      // 2. Dự phòng trực tiếp từ trình duyệt (Client-side CORS) nếu backend chưa phản hồi
+      if (!trans) {
+        try {
+          const isRu = this.isCyrillic(query);
+          const sl = isRu ? "ru" : "vi";
+          const tl = isRu ? "vi" : "ru";
+
+          // Thử Google Chrome Dictionary Client API
+          const cUrl = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${sl}&tl=${tl}&q=${encodeURIComponent(query)}`;
+          const cRes = await fetch(cUrl);
+          if (cRes.ok) {
+            const cJson = await cRes.json();
+            if (Array.isArray(cJson) && cJson[0]) {
+              trans = Array.isArray(cJson[0]) ? cJson[0][0] : cJson[0];
+            }
+          }
+
+          // Hoặc thử Google Translate GTX
+          if (!trans) {
+            const gUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(query)}`;
+            const gRes = await fetch(gUrl);
+            if (gRes.ok) {
+              const gJson = await gRes.json();
+              trans = gJson[0] ? gJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
+            }
+          }
+        } catch (clientErr) {
+          // Bỏ qua lỗi client
+        }
+      }
+
+      if (trans) {
+        this.resultsEl.innerHTML = `
+          <div class="dict-fallback-card">
+            <div class="dict-fallback-badge">🌐 Dịch trực tuyến (${engineLabel})</div>
+            <h3 style="margin: 6px 0 4px 0; font-size: 1.25rem; color: #1e3a8a;">${this.escapeHtml(query)}</h3>
+            <div style="font-size: 1.05rem; font-weight: 700; color: #047857; margin-top: 6px; line-height: 1.4;">➔ ${this.escapeHtml(trans)}</div>
+            ${
+              matches.length > 1
+                ? `<div style="margin-top: 10px; font-size: 0.82rem; color: #64748b; background: #f8fafc; padding: 8px 10px; border-radius: 6px;">
+                    <b>Các bản dịch khác:</b>
+                    <ul style="margin: 4px 0 0 16px; padding: 0;">
+                      ${matches
+                        .slice(1)
+                        .map((m) => `<li>${this.escapeHtml(m.translation)}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>`
+                : ""
+            }
+            <div style="margin-top: 12px; display: flex; gap: 8px;">
+              <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Nghe phát âm" style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">🔊 Nghe</button>
+              <button class="dict-action-btn" id="dictFallbackCopyBtn" title="Sao chép bản dịch" style="border: 1px solid #cbd5e1; background: #fff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">📋 Sao chép</button>
+            </div>
+          </div>
+        `;
+        const spkBtn = this.resultsEl.querySelector("#dictFallbackSpeakBtn");
+        if (spkBtn) {
+          spkBtn.addEventListener("click", () => this.speak(query));
+        }
+        const copyBtn = this.resultsEl.querySelector("#dictFallbackCopyBtn");
+        if (copyBtn) {
+          copyBtn.addEventListener("click", () => {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(trans).then(() => {
+                copyBtn.textContent = "✓ Đã chép";
+                setTimeout(() => { copyBtn.textContent = "📋 Sao chép"; }, 2000);
+              });
+            }
+          });
+        }
+      } else {
         this.resultsEl.innerHTML = `
           <div class="dict-empty-state">
             <span class="dict-empty-icon">🔍</span>
             <p class="dict-empty-title">Không tìm thấy từ "${this.escapeHtml(query)}"</p>
+            <p class="dict-empty-sub">Hãy kiểm tra chính tả hoặc thử tìm một từ tương tự.</p>
           </div>
         `;
       }
@@ -997,19 +1032,80 @@
     }
 
     speak(text, rate = 0.9) {
-      if (!("speechSynthesis" in window)) return;
-      speechSynthesis.cancel();
-      const clean = this.stripStress(text);
-      const utter = new SpeechSynthesisUtterance(clean);
-      utter.rate = rate;
-      utter.lang = "ru-RU";
+      const clean = this.stripStress(text).trim();
+      if (!clean) return;
 
-      // Select natural Russian voice if available
-      const voices = speechSynthesis.getVoices();
-      const ruVoice = voices.find((v) => v.lang.startsWith("ru"));
-      if (ruVoice) utter.voice = ruVoice;
+      const isRu = this.isCyrillic(clean);
+      const langCode = isRu ? "ru-RU" : "vi-VN";
+      const ttsLang = isRu ? "ru" : "vi";
 
-      speechSynthesis.speak(utter);
+      // HTML5 Audio fallback using Google TTS
+      const playTTSFallback = () => {
+        try {
+          if (this.audioObj) {
+            this.audioObj.pause();
+          }
+          const chunk = clean.slice(0, 200);
+          const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${ttsLang}&q=${encodeURIComponent(chunk)}`;
+          this.audioObj = new Audio(ttsUrl);
+          this.audioObj.playbackRate = rate;
+          this.audioObj.play().catch(() => {});
+        } catch (e) {}
+      };
+
+      if (!("speechSynthesis" in window)) {
+        playTTSFallback();
+        return;
+      }
+
+      try {
+        if (speechSynthesis.paused) {
+          speechSynthesis.resume();
+        }
+        speechSynthesis.cancel();
+      } catch (e) {}
+
+      const voices = speechSynthesis.getVoices() || [];
+      const matchedVoice = voices.find((v) => (isRu ? v.lang.startsWith("ru") : v.lang.startsWith("vi")));
+
+      // Nếu không tìm thấy voice tiếng Nga/Việt thích hợp (thường gặp trên macOS Chrome)
+      if (!matchedVoice) {
+        playTTSFallback();
+        return;
+      }
+
+      // Đệm 50ms tránh xung đột cancel() trên Chrome Mac
+      setTimeout(() => {
+        try {
+          if (speechSynthesis.paused) speechSynthesis.resume();
+          const utter = new SpeechSynthesisUtterance(clean);
+          utter.rate = rate;
+          utter.lang = langCode;
+          utter.voice = matchedVoice;
+
+          let hasStarted = false;
+          utter.onstart = () => {
+            hasStarted = true;
+          };
+          utter.onerror = () => {
+            playTTSFallback();
+          };
+
+          speechSynthesis.speak(utter);
+
+          // Watchdog: Nếu sau 700ms Chrome Mac không kích hoạt âm thanh (loa bị treo)
+          setTimeout(() => {
+            if (!hasStarted) {
+              try {
+                speechSynthesis.cancel();
+              } catch (e) {}
+              playTTSFallback();
+            }
+          }, 700);
+        } catch (e) {
+          playTTSFallback();
+        }
+      }, 50);
     }
 
     toggleBookmark(entry, dir) {

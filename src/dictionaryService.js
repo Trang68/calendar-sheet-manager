@@ -219,8 +219,8 @@ class DictionaryService {
 
     // 2. Biến cách danh từ và tính từ (noun & adjective declension endings)
     const nounAdjSuffixes = [
-      { s: "ами", r: ["", "а", "я", "о", "е"] },
-      { s: "ями", r: ["", "а", "я", "о", "е"] },
+      { s: "ами", r: ["", "а", "я", "о", "е", "ь"] },
+      { s: "ями", r: ["", "а", "я", "о", "е", "ь"] },
       { s: "ого", r: ["ый", "ий", "ой"] },
       { s: "его", r: ["ый", "ий", "ой"] },
       { s: "ому", r: ["ый", "ий", "ой"] },
@@ -238,19 +238,19 @@ class DictionaryService {
       { s: "ой", r: ["а", "я", "ь", "", "ый"] },
       { s: "ей", r: ["", "ь", "я", "е"] },
       { s: "ом", r: ["", "а", "о"] },
-      { s: "ем", r: ["", "я", "е"] },
+      { s: "ем", r: ["", "я", "е", "ь"] },
       { s: "ах", r: ["", "а", "о"] },
-      { s: "ях", r: ["", "я", "е"] },
+      { s: "ях", r: ["", "я", "е", "ь"] },
       { s: "ов", r: [""] },
-      { s: "ев", r: [""] },
+      { s: "ев", r: ["", "ь"] },
       { s: "ам", r: ["", "а", "о"] },
-      { s: "ям", r: ["", "я", "е"] },
+      { s: "ям", r: ["", "я", "е", "ь"] },
       { s: "ы", r: ["", "а"] },
-      { s: "и", r: ["", "ь", "я", "а"] },
+      { s: "и", r: ["", "ь", "я", "а", "е"] },
       { s: "а", r: ["", "о"] },
-      { s: "я", r: ["", "е"] },
-      { s: "у", r: ["а"] },
-      { s: "ю", r: ["я"] },
+      { s: "я", r: ["", "е", "ь"] },
+      { s: "у", r: ["", "а", "о"] },
+      { s: "ю", r: ["", "я", "е", "ь"] },
       { s: "е", r: ["", "а", "о", "я"] },
     ];
 
@@ -454,54 +454,67 @@ class DictionaryService {
     };
   }
 
-  async translateOnline(text, from = "auto", to = "vi") {
+  async translateOnline(text, from = "auto", to = null) {
     const q = String(text || "").trim();
     if (!q) return null;
     try {
       const isRu = this.isCyrillic(q);
       const sl = from === "auto" ? (isRu ? "ru" : "vi") : from;
-      const tl = to || (isRu ? "vi" : "ru");
+      const tl = to || (sl === "ru" ? "vi" : "ru");
 
-      // 1. Động cơ chính: Google Translate GTX (phản hồi siêu nhanh ~200ms, không giới hạn hạn mức miễn phí)
+      const ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+      // 1. Động cơ 1: Google Chrome Dictionary Client API (kháng rate-limit tuyệt đối)
       try {
-        const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&dt=bd&q=${encodeURIComponent(q)}`;
+        const u1 = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&q=${encodeURIComponent(q)}`;
+        const r1 = await fetch(u1, { headers: { "User-Agent": ua }, signal: AbortSignal.timeout(4000) });
+        if (r1.ok) {
+          const txt = await r1.text();
+          const json = JSON.parse(txt);
+          if (Array.isArray(json) && json[0]) {
+            const trans = Array.isArray(json[0]) ? json[0][0] : json[0];
+            if (trans && typeof trans === "string") {
+              return {
+                translatedText: trans,
+                matches: [{ segment: q, translation: trans }],
+                engine: "google",
+              };
+            }
+          }
+        }
+      } catch (e) {
+        // Tiếp tục thử động cơ 2
+      }
+
+      // 2. Động cơ 2: Google Translate GTX (dt=t)
+      try {
+        const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&q=${encodeURIComponent(q)}`;
         const gtxRes = await fetch(gtxUrl, {
-          headers: { "User-Agent": "Mozilla/5.0" },
-          signal: AbortSignal.timeout(6000),
+          headers: { "User-Agent": ua },
+          signal: AbortSignal.timeout(4000),
         });
         if (gtxRes.ok) {
-          const gtxJson = await gtxRes.json();
+          const txt = await gtxRes.text();
+          const gtxJson = JSON.parse(txt);
           const translatedText = gtxJson[0] ? gtxJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
           if (translatedText) {
-            const matches = [];
-            if (gtxJson[1] && Array.isArray(gtxJson[1])) {
-              gtxJson[1].forEach((block) => {
-                const pos = block[0]; // e.g. "động từ"
-                (block[2] || []).slice(0, 3).forEach((item) => {
-                  matches.push({
-                    segment: q,
-                    translation: `${item[0]} (${pos})`,
-                  });
-                });
-              });
-            }
             return {
               translatedText,
-              matches: matches.length > 0 ? matches : [{ segment: q, translation: translatedText }],
+              matches: [{ segment: q, translation: translatedText }],
               engine: "google",
             };
           }
         }
       } catch (gtxErr) {
-        console.warn("[DictionaryService] Google GTX translate failed, trying fallback:", gtxErr.message);
+        // Tiếp tục thử động cơ 3
       }
 
-      // 2. Động cơ dự phòng: MyMemory Translated API
+      // 3. Động cơ 3: MyMemory API với quota 50k ký tự/ngày
       const pair = `${sl}|${tl}`;
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${pair}`;
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}&de=contact@taigacenter.edu.vn`;
       const res = await fetch(url, {
-        headers: { "User-Agent": "Mozilla/5.0" },
-        signal: AbortSignal.timeout(6000),
+        headers: { "User-Agent": ua },
+        signal: AbortSignal.timeout(5000),
       });
       if (res.ok) {
         const json = await res.json();
