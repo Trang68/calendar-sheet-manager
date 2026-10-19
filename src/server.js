@@ -1544,6 +1544,61 @@ app.delete("/api/events/:eventId", requireToken, async (req, res) => {
   }
 });
 
+// ==========================================
+// DICTIONARY API (RUSSIAN - VIETNAMESE)
+// ==========================================
+const { DictionaryService } = require("./dictionaryService");
+const dictionaryService = new DictionaryService();
+setTimeout(() => {
+  try {
+    dictionaryService.initAsync();
+  } catch (e) {
+    console.error("[server] Failed to init dictionary:", e);
+  }
+}, 500);
+
+app.get("/api/dict/search", (req, res) => {
+  try {
+    const q = req.query.q || "";
+    const dir = req.query.dir || "auto";
+    const limit = req.query.limit || 20;
+    const result = dictionaryService.search(q, { dir, limit });
+    res.json({ ok: true, ...result });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+app.get("/api/dict/detail", async (req, res) => {
+  try {
+    const word = req.query.word || "";
+    const dir = req.query.dir || "ru-vi";
+    const detail = await dictionaryService.getDetail(word, dir);
+    res.json({ ok: true, ...detail });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+app.get("/api/dict/suggestions", (_req, res) => {
+  try {
+    const list = dictionaryService.getRandomSuggestions(6);
+    res.json({ ok: true, suggestions: list });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+app.get("/api/dict/translate", async (req, res) => {
+  try {
+    const text = req.query.text || "";
+    const result = await dictionaryService.translateOnline(text);
+    res.json({ ok: true, result });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 app.get("/home", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/home.html"));
 });
