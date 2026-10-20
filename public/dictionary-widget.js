@@ -34,6 +34,7 @@
       this.initDOM();
       this.bindEvents();
       this.initTextSelectionLookup();
+      this.updateBadgeCounts();
       this.loadInitialSuggestions();
     }
 
@@ -49,9 +50,7 @@
     saveStorage(key, val) {
       try {
         localStorage.setItem(key, JSON.stringify(val));
-      } catch (e) {
-        // Ignore quota
-      }
+      } catch (e) {}
     }
 
     escapeHtml(str) {
@@ -69,6 +68,23 @@
 
     isCyrillic(str) {
       return /[\u0400-\u04FF]/.test(str);
+    }
+
+    formatTimeAgo(timestamp) {
+      if (!timestamp) return "";
+      const diff = Math.floor((Date.now() - timestamp) / 1000);
+      if (diff < 60) return "vừa xong";
+      if (diff < 3600) return `${Math.floor(diff / 60)} phút trước`;
+      if (diff < 86400) return `${Math.floor(diff / 3600)} giờ trước`;
+      if (diff < 604800) return `${Math.floor(diff / 86400)} ngày trước`;
+      return new Date(timestamp).toLocaleDateString("vi-VN");
+    }
+
+    updateBadgeCounts() {
+      const bEl = this.panelEl ? this.panelEl.querySelector("#dictBadgeBookmarks") : null;
+      const hEl = this.panelEl ? this.panelEl.querySelector("#dictBadgeHistory") : null;
+      if (bEl) bEl.textContent = this.bookmarks.length;
+      if (hEl) hEl.textContent = this.history.length;
     }
 
     initDOM() {
@@ -105,21 +121,23 @@
           </div>
         </div>
 
-        <!-- NAV & DIRECTION BAR -->
+        <!-- NAV BAR: AUTO DETECT BADGE + BOOKMARKS & HISTORY TABS -->
         <div class="dict-nav-bar">
-          <div class="dict-dir-switch" id="dictDirSwitch">
-            <button class="dict-dir-btn active" data-dir="auto" title="Tự động nhận diện ngôn ngữ">Tự động</button>
-            <button class="dict-dir-btn" data-dir="ru-vi" title="Nga sang Việt">🇷🇺 ➔ 🇻🇳</button>
-            <button class="dict-dir-btn" data-dir="vi-ru" title="Việt sang Nga">🇻🇳 ➔ 🇷🇺</button>
+          <div class="dict-auto-badge">
+            <span class="dict-pulse-dot"></span>
+            <span class="dict-auto-label">Tự động nhận diện Nga ⇄ Việt</span>
           </div>
           <div class="dict-tabs-nav">
-            <button class="dict-nav-tab active" data-tab="search">🔍 Tra</button>
-            <button class="dict-nav-tab" data-tab="bookmarks">⭐ Lưu</button>
-            <button class="dict-nav-tab" data-tab="history">🕒 Lịch sử</button>
+            <button class="dict-nav-tab" data-tab="bookmarks" id="dictTabBtnBookmarks" title="Sổ tay từ đã lưu">
+              ⭐ Đã lưu <span class="dict-tab-badge" id="dictBadgeBookmarks">0</span>
+            </button>
+            <button class="dict-nav-tab" data-tab="history" id="dictTabBtnHistory" title="Lịch sử tra cứu gần đây">
+              🕒 Lịch sử <span class="dict-tab-badge" id="dictBadgeHistory">0</span>
+            </button>
           </div>
         </div>
 
-        <!-- SEARCH INPUT -->
+        <!-- SEARCH INPUT CONTAINER -->
         <div class="dict-search-container" id="dictSearchContainer">
           <div class="dict-search-box">
             <span class="dict-search-icon">🔍</span>
@@ -127,7 +145,7 @@
               type="text" 
               class="dict-search-input" 
               id="dictSearchInput" 
-              placeholder="Nhập từ tiếng Nga hoặc tiếng Việt..."
+              placeholder="Nhập từ hoặc câu tiếng Nga / tiếng Việt..."
               autocomplete="off"
               spellcheck="false"
             />
@@ -155,8 +173,8 @@
             <div id="dictSearchResults" class="dict-results-list"></div>
             <div id="dictEmptyState" class="dict-empty-state">
               <span class="dict-empty-icon">📚</span>
-              <p class="dict-empty-title">Tra cứu nhanh từ vựng Nga - Việt</p>
-              <p class="dict-empty-sub">Gõ từ bạn cần tìm hoặc bôi đen từ trên bài viết để tra cứu ngay lập tức.</p>
+              <p class="dict-empty-title">Tra cứu nhanh từ vựng & chia động từ</p>
+              <p class="dict-empty-sub">Gõ từ tiếng Nga/Việt cần tìm hoặc bôi đen văn bản trên bài viết để tra cứu ngay lập tức.</p>
               <div id="dictSuggestionsGrid" class="dict-suggestions-grid"></div>
             </div>
           </div>
@@ -199,27 +217,30 @@
         }
       });
 
-      // Direction buttons
-      this.panelEl.querySelectorAll(".dict-dir-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          this.panelEl.querySelectorAll(".dict-dir-btn").forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-          this.currentDir = btn.dataset.dir;
-          if (this.searchInput.value.trim()) {
-            this.handleSearch(this.searchInput.value.trim());
+      // Tabs: Bookmarks & History
+      this.panelEl.querySelectorAll(".dict-nav-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const targetTab = tab.dataset.tab;
+          if (this.activeTab === targetTab) {
+            this.switchTab("search");
+          } else {
+            this.switchTab(targetTab);
           }
         });
       });
 
-      // Tabs (Tra cứu / Lưu / Lịch sử)
-      this.panelEl.querySelectorAll(".dict-nav-tab").forEach((tab) => {
-        tab.addEventListener("click", () => {
-          this.switchTab(tab.dataset.tab);
-        });
+      // When clicking or focusing on search input while on Bookmarks/History, return to Search
+      this.searchInput.addEventListener("focus", () => {
+        if (this.activeTab !== "search") {
+          this.switchTab("search");
+        }
       });
 
       // Search input & debouncing
       this.searchInput.addEventListener("input", () => {
+        if (this.activeTab !== "search") {
+          this.switchTab("search");
+        }
         const val = this.searchInput.value;
         this.clearBtn.style.display = val ? "grid" : "none";
         clearTimeout(this.searchDebounceTimer);
@@ -239,6 +260,9 @@
       // Cyrillic quick key buttons
       this.panelEl.querySelectorAll(".dict-key-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
+          if (this.activeTab !== "search") {
+            this.switchTab("search");
+          }
           const char = btn.dataset.char;
           const input = this.searchInput;
           const start = input.selectionStart || input.value.length;
@@ -255,7 +279,6 @@
       let selectedText = "";
 
       document.addEventListener("mouseup", (e) => {
-        // Ignore clicks inside the dictionary widget itself
         if (this.panelEl.contains(e.target) || this.launcherEl.contains(e.target)) {
           return;
         }
@@ -264,8 +287,7 @@
           const selection = window.getSelection();
           const text = selection ? selection.toString().trim() : "";
 
-          // Check if selection is valid single word or short phrase (< 40 chars)
-          if (text && text.length >= 2 && text.length <= 40 && !text.includes("\n")) {
+          if (text && text.length >= 2 && text.length <= 50 && !text.includes("\n")) {
             selectedText = text;
             const range = selection.getRangeAt(0);
             const rect = range.getBoundingClientRect();
@@ -342,20 +364,15 @@
       const paneSearch = this.panelEl.querySelector("#dictTabSearch");
       const paneBookmarks = this.panelEl.querySelector("#dictTabBookmarks");
       const paneHistory = this.panelEl.querySelector("#dictTabHistory");
-      const searchContainer = this.panelEl.querySelector("#dictSearchContainer");
 
       paneSearch.style.display = tab === "search" ? "block" : "none";
       paneBookmarks.style.display = tab === "bookmarks" ? "block" : "none";
       paneHistory.style.display = tab === "history" ? "block" : "none";
 
       if (tab === "bookmarks") {
-        searchContainer.style.display = "none";
         this.renderBookmarks();
       } else if (tab === "history") {
-        searchContainer.style.display = "none";
         this.renderHistory();
-      } else {
-        searchContainer.style.display = "flex";
       }
     }
 
@@ -385,9 +402,7 @@
             });
           });
         }
-      } catch (e) {
-        // Ignore fallback
-      }
+      } catch (e) {}
     }
 
     async handleSearch(query) {
@@ -405,19 +420,19 @@
       `;
 
       try {
-        const dir = this.currentDir;
-        const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=${dir}&limit=25`);
+        const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=auto&limit=25`);
         if (!res.ok) throw new Error("Search API error");
         const data = await res.json();
 
         if (data && data.ok && data.results && data.results.length > 0) {
+          const firstItem = data.results[0];
+          const firstMeaning = (data.dir === "ru-vi" ? firstItem.vi : firstItem.ru) || "";
+          this.addToHistory(query, firstMeaning, data.dir);
           this.renderSearchResults(data.results, query, data.dir);
         } else {
-          // If no results in dataset, attempt online fallback translation
           this.renderOnlineFallback(query);
         }
       } catch (err) {
-        // Fallback to online translation if server offline or search returns empty
         this.renderOnlineFallback(query);
       }
     }
@@ -452,7 +467,6 @@
         `;
       });
 
-      // Nút dịch nhanh nguyên văn câu/từ bằng Google Translate
       html += `
         <div class="dict-online-shortcut" style="text-align: center; margin-top: 14px; padding: 10px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">
           <button id="dictBtnForceTranslate" style="background: none; border: none; color: #2563eb; font-weight: 600; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
@@ -502,18 +516,15 @@
             matches = data.result.matches || [];
           }
         }
-      } catch (e) {
-        // Backend offline, tiếp tục thử trực tiếp từ client
-      }
+      } catch (e) {}
 
-      // 2. Dự phòng trực tiếp từ trình duyệt (Client-side CORS) nếu backend chưa phản hồi
+      // 2. Dự phòng trực tiếp từ client nếu backend chưa có
       if (!trans) {
         try {
           const isRu = this.isCyrillic(query);
           const sl = isRu ? "ru" : "vi";
           const tl = isRu ? "vi" : "ru";
 
-          // Thử Google Chrome Dictionary Client API
           const cUrl = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${sl}&tl=${tl}&q=${encodeURIComponent(query)}`;
           const cRes = await fetch(cUrl);
           if (cRes.ok) {
@@ -523,7 +534,6 @@
             }
           }
 
-          // Hoặc thử Google Translate GTX
           if (!trans) {
             const gUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(query)}`;
             const gRes = await fetch(gUrl);
@@ -532,12 +542,16 @@
               trans = gJson[0] ? gJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
             }
           }
-        } catch (clientErr) {
-          // Bỏ qua lỗi client
-        }
+        } catch (clientErr) {}
       }
 
       if (trans) {
+        const isRu = this.isCyrillic(query);
+        const dir = isRu ? "ru-vi" : "vi-ru";
+        this.addToHistory(query, trans, dir);
+
+        const isSaved = this.bookmarks.some((b) => b.word.toLowerCase() === query.toLowerCase());
+
         this.resultsEl.innerHTML = `
           <div class="dict-fallback-card">
             <div class="dict-fallback-badge">🌐 Dịch trực tuyến (${engineLabel})</div>
@@ -556,25 +570,43 @@
                   </div>`
                 : ""
             }
-            <div style="margin-top: 12px; display: flex; gap: 8px;">
+            <div style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap;">
               <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Nghe phát âm" style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">🔊 Nghe</button>
               <button class="dict-action-btn" id="dictFallbackCopyBtn" title="Sao chép bản dịch" style="border: 1px solid #cbd5e1; background: #fff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">📋 Sao chép</button>
+              <button class="dict-action-btn ${isSaved ? "active" : ""}" id="dictFallbackBookmarkBtn" title="Lưu vào sổ tay" style="border: 1px solid ${isSaved ? "#ef4444" : "#cbd5e1"}; background: ${isSaved ? "#fef2f2" : "#fff"}; color: ${isSaved ? "#ef4444" : "#475569"}; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer; font-weight: 700;">
+                ${isSaved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay"}
+              </button>
             </div>
           </div>
         `;
+
         const spkBtn = this.resultsEl.querySelector("#dictFallbackSpeakBtn");
         if (spkBtn) {
-          spkBtn.addEventListener("click", () => this.speak(query));
+          spkBtn.addEventListener("click", () => this.speak(isRu ? query : trans));
         }
+
         const copyBtn = this.resultsEl.querySelector("#dictFallbackCopyBtn");
         if (copyBtn) {
           copyBtn.addEventListener("click", () => {
             if (navigator.clipboard) {
               navigator.clipboard.writeText(trans).then(() => {
                 copyBtn.textContent = "✓ Đã chép";
-                setTimeout(() => { copyBtn.textContent = "📋 Sao chép"; }, 2000);
+                setTimeout(() => {
+                  copyBtn.textContent = "📋 Sao chép";
+                }, 2000);
               });
             }
+          });
+        }
+
+        const bmBtn = this.resultsEl.querySelector("#dictFallbackBookmarkBtn");
+        if (bmBtn) {
+          bmBtn.addEventListener("click", () => {
+            const saved = this.toggleBookmark({ word: query, meaning: trans, dir });
+            bmBtn.innerHTML = saved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay";
+            bmBtn.style.borderColor = saved ? "#ef4444" : "#cbd5e1";
+            bmBtn.style.background = saved ? "#fef2f2" : "#fff";
+            bmBtn.style.color = saved ? "#ef4444" : "#475569";
           });
         }
       } else {
@@ -582,7 +614,7 @@
           <div class="dict-empty-state">
             <span class="dict-empty-icon">🔍</span>
             <p class="dict-empty-title">Không tìm thấy từ "${this.escapeHtml(query)}"</p>
-            <p class="dict-empty-sub">Hãy kiểm tra chính tả hoặc thử tìm một từ tương tự.</p>
+            <p class="dict-empty-sub">Hãy kiểm tra chính tả hoặc thử một từ khác.</p>
           </div>
         `;
       }
@@ -596,13 +628,12 @@
       `;
       this.emptyEl.style.display = "none";
 
-      // Save to search history
-      this.addToHistory(word, dir);
-
       try {
         const res = await fetch(`/api/dict/detail?word=${encodeURIComponent(word)}&dir=${dir}`);
         const data = await res.json();
         if (data && data.ok) {
+          const firstM = data.entry ? data.entry.vi || data.entry.ru : "";
+          this.addToHistory(word, firstM, dir);
           this.currentDetail = data;
           this.renderDetailView(data);
         } else {
@@ -613,18 +644,293 @@
       }
     }
 
+    // Check if word is a verb
+    isVerb(mainWord, entry, extra) {
+      const w = this.stripStress(mainWord).toLowerCase();
+      if (extra && extra.forms && extra.forms.v) return true;
+      if (entry) {
+        if (entry.pos && entry.pos.toLowerCase().includes("động từ")) return true;
+        if (entry.gram && (entry.gram.includes("гл.") || entry.gram.includes("несов.") || entry.gram.includes("сов."))) return true;
+        if (entry.vi && (entry.vi.includes("động từ") || entry.vi.includes("тк. несов.") || entry.vi.includes("тк. сов."))) return true;
+      }
+      if (w.endsWith("ть") || w.endsWith("ти") || w.endsWith("чь") || w.endsWith("ться") || w.endsWith("тись")) return true;
+      return false;
+    }
+
+    // Build comprehensive Verb Conjugation (thì, thời, thể)
+    buildVerbConjugationSection(mainWord, formsV, entry, extra) {
+      const inf = this.stripStress(mainWord).toLowerCase();
+      const isReflexive = inf.endsWith("ся") || inf.endsWith("сь");
+      const baseInf = isReflexive ? inf.slice(0, -2) : inf;
+
+      // 1. Thể (Aspect)
+      let isPerf = false;
+      if (formsV && typeof formsV.perf === "number") {
+        isPerf = formsV.perf === 1;
+      } else if (entry && entry.gram) {
+        if (entry.gram.includes("сов.") && !entry.gram.includes("несов.")) {
+          isPerf = true;
+        }
+      }
+
+      const aspectBadgeClass = isPerf ? "perf" : "impf";
+      const aspectTitle = isPerf ? "★ Hoàn thành thể (СВ · Совершенный вид)" : "● Chưa hoàn thành thể (НСВ · Несовершенный вид)";
+      const aspectDesc = isPerf
+        ? "Diễn tả hành động đã hoàn tất hoặc sẽ hoàn tất trọn vẹn (không có thì hiện tại)."
+        : "Diễn tả hành động diễn ra thường xuyên, đang diễn ra hoặc nhấn mạnh quá trình.";
+
+      // 2. Tìm cặp thể tương ứng (Видовая пара)
+      let pairWord = "";
+      if (entry && entry.vi) {
+        const m = entry.vi.match(/(?:см\.|соверш\.|несоверш\.|сов\.|несов\.)\s+([а-яё́]+)/i);
+        if (m && m[1]) pairWord = this.stripStress(m[1]).toLowerCase();
+      }
+      if (!pairWord && extra && extra.der) {
+        const commonPrefixes = ["по", "про", "с", "на", "за", "вы", "при", "от", "пере", "у"];
+        for (const d of extra.der) {
+          const cleanD = this.stripStress(d).toLowerCase();
+          if (cleanD !== inf && (cleanD.endsWith("ть") || cleanD.endsWith("ться"))) {
+            if (!isPerf && commonPrefixes.some((p) => cleanD === p + inf)) {
+              pairWord = cleanD;
+              break;
+            } else if (isPerf && commonPrefixes.some((p) => inf === p + cleanD)) {
+              pairWord = cleanD;
+              break;
+            }
+          }
+        }
+      }
+
+      // 3. Hiện tại / Tương lai đơn (6 ngôi)
+      let pres = formsV && Array.isArray(formsV.pres) && formsV.pres.length >= 6 ? formsV.pres : null;
+      if (!pres) {
+        // Tự suy luận dạng chia tiêu chuẩn
+        let stem = baseInf.endsWith("ать") || baseInf.endsWith("ять") || baseInf.endsWith("еть") ? baseInf.slice(0, -2) : baseInf.slice(0, -3);
+        if (baseInf.endsWith("ить")) {
+          stem = baseInf.slice(0, -3);
+          pres = [stem + "ю", stem + "ишь", stem + "ит", stem + "им", stem + "ите", stem + "ят"].map((w) => w + (isReflexive ? "ся" : ""));
+        } else {
+          pres = [stem + "ю", stem + "ешь", stem + "ет", stem + "ем", stem + "ете", stem + "ют"].map((w) => w + (isReflexive ? "ся" : ""));
+        }
+      }
+
+      // 4. Quá khứ (4 dạng)
+      let past = formsV && formsV.past ? formsV.past : null;
+      if (!past || !past.m) {
+        let pStem = baseInf.endsWith("ть") ? baseInf.slice(0, -2) : baseInf;
+        past = {
+          m: pStem + "л" + (isReflexive ? "ся" : ""),
+          f: pStem + "ла" + (isReflexive ? "сь" : ""),
+          n: pStem + "ло" + (isReflexive ? "сь" : ""),
+          p: pStem + "ли" + (isReflexive ? "сь" : ""),
+        };
+      }
+
+      // 5. Mệnh lệnh (Повелительное наклонение)
+      let imp = formsV && formsV.imp && (formsV.imp.s || formsV.imp.p) ? formsV.imp : null;
+      if (!imp || (!imp.s && !imp.p)) {
+        if (pres && pres[5]) {
+          const pStem = pres[5].replace(/(ют|ут|ят|ат)(ся|сь)?$/, "");
+          const endsVowel = /[аеёиоуыэюя]$/i.test(pStem);
+          let s = endsVowel ? pStem + "й" : pStem + "и";
+          let p = endsVowel ? pStem + "йте" : pStem + "ите";
+          if (isReflexive) {
+            s += endsVowel ? "ся" : "сь";
+            p += "сь";
+          }
+          imp = { s, p };
+        } else {
+          imp = { s: inf + "й", p: inf + "йте" };
+        }
+      }
+
+      // 6. Tương lai phức (Будущее сложное) cho НСВ
+      const compoundFuture = [
+        `буду ${mainWord}`,
+        `будешь ${mainWord}`,
+        `будет ${mainWord}`,
+        `будем ${mainWord}`,
+        `будете ${mainWord}`,
+        `будут ${mainWord}`,
+      ];
+
+      const persons = ["я (tôi)", "ты (bạn)", "он / она / оно", "мы (chúng tôi)", "вы (các bạn)", "они (họ)"];
+
+      return `
+        <div class="dict-verb-container">
+          <!-- 1. THỂ & CẶP THỂ ĐỐI ỨNG -->
+          <div class="dict-verb-aspect-box">
+            <div>
+              <span class="dict-aspect-badge ${aspectBadgeClass}">${aspectTitle}</span>
+              <p style="font-size:0.75rem; color:#475569; margin:4px 0 0 2px;">${aspectDesc}</p>
+            </div>
+            ${
+              pairWord
+                ? `<button class="dict-pair-link" data-pair="${this.escapeHtml(pairWord)}" title="Chuyển sang xem thể đối ứng">
+                    🔁 Cặp thể đối ứng: <b>${this.escapeHtml(pairWord)}</b> (${isPerf ? "НСВ" : "СВ"})
+                   </button>`
+                : ""
+            }
+          </div>
+
+          <!-- 2. THÌ HIỆN TẠI (cho НСВ) hoặc TƯƠNG LAI ĐƠN (cho СВ) -->
+          <div class="dict-verb-block">
+            <h4 class="dict-verb-block-title">
+              <span>${isPerf ? "⚡ THÌ TƯƠNG LAI ĐƠN (Будущее простое время)" : "⏰ THÌ HIỆN TẠI (Настоящее время)"}</span>
+              <span class="dict-verb-block-subtitle">${isPerf ? "Chia 6 ngôi (Động từ СВ)" : "Chia 6 ngôi (Động từ НСВ)"}</span>
+            </h4>
+            <div class="dict-verb-grid">
+              ${persons
+                .map(
+                  (p, i) => `
+                <div class="dict-verb-row">
+                  <span class="dict-verb-person">${p}</span>
+                  <span class="dict-verb-form">
+                    ${this.escapeHtml(pres[i] || "—")}
+                    ${pres[i] ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(pres[i])}" title="Nghe phát âm">🔊</button>` : ""}
+                  </span>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+
+          <!-- 3. THÌ TƯƠNG LAI PHỨC (cho НСВ) -->
+          ${
+            !isPerf
+              ? `
+            <div class="dict-verb-block">
+              <h4 class="dict-verb-block-title">
+                <span>🚀 THÌ TƯƠNG LAI PHỨC (Будущее сложное время)</span>
+                <span class="dict-verb-block-subtitle">буду + động từ nguyên thể</span>
+              </h4>
+              <div class="dict-verb-grid">
+                ${persons
+                  .map(
+                    (p, i) => `
+                  <div class="dict-verb-row">
+                    <span class="dict-verb-person">${p}</span>
+                    <span class="dict-verb-form">
+                      ${this.escapeHtml(compoundFuture[i])}
+                      <button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(compoundFuture[i])}" title="Nghe phát âm">🔊</button>
+                    </span>
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
+            </div>
+          `
+              : ""
+          }
+
+          <!-- 4. THÌ QUÁ KHỨ (Прошедшее время) -->
+          <div class="dict-verb-block">
+            <h4 class="dict-verb-block-title">
+              <span>🕰️ THÌ QUÁ KHỨ (Прошедшее время)</span>
+              <span class="dict-verb-block-subtitle">Theo Giống (Đực, Cái, Trung) & Số nhiều</span>
+            </h4>
+            <div class="dict-verb-grid">
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">он (giống đực)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.m || "—")}
+                  ${past.m ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.m)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">она (giống cái)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.f || "—")}
+                  ${past.f ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.f)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">оно (giống trung)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.n || "—")}
+                  ${past.n ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.n)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">они / мы / вы (số nhiều)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.p || "—")}
+                  ${past.p ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.p)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. THỂ MỆNH LỆNH (Повелительное наклонение) -->
+          <div class="dict-verb-block">
+            <h4 class="dict-verb-block-title">
+              <span>📣 THỂ MỆNH LỆNH (Повелительное наклонение)</span>
+              <span class="dict-verb-block-subtitle">Yêu cầu, khuyên bảo hoặc ra lệnh</span>
+            </h4>
+            <div class="dict-verb-grid">
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">ты (bạn - thân mật)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(imp.s || "—")}
+                  ${imp.s ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(imp.s)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">вы (các bạn / lịch sự)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(imp.p || "—")}
+                  ${imp.p ? `<button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(imp.p)}" title="Nghe phát âm">🔊</button>` : ""}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. THỂ GIẢ ĐỊNH / ĐIỀU KIỆN (Сослагательное наклонение) -->
+          <div class="dict-verb-block">
+            <h4 class="dict-verb-block-title">
+              <span>💡 THỂ GIẢ ĐỊNH / ĐIỀU KIỆN (Сослагательное наклонение)</span>
+              <span class="dict-verb-block-subtitle">Dạng quá khứ + tiểu từ "бы" (giá như, nếu...)</span>
+            </h4>
+            <div class="dict-verb-grid">
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">он (nam)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.m)} бы
+                  <button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.m)} бы" title="Nghe phát âm">🔊</button>
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">она (nữ)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.f)} бы
+                  <button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.f)} бы" title="Nghe phát âm">🔊</button>
+                </span>
+              </div>
+              <div class="dict-verb-row">
+                <span class="dict-verb-person">они (số nhiều)</span>
+                <span class="dict-verb-form">
+                  ${this.escapeHtml(past.p)} бы
+                  <button class="dict-verb-audio-btn" data-vspeak="${this.escapeHtml(past.p)} бы" title="Nghe phát âm">🔊</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     renderDetailView(data) {
       const entry = data.entry || { ru: data.word, vi: "" };
       const extra = data.extra || {};
       const isRuVi = data.dir === "ru-vi";
       const mainWord = isRuVi ? entry.ru : entry.vi;
-      const subWord = isRuVi ? entry.vi : entry.ru;
-      const isBookmarked = this.bookmarks.some((b) => b.word === mainWord);
+      const isBookmarked = this.bookmarks.some((b) => b.word.toLowerCase() === mainWord.toLowerCase());
 
       const meaningLines = (entry.vi || "").split("\n").filter((l) => l.trim());
       const firstMeaning = meaningLines[0] || "";
 
-      // Accordion sections
       const sectionsHtml = [];
 
       // 1. Meanings list
@@ -639,18 +945,39 @@
             </button>
             <div class="dict-sec-body">
               ${meaningLines
-                .map((m, idx) => `
-                  <div class="dict-meaning-item">
-                    <span class="dict-meaning-bullet">${idx + 1}.</span> ${this.escapeHtml(m)}
-                  </div>
-                `)
+                .map(
+                  (m, idx) => `
+                <div class="dict-meaning-item">
+                  <span class="dict-meaning-bullet">${idx + 1}.</span> ${this.escapeHtml(m)}
+                </div>
+              `
+                )
                 .join("")}
             </div>
           </div>
         `);
       }
 
-      // 2. Examples
+      // 2. Comprehensive Verb Conjugation (thì, thời, thể)
+      const isWordVerb = isRuVi && this.isVerb(mainWord, entry, extra);
+      if (isWordVerb) {
+        const verbConjugationHtml = this.buildVerbConjugationSection(mainWord, extra.forms?.v, entry, extra);
+        sectionsHtml.push(`
+          <div class="dict-sec open" data-sec="verb-conjugation">
+            <button class="dict-sec-head" type="button">
+              <span class="dict-sec-head-left">
+                <span class="dict-sec-icon">⏱️</span> Bảng chia động từ toàn diện (Thì, Thời, Thể)
+              </span>
+              <span class="dict-sec-arrow">▾</span>
+            </button>
+            <div class="dict-sec-body">
+              ${verbConjugationHtml}
+            </div>
+          </div>
+        `);
+      }
+
+      // 3. Examples
       if (entry.ex && entry.ex.trim()) {
         const exLines = entry.ex.split("\n").filter((l) => l.trim()).slice(0, 10);
         sectionsHtml.push(`
@@ -687,7 +1014,7 @@
         `);
       }
 
-      // 3. Grammar: 6 Cases (Declension)
+      // 4. Grammar: 6 Cases (Declension for Nouns & Adjectives)
       if (extra.forms && (extra.forms.n || extra.forms.a || extra.forms.pn)) {
         const tableHtml = this.buildDeclensionTable(extra.forms);
         if (tableHtml) {
@@ -701,26 +1028,6 @@
               </button>
               <div class="dict-sec-body">
                 ${tableHtml}
-              </div>
-            </div>
-          `);
-        }
-      }
-
-      // 4. Grammar: Verb Conjugation
-      if (extra.forms && extra.forms.v) {
-        const verbHtml = this.buildVerbTable(extra.forms.v);
-        if (verbHtml) {
-          sectionsHtml.push(`
-            <div class="dict-sec open" data-sec="verb">
-              <button class="dict-sec-head" type="button">
-                <span class="dict-sec-head-left">
-                  <span class="dict-sec-icon">⏱️</span> Bảng chia động từ (Спряжение)
-                </span>
-                <span class="dict-sec-arrow">▾</span>
-              </button>
-              <div class="dict-sec-body">
-                ${verbHtml}
               </div>
             </div>
           `);
@@ -793,7 +1100,7 @@
 
       const detailHtml = `
         <div class="dict-detail-view">
-          <button class="dict-back-btn" id="dictBackBtn">← Quay lại danh sách</button>
+          <button class="dict-back-btn" id="dictBackBtn">← Quay lại danh sách kết quả</button>
 
           <!-- HERO -->
           <div class="dict-detail-hero">
@@ -854,14 +1161,31 @@
         });
       });
 
+      // Verb audio buttons
+      this.resultsEl.querySelectorAll(".dict-verb-audio-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.speak(btn.dataset.vspeak);
+        });
+      });
+
+      // Verb aspect pair links
+      this.resultsEl.querySelectorAll(".dict-pair-link").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const pair = btn.dataset.pair;
+          this.searchInput.value = pair;
+          this.clearBtn.style.display = "grid";
+          this.openWordDetail(pair, "ru-vi");
+        });
+      });
+
       // Bookmark button
       const bookmarkBtn = this.resultsEl.querySelector("#dictDetailBookmark");
       if (bookmarkBtn) {
         bookmarkBtn.addEventListener("click", () => {
-          this.toggleBookmark(entry, data.dir);
-          const hasBookmarked = this.bookmarks.some((b) => b.word === mainWord);
-          bookmarkBtn.classList.toggle("active", hasBookmarked);
-          bookmarkBtn.innerHTML = hasBookmarked ? "❤️" : "🤍";
+          const saved = this.toggleBookmark(entry, data.dir);
+          bookmarkBtn.classList.toggle("active", saved);
+          bookmarkBtn.innerHTML = saved ? "❤️" : "🤍";
         });
       }
 
@@ -882,7 +1206,7 @@
         });
       });
 
-      // Auto play audio softly once
+      // Soft auto-play
       setTimeout(() => {
         this.playAudio(mainWord, audioUrl, 1, true);
       }, 200);
@@ -894,7 +1218,6 @@
       let headers = [];
 
       if (forms.n) {
-        // Noun: singular & plural
         headers = ["Cách", "Số ít (Ед.ч)", "Số nhiều (Мн.ч)"];
         rows = CASE_ROWS.map((c, i) => [
           `<span class="case-title">${c.ru}</span><span class="case-sub">${c.vn}</span>`,
@@ -902,7 +1225,6 @@
           forms.n.p ? forms.n.p[i] || "—" : "—",
         ]);
       } else if (forms.a) {
-        // Adjective: masculine, feminine, neuter, plural
         headers = ["Cách", "Giống đực", "Giống cái", "Giống trung", "Số nhiều"];
         rows = CASE_ROWS.map((c, i) => [
           `<span class="case-title">${c.ru}</span><span class="case-sub">${c.vn}</span>`,
@@ -912,7 +1234,6 @@
           forms.a.p ? forms.a.p[i] || "—" : "—",
         ]);
       } else if (forms.pn) {
-        // Pronoun
         headers = ["Cách", "Số ít", "Số nhiều"];
         rows = CASE_ROWS.map((c, i) => [
           `<span class="case-title">${c.ru}</span><span class="case-sub">${c.vn}</span>`,
@@ -949,75 +1270,6 @@
       `;
     }
 
-    buildVerbTable(v) {
-      if (!v) return "";
-      const persons = ["я (tôi)", "ты (bạn)", "он/она (anh ấy/cô ấy)", "мы (chúng tôi)", "вы (các bạn)", "они (họ)"];
-      const isPerf = v.perf === 1;
-      const tenseLabel = isPerf ? "Tương lai đơn (Будущее время)" : "Hiện tại (Настоящее время)";
-
-      let html = `
-        <div style="margin-bottom: 8px;">
-          <span style="font-size: 0.76rem; font-weight: 700; background: ${isPerf ? "#fef3c7; color: #92400e;" : "#dbeafe; color: #1e40af;"} padding: 2px 8px; border-radius: 6px;">
-            ${isPerf ? "★ Hoàn thành thể (СВ)" : "● Chưa hoàn thành thể (НСВ)"}
-          </span>
-        </div>
-      `;
-
-      if (v.pres && v.pres.length >= 6) {
-        html += `
-          <div class="dict-table-wrap" style="margin-bottom: 12px;">
-            <table class="dict-table">
-              <thead><tr><th>Ngôi</th><th>${tenseLabel}</th></tr></thead>
-              <tbody>
-                ${persons
-                  .map(
-                    (p, i) => `
-                  <tr>
-                    <td><b>${p}</b></td>
-                    <td class="ru">${this.escapeHtml(v.pres[i] || "—")}</td>
-                  </tr>
-                `
-                  )
-                  .join("")}
-              </tbody>
-            </table>
-          </div>
-        `;
-      }
-
-      if (v.past) {
-        html += `
-          <div class="dict-table-wrap" style="margin-bottom: 12px;">
-            <table class="dict-table">
-              <thead><tr><th>Ngôi</th><th>Quá khứ (Прошедшее время)</th></tr></thead>
-              <tbody>
-                <tr><td><b>он (nam)</b></td><td class="ru">${this.escapeHtml(v.past.m || "—")}</td></tr>
-                <tr><td><b>она (nữ)</b></td><td class="ru">${this.escapeHtml(v.past.f || "—")}</td></tr>
-                <tr><td><b>оно (trung)</b></td><td class="ru">${this.escapeHtml(v.past.n || "—")}</td></tr>
-                <tr><td><b>они (số nhiều)</b></td><td class="ru">${this.escapeHtml(v.past.p || "—")}</td></tr>
-              </tbody>
-            </table>
-          </div>
-        `;
-      }
-
-      if (v.imp && (v.imp.s || v.imp.p)) {
-        html += `
-          <div class="dict-table-wrap">
-            <table class="dict-table">
-              <thead><tr><th>Ngôi</th><th>Mệnh lệnh (Повелительное наклонение)</th></tr></thead>
-              <tbody>
-                <tr><td><b>ты (bạn)</b></td><td class="ru">${this.escapeHtml(v.imp.s || "—")}</td></tr>
-                <tr><td><b>вы (các bạn/lịch sự)</b></td><td class="ru">${this.escapeHtml(v.imp.p || "—")}</td></tr>
-              </tbody>
-            </table>
-          </div>
-        `;
-      }
-
-      return html;
-    }
-
     playAudio(text, audioUrl, speed = 1, silentFail = false) {
       if (audioUrl) {
         if (!this.audioObj) this.audioObj = new Audio();
@@ -1039,7 +1291,6 @@
       const langCode = isRu ? "ru-RU" : "vi-VN";
       const ttsLang = isRu ? "ru" : "vi";
 
-      // HTML5 Audio fallback using Google TTS
       const playTTSFallback = () => {
         try {
           if (this.audioObj) {
@@ -1059,22 +1310,18 @@
       }
 
       try {
-        if (speechSynthesis.paused) {
-          speechSynthesis.resume();
-        }
+        if (speechSynthesis.paused) speechSynthesis.resume();
         speechSynthesis.cancel();
       } catch (e) {}
 
       const voices = speechSynthesis.getVoices() || [];
       const matchedVoice = voices.find((v) => (isRu ? v.lang.startsWith("ru") : v.lang.startsWith("vi")));
 
-      // Nếu không tìm thấy voice tiếng Nga/Việt thích hợp (thường gặp trên macOS Chrome)
       if (!matchedVoice) {
         playTTSFallback();
         return;
       }
 
-      // Đệm 50ms tránh xung đột cancel() trên Chrome Mac
       setTimeout(() => {
         try {
           if (speechSynthesis.paused) speechSynthesis.resume();
@@ -1093,7 +1340,6 @@
 
           speechSynthesis.speak(utter);
 
-          // Watchdog: Nếu sau 700ms Chrome Mac không kích hoạt âm thanh (loa bị treo)
           setTimeout(() => {
             if (!hasStarted) {
               try {
@@ -1108,62 +1354,95 @@
       }, 50);
     }
 
-    toggleBookmark(entry, dir) {
-      const isRuVi = dir === "ru-vi";
-      const word = isRuVi ? entry.ru : entry.vi;
-      const meaning = isRuVi ? entry.vi.split("\n")[0] : entry.ru;
+    toggleBookmark(item, dir = "auto") {
+      const word = String(item.ru || item.vi || item.word || "").trim();
+      if (!word) return false;
+      const meaning = String(item.vi || item.ru || item.meaning || "").split("\n")[0].trim();
 
-      const idx = this.bookmarks.findIndex((b) => b.word === word);
+      const idx = this.bookmarks.findIndex((b) => b.word.toLowerCase() === word.toLowerCase());
+      let isSaved = false;
+
       if (idx !== -1) {
         this.bookmarks.splice(idx, 1);
+        isSaved = false;
       } else {
         this.bookmarks.unshift({
+          id: "b_" + Date.now() + "_" + Math.random().toString(36).slice(2, 6),
           word,
           meaning,
-          dir,
+          pron: item.pron || "",
+          pos: item.pos || "",
+          dir: dir || item.dir || "auto",
           date: Date.now(),
         });
-        if (this.bookmarks.length > 100) this.bookmarks.pop();
+        if (this.bookmarks.length > 150) this.bookmarks.pop();
+        isSaved = true;
       }
+
       this.saveStorage(STORAGE_BOOKMARKS, this.bookmarks);
+      this.updateBadgeCounts();
+      return isSaved;
     }
 
-    addToHistory(word, dir) {
-      const clean = word.trim();
-      if (!clean) return;
+    addToHistory(word, meaning = "", dir = "auto") {
+      const clean = String(word || "").trim();
+      if (!clean || clean.length < 2) return;
       this.history = this.history.filter((h) => h.word.toLowerCase() !== clean.toLowerCase());
-      this.history.unshift({ word: clean, dir, date: Date.now() });
-      if (this.history.length > 50) this.history.pop();
+      this.history.unshift({
+        id: "h_" + Date.now() + "_" + Math.random().toString(36).slice(2, 6),
+        word: clean,
+        meaning: String(meaning || "").split("\n")[0].trim(),
+        dir: dir || "auto",
+        date: Date.now(),
+      });
+      if (this.history.length > 60) this.history.pop();
       this.saveStorage(STORAGE_HISTORY, this.history);
+      this.updateBadgeCounts();
     }
 
     renderBookmarks() {
       const pane = this.panelEl.querySelector("#dictTabBookmarks");
       if (this.bookmarks.length === 0) {
         pane.innerHTML = `
+          <div class="dict-pane-top-bar">
+            <button class="dict-back-to-search-btn" id="dictBtnBackFromBookmarks">← Quay lại tra từ</button>
+            <span style="font-weight:700; font-size:0.85rem; color:#64748b;">Sổ tay trống</span>
+            <span></span>
+          </div>
           <div class="dict-empty-state">
             <span class="dict-empty-icon">⭐</span>
             <p class="dict-empty-title">Chưa có từ nào được lưu</p>
-            <p class="dict-empty-sub">Nhấn biểu tượng trái tim (❤️) khi xem chi tiết từ để lưu vào sổ tay ôn tập.</p>
+            <p class="dict-empty-sub">Nhấn biểu tượng trái tim (❤️) khi tra từ để lưu vào sổ tay ôn tập.</p>
           </div>
         `;
+        const backBtn = pane.querySelector("#dictBtnBackFromBookmarks");
+        if (backBtn) backBtn.addEventListener("click", () => this.switchTab("search"));
         return;
       }
 
       pane.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <div class="dict-pane-top-bar">
+          <button class="dict-back-to-search-btn" id="dictBtnBackFromBookmarks">← Quay lại tra từ</button>
           <span style="font-weight:700; font-size:0.88rem; color:#1e293b;">Từ đã lưu (${this.bookmarks.length})</span>
-          <button class="dict-nav-tab" id="dictClearBookmarksBtn" style="color:#ef4444; font-size:0.75rem;">Xóa tất cả</button>
+          <button class="dict-clear-all-btn" id="dictClearBookmarksBtn">Xóa tất cả</button>
         </div>
         <div class="dict-results-list">
           ${this.bookmarks
             .map(
               (b) => `
-            <div class="dict-result-card" data-word="${this.escapeHtml(b.word)}" data-dir="${this.escapeHtml(b.dir)}">
-              <div class="dict-card-head">
-                <span class="dict-card-word">${this.escapeHtml(b.word)}</span>
+            <div class="dict-list-item-card" data-word="${this.escapeHtml(b.word)}" data-dir="${this.escapeHtml(b.dir)}">
+              <div class="dict-list-item-left">
+                <div class="dict-list-item-word-wrap">
+                  <span class="dict-list-item-word">${this.escapeHtml(b.word)}</span>
+                  ${b.pron ? `<span style="font-size:0.8rem; color:#64748b;">${this.escapeHtml(b.pron)}</span>` : ""}
+                </div>
+                ${b.meaning ? `<div class="dict-list-item-meaning">${this.escapeHtml(b.meaning)}</div>` : ""}
+                <div class="dict-list-item-time">${this.formatTimeAgo(b.date)}</div>
               </div>
-              <div class="dict-card-meaning">${this.escapeHtml(b.meaning)}</div>
+              <div class="dict-list-item-actions">
+                <button class="dict-item-btn speak" data-speak="${this.escapeHtml(b.word)}" title="Nghe phát âm">🔊</button>
+                <button class="dict-item-btn del" data-del="${this.escapeHtml(b.word)}" title="Bỏ lưu">🗑️</button>
+              </div>
             </div>
           `
             )
@@ -1171,12 +1450,35 @@
         </div>
       `;
 
-      pane.querySelectorAll(".dict-result-card").forEach((card) => {
-        card.addEventListener("click", () => {
+      pane.querySelector("#dictBtnBackFromBookmarks")?.addEventListener("click", () => this.switchTab("search"));
+
+      pane.querySelectorAll(".dict-list-item-card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          if (e.target.closest(".dict-item-btn")) return;
+          const w = card.dataset.word;
+          const d = card.dataset.dir || "auto";
           this.switchTab("search");
-          this.searchInput.value = card.dataset.word;
+          this.searchInput.value = w;
           this.clearBtn.style.display = "grid";
-          this.openWordDetail(card.dataset.word, card.dataset.dir);
+          this.openWordDetail(w, d);
+        });
+      });
+
+      pane.querySelectorAll(".dict-item-btn.speak").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.speak(btn.dataset.speak);
+        });
+      });
+
+      pane.querySelectorAll(".dict-item-btn.del").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const targetWord = btn.dataset.del;
+          this.bookmarks = this.bookmarks.filter((b) => b.word !== targetWord);
+          this.saveStorage(STORAGE_BOOKMARKS, this.bookmarks);
+          this.updateBadgeCounts();
+          this.renderBookmarks();
         });
       });
 
@@ -1186,6 +1488,7 @@
           if (confirm("Bạn có chắc muốn xóa tất cả từ đã lưu?")) {
             this.bookmarks = [];
             this.saveStorage(STORAGE_BOOKMARKS, this.bookmarks);
+            this.updateBadgeCounts();
             this.renderBookmarks();
           }
         });
@@ -1196,27 +1499,41 @@
       const pane = this.panelEl.querySelector("#dictTabHistory");
       if (this.history.length === 0) {
         pane.innerHTML = `
+          <div class="dict-pane-top-bar">
+            <button class="dict-back-to-search-btn" id="dictBtnBackFromHistory">← Quay lại tra từ</button>
+            <span style="font-weight:700; font-size:0.85rem; color:#64748b;">Lịch sử trống</span>
+            <span></span>
+          </div>
           <div class="dict-empty-state">
             <span class="dict-empty-icon">🕒</span>
             <p class="dict-empty-title">Lịch sử tra cứu trống</p>
             <p class="dict-empty-sub">Các từ bạn tra cứu sẽ xuất hiện tại đây để tiện xem lại.</p>
           </div>
         `;
+        const backBtn = pane.querySelector("#dictBtnBackFromHistory");
+        if (backBtn) backBtn.addEventListener("click", () => this.switchTab("search"));
         return;
       }
 
       pane.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-weight:700; font-size:0.88rem; color:#1e293b;">Tra cứu gần đây (${this.history.length})</span>
-          <button class="dict-nav-tab" id="dictClearHistoryBtn" style="color:#ef4444; font-size:0.75rem;">Xóa lịch sử</button>
+        <div class="dict-pane-top-bar">
+          <button class="dict-back-to-search-btn" id="dictBtnBackFromHistory">← Quay lại tra từ</button>
+          <span style="font-weight:700; font-size:0.88rem; color:#1e293b;">Lịch sử tra cứu (${this.history.length})</span>
+          <button class="dict-clear-all-btn" id="dictClearHistoryBtn">Xóa lịch sử</button>
         </div>
         <div class="dict-results-list">
           ${this.history
             .map(
               (h) => `
-            <div class="dict-result-card" data-word="${this.escapeHtml(h.word)}" data-dir="${this.escapeHtml(h.dir)}">
-              <div class="dict-card-head">
-                <span class="dict-card-word">${this.escapeHtml(h.word)}</span>
+            <div class="dict-list-item-card" data-word="${this.escapeHtml(h.word)}" data-dir="${this.escapeHtml(h.dir)}">
+              <div class="dict-list-item-left">
+                <span class="dict-list-item-word">${this.escapeHtml(h.word)}</span>
+                ${h.meaning ? `<div class="dict-list-item-meaning">${this.escapeHtml(h.meaning)}</div>` : ""}
+                <div class="dict-list-item-time">${this.formatTimeAgo(h.date)}</div>
+              </div>
+              <div class="dict-list-item-actions">
+                <button class="dict-item-btn speak" data-speak="${this.escapeHtml(h.word)}" title="Nghe phát âm">🔊</button>
+                <button class="dict-item-btn del" data-del="${this.escapeHtml(h.word)}" title="Xóa khỏi lịch sử">🗑️</button>
               </div>
             </div>
           `
@@ -1225,21 +1542,46 @@
         </div>
       `;
 
-      pane.querySelectorAll(".dict-result-card").forEach((card) => {
-        card.addEventListener("click", () => {
+      pane.querySelector("#dictBtnBackFromHistory")?.addEventListener("click", () => this.switchTab("search"));
+
+      pane.querySelectorAll(".dict-list-item-card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          if (e.target.closest(".dict-item-btn")) return;
+          const w = card.dataset.word;
           this.switchTab("search");
-          this.searchInput.value = card.dataset.word;
+          this.searchInput.value = w;
           this.clearBtn.style.display = "grid";
-          this.openWordDetail(card.dataset.word, card.dataset.dir);
+          this.handleSearch(w);
+        });
+      });
+
+      pane.querySelectorAll(".dict-item-btn.speak").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.speak(btn.dataset.speak);
+        });
+      });
+
+      pane.querySelectorAll(".dict-item-btn.del").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const targetWord = btn.dataset.del;
+          this.history = this.history.filter((h) => h.word !== targetWord);
+          this.saveStorage(STORAGE_HISTORY, this.history);
+          this.updateBadgeCounts();
+          this.renderHistory();
         });
       });
 
       const clearHist = pane.querySelector("#dictClearHistoryBtn");
       if (clearHist) {
         clearHist.addEventListener("click", () => {
-          this.history = [];
-          this.saveStorage(STORAGE_HISTORY, this.history);
-          this.renderHistory();
+          if (confirm("Bạn có chắc muốn xóa toàn bộ lịch sử tra cứu?")) {
+            this.history = [];
+            this.saveStorage(STORAGE_HISTORY, this.history);
+            this.updateBadgeCounts();
+            this.renderHistory();
+          }
         });
       }
     }
@@ -1254,4 +1596,3 @@
     window.TaigaDictWidget = new DictionaryWidget();
   }
 })();
-
