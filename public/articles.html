@@ -14,27 +14,47 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/articles.css" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
+    <link rel="stylesheet" href="/articles.css?v=2.0" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
   </head>
-  <body>
-    <div class="shell">
-      <!-- HEADER / TOPBAR -->
-      <header class="topbar">
-        <a href="/home" class="brand-logo">
-          <span class="brand-flag">🇷🇺</span>
-          <span class="brand-name">TAIGA Center</span>
-          <span class="brand-badge">Góc Chia Sẻ</span>
+  <body class="ff-body">
+    <!-- 1. FORUMFLASH TOPBAR -->
+    <header class="game-topbar">
+      <a href="/home" class="ff-brand" aria-label="Trang chủ TAIGA">
+        <span style="font-size: 1.8rem;">🇷🇺</span>
+        <div class="ff-logo-mark">
+          <span class="ff-logo-word">
+            Taiga<span class="ff-logo-o"><span><i></i><i></i><i></i></span></span>Flash<span class="ff-logo-dot">.</span>
+          </span>
+          <small class="ff-logo-sub">TỪ TAIGA RUSSIAN CENTER</small>
+        </div>
+      </a>
+
+      <!-- Main Navigation Pills -->
+      <nav class="ff-nav-pills" aria-label="Điều hướng chính">
+        <a href="/home" class="ff-nav-tab">Trang chủ</a>
+        <a href="/roadmap" class="ff-nav-tab">Lộ trình</a>
+        <a href="/articles" class="ff-nav-tab active">Bài viết</a>
+        <a href="/test" class="ff-nav-tab">Luyện tập / Test</a>
+        <a href="/contact" class="ff-nav-tab">Liên hệ</a>
+      </nav>
+
+      <!-- Gamification Stats -->
+      <div class="ff-topbar-right">
+        <span class="ff-stat-chip streak" title="Chuỗi ngày học liên tục">
+          <span>🔥</span> <b id="ffHeaderStreak">3 ngày streak</b>
+        </span>
+        <span class="ff-stat-chip xp" title="Điểm kinh nghiệm tích lũy">
+          <span>⚡</span> <b id="ffHeaderXp">120 XP</b>
+        </span>
+        <a href="/app" class="ff-btn-account" title="Lịch học của tôi">
+          <span>👤 Lịch học</span>
         </a>
-        <nav class="nav-links">
-          <a href="/home" class="nav-item">Trang chủ</a>
-          <a href="/roadmap" class="nav-item">Lộ trình học</a>
-          <a href="/articles" class="nav-item active">Bài viết</a>
-          <a href="/test" class="nav-item">Kiểm tra (Test)</a>
-          <a href="/contact" class="nav-item">Liên hệ</a>
-          <a href="/app" class="nav-item nav-btn-login">Đăng nhập</a>
-        </nav>
-      </header>
+      </div>
+    </header>
+
+    <div class="shell" style="margin-top: 24px;">
 
       <!-- HERO SECTION -->
       <section class="hero-articles">
@@ -633,6 +653,14 @@
       /* INITIALIZE */
       document.addEventListener("DOMContentLoaded", () => {
         renderArticles(ARTICLES);
+        try {
+          const xp = localStorage.getItem('ff_user_xp') || 120;
+          const streak = localStorage.getItem('ff_streak_days') || 3;
+          const xpEl = document.getElementById('ffHeaderXp');
+          const streakEl = document.getElementById('ffHeaderStreak');
+          if (xpEl) xpEl.textContent = `${xp} XP`;
+          if (streakEl) streakEl.textContent = `${streak} ngày streak`;
+        } catch (_) {}
       });
     </script>
     <script src="/dictionary-widget.js?v=2.0" defer></script>

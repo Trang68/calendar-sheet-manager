@@ -8,40 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
+    <link rel="stylesheet" href="/home.css?v=2.0" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
   </head>
-  <body>
-    <header class="header">
-      <div class="logo">TAIGA Center</div>
-      <nav class="nav">
-        <!-- <a href="#home">Trang chủ</a> -->
-        <!-- <a href="/learn">Học tiếng Nga</a> -->
-        <a href="/roadmap">Lộ trình học</a>
-        <a href="/articles">Bài viết</a>
-        <a href="/test">Kiểm tra (Test)</a>
-        <a href="#about">Về chúng tôi</a>
-        <a href="#courses">Khóa học</a>
-        <a href="#contact">Liên hệ</a>
-        <a href="/app">Đăng nhập</a>
+  <body class="ff-body">
+    <!-- 1. FORUMFLASH TOPBAR -->
+    <header class="game-topbar">
+      <a href="/home" class="ff-brand" aria-label="Trang chủ TAIGA">
+        <span style="font-size: 1.8rem;">🇷🇺</span>
+        <div class="ff-logo-mark">
+          <span class="ff-logo-word">
+            Taiga<span class="ff-logo-o"><span><i></i><i></i><i></i></span></span>Flash<span class="ff-logo-dot">.</span>
+          </span>
+          <small class="ff-logo-sub">TỪ TAIGA RUSSIAN CENTER</small>
+        </div>
+      </a>
+
+      <!-- Main Navigation Pills -->
+      <nav class="ff-nav-pills" aria-label="Điều hướng chính">
+        <a href="/home" class="ff-nav-tab active">Trang chủ</a>
+        <a href="/roadmap" class="ff-nav-tab">Lộ trình</a>
+        <a href="/articles" class="ff-nav-tab">Bài viết</a>
+        <a href="/test" class="ff-nav-tab">Luyện tập / Test</a>
+        <a href="/contact" class="ff-nav-tab">Liên hệ</a>
       </nav>
-      <button class="language-btn" title="Chuyển ngôn ngữ">Ru-Vi</button>
+
+      <!-- Gamification Stats -->
+      <div class="ff-topbar-right">
+        <span class="ff-stat-chip streak" title="Chuỗi ngày học liên tục">
+          <span>🔥</span> <b id="ffHeaderStreak">3 ngày streak</b>
+        </span>
+        <span class="ff-stat-chip xp" title="Điểm kinh nghiệm tích lũy">
+          <span>⚡</span> <b id="ffHeaderXp">120 XP</b>
+        </span>
+        <a href="/app" class="ff-btn-account" title="Lịch học của tôi">
+          <span>👤 Lịch học</span>
+        </a>
+      </div>
     </header>
 
     <section class="container hero" id="home">
       <div class="hero-text">
-        <span class="hero-tag">✨ Học Tiếng Nga Chuẩn</span>
-        <h1>Học tiếng Nga <br /><span class="accent">Chuyên nghiệp</span> & Hiệu quả</h1>
+        <span class="hero-tag">✨ Học Tiếng Nga Chuẩn TRKI / CEFR</span>
+        <h1>Học tiếng Nga <br /><span class="accent">Chuyên nghiệp</span> & Phản xạ thực chiến</h1>
         <p class="hero-desc">
-          Khóa học tiếng Nga từ cơ bản đến nâng cao với giáo viên bản xứ và giáo viên Việt Nam. Chương trình đa dạng: giao tiếp, ngữ pháp, luyện thi, tiếng Nga thương mại.
+          Chương trình học tiếng Nga kết hợp phương pháp Flashcard tương tác và bài kiểm tra phản xạ theo từng bài học. Tự tin giao tiếp, nắm vững ngữ pháp và đạt chuẩn quốc tế từ A0 đến C1 cùng TAIGA Center.
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn primary">Đăng ký tư vấn</a>
-          <a href="#courses" class="btn secondary">Xem khóa học</a>
-          <a href="/app" class="btn secondary">Vào trang quản lý</a>
+          <a href="/test" class="btn primary">🎮 Luyện tập ngay ➔</a>
+          <a href="/roadmap" class="btn secondary">Xem lộ trình học</a>
+          <a href="/contact" class="btn secondary">Đăng ký tư vấn</a>
         </div>
       </div>
       <div class="hero-image">
@@ -210,77 +230,33 @@
     </div>
 
     <script>
+      // Sync XP & Streak from localStorage
+      (function syncHeaderStats() {
+        try {
+          const xp = localStorage.getItem('ff_user_xp') || 120;
+          const streak = localStorage.getItem('ff_streak_days') || 3;
+          const xpEl = document.getElementById('ffHeaderXp');
+          const streakEl = document.getElementById('ffHeaderStreak');
+          if (xpEl) xpEl.textContent = `${xp} XP`;
+          if (streakEl) streakEl.textContent = `${streak} ngày streak`;
+        } catch (_) {}
+      })();
+
+      // Smooth scroll for in-page anchors
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
+          if (!targetId || targetId === '#') return;
           
           const target = document.querySelector(targetId);
           if (target) {
             e.preventDefault();
-            
-            const header = document.querySelector('.header');
-            const headerOffset = header ? header.offsetHeight : 90;
-            
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = targetPosition - headerOffset;
-            
-            const startPosition = window.scrollY;
-            const distance = offsetPosition - startPosition;
-            const duration = 600; 
-            let start = null;
-
-            function animation(currentTime) {
-              if (start === null) start = currentTime;
-              const timeElapsed = currentTime - start;
-              const progress = Math.min(timeElapsed / duration, 1);
-              
-              const ease = progress < 0.5 
-                ? 2 * progress * progress 
-                : -1 + (4 - 2 * progress) * progress;
-              
-              window.scrollTo(0, startPosition + distance * ease);
-              
-              if (timeElapsed < duration) {
-                requestAnimationFrame(animation);
-              } else {
-                window.scrollTo(0, offsetPosition);
-              }
-            }
-            requestAnimationFrame(animation);
+            const topbar = document.querySelector('.game-topbar') || document.querySelector('.header');
+            const offset = topbar ? topbar.offsetHeight + 16 : 90;
+            const targetPos = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: targetPos, behavior: 'smooth' });
           }
         });
-      });
-
-      // Header show/hide on scroll
-      const mainHeader = document.querySelector('.header');
-      let isScrollingTimer;
-      let isHoveringHeader = false;
-
-      mainHeader.addEventListener('mouseenter', () => {
-        isHoveringHeader = true;
-        mainHeader.classList.remove('hidden');
-        window.clearTimeout(isScrollingTimer);
-      });
-
-      mainHeader.addEventListener('mouseleave', () => {
-        isHoveringHeader = false;
-        if (window.scrollY > 100) {
-          isScrollingTimer = setTimeout(() => {
-            mainHeader.classList.add('hidden');
-          }, 1500);
-        }
-      });
-
-      window.addEventListener('scroll', () => {
-        window.clearTimeout(isScrollingTimer);
-        mainHeader.classList.remove('hidden');
-
-        if (!isHoveringHeader && window.scrollY > 100) {
-          isScrollingTimer = setTimeout(() => {
-            mainHeader.classList.add('hidden');
-          }, 1500);
-        }
       });
     </script>
     <script src="/dictionary-widget.js?v=2.0" defer></script>

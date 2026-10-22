@@ -11,24 +11,6 @@ app.set("trust proxy", true);
 
 app.use(express.json({ limit: "1mb" }));
 
-// Tạm thời chặn học viên vào Trang chủ (/home) và Lộ trình (/roadmap), chuyển hướng về /test
-app.use((req, res, next) => {
-  const p = (req.path || "").toLowerCase();
-  if (
-    p === "/" ||
-    p === "/home" ||
-    p === "/home.html" ||
-    p === "/roadmap" ||
-    p === "/roadmap.html" ||
-    p === "/learn" ||
-    p === "/learn.html" ||
-    p === "/index" ||
-    p === "/index.html"
-  ) {
-    return res.redirect(302, "/test");
-  }
-  next();
-});
 
 app.use(express.static(path.join(__dirname, "../public")));
 app.use("/media", express.static(path.join(__dirname, "../media")));
@@ -1629,9 +1611,16 @@ app.get("/api/dict/translate", async (req, res) => {
   }
 });
 
-// Tạm thời chuyển hướng /home, /roadmap, /learn về /test
-app.get(["/home", "/roadmap", "/learn", "/index", "/index.html"], (_req, res) => {
-  res.redirect(302, "/test");
+app.get(["/", "/home", "/home.html"], (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/home.html"));
+});
+
+app.get(["/roadmap", "/roadmap.html"], (_req, res) => {
+  res.sendFile(path.join(__dirname, "../public/roadmap.html"));
+});
+
+app.get(["/learn", "/learn.html"], (_req, res) => {
+  res.redirect(302, "/roadmap");
 });
 
 app.get("/app", (_req, res) => {
@@ -1650,8 +1639,12 @@ app.get("/test", (_req, res) => {
   res.sendFile(path.join(__dirname, "../public/test.html"));
 });
 
+app.get(["/index", "/index.html"], (_req, res) => {
+  res.redirect(301, "/home");
+});
+
 app.get("*", (_req, res) => {
-  res.redirect(302, "/test");
+  res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
 app.listen(config.port, () => {

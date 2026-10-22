@@ -3,28 +3,29 @@
    ========================================================================== */
 
 :root {
-  --bg-1: #efe6d8;
-  --bg-2: #d8e7de;
-  --paper: #fffdf8;
-  --line: #d6d2c8;
+  --bg-1: #f7f5ef;
+  --bg-2: #f2eee5;
+  --paper: #fffdfa;
+  --line: #e4dfd4;
   --line-light: #ece7de;
-  --ink: #1a2432;
+  --ink: #1a2e2c;
   --ink-secondary: #334155;
-  --muted: #5f6978;
-  --brand: #1a7a5e;
-  --brand-strong: #0d5c45;
-  --brand-light: #e8f5f0;
-  --accent: #e8662f;
-  --accent-light: #fff2eb;
-  --gold: #d97706;
+  --muted: #64748b;
+  --brand: #004646;
+  --brand-strong: #003636;
+  --brand-light: #e6f7f5;
+  --accent: #27c4b5;
+  --accent-light: #e6f7f5;
+  --accent-earth: #a8734c;
+  --gold: #ffcf55;
   --gold-light: #fef3c7;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-xl: 28px;
-  --shadow-sm: 0 4px 12px rgba(26, 36, 50, 0.05);
-  --shadow-md: 0 10px 28px rgba(26, 36, 50, 0.08);
-  --shadow-lg: 0 20px 48px rgba(26, 36, 50, 0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 70, 70, 0.05);
+  --shadow-md: 0 12px 32px rgba(0, 70, 70, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 70, 70, 0.14);
 }
 
 * {
@@ -38,12 +39,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 10% 10%, rgba(255, 222, 185, 0.65) 0, transparent 32%),
-    radial-gradient(circle at 90% 12%, rgba(180, 230, 205, 0.6) 0, transparent 30%),
-    linear-gradient(165deg, #f3efe8 0%, #ebe4d8 100%);
+  background-color: var(--bg-1);
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 90% 75%, rgba(0, 70, 70, 0.05) 0, transparent 40%);
   background-attachment: fixed;
   position: relative;
   isolation: isolate;

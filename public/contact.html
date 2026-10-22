@@ -3,71 +3,239 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ - TAIGA Center</title>
+    <title>Liên hệ Tư Vấn & Tuyển Sinh | TAIGA Center</title>
+    <meta
+      name="description"
+      content="Liên hệ tư vấn khóa học tiếng Nga, đăng ký kiểm tra năng lực TRKI và xếp lớp học phù hợp tại TAIGA Center."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
+    <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
     <style>
-      :root { --bg: #f2efe7; --paper: #fffdf8; --ink: #1a2432; --line: #d6d2c8; --brand: #1a7a5e; --brand-strong: #0d5c45; --accent: #e8662f; }
+      :root {
+        --ff-primary: #004646;
+        --ff-primary-dark: #003636;
+        --ff-mint: #27c4b5;
+        --ff-mint-light: #e6f7f5;
+        --ff-bg: #f7f5ef;
+        --ff-card-bg: #fffdfa;
+        --ff-card-border: #e4dfd4;
+        --ff-text: #1a2e2c;
+        --ff-text-muted: #64748b;
+        --ff-earth: #a8734c;
+      }
       * { box-sizing: border-box; }
-      html, body { margin: 0; min-height: 100%; font-family: "Manrope", sans-serif; background: radial-gradient(circle at 12% 12%, #ffe6ce 0, transparent 34%), radial-gradient(circle at 88% 8%, #d8f2e7 0, transparent 30%), linear-gradient(165deg, #f2efe7 0%, #ece6da 100%); color: var(--ink); position: relative; isolation: isolate; }
-      body::before { content: ""; position: fixed; inset: 0; background: url("../media/flag_fly.png") center center / cover no-repeat; opacity: 0.6; filter: blur(0px) saturate(82%); transform: scale(1.05); pointer-events: none; z-index: -1; }
-      .shell { max-width: 1000px; margin: 0 auto; padding: 24px; }
-      .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
-      .brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; color: var(--brand-strong); }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 14px; }
-      .nav-links a { color: var(--brand); text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: rgba(26, 122, 94, 0.08); }
-      .nav-links a:hover { background: rgba(26, 122, 94, 0.16); }
-      .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 36px; box-shadow: 0 18px 36px rgba(26, 36, 50, 0.08); margin-bottom: 28px; }
-      .hero h1 { margin: 0 0 12px; }
-      .hero p { margin: 0; line-height: 1.8; }
-      .card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: 0 15px 30px rgba(26, 36, 50, 0.06); margin-bottom: 20px; }
-      .card h2 { margin: 0 0 12px; color: var(--brand); }
-      .card p { margin: 0; line-height: 1.7; }
-      .button { display: inline-block; background: linear-gradient(120deg, var(--brand), var(--brand-strong)); color: white; text-decoration: none; padding: 12px 20px; border-radius: 999px; margin-top: 18px; }
-      footer { margin-top: 32px; text-align: center; color: #606b73; font-size: 0.95rem; }
-      @media(max-width: 780px) { .topbar { flex-direction: column; align-items: flex-start; } }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Manrope", system-ui, -apple-system, sans-serif;
+        background-color: var(--ff-bg);
+        color: var(--ff-text);
+        -webkit-font-smoothing: antialiased;
+      }
+      .contact-shell {
+        max-width: 1040px;
+        margin: 36px auto 60px;
+        padding: 0 clamp(16px, 4vw, 32px);
+      }
+      .contact-hero {
+        background: var(--ff-card-bg);
+        border: 1px solid var(--ff-card-border);
+        border-radius: 24px;
+        padding: clamp(28px, 4vw, 44px);
+        box-shadow: 0 12px 32px rgba(0, 70, 70, 0.06);
+        margin-bottom: 28px;
+        text-align: center;
+      }
+      .contact-hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--ff-mint-light);
+        color: var(--ff-primary);
+        border: 1px solid #a9d9d3;
+        padding: 6px 14px;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        letter-spacing: 0.05em;
+      }
+      .contact-hero h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: var(--ff-primary);
+        margin: 0 0 12px;
+        letter-spacing: -0.02em;
+      }
+      .contact-hero p {
+        margin: 0 auto;
+        max-width: 620px;
+        color: var(--ff-text-muted);
+        line-height: 1.7;
+        font-size: 1.05rem;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+      .contact-card {
+        background: var(--ff-card-bg);
+        border: 1px solid var(--ff-card-border);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 8px 24px rgba(0, 70, 70, 0.04);
+        transition: all 0.25s ease;
+      }
+      .contact-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--ff-mint);
+        box-shadow: 0 14px 32px rgba(0, 70, 70, 0.09);
+      }
+      .contact-card h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--ff-primary);
+        margin: 0 0 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .contact-card p {
+        margin: 0 0 10px;
+        line-height: 1.65;
+        color: var(--ff-text);
+      }
+      .contact-card p b {
+        color: var(--ff-primary);
+      }
+      .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--ff-primary);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-top: 14px;
+        transition: all 0.2s;
+        box-shadow: 0 4px 14px rgba(0, 70, 70, 0.18);
+      }
+      .contact-btn:hover {
+        background: var(--ff-primary-dark);
+        transform: translateY(-2px);
+      }
+      .contact-footer {
+        text-align: center;
+        color: var(--ff-text-muted);
+        font-size: 0.92rem;
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 1px solid var(--ff-card-border);
+      }
     </style>
   </head>
-  <body>
-    <div class="shell">
-      <div class="topbar">
-        <div>
-          <h1 class="brand">Liên hệ tư vấn</h1>
-          <p>Gửi yêu cầu để nhận thông tin khóa học, lộ trình và báo giá chi tiết.</p>
+  <body class="ff-body">
+    <!-- 1. FORUMFLASH TOPBAR -->
+    <header class="game-topbar">
+      <a href="/home" class="ff-brand" aria-label="Trang chủ TAIGA">
+        <span style="font-size: 1.8rem;">🇷🇺</span>
+        <div class="ff-logo-mark">
+          <span class="ff-logo-word">
+            Taiga<span class="ff-logo-o"><span><i></i><i></i><i></i></span></span>Flash<span class="ff-logo-dot">.</span>
+          </span>
+          <small class="ff-logo-sub">TỪ TAIGA RUSSIAN CENTER</small>
         </div>
-        <nav class="nav-links">
-          <a href="/home">Trang chủ</a>
-          <!-- <a href="/">Calendar</a> -->
-          <a href="/roadmap">Lộ trình học</a>
-          <a href="/articles">Bài viết</a>
-          <a href="/app">Đăng nhập</a>
-        </nav>
-      </div>
+      </a>
 
-      <section class="hero">
-        <h1>Nhận tư vấn khóa học</h1>
-        <p>Để lại thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ để hỗ trợ bạn chọn khóa học phù hợp nhất.</p>
+      <!-- Main Navigation Pills -->
+      <nav class="ff-nav-pills" aria-label="Điều hướng chính">
+        <a href="/home" class="ff-nav-tab">Trang chủ</a>
+        <a href="/roadmap" class="ff-nav-tab">Lộ trình</a>
+        <a href="/articles" class="ff-nav-tab">Bài viết</a>
+        <a href="/test" class="ff-nav-tab">Luyện tập / Test</a>
+        <a href="/contact" class="ff-nav-tab active">Liên hệ</a>
+      </nav>
+
+      <!-- Gamification Stats -->
+      <div class="ff-topbar-right">
+        <span class="ff-stat-chip streak" title="Chuỗi ngày học liên tục">
+          <span>🔥</span> <b id="ffHeaderStreak">3 ngày streak</b>
+        </span>
+        <span class="ff-stat-chip xp" title="Điểm kinh nghiệm tích lũy">
+          <span>⚡</span> <b id="ffHeaderXp">120 XP</b>
+        </span>
+        <a href="/app" class="ff-btn-account" title="Lịch học của tôi">
+          <span>👤 Lịch học</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="contact-shell">
+      <section class="contact-hero">
+        <div class="contact-hero-tag">
+          <span>💬</span> HỖ TRỢ & TƯ VẤN HỌC VIÊN
+        </div>
+        <h1>Liên Hệ Với TAIGA Center</h1>
+        <p>
+          Để lại thông tin hoặc kết nối trực tiếp với đội ngũ cố vấn học tập để nhận tư vấn lộ trình học tiếng Nga cá nhân hóa và xếp lớp phù hợp nhất.
+        </p>
       </section>
 
-      <div class="card">
-        <h2>Thông tin mẫu</h2>
-        <p>Họ tên: Nguyễn Văn A</p>
-        <p>Điện thoại: 0988 123 456</p>
-        <p>Email: email@example.com</p>
-        <p>Quan tâm khóa: Tiếng Nga giao tiếp / Tiếng Nga chuyên ngành / Luyện thi</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h2><span>📍</span> Thông Tin Liên Hệ Trực Tiếp</h2>
+          <p><b>Địa chỉ:</b> Trung tâm Tiếng Nga TAIGA Center</p>
+          <p><b>Hotline / Zalo:</b> 0988 123 456</p>
+          <p><b>Email:</b> contact@taigacenter.edu.vn</p>
+          <p><b>Giờ làm việc:</b> Thứ 2 – Thứ 7: 8h30 – 21h00</p>
+          <a class="contact-btn" href="https://zalo.me" target="_blank" rel="noopener">
+            Nhắn tin qua Zalo ➔
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <h2><span>🎯</span> Hướng Dẫn Nhận Tư Vấn Nhanh</h2>
+          <p>Để nhận được phản hồi chính xác nhất, bạn vui lòng chuẩn bị:</p>
+          <p>• Trình độ hiện tại (chưa từng học / A1 / A2 / B1...)</p>
+          <p>• Mục tiêu: Du học Nga, làm việc công ty Nga, thi chứng chỉ TRKI, hoặc giao tiếp du lịch</p>
+          <p>• Khung thời gian bạn có thể tham gia lớp học (sáng, tối, cuối tuần)</p>
+          <a class="contact-btn" href="/roadmap">
+            Khám phá lộ trình A0 ➔ B2
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h2>Gợi ý nội dung liên hệ</h2>
-        <p>Hãy gửi yêu cầu gồm trình độ hiện tại, mục tiêu học và khung thời gian bạn muốn học. Chúng tôi sẽ tư vấn lộ trình cụ thể.</p>
-        <a class="button" href="/home">Quay lại trang chủ</a>
+      <div class="contact-footer">
+        &copy; 2026 TAIGA Russian Center — Khóa học & Luyện tập tiếng Nga chuyên nghiệp.
       </div>
-
-      <footer>TAIGA Center • Mẫu trang liên hệ.</footer>
     </div>
+
+    <script>
+      (function syncHeaderStats() {
+        try {
+          const xp = localStorage.getItem('ff_user_xp') || 120;
+          const streak = localStorage.getItem('ff_streak_days') || 3;
+          const xpEl = document.getElementById('ffHeaderXp');
+          const streakEl = document.getElementById('ffHeaderStreak');
+          if (xpEl) xpEl.textContent = `${xp} XP`;
+          if (streakEl) streakEl.textContent = `${streak} ngày streak`;
+        } catch (_) {}
+      })();
+    </script>
+    <script src="/dictionary-widget.js?v=2.0" defer></script>
   </body>
 </html>
