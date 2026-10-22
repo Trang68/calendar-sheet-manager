@@ -1854,7 +1854,7 @@ body.ff-body {
 }
 
 /* ==========================================================================
-   10. RESPONSIVE QUERIES
+   10. RESPONSIVE QUERIES — OPTIMIZED FOR TABLET & MOBILE
    ========================================================================== */
 @media (max-width: 900px) {
   .game-hero {
@@ -1873,14 +1873,159 @@ body.ff-body {
   }
 }
 
+/* Tablet & Mobile Screens (<= 860px) */
+@media (max-width: 860px) {
+  .arena-section {
+    padding: 0 clamp(14px, 3.5vw, 36px) 50px;
+    gap: 18px;
+  }
+
+  .arena-header-card {
+    padding: 22px 18px;
+    border-radius: 20px;
+    gap: 16px;
+  }
+
+  .arena-title-wrap h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .arena-title-wrap p {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  /* Smooth swipeable Level rail on mobile/tablet */
+  .ff-level-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 4px 2px 8px;
+    margin: 0 -4px;
+    gap: 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .ff-level-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ff-level-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 15px;
+    font-size: 0.88rem;
+    border-radius: var(--ff-radius-full);
+    scroll-snap-align: start;
+  }
+
+  .ff-level-btn .sub-desc {
+    font-size: 0.72rem;
+  }
+
+  /* Smooth swipeable Skill rail on mobile/tablet */
+  .ff-skill-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 2px 8px;
+    margin: 0 -4px;
+    gap: 8px;
+    border-top: 1px dashed var(--ff-line);
+    scroll-snap-type: x proximity;
+  }
+
+  .ff-skill-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ff-skill-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    border-radius: var(--ff-radius-full);
+    scroll-snap-align: start;
+  }
+
+  /* Smooth swipeable Specialized rail */
+  .specialized-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 6px 2px 8px;
+    margin: 0 -4px;
+    gap: 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .specialized-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .spec-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    border-radius: var(--ff-radius-full);
+    scroll-snap-align: start;
+  }
+
+  /* Dual-Stage Route Bar: 2 equal-width columns on tablet */
+  .stage-route-bar {
+    padding: 6px;
+    border-radius: 18px;
+    gap: 6px;
+  }
+
+  .stage-tab-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .stage-tab-btn {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    border-radius: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .stage-tab-btn span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Smartphone Screens (<= 640px) */
 @media (max-width: 640px) {
   .game-topbar {
     height: auto;
-    min-height: 64px;
-    padding: 10px 14px;
+    min-height: 60px;
+    padding: 8px 12px;
     flex-wrap: wrap;
     gap: 8px;
   }
+
+  .ff-brand {
+    font-size: 1.15rem;
+  }
+
   .ff-nav-pills {
     display: flex;
     order: 3;
@@ -1889,47 +2034,162 @@ body.ff-body {
     overflow-x: auto;
     padding: 3px;
   }
+
   .ff-nav-tab {
-    padding: 6px 14px;
-    font-size: 0.8rem;
+    padding: 5px 12px;
+    font-size: 0.78rem;
     white-space: nowrap;
   }
+
   .ff-topbar-right {
     gap: 6px;
   }
+
   .ff-stat-chip {
-    padding: 4px 10px;
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+
+  .ff-btn-account {
+    padding: 5px 10px;
     font-size: 0.75rem;
   }
-  .ff-btn-account {
-    padding: 6px 12px;
-    font-size: 0.78rem;
-  }
+
   .hero-card-route {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
   .hero-route-divider {
     display: none;
   }
-  .flashcard-card-scene {
-    height: 380px;
-  }
-  .flashcard-controls {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+
+  /* Dual-Stage Route Bar: Clean full-width stacked cards on mobile */
   .stage-route-bar {
-    flex-direction: column;
-    align-items: stretch;
+    border-radius: 16px;
   }
+
   .stage-tab-group {
-    flex-direction: column;
-    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
+
   .stage-tab-btn {
+    padding: 11px 14px;
+    font-size: 0.84rem;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .stage-tab-btn span:last-child {
+    white-space: normal;
+  }
+
+  /* Flashcard Arena on mobile */
+  .flashcard-arena {
+    padding: 22px 14px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+
+  .flashcard-header {
+    gap: 10px;
+  }
+
+  .flashcard-card-scene {
+    height: 330px;
+  }
+
+  .flashcard-face {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .flashcard-main-word {
+    font-size: 1.85rem;
+  }
+
+  .flashcard-phonetic {
+    font-size: 0.95rem;
+  }
+
+  .flashcard-back-meaning {
+    font-size: 1.3rem;
+  }
+
+  .flashcard-controls {
     width: 100%;
+    max-width: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .btn-card-action {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 0.84rem;
     justify-content: center;
+  }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .arena-section {
+    padding: 0 10px 36px;
+    gap: 14px;
+  }
+
+  .arena-header-card {
+    padding: 16px 12px;
+    border-radius: 16px;
+    gap: 14px;
+  }
+
+  .arena-title-wrap h2 {
+    font-size: 1.25rem;
+  }
+
+  .arena-title-wrap p {
+    font-size: 0.8rem;
+  }
+
+  .ff-level-btn {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .ff-skill-btn {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
+
+  .flashcard-arena {
+    padding: 18px 10px;
+    border-radius: 16px;
+    gap: 16px;
+  }
+
+  .flashcard-card-scene {
+    height: 300px;
+  }
+
+  .flashcard-face {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .flashcard-main-word {
+    font-size: 1.6rem;
+  }
+
+  .flashcard-back-meaning {
+    font-size: 1.2rem;
+  }
+
+  .flashcard-controls {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -3087,6 +3087,7 @@
         btn.addEventListener('click', function() {
           const lvl = this.getAttribute('data-level');
           selectLevel(lvl);
+          try { this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); } catch (_) {}
         });
       });
 
@@ -3095,6 +3096,7 @@
         btn.addEventListener('click', function() {
           const sk = this.getAttribute('data-skill');
           selectSkill(sk);
+          try { this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); } catch (_) {}
         });
       });
 
@@ -3103,6 +3105,7 @@
         btn.addEventListener('click', function() {
           const dom = this.getAttribute('data-domain');
           selectDomain(dom);
+          try { this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); } catch (_) {}
         });
       });
 
