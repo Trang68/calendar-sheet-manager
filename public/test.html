@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luyện Tập & Kiểm Tra Tiếng Nga | TAIGA Center</title>
+    <title>ForumFlash — Lộ trình & Luyện Tập Tiếng Nga | TAIGA Center</title>
     <meta
       name="description"
-      content="Hệ thống bài test và luyện tập tiếng Nga theo trình độ A1, A2, B1, B2, C1 với 4 kỹ năng Nghe, Nói, Đọc, Viết tại TAIGA Center."
+      content="Lộ trình học tiếng Nga tương tác và luyện tập phản xạ xếp theo các bậc CEFR/TRKI từ A1 đến C1 tại TAIGA Center."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,73 +15,345 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/test.css" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
   </head>
-  <body>
-    <div class="shell">
-      <!-- HEADER / TOPBAR -->
-      <header class="topbar">
-        <a href="/home" class="brand-logo">
-          <span class="brand-flag">🇷🇺</span>
-          <span class="brand-name">TAIGA Center</span>
-          <span class="brand-badge">Kiểm Tra</span>
+  <body class="ff-body">
+    <div class="game-shell">
+      <!-- 1. FORUMFLASH TOPBAR -->
+      <header class="game-topbar">
+        <a href="/home" class="ff-brand" aria-label="Về trang chủ TAIGA">
+          <span style="font-size: 1.8rem;">🇷🇺</span>
+          <div class="ff-logo-mark">
+            <span class="ff-logo-word">
+              Taiga<span class="ff-logo-o"><span><i></i><i></i><i></i></span></span>Flash<span class="ff-logo-dot">.</span>
+            </span>
+            <small class="ff-logo-sub">TỪ TAIGA RUSSIAN CENTER</small>
+          </div>
         </a>
 
-        <!-- Hamburger toggle button on mobile -->
-        <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Mở menu" aria-expanded="false">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-
-        <nav class="nav-links" id="navLinks">
-          <a href="/test" class="nav-item active">Kiểm tra (Test)</a>
+        <!-- Main Navigation Pills -->
+        <nav class="ff-nav-pills" aria-label="Điều hướng chính">
+          <a href="/home" class="ff-nav-tab">Trang chủ</a>
+          <a href="/roadmap" class="ff-nav-tab">Lộ trình</a>
+          <a href="/test" class="ff-nav-tab active">Luyện tập / Test</a>
         </nav>
+
+        <!-- Gamification Stats -->
+        <div class="ff-topbar-right">
+          <span class="ff-stat-chip streak" title="Chuỗi ngày học liên tục">
+            <span>🔥</span> <b id="ffHeaderStreak">3 ngày streak</b>
+          </span>
+          <span class="ff-stat-chip xp" title="Điểm kinh nghiệm tích lũy">
+            <span>⚡</span> <b id="ffHeaderXp">120 XP</b>
+          </span>
+          <a href="/app" class="ff-btn-account" title="Lịch học của tôi">
+            <span>👤 Lịch học</span>
+          </a>
+        </div>
       </header>
 
-      <!-- HERO SECTION -->
-      <section class="test-hero">
-        <div class="hero-tag">
-          <span>🎯</span>
-          <span>HỆ THỐNG LUYỆN TẬP TƯƠNG TÁC 4 KỸ NĂNG CHUẨN QUỐC TẾ</span>
-        </div>
-        <h1 class="hero-title">
-          Kho Bài Test & Luyện Đề <br />
-          Chuẩn Quốc Tế <span class="highlight">A1 - A2 - B1 - B2 - C1</span>
-        </h1>
-        <p class="hero-desc">
-          Rèn luyện phản xạ, củng cố ngữ pháp và ghi nhớ từ vựng sâu với 20 câu hỏi tương tác logic (50% tiếng Nga + 50% tiếng Việt) cho mỗi bài đọc hiểu B2.
-        </p>
-      </section>
+      <!-- 2. FORUMFLASH HERO ZONE -->
+      <div class="home-hero-zone">
+        <section class="game-hero">
+          <div class="hero-copy">
+            <h1>Học theo từng chặng, <em>nhớ theo từng bài.</em></h1>
+            <p class="hero-lead">
+              Lộ trình tiếng Nga xếp theo các bậc TRKI / CEFR từ A1 đến C1. Mỗi bài học gồm hai chặng: học từ vựng Flashcard tương tác và làm bài kiểm tra 20 câu hỏi; câu trả lời chưa đúng được lưu để ôn lại.
+            </p>
+            <div class="hero-actions">
+              <a href="#arenaAnchor" class="btn-ff-primary">
+                Luyện tập ngay <span>→</span>
+              </a>
+              <a href="#growthAnchor" class="btn-ff-outline">
+                Vườn tri thức & XP
+              </a>
+            </div>
+          </div>
 
-      <!-- LEVEL & SKILL SELECTOR -->
-      <div class="level-tabs-container">
-        <!-- Trình độ: A1 -> C1 + Chuyên Ngành -->
-        <div class="level-tabs" id="levelTabs">
-          <button class="level-btn" data-level="A1">A1 <span class="desc">Sơ cấp</span></button>
-          <button class="level-btn" data-level="A2">A2 <span class="desc">Cơ bản</span></button>
-          <button class="level-btn" data-level="B1">B1 <span class="desc">Trung cấp 1</span></button>
-          <button class="level-btn" data-level="B2">B2 <span class="desc">Trung cấp 2</span></button>
-          <button class="level-btn" data-level="C1">C1 <span class="desc">Cao cấp</span></button>
-          <button class="level-btn specialized-level-btn" data-level="specialized">💼 Chuyên Ngành <span class="desc">Thực tế</span></button>
+          <!-- HERO GAME CARD -->
+          <div class="hero-game-card" id="heroGameCard" title="Nhấn để bắt đầu bài học">
+            <div class="hero-card-head">
+              <span class="hero-card-level" id="heroCardLevelBadge">A1</span>
+              <div class="hero-card-sub-info">
+                <small>BÀI HỌC TIẾP THEO</small>
+                <b id="heroCardDomainText">Lộ trình tiếng Nga</b>
+              </div>
+              <span class="hero-card-arrow">→</span>
+            </div>
+
+            <div class="hero-card-main">
+              <strong id="heroCardLessonTitle">Bài 1: Здравствуйте! Давайте познакомимся</strong>
+              <p id="heroCardSubtitle">Đọc hiểu & 10 câu hỏi tương tác phản xạ</p>
+            </div>
+
+            <div class="hero-card-route" aria-label="Bài học gồm hai chặng">
+              <div class="hero-route-step active" id="heroRouteStep1">
+                <span class="hero-route-num">01</span>
+                <div class="hero-route-text">
+                  <small>CHẶNG 1</small>
+                  <b>Học Flashcard</b>
+                </div>
+              </div>
+              <span class="hero-route-divider">➔</span>
+              <div class="hero-route-step" id="heroRouteStep2">
+                <span class="hero-route-num">02</span>
+                <div class="hero-route-text">
+                  <small>CHẶNG 2</small>
+                  <b>Kiểm tra</b>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-progress">
+              <div class="hero-progress-bar">
+                <div class="hero-progress-fill" id="heroCardProgressFill" style="width: 25%;"></div>
+              </div>
+              <small id="heroCardProgressText">120 XP • Cấp độ 1</small>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 3. FORUMFLASH GROWTH SECTION: VƯỜN TRI THỨC (LEARNING TREE) -->
+      <div class="home-learning-flow" id="growthAnchor">
+        <section class="growth-section">
+          <div class="learning-garden">
+            <div class="garden-copy">
+              <span class="garden-badge">🌱 CÂY TIẾN ĐỘ HỌC TẬP</span>
+              <h2 id="learningTreeTitle">Hạt giống (Семечко)</h2>
+              <p>
+                Mỗi bài học và câu hỏi hoàn thành bổ sung XP cho cây. Cây tri thức tiếng Nga lớn dần theo tiến độ thực tế của toàn bộ lộ trình A1 → C1.
+              </p>
+
+              <div class="garden-progress-wrap">
+                <div class="garden-progress-head">
+                  <span id="treeGoalText">Còn <strong>30 XP</strong> để đạt Nảy mầm</span>
+                  <strong id="treePercentText">80%</strong>
+                </div>
+                <div class="garden-progress-track">
+                  <div class="garden-progress-fill" id="treeProgressFill" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <!-- 6 Stages Track -->
+              <ol class="tree-stage-track" aria-label="Sáu giai đoạn phát triển của cây">
+                <li class="active" data-stage="1">
+                  <span class="stage-dot">01</span>
+                  <span class="stage-name">Hạt giống</span>
+                </li>
+                <li data-stage="2">
+                  <span class="stage-dot">02</span>
+                  <span class="stage-name">Nảy mầm</span>
+                </li>
+                <li data-stage="3">
+                  <span class="stage-dot">03</span>
+                  <span class="stage-name">Thân cây</span>
+                </li>
+                <li data-stage="4">
+                  <span class="stage-dot">04</span>
+                  <span class="stage-name">Phân cành</span>
+                </li>
+                <li data-stage="5">
+                  <span class="stage-dot">05</span>
+                  <span class="stage-name">Ra lá</span>
+                </li>
+                <li data-stage="6">
+                  <span class="stage-dot">06</span>
+                  <span class="stage-name">Kết trái</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Dynamic SVG Tree Visual -->
+            <div class="tree-visual" id="learningTreeContainer">
+              <!-- Rendered via ForumFlashEngine.getTreeSVG -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. FORUMFLASH CAMPAIGN SECTION ("CHỌN NỘI DUNG HỌC") -->
+        <section class="campaign-section">
+          <div class="campaign-heading">
+            <h2>Chọn nội dung học</h2>
+          </div>
+
+          <div class="campaign-grid">
+            <!-- 1. Ngữ pháp (A1 -> C1) -->
+            <div class="campaign-card" id="campCardGrammar" title="Phần Ngữ pháp chuyên sâu đang được chuẩn bị">
+              <span class="campaign-badge soon">A1 → C1 • SẮP RA MẮT Ở /GRAMMAR</span>
+              <div class="campaign-art" aria-hidden="true">
+                <div class="grammar-pieces">
+                  <span class="grammar-piece"><small>Chủ ngữ (S)</small><b>Она</b><em>O-na</em></span>
+                  <span class="grammar-plus">+</span>
+                  <span class="grammar-piece grammar-verb"><small>Động từ (V)</small><b>читает</b><em>chi-ta-yet</em></span>
+                  <span class="grammar-plus">+</span>
+                  <span class="grammar-piece"><small>Bổ ngữ (O)</small><b>книгу</b><em>kni-gu</em></span>
+                </div>
+              </div>
+              <h3>Ngữ pháp theo bậc TRKI / CEFR</h3>
+              <p>101 bài ngữ pháp xếp theo 6 bậc từ A1 đến C1, từ cấu trúc câu cơ bản, 6 cách tiếng Nga đến cách diễn đạt học thuật.</p>
+              <div class="campaign-card-footer">
+                <span>0/101 bài • Sẽ ra mắt ở /grammar</span> <span>→</span>
+              </div>
+            </div>
+
+            <!-- 2. Từ vựng theo chủ đề -->
+            <div class="campaign-card" id="campCardVocab">
+              <span class="campaign-badge">25 CHỦ ĐỀ • FLASHCARD</span>
+              <div class="campaign-art" aria-hidden="true">
+                <div class="vocab-stack">
+                  <div class="vocab-card-layer layer-1">
+                    <small style="font-size:0.6rem; color:#64748b;">Ngữ cảnh</small>
+                    <b style="font-size:0.85rem; color:#334155;">читать книги</b>
+                  </div>
+                  <div class="vocab-card-layer layer-2">
+                    <small style="font-size:0.6rem; color:#64748b;">Nghĩa</small>
+                    <b style="font-size:0.85rem; color:#0f766e;">đọc sách</b>
+                  </div>
+                  <div class="vocab-card-layer layer-3">
+                    <small>Động từ (НСВ)</small>
+                    <b>читать</b>
+                    <em>[tʃʲiˈtatʲ]</em>
+                  </div>
+                </div>
+              </div>
+              <h3>Từ vựng & Flashcards theo chủ đề</h3>
+              <p>5.000 mục từ vựng, thành ngữ tiếng Nga chia theo 25 chủ đề thực tế đời sống, du học và làm việc tại Nga.</p>
+              <div class="campaign-card-footer">
+                <span>Luyện thẻ ghi nhớ ngay</span> <span>→</span>
+              </div>
+            </div>
+
+            <!-- 3. Luyện đề 4 kỹ năng & Chuyên ngành -->
+            <a href="#arenaAnchor" class="campaign-card" id="campCardPractice" style="border-color: var(--ff-primary);">
+              <span class="campaign-badge active">ĐANG HOẠT ĐỘNG • TEST TƯƠNG TÁC</span>
+              <div class="campaign-art" aria-hidden="true">
+                <div style="display:flex; gap:8px;">
+                  <span style="background:#fff; border:1.5px solid var(--ff-mint); border-radius:10px; padding:6px 12px; font-weight:800; font-size:0.82rem; color:var(--ff-primary);">🎧 Nghe</span>
+                  <span style="background:var(--ff-primary); color:#fff; border-radius:10px; padding:6px 12px; font-weight:800; font-size:0.82rem;">📖 Đọc hiểu</span>
+                  <span style="background:#fff; border:1.5px solid var(--ff-card-border); border-radius:10px; padding:6px 12px; font-weight:800; font-size:0.82rem; color:#64748b;">✍️ Viết</span>
+                </div>
+              </div>
+              <h3>Luyện đề 4 kỹ năng & Chuyên ngành</h3>
+              <p>Kho đề thi tương tác logic chuẩn TRKI A1 - C1 và 6 ngành thực tế (Du lịch, Thương mại, Y tế, Bán hàng...).</p>
+              <div class="campaign-card-footer" style="color:var(--ff-primary);">
+                <span>Vào làm bài ngay</span> <span>→</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- 5. ARENA SECTION: INTERACTIVE LEARNING & TESTING PLATFORM -->
+      <section class="arena-section" id="arenaAnchor">
+        <div class="arena-header-card">
+          <div class="arena-title-wrap">
+            <h2>Khu Luyện Tập & Khảo Thí Trực Quan</h2>
+            <p>Chọn trình độ, kỹ năng và bắt đầu học từ vựng Flashcard (Chặng 1) rồi làm bài kiểm tra phản xạ (Chặng 2).</p>
+          </div>
+
+          <!-- LEVEL & SKILL SELECTOR (RESTYLED WITH FORUMFLASH PILLS) -->
+          <div class="level-tabs-container" style="border:none; padding:0; background:transparent;">
+            <!-- Trình độ: A1 -> C1 + Chuyên Ngành -->
+            <div class="ff-level-pills" id="levelTabs">
+              <button class="ff-level-btn" data-level="A1">A1 <span class="sub-desc">Sơ cấp</span></button>
+              <button class="ff-level-btn" data-level="A2">A2 <span class="sub-desc">Cơ bản</span></button>
+              <button class="ff-level-btn" data-level="B1">B1 <span class="sub-desc">Trung cấp 1</span></button>
+              <button class="ff-level-btn" data-level="B2">B2 <span class="sub-desc">Trung cấp 2</span></button>
+              <button class="ff-level-btn" data-level="C1">C1 <span class="sub-desc">Cao cấp</span></button>
+              <button class="ff-level-btn specialized-level-btn" data-level="specialized">💼 Chuyên Ngành <span class="sub-desc">Thực tế</span></button>
+            </div>
+
+            <!-- 4 Kỹ năng (Dành cho cấp độ A1 - C1) -->
+            <div class="ff-skill-pills" id="skillTabs" style="margin-top:14px;">
+              <button class="ff-skill-btn" data-skill="listening">🎧 Nghe (Аудирование)</button>
+              <button class="ff-skill-btn" data-skill="speaking">🗣️ Nói (Говорение)</button>
+              <button class="ff-skill-btn active" data-skill="reading">📖 Đọc (Чтение)</button>
+              <button class="ff-skill-btn" data-skill="writing">✍️ Viết (Письмо)</button>
+            </div>
+
+            <!-- 6 Lĩnh Vực Chuyên Ngành & Đi Làm Thực Tế -->
+            <div class="specialized-tabs" id="specializedTabs" style="display: none; margin-top:12px;">
+              <button class="spec-btn active" data-domain="tour_guide">🎙️ HDV Du Lịch</button>
+              <button class="spec-btn" data-domain="trade_logistics">🚢 Thương Mại XNK</button>
+              <button class="spec-btn" data-domain="retail_sales">🛍️ Bán Hàng & Chợ</button>
+              <button class="spec-btn" data-domain="medicine">🏥 Y Học & Dược</button>
+              <button class="spec-btn" data-domain="natural_sciences">📐 KHTN (Toán - Lý - Hóa)</button>
+              <button class="spec-btn" data-domain="social_sciences">🏛️ KH Xã Hội (Văn - Sử - Luật)</button>
+            </div>
+          </div>
         </div>
 
-        <!-- 4 Kỹ năng (Dành cho cấp độ A1 - C1) -->
-        <div class="skill-tabs" id="skillTabs">
-          <button class="skill-btn" data-skill="listening">🎧 Nghe (Аудирование)</button>
-          <button class="skill-btn" data-skill="speaking">🗣️ Nói (Говорение)</button>
-          <button class="skill-btn active" data-skill="reading">📖 Đọc (Чтение)</button>
-          <button class="skill-btn" data-skill="writing">✍️ Viết (Письмо)</button>
+        <!-- DUAL-STAGE ROUTE BAR (CHẶNG 1: FLASHCARD ⇄ CHẶNG 2: QUIZ) -->
+        <div class="stage-route-bar" id="stageRouteBar">
+          <div class="stage-tab-group">
+            <button type="button" class="stage-tab-btn active" id="btnStageFlashcard">
+              <span class="stage-num-badge">01</span>
+              <span>Chặng 1: Kiến thức & Từ vựng Flashcard</span>
+            </button>
+            <button type="button" class="stage-tab-btn" id="btnStageQuiz">
+              <span class="stage-num-badge">02</span>
+              <span>Chặng 2: Làm bài kiểm tra (Quiz)</span>
+            </button>
+          </div>
         </div>
 
-        <!-- 6 Lĩnh Vực Chuyên Ngành & Đi Làm Thực Tế -->
-        <div class="specialized-tabs" id="specializedTabs" style="display: none;">
-          <button class="spec-btn active" data-domain="tour_guide">🎙️ HDV Du Lịch</button>
-          <button class="spec-btn" data-domain="trade_logistics">🚢 Thương Mại XNK</button>
-          <button class="spec-btn" data-domain="retail_sales">🛍️ Bán Hàng & Chợ</button>
-          <button class="spec-btn" data-domain="medicine">🏥 Y Học & Dược</button>
-          <button class="spec-btn" data-domain="natural_sciences">📐 KHTN (Toán - Lý - Hóa)</button>
-          <button class="spec-btn" data-domain="social_sciences">🏛️ KH Xã Hội (Văn - Sử - Luật)</button>
+        <!-- CHẶNG 1: INTERACTIVE FLASHCARD ARENA -->
+        <div class="flashcard-arena" id="flashcardArena">
+          <div class="flashcard-header">
+            <span class="flashcard-progress-meta" id="ffCardMeta">Thẻ 1 / 10</span>
+            <div class="flashcard-meter">
+              <div class="flashcard-meter-fill" id="ffCardMeterFill" style="width: 10%;"></div>
+            </div>
+            <span style="font-size:0.8rem; color:#64748b; font-weight:700;">Chạm thẻ để lật</span>
+          </div>
+
+          <!-- 3D Flip Card Scene -->
+          <div class="flashcard-card-scene" id="ffFlashcardScene" title="Nhấp vào thẻ hoặc phím cách để lật">
+            <div class="flashcard-flipper">
+              <!-- FRONT -->
+              <div class="flashcard-face flashcard-front">
+                <div class="flashcard-tag-row">
+                  <span class="flashcard-pos-badge" id="ffFrontGram">Từ vựng</span>
+                  <button type="button" class="flashcard-audio-btn" id="ffBtnCardAudio" title="Nghe phát âm">🔊</button>
+                </div>
+                <div class="flashcard-center-word">
+                  <div class="flashcard-main-word" id="ffFrontWord">Здравствуйте</div>
+                  <div class="flashcard-hint">Chạm thẻ để xem nghĩa tiếng Việt & câu ví dụ ➔</div>
+                </div>
+                <div></div>
+              </div>
+
+              <!-- BACK -->
+              <div class="flashcard-face flashcard-back">
+                <div class="flashcard-tag-row">
+                  <span class="flashcard-pos-badge" id="ffBackGram">Từ vựng</span>
+                  <span style="font-size:0.8rem; opacity:0.85;">Nghĩa tiếng Việt</span>
+                </div>
+                <div>
+                  <div class="flashcard-back-meaning" id="ffBackMeaning">Xin chào (trang trọng)</div>
+                  <div class="flashcard-back-example" id="ffBackExample">
+                    <strong>Ví dụ:</strong> Здравствуйте, меня зовут Антон.
+                  </div>
+                </div>
+                <div style="font-size:0.75rem; color:#a7d9d4; text-align:center;">Chạm để lật lại mặt trước</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flashcard Action Buttons -->
+          <div class="flashcard-controls">
+            <button type="button" class="btn-card-action review" id="ffBtnCardReview">
+              <span>↻</span> Cần ôn lại
+            </button>
+            <button type="button" class="btn-card-action mastered" id="ffBtnCardMastered">
+              <span>✓</span> Đã thuộc (+5 XP)
+            </button>
+            <button type="button" class="btn-finish-stage1" id="ffBtnFinishStage1">
+              <span>Sang Chặng 2: Làm bài kiểm tra</span> <span>➔</span>
+            </button>
+          </div>
         </div>
 
         <!-- Thanh điều hướng & chọn bài học (Lesson Navigation Bar & Progress) -->
@@ -176,9 +448,8 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- LOADING STATE SKELETON -->
+        <!-- LOADING STATE SKELETON -->
       <div id="lessonLoadingState" class="placeholder-card" style="display: none; padding: 40px 20px;">
         <div style="font-size: 32px; margin-bottom: 12px; animation: spin 1s linear infinite; display: inline-block;">⏳</div>
         <h3 style="font-size: 18px; margin-bottom: 8px;">Đang tải dữ liệu bài học...</h3>
@@ -201,10 +472,12 @@
           👉 Đến bài luyện tập B2 (Đọc hiểu)
         </button>
       </div>
+    </section>
 
       <!-- FOOTER -->
-      <footer class="test-footer">
-        <p>© 2026 TAIGA Russian Language Center. Hệ thống khảo thí và luyện đề tiếng Nga chuẩn quốc tế TRKI/TORFL.</p>
+      <footer style="text-align:center; padding:40px 20px; color:#64748b; font-size:0.85rem; border-top:1px solid #e4dfd4; background:#fffdfa;">
+        <p style="margin:0 0 6px 0; font-weight:700; color:var(--ff-primary);">© 2026 TAIGA Russian Language Center • ForumFlash Lộ trình học</p>
+        <p style="margin:0; font-size:0.8rem; color:#94a3b8;">Hệ thống bài học tương tác Flashcards & Khảo thí luyện đề chuẩn TRKI A1 - C1.</p>
       </footer>
     </div>
 
@@ -1642,6 +1915,21 @@
         } else {
           renderReadingLesson(lesson);
         }
+
+        // ForumFlash Integration: Flashcards & Hero Game Card Sync
+        if (window.TaigaFlash) {
+          window.TaigaFlash.initFlashcardsFromLesson(lesson);
+          const heroLvl = document.getElementById('heroCardLevelBadge');
+          if (heroLvl) heroLvl.textContent = lesson.level || currentLevel;
+          const heroTitle = document.getElementById('heroCardLessonTitle');
+          if (heroTitle) heroTitle.textContent = lesson.title || `Bài ${lesson.id}`;
+          const heroSub = document.getElementById('heroCardSubtitle');
+          if (heroSub) heroSub.textContent = `${lesson.badge || 'Tiếng Nga'} • ${lesson.readingTime || '15 phút'}`;
+          const heroDomain = document.getElementById('heroCardDomainText');
+          if (heroDomain) {
+            heroDomain.textContent = currentLevel === 'specialized' ? (specializedDisplayNames[currentDomain] || 'Chuyên ngành') : `Lộ trình ${currentLevel} • ${skillDisplayNames[currentSkill] || 'Kỹ năng'}`;
+          }
+        }
       }
 
       function initSentenceTimings() {
@@ -1713,6 +2001,8 @@
         if (manifestUrl) {
           emptyPlaceholder.style.display = 'none';
           lessonPicker.style.display = 'block';
+          const stageBar = document.getElementById('stageRouteBar');
+          if (stageBar) stageBar.style.display = 'flex';
           loadingState.style.display = 'block';
           activeContainer.style.display = 'none';
 
@@ -1750,14 +2040,22 @@
             const lessonData = await lessonRes.json();
 
             loadingState.style.display = 'none';
-            activeContainer.style.display = 'grid';
             renderLesson(lessonData);
+            if (window.TaigaFlash) {
+              window.TaigaFlash.switchFlowStep(window.TaigaFlash.activeFlowStep || 'flashcard');
+            } else {
+              activeContainer.style.display = 'grid';
+            }
             updateSelectionLabel();
             syncLessonNavState(currentManifest);
           } catch (err) {
             console.error('Lỗi tải dữ liệu bài học:', err);
             loadingState.style.display = 'none';
             activeContainer.style.display = 'none';
+            const flashArena = document.getElementById('flashcardArena');
+            if (flashArena) flashArena.style.display = 'none';
+            const stageBar = document.getElementById('stageRouteBar');
+            if (stageBar) stageBar.style.display = 'none';
             emptyPlaceholder.style.display = 'block';
           }
         } else {
@@ -1765,6 +2063,10 @@
           activeContainer.style.display = 'none';
           loadingState.style.display = 'none';
           lessonPicker.style.display = 'none';
+          const stageBar = document.getElementById('stageRouteBar');
+          if (stageBar) stageBar.style.display = 'none';
+          const flashArena = document.getElementById('flashcardArena');
+          if (flashArena) flashArena.style.display = 'none';
           emptyPlaceholder.style.display = 'block';
 
           if (currentLevel === 'specialized') {
@@ -2065,8 +2367,12 @@
           const res = await fetch(currentManifestFolder + fileName);
           const data = await res.json();
           loadingState.style.display = 'none';
-          activeContainer.style.display = 'grid';
           renderLesson(data);
+          if (window.TaigaFlash) {
+            window.TaigaFlash.switchFlowStep(window.TaigaFlash.activeFlowStep || 'flashcard');
+          } else {
+            activeContainer.style.display = 'grid';
+          }
           syncLessonNavState(currentManifest);
         } catch (err) {
           console.error('Lỗi khi tải file bài:', err);
@@ -2360,6 +2666,12 @@
         }
 
         scoreCircle.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // ForumFlash XP Reward & Celebration
+        if (score > 0 && window.TaigaFlash) {
+          const earnedXP = Math.max(10, score * 5);
+          window.TaigaFlash.addXP(earnedXP, true);
+        }
       }
 
       function resetQuiz() {
@@ -2651,13 +2963,7 @@
         currentLevel = lvl;
 
         // 1. Cập nhật nút Level active
-        document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
-          b.classList.toggle('active', b.getAttribute('data-level') === lvl);
-        });
-
-        // 2. Tìm danh sách kỹ năng có sẵn cho level này
-        // 1. Cập nhật nút Level active
-        document.querySelectorAll('#levelTabs .level-btn').forEach(b => {
+        document.querySelectorAll('#levelTabs .level-btn, #levelTabs .ff-level-btn').forEach(b => {
           b.classList.toggle('active', b.getAttribute('data-level') === lvl);
         });
 
@@ -2702,7 +3008,7 @@
           } catch (e) {}
           currentLessonId = savedLessonId ? parseInt(savedLessonId, 10) : 1;
 
-          document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
+          document.querySelectorAll('#skillTabs .skill-btn, #skillTabs .ff-skill-btn').forEach(b => {
             b.classList.toggle('active', b.getAttribute('data-skill') === currentSkill);
           });
         }
@@ -2739,7 +3045,7 @@
         } catch (e) {}
         currentLessonId = savedLessonId ? parseInt(savedLessonId, 10) : 1;
 
-        document.querySelectorAll('#skillTabs .skill-btn').forEach(b => {
+        document.querySelectorAll('#skillTabs .skill-btn, #skillTabs .ff-skill-btn').forEach(b => {
           b.classList.toggle('active', b.getAttribute('data-skill') === skillKey);
         });
 
@@ -2747,7 +3053,7 @@
       }
 
       // Tabs Level (A1 - C1 + Chuyên Ngành)
-      document.querySelectorAll('#levelTabs .level-btn').forEach(btn => {
+      document.querySelectorAll('#levelTabs .level-btn, #levelTabs .ff-level-btn').forEach(btn => {
         btn.addEventListener('click', function() {
           const lvl = this.getAttribute('data-level');
           selectLevel(lvl);
@@ -2755,7 +3061,7 @@
       });
 
       // Tabs Skills (Nghe, Nói, Đọc, Viết)
-      document.querySelectorAll('#skillTabs .skill-btn').forEach(btn => {
+      document.querySelectorAll('#skillTabs .skill-btn, #skillTabs .ff-skill-btn').forEach(btn => {
         btn.addEventListener('click', function() {
           const sk = this.getAttribute('data-skill');
           selectSkill(sk);
@@ -2771,8 +3077,56 @@
       });
 
       // Nút quay lại B2
-      document.getElementById('btnBackToB2').addEventListener('click', function() {
+      document.getElementById('btnBackToB2')?.addEventListener('click', function() {
         selectLevel('B2', 'reading');
+      });
+
+      // ======================================================================
+      // FORUMFLASH INTERACTIVE CONTROLS
+      // ======================================================================
+      // 1. Hero Game Card Click: Scroll smoothly to arena
+      document.getElementById('heroGameCard')?.addEventListener('click', () => {
+        document.getElementById('arenaAnchor')?.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // 2. Dual-Stage Route Bar Toggles
+      document.getElementById('btnStageFlashcard')?.addEventListener('click', () => {
+        if (window.TaigaFlash) window.TaigaFlash.switchFlowStep('flashcard');
+      });
+      document.getElementById('btnStageQuiz')?.addEventListener('click', () => {
+        if (window.TaigaFlash) window.TaigaFlash.switchFlowStep('quiz');
+      });
+
+      // 3. Flashcard Controls
+      document.getElementById('ffFlashcardScene')?.addEventListener('click', () => {
+        if (window.TaigaFlash) window.TaigaFlash.flipFlashcard();
+      });
+      document.getElementById('ffBtnCardAudio')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (window.TaigaFlash) window.TaigaFlash.speakCurrentCard();
+      });
+      document.getElementById('ffBtnCardReview')?.addEventListener('click', () => {
+        if (window.TaigaFlash) window.TaigaFlash.nextFlashcard(false);
+      });
+      document.getElementById('ffBtnCardMastered')?.addEventListener('click', () => {
+        if (window.TaigaFlash) window.TaigaFlash.nextFlashcard(true);
+      });
+      document.getElementById('ffBtnFinishStage1')?.addEventListener('click', () => {
+        if (window.TaigaFlash) {
+          window.TaigaFlash.switchFlowStep('quiz');
+          document.getElementById('activeLessonContainer')?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // 4. Spacebar shortcut to flip flashcards when in stage 1
+      document.addEventListener('keydown', function(e) {
+        if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+          const flashArena = document.getElementById('flashcardArena');
+          if (flashArena && flashArena.style.display !== 'none' && window.TaigaFlash) {
+            e.preventDefault();
+            window.TaigaFlash.flipFlashcard();
+          }
+        }
       });
 
       // Mobile Menu Hamburger Toggle
@@ -2804,6 +3158,7 @@
         selectLevel(initialLevel, initialSkill);
       });
     </script>
+    <script src="/forumflash-engine.js?v=1.0"></script>
     <script src="/dictionary-widget.js?v=2.0" defer></script>
   </body>
 </html>
