@@ -654,12 +654,12 @@
       document.addEventListener("DOMContentLoaded", () => {
         renderArticles(ARTICLES);
         try {
-          const xp = localStorage.getItem('ff_user_xp') || 120;
-          const streak = localStorage.getItem('ff_streak_days') || 3;
+          const xp = localStorage.getItem('ff_user_xp') || localStorage.getItem('taiga_xp');
+          const streak = localStorage.getItem('ff_streak_days') || localStorage.getItem('taiga_streak');
           const xpEl = document.getElementById('ffHeaderXp');
           const streakEl = document.getElementById('ffHeaderStreak');
-          if (xpEl) xpEl.textContent = `${xp} XP`;
-          if (streakEl) streakEl.textContent = `${streak} ngày streak`;
+          if (xp && xpEl) xpEl.textContent = `${xp} XP`;
+          if (streak && streakEl) streakEl.textContent = streak;
         } catch (_) {}
       });
     </script>

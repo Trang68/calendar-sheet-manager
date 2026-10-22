@@ -18,7 +18,7 @@
   class ForumFlashEngine {
     constructor() {
       this.xp = this.loadNumber(STORAGE_XP, 120);
-      this.streak = this.loadNumber(STORAGE_STREAK, 3);
+      this.streak = this.loadStreakNumber(STORAGE_STREAK, 99);
       this.currentStage = this.calculateStage(this.xp);
       this.activeFlowStep = "flashcard"; // 'flashcard' | 'quiz'
 
@@ -92,7 +92,7 @@
       const xpEl = document.getElementById("ffHeaderXp");
       const streakEl = document.getElementById("ffHeaderStreak");
       if (xpEl) xpEl.textContent = `${this.xp} XP`;
-      if (streakEl) streakEl.textContent = `${this.streak} ngày streak`;
+      if (streakEl) streakEl.textContent = `${this.streak}`;
 
       // Update Hero Game Card XP
       const cardProgress = document.getElementById("heroCardProgressText");
