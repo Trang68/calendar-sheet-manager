@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/test.css" />
     <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
+    <script src="/vocab-25-topics.js?v=1.0"></script>
   </head>
   <body class="ff-body">
     <div class="game-shell">
@@ -201,7 +202,7 @@
             </div>
 
             <!-- 2. Từ vựng theo chủ đề -->
-            <div class="campaign-card" id="campCardVocab">
+            <div class="campaign-card" id="campCardVocab" role="button" tabindex="0" title="Bấm để mở 25 chủ đề Flashcard">
               <span class="campaign-badge">25 CHỦ ĐỀ • FLASHCARD</span>
               <div class="campaign-art" aria-hidden="true">
                 <div class="vocab-stack">
@@ -214,7 +215,7 @@
                     <b style="font-size:0.85rem; color:#0f766e;">đọc sách</b>
                   </div>
                   <div class="vocab-card-layer layer-3">
-                    <small>Động từ (НСВ)</small>
+                    <small>Động từ (HCB)</small>
                     <b>читать</b>
                     <em>[tʃʲiˈtatʲ]</em>
                   </div>
@@ -322,6 +323,7 @@
                 </div>
                 <div class="flashcard-center-word">
                   <div class="flashcard-main-word" id="ffFrontWord">Здравствуйте</div>
+                  <div class="flashcard-phonetic" id="ffFrontPhonetic" style="display:none; font-size:1.05rem; color:#67e8f9; font-style:italic; margin-top:4px; font-family:monospace;"></div>
                   <div class="flashcard-hint">Chạm thẻ để xem nghĩa tiếng Việt & câu ví dụ ➔</div>
                 </div>
                 <div></div>
@@ -475,6 +477,32 @@
         </button>
       </div>
     </section>
+
+      
+    <!-- MODAL 25 CHỦ ĐỀ TỪ VỰNG & FLASHCARDS -->
+    <div class="topic-modal-overlay" id="vocabTopicsModal" aria-hidden="true">
+      <div class="topic-modal-card">
+        <div class="topic-modal-head">
+          <div class="topic-head-title-wrap">
+            <span class="topic-head-badge">✨ 25 CHỦ ĐỀ • 5.000+ TỪ VỰNG THỰC TẾ</span>
+            <h2>Chọn Chủ Đề Flashcard</h2>
+          </div>
+          <button class="topic-modal-close-btn" id="btnCloseVocabTopics" aria-label="Đóng cửa sổ">✕</button>
+        </div>
+        <div class="topic-search-wrap" style="position: relative;">
+          <span class="topic-search-icon">🔍</span>
+          <input
+            type="text"
+            class="topic-search-input"
+            id="topicSearchInput"
+            placeholder="Tìm kiếm chủ đề từ vựng (ví dụ: chào hỏi, ẩm thực, gia đình, du học...)"
+          />
+        </div>
+        <div class="topics-scroll-grid" id="topicsGridContainer">
+          <!-- Rendered dynamically by forumflash-engine.js -->
+        </div>
+      </div>
+    </div>
 
       <!-- FOOTER -->
       <footer style="text-align:center; padding:40px 20px; color:#64748b; font-size:0.85rem; border-top:1px solid #e4dfd4; background:#fffdfa;">

@@ -349,6 +349,17 @@
       const frontGram = document.getElementById("ffFrontGram");
       if (frontGram) frontGram.textContent = card.gram;
 
+      const frontPhonetic = document.getElementById("ffFrontPhonetic");
+      if (frontPhonetic) {
+        if (card.ipa || card.phonetic) {
+          frontPhonetic.style.display = "block";
+          frontPhonetic.textContent = card.ipa ? card.ipa : `[${card.phonetic}]`;
+        } else {
+          frontPhonetic.style.display = "none";
+          frontPhonetic.textContent = "";
+        }
+      }
+
       // Back
       const backMeaning = document.getElementById("ffBackMeaning");
       if (backMeaning) backMeaning.textContent = card.meaning;
@@ -357,7 +368,10 @@
 
       const backEx = document.getElementById("ffBackExample");
       if (backEx) {
-        if (card.example) {
+        if (card.exampleRu) {
+          backEx.style.display = "block";
+          backEx.innerHTML = `<strong>Ví dụ:</strong> ${card.exampleRu}${card.exampleVi ? `<div style="font-size:0.85rem; opacity:0.88; margin-top:4px; font-weight:400; color:#e0f2fe;">↳ ${card.exampleVi}</div>` : ''}`;
+        } else if (card.example) {
           backEx.style.display = "block";
           backEx.innerHTML = `<strong>Ví dụ thực tế:</strong> ${card.example}`;
         } else {
@@ -479,6 +493,234 @@
         if (e.target === modal) modal.remove();
       });
     }
+
+    // ======================================================================
+    // 25-TOPIC VOCABULARY & FLASHCARDS SYSTEM
+    // ======================================================================
+    initVocabTopicsSystem() {
+      // 1. Hook trigger card
+      const campCard = document.getElementById("campCardVocab");
+      if (campCard) {
+        campCard.addEventListener("click", () => this.openVocabTopicsModal());
+        campCard.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            this.openVocabTopicsModal();
+          }
+        });
+      }
+
+      // 2. Hook modal close button & backdrop
+      const modal = document.getElementById("vocabTopicsModal");
+      const btnClose = document.getElementById("btnCloseVocabTopics");
+      if (btnClose) {
+        btnClose.addEventListener("click", () => this.closeVocabTopicsModal());
+      }
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) this.closeVocabTopicsModal();
+        });
+      }
+
+      // 3. Search input filtering
+      const searchInput = document.getElementById("topicSearchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+          this.renderVocabTopicsList(e.target.value.trim());
+        });
+      }
+
+      // 4. Keyboard ESC to close
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          const m = document.getElementById("vocabTopicsModal");
+          if (m && m.classList.contains("active")) {
+            this.closeVocabTopicsModal();
+          }
+        }
+      });
+
+      // 5. Initial render of topics list
+      this.renderVocabTopicsList();
+
+      // 6. Check URL parameters (?openVocab=true or ?topic=topic-1)
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("openVocab") === "true") {
+          setTimeout(() => this.openVocabTopicsModal(), 300);
+        }
+        const topicParam = params.get("topic");
+        if (topicParam) {
+          setTimeout(() => this.selectVocabTopic(topicParam), 400);
+        }
+      } catch (e) {}
+    }
+
+    openVocabTopicsModal() {
+      const modal = document.getElementById("vocabTopicsModal");
+      if (!modal) return;
+      modal.classList.add("active", "open");
+      modal.setAttribute("aria-hidden", "false");
+      const searchInput = document.getElementById("topicSearchInput");
+      if (searchInput) {
+        searchInput.value = "";
+        setTimeout(() => searchInput.focus(), 150);
+      }
+      this.renderVocabTopicsList();
+    }
+
+    closeVocabTopicsModal() {
+      const modal = document.getElementById("vocabTopicsModal");
+      if (!modal) return;
+      modal.classList.remove("active", "open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    renderVocabTopicsList(filterText = "") {
+      const container = document.getElementById("topicsGridContainer");
+      if (!container) return;
+      const topics = window.VOCAB_25_TOPICS;
+      if (!Array.isArray(topics) || topics.length === 0) {
+        container.innerHTML = `<div style="text-align:center; padding:30px; color:#64748b;">Đang tải danh sách 25 chủ đề từ vựng...</div>`;
+        return;
+      }
+
+      const q = filterText.toLowerCase();
+      const filtered = topics.filter((t) => {
+        if (!q) return true;
+        return (
+          t.titleVi.toLowerCase().includes(q) ||
+          t.titleRu.toLowerCase().includes(q) ||
+          t.desc.toLowerCase().includes(q) ||
+          t.num.includes(q)
+        );
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align:center; padding:40px 20px; color:#64748b;">
+            <div style="font-size:2rem; margin-bottom:8px;">🔍</div>
+            <p style="margin:0; font-weight:700;">Không tìm thấy chủ đề phù hợp với "${filterText}"</p>
+            <p style="margin:4px 0 0 0; font-size:0.85rem;">Hãy thử từ khóa khác như "chào hỏi", "gia đình", "ẩm thực", "du học"...</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered
+        .map(
+          (t) => `
+        <div class="topic-card-item" data-topic-id="${t.id}" role="button" tabindex="0">
+          <div class="topic-card-top">
+            <div class="topic-card-icon-num">
+              <span class="topic-card-icon">${t.icon}</span>
+              <span class="topic-card-num">CHỦ ĐỀ ${t.num}</span>
+            </div>
+            <span class="topic-card-count">${t.count} thẻ</span>
+          </div>
+          <div>
+            <h4 class="topic-card-title-vi">${t.titleVi}</h4>
+            <div class="topic-card-title-ru">${t.titleRu}</div>
+            <p class="topic-card-desc">${t.desc}</p>
+          </div>
+          <div class="topic-card-action">
+            <span>Luyện ${t.count} flashcards</span>
+            <span class="arrow">➔</span>
+          </div>
+        </div>
+      `
+        )
+        .join("");
+
+      // Bind click handlers to cards
+      container.querySelectorAll(".topic-card-item").forEach((cardEl) => {
+        const topicId = cardEl.getAttribute("data-topic-id");
+        cardEl.addEventListener("click", () => this.selectVocabTopic(topicId));
+        cardEl.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            this.selectVocabTopic(topicId);
+          }
+        });
+      });
+    }
+
+    selectVocabTopic(topicId) {
+      if (!window.VOCAB_25_TOPICS) return;
+      const topic = window.VOCAB_25_TOPICS.find((t) => t.id === topicId);
+      if (!topic || !Array.isArray(topic.cards) || topic.cards.length === 0) return;
+
+      this.closeVocabTopicsModal();
+
+      // Load into flashcards engine
+      this.flashcards = topic.cards.map((c) => ({
+        word: c.word,
+        gram: c.gram,
+        ipa: c.ipa || "",
+        phonetic: c.phonetic || "",
+        meaning: c.meaning,
+        exampleRu: c.exampleRu || "",
+        exampleVi: c.exampleVi || "",
+        example: c.exampleRu ? `${c.exampleRu} — ${c.exampleVi || ""}` : (c.meaning || "")
+      }));
+      this.cardIndex = 0;
+      this.masteredWords.clear();
+
+      // Update Dual-Stage Tab Label
+      const routeTab = document.getElementById("btnStageFlashcard");
+      if (routeTab) {
+        routeTab.innerHTML = `
+          <span class="stage-num-badge">01</span>
+          <span>Chặng 1: ${topic.icon} ${topic.titleVi} (${this.flashcards.length} thẻ)</span>
+        `;
+      }
+
+      // Switch to flashcard step and render
+      this.switchFlowStep("flashcard");
+      this.renderFlashcard();
+
+      // Scroll to arena
+      const arena = document.getElementById("arenaAnchor");
+      if (arena) {
+        arena.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Show toast
+      this.showToast(`✨ Đã nạp ${this.flashcards.length} thẻ từ vựng: ${topic.titleVi}`);
+    }
+
+    showToast(message) {
+      const existing = document.getElementById("ffGlobalToast");
+      if (existing) existing.remove();
+      const toast = document.createElement("div");
+      toast.id = "ffGlobalToast";
+      toast.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #003838;
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        box-shadow: 0 10px 30px rgba(0, 56, 56, 0.35);
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      `;
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(10px)";
+        setTimeout(() => toast.remove(), 400);
+      }, 3000);
+    }
   }
 
   // Auto initialize on DOM ready
@@ -487,11 +729,13 @@
       window.TaigaFlash = new ForumFlashEngine();
       window.TaigaFlash.updateHeaderStats();
       window.TaigaFlash.renderGrowthSection();
+      window.TaigaFlash.initVocabTopicsSystem();
     });
   } else {
     window.TaigaFlash = new ForumFlashEngine();
     window.TaigaFlash.updateHeaderStats();
     window.TaigaFlash.renderGrowthSection();
+    window.TaigaFlash.initVocabTopicsSystem();
   }
 })();
 
