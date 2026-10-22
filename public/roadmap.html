@@ -359,16 +359,65 @@
             </div>
             <div class="form-group">
               <label>Mục tiêu học tập</label>
-              <select class="form-input" required>
-                <option value="">-- Chọn mục tiêu học --</option>
-                <option value="beginner">Người mới bắt đầu từ số 0</option>
-                <option value="study">Du học Nga & Săn học bổng</option>
-                <option value="business">Tiếng Nga thương mại & Đi làm</option>
-                <option value="trki">Luyện thi chứng chỉ TRKI</option>
-                <option value="communication">Giao tiếp cấp tốc</option>
-              </select>
+              <div class="custom-select-wrapper" id="goalSelectWrapper">
+                <div class="custom-select-trigger" id="goalSelectTrigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false" title="Nhấp để chọn mục tiêu học tiếng Nga">
+                  <span class="custom-select-label placeholder" id="goalSelectLabel">-- Chọn mục tiêu học --</span>
+                  <svg class="custom-select-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+                <div class="custom-select-dropdown" id="goalSelectDropdown" role="listbox">
+                  <div class="custom-select-option" data-value="beginner" role="option">
+                    <div class="custom-select-option-content">
+                      <span class="option-icon">🐣</span>
+                      <span>Người mới bắt đầu từ số 0</span>
+                    </div>
+                    <span class="option-check">✓</span>
+                  </div>
+                  <div class="custom-select-option" data-value="study" role="option">
+                    <div class="custom-select-option-content">
+                      <span class="option-icon">🎓</span>
+                      <span>Du học Nga & Săn học bổng</span>
+                    </div>
+                    <span class="option-check">✓</span>
+                  </div>
+                  <div class="custom-select-option" data-value="business" role="option">
+                    <div class="custom-select-option-content">
+                      <span class="option-icon">💼</span>
+                      <span>Tiếng Nga thương mại & Đi làm</span>
+                    </div>
+                    <span class="option-check">✓</span>
+                  </div>
+                  <div class="custom-select-option" data-value="trki" role="option">
+                    <div class="custom-select-option-content">
+                      <span class="option-icon">🏆</span>
+                      <span>Luyện thi chứng chỉ TRKI</span>
+                    </div>
+                    <span class="option-check">✓</span>
+                  </div>
+                  <div class="custom-select-option" data-value="communication" role="option">
+                    <div class="custom-select-option-content">
+                      <span class="option-icon">⚡</span>
+                      <span>Giao tiếp cấp tốc</span>
+                    </div>
+                    <span class="option-check">✓</span>
+                  </div>
+                </div>
+                <!-- Native hidden select for form validation & submit -->
+                <select id="goalNativeSelect" required style="position:absolute; opacity:0; pointer-events:none; width:1px; height:1px; top:24px; left:20px;">
+                  <option value="">-- Chọn mục tiêu học --</option>
+                  <option value="beginner">Người mới bắt đầu từ số 0</option>
+                  <option value="study">Du học Nga & Săn học bổng</option>
+                  <option value="business">Tiếng Nga thương mại & Đi làm</option>
+                  <option value="trki">Luyện thi chứng chỉ TRKI</option>
+                  <option value="communication">Giao tiếp cấp tốc</option>
+                </select>
+              </div>
             </div>
-            <button type="submit" class="btn-submit">Gửi thông tin tư vấn ➔</button>
+            <button type="submit" class="btn-submit">
+              <span>Gửi thông tin tư vấn</span>
+              <span>➔</span>
+            </button>
           </form>
         </div>
       </section>
@@ -399,6 +448,70 @@
           if (xpEl) xpEl.textContent = `${xp} XP`;
           if (streakEl) streakEl.textContent = `${streak} ngày streak`;
         } catch (_) {}
+      })();
+
+      // Interactive Custom Select Dropdown
+      (function initCustomSelect() {
+        const wrapper = document.getElementById('goalSelectWrapper');
+        const trigger = document.getElementById('goalSelectTrigger');
+        const label = document.getElementById('goalSelectLabel');
+        const nativeSelect = document.getElementById('goalNativeSelect');
+        const options = wrapper ? wrapper.querySelectorAll('.custom-select-option') : [];
+
+        if (!wrapper || !trigger || !label || !nativeSelect) return;
+
+        function toggleDropdown(e) {
+          if (e) e.stopPropagation();
+          const isOpen = wrapper.classList.toggle('open');
+          trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        function closeDropdown() {
+          wrapper.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+
+        trigger.addEventListener('click', toggleDropdown);
+        trigger.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            toggleDropdown();
+          } else if (e.key === 'Escape') {
+            closeDropdown();
+          }
+        });
+
+        options.forEach(opt => {
+          opt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const val = opt.getAttribute('data-value');
+            const icon = opt.querySelector('.option-icon')?.textContent || '';
+            const textSpan = opt.querySelector('.custom-select-option-content span:last-child');
+            const text = textSpan ? textSpan.textContent : opt.textContent;
+
+            // Set native value for form validation
+            nativeSelect.value = val;
+            label.classList.remove('placeholder');
+            label.innerHTML = `<span style="font-size:1.15rem; line-height:1;">${icon}</span> <span style="color:#003838; font-weight:700;">${text}</span>`;
+
+            // Active option class
+            options.forEach(o => o.classList.remove('selected'));
+            opt.classList.add('selected');
+
+            closeDropdown();
+            trigger.focus();
+          });
+        });
+
+        // Close on click outside or escape
+        document.addEventListener('click', (e) => {
+          if (!wrapper.contains(e.target)) {
+            closeDropdown();
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeDropdown();
+        });
       })();
     </script>
     <script src="/dictionary-widget.js?v=2.0" defer></script>
