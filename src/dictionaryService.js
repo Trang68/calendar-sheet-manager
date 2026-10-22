@@ -511,7 +511,7 @@ class DictionaryService {
 
       // 3. Động cơ 3: MyMemory API với quota 50k ký tự/ngày
       const pair = `${sl}|${tl}`;
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}&de=contact@taigacenter.edu.vn`;
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}&de=contact@taigatalk.edu.vn`;
       const res = await fetch(url, {
         headers: { "User-Agent": ua },
         signal: AbortSignal.timeout(5000),
