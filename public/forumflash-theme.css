@@ -1263,6 +1263,13 @@ body.ff-body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
+}
+
+.arena-title-wrap {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 .arena-title-wrap h2 {
@@ -1270,18 +1277,21 @@ body.ff-body {
   font-weight: 800;
   color: var(--ff-primary);
   margin: 0 0 6px 0;
+  text-align: center;
 }
 
 .arena-title-wrap p {
   font-size: 0.95rem;
   color: #475569;
   margin: 0;
+  text-align: center;
 }
 
 /* Restyled Level Selector Tabs */
 .ff-level-pills {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -1329,10 +1339,19 @@ body.ff-body {
 .ff-skill-pills {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
-  padding-top: 4px;
+  padding-top: 14px;
   border-top: 1px dashed var(--ff-line);
+}
+
+.specialized-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .ff-skill-btn {
@@ -1368,7 +1387,7 @@ body.ff-body {
 .stage-route-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: #fff;
   border: 1.5px solid var(--ff-card-border);
   border-radius: 20px;
@@ -1381,7 +1400,8 @@ body.ff-body {
 .stage-tab-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .stage-tab-btn {
