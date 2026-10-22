@@ -18,6 +18,192 @@
     { key: "loct", ru: "Предложный (Cách 6)", vn: "Giới cách — về ai? ở đâu?" },
   ];
 
+  class ClientDictProvider {
+    constructor() {
+      this.cache = {};
+      this.loading = {};
+      this.formsCache = {};
+      this.relCache = {};
+    }
+
+    fold(s) {
+      return (s || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .trim();
+    }
+
+    stripStress(s) {
+      return (s || "").replace(/\u0301/g, "").trim();
+    }
+
+    async load(dir) {
+      if (this.cache[dir]) return this.cache[dir];
+      if (this.loading[dir]) return this.loading[dir];
+
+      this.loading[dir] = (async () => {
+        let json = null;
+        try {
+          const r1 = await fetch(`/data/dict/dict-${dir}.json`);
+          if (r1.ok) json = await r1.json();
+        } catch (e) {}
+
+        if (!json) {
+          try {
+            const r2 = await fetch(`https://rusitrki.com/data/dict-${dir}.json`);
+            if (r2.ok) json = await r2.json();
+          } catch (e) {}
+        }
+
+        if (!json || !json.rows) {
+          throw new Error("Cannot load dictionary data");
+        }
+
+        const isRuVi = dir === "ru-vi";
+        const map = new Map();
+        const list = json.rows.map((r, i) => {
+          const item = isRuVi
+            ? {
+                id: `ru-vi:${i}`,
+                ru: r[0],
+                pron: r[1] || "",
+                pos: r[2] || "",
+                cat: r[3] || "",
+                vi: r[4] || "",
+                ex: r[5] || "",
+                gram: r[6] || "",
+                dir: "ru-vi",
+              }
+            : {
+                id: `vi-ru:${i}`,
+                vi: r[0],
+                pron: r[1] || "",
+                pos: r[2] || "",
+                cat: r[3] || "",
+                ru: r[4] || "",
+                ex: r[5] || "",
+                gram: r[6] || "",
+                dir: "vi-ru",
+              };
+          const wordKey = isRuVi ? this.stripStress(item.ru).toLowerCase() : item.vi.toLowerCase().trim();
+          item._w = this.fold(isRuVi ? item.ru : item.vi);
+          item._hay = this.fold(`${isRuVi ? item.ru : item.vi} ${item.pron} ${isRuVi ? item.vi : item.ru} ${item.ex}`);
+          if (!map.has(wordKey)) map.set(wordKey, item);
+          return item;
+        });
+
+        this.cache[dir] = { list, map };
+        delete this.loading[dir];
+        return this.cache[dir];
+      })();
+
+      return this.loading[dir];
+    }
+
+    async search(query, dir = "auto", limit = 25) {
+      try {
+        const isRu = /[\u0400-\u04FF]/.test(query);
+        const targetDir = dir === "auto" ? (isRu ? "ru-vi" : "vi-ru") : dir;
+        const data = await this.load(targetDir);
+        const qFold = this.fold(query);
+        const qClean = this.stripStress(query).toLowerCase();
+
+        const exact = [];
+        const prefix = [];
+        const contains = [];
+        const wbRegex = new RegExp(`(^|\\s)${qFold.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i");
+
+        for (const item of data.list) {
+          const cleanW = targetDir === "ru-vi" ? this.stripStress(item.ru).toLowerCase() : item.vi.toLowerCase();
+          if (cleanW === qClean || item._w === qFold) {
+            exact.push(item);
+          } else if (item._w.startsWith(qFold)) {
+            prefix.push(item);
+          } else if (wbRegex.test(item._w) || item._w.includes(qFold)) {
+            contains.push(item);
+          }
+          if (exact.length + prefix.length >= limit * 2) break;
+        }
+
+        const combined = [...exact, ...prefix, ...contains].slice(0, limit);
+        return { ok: true, dir: targetDir, results: combined };
+      } catch (e) {
+        return { ok: false, results: [] };
+      }
+    }
+
+    async getDetail(word, dir = "ru-vi") {
+      try {
+        const isRu = /[\u0400-\u04FF]/.test(word);
+        const targetDir = dir === "auto" ? (isRu ? "ru-vi" : "vi-ru") : dir;
+        const data = await this.load(targetDir);
+        const clean = this.stripStress(word).toLowerCase().trim();
+        let entry = data.map.get(clean) || null;
+        if (!entry) {
+          const qFold = this.fold(clean);
+          entry = data.list.find((e) => e._w === qFold) || null;
+        }
+
+        let extra = null;
+        const cyrillic = targetDir === "ru-vi" ? clean : entry ? this.stripStress(entry.ru).toLowerCase() : null;
+
+        if (cyrillic && /[\u0400-\u04FF]/.test(cyrillic)) {
+          const letter = cyrillic.replace(/ё/g, "е")[0];
+          if (/^[а-я]/.test(letter)) {
+            let forms = this.formsCache[letter];
+            let rel = this.relCache[letter];
+
+            if (!forms) {
+              try {
+                const rfLocal = await fetch(`/data/dict/dict-forms-${encodeURIComponent(letter)}.json`);
+                if (rfLocal.ok) forms = await rfLocal.json();
+              } catch (e) {}
+              if (!forms) {
+                try {
+                  const rf = await fetch(`https://rusitrki.com/data/dict-forms-${encodeURIComponent(letter)}.json`);
+                  if (rf.ok) forms = await rf.json();
+                } catch (e) {}
+              }
+              this.formsCache[letter] = forms || {};
+            }
+
+            if (!rel) {
+              try {
+                const rrLocal = await fetch(`/data/dict/dict-rel-${encodeURIComponent(letter)}.json`);
+                if (rrLocal.ok) rel = await rrLocal.json();
+              } catch (e) {}
+              if (!rel) {
+                try {
+                  const rr = await fetch(`https://rusitrki.com/data/dict-rel-${encodeURIComponent(letter)}.json`);
+                  if (rr.ok) rel = await rr.json();
+                } catch (e) {}
+              }
+              this.relCache[letter] = rel || {};
+            }
+
+            const formsItem = (forms && forms[cyrillic]) || null;
+            const relItem = (rel && rel[cyrillic]) || null;
+
+            extra = {
+              forms: formsItem,
+              syn: relItem?.s || null,
+              ant: relItem?.a || null,
+              der: relItem?.d || null,
+              audio: relItem?.au || null,
+              gov: relItem?.gv || null,
+            };
+          }
+        }
+
+        return { ok: true, word, dir: targetDir, entry, extra };
+      } catch (e) {
+        return { ok: false, word, dir, entry: null, extra: null };
+      }
+    }
+  }
+
   class DictionaryWidget {
     constructor() {
       this.isOpen = false;
@@ -27,6 +213,7 @@
       this.searchDebounceTimer = null;
       this.currentDetail = null;
       this.audioObj = null;
+      this.clientProvider = new ClientDictProvider();
 
       this.bookmarks = this.loadStorage(STORAGE_BOOKMARKS);
       this.history = this.loadStorage(STORAGE_HISTORY);
@@ -249,6 +436,17 @@
         }, 280);
       });
 
+      this.searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          clearTimeout(this.searchDebounceTimer);
+          const val = this.searchInput.value.trim();
+          if (val) {
+            this.handleSearch(val, true);
+          }
+        }
+      });
+
       this.clearBtn.addEventListener("click", () => {
         this.searchInput.value = "";
         this.clearBtn.style.display = "none";
@@ -405,7 +603,7 @@
       } catch (e) {}
     }
 
-    async handleSearch(query) {
+    async handleSearch(query, directOpen = false) {
       if (!query) {
         this.resultsEl.innerHTML = "";
         this.emptyEl.style.display = "flex";
@@ -419,20 +617,38 @@
         </div>
       `;
 
+      let data = null;
+      // 1. Thử gọi backend trước
       try {
         const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=auto&limit=25`);
-        if (!res.ok) throw new Error("Search API error");
-        const data = await res.json();
+        if (res.ok) {
+          data = await res.json();
+        }
+      } catch (e) {}
 
-        if (data && data.ok && data.results && data.results.length > 0) {
-          const firstItem = data.results[0];
-          const firstMeaning = (data.dir === "ru-vi" ? firstItem.vi : firstItem.ru) || "";
+      // 2. Nếu backend không phản hồi hoặc không có kết quả, dùng clientProvider
+      if (!data || !data.results || data.results.length === 0) {
+        try {
+          data = await this.clientProvider.search(query, "auto", 25);
+        } catch (e) {}
+      }
+
+      if (data && data.results && data.results.length > 0) {
+        const firstItem = data.results[0];
+        const firstWord = data.dir === "ru-vi" ? firstItem.ru : firstItem.vi;
+        const firstMeaning = (data.dir === "ru-vi" ? firstItem.vi : firstItem.ru) || "";
+
+        const qClean = this.stripStress(query).toLowerCase().trim();
+        const topClean = this.stripStress(firstWord).toLowerCase().trim();
+
+        // Nếu ấn Enter hoặc từ tìm kiếm khớp chính xác 100% với từ đầu tiên, mở thẳng chi tiết (kèm chia động từ)
+        if (directOpen || qClean === topClean) {
+          this.openWordDetail(firstWord, data.dir);
+        } else {
           this.addToHistory(query, firstMeaning, data.dir);
           this.renderSearchResults(data.results, query, data.dir);
-        } else {
-          this.renderOnlineFallback(query);
         }
-      } catch (err) {
+      } else {
         this.renderOnlineFallback(query);
       }
     }
@@ -628,19 +844,27 @@
       `;
       this.emptyEl.style.display = "none";
 
+      let data = null;
       try {
         const res = await fetch(`/api/dict/detail?word=${encodeURIComponent(word)}&dir=${dir}`);
-        const data = await res.json();
-        if (data && data.ok) {
-          const firstM = data.entry ? data.entry.vi || data.entry.ru : "";
-          this.addToHistory(word, firstM, dir);
-          this.currentDetail = data;
-          this.renderDetailView(data);
-        } else {
-          this.handleSearch(word);
+        if (res.ok) {
+          data = await res.json();
         }
-      } catch (e) {
-        this.handleSearch(word);
+      } catch (e) {}
+
+      if (!data || !data.entry) {
+        try {
+          data = await this.clientProvider.getDetail(word, dir);
+        } catch (e) {}
+      }
+
+      if (data && data.entry) {
+        const firstM = data.entry ? data.entry.vi || data.entry.ru : "";
+        this.addToHistory(word, firstM, data.dir || dir);
+        this.currentDetail = data;
+        this.renderDetailView(data);
+      } else {
+        this.handleSearch(word, false);
       }
     }
 

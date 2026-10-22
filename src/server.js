@@ -12,6 +12,7 @@ app.set("trust proxy", true);
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use("/media", express.static(path.join(__dirname, "../media")));
+app.use("/data", express.static(path.join(__dirname, "../data")));
 
 const config = {
   port: parseInt(process.env.PORT || "8080", 10),
@@ -29,13 +30,16 @@ const config = {
   databaseUrl: (process.env.DATABASE_URL || "").trim().replace(/^["']|["']$/g, ""),
 };
 
-if (!config.googleServiceAccountJson || !config.googleCalendarId) {
-  // eslint-disable-next-line no-console
-  console.error("Missing required env vars. Check GOOGLE_SERVICE_ACCOUNT_JSON, GOOGLE_CALENDAR_ID.");
-  process.exit(1);
+let exportService = null;
+if (config.googleServiceAccountJson && config.googleCalendarId) {
+  try {
+    exportService = new ExportService(config);
+  } catch (err) {
+    console.warn("[server] Failed to initialize ExportService:", err.message);
+  }
+} else {
+  console.warn("[server] Missing GOOGLE_SERVICE_ACCOUNT_JSON or GOOGLE_CALENDAR_ID. Calendar features disabled; web pages & Dictionary API running.");
 }
-
-const exportService = new ExportService(config);
 let lastRun = null;
 
 const SESSION_COOKIE_NAME = "taiga_session";
@@ -1056,6 +1060,9 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
       return `${startDay}-${endDay}`;
     });
 
+    if (!exportService) {
+      return res.status(503).json({ ok: false, error: "Google Calendar chưa được cấu hình (thiếu biến môi trường)" });
+    }
     const events = await exportService.fetchEvents(firstDay, lastDay);
     const studentMap = new Map();
 
@@ -1475,6 +1482,7 @@ app.post("/api/export/month-custom", requireToken, (_req, res) => {
 
 app.post("/api/events/create", requireToken, async (req, res) => {
   try {
+    if (!exportService) return res.status(503).json({ ok: false, error: "Calendar not configured" });
     const payload = req.body;
     const result = await exportService.createEvent(payload);
     res.json({ ok: true, result });
@@ -1485,7 +1493,7 @@ app.post("/api/events/create", requireToken, async (req, res) => {
 
 app.get("/api/events", requireToken, async (req, res) => {
   try {
-    // Lấy toàn bộ sự kiện trong 1 năm (hoặc giới hạn theo nhu cầu)
+    if (!exportService) return res.status(503).json({ ok: false, error: "Calendar not configured" });
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 1);
     const end = new Date(now.getFullYear(), 11, 31, 23, 59, 59);
@@ -1525,6 +1533,7 @@ app.get("/api/events", requireToken, async (req, res) => {
 
 app.put("/api/events/:eventId", requireToken, async (req, res) => {
   try {
+    if (!exportService) return res.status(503).json({ ok: false, error: "Calendar not configured" });
     const { eventId } = req.params;
     const payload = req.body;
     const result = await exportService.updateEvent(eventId, payload);
@@ -1536,6 +1545,7 @@ app.put("/api/events/:eventId", requireToken, async (req, res) => {
 
 app.delete("/api/events/:eventId", requireToken, async (req, res) => {
   try {
+    if (!exportService) return res.status(503).json({ ok: false, error: "Calendar not configured" });
     const { eventId } = req.params;
     const result = await exportService.deleteEvent(eventId);
     res.json({ ok: true, result });
