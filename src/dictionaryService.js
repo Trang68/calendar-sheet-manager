@@ -455,7 +455,7 @@ class DictionaryService {
   }
 
   async translateOnline(text, from = "auto", to = null) {
-    const q = String(text || "").trim();
+    const q = String(text || "").trim().slice(0, 1000);
     if (!q) return null;
     try {
       const isRu = this.isCyrillic(q);

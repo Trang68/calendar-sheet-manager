@@ -9,6 +9,18 @@ const { ExportService } = require("./exportService");
 const app = express();
 app.set("trust proxy", true);
 
+// Standard HTTP Security Headers
+app.use((_req, res, next) => {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  if (process.env.NODE_ENV === "production") {
+    res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  }
+  next();
+});
+
 app.use(express.json({ limit: "1mb" }));
 
 
@@ -52,7 +64,12 @@ if (config.googleServiceAccountJson && config.googleCalendarId) {
 let lastRun = null;
 
 const SESSION_COOKIE_NAME = "taiga_session";
-const SESSION_SECRET = config.sessionSecret || config.appToken || "please-change-session-secret";
+// Fallback to cryptographically secure random 256-bit key at runtime to prevent token forgery
+const RUNTIME_GENERATED_SECRET = crypto.randomBytes(32).toString("hex");
+const SESSION_SECRET = config.sessionSecret || config.appToken || RUNTIME_GENERATED_SECRET;
+if (!config.sessionSecret && !config.appToken) {
+  console.warn("[security] Notice: SESSION_SECRET is not configured in env. Using temporary secure random secret (sessions will reset on server restart).");
+}
 
 function normalizeText(text) {
   return String(text || "")
