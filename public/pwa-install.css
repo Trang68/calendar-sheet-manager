@@ -1,0 +1,557 @@
+/* ==========================================================================
+   TAIGA TALK - Progressive Web App (PWA) & QR Code Installer Styles
+   ========================================================================== */
+
+/* 1. TOPBAR BUTTON */
+.ff-btn-install-app {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #003838 0%, #005555 100%);
+  color: #27c4b5;
+  border: 1px solid rgba(39, 196, 181, 0.45);
+  padding: 7px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 56, 56, 0.18);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.ff-btn-install-app:hover {
+  background: linear-gradient(135deg, #004d4d 0%, #006b6b 100%);
+  color: #ffffff;
+  border-color: #27c4b5;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(39, 196, 181, 0.35);
+}
+
+.ff-btn-install-app:active {
+  transform: translateY(0);
+}
+
+/* 2. FLOATING CORNER WIDGET (Desktop/Laptop Corner) */
+.pwa-corner-widget {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  background: #003838;
+  color: #ffffff;
+  border: 1px solid rgba(39, 196, 181, 0.35);
+  border-radius: 9999px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), 0 0 16px rgba(39, 196, 181, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  user-select: none;
+}
+
+.pwa-corner-widget:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #27c4b5;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32), 0 0 22px rgba(39, 196, 181, 0.3);
+  background: #004848;
+}
+
+.pwa-widget-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 12px;
+  cursor: pointer;
+}
+
+.pwa-widget-qr-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(39, 196, 181, 0.15);
+  border: 1px solid rgba(39, 196, 181, 0.4);
+  border-radius: 50%;
+  color: #27c4b5;
+  flex-shrink: 0;
+}
+
+.pwa-widget-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.pwa-widget-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.pwa-widget-sub {
+  font-size: 0.70rem;
+  color: #27c4b5;
+  font-weight: 500;
+}
+
+.pwa-widget-toggle {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.pwa-widget-toggle:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Minimized State */
+.pwa-corner-widget.minimized {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.pwa-corner-widget.minimized .pwa-widget-badge {
+  padding: 0;
+}
+
+.pwa-corner-widget.minimized .pwa-widget-text,
+.pwa-corner-widget.minimized .pwa-widget-toggle {
+  display: none;
+}
+
+.pwa-corner-widget.minimized .pwa-widget-qr-icon {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+
+/* Hide Corner Widget on Mobile (they're already on phone) */
+@media (max-width: 768px) {
+  .pwa-corner-widget {
+    display: none !important;
+  }
+}
+
+/* 3. MODAL OVERLAY & CARD */
+.pwa-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 24, 24, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.pwa-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pwa-modal-card {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 56, 56, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(39, 196, 181, 0.2);
+  overflow: hidden;
+  transform: scale(0.92) translateY(12px);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1e293b;
+}
+
+.pwa-modal-overlay.open .pwa-modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.pwa-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.pwa-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+/* Modal Header */
+.pwa-modal-header {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.pwa-modal-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pwa-modal-flag {
+  font-size: 1.3rem;
+}
+
+.pwa-modal-logo {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #003838;
+  letter-spacing: -0.02em;
+}
+
+.pwa-modal-badge {
+  background: rgba(39, 196, 181, 0.15);
+  color: #006666;
+  border: 1px solid rgba(39, 196, 181, 0.4);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.pwa-modal-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #003838;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.pwa-modal-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Modal Body */
+.pwa-modal-body {
+  padding: 20px 28px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* QR Center Section */
+.pwa-qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pwa-qr-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid #003838;
+  box-shadow: 0 8px 24px rgba(0, 56, 56, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.pwa-qr-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.pwa-qr-center-icon {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid #003838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.pwa-qr-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #003838;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.pwa-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6);
+  animation: pwaPulse 2s infinite;
+}
+
+@keyframes pwaPulse {
+  0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+/* Copy Link Row */
+.pwa-link-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.pwa-link-input {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: #475569;
+  font-family: monospace;
+  outline: none;
+}
+
+.pwa-btn-copy {
+  background: #003838;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.pwa-btn-copy:hover {
+  background: #005050;
+}
+
+/* Instructions & Tabs */
+.pwa-instructions-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.pwa-os-tabs {
+  display: flex;
+  gap: 6px;
+  background: #e2e8f0;
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.pwa-os-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.pwa-os-tab.active {
+  background: #ffffff;
+  color: #003838;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.pwa-tab-pane {
+  display: none;
+}
+
+.pwa-tab-pane.active {
+  display: block;
+}
+
+/* Steps List */
+.pwa-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pwa-step-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pwa-step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #003838;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pwa-step-content {
+  font-size: 0.83rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.pwa-inline-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  stroke: #0284c7;
+}
+
+/* Desktop Native Install */
+.pwa-desktop-install-box {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.pwa-desktop-install-box p {
+  font-size: 0.85rem;
+  color: #475569;
+  margin: 0 0 14px 0;
+}
+
+.pwa-desktop-native-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #003838 0%, #005555 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 56, 56, 0.2);
+}
+
+.pwa-desktop-native-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 56, 56, 0.3);
+}
+
+.pwa-desktop-hint {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 12px;
+}
+
+/* Modal Footer */
+.pwa-modal-footer {
+  padding: 12px 28px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.pwa-footer-badge {
+  font-size: 0.75rem;
+  color: #006666;
+  font-weight: 600;
+}
+
+/* Toast */
+.pwa-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  background: #003838;
+  color: #ffffff;
+  border: 1px solid #27c4b5;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.pwa-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

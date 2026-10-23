@@ -4,6 +4,7 @@ const express = require("express");
 const path = require("path");
 const crypto = require("crypto");
 const fs = require("fs");
+const QRCode = require("qrcode");
 const { ExportService } = require("./exportService");
 
 const app = express();
@@ -870,6 +871,35 @@ async function runAndTrack(runFn) {
 
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true, service: "calendar-sheet-manager", now: new Date().toISOString() });
+});
+
+// PWA QR Code Generator Endpoint (Dynamic SVG)
+app.get("/api/pwa/qr", async (req, res) => {
+  try {
+    let target = req.query.url;
+    if (!target) {
+      const host = req.get("host") || "calendar-sheet-manager.onrender.com";
+      const proto = req.get("x-forwarded-proto") || req.protocol || "https";
+      target = `${proto}://${host}/home`;
+    }
+    if (typeof target !== "string" || target.length > 512) {
+      return res.status(400).send("Invalid target URL");
+    }
+    const svg = await QRCode.toString(target, {
+      type: "svg",
+      margin: 2,
+      color: {
+        dark: "#003838",
+        light: "#ffffff",
+      },
+      errorCorrectionLevel: "M",
+    });
+    res.setHeader("Content-Type", "image/svg+xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    return res.send(svg);
+  } catch (_err) {
+    return res.status(500).json({ ok: false, error: "Failed to generate QR code" });
+  }
 });
 
 // ==========================================
