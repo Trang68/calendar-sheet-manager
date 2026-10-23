@@ -14,7 +14,14 @@ app.use(express.json({ limit: "1mb" }));
 
 app.use(express.static(path.join(__dirname, "../public")));
 app.use("/media", express.static(path.join(__dirname, "../media")));
-app.use("/data", express.static(path.join(__dirname, "../data")));
+
+// SECURITY FIX: Explicitly block any direct access to sensitive data files
+app.all(["/data/student_accounts.json", "/data/payments.json", "/data/*.json"], (_req, res) => {
+  return res.status(403).json({ ok: false, error: "Access denied: Sensitive resource" });
+});
+
+// Only serve public dictionary data from data/dict
+app.use("/data/dict", express.static(path.join(__dirname, "../data/dict")));
 
 const config = {
   port: parseInt(process.env.PORT || "8080", 10),
@@ -158,56 +165,62 @@ function hashPassword(rawPassword) {
 }
 
 function parseAppUsers(rawJson) {
-  if (!rawJson) {
-    return [
-      {
-        username: "teacher",
-        passwordHash: hashPassword("teacher123"),
-        role: "teacher",
-        displayName: "Teacher",
-      },
-      {
-        username: "student",
-        passwordHash: hashPassword("student123"),
-        role: "student",
-        displayName: "Student",
-        studentKey: "student",
-      },
-    ];
+  const users = [];
+
+  // SECURITY FIX: Default hardcoded credentials (teacher/teacher123) are REMOVED!
+  // 1. Support simple TEACHER_USERNAME and TEACHER_PASSWORD env vars
+  const envTeacherUser = process.env.TEACHER_USERNAME ? process.env.TEACHER_USERNAME.trim().toLowerCase() : "";
+  const envTeacherPass = process.env.TEACHER_PASSWORD ? process.env.TEACHER_PASSWORD.trim() : "";
+  if (envTeacherUser && envTeacherPass) {
+    users.push({
+      username: envTeacherUser,
+      passwordHash: hashPassword(envTeacherPass),
+      role: "teacher",
+      displayName: process.env.TEACHER_DISPLAY_NAME || "Teacher",
+    });
   }
 
-  let parsed;
-  try {
-    parsed = JSON.parse(rawJson);
-  } catch (_err) {
-    throw new Error("APP_USERS_JSON must be valid JSON");
-  }
-
-  if (!Array.isArray(parsed) || parsed.length === 0) {
-    throw new Error("APP_USERS_JSON must be a non-empty array");
-  }
-
-  return parsed.map((item) => {
-    const username = normalizeText(item.username);
-    const role = item.role === "teacher" ? "teacher" : "student";
-    const displayName = normalizeText(item.displayName || username);
-
-    if (!username) {
-      throw new Error("Each account in APP_USERS_JSON must have username");
+  // 2. Support APP_USERS_JSON env var
+  if (rawJson) {
+    let parsed;
+    try {
+      parsed = JSON.parse(rawJson);
+    } catch (_err) {
+      throw new Error("APP_USERS_JSON must be valid JSON");
     }
 
-    if (!item.password && !item.passwordHash) {
-      throw new Error(`Account ${username} must have password or passwordHash`);
+    if (!Array.isArray(parsed)) {
+      throw new Error("APP_USERS_JSON must be a JSON array");
     }
 
-    return {
-      username,
-      role,
-      displayName,
-      studentKey: normalizeStudentKey(item.studentKey || username),
-      passwordHash: item.passwordHash || hashPassword(item.password),
-    };
-  });
+    parsed.forEach((item) => {
+      const username = normalizeText(item.username).toLowerCase();
+      const role = item.role === "teacher" ? "teacher" : "student";
+      const displayName = normalizeText(item.displayName || username);
+
+      if (!username) {
+        throw new Error("Each account in APP_USERS_JSON must have username");
+      }
+
+      if (!item.password && !item.passwordHash) {
+        throw new Error(`Account ${username} must have password or passwordHash`);
+      }
+
+      users.push({
+        username,
+        role,
+        displayName,
+        studentKey: normalizeStudentKey(item.studentKey || username),
+        passwordHash: item.passwordHash || hashPassword(item.password),
+      });
+    });
+  }
+
+  if (users.length === 0) {
+    console.warn("[security] Notice: No static teacher accounts configured in APP_USERS_JSON or TEACHER_PASSWORD.");
+  }
+
+  return users;
 }
 
 function parseStudentRates(rawJson) {
@@ -237,12 +250,37 @@ function parseStudentRates(rawJson) {
 const users = parseAppUsers(config.appUsersJson);
 const userMap = new Map(users.map((u) => [u.username, u]));
 const studentRateMap = parseStudentRates(config.studentRateJson);
-const paymentsStorePath = path.join(__dirname, "../data/payments.json");
+// SECURITY FIX: Store private database backups in dedicated storage/ directory (never exposed to static public)
+const storageDir = path.join(__dirname, "../storage");
+if (!fs.existsSync(storageDir)) {
+  try { fs.mkdirSync(storageDir, { recursive: true }); } catch (_) {}
+}
+const paymentsStorePath = path.join(storageDir, "payments.json");
 const PAYMENTS_STORE_DB_KEY = "payments_store";
 const STUDENT_RATES_KEY = "__studentRates";
 const STUDENT_RATES_TABLE = "student_rates";
 const STUDENT_ACCOUNTS_TABLE = "student_accounts";
-const studentAccountsPath = path.join(__dirname, "../data/student_accounts.json");
+const studentAccountsPath = path.join(storageDir, "student_accounts.json");
+
+// Automatic migration from legacy data/ directory if files exist
+try {
+  const legacyPayments = path.join(__dirname, "../data/payments.json");
+  if (fs.existsSync(legacyPayments)) {
+    if (!fs.existsSync(paymentsStorePath)) {
+      fs.copyFileSync(legacyPayments, paymentsStorePath);
+    }
+    try { fs.unlinkSync(legacyPayments); } catch (_) {}
+  }
+  const legacyAccounts = path.join(__dirname, "../data/student_accounts.json");
+  if (fs.existsSync(legacyAccounts)) {
+    if (!fs.existsSync(studentAccountsPath)) {
+      fs.copyFileSync(legacyAccounts, studentAccountsPath);
+    }
+    try { fs.unlinkSync(legacyAccounts); } catch (_) {}
+  }
+} catch (e) {
+  console.error("[storage] Migration error:", e.message);
+}
 const useDatabaseStore = Boolean(config.databaseUrl);
 
 let pgPool = null;
@@ -1223,14 +1261,15 @@ app.get("/api/dashboard/month", requireLogin, requireRole("teacher", "student"),
   }
 });
 
-app.get("/api/db/diagnostics", requireLogin, async (_req, res) => {
+// SECURITY FIX: Only teachers can access DB diagnostics, and internal server hostname/user details are masked
+app.get("/api/db/diagnostics", requireLogin, requireRole("teacher"), async (_req, res) => {
   let poolError = null;
   let queryTest = null;
   if (useDatabaseStore) {
     try {
       await ensureDatabaseInitialized();
       const pool = getPgPool();
-      const testRes = await pool.query("SELECT NOW() as server_time, version() as pg_version");
+      const testRes = await pool.query("SELECT NOW() as server_time");
       queryTest = testRes.rows[0];
     } catch (err) {
       poolError = err.message;
@@ -1242,9 +1281,9 @@ app.get("/api/db/diagnostics", requireLogin, async (_req, res) => {
   if (rawUrl) {
     try {
       const u = new URL(rawUrl);
-      maskedUrl = `${u.protocol}//${u.username ? u.username + ":***@" : ""}${u.host}${u.pathname}`;
+      maskedUrl = `${u.protocol}//***:***@***${u.pathname}`;
     } catch {
-      maskedUrl = rawUrl.substring(0, 15) + "...";
+      maskedUrl = "configured";
     }
   }
 

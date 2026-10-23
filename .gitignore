@@ -7,3 +7,6 @@ yarn-error.log*
 data/payments.json
 data/dict/
 TEU.pdf
+
+storage/
+data/student_accounts.json
