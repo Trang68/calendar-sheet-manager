@@ -11,6 +11,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "compression": "^1.7.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.2",
     "googleapis": "^140.0.1",

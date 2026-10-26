@@ -7,8 +7,20 @@ const fs = require("fs");
 const QRCode = require("qrcode");
 const { ExportService } = require("./exportService");
 
+let compression = null;
+try {
+  compression = require("compression");
+} catch (_) {
+  // Compression package will be installed on production server via package.json
+}
+
 const app = express();
 app.set("trust proxy", true);
+
+// Enable HTTP response compression (gzip / deflate) for HTML, CSS, JS, JSON
+if (compression) {
+  app.use(compression({ threshold: 1024 }));
+}
 
 // Standard HTTP Security Headers
 app.use((_req, res, next) => {
