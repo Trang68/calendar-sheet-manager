@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
@@ -588,7 +588,7 @@
             <p class="article-snippet">${art.snippet}</p>
             <div class="article-footer">
               <span class="article-author">✍️ ${art.author}</span>
-              <button class="btn-read" onclick="openArticleModal('${art.id}')">Đọc bài viết ➔</button>
+              <button class="btn-read" onclick="openArticleModal('${art.id}')" aria-label="Đọc bài viết: ${art.title}"><span>Đọc bài viết</span> <span class="btn-read-arrow">➔</span></button>
             </div>
           `;
           grid.appendChild(card);
