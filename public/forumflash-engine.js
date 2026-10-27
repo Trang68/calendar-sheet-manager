@@ -413,7 +413,9 @@
     speakCurrentCard() {
       const card = this.flashcards[this.cardIndex];
       if (!card) return;
-      if (window.TaigaDictWidget && typeof window.TaigaDictWidget.speak === "function") {
+      if (window.TaigaAudio) {
+        window.TaigaAudio.speak(card.word);
+      } else if (window.TaigaDictWidget && typeof window.TaigaDictWidget.speak === "function") {
         window.TaigaDictWidget.speak(card.word);
       } else if (window.speechSynthesis) {
         const u = new SpeechSynthesisUtterance(card.word.replace(/\u0301/g, ""));

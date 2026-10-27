@@ -4,6 +4,7 @@ const express = require("express");
 const path = require("path");
 const crypto = require("crypto");
 const fs = require("fs");
+const https = require("https");
 const QRCode = require("qrcode");
 const { ExportService } = require("./exportService");
 
@@ -912,6 +913,56 @@ app.get("/api/pwa/qr", async (req, res) => {
   } catch (_err) {
     return res.status(500).json({ ok: false, error: "Failed to generate QR code" });
   }
+});
+
+// Universal Text-to-Speech (TTS) Proxy for Russian Audio (100% device compatibility)
+app.get("/api/tts", (req, res) => {
+  const rawText = String(req.query.text || "").trim();
+  const lang = String(req.query.lang || "ru").trim();
+  if (!rawText) {
+    return res.status(400).send("Text is required");
+  }
+
+  const clean = rawText
+    .replace(/<[^>]*>/g, " ")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[«»"“”_]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 250);
+
+  if (!clean) {
+    return res.status(400).send("Empty text after cleaning");
+  }
+
+  const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${encodeURIComponent(lang)}&q=${encodeURIComponent(clean)}`;
+
+  const request = https.get(
+    ttsUrl,
+    {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        Referer: "https://translate.google.com/",
+      },
+    },
+    (proxyRes) => {
+      if (proxyRes.statusCode !== 200) {
+        return res.status(proxyRes.statusCode || 502).send("TTS upstream error");
+      }
+      res.setHeader("Content-Type", proxyRes.headers["content-type"] || "audio/mpeg");
+      res.setHeader("Cache-Control", "public, max-age=604800, immutable");
+      res.setHeader("Accept-Ranges", "bytes");
+      proxyRes.pipe(res);
+    }
+  );
+
+  request.on("error", (err) => {
+    // eslint-disable-next-line no-console
+    console.error("[TTS Proxy] Request failed:", err.message);
+    if (!res.headersSent) {
+      res.status(502).send("TTS Proxy error");
+    }
+  });
 });
 
 // ==========================================

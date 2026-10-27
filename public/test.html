@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/pwa-install.css?v=1.0" />
+    <script src="/taiga-audio.js?v=1.0"></script>
     <script src="/pwa-install.js?v=1.0" defer></script>
     <script src="/vocab-25-topics.js?v=1.0"></script>
   </head>
@@ -807,6 +808,7 @@
       let wordSpeechTimeout = null;
 
       function cancelCurrentSpeech() {
+        if (window.TaigaAudio) { window.TaigaAudio.stop(); }
         speechState.activeSpeechToken++;
         if (wordSpeechTimeout) {
           clearTimeout(wordSpeechTimeout);
@@ -899,6 +901,7 @@
       }
 
       function stopArticlePlayer() {
+        if (window.TaigaAudio) { window.TaigaAudio.stop(); }
         const ap = speechState.articlePlayer;
         if (ap.timerInterval) {
           clearInterval(ap.timerInterval);
@@ -913,6 +916,7 @@
       }
 
       function pauseArticlePlayer() {
+        if (window.TaigaAudio) { window.TaigaAudio.pause(); }
         const ap = speechState.articlePlayer;
         if (ap.status === 'playing') {
           cancelCurrentSpeech();
@@ -950,11 +954,6 @@
       }
 
       function playSentence(sentenceIdx) {
-        wakeUpSpeechEngine();
-        if (!speechState.russianVoice) {
-          initVoices();
-        }
-
         const ap = speechState.articlePlayer;
         const data = lessonSentenceData;
         if (!data || !data.sentences || sentenceIdx >= data.sentences.length) {
@@ -962,7 +961,6 @@
           return;
         }
 
-        // Hủy phát âm cũ và vô hiệu hóa các callback trước đó (tránh dồn hàng đợi hoặc next câu giả)
         cancelCurrentSpeech();
         const currentToken = speechState.activeSpeechToken;
 
@@ -978,16 +976,9 @@
 
         updatePlayerUI();
 
-        if (!speechState.synth) {
-          alert('Trình duyệt chưa hỗ trợ Text-to-Speech!');
-          stopArticlePlayer();
-          return;
-        }
-
-        const cleanSentenceText = cleanTextForSpeech(item.text);
+        const cleanSentenceText = window.TaigaAudio ? window.TaigaAudio.cleanText(item.text) : cleanTextForSpeech(item.text);
         const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
         let rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.88;
-        // Hiệu chỉnh tốc độ 0.75x thành 0.70x để người học cảm nhận được sự chậm rãi rõ rệt
         if (rate === 0.75) {
           rate = 0.70;
         }
@@ -1007,51 +998,18 @@
           }
         };
 
-        const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
-
-        try {
-          wakeUpSpeechEngine();
-          const utterance = new SpeechSynthesisUtterance(cleanSentenceText);
-          speechState.currentUtterance = utterance;
-          window.__taigaActiveUtterance = utterance;
-          utterance.lang = 'ru-RU';
-          if (voiceToUse) {
-            utterance.voice = voiceToUse;
-          }
-          utterance.rate = rate;
-          utterance.pitch = 1.0;
-
-          utterance.onend = function() {
-            if (window.__taigaActiveUtterance === utterance) {
-              window.__taigaActiveUtterance = null;
+        if (window.TaigaAudio) {
+          window.TaigaAudio.speak(cleanSentenceText, {
+            rate: rate,
+            onEnd: () => {
+              nextSentence();
+            },
+            onError: () => {
+              nextSentence();
             }
-            nextSentence();
-          };
-
-          utterance.onerror = function(e) {
-            if (window.__taigaActiveUtterance === utterance) {
-              window.__taigaActiveUtterance = null;
-            }
-            if (currentToken !== speechState.activeSpeechToken) return;
-            if (e && (e.error === 'interrupted' || e.error === 'canceled')) return;
-            if (ap.status !== 'playing') return;
-
-            console.warn('Speech synthesis error on sentence', sentenceIdx, e);
-            if (sentenceIdx + 1 < data.sentences.length) {
-              setTimeout(() => {
-                if (currentToken === speechState.activeSpeechToken && ap.status === 'playing') {
-                  playSentence(sentenceIdx + 1);
-                }
-              }, 400);
-            } else {
-              stopArticlePlayer();
-            }
-          };
-
-          speechState.synth.speak(utterance);
-        } catch (err) {
-          console.warn('SpeechSynthesis exception on sentence', sentenceIdx, err);
-          nextSentence();
+          });
+        } else {
+          playAudioFallback(cleanSentenceText, rate, nextSentence, nextSentence);
         }
       }
 
@@ -1118,14 +1076,10 @@
       }
 
       function speakWordText(rawText, btnEl) {
-        wakeUpSpeechEngine();
-        if (!speechState.russianVoice) {
-          initVoices();
-        }
-        const text = cleanTextForSpeech(rawText);
+        const text = window.TaigaAudio ? window.TaigaAudio.cleanText(rawText) : cleanTextForSpeech(rawText);
         if (!text) return;
 
-        if (speechState.currentWordBtn === btnEl) {
+        if (speechState.currentWordBtn === btnEl && window.TaigaAudio && window.TaigaAudio.isPlaying()) {
           cancelCurrentSpeech();
           stopSpeakingWord();
           return;
@@ -1144,7 +1098,8 @@
         }
 
         const isSupportedSkill = (currentSkill === 'reading' || currentSkill === 'listening' || !['speaking', 'writing'].includes(currentSkill));
-        const rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.85;
+        let rate = isSupportedSkill ? (audioPlaybackRate || 1.0) : 0.85;
+        if (rate === 0.75) rate = 0.70;
 
         const handleDone = function() {
           if (currentToken === speechState.activeSpeechToken) {
@@ -1152,56 +1107,20 @@
           }
         };
 
-        // Watchdog Timeout: Tính toán thời lượng tối đa cho câu nói, tự động dọn dẹp nếu TTS bị nghẽn
-        const wordCount = text.split(/\s+/).filter(Boolean).length;
-        const maxDurationMs = Math.max(5000, Math.min(22000, wordCount * 1200 + 3500));
-        wordSpeechTimeout = setTimeout(() => {
-          if (currentToken === speechState.activeSpeechToken && speechState.currentWordBtn === btnEl) {
-            cancelCurrentSpeech();
-            stopSpeakingWord();
-          }
-        }, maxDurationMs);
-
-        const voiceToUse = getRussianVoice(rate) || speechState.russianVoice;
-
-        if (!speechState.synth) {
-          handleDone();
-          return;
+        if (window.TaigaAudio) {
+          window.TaigaAudio.speak(text, {
+            rate: rate,
+            onStart: () => {
+              if (currentToken === speechState.activeSpeechToken && btnEl && btnEl.classList) {
+                btnEl.classList.add('speaking');
+              }
+            },
+            onEnd: handleDone,
+            onError: handleDone
+          });
+        } else {
+          playAudioFallback(text, rate, handleDone, handleDone);
         }
-
-        setTimeout(() => {
-          if (currentToken !== speechState.activeSpeechToken) return;
-          try {
-            wakeUpSpeechEngine();
-            const utterance = new SpeechSynthesisUtterance(text);
-            speechState.currentUtterance = utterance;
-            window.__taigaActiveUtterance = utterance;
-            utterance.lang = 'ru-RU';
-            if (voiceToUse) {
-              utterance.voice = voiceToUse;
-            }
-            utterance.rate = rate === 0.75 ? 0.70 : rate;
-            utterance.pitch = 1.0;
-
-            utterance.onend = function() {
-              if (window.__taigaActiveUtterance === utterance) {
-                window.__taigaActiveUtterance = null;
-              }
-              handleDone();
-            };
-
-            utterance.onerror = function(e) {
-              if (window.__taigaActiveUtterance === utterance) {
-                window.__taigaActiveUtterance = null;
-              }
-              handleDone();
-            };
-
-            speechState.synth.speak(utterance);
-          } catch (err) {
-            handleDone();
-          }
-        }, 50);
       }
 
       // ======================================================================

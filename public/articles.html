@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/pwa-install.css?v=1.0" />
+    <script src="/taiga-audio.js?v=1.0"></script>
     <script src="/pwa-install.js?v=1.0" defer></script>
   </head>
   <body class="ff-body">
@@ -209,6 +210,10 @@
 
       function speakRussian(text) {
         if (!text) return;
+        if (window.TaigaAudio) {
+          window.TaigaAudio.speak(text, { rate: 0.85 });
+          return;
+        }
         // Đánh thức engine trên Chrome
         if ("speechSynthesis" in window) {
           try {

@@ -534,6 +534,9 @@
       if (this.audioObj) {
         this.audioObj.pause();
       }
+      if (window.TaigaAudio) {
+        window.TaigaAudio.stop();
+      }
       if (window.speechSynthesis) {
         speechSynthesis.cancel();
       }
@@ -1512,6 +1515,10 @@
       if (!clean) return;
 
       const isRu = this.isCyrillic(clean);
+      if (isRu && window.TaigaAudio) {
+        window.TaigaAudio.speak(clean, { rate: rate });
+        return;
+      }
       const langCode = isRu ? "ru-RU" : "vi-VN";
       const ttsLang = isRu ? "ru" : "vi";
 
