@@ -277,14 +277,28 @@
     // ======================================================================
     // FLASHCARD COMPONENT (STAGE 1 OF LESSON)
     // ======================================================================
-    initFlashcardsFromLesson(lessonData) {
+        initFlashcardsFromLesson(lessonData) {
       this.flashcards = [];
       this.cardIndex = 0;
       this.cardFlipped = false;
 
-      if (!lessonData) return;
+      const data = lessonData || window.currentLessonData;
+      if (!data) {
+        // Fallback to DOM word if available
+        const domWord = (document.getElementById("ffFrontWord")?.textContent || "").trim();
+        const domGram = (document.getElementById("ffFrontGram")?.textContent || "").trim();
+        const domMeaning = (document.getElementById("ffBackMeaning")?.textContent || "").trim();
+        this.flashcards.push({
+          word: domWord || "Здравствуйте",
+          gram: domGram || "Từ vựng",
+          meaning: domMeaning || "Xin chào (trang trọng)",
+          example: "Здравствуйте, меня зовут Антон.",
+        });
+        this.renderFlashcard();
+        return;
+      }
 
-      if (Array.isArray(lessonData.vocabCategories)) {
+      if (Array.isArray(data.vocabCategories)) {
         lessonData.vocabCategories.forEach((cat) => {
           if (Array.isArray(cat.rows)) {
             cat.rows.forEach((r) => {
@@ -299,7 +313,7 @@
         });
       }
 
-      if (this.flashcards.length === 0 && Array.isArray(lessonData.vocabulary)) {
+      if (this.flashcards.length === 0 && Array.isArray(data.vocabulary)) {
         lessonData.vocabulary.forEach((v) => {
           this.flashcards.push({
             word: v.ru || v.word,
@@ -411,15 +425,32 @@
     }
 
     speakCurrentCard() {
-      const card = this.flashcards[this.cardIndex];
-      if (!card) return;
-      if (window.TaigaAudio) {
-        window.TaigaAudio.speak(card.word);
+      const card = (this.flashcards && this.flashcards[this.cardIndex]) || null;
+      const frontWordEl = document.getElementById("ffFrontWord");
+      const word = ((card && card.word) ? card.word : (frontWordEl ? frontWordEl.textContent : "")).trim();
+      if (!word) return;
+
+      const buttons = document.querySelectorAll("#ffBtnCardAudio, #ffBtnCardAudioBack, .flashcard-audio-btn");
+      buttons.forEach((btn) => btn.classList.add("speaking"));
+      const clearActive = () => {
+        buttons.forEach((btn) => btn.classList.remove("speaking"));
+      };
+
+      if (window.TaigaAudio && typeof window.TaigaAudio.speak === "function") {
+        window.TaigaAudio.speak(word, {
+          onStart: () => {},
+          onEnd: clearActive,
+          onError: clearActive
+        });
       } else if (window.TaigaDictWidget && typeof window.TaigaDictWidget.speak === "function") {
-        window.TaigaDictWidget.speak(card.word);
+        window.TaigaDictWidget.speak(word);
+        setTimeout(clearActive, 1000);
       } else if (window.speechSynthesis) {
-        const u = new SpeechSynthesisUtterance(card.word.replace(/\u0301/g, ""));
+        const clean = word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const u = new SpeechSynthesisUtterance(clean);
         u.lang = "ru-RU";
+        u.onend = clearActive;
+        u.onerror = clearActive;
         window.speechSynthesis.speak(u);
       }
     }
@@ -726,18 +757,25 @@
   }
 
   // Auto initialize on DOM ready
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
+    // Auto initialize on DOM ready
+  function initEngine() {
+    if (!window.TaigaFlash) {
       window.TaigaFlash = new ForumFlashEngine();
-      window.TaigaFlash.updateHeaderStats();
-      window.TaigaFlash.renderGrowthSection();
-      window.TaigaFlash.initVocabTopicsSystem();
-    });
-  } else {
-    window.TaigaFlash = new ForumFlashEngine();
+    }
     window.TaigaFlash.updateHeaderStats();
     window.TaigaFlash.renderGrowthSection();
     window.TaigaFlash.initVocabTopicsSystem();
+
+    if (window.currentLessonData) {
+      window.TaigaFlash.initFlashcardsFromLesson(window.currentLessonData);
+    } else if (window.TaigaFlash.flashcards.length === 0) {
+      window.TaigaFlash.initFlashcardsFromLesson(null);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initEngine);
+  } else {
+    initEngine();
   }
 })();
-

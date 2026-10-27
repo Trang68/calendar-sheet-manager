@@ -28,6 +28,7 @@
     <script src="/taiga-audio.js?v=1.0"></script>
     <script src="/pwa-install.js?v=1.0" defer></script>
     <script src="/vocab-25-topics.js?v=1.0"></script>
+    <script src="/forumflash-engine.js?v=2.0"></script>
   </head>
   <body class="ff-body">
     <div class="game-shell">
@@ -343,7 +344,10 @@
               <div class="flashcard-face flashcard-back">
                 <div class="flashcard-tag-row">
                   <span class="flashcard-pos-badge" id="ffBackGram">Từ vựng</span>
-                  <span style="font-size:0.8rem; opacity:0.85;">Nghĩa tiếng Việt</span>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-size:0.8rem; opacity:0.85;">Nghĩa tiếng Việt</span>
+                    <button type="button" class="flashcard-audio-btn" id="ffBtnCardAudioBack" title="Nghe phát âm">🔊</button>
+                  </div>
                 </div>
                 <div>
                   <div class="flashcard-back-meaning" id="ffBackMeaning">Xin chào (trang trọng)</div>
@@ -1863,6 +1867,7 @@
 
       function renderLesson(lesson) {
         currentLessonData = lesson;
+        window.currentLessonData = lesson;
         const skill = lesson.skill || (currentSkill || 'reading');
         if (skill === 'listening') {
           renderListeningLesson(lesson);
@@ -3059,12 +3064,24 @@
       });
 
       // 3. Flashcard Controls
-      document.getElementById('ffFlashcardScene')?.addEventListener('click', () => {
+      document.getElementById('ffFlashcardScene')?.addEventListener('click', (e) => {
+        if (e.target.closest('.flashcard-audio-btn, button, a')) return;
         if (window.TaigaFlash) window.TaigaFlash.flipFlashcard();
       });
-      document.getElementById('ffBtnCardAudio')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (window.TaigaFlash) window.TaigaFlash.speakCurrentCard();
+      document.addEventListener('click', (e) => {
+        const audioBtn = e.target.closest('#ffBtnCardAudio, #ffBtnCardAudioBack, .flashcard-audio-btn');
+        if (audioBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (window.TaigaFlash && typeof window.TaigaFlash.speakCurrentCard === 'function') {
+            window.TaigaFlash.speakCurrentCard();
+          } else {
+            const word = (document.getElementById('ffFrontWord')?.textContent || '').trim();
+            if (word && window.TaigaAudio) {
+              window.TaigaAudio.speak(word);
+            }
+          }
+        }
       });
       document.getElementById('ffBtnCardReview')?.addEventListener('click', () => {
         if (window.TaigaFlash) window.TaigaFlash.nextFlashcard(false);
@@ -3119,7 +3136,6 @@
         selectLevel(initialLevel, initialSkill);
       });
     </script>
-    <script src="/forumflash-engine.js?v=1.0"></script>
     <script src="/dictionary-widget.js?v=2.0" defer></script>
   </body>
 </html>

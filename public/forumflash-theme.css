@@ -2213,3 +2213,29 @@ body.ff-body {
   }
 }
 
+
+/* Flashcard Audio Button enhancements */
+.flashcard-audio-btn.speaking {
+  background: var(--ff-primary) !important;
+  color: #fff !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 0 14px rgba(39, 196, 181, 0.6) !important;
+  border-color: var(--ff-mint) !important;
+  animation: ffSpeakerPulse 0.9s infinite alternate;
+}
+
+.flashcard-back .flashcard-audio-btn {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(39, 196, 181, 0.4);
+  color: #fff;
+}
+
+.flashcard-back .flashcard-audio-btn:hover {
+  background: var(--ff-mint);
+  color: #fff;
+}
+
+@keyframes ffSpeakerPulse {
+  0% { transform: scale(1.05); box-shadow: 0 0 6px rgba(39, 196, 181, 0.4); }
+  100% { transform: scale(1.2); box-shadow: 0 0 16px rgba(39, 196, 181, 0.85); }
+}
