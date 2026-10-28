@@ -2388,3 +2388,89 @@ body.ff-body {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   10. FLOATING BACK TO TOP BUTTON (QUAY LÊN ĐẦU TRANG)
+   ========================================================================== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ff-primary, #003838);
+  color: #ffffff;
+  border: 1.5px solid rgba(39, 196, 181, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25), 0 0 14px rgba(39, 196, 181, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9980;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.85);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tự động nâng lên trên nút từ điển nếu trang có widget từ điển góc phải */
+body:has(.dict-widget-launcher) .back-to-top-btn,
+body.has-dict-launcher .back-to-top-btn {
+  bottom: 84px;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top-btn:hover {
+  background: #004d4d;
+  border-color: var(--ff-mint, #27c4b5);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32), 0 0 20px rgba(39, 196, 181, 0.55);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.back-to-top-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--ff-mint, #27c4b5);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s ease;
+}
+
+.back-to-top-btn:hover svg {
+  stroke: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .back-to-top-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+  }
+  body:has(.dict-widget-launcher) .back-to-top-btn,
+  body.has-dict-launcher .back-to-top-btn {
+    bottom: 76px;
+    right: 18px;
+  }
+  .back-to-top-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+

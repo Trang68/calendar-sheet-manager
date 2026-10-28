@@ -450,6 +450,65 @@
         openPwaModal();
       });
     });
+
+    // 6. Initialize Floating Scroll To Top Button
+    initScrollToTop();
+  }
+
+  // =================================================================
+  // FLOATING SCROLL TO TOP BUTTON (QUAY LÊN ĐẦU TRANG BẤT CỨ KHI NÀO)
+  // =================================================================
+  function initScrollToTop() {
+    let btn = document.getElementById('backToTopBtn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'backToTopBtn';
+      btn.className = 'back-to-top-btn';
+      btn.setAttribute('aria-label', 'Quay lên đầu trang');
+      btn.setAttribute('title', 'Quay lên đầu trang');
+      btn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      `;
+      document.body.appendChild(btn);
+    }
+
+    // Tự động kiểm tra widget từ điển để căn chỉnh vị trí không bị che
+    function checkDictLauncher() {
+      if (document.querySelector('.dict-widget-launcher')) {
+        document.body.classList.add('has-dict-launcher');
+      }
+    }
+    checkDictLauncher();
+    setTimeout(checkDictLauncher, 600);
+
+    let isThrottled = false;
+    function handleScroll() {
+      if (isThrottled) return;
+      isThrottled = true;
+      requestAnimationFrame(() => {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || 0;
+        if (scrollPos > 120) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+        isThrottled = false;
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    handleScroll();
   }
 
   // Open the Modal
