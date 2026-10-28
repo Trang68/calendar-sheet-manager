@@ -555,3 +555,31 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+
+/* ==========================================================================
+   NATIVE MOBILE APP FEEL & ULTRA-SMOOTH PERFORMANCE ENHANCEMENTS
+   ========================================================================== */
+html {
+  background-color: #003838 !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Eliminate 300ms mobile touch delay and blue/grey highlight flash */
+button, a, input, select, textarea, [role="button"], .flashcard-card-scene {
+  -webkit-tap-highlight-color: transparent !important;
+  touch-action: manipulation;
+}
+
+/* Prevent white rubber-band overscroll flicker in Standalone PWA mode */
+@media (display-mode: standalone) {
+  html, body {
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}

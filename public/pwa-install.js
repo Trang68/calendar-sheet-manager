@@ -133,8 +133,13 @@
     sessionStorage.setItem('taiga_last_silent_sync', String(now));
     console.log('[PWA] Silent resume sync triggered (' + reason + ')');
 
-    // 1. Cập nhật ngầm dữ liệu hiển thị (Zero-flicker, hoàn toàn không giật UI)
-    window.dispatchEvent(new CustomEvent('taiga:resume', { detail: { reason } }));
+    // 1. Cập nhật ngầm dữ liệu hiển thị (Zero-flicker, 120Hz sync via requestAnimationFrame)
+    requestAnimationFrame(() => {
+      window.dispatchEvent(new CustomEvent('taiga:resume', { detail: { reason } }));
+      if (window.TaigaAudio && typeof window.TaigaAudio.resumeSpeechQueue === 'function') {
+        window.TaigaAudio.resumeSpeechQueue();
+      }
+    });
 
     if (window.TaigaFlash) {
       if (typeof window.TaigaFlash.checkDailyStreak === 'function') window.TaigaFlash.checkDailyStreak();

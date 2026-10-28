@@ -64,6 +64,17 @@
       }
     }
 
+    
+    resumeSpeechQueue() {
+      if (this.synth) {
+        try {
+          if (this.synth.paused) {
+            this.synth.resume();
+          }
+        } catch (e) {}
+      }
+    }
+
     hasRussianVoice() {
       if (!this.hasInitVoices) this._loadVoices();
       return !!this.russianVoice;
