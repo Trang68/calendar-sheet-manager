@@ -441,7 +441,8 @@
       if (scene && !scene.__ffBound) {
         scene.__ffBound = true;
         scene.addEventListener("click", (e) => {
-          if (e.target.closest(".flashcard-audio-btn, button, a")) return;
+          const t = e && e.target && e.target.nodeType === 3 ? e.target.parentElement : (e ? e.target : null);
+          if (t && typeof t.closest === "function" && t.closest(".flashcard-audio-btn, button, a")) return;
           this.flipFlashcard();
         });
       }

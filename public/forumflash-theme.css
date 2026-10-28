@@ -1627,7 +1627,9 @@ body.ff-body {
   max-width: 620px;
   height: 340px;
   perspective: 1000px;
+  -webkit-perspective: 1000px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .flashcard-flipper {
@@ -1638,12 +1640,15 @@ body.ff-body {
   -webkit-transform-style: preserve-3d;
   will-change: transform;
   transform: translateZ(0);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transform: translateZ(0);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 24px;
 }
 
 .flashcard-card-scene.flipped .flashcard-flipper {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .flashcard-face {

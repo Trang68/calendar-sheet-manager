@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/test.css" />
-    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.1" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.0" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#003838" />
@@ -28,7 +28,7 @@
     <script src="/taiga-audio.js?v=1.0"></script>
     <script src="/pwa-install.js?v=2.0" defer></script>
     <script src="/vocab-25-topics.js?v=1.0"></script>
-    <script src="/forumflash-engine.js?v=2.2"></script>
+    <script src="/forumflash-engine.js?v=2.3"></script>
   </head>
   <body class="ff-body">
     <div class="game-shell">
@@ -3079,11 +3079,7 @@
         if (window.TaigaFlash) window.TaigaFlash.switchFlowStep('quiz');
       });
 
-      // 3. Flashcard Controls
-      document.getElementById('ffFlashcardScene')?.addEventListener('click', (e) => {
-        if (e.target.closest('.flashcard-audio-btn, button, a')) return;
-        if (window.TaigaFlash) window.TaigaFlash.flipFlashcard();
-      });
+      // 3. Flashcard Controls (Card flip & action buttons are managed by ForumFlashEngine)
       document.addEventListener('click', (e) => {
         const audioBtn = e.target.closest('#ffBtnCardAudio, #ffBtnCardAudioBack, .flashcard-audio-btn');
         if (audioBtn) {
