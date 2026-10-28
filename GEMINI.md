@@ -17,3 +17,4 @@
 ## 3. Git Workflow
 - Nhánh phát triển hiện tại: `feature/dictionary-widget`.
 - Chỉ merge sang `dev_update-main-photo-home-page` khi có yêu cầu cụ thể từ người dùng; không merge trực tiếp vào `main`.
+
