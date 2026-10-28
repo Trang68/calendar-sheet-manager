@@ -561,7 +561,6 @@
    NATIVE MOBILE APP FEEL & ULTRA-SMOOTH PERFORMANCE ENHANCEMENTS
    ========================================================================== */
 html {
-  background-color: #003838 !important;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }

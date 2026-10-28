@@ -40,89 +40,20 @@
     // When the new worker takes control, reload to ensure user is on latest version
     let isRefreshing = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      if (isRefreshing) return;
-      isRefreshing = true;
-      console.log('[PWA] Service Worker controller changed -> Nạp bản cập nhật mượt mà.');
-      performSmoothReload();
+      console.log('[PWA] Service Worker controller updated in background.');
     });
   }
 
   // -----------------------------------------------------------------
-  // SILENT BACKGROUND SYNC & RESUME (Zero-Flicker / Không giật màn UI)
-  // Khi người dùng mở lại app từ nền điện thoại (app switcher / icon),
-  // hệ thống sẽ:
-  // 1. Cập nhật ngầm (in-memory) streak, XP, dữ liệu mà KHÔNG reload trang (0% giật màn hình).
-  // 2. Kích hoạt Service Worker kiểm tra phiên bản mới ngầm trong nền.
-  // 3. Chỉ khi máy chủ thực sự có bản build mới (ETag thay đổi), mới chuyển tiếp mượt mà bằng màn che đồng màu nền (#003838).
+  // 100% SILENT BACKGROUND SYNC (Không reload, Không màn xanh, Không giật UI)
+  // Khi người dùng mở lại app từ nền điện thoại:
+  // - Cập nhật ngầm streak, XP, game tree trực tiếp trong bộ nhớ.
+  // - Service Worker kiểm tra và nạp bản mới ngầm trong nền.
+  // - Không bao giờ reload trang hoặc phủ màn hình gây khó chịu.
   // -----------------------------------------------------------------
   let lastHiddenTimestamp = 0;
-  const MIN_BACKGROUND_MS = 2500;   // Đi vào nền >= 2.5s khi mở lại sẽ kích hoạt đồng bộ
-  const SYNC_COOLDOWN_MS = 4000;    // Cooldown giữa các lần đồng bộ ngầm (4s)
-
-  let initialPageEtag = null;
-  let initialPageLastMod = null;
-
-  function initPageVersionTags() {
-    try {
-      fetch(window.location.href, { method: 'HEAD', cache: 'no-cache' })
-        .then((res) => {
-          if (res && res.headers) {
-            initialPageEtag = res.headers.get('etag');
-            initialPageLastMod = res.headers.get('last-modified');
-          }
-        })
-        .catch(() => {});
-    } catch (e) {}
-  }
-
-  if (typeof window !== 'undefined') {
-    setTimeout(initPageVersionTags, 1500);
-  }
-
-  function hasUnsavedDraft() {
-    try {
-      const activeEl = document.activeElement;
-      if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
-        if (activeEl.value && activeEl.value.trim().length > 0) return true;
-      }
-      const essay = document.getElementById('essayTextarea');
-      if (essay && essay.value && essay.value.trim().length > 10) return true;
-    } catch (e) {}
-    return false;
-  }
-
-  // Tải lại mượt mà: phủ màn che đồng màu nền #003838, triệt tiêu 100% nháy trắng
-  function performSmoothReload() {
-    if (hasUnsavedDraft()) return;
-
-    let veil = document.getElementById('pwaSmoothVeil');
-    if (!veil) {
-      veil = document.createElement('div');
-      veil.id = 'pwaSmoothVeil';
-      veil.style.cssText = [
-        'position: fixed',
-        'top: 0',
-        'left: 0',
-        'right: 0',
-        'bottom: 0',
-        'width: 100vw',
-        'height: 100vh',
-        'background-color: #003838',
-        'z-index: 2147483647',
-        'opacity: 0',
-        'transition: opacity 0.15s ease-in-out',
-        'pointer-events: none'
-      ].join(';');
-      document.body.appendChild(veil);
-    }
-
-    requestAnimationFrame(() => {
-      veil.style.opacity = '1';
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
-    });
-  }
+  const MIN_BACKGROUND_MS = 2500;
+  const SYNC_COOLDOWN_MS = 4000;
 
   function silentResumeSync(reason) {
     const now = Date.now();
@@ -131,9 +62,9 @@
       return;
     }
     sessionStorage.setItem('taiga_last_silent_sync', String(now));
-    console.log('[PWA] Silent resume sync triggered (' + reason + ')');
+    console.log('[PWA] Silent in-memory sync triggered (' + reason + ')');
 
-    // 1. Cập nhật ngầm dữ liệu hiển thị (Zero-flicker, 120Hz sync via requestAnimationFrame)
+    // 1. Cập nhật ngầm dữ liệu hiển thị (100% in-memory, 0% reload)
     requestAnimationFrame(() => {
       window.dispatchEvent(new CustomEvent('taiga:resume', { detail: { reason } }));
       if (window.TaigaAudio && typeof window.TaigaAudio.resumeSpeechQueue === 'function') {
@@ -154,25 +85,6 @@
       navigator.serviceWorker.getRegistration().then((reg) => {
         if (reg) reg.update().catch(() => {});
       }).catch(() => {});
-    }
-
-    // 3. Kiểm tra xem mã HTML trên máy chủ có phiên bản mới hay không (không làm gián đoạn người dùng)
-    if (!hasUnsavedDraft() && (initialPageEtag || initialPageLastMod)) {
-      fetch(window.location.href, { method: 'HEAD', cache: 'no-cache' })
-        .then((res) => {
-          if (!res || !res.headers) return;
-          const newEtag = res.headers.get('etag');
-          const newLastMod = res.headers.get('last-modified');
-          const isChanged = (initialPageEtag && newEtag && newEtag !== initialPageEtag) ||
-                            (initialPageLastMod && newLastMod && newLastMod !== initialPageLastMod);
-          if (isChanged) {
-            console.log('[PWA] Phát hiện phiên bản mã mới trên máy chủ -> Nạp mượt mà...');
-            initialPageEtag = newEtag;
-            initialPageLastMod = newLastMod;
-            performSmoothReload();
-          }
-        })
-        .catch(() => {});
     }
   }
 
