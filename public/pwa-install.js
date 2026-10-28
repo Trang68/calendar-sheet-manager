@@ -468,8 +468,9 @@
       btn.setAttribute('aria-label', 'Quay lên đầu trang');
       btn.setAttribute('title', 'Quay lên đầu trang');
       btn.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 19V5M5 12l7-7 7 7"/>
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m5 12 7-7 7 7"/>
+          <path d="M12 19V5"/>
         </svg>
       `;
       document.body.appendChild(btn);
