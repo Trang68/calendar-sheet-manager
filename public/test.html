@@ -28,7 +28,7 @@
     <script src="/taiga-audio.js?v=1.0"></script>
     <script src="/pwa-install.js?v=2.0" defer></script>
     <script src="/vocab-25-topics.js?v=1.0"></script>
-    <script src="/forumflash-engine.js?v=2.1"></script>
+    <script src="/forumflash-engine.js?v=2.2"></script>
   </head>
   <body class="ff-body">
     <div class="game-shell">
@@ -3099,18 +3099,7 @@
           }
         }
       });
-      document.getElementById('ffBtnCardReview')?.addEventListener('click', () => {
-        if (window.TaigaFlash) window.TaigaFlash.nextFlashcard(false);
-      });
-      document.getElementById('ffBtnCardMastered')?.addEventListener('click', () => {
-        if (window.TaigaFlash) window.TaigaFlash.nextFlashcard(true);
-      });
-      document.getElementById('ffBtnFinishStage1')?.addEventListener('click', () => {
-        if (window.TaigaFlash) {
-          window.TaigaFlash.switchFlowStep('quiz');
-          document.getElementById('activeLessonContainer')?.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+      // Note: Flashcard controls (Review, Mastered, FinishStage1) are bound directly by ForumFlashEngine to prevent duplicate events
 
       // 4. Spacebar shortcut to flip flashcards when in stage 1
       document.addEventListener('keydown', function(e) {

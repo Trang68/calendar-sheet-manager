@@ -282,67 +282,72 @@
     // ======================================================================
     // FLASHCARD COMPONENT (STAGE 1 OF LESSON)
     // ======================================================================
-        initFlashcardsFromLesson(lessonData) {
+    initFlashcardsFromLesson(lessonData) {
       this.flashcards = [];
       this.cardIndex = 0;
       this.cardFlipped = false;
 
       const data = lessonData || window.currentLessonData;
-      if (!data) {
-        // Fallback to DOM word if available
-        const domWord = (document.getElementById("ffFrontWord")?.textContent || "").trim();
-        const domGram = (document.getElementById("ffFrontGram")?.textContent || "").trim();
-        const domMeaning = (document.getElementById("ffBackMeaning")?.textContent || "").trim();
-        this.flashcards.push({
-          word: domWord || "Здравствуйте",
-          gram: domGram || "Từ vựng",
-          meaning: domMeaning || "Xin chào (trang trọng)",
-          example: "Здравствуйте, меня зовут Антон.",
-        });
-        this.renderFlashcard();
-        return;
-      }
 
-      if (Array.isArray(data.vocabCategories)) {
+      if (data && Array.isArray(data.vocabCategories)) {
         data.vocabCategories.forEach((cat) => {
           if (Array.isArray(cat.rows)) {
             cat.rows.forEach((r) => {
-              this.flashcards.push({
-                word: r.word,
-                gram: r.gram || cat.title || "Từ vựng",
-                meaning: r.meaning || "",
-                example: r.example || "",
-              });
+              if (r && r.word) {
+                this.flashcards.push({
+                  word: r.word,
+                  gram: r.gram || cat.title || "Từ vựng",
+                  meaning: r.meaning || "",
+                  example: r.example || "",
+                  ipa: r.ipa || "",
+                  phonetic: r.phonetic || ""
+                });
+              }
             });
           }
         });
       }
 
-      if (this.flashcards.length === 0 && Array.isArray(data.vocabulary)) {
+      if (this.flashcards.length === 0 && data && Array.isArray(data.vocabulary)) {
         data.vocabulary.forEach((v) => {
-          this.flashcards.push({
-            word: v.ru || v.word,
-            gram: v.pos || "Từ vựng",
-            meaning: v.vi || v.meaning || "",
-            example: v.example || "",
-          });
+          if (v && (v.ru || v.word)) {
+            this.flashcards.push({
+              word: v.ru || v.word,
+              gram: v.pos || "Từ vựng",
+              meaning: v.vi || v.meaning || "",
+              example: v.example || "",
+              ipa: v.ipa || "",
+              phonetic: v.phonetic || ""
+            });
+          }
         });
       }
 
-      // Fallback if no vocab exists in lesson
+      // Fallback: If no vocab exists in lesson (e.g. listening/speaking/writing), load 12+ rich cards from VOCAB_25_TOPICS
       if (this.flashcards.length === 0) {
-        this.flashcards.push({
-          word: "Здравствуйте",
-          gram: "lời chào lịch sự",
-          meaning: "Xin chào (trang trọng)",
-          example: "Здравствуйте, меня зовут Антон.",
-        });
-        this.flashcards.push({
-          word: "Спасибо",
-          gram: "từ cảm ơn",
-          meaning: "Cảm ơn bạn",
-          example: "Большое спасибо за урок!",
-        });
+        if (window.VOCAB_25_TOPICS && Array.isArray(window.VOCAB_25_TOPICS) && window.VOCAB_25_TOPICS[0] && Array.isArray(window.VOCAB_25_TOPICS[0].cards)) {
+          window.VOCAB_25_TOPICS[0].cards.forEach((c) => {
+            this.flashcards.push({
+              word: c.word,
+              gram: c.gram || "Từ vựng",
+              ipa: c.ipa || "",
+              phonetic: c.phonetic || "",
+              meaning: c.meaning || "",
+              exampleRu: c.exampleRu || "",
+              exampleVi: c.exampleVi || "",
+              example: c.exampleRu ? (c.exampleRu + (c.exampleVi ? " — " + c.exampleVi : "")) : (c.meaning || "")
+            });
+          });
+        } else {
+          // Minimal baseline
+          const words = [
+            { word: "Здравствуйте", gram: "lời chào lịch sự", meaning: "Xin chào (trang trọng)", example: "Здравствуйте, меня зовут Антон." },
+            { word: "Спасибо", gram: "từ cảm ơn", meaning: "Cảm ơn bạn", example: "Большое спасибо за урок!" },
+            { word: "Пожалуйста", gram: "lời đáp / nhờ vả", meaning: "Làm ơn / Không có chi", example: "Пожалуйста, скажите ещё раз." },
+            { word: "До свидания", gram: "lời chào tạm biệt", meaning: "Tạm biệt", example: "До свидания, до завтра!" }
+          ];
+          this.flashcards.push(...words);
+        }
       }
 
       this.renderFlashcard();
@@ -443,9 +448,11 @@
     }
 
     nextFlashcard(isMastered = false) {
+      if (!this.flashcards || this.flashcards.length === 0) return;
+
       if (isMastered) {
         const cur = this.flashcards[this.cardIndex];
-        if (cur) this.masteredWords.add(cur.word);
+        if (cur && cur.word) this.masteredWords.add(cur.word);
         this.addXP(5); // +5 XP per mastered word
       }
 
@@ -453,8 +460,11 @@
         this.cardIndex++;
         this.renderFlashcard();
       } else {
-        // Reached end of flashcards!
-        this.switchFlowStep("quiz");
+        // Reached end of flashcard set: Celebrate & stay in stage 1, allowing user to transition when ready
+        this.showToast(`🎉 Tuyệt vời! Bạn đã hoàn thành toàn bộ ${this.flashcards.length} thẻ (${this.masteredWords.size} từ đã thuộc)! Bấm "Sang Chặng 2" để bắt đầu làm bài kiểm tra.`);
+        // Loop back to card 1 so user can continue reviewing if they choose
+        this.cardIndex = 0;
+        this.renderFlashcard();
       }
     }
 
