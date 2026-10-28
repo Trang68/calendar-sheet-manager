@@ -514,7 +514,7 @@
 
     // 5. Inject Topbar Button into .ff-topbar-right if not present
     const topbarRight = document.querySelector('.ff-topbar-right');
-    if (topbarRight && !document.getElementById('btnHeaderInstallApp')) {
+    if (topbarRight && !document.getElementById('btnHeaderInstallApp') && !isStandalone) {
       const topBtn = document.createElement('button');
       topBtn.type = 'button';
       topBtn.id = 'btnHeaderInstallApp';

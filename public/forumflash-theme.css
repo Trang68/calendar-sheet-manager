@@ -2051,47 +2051,106 @@ body.ff-body {
   }
 }
 
-/* Smartphone Screens (<= 640px) */
-@media (max-width: 640px) {
+/* Responsive Topbar for Tablet & Mobile (<= 900px) */
+@media (max-width: 900px) {
   .game-topbar {
-    height: auto;
-    min-height: 60px;
-    padding: 8px 12px;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas:
+      "brand stats"
+      "nav nav" !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 8px 14px 10px !important;
+    row-gap: 8px !important;
+    column-gap: 10px !important;
   }
 
   .ff-brand {
-    font-size: 1.15rem;
+    grid-area: brand !important;
+    justify-self: start !important;
+    gap: 8px !important;
+    text-decoration: none !important;
   }
 
-  .ff-nav-pills {
-    display: flex;
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    overflow-x: auto;
-    padding: 3px;
+  .ff-brand > span:first-child {
+    font-size: 1.45rem !important;
+    line-height: 1 !important;
   }
 
-  .ff-nav-tab {
-    padding: 5px 12px;
-    font-size: 0.78rem;
-    white-space: nowrap;
+  .ff-logo-word {
+    font-size: 1.25rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .ff-logo-sub {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.08em !important;
   }
 
   .ff-topbar-right {
-    gap: 6px;
+    grid-area: stats !important;
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
   }
 
   .ff-stat-chip {
-    padding: 4px 8px;
-    font-size: 0.72rem;
+    padding: 4px 8px !important;
+    font-size: 0.75rem !important;
+    border-radius: 9999px !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
-  .ff-btn-account {
-    padding: 5px 10px;
-    font-size: 0.75rem;
+  .ff-stat-chip span:first-child {
+    font-size: 0.85rem !important;
+  }
+
+  .ff-btn-install-app {
+    padding: 4px 8px !important;
+    font-size: 0.72rem !important;
+    border-radius: 9999px !important;
+    gap: 3px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .ff-nav-pills {
+    grid-area: nav !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 3px 4px !important;
+    border-radius: 9999px !important;
+    gap: 2px !important;
+  }
+
+  .ff-nav-pills::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .ff-nav-tab {
+    padding: 6px 13px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    gap: 5px !important;
+  }
+
+  .ff-nav-tab .nav-icon {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .hero-card-route {
@@ -2257,4 +2316,10 @@ body.ff-body {
 @keyframes ffSpeakerPulse {
   0% { transform: scale(1.05); box-shadow: 0 0 6px rgba(39, 196, 181, 0.4); }
   100% { transform: scale(1.2); box-shadow: 0 0 16px rgba(39, 196, 181, 0.85); }
+}
+
+@media (display-mode: standalone) {
+  #btnHeaderInstallApp, .ff-btn-install-app {
+    display: none !important;
+  }
 }
