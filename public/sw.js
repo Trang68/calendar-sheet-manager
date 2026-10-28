@@ -1,5 +1,5 @@
 // TAIGA TALK Progressive Web App (PWA) Service Worker
-const CACHE_NAME = 'taiga-talk-v1.2';
+const CACHE_NAME = 'taiga-talk-v1.3';
 const PRECACHE_ASSETS = [
   '/',
   '/home',
@@ -33,6 +33,14 @@ self.addEventListener('install', (event) => {
 });
 
 // Activate: Clean up previous caches
+
+// Message: Listen for SKIP_WAITING from client
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {

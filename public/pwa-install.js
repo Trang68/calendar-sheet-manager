@@ -11,19 +11,22 @@
 (function () {
   'use strict';
 
-  // 1. Register Service Worker
+  // 1. Register Service Worker & Handle Version Upgrades
+  let swRegistration = null;
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker
         .register('/sw.js')
         .then((reg) => {
+          swRegistration = reg;
           // Check for worker updates
           reg.addEventListener('updatefound', () => {
             const newWorker = reg.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  console.log('[PWA] Phiên bản mới đã sẵn sàng.');
+                  console.log('[PWA] Phiên bản mới đã cài đặt -> Yêu cầu kích hoạt ngay.');
+                  newWorker.postMessage({ type: 'SKIP_WAITING' });
                 }
               });
             }
@@ -33,7 +36,104 @@
           console.warn('[PWA] Service worker registration error:', err);
         });
     });
+
+    // When the new worker takes control, reload to ensure user is on latest version
+    let isRefreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (isRefreshing) return;
+      isRefreshing = true;
+      console.log('[PWA] Service Worker controller changed -> Tự động nạp bản cập nhật mới.');
+      window.location.reload();
+    });
   }
+
+  // -----------------------------------------------------------------
+  // AUTO-RELOAD ON RESUME FROM BACKGROUND (PWA / Mobile / Standalone)
+  // Khi người dùng mở lại app từ nền điện thoại (app switcher / icon),
+  // tự động reload lại trang để nạp dữ liệu và giao diện mới nhất.
+  // -----------------------------------------------------------------
+  let lastHiddenTimestamp = 0;
+  const MIN_BACKGROUND_MS = 2500;   // Đi vào nền >= 2.5s thì khi mở lại sẽ reload
+  const RELOAD_COOLDOWN_MS = 5000;  // Chống reload lặp lại trong vòng 5s
+
+  function hasUnsavedDraft() {
+    try {
+      const activeEl = document.activeElement;
+      if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
+        if (activeEl.value && activeEl.value.trim().length > 0) return true;
+      }
+      const essay = document.getElementById('essayTextarea');
+      if (essay && essay.value && essay.value.trim().length > 10) return true;
+    } catch (e) {}
+    return false;
+  }
+
+  function triggerResumeReload(reason) {
+    const now = Date.now();
+    const lastReload = parseInt(sessionStorage.getItem('taiga_last_resume_reload') || '0', 10);
+    if (now - lastReload < RELOAD_COOLDOWN_MS) {
+      return;
+    }
+
+    if (hasUnsavedDraft()) {
+      console.log('[PWA] Bỏ qua reload (' + reason + ') vì đang có nội dung nhập dở dang.');
+      return;
+    }
+
+    sessionStorage.setItem('taiga_last_resume_reload', String(now));
+    console.log('[PWA] Đã phát hiện mở lại app từ nền (' + reason + ') -> Đang tải lại trang...');
+
+    // Kích hoạt kiểm tra Service Worker cập nhật ngay lập tức
+    if (swRegistration && typeof swRegistration.update === 'function') {
+      swRegistration.update().catch(() => {});
+    } else if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration().then((reg) => {
+        if (reg) reg.update().catch(() => {});
+      }).catch(() => {});
+    }
+
+    // Tự động tải lại trang với cache revalidation
+    window.location.reload();
+  }
+
+  // A. Sự kiện visibilitychange (Chuẩn phát hiện app ẩn / hiện lại trên iOS & Android)
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      lastHiddenTimestamp = Date.now();
+      sessionStorage.setItem('taiga_last_hidden_time', String(lastHiddenTimestamp));
+    } else if (document.visibilityState === 'visible') {
+      const savedHidden = parseInt(sessionStorage.getItem('taiga_last_hidden_time') || '0', 10);
+      const hiddenSince = lastHiddenTimestamp || savedHidden;
+      if (hiddenSince > 0 && (Date.now() - hiddenSince) >= MIN_BACKGROUND_MS) {
+        triggerResumeReload('visibilitychange');
+      }
+      lastHiddenTimestamp = 0;
+      sessionStorage.removeItem('taiga_last_hidden_time');
+    }
+  });
+
+  // B. Sự kiện pageshow (Đặc biệt quan trọng cho iOS Safari / WebKit khi mở lại từ bfcache)
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      triggerResumeReload('pageshow-persisted');
+    }
+  });
+
+  // C. Sự kiện window focus & blur (Bổ trợ cho các trình duyệt Android WebAPK)
+  window.addEventListener('blur', () => {
+    lastHiddenTimestamp = Date.now();
+    sessionStorage.setItem('taiga_last_hidden_time', String(lastHiddenTimestamp));
+  });
+
+  window.addEventListener('focus', () => {
+    const savedHidden = parseInt(sessionStorage.getItem('taiga_last_hidden_time') || '0', 10);
+    const hiddenSince = lastHiddenTimestamp || savedHidden;
+    if (hiddenSince > 0 && (Date.now() - hiddenSince) >= MIN_BACKGROUND_MS) {
+      triggerResumeReload('window-focus');
+    }
+    lastHiddenTimestamp = 0;
+    sessionStorage.removeItem('taiga_last_hidden_time');
+  });
 
   // 2. Track Native Install Prompt (Desktop Chrome / Edge / Android)
   let deferredPrompt = null;
