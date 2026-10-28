@@ -18,7 +18,7 @@
   class ForumFlashEngine {
     constructor() {
       this.xp = this.loadNumber(STORAGE_XP, 120);
-      this.streak = this.loadStreakNumber(STORAGE_STREAK, 99);
+      this.streak = this.loadNumber(STORAGE_STREAK, 99);
       this.currentStage = this.calculateStage(this.xp);
       this.activeFlowStep = "flashcard"; // 'flashcard' | 'quiz'
 
@@ -26,6 +26,7 @@
       this.flashcards = [];
       this.cardIndex = 0;
       this.cardFlipped = false;
+      this.bindFlashcardControls();
       this.masteredWords = new Set();
 
       this.checkDailyStreak();
@@ -38,6 +39,10 @@
       } catch (e) {
         return fallback;
       }
+    }
+
+    loadStreakNumber(key, fallback) {
+      return this.loadNumber(key, fallback);
     }
 
     saveNumber(key, val) {
@@ -299,7 +304,7 @@
       }
 
       if (Array.isArray(data.vocabCategories)) {
-        lessonData.vocabCategories.forEach((cat) => {
+        data.vocabCategories.forEach((cat) => {
           if (Array.isArray(cat.rows)) {
             cat.rows.forEach((r) => {
               this.flashcards.push({
@@ -314,7 +319,7 @@
       }
 
       if (this.flashcards.length === 0 && Array.isArray(data.vocabulary)) {
-        lessonData.vocabulary.forEach((v) => {
+        data.vocabulary.forEach((v) => {
           this.flashcards.push({
             word: v.ru || v.word,
             gram: v.pos || "Từ vựng",
@@ -399,6 +404,42 @@
       if (!scene) return;
       this.cardFlipped = !this.cardFlipped;
       scene.classList.toggle("flipped", this.cardFlipped);
+    }
+
+        bindFlashcardControls() {
+      const btnReview = document.getElementById("ffBtnCardReview");
+      if (btnReview && !btnReview.__ffBound) {
+        btnReview.__ffBound = true;
+        btnReview.addEventListener("click", (e) => {
+          e.preventDefault();
+          this.nextFlashcard(false);
+        });
+      }
+      const btnMastered = document.getElementById("ffBtnCardMastered");
+      if (btnMastered && !btnMastered.__ffBound) {
+        btnMastered.__ffBound = true;
+        btnMastered.addEventListener("click", (e) => {
+          e.preventDefault();
+          this.nextFlashcard(true);
+        });
+      }
+      const btnFinish = document.getElementById("ffBtnFinishStage1");
+      if (btnFinish && !btnFinish.__ffBound) {
+        btnFinish.__ffBound = true;
+        btnFinish.addEventListener("click", (e) => {
+          e.preventDefault();
+          this.switchFlowStep("quiz");
+          document.getElementById("activeLessonContainer")?.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+      const scene = document.getElementById("ffFlashcardScene");
+      if (scene && !scene.__ffBound) {
+        scene.__ffBound = true;
+        scene.addEventListener("click", (e) => {
+          if (e.target.closest(".flashcard-audio-btn, button, a")) return;
+          this.flipFlashcard();
+        });
+      }
     }
 
     nextFlashcard(isMastered = false) {
@@ -765,6 +806,7 @@
     window.TaigaFlash.updateHeaderStats();
     window.TaigaFlash.renderGrowthSection();
     window.TaigaFlash.initVocabTopicsSystem();
+    window.TaigaFlash.bindFlashcardControls();
 
     if (window.currentLessonData) {
       window.TaigaFlash.initFlashcardsFromLesson(window.currentLessonData);
