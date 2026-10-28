@@ -19,10 +19,9 @@
     <link rel="stylesheet" href="/pwa-install.css?v=1.0" />
     <script src="/pwa-install.js?v=2.0" defer></script>
   </head>
-  <body>
-    <main class="page">
-      <!-- 1. UNIFIED TAIGA TALK TOPBAR -->
-      <header class="game-topbar" style="margin-bottom: 24px;">
+  <body class="ff-body">
+    <!-- 1. UNIFIED TAIGA TALK TOPBAR -->
+      <header class="game-topbar">
         <a href="/home" class="ff-brand" aria-label="Về trang chủ TAIGA TALK">
           <span style="font-size: 1.8rem;">🇷🇺</span>
           <div class="ff-logo-mark">
@@ -72,6 +71,8 @@
           <button id="logoutBtn" class="logout-btn" style="display:none">Đăng xuất</button>
         </div>
       </header>
+
+    <main class="page">
 
       <div class="crm-hero-bar" style="margin-bottom: 20px;">
         <h1 class="brand" style="margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.75rem);">Cổng thông tin & Lịch học 1-1</h1>
@@ -341,7 +342,8 @@
 
         loginPanel.style.display = isLoggedIn ? "none" : "block";
         appPanel.classList.toggle("visible", isLoggedIn);
-        logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
+        logoutBtn.classList.toggle("visible", isLoggedIn);
+        logoutBtn.style.display = isLoggedIn ? "inline-flex" : "none";
         debtOnlyBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
         toggleRateBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
         manageAccountsBtn.style.display = isLoggedIn && user.role === "teacher" ? "inline-block" : "none";
