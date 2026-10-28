@@ -42,19 +42,42 @@
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (isRefreshing) return;
       isRefreshing = true;
-      console.log('[PWA] Service Worker controller changed -> Tự động nạp bản cập nhật mới.');
-      window.location.reload();
+      console.log('[PWA] Service Worker controller changed -> Nạp bản cập nhật mượt mà.');
+      performSmoothReload();
     });
   }
 
   // -----------------------------------------------------------------
-  // AUTO-RELOAD ON RESUME FROM BACKGROUND (PWA / Mobile / Standalone)
+  // SILENT BACKGROUND SYNC & RESUME (Zero-Flicker / Không giật màn UI)
   // Khi người dùng mở lại app từ nền điện thoại (app switcher / icon),
-  // tự động reload lại trang để nạp dữ liệu và giao diện mới nhất.
+  // hệ thống sẽ:
+  // 1. Cập nhật ngầm (in-memory) streak, XP, dữ liệu mà KHÔNG reload trang (0% giật màn hình).
+  // 2. Kích hoạt Service Worker kiểm tra phiên bản mới ngầm trong nền.
+  // 3. Chỉ khi máy chủ thực sự có bản build mới (ETag thay đổi), mới chuyển tiếp mượt mà bằng màn che đồng màu nền (#003838).
   // -----------------------------------------------------------------
   let lastHiddenTimestamp = 0;
-  const MIN_BACKGROUND_MS = 2500;   // Đi vào nền >= 2.5s thì khi mở lại sẽ reload
-  const RELOAD_COOLDOWN_MS = 5000;  // Chống reload lặp lại trong vòng 5s
+  const MIN_BACKGROUND_MS = 2500;   // Đi vào nền >= 2.5s khi mở lại sẽ kích hoạt đồng bộ
+  const SYNC_COOLDOWN_MS = 4000;    // Cooldown giữa các lần đồng bộ ngầm (4s)
+
+  let initialPageEtag = null;
+  let initialPageLastMod = null;
+
+  function initPageVersionTags() {
+    try {
+      fetch(window.location.href, { method: 'HEAD', cache: 'no-cache' })
+        .then((res) => {
+          if (res && res.headers) {
+            initialPageEtag = res.headers.get('etag');
+            initialPageLastMod = res.headers.get('last-modified');
+          }
+        })
+        .catch(() => {});
+    } catch (e) {}
+  }
+
+  if (typeof window !== 'undefined') {
+    setTimeout(initPageVersionTags, 1500);
+  }
 
   function hasUnsavedDraft() {
     try {
@@ -68,22 +91,58 @@
     return false;
   }
 
-  function triggerResumeReload(reason) {
+  // Tải lại mượt mà: phủ màn che đồng màu nền #003838, triệt tiêu 100% nháy trắng
+  function performSmoothReload() {
+    if (hasUnsavedDraft()) return;
+
+    let veil = document.getElementById('pwaSmoothVeil');
+    if (!veil) {
+      veil = document.createElement('div');
+      veil.id = 'pwaSmoothVeil';
+      veil.style.cssText = [
+        'position: fixed',
+        'top: 0',
+        'left: 0',
+        'right: 0',
+        'bottom: 0',
+        'width: 100vw',
+        'height: 100vh',
+        'background-color: #003838',
+        'z-index: 2147483647',
+        'opacity: 0',
+        'transition: opacity 0.15s ease-in-out',
+        'pointer-events: none'
+      ].join(';');
+      document.body.appendChild(veil);
+    }
+
+    requestAnimationFrame(() => {
+      veil.style.opacity = '1';
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
+    });
+  }
+
+  function silentResumeSync(reason) {
     const now = Date.now();
-    const lastReload = parseInt(sessionStorage.getItem('taiga_last_resume_reload') || '0', 10);
-    if (now - lastReload < RELOAD_COOLDOWN_MS) {
+    const lastSync = parseInt(sessionStorage.getItem('taiga_last_silent_sync') || '0', 10);
+    if (now - lastSync < SYNC_COOLDOWN_MS) {
       return;
     }
+    sessionStorage.setItem('taiga_last_silent_sync', String(now));
+    console.log('[PWA] Silent resume sync triggered (' + reason + ')');
 
-    if (hasUnsavedDraft()) {
-      console.log('[PWA] Bỏ qua reload (' + reason + ') vì đang có nội dung nhập dở dang.');
-      return;
+    // 1. Cập nhật ngầm dữ liệu hiển thị (Zero-flicker, hoàn toàn không giật UI)
+    window.dispatchEvent(new CustomEvent('taiga:resume', { detail: { reason } }));
+
+    if (window.TaigaFlash) {
+      if (typeof window.TaigaFlash.checkDailyStreak === 'function') window.TaigaFlash.checkDailyStreak();
+      if (typeof window.TaigaFlash.updateHeaderStats === 'function') window.TaigaFlash.updateHeaderStats();
+      if (typeof window.TaigaFlash.renderGrowthSection === 'function') window.TaigaFlash.renderGrowthSection();
     }
 
-    sessionStorage.setItem('taiga_last_resume_reload', String(now));
-    console.log('[PWA] Đã phát hiện mở lại app từ nền (' + reason + ') -> Đang tải lại trang...');
-
-    // Kích hoạt kiểm tra Service Worker cập nhật ngay lập tức
+    // 2. Kích hoạt Service Worker kiểm tra cập nhật ngầm trong nền
     if (swRegistration && typeof swRegistration.update === 'function') {
       swRegistration.update().catch(() => {});
     } else if ('serviceWorker' in navigator) {
@@ -92,11 +151,27 @@
       }).catch(() => {});
     }
 
-    // Tự động tải lại trang với cache revalidation
-    window.location.reload();
+    // 3. Kiểm tra xem mã HTML trên máy chủ có phiên bản mới hay không (không làm gián đoạn người dùng)
+    if (!hasUnsavedDraft() && (initialPageEtag || initialPageLastMod)) {
+      fetch(window.location.href, { method: 'HEAD', cache: 'no-cache' })
+        .then((res) => {
+          if (!res || !res.headers) return;
+          const newEtag = res.headers.get('etag');
+          const newLastMod = res.headers.get('last-modified');
+          const isChanged = (initialPageEtag && newEtag && newEtag !== initialPageEtag) ||
+                            (initialPageLastMod && newLastMod && newLastMod !== initialPageLastMod);
+          if (isChanged) {
+            console.log('[PWA] Phát hiện phiên bản mã mới trên máy chủ -> Nạp mượt mà...');
+            initialPageEtag = newEtag;
+            initialPageLastMod = newLastMod;
+            performSmoothReload();
+          }
+        })
+        .catch(() => {});
+    }
   }
 
-  // A. Sự kiện visibilitychange (Chuẩn phát hiện app ẩn / hiện lại trên iOS & Android)
+  // A. Sự kiện visibilitychange (Phát hiện mở lại app trên cả iOS & Android)
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
       lastHiddenTimestamp = Date.now();
@@ -105,21 +180,21 @@
       const savedHidden = parseInt(sessionStorage.getItem('taiga_last_hidden_time') || '0', 10);
       const hiddenSince = lastHiddenTimestamp || savedHidden;
       if (hiddenSince > 0 && (Date.now() - hiddenSince) >= MIN_BACKGROUND_MS) {
-        triggerResumeReload('visibilitychange');
+        silentResumeSync('visibilitychange');
       }
       lastHiddenTimestamp = 0;
       sessionStorage.removeItem('taiga_last_hidden_time');
     }
   });
 
-  // B. Sự kiện pageshow (Đặc biệt quan trọng cho iOS Safari / WebKit khi mở lại từ bfcache)
+  // B. Sự kiện pageshow (Xử lý bfcache cho iOS Safari WebClip)
   window.addEventListener('pageshow', (event) => {
     if (event.persisted) {
-      triggerResumeReload('pageshow-persisted');
+      silentResumeSync('pageshow-persisted');
     }
   });
 
-  // C. Sự kiện window focus & blur (Bổ trợ cho các trình duyệt Android WebAPK)
+  // C. Sự kiện window focus & blur (Cho Android WebAPK)
   window.addEventListener('blur', () => {
     lastHiddenTimestamp = Date.now();
     sessionStorage.setItem('taiga_last_hidden_time', String(lastHiddenTimestamp));
@@ -129,7 +204,7 @@
     const savedHidden = parseInt(sessionStorage.getItem('taiga_last_hidden_time') || '0', 10);
     const hiddenSince = lastHiddenTimestamp || savedHidden;
     if (hiddenSince > 0 && (Date.now() - hiddenSince) >= MIN_BACKGROUND_MS) {
-      triggerResumeReload('window-focus');
+      silentResumeSync('window-focus');
     }
     lastHiddenTimestamp = 0;
     sessionStorage.removeItem('taiga_last_hidden_time');
