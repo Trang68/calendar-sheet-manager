@@ -136,28 +136,29 @@ body.ff-body {
 .ff-nav-pills {
   display: flex;
   align-items: center;
-  background: #eeebe3;
-  padding: 4px;
+  background: rgba(0, 70, 70, 0.04);
+  padding: 3px 5px;
   border-radius: var(--ff-radius-full);
-  gap: 2px;
+  gap: 3px;
+  border: 1px solid rgba(0, 70, 70, 0.06);
 }
 
 .ff-nav-tab {
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   font-size: 0.88rem;
-  font-weight: 700;
-  color: #475569;
-  padding: 8px 18px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 7px 16px;
   border-radius: var(--ff-radius-full);
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  position: relative;
 }
-
 
 .ff-nav-tab .nav-icon {
   width: 15px;
@@ -167,21 +168,30 @@ body.ff-body {
   flex-shrink: 0;
   display: inline-block;
   vertical-align: middle;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.ff-nav-tab:hover .nav-icon {
-  transform: translateY(-1px);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
 }
 
 .ff-nav-tab:hover {
   color: var(--ff-primary);
 }
 
+.ff-nav-tab:hover .nav-icon {
+  transform: translateY(-1px);
+}
+
+/* Active State: Minimalist, Bold, Brand Teal & Soft Mint Glow (No chunky box) */
 .ff-nav-tab.active {
-  background: #fff;
-  color: var(--ff-primary);
-  box-shadow: 0 3px 10px rgba(0, 70, 70, 0.08);
+  background: rgba(39, 196, 181, 0.08) !important;
+  color: var(--ff-primary) !important;
+  font-weight: 800 !important;
+  border-color: rgba(39, 196, 181, 0.32) !important;
+  box-shadow: 0 0 14px rgba(39, 196, 181, 0.22) !important;
+  text-shadow: 0 0 10px rgba(39, 196, 181, 0.35);
+}
+
+.ff-nav-tab.active .nav-icon {
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px rgba(39, 196, 181, 0.55));
 }
 
 /* Right topbar: Gamification stats */
