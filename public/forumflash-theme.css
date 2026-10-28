@@ -136,21 +136,19 @@ body.ff-body {
 .ff-nav-pills {
   display: flex;
   align-items: center;
-  background: rgba(0, 70, 70, 0.04);
-  padding: 3px 5px;
-  border-radius: var(--ff-radius-full);
-  gap: 3px;
-  border: 1px solid rgba(0, 70, 70, 0.06);
+  background: transparent;
+  padding: 2px 0;
+  gap: 4px;
+  border: none;
 }
 
 .ff-nav-tab {
   background: transparent;
-  border: 1px solid transparent;
+  border: none !important;
   font-size: 0.88rem;
   font-weight: 600;
   color: #64748b;
-  padding: 7px 16px;
-  border-radius: var(--ff-radius-full);
+  padding: 6px 14px;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -158,6 +156,7 @@ body.ff-body {
   align-items: center;
   gap: 6px;
   position: relative;
+  outline: none;
 }
 
 .ff-nav-tab .nav-icon {
@@ -179,19 +178,19 @@ body.ff-body {
   transform: translateY(-1px);
 }
 
-/* Active State: Minimalist, Bold, Brand Teal & Soft Mint Glow (No chunky box) */
+/* Active State: Clean Bold Text + Brand Color + Soft Glow (No border circle / No box) */
 .ff-nav-tab.active {
-  background: rgba(39, 196, 181, 0.08) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   color: var(--ff-primary) !important;
   font-weight: 800 !important;
-  border-color: rgba(39, 196, 181, 0.32) !important;
-  box-shadow: 0 0 14px rgba(39, 196, 181, 0.22) !important;
-  text-shadow: 0 0 10px rgba(39, 196, 181, 0.35);
+  text-shadow: 0 0 12px rgba(39, 196, 181, 0.65), 0 0 22px rgba(39, 196, 181, 0.35) !important;
 }
 
 .ff-nav-tab.active .nav-icon {
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 6px rgba(39, 196, 181, 0.55));
+  stroke-width: 2.6 !important;
+  filter: drop-shadow(0 0 6px rgba(39, 196, 181, 0.75)) !important;
 }
 
 /* Right topbar: Gamification stats */
