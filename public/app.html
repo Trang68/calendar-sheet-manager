@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=1.0" />
     <link rel="stylesheet" href="/app.css" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#003838" />
@@ -20,16 +21,44 @@
   </head>
   <body>
     <main class="page">
-      <header class="topbar">
-        <div>
-          <h1 class="brand">TAIGA CRM - Quan ly hoc vien 1-1</h1>
-          <p class="sub">Dashboard tinh so buoi hoc va hoc phi theo thang, thay cho quy trinh Google Sheet embed.</p>
-        </div>
-        <div class="top-links">
-          <!-- <a href="/home">Landing page</a> -->
-          <button id="logoutBtn" class="logout-btn" style="display:none">Dang xuat</button>
+      <!-- 1. UNIFIED TAIGA TALK TOPBAR -->
+      <header class="game-topbar" style="margin-bottom: 24px;">
+        <a href="/home" class="ff-brand" aria-label="Về trang chủ TAIGA TALK">
+          <span style="font-size: 1.8rem;">🇷🇺</span>
+          <div class="ff-logo-mark">
+            <span class="ff-logo-word">
+              Taiga<span class="ff-logo-o"><span><i></i><i></i><i></i></span></span>Talk<span class="ff-logo-dot">.</span>
+            </span>
+            <small class="ff-logo-sub">TỪ TAIGA TALK</small>
+          </div>
+        </a>
+
+        <!-- Main Navigation Pills -->
+        <nav class="ff-nav-pills" aria-label="Điều hướng chính">
+          <a href="/home" class="ff-nav-tab">Trang chủ</a>
+          <a href="/roadmap" class="ff-nav-tab">Lộ trình</a>
+          <a href="/articles" class="ff-nav-tab">Bài viết</a>
+          <a href="/test" class="ff-nav-tab">Luyện tập / Test</a>
+          <a href="/app" class="ff-nav-tab active">Lịch học</a>
+          <a href="/contact" class="ff-nav-tab">Liên hệ</a>
+        </nav>
+
+        <!-- Topbar Right: Gamification Stats & Logout -->
+        <div class="ff-topbar-right">
+          <span class="ff-stat-chip streak" title="Chuỗi ngày học liên tục">
+            <span>🔥</span> <b id="ffHeaderStreak">99</b>
+          </span>
+          <span class="ff-stat-chip xp" title="Điểm kinh nghiệm tích lũy">
+            <span>⚡</span> <b id="ffHeaderXp">120 XP</b>
+          </span>
+          <button id="logoutBtn" class="logout-btn" style="display:none">Đăng xuất</button>
         </div>
       </header>
+
+      <div class="crm-hero-bar" style="margin-bottom: 20px;">
+        <h1 class="brand" style="margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.75rem);">Cổng thông tin & Lịch học 1-1</h1>
+        <p class="sub" style="margin: 4px 0 0;">Tra cứu tiến độ học tập, lịch học chi tiết và học phí minh bạch.</p>
+      </div>
 
       <section id="loginPanel" class="panel login-wrap">
         <div class="login-head">
