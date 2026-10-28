@@ -158,6 +158,22 @@ body.ff-body {
   gap: 6px;
 }
 
+
+.ff-nav-tab .nav-icon {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2.1;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ff-nav-tab:hover .nav-icon {
+  transform: translateY(-1px);
+}
+
 .ff-nav-tab:hover {
   color: var(--ff-primary);
 }
