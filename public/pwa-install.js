@@ -40,7 +40,10 @@
     // When the new worker takes control, reload to ensure user is on latest version
     let isRefreshing = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      console.log('[PWA] Service Worker controller updated in background.');
+      if (isRefreshing) return;
+      isRefreshing = true;
+      console.log('[PWA] Bản deploy mới đã sẵn sàng -> Tự động tải lại bản mới.');
+      window.location.reload();
     });
   }
 
