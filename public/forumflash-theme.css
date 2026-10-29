@@ -45,6 +45,11 @@ html[data-swipe-direction='back']::view-transition-new(root) {
   animation: 240ms cubic-bezier(0.22, 1, 0.36, 1) both ff-swipe-in-back;
 }
 
+html[data-swipe-direction='preview']::view-transition-old(root),
+html[data-swipe-direction='preview']::view-transition-new(root) {
+  animation-duration: 0.01ms !important;
+}
+
 ::view-transition-group(game-topbar) {
   animation-duration: 0.01ms;
 }
