@@ -2181,6 +2181,7 @@ body.ff-body {
 /* Responsive Topbar for Tablet & Mobile (<= 900px) */
 @media (max-width: 900px) {
   .game-topbar {
+    view-transition-name: none;
     display: grid !important;
     grid-template-columns: auto 1fr !important;
     grid-template-areas:
