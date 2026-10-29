@@ -583,7 +583,7 @@
   }
 
   function initSwipeTabNavigation() {
-    const routes = ['/home', '/roadmap', '/articles', '/test'];
+    const routes = ['/home', '/roadmap', '/articles', '/test', '/app', '/contact'];
     const currentPath = window.location.pathname.replace(/\/+$/, '') || '/home';
     const currentIndex = routes.indexOf(currentPath);
     if (currentIndex === -1) return;
@@ -643,15 +643,18 @@
     };
 
     const createPreview = (targetIndex, direction) => {
+      const header = document.querySelector('.game-topbar');
+      const headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
       const frame = document.createElement('iframe');
       frame.title = 'Bản xem trước trang tiếp theo';
       frame.setAttribute('aria-hidden', 'true');
       Object.assign(frame.style, {
         position: 'fixed',
-        inset: '0 auto 0 0',
+        top: `${headerBottom}px`,
+        right: '0',
+        bottom: '0',
+        left: '0',
         width: '100vw',
-        height: '100vh',
-        height: '100dvh',
         border: '0',
         zIndex: '2147483000',
         background: '#fff',
@@ -659,6 +662,21 @@
         willChange: 'transform',
         transform: `translateX(${direction < 0 ? '100vw' : '-100vw'})`,
       });
+      frame.addEventListener(
+        'load',
+        () => {
+          const previewStyle = frame.contentDocument?.createElement('style');
+          if (!previewStyle) return;
+          previewStyle.textContent = `
+            .game-topbar,
+            .dict-widget-launcher,
+            .dict-widget-panel,
+            .dict-selection-popup { display: none !important; }
+          `;
+          frame.contentDocument.head.appendChild(previewStyle);
+        },
+        { once: true }
+      );
       frame.src = routes[targetIndex];
       document.body.appendChild(frame);
       previewFrame = frame;
@@ -735,11 +753,7 @@
         if (!gesture.direction) {
           if (Math.abs(deltaX) < 18 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
           const direction = deltaX < 0 ? -1 : 1;
-          const targetIndex = currentIndex + (direction < 0 ? 1 : -1);
-          if (targetIndex < 0 || targetIndex >= routes.length) {
-            gesture.cancelled = true;
-            return;
-          }
+          const targetIndex = (currentIndex + (direction < 0 ? 1 : -1) + routes.length) % routes.length;
           gesture.direction = direction;
           gesture.targetIndex = targetIndex;
           createPreview(targetIndex, direction);
