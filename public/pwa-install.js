@@ -582,14 +582,201 @@
     }
   }
 
+  function initSwipeTabNavigation() {
+    const routes = ['/home', '/roadmap', '/articles', '/test'];
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/home';
+    const currentIndex = routes.indexOf(currentPath);
+    if (currentIndex === -1) return;
+
+    const ignoredTargets = [
+      'a',
+      'button',
+      'input',
+      'textarea',
+      'select',
+      'label',
+      '[role="button"]',
+      '[contenteditable="true"]',
+      '[data-swipe-ignore]',
+      '.dict-widget-panel',
+      '.dict-widget-launcher',
+      '.dict-selection-popup',
+      '.flashcard-arena',
+      '.flashcard-card-scene',
+      '.flashcard-controls',
+      '.stage-route-bar',
+      '.lesson-nav-bar',
+      '.ff-level-pills',
+      '.ff-skill-pills',
+      '.specialized-tabs',
+      '.quiz-card',
+      '.question-block',
+      '.options-list',
+    ].join(',');
+    let gesture = null;
+    let previewFrame = null;
+    let settleTimer = null;
+    let navigating = false;
+    const isIgnoredTouchTarget = (target) => {
+      if (!(target instanceof Element)) return false;
+      if (target.closest(ignoredTargets)) return true;
+      for (let element = target; element && element !== document.documentElement; element = element.parentElement) {
+        const overflowX = window.getComputedStyle(element).overflowX;
+        if ((overflowX === 'auto' || overflowX === 'scroll') && element.scrollWidth > element.clientWidth + 1) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    const removePreview = (animateBack) => {
+      if (!previewFrame) return;
+      const frame = previewFrame;
+      previewFrame = null;
+      frame.style.transition = animateBack ? 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)' : 'none';
+      frame.style.transform = `translateX(${gesture.direction < 0 ? '100vw' : '-100vw'})`;
+      if (settleTimer) clearTimeout(settleTimer);
+      settleTimer = setTimeout(() => {
+        frame.remove();
+        settleTimer = null;
+      }, animateBack ? 190 : 0);
+    };
+
+    const createPreview = (targetIndex, direction) => {
+      const frame = document.createElement('iframe');
+      frame.title = 'Bản xem trước trang tiếp theo';
+      frame.setAttribute('aria-hidden', 'true');
+      Object.assign(frame.style, {
+        position: 'fixed',
+        inset: '0 auto 0 0',
+        width: '100vw',
+        height: '100vh',
+        height: '100dvh',
+        border: '0',
+        zIndex: '2147483000',
+        background: '#fff',
+        pointerEvents: 'none',
+        willChange: 'transform',
+        transform: `translateX(${direction < 0 ? '100vw' : '-100vw'})`,
+      });
+      frame.src = routes[targetIndex];
+      document.body.appendChild(frame);
+      previewFrame = frame;
+    };
+
+    document.addEventListener(
+      'touchstart',
+      (e) => {
+        if (navigating || e.touches.length !== 1 || window.getSelection()?.toString() || previewFrame) {
+          gesture = null;
+          return;
+        }
+        if (isIgnoredTouchTarget(e.target)) {
+          gesture = null;
+          return;
+        }
+        gesture = {
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY,
+          direction: 0,
+          targetIndex: -1,
+          cancelled: false,
+        };
+      },
+      { passive: true }
+    );
+
+    document.addEventListener(
+      'touchend',
+      (e) => {
+        if (navigating) return;
+        if (
+          !gesture ||
+          e.changedTouches.length !== 1 ||
+          window.getSelection()?.toString() ||
+          isIgnoredTouchTarget(e.target)
+        ) {
+          if (previewFrame) removePreview(true);
+          gesture = null;
+          return;
+        }
+        const touch = e.changedTouches[0];
+        const deltaX = touch.clientX - gesture.x;
+        const deltaY = touch.clientY - gesture.y;
+        const shouldNavigate =
+          previewFrame &&
+          !gesture.cancelled &&
+          Math.abs(deltaX) >= Math.max(80, window.innerWidth * 0.22) &&
+          Math.abs(deltaX) > Math.abs(deltaY) * 1.3;
+
+        if (shouldNavigate) {
+          navigating = true;
+          const targetUrl = routes[gesture.targetIndex];
+          previewFrame.style.transition = 'transform 240ms cubic-bezier(0.22, 1, 0.36, 1)';
+          previewFrame.style.transform = 'translateX(0)';
+          if (settleTimer) clearTimeout(settleTimer);
+          settleTimer = setTimeout(() => window.location.assign(targetUrl), 250);
+        } else if (previewFrame) {
+          removePreview(true);
+        }
+        gesture = null;
+      },
+      { passive: true }
+    );
+
+    document.addEventListener(
+      'touchmove',
+      (e) => {
+        if (!gesture || e.touches.length !== 1 || gesture.cancelled) return;
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - gesture.x;
+        const deltaY = touch.clientY - gesture.y;
+
+        if (!gesture.direction) {
+          if (Math.abs(deltaX) < 18 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+          const direction = deltaX < 0 ? -1 : 1;
+          const targetIndex = currentIndex + (direction < 0 ? 1 : -1);
+          if (targetIndex < 0 || targetIndex >= routes.length) {
+            gesture.cancelled = true;
+            return;
+          }
+          gesture.direction = direction;
+          gesture.targetIndex = targetIndex;
+          createPreview(targetIndex, direction);
+        }
+
+        if (deltaX * gesture.direction < -12 || Math.abs(deltaX) < Math.abs(deltaY) * 0.8) {
+          gesture.cancelled = true;
+          removePreview(true);
+          return;
+        }
+
+        if (previewFrame) {
+          e.preventDefault();
+          const offset = gesture.direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
+          previewFrame.style.transform = `translateX(${offset}px)`;
+        }
+      },
+      { passive: false }
+    );
+
+    document.addEventListener('touchcancel', () => {
+      if (navigating) return;
+      if (previewFrame) removePreview(true);
+      gesture = null;
+    });
+  }
+
   // Run on DOM Ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       initPwaUI();
       initInstantPrefetch();
+      initSwipeTabNavigation();
     });
   } else {
     initPwaUI();
     initInstantPrefetch();
+    initSwipeTabNavigation();
   }
 })();

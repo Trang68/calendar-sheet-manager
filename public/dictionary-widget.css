@@ -75,7 +75,7 @@
   color: #1e293b;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.92) translateY(20px);
+  transform: scale(0.92) translateY(calc(20px + var(--dict-swipe-y, 0px)));
   transform-origin: bottom right;
   transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
@@ -85,7 +85,7 @@
 .dict-widget-panel.open {
   opacity: 1;
   visibility: visible;
-  transform: scale(1) translateY(0);
+  transform: scale(1) translateY(var(--dict-swipe-y, 0px));
 }
 
 .dict-widget-panel.expanded {

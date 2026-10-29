@@ -211,6 +211,7 @@
       this.currentDir = "auto";
       this.activeTab = "search"; // 'search' | 'bookmarks' | 'history'
       this.searchDebounceTimer = null;
+      this.swipeResetTimer = null;
       this.currentDetail = null;
       this.audioObj = null;
       this.clientProvider = new ClientDictProvider();
@@ -394,6 +395,17 @@
       this.panelEl.querySelector("#dictExpandBtn").addEventListener("click", () => this.toggleExpand());
 
       let touchStart = null;
+      const resetSwipePosition = () => {
+        this.panelEl.style.transition = "transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)";
+        this.panelEl.style.setProperty("--dict-swipe-y", "0px");
+        clearTimeout(this.swipeResetTimer);
+        this.swipeResetTimer = setTimeout(() => {
+          this.panelEl.style.removeProperty("--dict-swipe-y");
+          this.panelEl.style.removeProperty("transition");
+          this.swipeResetTimer = null;
+        }, 190);
+      };
+
       this.panelEl.addEventListener(
         "touchstart",
         (e) => {
@@ -406,9 +418,27 @@
             touchStart = null;
             return;
           }
-          touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+          clearTimeout(this.swipeResetTimer);
+          this.swipeResetTimer = null;
+          this.panelEl.style.removeProperty("--dict-swipe-y");
+          this.panelEl.style.removeProperty("transition");
+          touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY, time: Date.now() };
         },
         { passive: true }
+      );
+      this.panelEl.addEventListener(
+        "touchmove",
+        (e) => {
+          if (!touchStart || !this.isOpen || window.innerWidth > 640 || e.touches.length !== 1) return;
+          const touch = e.touches[0];
+          const deltaX = touch.clientX - touchStart.x;
+          const deltaY = touch.clientY - touchStart.y;
+          if (deltaY < 0 || this.bodyEl.scrollTop > 0 || deltaY < Math.abs(deltaX) * 1.2) return;
+          e.preventDefault();
+          this.panelEl.style.transition = "none";
+          this.panelEl.style.setProperty("--dict-swipe-y", `${deltaY}px`);
+        },
+        { passive: false }
       );
       this.panelEl.addEventListener(
         "touchend",
@@ -420,14 +450,34 @@
           const touch = e.changedTouches[0];
           const deltaX = touch.clientX - touchStart.x;
           const deltaY = touch.clientY - touchStart.y;
+          const elapsed = Math.max(Date.now() - touchStart.time, 1);
+          const swipeVelocity = deltaY / elapsed;
+          const closeThreshold = Math.max(90, this.panelEl.clientHeight * 0.22);
           touchStart = null;
-          if (this.bodyEl.scrollTop <= 0 && deltaY >= 90 && deltaY > Math.abs(deltaX) * 1.3) {
-            this.close();
+          if (
+            this.bodyEl.scrollTop <= 0 &&
+            deltaY > Math.abs(deltaX) * 1.3 &&
+            (deltaY >= closeThreshold || (deltaY >= 55 && swipeVelocity >= 0.55))
+          ) {
+            this.panelEl.style.transition = "transform 220ms cubic-bezier(0.22, 1, 0.36, 1)";
+            this.panelEl.style.setProperty("--dict-swipe-y", `${window.innerHeight}px`);
+            clearTimeout(this.swipeResetTimer);
+            this.swipeResetTimer = setTimeout(() => {
+              this.close(true);
+              this.swipeResetTimer = setTimeout(() => {
+                this.panelEl.style.removeProperty("--dict-swipe-y");
+                this.panelEl.style.removeProperty("transition");
+                this.swipeResetTimer = null;
+              }, 250);
+            }, 230);
+          } else if (deltaY > 0) {
+            resetSwipePosition();
           }
         },
         { passive: true }
       );
       this.panelEl.addEventListener("touchcancel", () => {
+        if (touchStart) resetSwipePosition();
         touchStart = null;
       });
 
@@ -557,6 +607,10 @@
     }
 
     open() {
+      clearTimeout(this.swipeResetTimer);
+      this.swipeResetTimer = null;
+      this.panelEl.style.removeProperty("--dict-swipe-y");
+      this.panelEl.style.removeProperty("transition");
       this.isOpen = true;
       this.panelEl.classList.add("open");
       this.launcherEl.style.transform = "scale(0.9)";
@@ -564,7 +618,13 @@
       setTimeout(() => this.searchInput.focus(), 150);
     }
 
-    close() {
+    close(preserveSwipeTransform = false) {
+      if (!preserveSwipeTransform) {
+        clearTimeout(this.swipeResetTimer);
+        this.swipeResetTimer = null;
+        this.panelEl.style.removeProperty("--dict-swipe-y");
+        this.panelEl.style.removeProperty("transition");
+      }
       this.isOpen = false;
       this.panelEl.classList.remove("open");
       this.launcherEl.style.transform = "";
