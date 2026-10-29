@@ -8,6 +8,56 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* ==========================================================================
+   CROSS-DOCUMENT VIEW TRANSITIONS (SMOOTH INSTANT TAB NAVIGATION)
+   ========================================================================== */
+@view-transition {
+  navigation: auto;
+}
+
+/* Pin Header Topbar permanently across all page navigations */
+.game-topbar {
+  view-transition-name: game-topbar;
+}
+
+/* Snappy and smooth cross-fade animation for body content */
+::view-transition-old(root) {
+  animation: 160ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-in;
+}
+
+@keyframes ff-page-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes ff-page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.01ms !important;
+  }
+}
+
 :root {
   --ff-primary: #004646;
   --ff-primary-dark: #003636;

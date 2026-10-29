@@ -527,10 +527,69 @@
     detectOS: detectOS,
   };
 
+  // -----------------------------------------------------------------
+  // INSTANT LINK PREFETCHING (Nạp ngầm 0ms trước khi click)
+  // Khi người dùng hover (chuột) hoặc chạm (ngón tay) vào các tab:
+  // Tải trước ngầm tài liệu HTML vào cache trình duyệt.
+  // Khi click, trang đã có sẵn 100% trong cache -> Chuyển tức thì!
+  // -----------------------------------------------------------------
+  const prefetchedUrls = new Set();
+
+  function prefetchUrl(url) {
+    if (!url || prefetchedUrls.has(url)) return;
+    try {
+      const parsed = new URL(url, window.location.href);
+      if (parsed.origin !== window.location.origin) return;
+      if (parsed.pathname === window.location.pathname) return;
+      if (parsed.pathname.startsWith('/api') || parsed.pathname.startsWith('/auth')) return;
+      if (parsed.hash && parsed.pathname === window.location.pathname) return;
+
+      prefetchedUrls.add(parsed.pathname);
+
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = parsed.pathname;
+      link.as = 'document';
+      document.head.appendChild(link);
+    } catch (_) {}
+  }
+
+  function initInstantPrefetch() {
+    const handleTrigger = (e) => {
+      const anchor = e.target.closest('a[href]');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (href && href.startsWith('/')) {
+        prefetchUrl(href);
+      }
+    };
+
+    document.addEventListener('pointerover', handleTrigger, { passive: true });
+    document.addEventListener('touchstart', handleTrigger, { passive: true });
+
+    // Tự động nạp trước các tab điều hướng chính khi rảnh rỗi (idle)
+    const prefetchMainTabs = () => {
+      document.querySelectorAll('.ff-nav-tab').forEach((tab) => {
+        const href = tab.getAttribute('href');
+        if (href && href.startsWith('/')) prefetchUrl(href);
+      });
+    };
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(prefetchMainTabs, { timeout: 2000 });
+    } else {
+      setTimeout(prefetchMainTabs, 1200);
+    }
+  }
+
   // Run on DOM Ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPwaUI);
+    document.addEventListener('DOMContentLoaded', () => {
+      initPwaUI();
+      initInstantPrefetch();
+    });
   } else {
     initPwaUI();
+    initInstantPrefetch();
   }
 })();

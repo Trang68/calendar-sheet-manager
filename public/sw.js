@@ -1,19 +1,24 @@
 // TAIGA TALK Progressive Web App (PWA) Service Worker
-const CACHE_NAME = 'taiga-talk-v2.0';
+const CACHE_NAME = 'taiga-talk-v2.2';
 const PRECACHE_ASSETS = [
   '/',
   '/home',
   '/roadmap',
   '/articles',
   '/test',
-  '/forumflash-theme.css?v=2.1',
+  '/app',
+  '/contact',
+  '/forumflash-theme.css?v=2.2',
+  '/home.css?v=2.2',
+  '/articles.css?v=2.2',
+  '/app.css?v=2.2',
+  '/roadmap.css?v=2.2',
   '/dictionary-widget.css?v=2.0',
-  '/home.css?v=2.1',
   '/dictionary-widget.js',
   '/forumflash-engine.js',
   '/vocab-25-topics.js',
   '/taiga-audio.js',
-  '/pwa-install.js',
+  '/pwa-install.js?v=2.2',
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png',
@@ -65,23 +70,23 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. HTML navigation: Network-first, fallback to cache
+  // 2. HTML navigation: Stale-While-Revalidate (0ms instant cache response + background update)
   if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
     event.respondWith(
-      fetch(request)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const responseClone = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
-          }
-          return networkResponse;
-        })
-        .catch(() => {
-          return caches.match(request).then((cachedResponse) => {
-            if (cachedResponse) return cachedResponse;
-            return caches.match('/home');
-          });
-        })
+      caches.match(request).then((cachedResponse) => {
+        const fetchPromise = fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const responseClone = networkResponse.clone();
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+            }
+            return networkResponse;
+          })
+          .catch(() => cachedResponse || caches.match('/home'));
+
+        // Return immediately from local cache (0ms instant!) if present, updating in background
+        return cachedResponse || fetchPromise;
+      })
     );
     return;
   }
