@@ -37,6 +37,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   background-color: var(--page-bg);
   background-image:
     radial-gradient(circle at 15% 15%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
