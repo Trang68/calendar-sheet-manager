@@ -1,5 +1,5 @@
 // TAIGA TALK Progressive Web App (PWA) Service Worker
-const CACHE_NAME = 'taiga-talk-v3.3';
+const CACHE_NAME = 'taiga-talk-v3.4';
 const PRECACHE_ASSETS = [
   '/',
   '/home',
@@ -14,7 +14,7 @@ const PRECACHE_ASSETS = [
   '/app.css?v=2.4',
   '/roadmap.css?v=2.4',
   '/dictionary-widget.css?v=2.2',
-  '/dictionary-widget.js?v=2.4',
+  '/dictionary-widget.js?v=2.5',
   '/forumflash-engine.js',
   '/vocab-25-topics.js',
   '/taiga-audio.js',

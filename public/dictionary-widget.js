@@ -843,8 +843,9 @@
       }
 
       if (data && data.entry) {
-        const firstM = data.entry ? data.entry.vi || data.entry.ru : "";
-        this.addToHistory(word, firstM, data.dir || dir);
+        const detailDir = data.dir || dir;
+        const firstM = detailDir === "ru-vi" ? data.entry.vi : data.entry.ru;
+        this.addToHistory(word, firstM, detailDir);
         this.currentDetail = data;
         this.renderDetailView(data);
       } else {
@@ -1136,8 +1137,9 @@
       const mainWord = isRuVi ? entry.ru : entry.vi;
       const isBookmarked = this.bookmarks.some((b) => b.word.toLowerCase() === mainWord.toLowerCase());
 
-      const meaningLines = (entry.vi || "").split("\n").filter((l) => l.trim());
+      const meaningLines = ((isRuVi ? entry.vi : entry.ru) || "").split("\n").filter((l) => l.trim());
       const firstMeaning = meaningLines[0] || "";
+      const meaningLanguage = isRuVi ? "tiếng Việt" : "tiếng Nga";
 
       const sectionsHtml = [];
 
@@ -1147,7 +1149,7 @@
           <div class="dict-sec open" data-sec="meanings">
             <button class="dict-sec-head" type="button">
               <span class="dict-sec-head-left">
-                <span class="dict-sec-icon">📖</span> Nghĩa tiếng Việt (${meaningLines.length})
+                <span class="dict-sec-icon">📖</span> Nghĩa ${meaningLanguage} (${meaningLines.length})
               </span>
               <span class="dict-sec-arrow">▾</span>
             </button>
