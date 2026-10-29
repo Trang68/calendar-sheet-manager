@@ -86,6 +86,7 @@ body.ff-body {
   background-color: var(--ff-bg);
   color: var(--ff-text);
   font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
