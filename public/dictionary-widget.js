@@ -310,15 +310,10 @@
 
         <!-- NAV BAR: AUTO DETECT BADGE + BOOKMARKS & HISTORY TABS -->
         <div class="dict-nav-bar">
-          <label class="dict-auto-badge" for="dictDirectionSelect">
+          <div class="dict-auto-badge">
             <span class="dict-pulse-dot"></span>
-            <span class="dict-auto-label">Chiều dịch</span>
-            <select class="dict-direction-select" id="dictDirectionSelect" aria-label="Chiều dịch từ điển">
-              <option value="auto">Tự nhận diện</option>
-              <option value="vi-ru">Việt → Nga</option>
-              <option value="ru-vi">Nga → Việt</option>
-            </select>
-          </label>
+            <span class="dict-auto-label">Tự động nhận diện Nga ⇄ Việt</span>
+          </div>
           <div class="dict-tabs-nav">
             <button class="dict-nav-tab" data-tab="bookmarks" id="dictTabBtnBookmarks" title="Sổ tay từ đã lưu">
               ⭐ Đã lưu <span class="dict-tab-badge" id="dictBadgeBookmarks">0</span>
@@ -378,7 +373,6 @@
       document.body.appendChild(panel);
       this.panelEl = panel;
       this.searchInput = panel.querySelector("#dictSearchInput");
-      this.directionSelect = panel.querySelector("#dictDirectionSelect");
       this.clearBtn = panel.querySelector("#dictClearBtn");
       this.bodyEl = panel.querySelector("#dictWidgetBody");
       this.resultsEl = panel.querySelector("#dictSearchResults");
@@ -451,12 +445,6 @@
             this.handleSearch(val, true);
           }
         }
-      });
-
-      this.directionSelect.addEventListener("change", () => {
-        this.currentDir = this.directionSelect.value;
-        const query = this.searchInput.value.trim();
-        if (query) this.handleSearch(query);
       });
 
       this.clearBtn.addEventListener("click", () => {
