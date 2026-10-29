@@ -642,8 +642,8 @@
         }
       } catch (e) {}
 
-      // 2. Nếu backend không phản hồi hoặc không có kết quả, dùng clientProvider
-      if (!data || !data.results || data.results.length === 0) {
+      // Only load the browser-side dictionary if the backend did not respond.
+      if (!data || !Array.isArray(data.results)) {
         try {
           data = await this.clientProvider.search(query, direction, 25);
         } catch (e) {}
@@ -740,7 +740,9 @@
       // 1. Thử gọi backend /api/dict/translate
       try {
         const sourceLanguage = direction === "ru-vi" ? "ru" : direction === "vi-ru" ? "vi" : "auto";
-        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}&from=${sourceLanguage}`);
+        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}&from=${sourceLanguage}`, {
+          signal: AbortSignal.timeout(3500),
+        });
         if (res.ok) {
           const data = await res.json();
           if (data && data.ok && data.result && data.result.translatedText) {
@@ -750,33 +752,6 @@
           }
         }
       } catch (e) {}
-
-      // 2. Dự phòng trực tiếp từ client nếu backend chưa có
-      if (!trans) {
-        try {
-          const isRu = direction === "auto" ? this.isCyrillic(query) : direction === "ru-vi";
-          const sl = isRu ? "ru" : "vi";
-          const tl = isRu ? "vi" : "ru";
-
-          const cUrl = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${sl}&tl=${tl}&q=${encodeURIComponent(query)}`;
-          const cRes = await fetch(cUrl);
-          if (cRes.ok) {
-            const cJson = await cRes.json();
-            if (Array.isArray(cJson) && cJson[0]) {
-              trans = Array.isArray(cJson[0]) ? cJson[0][0] : cJson[0];
-            }
-          }
-
-          if (!trans) {
-            const gUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(query)}`;
-            const gRes = await fetch(gUrl);
-            if (gRes.ok) {
-              const gJson = await gRes.json();
-              trans = gJson[0] ? gJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
-            }
-          }
-        } catch (clientErr) {}
-      }
 
       if (trans) {
         const isRu = direction === "auto" ? this.isCyrillic(query) : direction === "ru-vi";
@@ -845,11 +820,15 @@
       } else {
         this.resultsEl.innerHTML = `
           <div class="dict-empty-state">
-            <span class="dict-empty-icon">🔍</span>
-            <p class="dict-empty-title">Không tìm thấy từ "${this.escapeHtml(query)}"</p>
-            <p class="dict-empty-sub">Hãy kiểm tra chính tả hoặc thử một từ khác.</p>
+            <span class="dict-empty-icon">🌐</span>
+            <p class="dict-empty-title">Dịch trực tuyến chưa phản hồi</p>
+            <p class="dict-empty-sub">Vui lòng thử lại sau.</p>
+            <button class="dict-action-btn" id="dictBtnRetryTranslate" type="button">Thử dịch lại</button>
           </div>
         `;
+        this.resultsEl.querySelector("#dictBtnRetryTranslate").addEventListener("click", () => {
+          this.renderOnlineFallback(query, direction);
+        });
       }
     }
 

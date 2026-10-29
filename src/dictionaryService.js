@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
+const TRANSLATION_CACHE_TTL_MS = 15 * 60 * 1000;
+const MAX_TRANSLATION_CACHE_ENTRIES = 1000;
+
 class DictionaryService {
   constructor(dataDir) {
     this.dataDir = dataDir || path.join(__dirname, "../data/dict");
@@ -11,6 +14,8 @@ class DictionaryService {
     this.famData = null;
     this.relCache = new Map();
     this.formsCache = new Map();
+    this.translationCache = new Map();
+    this.translationInFlight = new Map();
     this.isLoaded = false;
     this.isInitializing = false;
   }
@@ -455,87 +460,63 @@ class DictionaryService {
   }
 
   async translateOnline(text, from = "auto", to = null) {
-    const q = String(text || "").trim().slice(0, 1000);
+    const q = String(text || "").trim().replace(/\s+/g, " ").slice(0, 1000);
     if (!q) return null;
-    try {
-      const isRu = this.isCyrillic(q);
-      const sl = from === "auto" ? (isRu ? "ru" : "vi") : from;
-      const tl = to || (sl === "ru" ? "vi" : "ru");
 
-      const ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
-
-      // 1. Động cơ 1: Google Chrome Dictionary Client API (kháng rate-limit tuyệt đối)
-      try {
-        const u1 = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&q=${encodeURIComponent(q)}`;
-        const r1 = await fetch(u1, { headers: { "User-Agent": ua }, signal: AbortSignal.timeout(4000) });
-        if (r1.ok) {
-          const txt = await r1.text();
-          const json = JSON.parse(txt);
-          if (Array.isArray(json) && json[0]) {
-            const trans = Array.isArray(json[0]) ? json[0][0] : json[0];
-            if (trans && typeof trans === "string") {
-              return {
-                translatedText: trans,
-                matches: [{ segment: q, translation: trans }],
-                engine: "google",
-              };
-            }
-          }
-        }
-      } catch (e) {
-        // Tiếp tục thử động cơ 2
-      }
-
-      // 2. Động cơ 2: Google Translate GTX (dt=t)
-      try {
-        const gtxUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&q=${encodeURIComponent(q)}`;
-        const gtxRes = await fetch(gtxUrl, {
-          headers: { "User-Agent": ua },
-          signal: AbortSignal.timeout(4000),
-        });
-        if (gtxRes.ok) {
-          const txt = await gtxRes.text();
-          const gtxJson = JSON.parse(txt);
-          const translatedText = gtxJson[0] ? gtxJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
-          if (translatedText) {
-            return {
-              translatedText,
-              matches: [{ segment: q, translation: translatedText }],
-              engine: "google",
-            };
-          }
-        }
-      } catch (gtxErr) {
-        // Tiếp tục thử động cơ 3
-      }
-
-      // 3. Động cơ 3: MyMemory API với quota 50k ký tự/ngày
-      const pair = `${sl}|${tl}`;
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}&de=contact@taigatalk.edu.vn`;
-      const res = await fetch(url, {
-        headers: { "User-Agent": ua },
-        signal: AbortSignal.timeout(5000),
-      });
-      if (res.ok) {
-        const json = await res.json();
-        if (json && json.responseData && json.responseData.translatedText) {
-          const trans = json.responseData.translatedText;
-          if (!trans.includes("MYMEMORY WARNING")) {
-            return {
-              translatedText: trans,
-              matches: (json.matches || []).slice(0, 3).map((m) => ({
-                segment: m.segment,
-                translation: m.translation,
-              })),
-              engine: "mymemory",
-            };
-          }
-        }
-      }
-    } catch (e) {
-      console.warn("[DictionaryService] Online translate failed completely:", e.message);
+    const isRu = this.isCyrillic(q);
+    const sl = from === "auto" ? (isRu ? "ru" : "vi") : from;
+    const tl = to || (sl === "ru" ? "vi" : "ru");
+    const cacheKey = `${sl}:${tl}:${q.toLowerCase()}`;
+    const cached = this.translationCache.get(cacheKey);
+    if (cached && cached.expiresAt > Date.now()) {
+      this.translationCache.delete(cacheKey);
+      this.translationCache.set(cacheKey, cached);
+      return cached.result;
     }
-    return null;
+    if (cached) this.translationCache.delete(cacheKey);
+
+    const pending = this.translationInFlight.get(cacheKey);
+    if (pending) return pending;
+
+    const translationPromise = (async () => {
+      try {
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&q=${encodeURIComponent(q)}`;
+        const res = await fetch(url, {
+          signal: AbortSignal.timeout(3000),
+        });
+        if (!res.ok) return null;
+
+        const json = await res.json();
+        const translatedText = json[0] ? json[0].map((segment) => segment[0]).filter(Boolean).join("") : "";
+        if (!translatedText) return null;
+        return {
+          translatedText,
+          matches: [{ segment: q, translation: translatedText }],
+          engine: "google",
+        };
+      } catch (e) {
+        console.warn("[DictionaryService] Online translate failed completely:", e.message);
+      }
+      return null;
+    })();
+
+    this.translationInFlight.set(cacheKey, translationPromise);
+    try {
+      const result = await translationPromise;
+      if (result) {
+        this.translationCache.set(cacheKey, {
+          result,
+          expiresAt: Date.now() + TRANSLATION_CACHE_TTL_MS,
+        });
+        if (this.translationCache.size > MAX_TRANSLATION_CACHE_ENTRIES) {
+          const oldestKey = this.translationCache.keys().next().value;
+          this.translationCache.delete(oldestKey);
+        }
+      }
+      return result;
+    } finally {
+      this.translationInFlight.delete(cacheKey);
+    }
   }
 }
 
