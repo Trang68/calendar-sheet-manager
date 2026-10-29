@@ -588,6 +588,17 @@
     const currentIndex = routes.indexOf(currentPath);
     if (currentIndex === -1) return;
 
+    const transitionStorageKey = 'taiga_swipe_transition';
+    try {
+      const transitionDirection = sessionStorage.getItem(transitionStorageKey);
+      if (transitionDirection === 'forward' || transitionDirection === 'back') {
+        document.documentElement.dataset.swipeDirection = transitionDirection;
+        sessionStorage.removeItem(transitionStorageKey);
+      }
+    } catch (error) {
+      console.warn('[PWA] Could not restore swipe transition direction:', error);
+    }
+
     const ignoredTargets = [
       'a',
       'button',
@@ -614,10 +625,7 @@
       '.options-list',
     ].join(',');
     let gesture = null;
-    let previewFrame = null;
-    let settleTimer = null;
     let navigating = false;
-    let previewReady = false;
     const isIgnoredTouchTarget = (target) => {
       if (!(target instanceof Element)) return false;
       if (target.closest(ignoredTargets)) return true;
@@ -630,70 +638,10 @@
       return false;
     };
 
-    const removePreview = (animateBack) => {
-      if (!previewFrame) return;
-      const frame = previewFrame;
-      previewFrame = null;
-      previewReady = false;
-      frame.style.transition = animateBack ? 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)' : 'none';
-      frame.style.transform = `translateX(${gesture.direction < 0 ? '100vw' : '-100vw'})`;
-      if (settleTimer) clearTimeout(settleTimer);
-      settleTimer = setTimeout(() => {
-        frame.remove();
-        settleTimer = null;
-      }, animateBack ? 190 : 0);
-    };
-
-    const createPreview = (targetIndex, direction) => {
-      const header = document.querySelector('.game-topbar');
-      const headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
-      const frame = document.createElement('iframe');
-      frame.title = 'Bản xem trước trang tiếp theo';
-      frame.setAttribute('aria-hidden', 'true');
-      Object.assign(frame.style, {
-        position: 'fixed',
-        top: `${headerBottom}px`,
-        right: '0',
-        bottom: '0',
-        left: '0',
-        width: '100vw',
-        border: '0',
-        zIndex: '2147483000',
-        background: '#fff',
-        pointerEvents: 'none',
-        willChange: 'transform',
-        visibility: 'hidden',
-        transform: `translateX(${direction < 0 ? '100vw' : '-100vw'})`,
-      });
-      frame.addEventListener(
-        'load',
-        () => {
-          const previewStyle = frame.contentDocument?.createElement('style');
-          if (!previewStyle) return;
-          previewStyle.textContent = `
-            .game-topbar,
-            .dict-widget-launcher,
-            .dict-widget-panel,
-            .dict-selection-popup { display: none !important; }
-          `;
-          frame.contentDocument.head.appendChild(previewStyle);
-          previewReady = true;
-          if (previewFrame !== frame || !gesture || gesture.cancelled) return;
-          const deltaX = gesture.lastX - gesture.x;
-          frame.style.visibility = 'visible';
-          frame.style.transform = `translateX(${direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX}px)`;
-        },
-        { once: true }
-      );
-      frame.src = routes[targetIndex];
-      document.body.appendChild(frame);
-      previewFrame = frame;
-    };
-
     document.addEventListener(
       'touchstart',
       (e) => {
-        if (navigating || e.touches.length !== 1 || window.getSelection()?.toString() || previewFrame) {
+        if (navigating || e.touches.length !== 1 || window.getSelection()?.toString()) {
           gesture = null;
           return;
         }
@@ -704,7 +652,6 @@
         gesture = {
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
-          lastX: e.touches[0].clientX,
           direction: 0,
           targetIndex: -1,
           cancelled: false,
@@ -723,7 +670,6 @@
           window.getSelection()?.toString() ||
           isIgnoredTouchTarget(e.target)
         ) {
-          if (previewFrame) removePreview(true);
           gesture = null;
           return;
         }
@@ -731,28 +677,20 @@
         const deltaX = touch.clientX - gesture.x;
         const deltaY = touch.clientY - gesture.y;
         const shouldNavigate =
-          previewFrame &&
+          gesture.targetIndex >= 0 &&
           !gesture.cancelled &&
           Math.abs(deltaX) >= Math.max(80, window.innerWidth * 0.22) &&
           Math.abs(deltaX) > Math.abs(deltaY) * 1.3;
 
         if (shouldNavigate) {
-          if (!previewReady) {
-            const targetUrl = routes[gesture.targetIndex];
-            removePreview(false);
-            navigating = true;
-            window.location.assign(targetUrl);
-            gesture = null;
-            return;
+          const direction = gesture.direction < 0 ? 'forward' : 'back';
+          try {
+            sessionStorage.setItem(transitionStorageKey, direction);
+          } catch (error) {
+            console.warn('[PWA] Could not save swipe transition direction:', error);
           }
           navigating = true;
-          const targetUrl = routes[gesture.targetIndex];
-          previewFrame.style.transition = 'transform 240ms cubic-bezier(0.22, 1, 0.36, 1)';
-          previewFrame.style.transform = 'translateX(0)';
-          if (settleTimer) clearTimeout(settleTimer);
-          settleTimer = setTimeout(() => window.location.assign(targetUrl), 250);
-        } else if (previewFrame) {
-          removePreview(true);
+          window.location.assign(routes[gesture.targetIndex]);
         }
         gesture = null;
       },
@@ -766,7 +704,6 @@
         const touch = e.touches[0];
         const deltaX = touch.clientX - gesture.x;
         const deltaY = touch.clientY - gesture.y;
-        gesture.lastX = touch.clientX;
 
         if (!gesture.direction) {
           if (Math.abs(deltaX) < 18 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
@@ -774,29 +711,20 @@
           const targetIndex = (currentIndex + (direction < 0 ? 1 : -1) + routes.length) % routes.length;
           gesture.direction = direction;
           gesture.targetIndex = targetIndex;
-          createPreview(targetIndex, direction);
         }
 
         if (deltaX * gesture.direction < -12 || Math.abs(deltaX) < Math.abs(deltaY) * 0.8) {
           gesture.cancelled = true;
-          removePreview(true);
           return;
         }
 
-        if (previewFrame) {
-          if (previewReady) {
-            e.preventDefault();
-            const offset = gesture.direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
-            previewFrame.style.transform = `translateX(${offset}px)`;
-          }
-        }
+        e.preventDefault();
       },
       { passive: false }
     );
 
     document.addEventListener('touchcancel', () => {
       if (navigating) return;
-      if (previewFrame) removePreview(true);
       gesture = null;
     });
   }
