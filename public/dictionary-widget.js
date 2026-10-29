@@ -393,6 +393,44 @@
       this.panelEl.querySelector("#dictCloseBtn").addEventListener("click", () => this.close());
       this.panelEl.querySelector("#dictExpandBtn").addEventListener("click", () => this.toggleExpand());
 
+      let touchStart = null;
+      this.panelEl.addEventListener(
+        "touchstart",
+        (e) => {
+          if (!this.isOpen || window.innerWidth > 640 || e.touches.length !== 1 || this.bodyEl.scrollTop > 0) {
+            touchStart = null;
+            return;
+          }
+          const target = e.target instanceof Element ? e.target : null;
+          if (target && target.closest("button, input, textarea, select, a, [contenteditable='true']")) {
+            touchStart = null;
+            return;
+          }
+          touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        },
+        { passive: true }
+      );
+      this.panelEl.addEventListener(
+        "touchend",
+        (e) => {
+          if (!touchStart || !this.isOpen || window.innerWidth > 640 || e.changedTouches.length !== 1) {
+            touchStart = null;
+            return;
+          }
+          const touch = e.changedTouches[0];
+          const deltaX = touch.clientX - touchStart.x;
+          const deltaY = touch.clientY - touchStart.y;
+          touchStart = null;
+          if (this.bodyEl.scrollTop <= 0 && deltaY >= 90 && deltaY > Math.abs(deltaX) * 1.3) {
+            this.close();
+          }
+        },
+        { passive: true }
+      );
+      this.panelEl.addEventListener("touchcancel", () => {
+        touchStart = null;
+      });
+
       // Keyboard hotkeys
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && this.isOpen) {
