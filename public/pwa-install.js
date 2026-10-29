@@ -617,6 +617,7 @@
     let previewFrame = null;
     let settleTimer = null;
     let navigating = false;
+    let previewReady = false;
     const isIgnoredTouchTarget = (target) => {
       if (!(target instanceof Element)) return false;
       if (target.closest(ignoredTargets)) return true;
@@ -633,6 +634,7 @@
       if (!previewFrame) return;
       const frame = previewFrame;
       previewFrame = null;
+      previewReady = false;
       frame.style.transition = animateBack ? 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)' : 'none';
       frame.style.transform = `translateX(${gesture.direction < 0 ? '100vw' : '-100vw'})`;
       if (settleTimer) clearTimeout(settleTimer);
@@ -660,6 +662,7 @@
         background: '#fff',
         pointerEvents: 'none',
         willChange: 'transform',
+        visibility: 'hidden',
         transform: `translateX(${direction < 0 ? '100vw' : '-100vw'})`,
       });
       frame.addEventListener(
@@ -674,6 +677,11 @@
             .dict-selection-popup { display: none !important; }
           `;
           frame.contentDocument.head.appendChild(previewStyle);
+          previewReady = true;
+          if (previewFrame !== frame || !gesture || gesture.cancelled) return;
+          const deltaX = gesture.lastX - gesture.x;
+          frame.style.visibility = 'visible';
+          frame.style.transform = `translateX(${direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX}px)`;
         },
         { once: true }
       );
@@ -696,6 +704,7 @@
         gesture = {
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
+          lastX: e.touches[0].clientX,
           direction: 0,
           targetIndex: -1,
           cancelled: false,
@@ -728,6 +737,14 @@
           Math.abs(deltaX) > Math.abs(deltaY) * 1.3;
 
         if (shouldNavigate) {
+          if (!previewReady) {
+            const targetUrl = routes[gesture.targetIndex];
+            removePreview(false);
+            navigating = true;
+            window.location.assign(targetUrl);
+            gesture = null;
+            return;
+          }
           navigating = true;
           const targetUrl = routes[gesture.targetIndex];
           previewFrame.style.transition = 'transform 240ms cubic-bezier(0.22, 1, 0.36, 1)';
@@ -749,6 +766,7 @@
         const touch = e.touches[0];
         const deltaX = touch.clientX - gesture.x;
         const deltaY = touch.clientY - gesture.y;
+        gesture.lastX = touch.clientX;
 
         if (!gesture.direction) {
           if (Math.abs(deltaX) < 18 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
@@ -766,9 +784,11 @@
         }
 
         if (previewFrame) {
-          e.preventDefault();
-          const offset = gesture.direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
-          previewFrame.style.transform = `translateX(${offset}px)`;
+          if (previewReady) {
+            e.preventDefault();
+            const offset = gesture.direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
+            previewFrame.style.transform = `translateX(${offset}px)`;
+          }
         }
       },
       { passive: false }
