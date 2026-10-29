@@ -112,6 +112,8 @@ body.ff-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   height: 76px;
   padding: 0 clamp(18px, 4vw, 56px);
   background: rgba(255, 253, 250, 0.88);
@@ -2539,4 +2541,3 @@ body.has-dict-launcher .back-to-top-btn {
     height: 18px;
   }
 }
-
