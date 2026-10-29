@@ -1753,7 +1753,11 @@ app.get("/api/dict/suggestions", (_req, res) => {
 app.get("/api/dict/translate", async (req, res) => {
   try {
     const text = req.query.text || "";
-    const result = await dictionaryService.translateOnline(text);
+    const from = req.query.from || "auto";
+    if (!["auto", "ru", "vi"].includes(from)) {
+      return res.status(400).json({ ok: false, error: "from must be auto, ru, or vi" });
+    }
+    const result = await dictionaryService.translateOnline(text, from);
     res.json({ ok: true, result });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });

@@ -144,9 +144,9 @@ class DictionaryService {
         this.famData = JSON.parse(fs.readFileSync(famPath, "utf8"));
       }
 
-      if (this.ruViList && this.ruViList.length > 0) {
+      if ((this.ruViList && this.ruViList.length > 0) || (this.viRuList && this.viRuList.length > 0)) {
         this.isLoaded = true;
-        console.log(`[DictionaryService] Initialized: ${this.ruViList.length} Ru-Vi, ${this.viRuList?.length || 0} Vi-Ru words.`);
+        console.log(`[DictionaryService] Initialized: ${this.ruViList?.length || 0} Ru-Vi, ${this.viRuList?.length || 0} Vi-Ru words.`);
       }
     } catch (err) {
       console.error("[DictionaryService] Initialization failed:", err);

@@ -282,7 +282,7 @@
       launcher.setAttribute("title", "Mở từ điển Nga - Việt (Alt+D)");
       launcher.innerHTML = `
         <span class="dict-launcher-icon">📖</span>
-        <span class="dict-launcher-text">Từ điển Nga — Việt</span>
+        <span class="dict-launcher-text">Từ điển Nga ⇄ Việt</span>
         <span class="dict-launcher-badge">81k+</span>
       `;
       document.body.appendChild(launcher);
@@ -293,13 +293,13 @@
       panel.className = "dict-widget-panel";
       panel.id = "dictWidgetPanel";
       panel.setAttribute("role", "dialog");
-      panel.setAttribute("aria-label", "Từ điển Nga - Việt");
+      panel.setAttribute("aria-label", "Từ điển Nga - Việt hai chiều");
 
       panel.innerHTML = `
         <!-- HEADER -->
         <div class="dict-widget-header">
           <div class="dict-header-title-wrap">
-            <span class="dict-header-title">📖 Từ điển Nga — Việt</span>
+            <span class="dict-header-title">📖 Từ điển Nga ⇄ Việt</span>
             <span class="dict-header-count">81.000+ từ</span>
           </div>
           <div class="dict-header-actions">
@@ -310,10 +310,15 @@
 
         <!-- NAV BAR: AUTO DETECT BADGE + BOOKMARKS & HISTORY TABS -->
         <div class="dict-nav-bar">
-          <div class="dict-auto-badge">
+          <label class="dict-auto-badge" for="dictDirectionSelect">
             <span class="dict-pulse-dot"></span>
-            <span class="dict-auto-label">Tự động nhận diện Nga ⇄ Việt</span>
-          </div>
+            <span class="dict-auto-label">Chiều dịch</span>
+            <select class="dict-direction-select" id="dictDirectionSelect" aria-label="Chiều dịch từ điển">
+              <option value="auto">Tự nhận diện</option>
+              <option value="vi-ru">Việt → Nga</option>
+              <option value="ru-vi">Nga → Việt</option>
+            </select>
+          </label>
           <div class="dict-tabs-nav">
             <button class="dict-nav-tab" data-tab="bookmarks" id="dictTabBtnBookmarks" title="Sổ tay từ đã lưu">
               ⭐ Đã lưu <span class="dict-tab-badge" id="dictBadgeBookmarks">0</span>
@@ -373,6 +378,7 @@
       document.body.appendChild(panel);
       this.panelEl = panel;
       this.searchInput = panel.querySelector("#dictSearchInput");
+      this.directionSelect = panel.querySelector("#dictDirectionSelect");
       this.clearBtn = panel.querySelector("#dictClearBtn");
       this.bodyEl = panel.querySelector("#dictWidgetBody");
       this.resultsEl = panel.querySelector("#dictSearchResults");
@@ -445,6 +451,12 @@
             this.handleSearch(val, true);
           }
         }
+      });
+
+      this.directionSelect.addEventListener("change", () => {
+        this.currentDir = this.directionSelect.value;
+        const query = this.searchInput.value.trim();
+        if (query) this.handleSearch(query);
       });
 
       this.clearBtn.addEventListener("click", () => {
@@ -622,8 +634,9 @@
 
       let data = null;
       // 1. Thử gọi backend trước
+      const direction = this.currentDir;
       try {
-        const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=auto&limit=25`);
+        const res = await fetch(`/api/dict/search?q=${encodeURIComponent(query)}&dir=${direction}&limit=25`);
         if (res.ok) {
           data = await res.json();
         }
@@ -632,7 +645,7 @@
       // 2. Nếu backend không phản hồi hoặc không có kết quả, dùng clientProvider
       if (!data || !data.results || data.results.length === 0) {
         try {
-          data = await this.clientProvider.search(query, "auto", 25);
+          data = await this.clientProvider.search(query, direction, 25);
         } catch (e) {}
       }
 
@@ -652,7 +665,7 @@
           this.renderSearchResults(data.results, query, data.dir);
         }
       } else {
-        this.renderOnlineFallback(query);
+        this.renderOnlineFallback(query, direction);
       }
     }
 
@@ -699,7 +712,7 @@
       const forceBtn = this.resultsEl.querySelector("#dictBtnForceTranslate");
       if (forceBtn) {
         forceBtn.addEventListener("click", () => {
-          this.renderOnlineFallback(query);
+          this.renderOnlineFallback(query, dir);
         });
       }
 
@@ -712,7 +725,7 @@
       });
     }
 
-    async renderOnlineFallback(query) {
+    async renderOnlineFallback(query, direction = this.currentDir) {
       this.resultsEl.innerHTML = `
         <div class="dict-fallback-card">
           <div class="dict-fallback-badge">🌐 Dịch tự động trực tuyến</div>
@@ -726,7 +739,8 @@
 
       // 1. Thử gọi backend /api/dict/translate
       try {
-        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}`);
+        const sourceLanguage = direction === "ru-vi" ? "ru" : direction === "vi-ru" ? "vi" : "auto";
+        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}&from=${sourceLanguage}`);
         if (res.ok) {
           const data = await res.json();
           if (data && data.ok && data.result && data.result.translatedText) {
@@ -740,7 +754,7 @@
       // 2. Dự phòng trực tiếp từ client nếu backend chưa có
       if (!trans) {
         try {
-          const isRu = this.isCyrillic(query);
+          const isRu = direction === "auto" ? this.isCyrillic(query) : direction === "ru-vi";
           const sl = isRu ? "ru" : "vi";
           const tl = isRu ? "vi" : "ru";
 
@@ -765,7 +779,7 @@
       }
 
       if (trans) {
-        const isRu = this.isCyrillic(query);
+        const isRu = direction === "auto" ? this.isCyrillic(query) : direction === "ru-vi";
         const dir = isRu ? "ru-vi" : "vi-ru";
         this.addToHistory(query, trans, dir);
 
