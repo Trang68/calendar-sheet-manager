@@ -4,6 +4,10 @@
    Palette: Forest Teal (#004646), Mint (#27c4b5), Cream Paper (#f7f5ef)
    ========================================================================== */
 
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
   --ff-primary: #004646;
   --ff-primary-dark: #003636;
@@ -250,10 +254,12 @@ body.ff-body {
 /* ==========================================================================
    2. HERO ZONE & HERO GAME CARD
    ========================================================================== */
-.home-hero-zone {
-  padding: 36px clamp(18px, 4vw, 56px) 24px;
+.home-hero-zone,
+.unified-hero-zone {
+  padding: 32px clamp(18px, 4vw, 56px) 24px;
   max-width: 1320px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .game-hero {
@@ -264,10 +270,12 @@ body.ff-body {
   grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
   align-items: center;
   gap: clamp(28px, 4vw, 56px);
-  padding: 44px clamp(28px, 4vw, 52px);
+  padding: clamp(32px, 3.5vw, 44px) clamp(28px, 4vw, 52px);
   position: relative;
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(0, 70, 70, 0.06);
+  min-height: 440px;
+  box-sizing: border-box;
 }
 
 .game-hero:before {
@@ -1961,9 +1969,15 @@ body.ff-body {
    10. RESPONSIVE QUERIES — OPTIMIZED FOR TABLET & MOBILE
    ========================================================================== */
 @media (max-width: 900px) {
+  .home-hero-zone,
+  .unified-hero-zone {
+    padding: 16px 14px 20px !important;
+  }
   .game-hero {
     grid-template-columns: 1fr;
-    padding: 32px 24px;
+    padding: 24px 18px;
+    border-radius: 22px;
+    min-height: auto;
   }
   .learning-garden {
     grid-template-columns: 1fr;

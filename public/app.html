@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/forumflash-theme.css?v=1.2" />
-    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=2.1" />
+    <link rel="stylesheet" href="/app.css?v=2.1" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#003838" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,32 +72,57 @@
         </div>
       </header>
 
-    <main class="page">
-
-      <div class="crm-hero-bar" style="margin-bottom: 20px;">
-        <h1 class="brand" style="margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.75rem);">Cổng thông tin & Lịch học 1-1</h1>
-        <p class="sub" style="margin: 4px 0 0;">Tra cứu tiến độ học tập, lịch học chi tiết và học phí minh bạch.</p>
-      </div>
-
-      <section id="loginPanel" class="panel login-wrap">
-        <div class="login-head">
-          <!-- <h2>Dang nhap he thong</h2> -->
-          <!-- <p>Phan quyen 2 vai tro: giao vien va hoc vien.</p> -->
+    <!-- 2. UNIFIED HERO ZONE FOR CRM / LOGIN -->
+    <div class="home-hero-zone" id="appHeroZone">
+      <section class="game-hero app-hero-card">
+        <div class="hero-copy">
+          <span class="hero-tag" style="display:inline-flex; align-items:center; gap:8px; background:rgba(39, 196, 181, 0.12); color:var(--ff-primary); border:1px solid rgba(39, 196, 181, 0.3); border-radius:999px; padding:6px 14px; font-size:0.8rem; font-weight:800; text-transform:uppercase; margin-bottom:16px; letter-spacing:0.04em;">
+            <span>🔐</span> CỔNG THÔNG TIN ĐÀO TẠO 1-1
+          </span>
+          <h1>Cổng thông tin & <br /><em style="font-style:normal; color:var(--ff-mint);">Lịch học 1-1</em></h1>
+          <p class="hero-lead">
+            Tra cứu tiến độ học tập, lịch học chi tiết và học phí minh bạch. Dành riêng cho học viên và giảng viên tại TAIGA TALK.
+          </p>
+          <div class="app-hero-features" style="display:flex; flex-direction:column; gap:12px; font-size:0.92rem; color:#475569;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="color:var(--ff-mint); font-weight:800; font-size:1.1rem;">✓</span>
+              <span>Lịch học 1-1 cá nhân hóa cập nhật theo từng tuần</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="color:var(--ff-mint); font-weight:800; font-size:1.1rem;">✓</span>
+              <span>Bảng kê số buổi hoàn thành & học phí minh bạch</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="color:var(--ff-mint); font-weight:800; font-size:1.1rem;">✓</span>
+              <span>Đồng bộ tức thời trên cả máy tính và điện thoại</span>
+            </div>
+          </div>
         </div>
-        <div class="login-body">
-          <div>
-            <label for="username">Tài khoản</label>
-            <input id="username" autocomplete="username" placeholder="Tên đăng nhập" />
-          </div>
-          <div>
-            <label for="password">Mật khẩu</label>
-            <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
-          </div>
-          <button id="loginBtn" class="btn primary">Đăng nhập</button>
-          <p id="loginError" class="err"></p>
+
+        <div class="app-hero-auth-col">
+          <section id="loginPanel" class="panel login-wrap">
+            <div class="login-head">
+              <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:800; color:var(--ff-primary);">Đăng nhập tài khoản</h3>
+              <p style="margin:4px 0 0; font-size:0.85rem; color:#64748b;">Học viên & Giảng viên TAIGA TALK</p>
+            </div>
+            <div class="login-body">
+              <div>
+                <label for="username">Tài khoản</label>
+                <input id="username" autocomplete="username" placeholder="Tên đăng nhập" />
+              </div>
+              <div>
+                <label for="password">Mật khẩu</label>
+                <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+              </div>
+              <button id="loginBtn" class="btn primary" style="width:100%; justify-content:center; padding:12px; font-size:1rem; border-radius:12px;">Đăng nhập ➔</button>
+              <p id="loginError" class="err"></p>
+            </div>
+          </section>
         </div>
       </section>
+    </div>
 
+    <main class="page">
       <section id="appPanel" class="app">
         <div class="panel toolbar">
           <div class="toolbar-user">
@@ -340,6 +365,10 @@
         currentUser = user;
         const isLoggedIn = Boolean(user);
 
+        const appHeroZone = document.getElementById("appHeroZone");
+        if (appHeroZone) {
+          appHeroZone.style.display = isLoggedIn ? "none" : "block";
+        }
         loginPanel.style.display = isLoggedIn ? "none" : "block";
         appPanel.classList.toggle("visible", isLoggedIn);
         logoutBtn.classList.toggle("visible", isLoggedIn);

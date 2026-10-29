@@ -48,18 +48,20 @@
         -webkit-font-smoothing: antialiased;
       }
       .contact-shell {
-        max-width: 1040px;
-        margin: 36px auto 60px;
-        padding: 0 clamp(16px, 4vw, 32px);
+        max-width: 1320px;
+        margin: 0 auto 60px;
+        padding: 32px clamp(18px, 4vw, 56px) 60px;
+        box-sizing: border-box;
       }
       .contact-hero {
         background: var(--ff-card-bg);
         border: 1px solid var(--ff-card-border);
-        border-radius: 24px;
-        padding: clamp(28px, 4vw, 44px);
-        box-shadow: 0 12px 32px rgba(0, 70, 70, 0.06);
+        border-radius: 28px;
+        padding: clamp(32px, 3.5vw, 44px) clamp(28px, 4vw, 52px);
+        box-shadow: 0 16px 48px rgba(0, 70, 70, 0.06);
         margin-bottom: 28px;
         text-align: center;
+        box-sizing: border-box;
       }
       .contact-hero-tag {
         display: inline-flex;

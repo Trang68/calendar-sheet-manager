@@ -63,10 +63,11 @@ body::before {
 }
 
 .shell {
-  max-width: 1240px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 24px 60px;
+  padding: 32px clamp(18px, 4vw, 56px) 60px;
+  box-sizing: border-box;
 }
 
 /* TOPBAR */
@@ -146,10 +147,12 @@ body::before {
 .hero-roadmap {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  padding: 46px 42px;
-  box-shadow: var(--shadow-lg);
-  margin-bottom: 50px;
+  border-radius: 28px;
+  padding: clamp(32px, 3.5vw, 44px) clamp(28px, 4vw, 52px);
+  box-shadow: 0 16px 48px rgba(0, 70, 70, 0.06);
+  min-height: 440px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
   position: relative;
   overflow: hidden;
 }

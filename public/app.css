@@ -27,8 +27,11 @@
       }
 
       .page {
-        width: min(1700px, calc(100% - 36px));
-        margin: 16px auto 36px;
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 24px clamp(18px, 4vw, 56px) 60px;
+        box-sizing: border-box;
       }
 
       .topbar {
@@ -83,8 +86,20 @@
       }
 
       .login-wrap {
-        max-width: 460px;
-        margin: 62px auto 0;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid rgba(0, 70, 70, 0.12);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 70, 70, 0.08);
+      }
+
+      .app-hero-auth-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
       }
 
       .login-head {
