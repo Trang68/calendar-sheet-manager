@@ -11,6 +11,18 @@
 (function () {
   'use strict';
 
+  // 0. Synchronously restore view transition direction as early as possible
+  try {
+    const transitionDirection = sessionStorage.getItem('taiga_swipe_transition');
+    if (transitionDirection && ['forward', 'back'].includes(transitionDirection)) {
+      document.documentElement.dataset.swipeDirection = transitionDirection;
+      sessionStorage.removeItem('taiga_swipe_transition');
+      setTimeout(() => {
+        delete document.documentElement.dataset.swipeDirection;
+      }, 500);
+    }
+  } catch (_) {}
+
   // 1. Register Service Worker & Handle Version Upgrades
   let swRegistration = null;
   if ('serviceWorker' in navigator) {
@@ -582,22 +594,47 @@
     }
   }
 
-  function initSwipeTabNavigation() {
+  function initTabNavigation() {
     const routes = ['/home', '/roadmap', '/articles', '/test', '/app', '/contact'];
     const currentPath = window.location.pathname.replace(/\/+$/, '') || '/home';
     const currentIndex = routes.indexOf(currentPath);
-    if (currentIndex === -1) return;
 
-    const transitionStorageKey = 'taiga_swipe_transition';
-    try {
-      const transitionDirection = sessionStorage.getItem(transitionStorageKey);
-      if (['forward', 'back', 'preview'].includes(transitionDirection)) {
-        document.documentElement.dataset.swipeDirection = transitionDirection;
-        sessionStorage.removeItem(transitionStorageKey);
-      }
-    } catch (error) {
-      console.warn('[PWA] Could not restore swipe transition direction:', error);
-    }
+    const setDirection = (direction) => {
+      document.documentElement.dataset.swipeDirection = direction;
+      try {
+        sessionStorage.setItem('taiga_swipe_transition', direction);
+      } catch (_) {}
+    };
+
+    // 1. Capture tab clicks and set forward/back direction BEFORE navigation starts
+    document.addEventListener(
+      'click',
+      (e) => {
+        const anchor = e.target.closest('a[href]');
+        if (!anchor) return;
+        const href = anchor.getAttribute('href');
+        if (!href || !href.startsWith('/')) return;
+
+        const targetPath = href.split('?')[0].split('#')[0].replace(/\/+$/, '') || '/home';
+        const targetIndex = routes.indexOf(targetPath);
+        if (targetIndex === -1 || targetIndex === currentIndex) return;
+
+        const direction = targetIndex > currentIndex ? 'forward' : 'back';
+        setDirection(direction);
+
+        // Instant tactile feedback on header tab
+        const navTab = anchor.closest('.ff-nav-tab');
+        if (navTab) {
+          const oldActive = document.querySelector('.ff-nav-tab.active');
+          if (oldActive && oldActive !== navTab) oldActive.classList.remove('active');
+          navTab.classList.add('active');
+        }
+      },
+      { capture: true }
+    );
+
+    // 2. High-performance, natural swipe gesture navigation on mobile & touch devices
+    if (currentIndex === -1) return;
 
     const ignoredTargets = [
       'a',
@@ -612,6 +649,7 @@
       '.dict-widget-panel',
       '.dict-widget-launcher',
       '.dict-selection-popup',
+      '.pwa-instructions-modal',
       '.flashcard-arena',
       '.flashcard-card-scene',
       '.flashcard-controls',
@@ -624,250 +662,41 @@
       '.question-block',
       '.options-list',
     ].join(',');
-    let gesture = null;
-    let activePreview = null;
-    const previews = new Map();
-    let navigating = false;
+
     const isIgnoredTouchTarget = (target) => {
       if (!(target instanceof Element)) return false;
       if (target.closest(ignoredTargets)) return true;
-      for (let element = target; element && element !== document.documentElement; element = element.parentElement) {
-        const overflowX = window.getComputedStyle(element).overflowX;
-        if ((overflowX === 'auto' || overflowX === 'scroll') && element.scrollWidth > element.clientWidth + 1) {
+      for (let el = target; el && el !== document.documentElement; el = el.parentElement) {
+        const overflowX = window.getComputedStyle(el).overflowX;
+        if ((overflowX === 'auto' || overflowX === 'scroll') && el.scrollWidth > el.clientWidth + 1) {
           return true;
         }
       }
       return false;
     };
 
-    const preloadPreview = async (targetIndex) => {
-      if (previews.has(targetIndex) || window.innerWidth > 640) return;
-      const route = routes[targetIndex];
-      const response = await fetch(route, {
-        headers: { Accept: 'text/html' },
-        cache: 'force-cache',
-      });
-      if (!response.ok) throw new Error(`Preview request failed (${response.status}): ${route}`);
-      if (new URL(response.url, window.location.href).pathname.replace(/\/+$/, '') !== route) {
-        throw new Error(`Preview response did not match the requested page: ${route}`);
-      }
-
-      const html = await response.text();
-      const parsed = new DOMParser().parseFromString(html, 'text/html');
-      parsed.querySelectorAll(
-        'script, iframe, object, embed, link[rel="modulepreload"], link[rel="preload"][as="script"], link[rel="stylesheet"][href*="pwa-install.css"], link[rel="stylesheet"][href*="dictionary-widget.css"]'
-      ).forEach((element) => element.remove());
-      parsed.querySelectorAll('*').forEach((element) => {
-        for (const attribute of element.getAttributeNames()) {
-          if (attribute.toLowerCase().startsWith('on')) element.removeAttribute(attribute);
-        }
-      });
-
-      const base = parsed.createElement('base');
-      base.href = new URL(route, window.location.origin).href;
-      parsed.head.prepend(base);
-      const previewStyles = parsed.createElement('style');
-      previewStyles.textContent = `
-        .game-topbar { visibility: hidden !important; }
-        .dict-widget-launcher, .dict-widget-panel, .dict-selection-popup { display: none !important; }
-        html, body { min-height: 100%; }
-      `;
-      parsed.head.appendChild(previewStyles);
-
-      const frame = document.createElement('iframe');
-      frame.title = 'Bản xem trước trang';
-      frame.setAttribute('aria-hidden', 'true');
-      frame.setAttribute('sandbox', 'allow-same-origin');
-      Object.assign(frame.style, {
-        position: 'fixed',
-        inset: '0',
-        width: '100vw',
-        height: '100vh',
-        height: '100dvh',
-        border: '0',
-        zIndex: '49',
-        background: '#fff',
-        pointerEvents: 'none',
-        visibility: 'hidden',
-        willChange: 'transform',
-        transform: 'translateX(100vw)',
-      });
-      const ready = new Promise((resolve, reject) => {
-        const timeout = setTimeout(() => reject(new Error(`Preview timed out: ${route}`)), 12000);
-        frame.addEventListener(
-          'load',
-          async () => {
-            try {
-              const doc = frame.contentDocument;
-              if (!doc) throw new Error(`Preview document unavailable: ${route}`);
-              const visibleImages = [...doc.images].filter(
-                (image) => image.getBoundingClientRect().top < window.innerHeight
-              );
-              await Promise.all([
-                doc.fonts?.ready,
-                ...visibleImages.map((image) => image.decode().catch(() => undefined)),
-              ]);
-              clearTimeout(timeout);
-              resolve();
-            } catch (error) {
-              clearTimeout(timeout);
-              reject(error);
-            }
-          },
-          { once: true }
-        );
-        frame.addEventListener(
-          'error',
-          () => {
-            clearTimeout(timeout);
-            reject(new Error(`Preview failed to load: ${route}`));
-          },
-          { once: true }
-        );
-      });
-
-      frame.srcdoc = `<!doctype html>${parsed.documentElement.outerHTML}`;
-      document.body.appendChild(frame);
-      const preview = { frame, ready: false };
-      previews.set(targetIndex, preview);
-      try {
-        await ready;
-        if (previews.get(targetIndex) === preview) preview.ready = true;
-      } catch (error) {
-        frame.remove();
-        if (previews.get(targetIndex)?.frame === frame) previews.delete(targetIndex);
-        console.warn('[PWA] Swipe preview unavailable:', error);
-      }
-    };
-
-    const preloadAdjacentPreviews = async () => {
-      if (window.innerWidth > 640) return;
-      const nextIndex = (currentIndex + 1) % routes.length;
-      const previousIndex = (currentIndex - 1 + routes.length) % routes.length;
-      for (const targetIndex of [nextIndex, previousIndex]) {
-        try {
-          await preloadPreview(targetIndex);
-        } catch (error) {
-          console.warn('[PWA] Could not prepare swipe preview:', error);
-        }
-      }
-    };
-
-    const schedulePreviewPreload = () => {
-      if (window.innerWidth > 640) return;
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => preloadAdjacentPreviews(), { timeout: 3000 });
-      } else {
-        setTimeout(() => preloadAdjacentPreviews(), 1500);
-      }
-    };
-
-    const showPreview = (targetIndex, direction) => {
-      const preview = previews.get(targetIndex);
-      if (!preview?.ready || !preview.frame.isConnected) return null;
-      const frame = preview.frame;
-      frame.style.transition = 'none';
-      frame.style.visibility = 'visible';
-      frame.style.transform = `translateX(${direction < 0 ? '100vw' : '-100vw'})`;
-      frame.getBoundingClientRect();
-      activePreview = preview;
-      return preview;
-    };
-
-    const hideActivePreview = () => {
-      if (!activePreview) return;
-      const preview = activePreview;
-      const frame = preview.frame;
-      activePreview = null;
-      frame.style.transition = 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-      frame.style.transform = `translateX(${gesture.direction < 0 ? '100vw' : '-100vw'})`;
-      let hidden = false;
-      const finishHiding = () => {
-        if (hidden || activePreview?.frame === frame) return;
-        hidden = true;
-        frame.style.visibility = 'hidden';
-        frame.style.transition = 'none';
-      };
-      frame.addEventListener('transitionend', finishHiding, { once: true });
-      setTimeout(finishHiding, 200);
-    };
-
-    schedulePreviewPreload();
+    let touchStart = null;
+    let isSwiping = false;
 
     document.addEventListener(
       'touchstart',
       (e) => {
-        if (navigating || e.touches.length !== 1 || window.getSelection()?.toString()) {
-          gesture = null;
+        if (e.touches.length !== 1 || window.getSelection()?.toString()) {
+          touchStart = null;
+          isSwiping = false;
           return;
         }
         if (isIgnoredTouchTarget(e.target)) {
-          gesture = null;
+          touchStart = null;
+          isSwiping = false;
           return;
         }
-        gesture = {
+        touchStart = {
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
-          direction: 0,
-          targetIndex: -1,
-          cancelled: false,
+          time: Date.now(),
         };
-      },
-      { passive: true }
-    );
-
-    document.addEventListener(
-      'touchend',
-      (e) => {
-        if (navigating) return;
-        if (
-          !gesture ||
-          e.changedTouches.length !== 1 ||
-          window.getSelection()?.toString() ||
-          isIgnoredTouchTarget(e.target)
-        ) {
-          hideActivePreview();
-          gesture = null;
-          return;
-        }
-        const touch = e.changedTouches[0];
-        const deltaX = touch.clientX - gesture.x;
-        const deltaY = touch.clientY - gesture.y;
-        const shouldNavigate =
-          gesture.targetIndex >= 0 &&
-          !gesture.cancelled &&
-          Math.abs(deltaX) >= Math.max(80, window.innerWidth * 0.22) &&
-          Math.abs(deltaX) > Math.abs(deltaY) * 1.3;
-
-        if (shouldNavigate) {
-          const direction = activePreview ? 'preview' : gesture.direction < 0 ? 'forward' : 'back';
-          try {
-            sessionStorage.setItem(transitionStorageKey, direction);
-          } catch (error) {
-            console.warn('[PWA] Could not save swipe transition direction:', error);
-          }
-          navigating = true;
-          const targetUrl = routes[gesture.targetIndex];
-          if (activePreview) {
-            const previewFrame = activePreview.frame;
-            activePreview = null;
-            previewFrame.style.transition = 'transform 200ms cubic-bezier(0.22, 1, 0.36, 1)';
-            previewFrame.style.transform = 'translateX(0)';
-            let navigationStarted = false;
-            const continueNavigation = () => {
-              if (navigationStarted) return;
-              navigationStarted = true;
-              window.location.assign(targetUrl);
-            };
-            previewFrame.addEventListener('transitionend', continueNavigation, { once: true });
-            setTimeout(continueNavigation, 220);
-          } else {
-            window.location.assign(targetUrl);
-          }
-        } else {
-          hideActivePreview();
-        }
-        gesture = null;
+        isSwiping = false;
       },
       { passive: true }
     );
@@ -875,39 +704,61 @@
     document.addEventListener(
       'touchmove',
       (e) => {
-        if (!gesture || e.touches.length !== 1 || gesture.cancelled) return;
-        const touch = e.touches[0];
-        const deltaX = touch.clientX - gesture.x;
-        const deltaY = touch.clientY - gesture.y;
+        if (!touchStart || e.touches.length !== 1) return;
+        const deltaX = e.touches[0].clientX - touchStart.x;
+        const deltaY = e.touches[0].clientY - touchStart.y;
 
-        if (!gesture.direction) {
-          if (Math.abs(deltaX) < 18 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
-          const direction = deltaX < 0 ? -1 : 1;
-          const targetIndex = (currentIndex + (direction < 0 ? 1 : -1) + routes.length) % routes.length;
-          gesture.direction = direction;
-          gesture.targetIndex = targetIndex;
-          showPreview(targetIndex, direction);
+        if (!isSwiping) {
+          if (Math.abs(deltaX) > 12 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
+            isSwiping = true;
+          } else if (Math.abs(deltaY) > 12) {
+            touchStart = null;
+            return;
+          }
         }
 
-        if (deltaX * gesture.direction < -12 || Math.abs(deltaX) < Math.abs(deltaY) * 0.8) {
-          gesture.cancelled = true;
-          hideActivePreview();
-          return;
-        }
-
-        if (activePreview) {
+        if (isSwiping && e.cancelable) {
           e.preventDefault();
-          const offset = gesture.direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
-          activePreview.frame.style.transform = `translateX(${offset}px)`;
         }
       },
       { passive: false }
     );
 
+    document.addEventListener(
+      'touchend',
+      (e) => {
+        if (!touchStart || !isSwiping || e.changedTouches.length !== 1) {
+          touchStart = null;
+          isSwiping = false;
+          return;
+        }
+
+        const deltaX = e.changedTouches[0].clientX - touchStart.x;
+        const deltaY = e.changedTouches[0].clientY - touchStart.y;
+        const deltaTime = Math.max(1, Date.now() - touchStart.time);
+        const velocity = Math.abs(deltaX) / deltaTime; // px/ms
+
+        touchStart = null;
+        isSwiping = false;
+
+        const isFlick = velocity > 0.28 && Math.abs(deltaX) >= 30;
+        const isDrag = Math.abs(deltaX) >= Math.min(55, window.innerWidth * 0.16);
+
+        if ((isFlick || isDrag) && Math.abs(deltaX) > Math.abs(deltaY) * 1.05) {
+          const direction = deltaX < 0 ? 'forward' : 'back';
+          const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
+          const targetUrl = routes[targetIndex];
+
+          setDirection(direction);
+          window.location.assign(targetUrl);
+        }
+      },
+      { passive: true }
+    );
+
     document.addEventListener('touchcancel', () => {
-      if (navigating) return;
-      hideActivePreview();
-      gesture = null;
+      touchStart = null;
+      isSwiping = false;
     });
   }
 
@@ -916,11 +767,11 @@
     document.addEventListener('DOMContentLoaded', () => {
       initPwaUI();
       initInstantPrefetch();
-      initSwipeTabNavigation();
+      initTabNavigation();
     });
   } else {
     initPwaUI();
     initInstantPrefetch();
-    initSwipeTabNavigation();
+    initTabNavigation();
   }
 })();

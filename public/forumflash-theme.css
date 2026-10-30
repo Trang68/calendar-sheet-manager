@@ -15,43 +15,60 @@ html {
   navigation: auto;
 }
 
-/* Keep the shared header stationary while page content transitions. */
+/* Background canvas during transition matches the warm paper cream theme */
+::view-transition {
+  background-color: var(--ff-bg, #f7f5ef);
+}
+
+/* Keep the shared header stationary and elevated across all screen sizes */
 .game-topbar {
   view-transition-name: game-topbar;
 }
 
-/* Keep cross-page transitions from shifting the sticky header vertically. */
+::view-transition-group(game-topbar) {
+  animation: none !important;
+  z-index: 1000 !important;
+}
+
+/* Ensure smooth GPU rendering with normal blend mode */
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal !important;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Default subtle fade if no direction is specified */
 ::view-transition-old(root) {
-  animation: 160ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-out;
+  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-out;
 }
 
 ::view-transition-new(root) {
-  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-in;
+  animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-in;
 }
 
+/* Forward transition: outgoing page slides left (-26%) + subtle dim; incoming page enters from right (100% -> 0) */
 html[data-swipe-direction='forward']::view-transition-old(root) {
-  animation: 220ms cubic-bezier(0.22, 1, 0.36, 1) both ff-swipe-out-forward;
+  animation: 280ms cubic-bezier(0.32, 0.72, 0, 1) both ff-swipe-out-forward;
+  z-index: 1;
 }
 
 html[data-swipe-direction='forward']::view-transition-new(root) {
-  animation: 240ms cubic-bezier(0.22, 1, 0.36, 1) both ff-swipe-in-forward;
+  animation: 280ms cubic-bezier(0.32, 0.72, 0, 1) both ff-swipe-in-forward;
+  z-index: 2;
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.12);
 }
 
+/* Back transition: outgoing page slides right to reveal (0 -> 100%); incoming page emerges from left (-26% -> 0) */
 html[data-swipe-direction='back']::view-transition-old(root) {
-  animation: 220ms cubic-bezier(0.22, 1, 0.36, 1) both ff-swipe-out-back;
+  animation: 280ms cubic-bezier(0.32, 0.72, 0, 1) both ff-swipe-out-back;
+  z-index: 2;
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.12);
 }
 
 html[data-swipe-direction='back']::view-transition-new(root) {
-  animation: 240ms cubic-bezier(0.22, 1, 0.36, 1) both ff-swipe-in-back;
-}
-
-html[data-swipe-direction='preview']::view-transition-old(root),
-html[data-swipe-direction='preview']::view-transition-new(root) {
-  animation-duration: 0.01ms !important;
-}
-
-::view-transition-group(game-topbar) {
-  animation-duration: 0.01ms;
+  animation: 280ms cubic-bezier(0.32, 0.72, 0, 1) both ff-swipe-in-back;
+  z-index: 1;
 }
 
 @keyframes ff-page-fade-out {
@@ -74,37 +91,41 @@ html[data-swipe-direction='preview']::view-transition-new(root) {
 
 @keyframes ff-swipe-out-forward {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
   to {
-    transform: translateX(-24%);
+    transform: translate3d(-26%, 0, 0);
+    opacity: 0.65;
   }
 }
 
 @keyframes ff-swipe-in-forward {
   from {
-    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
   }
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes ff-swipe-out-back {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(24%);
+    transform: translate3d(100%, 0, 0);
   }
 }
 
 @keyframes ff-swipe-in-back {
   from {
-    transform: translateX(-100%);
+    transform: translate3d(-26%, 0, 0);
+    opacity: 0.65;
   }
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -1382,8 +1403,6 @@ body.ff-body {
 .topic-card-item:hover .topic-card-action {
   color: var(--ff-mint);
 }
-  color: var(--ff-mint);
-}
 
 /* ==========================================================================
    5. ARENA SECTION — THE INTERACTIVE LEARNING & TESTING PLATFORM
@@ -2243,7 +2262,6 @@ body.ff-body {
 /* Responsive Topbar for Tablet & Mobile (<= 900px) */
 @media (max-width: 900px) {
   .game-topbar {
-    view-transition-name: none;
     display: grid !important;
     grid-template-columns: auto 1fr !important;
     grid-template-areas:

@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var dir = sessionStorage.getItem('taiga_swipe_transition');
+          if (dir) {
+            document.documentElement.dataset.swipeDirection = dir;
+            sessionStorage.removeItem('taiga_swipe_transition');
+          }
+        } catch (_) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Lộ trình học tiếng Nga toàn diện từ A0 đến B2 tại TAIGA TALK: Du học Nga, Tiếng Nga thương mại, Luyện thi TRKI và Giao tiếp phản xạ 1-1."
@@ -14,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/forumflash-theme.css?v=2.11" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=2.12" />
     <link rel="stylesheet" href="/roadmap.css?v=2.4" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.3" />
     <link rel="manifest" href="/manifest.json" />
@@ -26,7 +37,7 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/pwa-install.css?v=1.0" />
     <script src="/taiga-audio.js?v=1.0"></script>
-    <script src="/pwa-install.js?v=2.9" defer></script>
+    <script src="/pwa-install.js?v=3.0" defer></script>
   </head>
   <body class="ff-body">
     <!-- 1. FORUMFLASH TOPBAR -->
