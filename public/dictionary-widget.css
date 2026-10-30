@@ -832,6 +832,68 @@
   color: #713f12;
 }
 
+.dict-fallback-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dict-fallback-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  height: 34px;
+  text-decoration: none;
+}
+
+.dict-fallback-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.dict-fallback-btn.speak {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.dict-fallback-btn.speak:hover {
+  background: #dbeafe;
+  border-color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.dict-fallback-btn.speak.playing {
+  animation: pulseAudio 0.8s infinite;
+}
+
+.dict-fallback-btn.bookmark.active {
+  border-color: #fca5a5;
+  background: #fef2f2;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.dict-fallback-btn:active {
+  transform: scale(0.97);
+}
+
 /* Empty / State Views */
 .dict-empty-state {
   text-align: center;

@@ -924,10 +924,10 @@
                   </div>`
                 : ""
             }
-            <div style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap;">
-              <button class="dict-audio-btn" id="dictFallbackSpeakBtn" title="Nghe phát âm" style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">🔊 Nghe</button>
-              <button class="dict-action-btn" id="dictFallbackCopyBtn" title="Sao chép bản dịch" style="border: 1px solid #cbd5e1; background: #fff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer;">📋 Sao chép</button>
-              <button class="dict-action-btn ${isSaved ? "active" : ""}" id="dictFallbackBookmarkBtn" title="Lưu vào sổ tay" style="border: 1px solid ${isSaved ? "#ef4444" : "#cbd5e1"}; background: ${isSaved ? "#fef2f2" : "#fff"}; color: ${isSaved ? "#ef4444" : "#475569"}; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; cursor: pointer; font-weight: 700;">
+            <div class="dict-fallback-actions">
+              <button class="dict-fallback-btn speak" id="dictFallbackSpeakBtn" type="button" title="Nghe phát âm">🔊 Nghe</button>
+              <button class="dict-fallback-btn copy" id="dictFallbackCopyBtn" type="button" title="Sao chép bản dịch">📋 Sao chép</button>
+              <button class="dict-fallback-btn bookmark ${isSaved ? "active" : ""}" id="dictFallbackBookmarkBtn" type="button" title="Lưu vào sổ tay">
                 ${isSaved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay"}
               </button>
             </div>
@@ -936,7 +936,11 @@
 
         const spkBtn = this.resultsEl.querySelector("#dictFallbackSpeakBtn");
         if (spkBtn) {
-          spkBtn.addEventListener("click", () => this.speak(isRu ? query : trans));
+          spkBtn.addEventListener("click", () => {
+            spkBtn.classList.add("playing");
+            this.speak(isRu ? query : trans);
+            setTimeout(() => spkBtn.classList.remove("playing"), 1200);
+          });
         }
 
         const copyBtn = this.resultsEl.querySelector("#dictFallbackCopyBtn");
@@ -944,9 +948,9 @@
           copyBtn.addEventListener("click", () => {
             if (navigator.clipboard) {
               navigator.clipboard.writeText(trans).then(() => {
-                copyBtn.textContent = "✓ Đã chép";
+                copyBtn.innerHTML = "✓ Đã chép";
                 setTimeout(() => {
-                  copyBtn.textContent = "📋 Sao chép";
+                  copyBtn.innerHTML = "📋 Sao chép";
                 }, 2000);
               });
             }
@@ -958,9 +962,7 @@
           bmBtn.addEventListener("click", () => {
             const saved = this.toggleBookmark({ word: query, meaning: trans, dir });
             bmBtn.innerHTML = saved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay";
-            bmBtn.style.borderColor = saved ? "#ef4444" : "#cbd5e1";
-            bmBtn.style.background = saved ? "#fef2f2" : "#fff";
-            bmBtn.style.color = saved ? "#ef4444" : "#475569";
+            bmBtn.classList.toggle("active", saved);
           });
         }
       } else {
