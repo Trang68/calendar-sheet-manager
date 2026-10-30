@@ -518,6 +518,9 @@
         }
         const val = this.searchInput.value;
         this.clearBtn.style.display = val ? "grid" : "none";
+        if (!val) {
+          this.stopAudio();
+        }
         clearTimeout(this.searchDebounceTimer);
         this.searchDebounceTimer = setTimeout(() => {
           this.handleSearch(val.trim());
@@ -536,6 +539,7 @@
       });
 
       this.clearBtn.addEventListener("click", () => {
+        this.stopAudio();
         this.searchInput.value = "";
         this.clearBtn.style.display = "none";
         this.resultsEl.innerHTML = "";
@@ -629,15 +633,7 @@
       this.panelEl.classList.remove("open");
       this.launcherEl.style.transform = "";
       this.launcherEl.style.opacity = "";
-      if (this.audioObj) {
-        this.audioObj.pause();
-      }
-      if (window.TaigaAudio) {
-        window.TaigaAudio.stop();
-      }
-      if (window.speechSynthesis) {
-        speechSynthesis.cancel();
-      }
+      this.stopAudio();
     }
 
     toggle() {
@@ -655,6 +651,7 @@
     }
 
     switchTab(tab) {
+      this.stopAudio();
       this.activeTab = tab;
       this.panelEl.querySelectorAll(".dict-nav-tab").forEach((t) => {
         t.classList.toggle("active", t.dataset.tab === tab);
@@ -705,6 +702,7 @@
     }
 
     async handleSearch(query, directOpen = false) {
+      this.stopAudio();
       if (!query) {
         this.resultsEl.innerHTML = "";
         this.emptyEl.style.display = "flex";
@@ -925,10 +923,10 @@
                 : ""
             }
             <div class="dict-fallback-actions">
-              <button class="dict-fallback-btn speak" id="dictFallbackSpeakBtn" type="button" title="Nghe phát âm">🔊 Nghe</button>
-              <button class="dict-fallback-btn copy" id="dictFallbackCopyBtn" type="button" title="Sao chép bản dịch">📋 Sao chép</button>
+              <button class="dict-fallback-btn speak" id="dictFallbackSpeakBtn" type="button" title="Nghe phát âm"><span>🔊</span><span>Nghe</span></button>
+              <button class="dict-fallback-btn copy" id="dictFallbackCopyBtn" type="button" title="Sao chép bản dịch"><span>📋</span><span>Sao chép</span></button>
               <button class="dict-fallback-btn bookmark ${isSaved ? "active" : ""}" id="dictFallbackBookmarkBtn" type="button" title="Lưu vào sổ tay">
-                ${isSaved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay"}
+                <span>${isSaved ? "❤️" : "🤍"}</span><span>${isSaved ? "Đã lưu" : "Lưu vào sổ tay"}</span>
               </button>
             </div>
           </div>
@@ -948,9 +946,9 @@
           copyBtn.addEventListener("click", () => {
             if (navigator.clipboard) {
               navigator.clipboard.writeText(trans).then(() => {
-                copyBtn.innerHTML = "✓ Đã chép";
+                copyBtn.innerHTML = "<span>✓</span><span>Đã chép</span>";
                 setTimeout(() => {
-                  copyBtn.innerHTML = "📋 Sao chép";
+                  copyBtn.innerHTML = "<span>📋</span><span>Sao chép</span>";
                 }, 2000);
               });
             }
@@ -961,7 +959,7 @@
         if (bmBtn) {
           bmBtn.addEventListener("click", () => {
             const saved = this.toggleBookmark({ word: query, meaning: trans, dir });
-            bmBtn.innerHTML = saved ? "❤️ Đã lưu" : "🤍 Lưu vào sổ tay";
+            bmBtn.innerHTML = `<span>${saved ? "❤️" : "🤍"}</span><span>${saved ? "Đã lưu" : "Lưu vào sổ tay"}</span>`;
             bmBtn.classList.toggle("active", saved);
           });
         }
@@ -981,6 +979,7 @@
     }
 
     async openWordDetail(word, dir = "ru-vi") {
+      this.stopAudio();
       this.resultsEl.innerHTML = `
         <div style="text-align: center; padding: 30px; color: #64748b;">
           <span>⏳ Đang tải thông tin chi tiết...</span>
@@ -1298,35 +1297,120 @@
       const mainWord = isRuVi ? entry.ru : entry.vi;
       const isBookmarked = this.bookmarks.some((b) => b.word.toLowerCase() === mainWord.toLowerCase());
 
+      // Phân tích câu ví dụ (Example sentences parsing)
+      const exLines = (entry.ex || "").split("\n").filter((l) => l.trim());
+      const parsedExamples = exLines.map((line) => {
+        const arrowIdx = line.indexOf("→");
+        let ru = "";
+        let vi = "";
+        if (arrowIdx !== -1) {
+          const left = line.substring(0, arrowIdx).trim();
+          const right = line.substring(arrowIdx + 1).trim();
+          if (isRuVi) {
+            ru = left;
+            vi = right;
+          } else {
+            // Trong từ điển Việt - Nga: vế trái là tiếng Việt, vế phải là tiếng Nga!
+            ru = right;
+            vi = left;
+          }
+        } else {
+          ru = line.trim();
+        }
+        return { ru, vi };
+      });
+
+      // Đối với từ điển Việt -> Nga: bóc tách từng từ tiếng Nga riêng biệt kèm ví dụ tương ứng
+      const viRuWordsList = [];
+      let primaryRuWord = "";
+      if (!isRuVi) {
+        const ruLines = (entry.ru || "").split("\n").filter((l) => l.trim());
+        for (const line of ruLines) {
+          const parts = line.split(/[;,]/).map((p) => p.trim()).filter(Boolean);
+          for (const p of parts) {
+            if (!viRuWordsList.some((w) => w.ru.toLowerCase() === p.toLowerCase())) {
+              const matchedEx = parsedExamples.find((ex) => ex.ru.toLowerCase().includes(p.toLowerCase()));
+              viRuWordsList.push({ ru: p, ex: matchedEx || null });
+            }
+          }
+        }
+        primaryRuWord = viRuWordsList[0]?.ru || (entry.ru || "").split(/[;\n]/)[0].trim();
+      }
+
       const meaningLines = ((isRuVi ? entry.vi : entry.ru) || "").split("\n").filter((l) => l.trim());
-      const firstMeaning = meaningLines[0] || "";
+      const firstMeaning = isRuVi ? (meaningLines[0] || "") : primaryRuWord;
       const meaningLanguage = isRuVi ? "tiếng Việt" : "tiếng Nga";
 
       const sectionsHtml = [];
 
       // 1. Meanings list
-      if (meaningLines.length > 0) {
-        sectionsHtml.push(`
-          <div class="dict-sec open" data-sec="meanings">
-            <button class="dict-sec-head" type="button">
-              <span class="dict-sec-head-left">
-                <span class="dict-sec-icon">📖</span> Nghĩa ${meaningLanguage} (${meaningLines.length})
-              </span>
-              <span class="dict-sec-arrow">▾</span>
-            </button>
-            <div class="dict-sec-body">
-              ${meaningLines
-                .map(
-                  (m, idx) => `
-                <div class="dict-meaning-item">
-                  <span class="dict-meaning-bullet">${idx + 1}.</span> ${this.escapeHtml(m)}
-                </div>
-              `
-                )
-                .join("")}
+      if (isRuVi) {
+        if (meaningLines.length > 0) {
+          sectionsHtml.push(`
+            <div class="dict-sec open" data-sec="meanings">
+              <button class="dict-sec-head" type="button">
+                <span class="dict-sec-head-left">
+                  <span class="dict-sec-icon">📖</span> Nghĩa ${meaningLanguage} (${meaningLines.length})
+                </span>
+                <span class="dict-sec-arrow">▾</span>
+              </button>
+              <div class="dict-sec-body">
+                ${meaningLines
+                  .map(
+                    (m, idx) => `
+                  <div class="dict-meaning-item">
+                    <span class="dict-meaning-bullet">${idx + 1}.</span> ${this.escapeHtml(m)}
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
             </div>
-          </div>
-        `);
+          `);
+        }
+      } else {
+        // Việt -> Nga: Hiển thị mỗi từ tiếng Nga là 1 dòng riêng kèm nút loa riêng & câu ví dụ trực tiếp!
+        if (viRuWordsList.length > 0) {
+          sectionsHtml.push(`
+            <div class="dict-sec open" data-sec="meanings">
+              <button class="dict-sec-head" type="button">
+                <span class="dict-sec-head-left">
+                  <span class="dict-sec-icon">📖</span> Các từ tiếng Nga tương đương (${viRuWordsList.length})
+                </span>
+                <span class="dict-sec-arrow">▾</span>
+              </button>
+              <div class="dict-sec-body">
+                ${viRuWordsList
+                  .map(
+                    (item, idx) => `
+                  <div class="dict-vi-ru-row">
+                    <div class="dict-vi-ru-word-line">
+                      <span class="dict-vi-ru-index">${idx + 1}.</span>
+                      <strong class="dict-vi-ru-word">${this.escapeHtml(item.ru)}</strong>
+                      <button class="dict-ex-speak-btn" data-speak="${this.escapeHtml(item.ru)}" title="Nghe phát âm '${this.escapeHtml(item.ru)}'">🔊</button>
+                      <button class="dict-vi-ru-chip" data-lookup="${this.escapeHtml(item.ru)}" title="Tra chi tiết & ngữ pháp từ '${this.escapeHtml(item.ru)}'">🔍 Tra từ này</button>
+                    </div>
+                    ${
+                      item.ex
+                        ? `
+                      <div class="dict-vi-ru-ex">
+                        <div class="dict-vi-ru-ex-ru-wrap">
+                          <span>${this.escapeHtml(item.ex.ru)}</span>
+                          <button class="dict-ex-speak-btn" data-speak="${this.escapeHtml(item.ex.ru)}" title="Nghe câu ví dụ">🔊</button>
+                        </div>
+                        <div class="dict-vi-ru-ex-vi">→ ${this.escapeHtml(item.ex.vi)}</div>
+                      </div>
+                    `
+                        : ""
+                    }
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
+            </div>
+          `);
+        }
       }
 
       // 2. Comprehensive Verb Conjugation (thì, thời, thể)
@@ -1349,36 +1433,27 @@
       }
 
       // 3. Examples
-      if (entry.ex && entry.ex.trim()) {
-        const exLines = entry.ex.split("\n").filter((l) => l.trim()).slice(0, 10);
+      if (parsedExamples.length > 0) {
         sectionsHtml.push(`
           <div class="dict-sec open" data-sec="examples">
             <button class="dict-sec-head" type="button">
               <span class="dict-sec-head-left">
-                <span class="dict-sec-icon">💬</span> Câu ví dụ thực tế (${exLines.length})
+                <span class="dict-sec-icon">💬</span> Câu ví dụ thực tế (${parsedExamples.length})
               </span>
               <span class="dict-sec-arrow">▾</span>
             </button>
             <div class="dict-sec-body">
-              ${exLines
-                .map((line) => {
-                  const arrowIdx = line.indexOf("→");
-                  let ruPart = line;
-                  let viPart = "";
-                  if (arrowIdx !== -1) {
-                    ruPart = line.substring(0, arrowIdx).trim();
-                    viPart = line.substring(arrowIdx + 1).trim();
-                  }
-                  return `
-                    <div class="dict-ex-item">
-                      <div class="dict-ex-ru">
-                        <span>${this.escapeHtml(ruPart)}</span>
-                        <button class="dict-ex-speak-btn" data-speak="${this.escapeHtml(ruPart)}" title="Nghe câu này">🔊</button>
-                      </div>
-                      ${viPart ? `<div class="dict-ex-vi">→ ${this.escapeHtml(viPart)}</div>` : ""}
+              ${parsedExamples
+                .slice(0, 15)
+                .map((ex) => `
+                  <div class="dict-ex-item">
+                    <div class="dict-ex-ru">
+                      <span>${this.escapeHtml(ex.ru)}</span>
+                      <button class="dict-ex-speak-btn" data-speak="${this.escapeHtml(ex.ru)}" title="Nghe câu tiếng Nga này">🔊</button>
                     </div>
-                  `;
-                })
+                    ${ex.vi ? `<div class="dict-ex-vi">→ ${this.escapeHtml(ex.vi)}</div>` : ""}
+                  </div>
+                `)
                 .join("")}
             </div>
           </div>
@@ -1476,6 +1551,7 @@
           <!-- HERO -->
           <div class="dict-detail-hero">
             <div class="dict-hero-tags">
+              ${!isRuVi ? `<span class="dict-tag-pos" style="background:#f0fdf4; color:#166534; border:1px solid #bbf7d0;">🇻🇳 Việt ➔ 🇷🇺 Nga</span>` : ""}
               ${entry.pos ? `<span class="dict-tag-pos">${this.escapeHtml(entry.pos)}</span>` : ""}
               ${entry.gram ? `<span class="dict-tag-gram">${this.escapeHtml(entry.gram)}</span>` : ""}
             </div>
@@ -1492,7 +1568,7 @@
             </div>
 
             ${entry.pron ? `<p class="dict-hero-pron">${this.escapeHtml(entry.pron)}</p>` : ""}
-            ${firstMeaning ? `<p class="dict-hero-meaning-preview">${this.escapeHtml(firstMeaning)}</p>` : ""}
+            ${firstMeaning ? `<p class="dict-hero-meaning-preview">➔ <strong style="color: #047857; font-size: 1.05rem;">${this.escapeHtml(firstMeaning)}</strong>${!isRuVi && viRuWordsList.length > 1 ? `<span style="color: #64748b; font-size: 0.85rem; font-weight: normal;"> (và ${viRuWordsList.length - 1} từ tương đương bên dưới)</span>` : ""}</p>` : ""}
           </div>
 
           <!-- SECTIONS -->
@@ -1508,6 +1584,7 @@
       const backBtn = this.resultsEl.querySelector("#dictBackBtn");
       if (backBtn) {
         backBtn.addEventListener("click", () => {
+          this.stopAudio();
           this.handleSearch(this.searchInput.value.trim());
         });
       }
@@ -1516,12 +1593,13 @@
       const audioUrl = extra.audio ? extra.audio.m || extra.audio.o : null;
       const speakBtn = this.resultsEl.querySelector("#dictDetailSpeak");
       const slowBtn = this.resultsEl.querySelector("#dictDetailSlow");
+      const wordToSpeak = isRuVi ? mainWord : primaryRuWord;
 
       if (speakBtn) {
-        speakBtn.addEventListener("click", () => this.playAudio(mainWord, audioUrl, 1));
+        speakBtn.addEventListener("click", () => this.playAudio(wordToSpeak, audioUrl, 1));
       }
       if (slowBtn) {
-        slowBtn.addEventListener("click", () => this.playAudio(mainWord, audioUrl, 0.6));
+        slowBtn.addEventListener("click", () => this.playAudio(wordToSpeak, audioUrl, 0.6));
       }
 
       // Sentence speak buttons
@@ -1529,6 +1607,17 @@
         btn.addEventListener("click", (e) => {
           e.stopPropagation();
           this.speak(btn.dataset.speak);
+        });
+      });
+
+      // Vi-Ru distinct lookup chips
+      this.resultsEl.querySelectorAll(".dict-vi-ru-chip").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          this.stopAudio();
+          const w = btn.dataset.lookup;
+          this.searchInput.value = w;
+          this.clearBtn.style.display = "grid";
+          this.openWordDetail(w, "ru-vi");
         });
       });
 
@@ -1543,6 +1632,7 @@
       // Verb aspect pair links
       this.resultsEl.querySelectorAll(".dict-pair-link").forEach((btn) => {
         btn.addEventListener("click", () => {
+          this.stopAudio();
           const pair = btn.dataset.pair;
           this.searchInput.value = pair;
           this.clearBtn.style.display = "grid";
@@ -1641,7 +1731,31 @@
       `;
     }
 
+    stopAudio() {
+      if (window.TaigaAudio && typeof window.TaigaAudio.stop === "function") {
+        try {
+          window.TaigaAudio.stop();
+        } catch (e) {}
+      }
+      if ("speechSynthesis" in window) {
+        try {
+          if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+          window.speechSynthesis.cancel();
+        } catch (e) {}
+      }
+      if (this.audioObj) {
+        try {
+          this.audioObj.pause();
+          this.audioObj.currentTime = 0;
+        } catch (e) {}
+      }
+      if (this.panelEl) {
+        this.panelEl.querySelectorAll(".playing").forEach((el) => el.classList.remove("playing"));
+      }
+    }
+
     playAudio(text, audioUrl, speed = 1, silentFail = false) {
+      this.stopAudio();
       if (audioUrl) {
         if (!this.audioObj) this.audioObj = new Audio();
         this.audioObj.src = audioUrl;
@@ -1655,6 +1769,7 @@
     }
 
     speak(text, rate = 0.9) {
+      this.stopAudio();
       const clean = this.stripStress(text).trim();
       if (!clean) return;
 

@@ -678,6 +678,93 @@
   margin-bottom: 0;
 }
 
+/* Vi-Ru Meaning Rows & Word Items */
+.dict-vi-ru-row {
+  position: relative;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.dict-vi-ru-row:last-child {
+  margin-bottom: 0;
+}
+
+.dict-vi-ru-row:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.dict-vi-ru-word-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dict-vi-ru-index {
+  font-weight: 700;
+  color: #3b82f6;
+  font-size: 0.88rem;
+  min-width: 22px;
+}
+
+.dict-vi-ru-word {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: -0.01em;
+}
+
+.dict-vi-ru-chip {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-left: auto;
+}
+
+.dict-vi-ru-chip:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.dict-vi-ru-ex {
+  margin-top: 4px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-left: 3px solid #38bdf8;
+  border-radius: 6px;
+  font-size: 0.84rem;
+}
+
+.dict-vi-ru-ex-ru-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dict-vi-ru-ex-vi {
+  color: #64748b;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
 .dict-meaning-bullet {
   position: absolute;
   left: 0;
@@ -841,24 +928,33 @@
 }
 
 .dict-fallback-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 6px;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  line-height: 1.3;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
   cursor: pointer;
   border: 1px solid #cbd5e1;
   background: #ffffff;
   color: #334155;
   transition: all 0.15s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
-  height: 34px;
+  box-sizing: border-box !important;
+  height: 34px !important;
+  width: auto !important;
+  min-width: unset !important;
+  white-space: nowrap !important;
   text-decoration: none;
+  flex-shrink: 0;
+}
+
+.dict-fallback-btn span {
+  display: inline-block;
+  line-height: 1;
 }
 
 .dict-fallback-btn:hover {
