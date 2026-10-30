@@ -16,12 +16,24 @@
     const transitionDirection = sessionStorage.getItem('taiga_swipe_transition');
     if (transitionDirection && ['forward', 'back'].includes(transitionDirection)) {
       document.documentElement.dataset.swipeDirection = transitionDirection;
-      sessionStorage.removeItem('taiga_swipe_transition');
       setTimeout(() => {
         delete document.documentElement.dataset.swipeDirection;
+        try { sessionStorage.removeItem('taiga_swipe_transition'); } catch (_) {}
       }, 600);
     }
   } catch (_) {}
+
+  // Standard Cross-Document View Transition event support
+  if ('onpagereveal' in window) {
+    window.addEventListener('pagereveal', () => {
+      try {
+        const dir = sessionStorage.getItem('taiga_swipe_transition');
+        if (dir && ['forward', 'back'].includes(dir)) {
+          document.documentElement.dataset.swipeDirection = dir;
+        }
+      } catch (_) {}
+    });
+  }
 
   // 1. Register Service Worker & Handle Version Upgrades
   let swRegistration = null;
@@ -612,22 +624,27 @@
       if (!container) return;
       const activeTab = container.querySelector('.ff-nav-tab.active') ||
                         container.querySelector(`.ff-nav-tab[href="${currentPath}"]`);
-      if (activeTab) {
-        const tabLeft = activeTab.offsetLeft;
-        const tabWidth = activeTab.offsetWidth;
-        const containerWidth = container.clientWidth;
-        const targetScroll = tabLeft - (containerWidth - tabWidth) / 2;
-        container.scrollTo({
-          left: Math.max(0, targetScroll),
-          behavior: smooth ? 'smooth' : 'instant',
-        });
-      }
+      if (!activeTab) return;
+
+      const activeRect = activeTab.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const currentScroll = container.scrollLeft;
+      const offsetFromContainerLeft = activeRect.left - containerRect.left + currentScroll;
+      const targetScroll = offsetFromContainerLeft - (container.clientWidth - activeTab.offsetWidth) / 2;
+
+      container.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: smooth ? 'smooth' : 'instant',
+      });
     }
 
-    // Scroll active tab on page load
+    // Scroll active tab on page load and as layout stabilizes
     scrollActiveTabIntoView(false);
     requestAnimationFrame(() => scrollActiveTabIntoView(false));
-    setTimeout(() => scrollActiveTabIntoView(true), 120);
+    setTimeout(() => scrollActiveTabIntoView(true), 60);
+    setTimeout(() => scrollActiveTabIntoView(true), 250);
+    window.addEventListener('load', () => scrollActiveTabIntoView(true));
+    window.addEventListener('resize', () => scrollActiveTabIntoView(false), { passive: true });
 
     // 1. Capture tab clicks and set forward/back direction BEFORE navigation starts
     document.addEventListener(

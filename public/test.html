@@ -9,7 +9,10 @@
           var dir = sessionStorage.getItem('taiga_swipe_transition');
           if (dir) {
             document.documentElement.dataset.swipeDirection = dir;
-            sessionStorage.removeItem('taiga_swipe_transition');
+            setTimeout(function () {
+              delete document.documentElement.dataset.swipeDirection;
+              try { sessionStorage.removeItem('taiga_swipe_transition'); } catch (_) {}
+            }, 600);
           }
         } catch (_) {}
       })();
@@ -26,7 +29,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/test.css" />
-    <link rel="stylesheet" href="/forumflash-theme.css?v=2.17" />
+    <link rel="stylesheet" href="/forumflash-theme.css?v=2.18" />
     <link rel="stylesheet" href="/dictionary-widget.css?v=2.3" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#003838" />
@@ -37,7 +40,7 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/pwa-install.css?v=1.0" />
     <script src="/taiga-audio.js?v=1.0"></script>
-    <script src="/pwa-install.js?v=3.5" defer></script>
+    <script src="/pwa-install.js?v=3.6" defer></script>
     <script src="/vocab-25-topics.js?v=1.0"></script>
     <script src="/forumflash-engine.js?v=2.3"></script>
   </head>
