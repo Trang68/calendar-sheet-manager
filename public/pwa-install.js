@@ -698,6 +698,54 @@
       return surface;
     }
 
+    const tabMeta = {
+      '/home': { badge: 'TRANG CHỦ', icon: '🇷🇺', title: 'Học Tiếng Nga Chuyên Nghiệp', desc: 'Phản xạ thực chiến & Flashcard thông minh' },
+      '/roadmap': { badge: 'LỘ TRÌNH A0 → B2', icon: '🚀', title: 'Lộ Trình Học Toàn Diện', desc: 'Du học Nga, Thương mại, TRKI và Giao tiếp 1-1' },
+      '/articles': { badge: 'KHO BÀI VIẾT', icon: '📚', title: 'Cẩm Nang & Bài Viết', desc: 'Ngữ pháp 6 cách, biến cách & mẹo phát âm' },
+      '/test': { badge: 'LUYỆN TẬP PHẢN XẠ', icon: '⚡', title: 'Luyện Phản Xạ & Từ Vựng', desc: 'Flashcard 25 chủ đề, trắc nghiệm & kiểm tra' },
+      '/app': { badge: 'TÀI KHOẢN HỌC VIÊN', icon: '👤', title: 'Quản Lý Tiến Độ Học', desc: 'Theo dõi điểm XP, chuỗi streak & tài khoản' },
+      '/contact': { badge: 'TƯ VẤN & XẾP LỚP', icon: '💬', title: 'Liên Hệ Tuyển Sinh', desc: 'Đăng ký kiểm tra năng lực & xếp lớp phù hợp' }
+    };
+
+    let peekLayer = null;
+    let peekTargetIndex = -1;
+
+    function getPeekLayer(targetIdx, direction) {
+      if (peekLayer && peekTargetIndex === targetIdx) return peekLayer;
+      if (peekLayer) peekLayer.remove();
+
+      const topbar = document.querySelector('.game-topbar');
+      const topbarHeight = topbar ? topbar.offsetHeight : 76;
+      const route = routes[targetIdx];
+      const meta = tabMeta[route] || { badge: 'TIẾP THEO', icon: '📖', title: 'Đang mở trang...', desc: '' };
+
+      const el = document.createElement('div');
+      el.className = 'ff-peek-layer';
+      el.style.top = `${topbarHeight}px`;
+      el.style.height = `calc(100vh - ${topbarHeight}px)`;
+      el.style.height = `calc(100dvh - ${topbarHeight}px)`;
+      el.innerHTML = `
+        <div class="ff-peek-inner">
+          <div class="ff-peek-badge">${meta.icon} ${meta.badge}</div>
+          <h2 class="ff-peek-title">${meta.title}</h2>
+          <p class="ff-peek-desc">${meta.desc}</p>
+          <div class="ff-peek-hint">Thả tay để chuyển trang ➔</div>
+        </div>
+      `;
+      document.body.appendChild(el);
+      peekLayer = el;
+      peekTargetIndex = targetIdx;
+      return el;
+    }
+
+    function removePeekLayer() {
+      if (peekLayer) {
+        peekLayer.remove();
+        peekLayer = null;
+        peekTargetIndex = -1;
+      }
+    }
+
     function resetSurface(el) {
       if (!el) return;
       el.style.transition = 'transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms ease, opacity 220ms ease';
@@ -804,12 +852,23 @@
           if (!surface) surface = getPageSurface();
           if (!surface) return;
 
-          // Trượt ngang phẳng 1:1 theo ngón tay như Zalo (không 3D, không nghiêng chéo)
+          const direction = deltaX < 0 ? -1 : 1;
+          const targetIndex = (currentIndex + (direction < 0 ? 1 : -1) + routes.length) % routes.length;
+          const peek = getPeekLayer(targetIndex, direction);
+
+          // Trang hiện tại trượt nhẹ parallax dưới ngón tay (như Zalo / iOS)
           surface.style.transition = 'none';
-          surface.style.transform = `translate3d(${deltaX}px, 0, 0)`;
-          surface.style.boxShadow = deltaX < 0
-            ? `-12px 0 28px rgba(0, 0, 0, 0.16)`
-            : `12px 0 28px rgba(0, 0, 0, 0.16)`;
+          surface.style.transform = `translate3d(${deltaX * 0.4}px, 0, 0)`;
+
+          // Mép trang mới trượt từ cạnh vào bám sát ngón tay 1:1 theo thời gian thực
+          if (peek) {
+            peek.style.transition = 'none';
+            const peekX = direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
+            peek.style.transform = `translate3d(${peekX}px, 0, 0)`;
+            peek.style.boxShadow = direction < 0
+              ? `-14px 0 32px rgba(0, 0, 0, 0.16)`
+              : `14px 0 32px rgba(0, 0, 0, 0.16)`;
+          }
         }
       },
       { passive: false }
@@ -819,6 +878,7 @@
       'touchend',
       (e) => {
         if (!touchStart || !isDragging || e.changedTouches.length !== 1) {
+          if (peekLayer) removePeekLayer();
           if (surface && isDragging) resetSurface(surface);
           touchStart = null;
           isDragging = false;
@@ -841,12 +901,16 @@
           const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
           const targetUrl = routes[targetIndex];
 
-          // Trượt phẳng vèo ra khỏi màn hình như Zalo:
+          // Trang mới trượt hoàn toàn vào khớp vị trí màn hình!
+          if (peekLayer) {
+            peekLayer.style.transition = 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+            peekLayer.style.transform = 'translate3d(0, 0, 0)';
+          }
           if (surface) {
-            surface.style.transition = 'transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 200ms ease';
-            const exitTx = deltaX < 0 ? -window.innerWidth : window.innerWidth;
-            surface.style.transform = `translate3d(${exitTx}px, 0, 0)`;
-            surface.style.opacity = '0.75';
+            surface.style.transition = 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 180ms ease';
+            const exitX = direction === 'forward' ? -window.innerWidth * 0.35 : window.innerWidth * 0.35;
+            surface.style.transform = `translate3d(${exitX}px, 0, 0)`;
+            surface.style.opacity = '0.6';
           }
 
           setDirection(direction);
@@ -861,9 +925,15 @@
 
           setTimeout(() => {
             window.location.assign(targetUrl);
-          }, 240);
+          }, 160);
         } else {
-          // Cancelled: smoothly spring back to 0
+          // Cancelled: smoothly spring peek back out, and current page back to 0
+          if (peekLayer) {
+            peekLayer.style.transition = 'transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+            const outX = deltaX < 0 ? window.innerWidth : -window.innerWidth;
+            peekLayer.style.transform = `translate3d(${outX}px, 0, 0)`;
+            setTimeout(() => removePeekLayer(), 220);
+          }
           if (surface) resetSurface(surface);
         }
       },
@@ -871,6 +941,7 @@
     );
 
     document.addEventListener('touchcancel', () => {
+      if (peekLayer) removePeekLayer();
       if (surface && isDragging) resetSurface(surface);
       touchStart = null;
       isDragging = false;
