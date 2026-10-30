@@ -281,6 +281,7 @@
 
     // ======================================================================
     // FLASHCARD COMPONENT (STAGE 1 OF LESSON)
+    // Synchronized 100% with the active lesson's topic and content
     // ======================================================================
     initFlashcardsFromLesson(lessonData) {
       this.flashcards = [];
@@ -288,15 +289,17 @@
       this.cardFlipped = false;
 
       const data = lessonData || window.currentLessonData;
+      if (!data) return;
 
-      if (data && Array.isArray(data.vocabCategories)) {
+      // 1. Kỹ năng Đọc hiểu (Reading): Lấy từ vựng trọng tâm theo chủ đề bài đọc
+      if (Array.isArray(data.vocabCategories) && data.vocabCategories.length > 0) {
         data.vocabCategories.forEach((cat) => {
           if (Array.isArray(cat.rows)) {
             cat.rows.forEach((r) => {
               if (r && r.word) {
                 this.flashcards.push({
                   word: r.word,
-                  gram: r.gram || cat.title || "Từ vựng",
+                  gram: r.gram || cat.title || "Từ vựng bài đọc",
                   meaning: r.meaning || "",
                   example: r.example || "",
                   ipa: r.ipa || "",
@@ -308,12 +311,81 @@
         });
       }
 
-      if (this.flashcards.length === 0 && data && Array.isArray(data.vocabulary)) {
+      // 2. Kỹ năng Luyện nói (Speaking): Lấy các mẫu câu luyện phản xạ & nhại giọng (Shadowing)
+      if (this.flashcards.length === 0 && Array.isArray(data.shadowingPhrases) && data.shadowingPhrases.length > 0) {
+        data.shadowingPhrases.forEach((sp) => {
+          if (sp && sp.text) {
+            this.flashcards.push({
+              word: sp.text,
+              gram: "Mẫu câu Luyện nói (Shadowing)",
+              meaning: sp.meaning || "",
+              phonetic: sp.phonetic || "",
+              ipa: "",
+              exampleRu: sp.text,
+              exampleVi: sp.tips ? `Mẹo phát âm: ${sp.tips}` : "",
+              example: sp.tips ? `Mẹo phát âm & ngữ điệu: ${sp.tips}` : (sp.meaning || "")
+            });
+          }
+        });
+      }
+
+      // 3. Kỹ năng Viết luận (Writing): Lấy các cấu trúc & mẫu câu viết mẫu (Cliches)
+      if (this.flashcards.length === 0 && Array.isArray(data.cliches) && data.cliches.length > 0) {
+        data.cliches.forEach((cl) => {
+          if (cl && (cl.ru || cl.text)) {
+            const w = cl.ru || cl.text;
+            const m = cl.vi || cl.meaning || "";
+            this.flashcards.push({
+              word: w,
+              gram: "Mẫu câu Viết luận (Cliche)",
+              meaning: m,
+              phonetic: "",
+              ipa: "",
+              exampleRu: w,
+              exampleVi: m,
+              example: m ? `Ý nghĩa: ${m}` : ""
+            });
+          }
+        });
+      }
+
+      // 4. Kỹ năng Nghe hiểu (Listening): Lấy các câu thoại hội thoại & câu chính tả của bài nghe
+      if (this.flashcards.length === 0 && Array.isArray(data.dialogue) && data.dialogue.length > 0) {
+        data.dialogue.forEach((d) => {
+          if (d && d.ru) {
+            this.flashcards.push({
+              word: d.ru,
+              gram: `Hội thoại: ${d.speaker || "Nhân vật"}`,
+              meaning: d.vi || "",
+              phonetic: "",
+              ipa: "",
+              exampleRu: d.ru,
+              exampleVi: d.vi || "",
+              example: d.speaker ? `[${d.speaker}]: ${d.ru}` : d.ru
+            });
+          }
+        });
+        if (data.dictation && data.dictation.targetText) {
+          this.flashcards.push({
+            word: data.dictation.targetText,
+            gram: "Chính tả nghe hiểu (Диктант)",
+            meaning: data.dictation.hint || "Luyện nghe và chép chính tả câu này",
+            phonetic: "",
+            ipa: "",
+            exampleRu: data.dictation.targetText,
+            exampleVi: data.dictation.hint || "",
+            example: data.dictation.hint ? `Gợi ý: ${data.dictation.hint}` : ""
+          });
+        }
+      }
+
+      // 5. Cấu trúc từ vựng mảng tự do (vocabulary)
+      if (this.flashcards.length === 0 && Array.isArray(data.vocabulary) && data.vocabulary.length > 0) {
         data.vocabulary.forEach((v) => {
           if (v && (v.ru || v.word)) {
             this.flashcards.push({
               word: v.ru || v.word,
-              gram: v.pos || "Từ vựng",
+              gram: v.pos || "Từ vựng bài học",
               meaning: v.vi || v.meaning || "",
               example: v.example || "",
               ipa: v.ipa || "",
@@ -323,31 +395,24 @@
         });
       }
 
-      // Fallback: If no vocab exists in lesson (e.g. listening/speaking/writing), load 12+ rich cards from VOCAB_25_TOPICS
+      // Fallback tối thiểu nếu bài học không chứa dữ liệu
       if (this.flashcards.length === 0) {
-        if (window.VOCAB_25_TOPICS && Array.isArray(window.VOCAB_25_TOPICS) && window.VOCAB_25_TOPICS[0] && Array.isArray(window.VOCAB_25_TOPICS[0].cards)) {
-          window.VOCAB_25_TOPICS[0].cards.forEach((c) => {
-            this.flashcards.push({
-              word: c.word,
-              gram: c.gram || "Từ vựng",
-              ipa: c.ipa || "",
-              phonetic: c.phonetic || "",
-              meaning: c.meaning || "",
-              exampleRu: c.exampleRu || "",
-              exampleVi: c.exampleVi || "",
-              example: c.exampleRu ? (c.exampleRu + (c.exampleVi ? " — " + c.exampleVi : "")) : (c.meaning || "")
-            });
-          });
-        } else {
-          // Minimal baseline
-          const words = [
-            { word: "Здравствуйте", gram: "lời chào lịch sự", meaning: "Xin chào (trang trọng)", example: "Здравствуйте, меня зовут Антон." },
-            { word: "Спасибо", gram: "từ cảm ơn", meaning: "Cảm ơn bạn", example: "Большое спасибо за урок!" },
-            { word: "Пожалуйста", gram: "lời đáp / nhờ vả", meaning: "Làm ơn / Không có chi", example: "Пожалуйста, скажите ещё раз." },
-            { word: "До свидания", gram: "lời chào tạm biệt", meaning: "Tạm biệt", example: "До свидания, до завтра!" }
-          ];
-          this.flashcards.push(...words);
-        }
+        const words = [
+          { word: "Здравствуйте", gram: "lời chào lịch sự", meaning: "Xin chào (trang trọng)", example: "Здравствуйте, меня зовут Антон." },
+          { word: "Спасибо", gram: "từ cảm ơn", meaning: "Cảm ơn bạn", example: "Большое спасибо за урок!" },
+          { word: "Пожалуйста", gram: "lời đáp / nhờ vả", meaning: "Làm ơn / Không có chi", example: "Пожалуйста, скажите ещё раз." },
+          { word: "До свидания", gram: "lời chào tạm biệt", meaning: "Tạm biệt", example: "До свидания, до завтра!" }
+        ];
+        this.flashcards.push(...words);
+      }
+
+      // Cập nhật nhãn Chặng 1 thể hiện rõ số lượng thẻ của chính bài học này
+      const routeTab = document.getElementById("btnStageFlashcard");
+      if (routeTab) {
+        routeTab.innerHTML = `
+          <span class="stage-num-badge">01</span>
+          <span>Chặng 1: Từ vựng & Mẫu câu bài học (${this.flashcards.length} thẻ)</span>
+        `;
       }
 
       this.renderFlashcard();
