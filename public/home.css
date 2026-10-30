@@ -203,7 +203,7 @@ body::before {
 }
 
 .hero-image img {
-  max-height: 330px;
+  max-height: 456px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
