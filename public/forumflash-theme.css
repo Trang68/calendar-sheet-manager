@@ -43,41 +43,74 @@ html {
   will-change: transform, opacity;
 }
 
-/* Default subtle fade if no direction is specified */
-::view-transition-old(root) {
-  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-out;
+/* ==========================================================================
+   MOBILE ONLY (<= 768px): HORIZONTAL SLIDE TRANSITIONS
+   - Hiệu ứng trượt ngang phẳng nhẹ nhàng cho thiết bị di động (Android Chrome)
+   - Hoàn toàn không lật 3D, không méo gáy sách
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Default subtle fade if no direction is specified */
+  ::view-transition-old(root) {
+    animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-in;
+  }
+
+  /* FORWARD: Tab sau nằm bên phải -> trượt ngang sang trái */
+  html[data-swipe-direction='forward']::view-transition-old(root),
+  :root:active-view-transition-type(forward)::view-transition-old(root) {
+    animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-forward;
+    z-index: 1;
+  }
+
+  html[data-swipe-direction='forward']::view-transition-new(root),
+  :root:active-view-transition-type(forward)::view-transition-new(root) {
+    animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-forward;
+    z-index: 2;
+    box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
+  }
+
+  /* BACK: Tab trước nằm bên trái -> trượt ngang sang phải */
+  html[data-swipe-direction='back']::view-transition-old(root),
+  :root:active-view-transition-type(back)::view-transition-old(root) {
+    animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-back;
+    z-index: 2;
+    box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
+  }
+
+  html[data-swipe-direction='back']::view-transition-new(root),
+  :root:active-view-transition-type(back)::view-transition-new(root) {
+    animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-back;
+    z-index: 1;
+  }
 }
 
-::view-transition-new(root) {
-  animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-in;
+/* ==========================================================================
+   DESKTOP WEB (> 768px): TẮT HOÀN TOÀN TRƯỢT NGANG (KHÔNG RỐI MẮT)
+   - Máy tính chuyển tab tức thì/fade nhẹ 100ms, không trượt 100vw qua lại
+   ========================================================================== */
+@media (min-width: 769px) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  html[data-swipe-direction='forward']::view-transition-old(root),
+  html[data-swipe-direction='forward']::view-transition-new(root),
+  html[data-swipe-direction='back']::view-transition-old(root),
+  html[data-swipe-direction='back']::view-transition-new(root),
+  :root:active-view-transition-type(forward)::view-transition-old(root),
+  :root:active-view-transition-type(forward)::view-transition-new(root),
+  :root:active-view-transition-type(back)::view-transition-old(root),
+  :root:active-view-transition-type(back)::view-transition-new(root) {
+    animation: 100ms cubic-bezier(0.16, 1, 0.3, 1) both ff-desktop-fade !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }
 
-/* FORWARD: Tab sau nằm bên phải -> trượt ngang sang trái */
-html[data-swipe-direction='forward']::view-transition-old(root),
-:root:active-view-transition-type(forward)::view-transition-old(root) {
-  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-forward;
-  z-index: 1;
-}
-
-html[data-swipe-direction='forward']::view-transition-new(root),
-:root:active-view-transition-type(forward)::view-transition-new(root) {
-  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-forward;
-  z-index: 2;
-  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
-}
-
-/* BACK: Tab trước nằm bên trái -> trượt ngang sang phải */
-html[data-swipe-direction='back']::view-transition-old(root),
-:root:active-view-transition-type(back)::view-transition-old(root) {
-  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-back;
-  z-index: 2;
-  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
-}
-
-html[data-swipe-direction='back']::view-transition-new(root),
-:root:active-view-transition-type(back)::view-transition-new(root) {
-  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-back;
-  z-index: 1;
+@keyframes ff-desktop-fade {
+  from { opacity: 0.96; }
+  to { opacity: 1; }
 }
 
 @keyframes ff-slide-fade-out {
