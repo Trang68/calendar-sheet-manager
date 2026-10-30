@@ -152,7 +152,7 @@ body::before {
 
 /* BUTTONS */
 .btn {
-  padding: 12px 26px;
+  padding: 10px 25px;
   border-radius: var(--radius-full);
   border: none;
   font-weight: 700;
@@ -740,7 +740,7 @@ footer .logo {
     max-height: none;
   }
   .hero-image img {
-    max-height: 260px;
+    max-height: 298px;
   }
   .solution-section {
     grid-template-columns: 1fr;
@@ -759,14 +759,14 @@ footer .logo {
     grid-template-columns: 1fr;
   }
   .floating-thought {
-    font-size: 0.82rem;
-    padding: 8px 14px;
+    font-size: 0.62rem;
+    padding: 3px 9px;
   }
-  .thought-1 { left: 0%; top: 0%; }
-  .thought-2 { right: 0%; top: 35%; }
-  .thought-3 { left: 0%; bottom: 5%; }
-  .thought-4 { right: 0%; top: 0%; }
-  .thought-5 { right: 0%; bottom: 0%; }
+  .thought-1 { left: -3%; top: 39%; }
+  .thought-2 { right: -4%; top: 60%; }
+  .thought-3 { left: -1%; bottom: 16%; }
+  .thought-4 { right: 0%; top: 33%; }
+  .thought-5 { right: 0%; bottom: 4%; }
   .social-icons-container {
     bottom: 16px;
     right: 16px;
