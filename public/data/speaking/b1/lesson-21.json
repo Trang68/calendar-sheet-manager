@@ -1,0 +1,32 @@
+{
+  "id": 21,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Образование длиною в жизнь (Lifelong Learning)",
+  "speakingTime": "20 phút",
+  "topic": "Học tập suốt đời: Khả năng thích ứng và tự đổi mới trong thế giới biến động",
+  "intro": "Luyện luận bàn về việc tấm bằng đại học không còn là đích đến cuối cùng mà chỉ là vạch xuất phát.",
+  "shadowingPhrases": [
+    {
+      "text": "Конце́пция непреры́вного образова́ния ста́ла ве́лением совреме́нной эпо́хи.",
+      "meaning": "Quan niệm giáo dục liên tục không ngừng nghỉ đã trở thành mệnh lệnh tất yếu của thời đại mới.",
+      "phonetic": "Kan-tsep-tsi-ya nep-re-ryv-na-va ab-ra-za-va-ni-ya sta-la ve-le-ni-yem sav-re-men-nay e-pa-khi.",
+      "tips": "Thành ngữ 'веление эпохи' chỉ đòi hỏi cấp thiết của thời cuộc."
+    },
+    {
+      "text": "Спосо́бность бы́стро осва́ивать но́вые зна́ния определя́ет успе́х в профе́ссии.",
+      "meaning": "Năng lực lĩnh hội nhanh chóng những tri thức mới mẻ quyết định sự thành bại trong sự nghiệp.",
+      "phonetic": "Spa-sob-nast' bys-tra as-va-i-vat' no-vy-ye zna-ni-ya ap-re-de-lya-yet us-pyekh v pra-fes-sii.",
+      "tips": "Cụm 'осваивать новые знания' (lĩnh hội, làm chủ tri thức mới)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về tầm quan trọng của việc tự học và nâng cao trình độ suốt đời.",
+    "sampleGuidance": [
+      "Tại sao kiến thức ngày nay bị lỗi thời nhanh hơn bao giờ hết?",
+      "Các kênh tự học hiệu quả (khóa học trực tuyến MOOC, sách chuyên ngành, hội thảo khoa học).",
+      "Kế hoạch phát triển bản thân của bạn trong vòng 5 năm tới."
+    ]
+  }
+}

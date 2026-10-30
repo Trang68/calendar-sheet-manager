@@ -1,0 +1,57 @@
+{
+  "id": 23,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Пресс-релиз о благотворительной культурной акции",
+  "writingTime": "40 phút",
+  "topic": "Thông cáo báo chí: Triển lãm tranh từ thiện gây quỹ học bổng",
+  "targetWordRange": [
+    105,
+    135
+  ],
+  "task": "Dưới vai trò đại diện truyền thông của Quỹ Văn hóa, hãy viết một bản Thông cáo báo chí (Press Release) giới thiệu sự kiện triển lãm nghệ thuật từ thiện sắp tới.",
+  "requirements": [
+    "Tiêu đề thông cáo báo chí rõ ràng, hấp dẫn",
+    "Thời gian, địa điểm và đơn vị tổ chức sự kiện",
+    "Nội dung hoạt động (trưng bày tác phẩm tranh, đấu giá từ thiện)",
+    "Mục đích nhân văn: Toàn bộ tiền thu được sẽ hỗ trợ học bổng sinh viên nghèo",
+    "Thông tin liên hệ báo chí và đăng ký tác nghiệp"
+  ],
+  "cliches": [
+    {
+      "ru": "ДЛЯ НЕЗАМЕДЛИТЕЛЬНОГО РАСПРОСТРАНЕНИЯ",
+      "vi": "PHÁT HÀNH NGAY LẬP TỨC"
+    },
+    {
+      "ru": "Благотворительный фонд объявляет об открытии...",
+      "vi": "Quỹ từ thiện xin thông báo về lễ khai mạc..."
+    },
+    {
+      "ru": "Все вырученные средства будут направлены на...",
+      "vi": "Toàn bộ số tiền thu được sẽ được chuyển thẳng tới..."
+    },
+    {
+      "ru": "Приглашаем представителей СМИ к сотрудничеству.",
+      "vi": "Kính mời quý đại diện cơ quan truyền thông tới tác nghiệp hợp tác."
+    }
+  ],
+  "modelAnswer": "ПРЕСС-РЕЛИЗ: В МОСКВЕ ОТКРЫВАЕТСЯ БЛАГОТВОРИТЕЛЬНАЯ ВЫСТАВКА «МОСТЫ ДРУЖБЫ»\n\nМосква, 15 ноября 2026 года — Международный фонд культурного сотрудничества объявляет о проведении благотворительной выставки современной живописи «Мосты дружбы», которая пройдёт с 20 по 25 ноября в залах Центрального дома художников.\n\nВ экспозиции будут представлены более пятидесяти уникальных полотен молодых художников из России, Вьетнама и стран СНГ, посвящённых гармонии человека и природы. В рамках закрытия выставки состоится открытый благотворительный аукцион. Все вырученные от продажи картин финансовые средства будут полностью направлены на учреждение специальных образовательных стипендий для талантливых студентов из малообеспеченных семей.\n\nТоржественное открытие выставки состоится 20 ноября в 18:00. Приглашаем представителей средств массовой информации и всех неравнодушных граждан поддержать эту благородную инициативу.\n\nКонтакты для аккредитации прессы:\nПресс-служба фонда: press@friendship-fund.org\nТелефон: +7 (495) 888-22-11",
+  "modelWordCount": 128,
+  "rubric": [
+    {
+      "criteria": "Chuẩn mực thể loại Thông cáo báo chí",
+      "weight": "40%",
+      "desc": "Đúng quy cách PR quốc tế (ai, cái gì, ở đâu, khi nào, vì mục đích gì)."
+    },
+    {
+      "criteria": "Văn phong truyền thông trang trọng",
+      "weight": "35%",
+      "desc": "Ngôn ngữ cô đọng, khách quan, giàu tính cổ động nhân văn."
+    },
+    {
+      "criteria": "Đầy đủ thông tin nghiệp vụ báo chí",
+      "weight": "25%",
+      "desc": "Có thông tin liên hệ, hòm thư và số điện thoại cấp thẻ tác nghiệp."
+    }
+  ]
+}

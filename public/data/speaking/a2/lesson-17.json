@@ -1,0 +1,32 @@
+{
+  "id": 17,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Мой лучший друг: Характер и внешность",
+  "speakingTime": "15 phút",
+  "topic": "Chân dung con người: Ngoại hình, tính cách và phẩm chất của bạn thân",
+  "intro": "Áp dụng các tính từ miêu tả chiều cao, vóc dáng, tính cách (tốt bụng, vui tính, trung thực).",
+  "shadowingPhrases": [
+    {
+      "text": "Мой лу́чший друг — о́чень надёжный, че́стный и весёлый челове́к.",
+      "meaning": "Người bạn thân nhất của tôi là một người rất đáng tin cậy, chân thành và vui tính.",
+      "phonetic": "Moy luch-shiy druk — o-chen' na-dyozh-ny, chest-ny i ve-syo-ly che-la-vyek.",
+      "tips": "Từ 'честный' có phụ âm câm 'т', phát âm thành /ˈtɕesnɨj/."
+    },
+    {
+      "text": "Мы дру́жим уже́ пять лет и всегда́ помога́ем друг дру́гу.",
+      "meaning": "Chúng tôi làm bạn đã 5 năm rồi và luôn luôn tương trợ lẫn nhau.",
+      "phonetic": "My dru-zhim u-zhe pyat' let i vseg-da pa-ma-ga-yem druk dru-gu.",
+      "tips": "Động từ 'дружить' chia theo ngôi мы: дружим."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Miêu tả người bạn thân nhất của bạn cả về ngoại hình lẫn nét tính cách.",
+    "sampleGuidance": [
+      "Bạn của bạn trông như thế nào (chiều cao, mái tóc, nụ cười)?",
+      "Tính cách của bạn ấy có điểm gì khiến bạn quý mến nhất?",
+      "Hai bạn thường cùng làm những việc gì khi rảnh rỗi?"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": 12,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Экскурсия по Суздалю: Белокаменные храмы",
+  "listeningTime": "15 phút",
+  "topic": "Du lịch tâm linh: Thuyết minh di sản kiến trúc thành phố cổ",
+  "dialogue": [
+    {
+      "speaker": "Гид",
+      "ru": "Добро пожаловать в Суздаль — город-музей, где на девяти квадратных километрах сосредоточено более трехсот памятников!",
+      "vi": "Chào mừng quý khách đến với Suzdal - thành phố bảo tàng, nơi trên diện tích 9km2 quy tụ hơn 300 di tích lịch sử!"
+    },
+    {
+      "speaker": "Турист",
+      "ru": "Невероятно! Почему здесь совершенно не видно современных высотных домов?",
+      "vi": "Kỳ lạ thật! Vì sao ở đây hoàn toàn không thấy bất kỳ tòa nhà cao tầng hiện đại nào vậy bác?"
+    },
+    {
+      "speaker": "Гид",
+      "ru": "В городе действует строгий градостроительный регламент: запрещено строить здания выше трёх этажей, чтобы не нарушать исторический силуэт.",
+      "vi": "Thành phố áp dụng quy chuẩn quy hoạch nghiêm ngặt: cấm tuyệt đối xây nhà cao quá 3 tầng để không phá vỡ đường chân trời cổ kính."
+    },
+    {
+      "speaker": "Турист",
+      "ru": "Благодаря этому создаётся ощущение, что мы перенеслись на машине времени в XVIII век.",
+      "vi": "Nhờ vậy mà tạo cho chúng ta cảm giác như vừa bước qua cỗ máy thời gian quay về thế kỷ XVIII."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "В городе запрещено строить здания выше трёх этажей для сохранения облика.",
+    "hint": "Quy định bảo tồn cảnh quan kiến trúc lịch sử."
+  },
+  "questions": [
+    {
+      "id": "b1_l12_q1",
+      "prompt": "Какое градостроительное правило действует в Суздале для сохранения облика?",
+      "hint": "Xem giới hạn chiều cao công trình xây dựng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Запрещено строить дома выше трёх этажей"
+        },
+        {
+          "key": "B",
+          "text": "Разрешено строить только небоскрёбы"
+        },
+        {
+          "key": "C",
+          "text": "Нельзя сажать деревья"
+        },
+        {
+          "key": "D",
+          "text": "Запрещено ходить пешком"
+        }
+      ],
+      "ans": "A",
+      "explain": "В Суздале действует запрет на высотное строительство ради сохранения исторической панорамы."
+    }
+  ]
+}

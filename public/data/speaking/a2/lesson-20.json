@@ -1,0 +1,32 @@
+{
+  "id": 20,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Посещение музея или картинной галереи",
+  "speakingTime": "15 phút",
+  "topic": "Trải nghiệm văn hóa: Tham quan triển lãm, bảo tàng nghệ thuật",
+  "intro": "Học từ vựng về di sản, tranh vẽ, hiện vật lịch sử và diễn đạt ấn tượng thẩm mỹ.",
+  "shadowingPhrases": [
+    {
+      "text": "В музе́е меня́ порази́ла бога́тая колле́кция дре́вних экспона́тов.",
+      "meaning": "Tại bảo tàng, bộ sưu tập phong phú các hiện vật cổ xưa đã khiến tôi vô cùng kinh ngạc.",
+      "phonetic": "V mu-ze-ye me-nya pa-ra-zi-la ba-ga-ta-ya kal-lek-tsi-ya drev-nikh eks-pa-na-tov.",
+      "tips": "Cụm 'меня поразила' biểu đạt sự choáng ngợp trước cái đẹp."
+    },
+    {
+      "text": "Экскурсово́д о́чень интере́сно расска́зывал об исто́рии ка́ждой карти́ны.",
+      "meaning": "Người thuyết minh viên đã kể lại lai lịch từng bức tranh một cách vô cùng lôi cuốn.",
+      "phonetic": "Eks-kur-sa-vod o-chen' in-te-res-na ras-ska-zy-val ab is-to-ri-i kazh-day kar-ti-ny.",
+      "tips": "Từ 'экскурсовод' chỉ hướng dẫn viên bảo tàng."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình về một bảo tàng hoặc di tích lịch sử bạn từng tới thăm.",
+    "sampleGuidance": [
+      "Bảo tàng đó nằm ở đâu và trưng bày những hiện vật gì?",
+      "Bức tranh hoặc hiện vật nào khiến bạn ấn tượng sâu sắc nhất?",
+      "Bạn cảm nhận được điều gì về văn hóa và lịch sử qua chuyến tham quan?"
+    ]
+  }
+}

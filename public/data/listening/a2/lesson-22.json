@@ -1,0 +1,68 @@
+{
+  "id": 22,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Заказ доставки еды на дом",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Gọi điện thoại xác nhận đơn đặt đồ ăn giao tận nhà",
+  "dialogue": [
+    {
+      "speaker": "Оператор",
+      "ru": "Служба доставки «БыстроЕд», здравствуйте! Подтверждаем ваш заказ номер 412.",
+      "vi": "Dịch vụ giao đồ ăn 'BystroEd' xin chào! Chúng tôi xin xác nhận đơn hàng số 412 của bạn."
+    },
+    {
+      "speaker": "Заказчик",
+      "ru": "Добрый вечер! Да, я заказывал две порции пельменей, борщ со сметаной и морс.",
+      "vi": "Chào bạn! Vâng, mình đặt 2 suất sủi cảo pelmeni, súp củ dền kèm kem chua và nước ép dâu dại mors."
+    },
+    {
+      "speaker": "Оператор",
+      "ru": "Всё верно. Адрес доставки: улица Ленина, дом 15, квартира 48, верно?",
+      "vi": "Đúng rồi bạn. Địa chỉ nhận: phố Lênin, nhà số 15, căn hộ 48, đúng không ạ?"
+    },
+    {
+      "speaker": "Заказчик",
+      "ru": "Да, код домофона 48К. Курьер успеет приехать в течение получаса?",
+      "vi": "Chuẩn rồi, mã chuông cửa là 48K. Shipper có kịp giao tới trong vòng nửa tiếng không?"
+    },
+    {
+      "speaker": "Оператор",
+      "ru": "Курьер уже выехал, доставка займёт около 25 минут.",
+      "vi": "Shipper đã xuất phát rồi ạ, giao hàng mất tầm 25 phút nữa thôi."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Курьер уже выехал, доставка займёт около двадцати пяти минут.",
+    "hint": "Thời gian shipper giao đồ ăn đến căn hộ."
+  },
+  "questions": [
+    {
+      "id": "a2_l22_q1",
+      "prompt": "Какие блюда заказал клиент?",
+      "hint": "Xem danh sách món ăn trong lời đáp của khách.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Пельмени, борщ со сметаной и морс"
+        },
+        {
+          "key": "B",
+          "text": "Пиццу и суши"
+        },
+        {
+          "key": "C",
+          "text": "Только десерт"
+        },
+        {
+          "key": "D",
+          "text": "Гамбургер и картошку фри"
+        }
+      ],
+      "ans": "A",
+      "explain": "В заказе были традиционные русские блюда: пельмени, борщ и ягодный морс."
+    }
+  ]
+}

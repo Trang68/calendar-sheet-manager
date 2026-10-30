@@ -1,0 +1,56 @@
+{
+  "id": 9,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Эссе: «Человек и природа: Путь к гармонии или кризис?»",
+  "writingTime": "45 phút",
+  "topic": "Tiểu luận triết học môi trường: Mối quan hệ giữa nhân loại và tự nhiên",
+  "targetWordRange": [
+    110,
+    145
+  ],
+  "task": "Hãy viết một bài văn nghị luận xã hội (110–145 từ) bàn về trách nhiệm của con người trước cuộc khủng hoảng sinh thái toàn cầu.",
+  "requirements": [
+    "Mở bài: Con người là một phần không thể tách rời của hệ sinh thái tự nhiên",
+    "Thân bài: Hậu quả của sự khai thác tài nguyên cạn kiệt và ảo tưởng chế ngự tự nhiên",
+    "Sự cần thiết phải chuyển dịch sang tư duy sinh thái và tôn trọng giới hạn của Trái Đất",
+    "Kết bài: Lời khẳng định về sự tồn vong phụ thuộc vào sự hòa hợp với muôn loài"
+  ],
+  "cliches": [
+    {
+      "ru": "На протяжении веков человечество пыталось покорить природу.",
+      "vi": "Suốt nhiều thế kỷ nhân loại đã mưu toan chinh phục tự nhiên."
+    },
+    {
+      "ru": "Однако ресурсы нашей планеты отнюдь не безграничны.",
+      "vi": "Thế nhưng nguồn tài nguyên của hành tinh chúng ta hoàn toàn không vô tận."
+    },
+    {
+      "ru": "Необходимо перейти от потребительского отношения к созидательному.",
+      "vi": "Cần phải chuyển biến từ thái độ tiêu thụ vắt kiệt sang thái độ kiến tạo giữ gìn."
+    },
+    {
+      "ru": "Только в гармонии с биосферой возможно спасение цивилизации.",
+      "vi": "Chỉ trong sự hòa hợp với sinh quyển mới có thể cứu rỗi nền văn minh."
+    }
+  ],
+  "modelAnswer": "Взаимоотношения человека и окружающей среды достигли в XXI веке критической точки. На протяжении столетий научно-технический прогресс внушал людям иллюзию безграничной власти над природой, что привело к масштабным экологическим катастрофам: глобальному потеплению, обмелению рек и исчезновению тысяч биологических видов.\n\nСегодня становится очевидно, что потребительское отношение к биосфере ставит под угрозу само существование нашей цивилизации. Человек — не властелин Вселенной, а лишь одно из звеньев сложнейшей экосистемы. Природа способна восстановиться без нас, но человечество без чистой воды, плодородной почвы и чистого воздуха обречено на гибель.\n\nЧтобы преодолеть надвигающийся кризис, каждому из нас необходимо кардинально пересмотреть свои жизненные приоритеты: сократить потребление, перейти на возобновляемую энергетику и осознать свою нравственную ответственность перед будущими поколениями. Спасение планеты начинается с бережного отношения к каждому дереву.",
+  "modelWordCount": 128,
+  "rubric": [
+    {
+      "criteria": "Chiều sâu tư tưởng & Lập luận",
+      "weight": "40%",
+      "desc": "Bài viết mang tính nhân văn sâu sắc, cấu trúc ba phần chặt chẽ."
+    },
+    {
+      "criteria": "Ngữ pháp cao cấp & Từ vựng triết học",
+      "weight": "35%",
+      "desc": "Cụm từ: потребительское отношение, биосфера, возобновляемая энергетика."
+    },
+    {
+      "criteria": "Tính thuyết phục truyền cảm hứng",
+      "weight": "25%",
+      "desc": "Câu văn giàu nhịp điệu, lay động tâm can người đọc."
+    }
+  ]
+}

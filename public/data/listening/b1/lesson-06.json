@@ -1,0 +1,63 @@
+{
+  "id": 6,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Экскурсия по Третьяковской галерее: Шедевры живописи",
+  "listeningTime": "15 phút",
+  "topic": "Thuyết minh nghệ thuật: Danh tác hội họa Nga thế kỷ XIX",
+  "dialogue": [
+    {
+      "speaker": "Экскурсовод",
+      "ru": "Перед нами знаменитое полотно Ильи Ефимовича Репина «Не ждали». Обратите внимание на психологизм сцены.",
+      "vi": "Trước mắt chúng ta là danh tác 'Bất ngờ trở về' của Ilya Efimovich Repin. Xin quý vị lưu tâm tới tâm lý học biểu cảm của khung cảnh."
+    },
+    {
+      "speaker": "Посетитель",
+      "ru": "Какая гамма чувств на лицах героев! Что выражает взгляд вернувшегося политического ссыльного?",
+      "vi": "Muôn vàn sắc thái cảm xúc hiện lên trên gương mặt nhân vật! Ánh mắt của người lưu đày chính trị trở về biểu đạt điều gì vậy ạ?"
+    },
+    {
+      "speaker": "Экскурсовод",
+      "ru": "В его взгляде читаются тревога, неуверенность и надежда на прощение и любовь родных людей.",
+      "vi": "Trong ánh mắt ấy đọc được nỗi khắc khoải, sự âu lo và niềm hy vọng vào sự bao dung, tình yêu thương của người thân."
+    },
+    {
+      "speaker": "Посетитель",
+      "ru": "Поразительно, как мастерски художник передал свет, льющийся из открытой балконной двери.",
+      "vi": "Kỳ diệu thay, người họa sĩ bậc thầy đã diễn tả luồng ánh sáng rót vào từ cánh cửa ban công mở tài tình xiết bao."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Художник мастерски передал свет, льющийся из балконной двери.",
+    "hint": "Ghi lại câu miêu tả hiệu ứng ánh sáng hội họa."
+  },
+  "questions": [
+    {
+      "id": "b1_l6_q1",
+      "prompt": "Какую картину И. Е. Репина комментирует экскурсовод?",
+      "hint": "Xem tên tác phẩm kinh điển ở đầu lời thuyết minh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Бурлаки на Волге»"
+        },
+        {
+          "key": "B",
+          "text": "«Не ждали»"
+        },
+        {
+          "key": "C",
+          "text": "«Иван Грозный»"
+        },
+        {
+          "key": "D",
+          "text": "«Богатыри»"
+        }
+      ],
+      "ans": "B",
+      "explain": "Экскурсовод анализирует психологическое полотно Репина «Не ждали»."
+    }
+  ]
+}

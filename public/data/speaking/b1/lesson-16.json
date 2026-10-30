@@ -1,0 +1,32 @@
+{
+  "id": 16,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Наука и этика: Границы экспериментов и клонирования",
+  "speakingTime": "20 phút",
+  "topic": "Đạo đức sinh học: Ranh giới đạo đức của công nghệ gen và AI",
+  "intro": "Thực hành diễn đạt các lập luận mang tính triết học, đạo đức xã hội và trách nhiệm của nhà khoa học.",
+  "shadowingPhrases": [
+    {
+      "text": "Нау́чный прогре́сс не долже́н опережа́ть мора́льную зре́лость челове́чества.",
+      "meaning": "Tiến bộ khoa học không được phép chạy trước sự trưởng thành về mặt đạo đức của nhân loại.",
+      "phonetic": "Na-uch-ny prag-res ne dal-zhen a-pe-re-zhat' ma-ral'-nu-yu zre-last' che-la-vye-chest-va.",
+      "tips": "Động từ 'опережать' nghĩa là đi trước đón đầu, vượt mặt."
+    },
+    {
+      "text": "Генети́ческие исследова́ния тре́буют стро́гого междунаро́дного контро́ля.",
+      "meaning": "Các nghiên cứu biến đổi gen đòi hỏi sự kiểm soát quốc tế vô cùng chặt chẽ.",
+      "phonetic": "Ge-ne-ti-ches-ki-ye is-sle-da-va-ni-ya tre-bu-yut stro-ga-va mezh-du-na-rod-na-va kan-tro-lya.",
+      "tips": "Nhấn rõ tính từ ghép 'международного'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Trình bày quan điểm của bạn về vấn đề: Liệu khoa học có nên có giới hạn đạo đức?",
+    "sampleGuidance": [
+      "Những lợi ích vượt bậc mà kỹ thuật di truyền và AI mang lại cho nhân loại.",
+      "Những hiểm họa khôn lường nếu công nghệ bị lạm dụng vào mục đích phi nhân tính.",
+      "Trách nhiệm lương tâm của nhà khoa học trước các phát minh của chính mình."
+    ]
+  }
+}

@@ -34,5 +34,269 @@
       70,
       95
     ]
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Письмо другу о переезде в новую квартиру",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết thư kể cho bạn thân về việc dọn sang căn hộ mới",
+    "targetWordRange": [
+      50,
+      80
+    ]
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Записка соседу с просьбой о помощи",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Mẩu ghi chú ngắn nhờ hàng xóm nhận hộ bưu phẩm",
+    "targetWordRange": [
+      40,
+      65
+    ]
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Короткий отзыв о ресторане или кафе",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết bài đánh giá ngắn gọn về nhà hàng, quán ăn trên mạng",
+    "targetWordRange": [
+      50,
+      75
+    ]
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Письмо родителям о жизни и учёбе в России",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết thư gửi bố mẹ cập nhật tình hình ăn ở và học tập nơi xứ người",
+    "targetWordRange": [
+      60,
+      90
+    ]
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Объявление о пропаже ключей или вещей",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết mẩu tin thông báo tìm đồ đạc thất lạc dán tại bảng tin",
+    "targetWordRange": [
+      40,
+      60
+    ]
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Заявление преподавателю о пропуске занятий",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết đơn xin phép vắng học ngắn gọn gửi thầy cô giáo",
+    "targetWordRange": [
+      45,
+      65
+    ]
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Рассказ о прошедших выходных на природе",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Bài văn ngắn kể lại chuyến dã ngoại ngoại ô cuối tuần",
+    "targetWordRange": [
+      55,
+      80
+    ]
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Поздравление коллеге с Новым годом",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết thiệp chúc Tết gửi đồng nghiệp cùng nhóm làm việc",
+    "targetWordRange": [
+      45,
+      65
+    ]
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Письмо с вопросами о курсах русского языка",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết email hỏi thông tin khóa học tiếng Nga tại trung tâm ngoại ngữ",
+    "targetWordRange": [
+      55,
+      80
+    ]
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Описание своей рабочей или учебной недели",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Bài viết miêu tả lịch trình một tuần làm việc và học tập bận rộn",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Отзыв о гостинице после поездки",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Nhận xét dịch vụ khách sạn trên trang đặt phòng du lịch",
+    "targetWordRange": [
+      50,
+      75
+    ]
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Сообщение другу с предложением сходить в театр",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Tin nhắn rủ bạn cùng mua vé đi xem kịch tại nhà hát",
+    "targetWordRange": [
+      45,
+      65
+    ]
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Короткое эссе: Почему спорт важен для каждого?",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Tiểu luận nghị luận ngắn: Lợi ích của thể thao đối với đời sống",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Письмо другу с рецептом традиционного блюда",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết thư hướng dẫn bạn ngoại quốc nấu món Phở hoặc Nem rán",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Заказ товара в интернет-магазине с уточнениями",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Soạn thư hỏi nhân viên hỗ trợ khách hàng về thời gian giao hàng",
+    "targetWordRange": [
+      45,
+      65
+    ]
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Эссе: Мой любимый праздник в году",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Bài văn ngắn: Ngày lễ em háo hức mong đợi nhất trong năm",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Сообщение в чат дома о правилах тишины",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Thông báo trong nhóm cư dân chung cư về việc sửa nhà và giữ trật tự",
+    "targetWordRange": [
+      45,
+      65
+    ]
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Письмо благодарности другу за тёплый приём",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Bức thư cảm ơn bạn bè đã tiếp đãi chu đáo khi đến chơi nhà",
+    "targetWordRange": [
+      50,
+      75
+    ]
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Рассказ о запомнившейся поездке на экскурсию",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết bài chia sẻ kỷ niệm chuyến đi tour danh thắng lịch sử",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Описание своего рабочего места и любимых предметов",
+    "badge": "A2 Viết",
+    "writingTime": "20 phút",
+    "topic": "Miêu tả góc học tập, bàn làm việc và các vật dụng gắn bó thân quen",
+    "targetWordRange": [
+      50,
+      75
+    ]
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Письмо другу о планах на летний отпуск",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Bức thư bàn về dự định đi nghỉ mát và du lịch mùa hè sắp tới",
+    "targetWordRange": [
+      55,
+      80
+    ]
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое эссе: Чему я научился за курс A2",
+    "badge": "A2 Viết",
+    "writingTime": "30 phút",
+    "topic": "Bài viết tổng kết: Những tiến bộ vượt bậc sau khóa học tiếng Nga A2",
+    "targetWordRange": [
+      65,
+      95
+    ]
   }
 ]

@@ -1,0 +1,32 @@
+{
+  "id": 20,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Влияние кинематографа на ценности молодёжи",
+  "speakingTime": "20 phút",
+  "topic": "Nghệ thuật thứ bảy: Tác động của phim ảnh đối với nhân sinh quan người trẻ",
+  "intro": "Luyện trình bày về sức mạnh truyền thông của điện ảnh: từ tính giải trí thương mại đến giá trị giáo dục nhân văn.",
+  "shadowingPhrases": [
+    {
+      "text": "Кинемато́граф спосо́бен формирова́ть идеа́лы и поведен́ческие моде́ли це́лых поколе́ний.",
+      "meaning": "Nghệ thuật điện ảnh có khả năng định hình các lý tưởng và khuôn mẫu hành vi của cả những thế hệ.",
+      "phonetic": "Ki-ne-ma-tog-raf spa-so-ben far-mi-ra-vat' i-de-a-ly i pa-ve-den'-ches-ki-ye ma-de-li tse-lykh pa-ka-le-niy.",
+      "tips": "Từ 'поведенческие модели' nghĩa là các hình mẫu ứng xử trong đời sống."
+    },
+    {
+      "text": "Ка́чественное кино́ заставля́ет ду́мать, сопережива́ть и задава́ть сло́жные вопро́сы.",
+      "meaning": "Một bộ phim chất lượng đích thực sẽ buộc con người phải suy ngẫm, thấu cảm và đặt ra những câu hỏi sâu sắc.",
+      "phonetic": "Ka-chest-ven-na-ye ki-no zas-tav-lya-yet du-mat', sa-pe-re-zhi-vat' i za-da-vat' slozh-ny-ye vap-ro-sy.",
+      "tips": "Bộ ba động từ: 'думать, сопереживать, задавать вопросы'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Nêu quan điểm của bạn: Phim ảnh nên thiên về giải trí hay phản ánh hiện thực xã hội?",
+    "sampleGuidance": [
+      "Sự bùng nổ của các bộ phim giải trí thương mại, kỹ xảo bom tấn.",
+      "Giá trị của dòng phim nghệ thuật (art-house) độc lập khai thác chiều sâu tâm lý.",
+      "Một bộ phim đã làm thay đổi cách nhìn của bạn về cuộc đời."
+    ]
+  }
+}

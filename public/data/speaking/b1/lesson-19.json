@@ -1,0 +1,32 @@
+{
+  "id": 19,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Мой любимый писатель или поэт: Темы творчества",
+  "speakingTime": "20 phút",
+  "topic": "Văn học Nga: Phân tích tư tưởng nghệ thuật của Pushkin, Lermontov hay Dostoevsky",
+  "intro": "Rèn luyện kỹ năng phân tích tác phẩm văn học, hình tượng nhân vật và đóng góp của tác giả.",
+  "shadowingPhrases": [
+    {
+      "text": "Его́ произведе́ния прони́заны глубоча́йшим сострада́нием к «ма́ленькому челове́ку».",
+      "meaning": "Các tác phẩm của ông thấm đượm lòng trắc ẩn bao la dành cho những 'con người nhỏ bé' trong xã hội.",
+      "phonetic": "Ye-vo pra-iz-ve-de-ni-ya pra-ni-za-ny glu-ba-chay-shim sas-tra-da-ni-yem k ma-len'-ka-mu che-la-vye-ku.",
+      "tips": "Khái niệm 'маленький человек' là chủ đề kinh điển của văn học hiện thực Nga."
+    },
+    {
+      "text": "Поэ́зия Пу́шкина поража́ет гармо́нией мы́сли и му́зыкой ру́сского сло́ва.",
+      "meaning": "Thơ ca của Pushkin làm rung động lòng người bởi sự hài hòa của tư tưởng và âm hưởng du dương của ngôn từ Nga.",
+      "phonetic": "Pa-e-zi-ya Push-ki-na pa-ra-zha-yet gar-mo-ni-yey mys-li i mu-zy-kay rus-ska-va slo-va.",
+      "tips": "Cụm từ 'гармония мысли' tôn vinh vẻ đẹp thi ca cổ điển."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về nhà văn hoặc nhà thơ Nga mà bạn say mê nghiên cứu.",
+    "sampleGuidance": [
+      "Giới thiệu tên tuổi tác giả và tác phẩm tiêu biểu nhất.",
+      "Những chủ đề lớn xuyên suốt tác phẩm (tình yêu, sự tự do, lương tâm, số phận).",
+      "Ảnh hưởng của nhà văn đó đối với văn học thế giới và bản thân bạn."
+    ]
+  }
+}

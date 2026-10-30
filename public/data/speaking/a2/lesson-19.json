@@ -1,0 +1,32 @@
+{
+  "id": 19,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Как я провожу выходные дни",
+  "speakingTime": "15 phút",
+  "topic": "Nghỉ ngơi cuối tuần: Thư giãn, dạo phố, thể thao và gặp gỡ bạn bè",
+  "intro": "Tập diễn đạt các hoạt động tái tạo sức lao động sau 5 ngày làm việc và học tập căng thẳng.",
+  "shadowingPhrases": [
+    {
+      "text": "Выходны́е — прекра́сное вре́мя для о́тдыха и обще́ния с друзья́ми.",
+      "meaning": "Cuối tuần là khoảng thời gian tuyệt vời để nghỉ ngơi và chuyện trò cùng bạn hữu.",
+      "phonetic": "Vy-khad-ny-ye — pre-kras-na-ye vre-mya dlya ot-dy-kha i ap-shche-ni-ya s druz'-ya-mi.",
+      "tips": "Cách công cụ số nhiều 'с друзьями' (với bạn bè)."
+    },
+    {
+      "text": "Иногда́ я люблю́ просто побы́ть до́ма и почита́ть хоро́шую кни́гу.",
+      "meaning": "Đôi khi tôi chỉ thích ở nhà và tĩnh tâm đọc một cuốn sách hay.",
+      "phonetic": "In-ag-da ya lyub-lyu pros-ta pa-byt' do-ma i pa-chi-tat' kha-ro-shu-yu kni-gu.",
+      "tips": "Động từ 'побыть' mang nghĩa lưu lại, ở lại trong chốc lát."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Kể về cách bạn thường trải qua hai ngày thứ Bảy và Chủ nhật.",
+    "sampleGuidance": [
+      "Bạn thích ra ngoài đi chơi hay thích ở nhà nghỉ ngơi hơn?",
+      "Thứ Bảy bạn thường làm những việc gì?",
+      "Chủ nhật bạn chuẩn bị tâm lý và năng lượng cho tuần mới ra sao?"
+    ]
+  }
+}

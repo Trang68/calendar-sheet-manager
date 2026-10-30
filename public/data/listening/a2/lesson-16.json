@@ -1,0 +1,63 @@
+{
+  "id": 16,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Покупка сувениров в сувенирном магазине",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Mua búp bê Matryoshka và hộp sứ lưu niệm",
+  "dialogue": [
+    {
+      "speaker": "Продавец",
+      "ru": "Здравствуйте! Ищете традиционные русские сувениры? Обратите внимание на наши матрёшки ручной росписи.",
+      "vi": "Xin chào! Bạn đang tìm quà lưu niệm truyền thống của Nga ạ? Xin mời xem những búp bê Matryoshka vẽ tay này nhé."
+    },
+    {
+      "speaker": "Покупатель",
+      "ru": "Добрый день! Очень красивые. А сколько мест внутри этой большой матрёшки?",
+      "vi": "Chào bác! Đẹp quá ạ. Trong búp bê to này lồng được bao nhiêu con nhỏ vậy bác?"
+    },
+    {
+      "speaker": "Продавец",
+      "ru": "Здесь семь кукол, каждая расписана сюжетами русских народных сказок.",
+      "vi": "Mẫu này có 7 con, mỗi con vẽ một tích trong truyện cổ tích dân gian Nga."
+    },
+    {
+      "speaker": "Покупатель",
+      "ru": "Прекрасно! Заверните её, пожалуйста, в подарочную коробку.",
+      "vi": "Tuyệt quá! Nhờ bác gói giúp cháu vào hộp quà nhé ạ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Заверните сувенир в красивую подарочную коробку.",
+    "hint": "Nghe yêu cầu đóng gói bọc quà lưu niệm."
+  },
+  "questions": [
+    {
+      "id": "a2_l16_q1",
+      "prompt": "Сколько кукол спрятано внутри выбранной матрёшки?",
+      "hint": "Số lượng con búp bê lồng bên trong.",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 куклы"
+        },
+        {
+          "key": "B",
+          "text": "7 кукол"
+        },
+        {
+          "key": "C",
+          "text": "10 кукол"
+        },
+        {
+          "key": "D",
+          "text": "15 кукол"
+        }
+      ],
+      "ans": "B",
+      "explain": "Продавец пояснил, что в этой модели ровно семь кукол."
+    }
+  ]
+}

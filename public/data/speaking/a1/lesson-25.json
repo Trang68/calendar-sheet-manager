@@ -1,0 +1,35 @@
+{
+  "id": 25,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Итоговое говорение A1: Я говорю по-русски!",
+  "speakingTime": "15 phút",
+  "topic": "Tự giới thiệu bản thân toàn diện và chia sẻ cảm nghĩ học tiếng Nga",
+  "intro": "Tổng kết kỹ năng nói A1: Tự tin nói trôi chảy một đoạn văn hoàn chỉnh.",
+  "shadowingPhrases": [
+    {
+      "id": "spk_25_1",
+      "text": "Я успешно закончил первый уровень изучения русского языка.",
+      "meaning": "Tôi đã hoàn thành xuất sắc trình độ đầu tiên học tiếng Nga.",
+      "phonetic": "Ya uspeshno zakonchil pervyy uroven' izucheniya russkogo yazyka.",
+      "tips": "«Успешно закончил» phát âm rành rọt."
+    },
+    {
+      "id": "spk_25_2",
+      "text": "Я люблю русский язык и буду учиться дальше!",
+      "meaning": "Tôi yêu tiếng Nga và sẽ tiếp tục học lên cao!",
+      "phonetic": "Ya lyublyu russkiy yazyk i budu uchit'sya dal'she!",
+      "tips": "«Дальше» âm /l'/ mềm."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Nói tự do",
+    "task": "Tự giới thiệu bản thân 5–6 câu tổng kết những gì bạn đã học ở A1.",
+    "sampleGuidance": [
+      "Меня зовут...",
+      "Я изучаю русский язык...",
+      "Я умею...",
+      "Моя цель — уровень A2!"
+    ]
+  }
+}

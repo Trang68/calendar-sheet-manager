@@ -1,0 +1,32 @@
+{
+  "id": 10,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Моя поездка на поезде или самолёте",
+  "speakingTime": "15 phút",
+  "topic": "Trải nghiệm du hành: Chuyến đi xa đáng nhớ bằng máy bay/tàu hỏa",
+  "intro": "Vận dụng thì quá khứ của động từ chuyển động để kể lại diễn biến một chuyến đi xa đầy thú vị.",
+  "shadowingPhrases": [
+    {
+      "text": "Про́шлым ле́том я впервы́е лете́л на самолёте в друго́й го́род.",
+      "meaning": "Mùa hè năm ngoái tôi lần đầu tiên đi máy bay đến một thành phố khác.",
+      "phonetic": "Prosh-lym le-tam ya vper-vy-ye le-tel na sa-ma-lyo-te v dru-goy go-rat.",
+      "tips": "Động từ 'летел' (thì quá khứ chưa hoàn thành) diễn tả hành trình bay."
+    },
+    {
+      "text": "Э́то путеше́ствие оста́вило мно́жество я́рких впечатле́ний.",
+      "meaning": "Chuyến hành trình này đã để lại muôn vàn ấn tượng vô cùng sâu sắc.",
+      "phonetic": "E-ta pu-te-shest-vi-ye as-ta-vi-la mno-zhest-va yar-kikh vpe-chat-le-niy.",
+      "tips": "Cụm 'яркие впечатления' là từ vựng rất phổ biến khi diễn đạt cảm xúc."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy kể lại một chuyến đi du lịch đáng nhớ nhất của bạn (1–2 phút).",
+    "sampleGuidance": [
+      "Bạn đã đi đâu, vào thời gian nào và đi cùng ai?",
+      "Bạn di chuyển bằng phương tiện gì (máy bay, tàu hỏa, ô tô)?",
+      "Điều gì khiến bạn nhớ nhất trong suốt chuyến đi đó?"
+    ]
+  }
+}

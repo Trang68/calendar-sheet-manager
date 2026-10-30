@@ -1,0 +1,63 @@
+{
+  "id": 22,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Радиопрограмма: Театральные премьеры сезона",
+  "listeningTime": "15 phút",
+  "topic": "Văn hóa nghệ thuật: Giới thiệu các tác phẩm sân khấu đỉnh cao",
+  "dialogue": [
+    {
+      "speaker": "Ведущая",
+      "ru": "В эфире программа «Театральная гостиная». Сегодня мы расскажем о главной премьере сезона в театре «Современник».",
+      "vi": "Đang phát sóng chương trình 'Phòng trà Sân khấu'. Hôm nay chúng tôi sẽ giới thiệu vở kịch tâm điểm của mùa diễn tại nhà hát Sovremennik."
+    },
+    {
+      "speaker": "Критик",
+      "ru": "Режиссёр предложил смелое новаторское прочтение чеховской «Чайки», перенеся действие в современный мегаполис.",
+      "vi": "Đạo diễn đã mang đến một góc nhìn cách tân táo bạo đối với vở 'Hải âu' của Chekhov, đưa bối cảnh vào giữa lòng đại đô thị đương đại."
+    },
+    {
+      "speaker": "Ведущая",
+      "ru": "Не вызвало ли это споров среди консервативной публики?",
+      "vi": "Liệu điều này có dấy lên tranh cãi trong tầng lớp khán giả truyền thống bảo thủ không thưa bà?"
+    },
+    {
+      "speaker": "Критик",
+      "ru": "Безусловно, мнения разделились, однако блестящая игра молодых актёров и эмоциональная глубина никого не оставили равнодушным.",
+      "vi": "Chắc chắn rồi, ý kiến chia làm hai luồng, nhưng diễn xuất tuyệt luân của dàn diễn viên trẻ và chiều sâu cảm xúc đã không để bất kỳ ai phải thờ ơ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Смелое новаторское прочтение классической пьесы вызвало живые дискуссии.",
+    "hint": "Đánh giá phê bình về sự đổi mới tác phẩm kinh điển."
+  },
+  "questions": [
+    {
+      "id": "b1_l22_q1",
+      "prompt": "Какую пьесу А. П. Чехова поставил театр в современной интерпретации?",
+      "hint": "Xem tên vở kịch kinh điển được nhà phê bình nhắc tới.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Чайка»"
+        },
+        {
+          "key": "B",
+          "text": "«Гамлет»"
+        },
+        {
+          "key": "C",
+          "text": "«Ревизор»"
+        },
+        {
+          "key": "D",
+          "text": "«Горе от ума»"
+        }
+      ],
+      "ans": "A",
+      "explain": "Речь шла о современной трактовке знаменитой чеховской пьесы «Чайка»."
+    }
+  ]
+}

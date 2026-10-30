@@ -1,0 +1,32 @@
+{
+  "id": 5,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Поход за покупками: Что и где я покупаю",
+  "speakingTime": "15 phút",
+  "topic": "Thói quen tiêu dùng: Mua thực phẩm, quần áo và đồ gia dụng",
+  "intro": "Rèn luyện cách diễn đạt việc đi siêu thị, chọn mua đồ tươi sống hay mua sắm online trên ứng dụng.",
+  "shadowingPhrases": [
+    {
+      "text": "Я предпочита́ю покупа́ть проду́кты в гиперма́ркете ря́дом с до́мом.",
+      "meaning": "Tôi thích mua thực phẩm ở đại siêu thị gần nhà hơn.",
+      "phonetic": "Ya pret-pa-chi-ta-yu pa-ku-pat' pra-duk-ty v gi-per-mar-ke-te rya-dam s do-mam.",
+      "tips": "Cụm 'предпочитаю покупать' biểu thị thói quen ưa chuộng."
+    },
+    {
+      "text": "Обычно я составля́ю спи́сок поку́пок, что́бы не брать ли́шнего.",
+      "meaning": "Tôi thường lập sẵn danh sách đồ cần mua để không lấy thừa mứa.",
+      "phonetic": "A-bych-na ya sas-tav-lya-yu spi-sak pa-ku-pak, shto-by ne brat' lish-ne-va.",
+      "tips": "Từ 'лишнего' phát âm đuôi -ого/-его thành /-eva/."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy nói về thói quen mua sắm hàng tuần của bạn (1–2 phút).",
+    "sampleGuidance": [
+      "Bạn thường đi mua sắm ở đâu: siêu thị lớn, chợ truyền thống hay đặt qua app?",
+      "Bạn có thói quen lập danh sách trước khi đi chợ không?",
+      "Kể 3 món đồ thiết yếu bạn luôn luôn mua khi đi chợ."
+    ]
+  }
+}

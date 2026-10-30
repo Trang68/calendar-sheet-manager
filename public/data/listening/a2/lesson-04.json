@@ -1,0 +1,78 @@
+{
+  "id": 4,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Покупка железнодорожного билета в кассе",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Mua vé tàu hỏa đi du lịch tại ga đường sắt",
+  "dialogue": [
+    {
+      "speaker": "Пассажир",
+      "ru": "Здравствуйте! Мне нужен один билет до Санкт-Петербурга на пятницу вечер.",
+      "vi": "Xin chào! Tôi cần một vé đi Saint Petersburg vào tối thứ Sáu."
+    },
+    {
+      "speaker": "Кассир",
+      "ru": "Добрый день. На какой поезд вы хотите: скорый «Сапсан» или ночной поезд?",
+      "vi": "Chào bạn. Bạn muốn đi tàu nào: tàu cao tốc Sapsan hay tàu đêm?"
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Лучше ночной, чтобы поспать. Какие места есть в купе?",
+      "vi": "Tốt hơn là tàu đêm để tôi ngủ được. Có chỗ nào ở khoang coupe không ạ?"
+    },
+    {
+      "speaker": "Кассир",
+      "ru": "Есть нижняя полка в вагоне номер шесть. Отправление в 23:55 с Ленинградского вокзала.",
+      "vi": "Có một giường tầng dưới ở toa số 6. Tàu khởi hành lúc 23:55 từ ga Leningradsky."
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Отлично, беру. Сколько стоит билет?",
+      "vi": "Tuyệt vời, tôi lấy chỗ đó. Vé giá bao nhiêu ạ?"
+    },
+    {
+      "speaker": "Кассир",
+      "ru": "Три тысячи восемьсот рублей с постельным бельём. Ваш паспорт, пожалуйста.",
+      "vi": "3800 rúp đã bao gồm ga gối. Cho tôi xin hộ chiếu của bạn."
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Вот паспорт и банковская карта. Спасибо!",
+      "vi": "Đây là hộ chiếu và thẻ ngân hàng. Cảm ơn chị!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Поезд отправляется в двадцать три пятьдесят пять с вокзала.",
+    "hint": "Chú ý số đếm giờ khởi hành của chuyến tàu đêm."
+  },
+  "questions": [
+    {
+      "id": "a2_l4_q1",
+      "prompt": "Какой тип поезда и полку выбрал пассажир?",
+      "hint": "Xem lựa chọn của hành khách trong hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Дневной «Сапсан» и сидячее место"
+        },
+        {
+          "key": "B",
+          "text": "Ночной поезд и нижнюю полку в купе"
+        },
+        {
+          "key": "C",
+          "text": "Верхнюю полку в плацкарте"
+        },
+        {
+          "key": "D",
+          "text": "Автобусный рейс"
+        }
+      ],
+      "ans": "B",
+      "explain": "Пассажир выбрал ночной поезд и нижнюю полку в купейном вагоне."
+    }
+  ]
+}

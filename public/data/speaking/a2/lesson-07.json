@@ -1,0 +1,32 @@
+{
+  "id": 7,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Как я забочусь о своём здоровье",
+  "speakingTime": "15 phút",
+  "topic": "Chăm sóc sức khỏe: Luyện tập thể dục, dinh dưỡng và lối sống",
+  "intro": "Nâng cao năng lực diễn đạt về các thói quen rèn luyện thể chất, ngủ đủ giấc và tăng cường miễn dịch.",
+  "shadowingPhrases": [
+    {
+      "text": "Здоро́вье — э́то са́мое це́нное, что есть у челове́ка.",
+      "meaning": "Sức khỏe là vốn quý giá nhất mà con người sở hữu.",
+      "phonetic": "Zda-rov'-ye — e-ta sa-ma-ye tsen-na-ye, shto yest' u che-la-vye-ka.",
+      "tips": "Nhịp điệu cân đối, ngắt hơi nhẹ ở dấu gạch ngang."
+    },
+    {
+      "text": "Ка́ждое у́тро я де́лаю заря́дку и пью стака́н чи́стой воды́.",
+      "meaning": "Mỗi sáng tôi đều tập thể dục buổi sáng và uống một ly nước lọc.",
+      "phonetic": "Kazh-da-ye ut-ra ya de-la-yu za-ryad-ku i p'yu sta-kan chis-tay va-dy.",
+      "tips": "Phát âm dứt khoát động từ 'делаю зарядку'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về chế độ sinh hoạt và giữ gìn sức khỏe hàng ngày của bạn.",
+    "sampleGuidance": [
+      "Bạn ngủ bao nhiêu tiếng mỗi đêm và có dậy sớm không?",
+      "Bạn tập môn thể thao gì để giữ vóc dáng?",
+      "Khi bị cảm lạnh hay đau họng, bạn thường làm gì để hồi phục?"
+    ]
+  }
+}

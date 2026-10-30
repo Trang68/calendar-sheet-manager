@@ -1,0 +1,73 @@
+{
+  "id": 5,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Аренда жилья: Разговор с хозяйкой квартиры",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Gọi điện thoại hỏi thuê phòng trọ sinh viên",
+  "dialogue": [
+    {
+      "speaker": "Студент",
+      "ru": "Алло, здравствуйте! Я звоню по объявлению об аренде однокомнатной квартиры на проспекте Мира.",
+      "vi": "A lô, xin chào cô! Cháu gọi theo tin đăng thuê căn hộ 1 phòng trên đại lộ Mira."
+    },
+    {
+      "speaker": "Хозяйка",
+      "ru": "Здравствуйте! Да, квартира пока свободна. Вы студент?",
+      "vi": "Chào cháu! Đúng rồi, căn hộ vẫn đang trống. Cháu là sinh viên à?"
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Да, учусь на втором курсе университета. Скажите, пожалуйста, сколько минут пешком до метро?",
+      "vi": "Vâng, cháu học năm thứ hai đại học. Xin cô cho biết đi bộ ra ga metro mất mấy phút ạ?"
+    },
+    {
+      "speaker": "Хозяйка",
+      "ru": "Буквально пять минут спокойным шагом. В квартире есть стиральная машина, холодильник и Wi-Fi.",
+      "vi": "Đúng 5 phút đi bộ thong thả. Trong nhà có máy giặt, tủ lạnh và Wi-Fi."
+    },
+    {
+      "speaker": "Студент",
+      "ru": "А коммунальные услуги включены в стоимость?",
+      "vi": "Thế tiền dịch vụ điện nước đã bao gồm trong giá thuê chưa ạ?"
+    },
+    {
+      "speaker": "Хозяйка",
+      "ru": "Аренда 35 тысяч рублей, а свет и воду вы оплачиваете по счётчикам.",
+      "vi": "Giá thuê 35 nghìn rúp, còn tiền điện nước cháu tự trả theo đồng hồ đo."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "До станции метро можно дойти пешком за пять минут.",
+    "hint": "Chú ý cự ly thời gian đi bộ ra ga tàu điện ngầm."
+  },
+  "questions": [
+    {
+      "id": "a2_l5_q1",
+      "prompt": "Как оплачиваются коммунальные услуги за квартиру?",
+      "hint": "Xem câu trả lời của chủ nhà ở cuối đoạn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Они полностью бесплатны"
+        },
+        {
+          "key": "B",
+          "text": "Оплачиваются отдельно по показаниям счётчиков"
+        },
+        {
+          "key": "C",
+          "text": "Входят в фиксированную стоимость"
+        },
+        {
+          "key": "D",
+          "text": "Их оплачивает университет"
+        }
+      ],
+      "ans": "B",
+      "explain": "Хозяйка пояснила: свет и вода оплачиваются жильцом отдельно по счётчикам."
+    }
+  ]
+}

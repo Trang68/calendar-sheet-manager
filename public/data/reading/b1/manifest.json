@@ -43,5 +43,185 @@
     "readingTime": "20 phút",
     "topic": "Lịch sử, Kiến trúc Hoàng gia & Nghệ thuật Bảo tàng",
     "questionCount": 2
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Золотое кольцо России: Архитектурные шедевры древности",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Di sản văn hóa & Kiến trúc cổ đại Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Космонавтика: Ю. А. Гагарин и триумф науки",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Khoa học vũ trụ: Chuyến bay lịch sử của Yuri Gagarin",
+    "questionCount": 1
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Русский балет: Традиции и школа Большого театра",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Nghệ thuật đỉnh cao: Trường phái múa Ballet cổ điển Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Л. Н. Толстой и Ясная Поляна: Жизнь и философия",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Văn học kinh điển: Đại văn hào Lev Tolstoy và triết lý sống",
+    "questionCount": 1
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Экология мегаполисов: Зелёные технологии и транспорт",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Phát triển bền vững: Môi trường sinh thái đô thị",
+    "questionCount": 1
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Эпоха Петра Великого: Основание Петербурга и реформы",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Lịch sử Hoàng gia: Các cuộc đại canh tân của Peter Đại Đế",
+    "questionCount": 1
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Русский характер в пословицах и народных сказках",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Văn học dân gian: Tục ngữ và truyện cổ tích phản ánh tâm hồn Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Искусственный интеллект и будущее образования",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Công nghệ & Giáo dục: Ứng dụng AI trong giảng dạy đại học",
+    "questionCount": 1
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Великий шёлковый путь и торговые связи России",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Lịch sử kinh tế: Giao lưu thương mại Á - Âu thời cổ trung đại",
+    "questionCount": 1
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Театральное искусство: Система К. С. Станиславского",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Sân khấu kịch: Phương pháp diễn xuất kinh điển Stanislavski",
+    "questionCount": 1
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Вулканы и гейзеры Камчатки: Чудеса Дальнего Востока",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Kỳ quan thiên nhiên: Bán đảo Kamchatka và Thung lũng Mạch nước phun",
+    "questionCount": 1
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Музыка П. И. Чайковского: Душа русской классики",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Âm nhạc hàn lâm: Di sản bất hủ của Pyotr Ilyich Tchaikovsky",
+    "questionCount": 1
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Традиции гостеприимства и русский самовар",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Văn hóa dân tộc: Bếp trà Samovar và nghệ thuật tiếp đón bạn bè",
+    "questionCount": 1
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Научные открытия Д. И. Менделеева: Периодический закон",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Khoa học cơ bản: Dmitry Mendeleev và Bảng tuần hoàn các nguyên tố",
+    "questionCount": 1
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Волонтёрское движение: Молодёжь помогает обществу",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Trách nhiệm xã hội: Phong trào thiện nguyện của giới trẻ",
+    "questionCount": 1
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Современная урбанистика: Общественные пространства",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Đô thị học hiện đại: Không gian công cộng và thành phố cho con người",
+    "questionCount": 1
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "А. П. Чехов: Мастер короткого рассказа и драмы",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Văn học cổ điển: Nghệ thuật truyện ngắn và kịch của Chekhov",
+    "questionCount": 1
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Здоровый образ жизни и управление стрессом",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Tâm lý học ứng dụng: Giữ cân bằng tâm trí và vượt qua kiệt sức",
+    "questionCount": 1
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Музеи деревянного зодчества: Остров Кижи",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Di sản thế giới UNESCO: Kỳ quan kiến trúc gỗ không dùng đinh trên đảo Kizhi",
+    "questionCount": 1
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Сертификация ТРКИ-1 / B1: Финишная прямая",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Tổng kết TRKI-1: Kỹ năng đọc hiểu học thuật và bước ngoặt chứng chỉ",
+    "questionCount": 1
   }
 ]

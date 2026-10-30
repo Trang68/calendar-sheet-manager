@@ -1,0 +1,63 @@
+{
+  "id": 11,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Встреча друга в аэропорту Шереметьево",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đón bạn tại sảnh nhà ga quốc tế sân bay",
+  "dialogue": [
+    {
+      "speaker": "Антон",
+      "ru": "Алло, Тхань! Ты уже прошёл паспортный контроль и получил багаж?",
+      "vi": "A lô, Thành ơi! Cậu đã qua cửa kiểm tra hộ chiếu và lấy hành lý chưa?"
+    },
+    {
+      "speaker": "Тхань",
+      "ru": "Привет, Антон! Да, только что забрал свой чемодан. Выхожу в зал прилёта.",
+      "vi": "Chào Anton! Ừ, mình vừa lấy vali xong. Đang bước ra sảnh đến đây."
+    },
+    {
+      "speaker": "Антон",
+      "ru": "Я стою возле информационного табло у выхода номер три. У меня в руках жёлтый шарф.",
+      "vi": "Mình đang đứng cạnh bảng thông tin điện tử ở cửa số 3. Tay cầm khăn quàng màu vàng nhé."
+    },
+    {
+      "speaker": "Тхань",
+      "ru": "Вижу тебя! Иду к тебе!",
+      "vi": "Mình nhìn thấy cậu rồi! Đang qua đây!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Я стою возле информационного табло у выхода номер три.",
+    "hint": "Vị trí cột mốc hẹn gặp nhau tại sảnh sân bay."
+  },
+  "questions": [
+    {
+      "id": "a2_l11_q1",
+      "prompt": "По какому предмету Тхань смог быстро узнать Антона?",
+      "hint": "Xem chi tiết đồ vật trên tay bạn ở sảnh đón.",
+      "options": [
+        {
+          "key": "A",
+          "text": "По жёлтому шарфу"
+        },
+        {
+          "key": "B",
+          "text": "По букету цветов"
+        },
+        {
+          "key": "C",
+          "text": "По чёрному зонту"
+        },
+        {
+          "key": "D",
+          "text": "По большой табличке"
+        }
+      ],
+      "ans": "A",
+      "explain": "Антон сообщил, что держит в руках жёлтый шарф для лёгкого ориентирования."
+    }
+  ]
+}

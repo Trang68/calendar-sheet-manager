@@ -1,0 +1,63 @@
+{
+  "id": 25,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Итоговый диалог: Планы на каникулы и уровень B1",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại tổng kết: Kỳ nghỉ hè và mục tiêu chinh phục B1",
+  "dialogue": [
+    {
+      "speaker": "Преподаватель",
+      "ru": "Дорогие студенты! Поздравляю вас с успешным окончанием курса аудирования уровня A2!",
+      "vi": "Các em sinh viên thân mến! Thầy/cô xin chúc mừng các em đã hoàn thành xuất sắc khóa luyện nghe trình độ A2!"
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Спасибо вам огромное за интересные уроки и поддержку! Мы стали гораздо лучше понимать русскую речь на слух.",
+      "vi": "Chúng em cảm ơn thầy/cô rất nhiều vì những bài giảng bổ ích và sự đồng hành tận tình! Chúng em nghe hiểu tiếng Nga tự tin hơn nhiều rồi ạ."
+    },
+    {
+      "speaker": "Преподаватель",
+      "ru": "Какие у вас планы на лето? Будете продолжать занятия?",
+      "vi": "Mùa hè này các em có dự định gì? Có tiếp tục học nâng cao không?"
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Да, летом я поеду на практику в Санкт-Петербург, а с осени начну подготовку к сертификату первого уровня B1!",
+      "vi": "Dạ có ạ, mùa hè em sẽ đi thực tập tại Saint Petersburg, còn từ mùa thu em sẽ bắt đầu ôn thi chứng chỉ B1 bậc 1 ạ!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "С осени мы начинаем интенсивную подготовку к уровню B1.",
+    "hint": "Mục tiêu học thuật mới sau khi hoàn tất chặng A2."
+  },
+  "questions": [
+    {
+      "id": "a2_l25_q1",
+      "prompt": "Куда студент планирует поехать летом на практику?",
+      "hint": "Xem địa danh được sinh viên nhắc tới ở câu kết.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В Санкт-Петербург"
+        },
+        {
+          "key": "B",
+          "text": "В Сочи"
+        },
+        {
+          "key": "C",
+          "text": "Домой без практики"
+        },
+        {
+          "key": "D",
+          "text": "В Лондон"
+        }
+      ],
+      "ans": "A",
+      "explain": "Студент сообщил преподавателю о планах пройти летнюю практику в Санкт-Петербурге."
+    }
+  ]
+}

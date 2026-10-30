@@ -43,5 +43,185 @@
     "readingTime": "15 phút",
     "topic": "Sở thích, Kỳ nghỉ cuối tuần & Văn hóa Dacha",
     "questionCount": 2
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Путешествие на поезде: Билеты, плацкарт и чай",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Du lịch bằng tàu hỏa & Đời sống trên đường ray Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Празднование Нового года и традиции застолья",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Văn hóa lễ hội: Đón Tết Dương Lịch tại Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Поход в театр: Балет «Щелкунчик» в Большом",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Nghệ thuật & Sân khấu kịch Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Аренда квартиры: Объявления и договор",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Đời sống đô thị: Thuê nhà & Tiện ích sinh hoạt",
+    "questionCount": 1
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Спортивная жизнь: Фитнес, лыжи и бег в парке",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Thể thao & Rèn luyện thể chất",
+    "questionCount": 1
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Русские сувениры: Матрёшка, гжель и янтарь",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Đồ lưu niệm & Nghề thủ công dân gian",
+    "questionCount": 1
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "В гостях у русской семьи: Правила этикета",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Văn hóa ứng xử: Làm khách tại gia đình người Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Почта и службы доставки: Отправка посылки",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Dịch vụ bưu chính & Giao vận hàng hóa",
+    "questionCount": 1
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Кафе и рестораны: Русские блины и чай",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Ẩm thực truyền thống: Món bánh Blini và văn hóa trà",
+    "questionCount": 1
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Животные и природа: Домашние питомцы в городе",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Thú cưng & Bảo vệ động vật trong đô thị",
+    "questionCount": 1
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Одежда и мода: Покупка зимней куртки и обуви",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Thời trang theo mùa: Trang phục chống lạnh mùa đông",
+    "questionCount": 1
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Библиотека и книги: Чтение классики и электронные книги",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Văn hóa đọc: Thư viện & Thói quen đọc sách",
+    "questionCount": 1
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Работа и профессии: Профессия программиста и инженера",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Thị trường lao động & Các ngành nghề thời đại số",
+    "questionCount": 1
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Масленица: Проводы зимы и праздник блинов",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Lễ hội dân gian: Tiễn mùa đông Maslenitsa",
+    "questionCount": 1
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "День Победы 9 Мая: Парад и праздничный салют",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Lịch sử & Tưởng niệm: Ngày Chiến Thắng 9/5",
+    "questionCount": 1
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Поездка в Санкт-Петербург: Белые ночи и мосты",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Địa danh nổi tiếng: Thủ đô phương Bắc Saint Petersburg",
+    "questionCount": 1
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Музеи Москвы: Государственная Третьяковская галерея",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Hội họa & Bảo tàng: Phòng tranh Tretyakov",
+    "questionCount": 1
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Здоровый образ жизни: Правильное питание и сон",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Chăm sóc sức khỏe: Dinh dưỡng khoa học & Giấc ngủ",
+    "questionCount": 1
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Дружба и взаимопомощь: Друг познаётся в беде",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Giá trị nhân văn: Tình bạn & Sự sẻ chia",
+    "questionCount": 1
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Мои успехи в русском языке: Итоги уровня A2",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Tổng kết chặng đường: Đạt trình độ TRKI-A2",
+    "questionCount": 1
   }
 ]

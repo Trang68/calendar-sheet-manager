@@ -1,0 +1,63 @@
+{
+  "id": 20,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Телефонные переговоры с поставщиком оборудования",
+  "listeningTime": "15 phút",
+  "topic": "Đàm phán kinh doanh: Thảo luận tiến độ giao hàng và điều kiện thanh toán",
+  "dialogue": [
+    {
+      "speaker": "Менеджер по закупкам",
+      "ru": "Здравствуйте, Виктор Павлович! Я звоню уточнить график отгрузки партии промышленного оборудования по контракту номер 85.",
+      "vi": "Kính chào ông Viktor Pavlovich! Tôi gọi điện để xác nhận tiến độ giao lô thiết bị công nghiệp theo hợp đồng số 85."
+    },
+    {
+      "speaker": "Поставщик",
+      "ru": "Добрый день, Анна! Станки уже прошли заводское тестирование и упакованы. Отгрузка запланирована на следующий вторник.",
+      "vi": "Chào cô Anna! Các dàn máy đã hoàn thành thử nghiệm xuất xưởng và được đóng gói xong. Lịch bốc dỡ vận chuyển ấn định vào thứ Ba tuần tới."
+    },
+    {
+      "speaker": "Менеджер по закупкам",
+      "ru": "Отлично. Напоминаю, что второй транш оплаты в размере 40% будет переведён после подписания акта приёмки на нашем складе.",
+      "vi": "Tuyệt vời. Tôi xin nhắc lại đợt thanh toán thứ hai 40% sẽ được chuyển sau khi ký biên bản nghiệm thu tại kho của chúng tôi."
+    },
+    {
+      "speaker": "Поставщик",
+      "ru": "Да, условия договора соблюдаются безукоризненно. Транспортные накладные вышлем завтра утром.",
+      "vi": "Vâng, các điều khoản hợp đồng luôn được tuân thủ nghiêm ngặt. Vận đơn vận chuyển chúng tôi sẽ gửi vào sáng mai."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Второй транш оплаты будет переведён после подписания акта приёмки.",
+    "hint": "Quy trình thanh toán thương mại theo biên bản bàn giao."
+  },
+  "questions": [
+    {
+      "id": "b1_l20_q1",
+      "prompt": "Когда покупатель переведёт второй платёж в размере 40%?",
+      "hint": "Xem điều kiện chuyển tiền ở câu của quản lý mua hàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "После подписания акта приёмки оборудования на складе"
+        },
+        {
+          "key": "B",
+          "text": "Прямо сейчас без проверки"
+        },
+        {
+          "key": "C",
+          "text": "Через три года"
+        },
+        {
+          "key": "D",
+          "text": "Никогда"
+        }
+      ],
+      "ans": "A",
+      "explain": "Оплата 40% производится строго после подписания приёмо-сдаточного акта."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 6,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Моё любимое блюдо русской кухни",
+  "speakingTime": "15 phút",
+  "topic": "Ẩm thực yêu thích: Món ăn Nga và trải nghiệm vị giác",
+  "intro": "Luyện nói về các món đặc sản Nga như Borscht, Pelmeni, bánh Blini và cách thưởng thức chuẩn vị.",
+  "shadowingPhrases": [
+    {
+      "text": "Бо́льше всего́ из ру́сской ку́хни мне нра́вятся горя́чие пельме́ни.",
+      "meaning": "Trong các món ăn Nga, tôi thích nhất là món bánh sủi cảo pelmeni nóng hổi.",
+      "phonetic": "Bol'-she vse-vo iz rus-skay kukh-ni mne nra-vyat-sya ga-rya-chi-ye pel'-me-ni.",
+      "tips": "Từ 'больше всего' là trạng từ nhấn mạnh mức độ cao nhất."
+    },
+    {
+      "text": "Настоя́щий борщ подаю́т с ло́жкой смета́ны и зе́ленью.",
+      "meaning": "Món súp củ dền borscht đích thực luôn được ăn kèm một thìa kem chua và rau thơm.",
+      "phonetic": "Nas-ta-ya-shchiy borshch pa-da-yut s lozh-kay sme-ta-ny i ze-len'-yu.",
+      "tips": "Nhấn mạnh âm 'щ' ở cuối từ борщ."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy miêu tả món ăn Nga hoặc món ăn Việt Nam mà bạn thích nhất cho người bạn Nga nghe.",
+    "sampleGuidance": [
+      "Tên món ăn là gì và các nguyên liệu chính gồm những gì?",
+      "Món ăn có hương vị như thế nào (chua, cay, mặn, béo)?",
+      "Cách người ta thường nấu và thưởng thức món ăn đó ra sao?"
+    ]
+  }
+}

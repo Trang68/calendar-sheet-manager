@@ -1,0 +1,52 @@
+{
+  "id": 12,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо с вопросами о курсах русского языка",
+  "writingTime": "25 phút",
+  "topic": "Viết email hỏi thông tin khóa học tiếng Nga tại trung tâm ngoại ngữ",
+  "targetWordRange": [
+    55,
+    80
+  ],
+  "task": "Bạn muốn đăng ký khóa học tiếng Nga giao tiếp mùa hè. Hãy viết email gửi trung tâm ngôn ngữ để hỏi chi tiết về lớp học.",
+  "requirements": [
+    "Lời chào chính thức gửi ban giám đốc trung tâm",
+    "Nêu trình độ hiện tại của bạn và nguyện vọng theo học",
+    "Hỏi 2–3 câu về: thời khóa biểu, học phí và tài liệu học tập",
+    "Lời kết lịch thiệp mong nhận phản hồi"
+  ],
+  "cliches": [
+    {
+      "ru": "Здравствуйте! Меня интересует курс...",
+      "vi": "Xin chào! Tôi đang quan tâm đến khóa học..."
+    },
+    {
+      "ru": "Подскажите, пожалуйста, сколько стоит обучение?",
+      "vi": "Xin cho tôi biết học phí là bao nhiêu?"
+    },
+    {
+      "ru": "Заранее спасибо за информацию.",
+      "vi": "Xin cảm ơn trước về thông tin cung cấp."
+    }
+  ],
+  "modelAnswer": "Здравствуйте, уважаемая администрация центра «Русское слово»!\n\nМеня зовут Нам, я студент из Вьетнама. Сейчас я закончил уровень A1 и хочу продолжить изучение русского языка на летнем интенсивном курсе A2.\n\nПодскажите, пожалуйста, когда начинаются занятия и в какие дни недели проходят уроки? Какова стоимость курса и предоставляются ли учебные материалы?\n\nЗаранее благодарю за ответ.\n\nС уважением,\nНам",
+  "modelWordCount": 57,
+  "rubric": [
+    {
+      "criteria": "Mục tiêu hỏi đáp cụ thể",
+      "weight": "40%",
+      "desc": "Đặt câu hỏi trực tiếp, lịch sự về lịch học và chi phí."
+    },
+    {
+      "criteria": "Ngữ pháp câu hỏi gián tiếp",
+      "weight": "35%",
+      "desc": "Sử dụng khéo léo cấu trúc 'подскажите, пожалуйста, когда...'."
+    },
+    {
+      "criteria": "Văn phong thư điện tử",
+      "weight": "25%",
+      "desc": "Lời mở đầu và kết thư trang nhã chuẩn mực."
+    }
+  ]
+}

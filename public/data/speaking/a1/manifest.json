@@ -178,5 +178,50 @@
     "speakingTime": "15 phút",
     "topic": "Vấn đáp A1 tổng kết: Thuyết trình toàn diện về bản thân và ước mơ",
     "phraseCount": 5
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "В кафе: Заказ любимых блюд",
+    "badge": "A1 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Luyện nói: Gọi đồ ăn, đồ uống và thanh toán",
+    "questionCount": 2
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Спрашиваем дорогу на улице",
+    "badge": "A1 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Hỏi đường đi đến ga tàu điện ngầm và trạm xe buýt",
+    "questionCount": 2
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Поздравления и пожелания",
+    "badge": "A1 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Chúc mừng ngày lễ và sinh nhật bằng tiếng Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Мои планы на выходные",
+    "badge": "A1 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Kể về dự định làm gì vào thứ Bảy và Chủ nhật",
+    "questionCount": 2
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое говорение A1: Я говорю по-русски!",
+    "badge": "A1 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Tự giới thiệu bản thân toàn diện và chia sẻ cảm nghĩ học tiếng Nga",
+    "questionCount": 2
   }
 ]

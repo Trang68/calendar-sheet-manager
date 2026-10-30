@@ -1,0 +1,63 @@
+{
+  "id": 23,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Диалог на ярмарке вакансий: Собеседование в компанию",
+  "listeningTime": "15 phút",
+  "topic": "Tuyển dụng nhân sự: Phỏng vấn sơ tuyển chuyên viên phân tích dữ liệu",
+  "dialogue": [
+    {
+      "speaker": "HR-менеджер",
+      "ru": "Здравствуйте! Ознакомился с вашим резюме. Вы свободно владеете русским, английским и вьетнамским языками, а также программируете на Python?",
+      "vi": "Xin chào bạn! Tôi đã nghiên cứu qua hồ sơ ứng tuyển của bạn. Bạn sử dụng thành thạo tiếng Nga, tiếng Anh, tiếng Việt và biết lập trình Python đúng không?"
+    },
+    {
+      "speaker": "Соискатель",
+      "ru": "Добрый день! Да, я закончил магистратуру по специальности «Прикладная математика» и имею двухлетний опыт анализа данных в финтехе.",
+      "vi": "Chào anh! Vâng, tôi đã tốt nghiệp thạc sĩ chuyên ngành 'Toán ứng dụng' và có hai năm kinh nghiệm phân tích dữ liệu mảng fintech."
+    },
+    {
+      "speaker": "HR-менеджер",
+      "ru": "Впечатляет. Наша компания сейчас расширяет сотрудничество с партнёрами в Азиатско-Тихоокеанском регионе. Готовы ли вы к командировкам?",
+      "vi": "Rất ấn tượng. Công ty chúng tôi hiện đang mở rộng hợp tác với các đối tác khu vực Châu Á - Thái Bình Dương. Bạn có sẵn sàng đi công tác nước ngoài không?"
+    },
+    {
+      "speaker": "Соискатель",
+      "ru": "Безусловно, для меня это отличная возможность применить профессиональные и языковые навыки.",
+      "vi": "Chắc chắn rồi, đối với tôi đó là cơ hội tuyệt vời để vận dụng năng lực chuyên môn và ngoại ngữ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Наша компания расширяет взаимовыгодное сотрудничество в Азиатском регионе.",
+    "hint": "Định hướng mở rộng hợp tác thương mại quốc tế."
+  },
+  "questions": [
+    {
+      "id": "b1_l23_q1",
+      "prompt": "Какое образование имеет соискатель вакансии?",
+      "hint": "Xem học vị và chuyên ngành được nêu trong hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Магистратура по прикладной математике"
+        },
+        {
+          "key": "B",
+          "text": "Кулинарный колледж"
+        },
+        {
+          "key": "C",
+          "text": "Музыкальная школа"
+        },
+        {
+          "key": "D",
+          "text": "Курсы вождения"
+        }
+      ],
+      "ans": "A",
+      "explain": "Соискатель окончил магистратуру по специальности «Прикладная математика»."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 17,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Здоровый образ жизни: Мода или осознанная необходимость?",
+  "speakingTime": "20 phút",
+  "topic": "Sống lành mạnh: Động lực nội tại hay sự chạy theo trào lưu số đông",
+  "intro": "Luyện phê phán các trào lưu ăn kiêng cực đoan và khẳng định tầm quan trọng của sự hài hòa thân - tâm.",
+  "shadowingPhrases": [
+    {
+      "text": "Забо́та о здоро́вье должна́ быть осо́знанным вы́бором, а не слепо́й мо́дой.",
+      "meaning": "Chăm lo cho sức khỏe phải là một sự lựa chọn có ý thức, chứ không phải sự a dua mù quáng theo mốt.",
+      "phonetic": "Za-bo-ta a zda-rov'-ye dalzh-na byt' a-soz-nan-nym vy-ba-ram, a ne sle-poy mo-day.",
+      "tips": "Thành ngữ 'слепая мода' chỉ trào lưu nhất thời không có gốc rễ."
+    },
+    {
+      "text": "Психологи́ческое благополу́чие не ме́нее ва́жно, чем физи́ческая фо́рма.",
+      "meaning": "Sức khỏe tinh thần cũng quan trọng không kém gì thể lực thể chất.",
+      "phonetic": "Psi-kha-la-gi-ches-ka-ye bla-ga-pa-lu-chi-ye ne me-ne-ye vazh-na, chem fi-zi-ches-ka-ya for-ma.",
+      "tips": "Cấu trúc so sánh ngang bằng: 'не менее важно, чем...'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Hãy thuyết trình về định nghĩa một 'Lối sống lành mạnh toàn diện' của bạn.",
+    "sampleGuidance": [
+      "Tại sao ngày càng có nhiều trào lưu 'Eat Clean', 'Detox' trên mạng xã hội?",
+      "Mối liên hệ mật thiết giữa giấc ngủ, sự bình an trong tâm hồn và thể chất.",
+      "Bí quyết để duy trì lối sống lành mạnh một cách bền bỉ không gượng ép."
+    ]
+  }
+}

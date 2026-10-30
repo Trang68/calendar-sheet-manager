@@ -1,0 +1,32 @@
+{
+  "id": 22,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Мой родной язык и сложности изучения русского",
+  "speakingTime": "15 phút",
+  "topic": "Ngôn ngữ học giao tiếp: Tiếng mẹ đẻ và kinh nghiệm chinh phục tiếng Nga",
+  "intro": "Học cách chia sẻ về sự khác biệt ngữ pháp giữa tiếng Việt và tiếng Nga (biến cách, giống, phát âm).",
+  "shadowingPhrases": [
+    {
+      "text": "В ру́сском языке́ сло́жная грамма́тика, но о́чень бога́тая культу́ра.",
+      "meaning": "Trong tiếng Nga ngữ pháp phức tạp, nhưng sở hữu một nền văn hóa vô cùng trù phú.",
+      "phonetic": "V rus-skam ya-zy-ke slozh-na-ya gram-ma-ti-ka, no o-chen' ba-ga-ta-ya kul'-tu-ra.",
+      "tips": "Đối lập hai mệnh đề qua liên từ 'но'."
+    },
+    {
+      "text": "Са́мое тру́дное для меня́ — э́то падежи́ и глаго́лы движе́ния.",
+      "meaning": "Điều nan giải nhất đối với tôi chính là 6 cách biến thể và các động từ chuyển động.",
+      "phonetic": "Sa-ma-ye trud-na-ye dlya me-nya — e-ta pa-de-zhi i gla-go-ly dvi-zhe-ni-ya.",
+      "tips": "Cụm 'самое трудное' nhấn mạnh điểm khó khăn nhất."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy nói về hành trình học tiếng Nga của bạn từ con số 0 đến nay.",
+    "sampleGuidance": [
+      "Bạn bắt đầu học tiếng Nga từ khi nào và vì lý do gì?",
+      "Phần kiến thức nào khiến bạn thấy thử thách nhất (phát âm, cách, động từ)?",
+      "Bạn có những bí quyết gì để nhớ từ vựng và tự tin nói chuyện?"
+    ]
+  }
+}

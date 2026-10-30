@@ -1,0 +1,32 @@
+{
+  "id": 10,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Презентация: Историческая личность, которая меня вдохновляет",
+  "speakingTime": "20 phút",
+  "topic": "Nhân vật lịch sử: Tấm gương cống hiến và nguồn cảm hứng bất tận",
+  "intro": "Luyện thuyết trình có cấu trúc ba phần (Mở đầu, Luận cứ, Kết luận) giới thiệu về một danh nhân vĩ đại.",
+  "shadowingPhrases": [
+    {
+      "text": "Дея́тельность э́той выдаю́щейся ли́чности оказа́ла эпоха́льное влия́ние на исто́рию.",
+      "meaning": "Sự nghiệp của nhân vật kiệt xuất này đã tạo nên tầm ảnh hưởng mang tính thời đại đối với lịch sử.",
+      "phonetic": "De-ya-tel'-nast' e-tay vy-da-yu-shchey-sya lich-nas-ti a-ka-za-la e-pa-khal'-na-ye vli-ya-ni-ye na is-to-ri-yu.",
+      "tips": "Từ 'эпохальное влияние' nhấn mạnh sức ảnh hưởng sâu rộng qua các thế hệ."
+    },
+    {
+      "text": "Его́ несгиба́емая во́ля и преда́нность нау́ке слу́жат для меня́ приме́ром.",
+      "meaning": "Ý chí bất khuất và sự tận tụy cống hiến cho khoa học của ông là tấm gương sáng cho tôi noi theo.",
+      "phonetic": "Ye-vo nes-gi-ba-ye-ma-ya vo-lya i pre-dan-nast' na-u-ke slu-zhat dlya me-nya pri-me-ram.",
+      "tips": "Cụm 'несгибаемая воля' có nghĩa là ý chí kiên định sắt đá."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về một nhân vật lịch sử (nhà khoa học, chính khách, nghệ sĩ) bạn khâm phục.",
+    "sampleGuidance": [
+      "Giới thiệu danh tính, thời đại sống và bối cảnh lịch sử của nhân vật.",
+      "Những đóng góp, phát minh hoặc cống hiến lớn nhất mà người đó để lại cho nhân loại.",
+      "Phẩm chất nào ở người đó truyền cho bạn động lực phấn đấu trong đời sống?"
+    ]
+  }
+}

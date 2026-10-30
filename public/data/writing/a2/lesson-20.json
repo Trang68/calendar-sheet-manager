@@ -1,0 +1,52 @@
+{
+  "id": 20,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Сообщение в чат дома о правилах тишины",
+  "writingTime": "20 phút",
+  "topic": "Thông báo trong nhóm cư dân chung cư về việc sửa nhà và giữ trật tự",
+  "targetWordRange": [
+    45,
+    65
+  ],
+  "task": "Bạn sắp sửa chữa lại bàn ghế trong phòng vào cuối tuần. Hãy gửi lời nhắn lên nhóm chat chung cư xin lỗi trước về tiếng ồn và cam kết giờ giấc.",
+  "requirements": [
+    "Lời chào các cư dân cùng tòa nhà",
+    "Thông báo về việc sửa chữa trong căn hộ số mấy",
+    "Cam kết chỉ làm ồn trong khung giờ quy định (10:00–18:00)",
+    "Lời xin lỗi vì sự bất tiện và cảm ơn mọi người"
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемые соседи, добрый день!",
+      "vi": "Kính chào các bác hàng xóm láng giềng!"
+    },
+    {
+      "ru": "Приношу извинения за временные неудобства.",
+      "vi": "Cháu xin cáo lỗi vì sự bất tiện tạm thời này ạ."
+    },
+    {
+      "ru": "Заранее спасибо за понимание!",
+      "vi": "Xin cảm ơn sự thấu hiểu của mọi người trước ạ!"
+    }
+  ],
+  "modelAnswer": "Уважаемые соседи, добрый день!\n\nПишет вам жилец квартиры № 36. В эту субботу, 12 ноября, у нас в квартире будут проходить небольшие ремонтные работы по сборке мебели.\n\nМы будем шуметь строго в разрешённые часы: с 10:00 до 13:00 и с 15:00 до 18:00, соблюдая закон о тишине. Заранее приносим искренние извинения за временный шум и благодарим за понимание!\n\nС уважением,\nНам",
+  "modelWordCount": 57,
+  "rubric": [
+    {
+      "criteria": "Tính văn minh & Chuẩn mực giao tiếp",
+      "weight": "40%",
+      "desc": "Lời lẽ lịch thiệp, tôn trọng cộng đồng dân cư."
+    },
+    {
+      "criteria": "Tính chính xác của thông tin",
+      "weight": "35%",
+      "desc": "Giờ giấc, số phòng và cam kết rõ ràng."
+    },
+    {
+      "criteria": "Ngữ pháp tiếng Nga",
+      "weight": "25%",
+      "desc": "Cấu trúc: строго в разрешённые часы, приносим извинения."
+    }
+  ]
+}

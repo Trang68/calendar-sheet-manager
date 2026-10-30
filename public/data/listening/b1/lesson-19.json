@@ -1,0 +1,63 @@
+{
+  "id": 19,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Сюжет новостей: Открытие нового заповедника в Сибири",
+  "listeningTime": "15 phút",
+  "topic": "Bản tin truyền hình: Thành lập khu bảo tồn thiên nhiên bảo vệ loài quý hiếm",
+  "dialogue": [
+    {
+      "speaker": "Диктор",
+      "ru": "Сегодня в Красноярском крае официально открыт новый государственный биосферный заповедник площадью более миллиона гектаров.",
+      "vi": "Hôm nay tại tỉnh Krasnoyarsk đã chính thức khánh thành khu bảo tồn sinh quyển quốc gia mới với diện tích hơn một triệu héc-ta."
+    },
+    {
+      "speaker": "Эколог",
+      "ru": "Эта территория уникальна: здесь проходят пути миграции дикого северного оленя и сохранились реликтовые кедровые леса.",
+      "vi": "Khu vực này độc nhất vô nhị: đây là tuyến đường di cư của loài hươu Bắc cực hoang dã và nơi lưu giữ những cánh rừng thông tuyết tùng nguyên sinh cổ đại."
+    },
+    {
+      "speaker": "Диктор",
+      "ru": "В заповеднике будет запрещена любая хозяйственная деятельность и промышленная вырубка леса.",
+      "vi": "Tại khu bảo tồn sẽ nghiêm cấm mọi hoạt động kinh tế khai khoáng và chặt phá rừng công nghiệp."
+    },
+    {
+      "speaker": "Эколог",
+      "ru": "Мы сохраняем биологическое разнообразие планеты для будущих поколений.",
+      "vi": "Chúng ta đang gìn giữ sự đa dạng sinh học của hành tinh cho các thế hệ tương lai."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Мы обязаны сохранить биологическое разнообразие планеты для потомков.",
+    "hint": "Trách nhiệm bảo tồn đa dạng sinh học."
+  },
+  "questions": [
+    {
+      "id": "b1_l19_q1",
+      "prompt": "Какая деятельность категорически запрещена на территории нового заповедника?",
+      "hint": "Xem quy định cấm bảo vệ rừng ở câu của phát thanh viên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Любая хозяйственная деятельность и промышленная вырубка леса"
+        },
+        {
+          "key": "B",
+          "text": "Научные исследования экологов"
+        },
+        {
+          "key": "C",
+          "text": "Фотографирование природы"
+        },
+        {
+          "key": "D",
+          "text": "Пролёт птиц"
+        }
+      ],
+      "ans": "A",
+      "explain": "В заповедной зоне запрещены промышленная вырубка и любая хозяйственная эксплуатация."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": 23,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Анкета для библиотеки",
+  "writingTime": "15 phút",
+  "topic": "Điền tờ khai thông tin cá nhân làm thẻ thư viện",
+  "targetWordRange": [
+    25,
+    45
+  ],
+  "task": "Viết đoạn văn ngắn (25–45 từ) cung cấp thông tin cá nhân để đăng ký thẻ thư viện trường đại học.",
+  "requirements": [
+    "1. Họ và tên, quốc tịch.",
+    "2. Năm sinh, số điện thoại.",
+    "3. Khoa và ngành đang học."
+  ],
+  "cliches": [
+    {
+      "ru": "Моя фамилия и имя...",
+      "vi": "Họ và tên của tôi..."
+    },
+    {
+      "ru": "Я гражданин Вьетнама.",
+      "vi": "Tôi là công dân Việt Nam."
+    },
+    {
+      "ru": "Я студент первого курса филологического факультета.",
+      "vi": "Tôi là sinh viên năm nhất khoa ngữ văn."
+    }
+  ],
+  "modelAnswer": "Меня зовут Нгуен Ван Ан. Я гражданин Вьетнама. Я родился в 2004 году в Ханое. Сейчас я студент первого курса филологического факультета. Мой номер телефона: +7-999-123-45-67. Мой адрес: улица Ленина, дом 10, комната 204.",
+  "modelWordCount": 37,
+  "rubric": [
+    {
+      "criteria": "Tính chính xác thông tin",
+      "desc": "Cung cấp đầy đủ các trường thông tin theo yêu cầu."
+    }
+  ]
+}

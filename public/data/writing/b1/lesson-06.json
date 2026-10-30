@@ -1,0 +1,57 @@
+{
+  "id": 6,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Сопроводительное письмо к резюме для стажировки",
+  "writingTime": "40 phút",
+  "topic": "Thư ứng tuyển thực tập sinh tại tập đoàn quốc tế",
+  "targetWordRange": [
+    100,
+    135
+  ],
+  "task": "Bạn muốn ứng tuyển vị trí thực tập sinh phân tích thị trường tại một công ty công nghệ đa quốc gia. Hãy viết thư bày tỏ nguyện vọng (Cover Letter).",
+  "requirements": [
+    "Lời chào gửi Giám đốc Tuyển dụng nhân sự",
+    "Nêu rõ vị trí bạn ứng tuyển và nguồn thông tin tuyển dụng",
+    "Trình bày các thế mạnh học vấn, kỹ năng ngoại ngữ và khả năng phân tích",
+    "Lý do bạn lựa chọn công ty này để cống hiến và học hỏi",
+    "Lời cảm ơn và mong muốn nhận được lời mời phỏng vấn"
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемый руководитель отдела подбора персонала!",
+      "vi": "Kính gửi Trưởng phòng Tuyển dụng nhân sự!"
+    },
+    {
+      "ru": "Пишу вам с целью выразить глубокую заинтересованность...",
+      "vi": "Tôi viết thư này nhằm bày tỏ sự quan tâm sâu sắc..."
+    },
+    {
+      "ru": "Уверен, что мои знания и энтузиазм принесут пользу вашей компании.",
+      "vi": "Tôi tin chắc rằng kiến thức và nhiệt huyết của mình sẽ đem lại lợi ích cho quý công ty."
+    },
+    {
+      "ru": "Буду рад предоставить дополнительную информацию на собеседовании.",
+      "vi": "Tôi rất vui lòng cung cấp thêm thông tin trong buổi phỏng vấn."
+    }
+  ],
+  "modelAnswer": "Уважаемый руководитель отдела подбора персонала!\n\nОбращаюсь к вам с целью предложить свою кандидатуру на позицию стажёра в отделе анализа данных и маркетинга, о которой я узнал на официальном карьерном портале вашей компании.\n\nВ настоящее время я завершаю обучение на четвёртом курсе бакалавриата по направлению «Прикладная информатика». Обладаю уверенными навыками статистического анализа, программирования на языках Python и SQL, а также свободно владею русским, вьетнамским и английским языками. Во время учёбы я успешно реализовал два исследовательских проекта, посвящённых прогнозированию потребительского спроса.\n\nВаша компания привлекает меня масштабными инновационными проектами и высокими стандартами корпоративной культуры. Буду рад возможности пройти личное собеседование и доказать свою мотивацию.\n\nС уважением,\nЛе Минь Туан",
+  "modelWordCount": 112,
+  "rubric": [
+    {
+      "criteria": "Văn phong thư tín thương mại & Ứng tuyển",
+      "weight": "40%",
+      "desc": "Trang trọng, chuyên nghiệp, làm nổi bật được giá trị của ứng viên."
+    },
+    {
+      "criteria": "Tính thuyết phục của kinh nghiệm",
+      "weight": "35%",
+      "desc": "Nêu dẫn chứng định lượng, kỹ năng kỹ thuật và ngoại ngữ."
+    },
+    {
+      "criteria": "Ngữ pháp tiếng Nga công sở",
+      "weight": "25%",
+      "desc": "Chia động từ, kết hợp từ chính xác (обладать навыками, реализовать проекты)."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": 18,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Официальное заявление на академический отпуск",
+  "writingTime": "35 phút",
+  "topic": "Văn bản hành chính học vụ: Đơn xin tạm hoãn bảo lưu học tập",
+  "targetWordRange": [
+    95,
+    125
+  ],
+  "task": "Vì lý do sức khỏe cần điều trị dài ngày tại bệnh viện quê hương, hãy viết đơn chính thức gửi Hiệu trưởng trường Đại học xin nghỉ học tạm thời (bảo lưu) 1 năm.",
+  "requirements": [
+    "Người nhận (Hiệu trưởng trường Đại học), người làm đơn kèm mã sinh viên",
+    "Nguyện vọng xin nghỉ bảo lưu kết quả học tập trong thời gian cụ thể (1 năm)",
+    "Nêu rõ lý do chính đáng kèm viện dẫn hồ sơ y tế đính kèm",
+    "Cam kết trở lại học tập đúng thời hạn",
+    "Chữ ký và ngày làm đơn"
+  ],
+  "cliches": [
+    {
+      "ru": "Ректору университета...",
+      "vi": "Kính gửi Hiệu trưởng trường Đại học..."
+    },
+    {
+      "ru": "Прошу предоставить мне академический отпуск...",
+      "vi": "Kính xin cho phép em được nghỉ bảo lưu học tập..."
+    },
+    {
+      "ru": "В связи с необходимостью прохождения лечения...",
+      "vi": "Do nhu cầu cần phải tiến hành đợt điều trị bệnh..."
+    },
+    {
+      "ru": "Медицинское заключение прилагается.",
+      "vi": "Bản kết luận y khoa xin được gửi kèm theo đơn."
+    }
+  ],
+  "modelAnswer": "Ректору Федерального государственного бюджетного\nобразовательного учреждения высшего образования\n«Московский политехнический университет»\nпрофессору Козлову В. А.\nот студента 3 курса факультета машиностроения\nЛе Ван Тханя (студенческий билет № 21-М-458)\n\nЗАЯВЛЕНИЕ\n\nПрошу предоставить мне академический отпуск по медицинским показаниям сроком на один учебный год — с 1 ноября 2026 года по 31 октября 2027 года.\n\nНеобходимость отпуска вызвана необходимостью проведения плановой хирургической операции и последующего курса реабилитации по месту постоянного жительства во Вьетнаме. Врачебное заключение клинической больницы и справка врачебной комиссии прилагаются к настоящему заявлению.\n\nОбязуюсь своевременно приступить к учебным занятиям по окончании срока отпуска.\n\nПриложение:\n1. Заключение врачебной комиссии № 145 от 12.10.2026 г. на 2 л. в 1 экз.\n\n20 октября 2026 года\nЛе Ван Тхань",
+  "modelWordCount": 115,
+  "rubric": [
+    {
+      "criteria": "Chuẩn mực biểu mẫu pháp lý Nga",
+      "weight": "40%",
+      "desc": "Đúng thể thức đơn từ quốc gia (Заявление), rõ ràng, chính xác tuyệt đối."
+    },
+    {
+      "criteria": "Tính trang trọng & Cụ thể",
+      "weight": "35%",
+      "desc": "Mốc thời gian rõ ràng, viện dẫn danh mục hồ sơ đính kèm."
+    },
+    {
+      "criteria": "Ngữ pháp tiếng Nga công quyền",
+      "weight": "25%",
+      "desc": "Sử dụng lối hành văn cô đọng, khách quan, không sai lỗi chính tả."
+    }
+  ]
+}

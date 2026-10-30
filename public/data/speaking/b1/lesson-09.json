@@ -1,0 +1,32 @@
+{
+  "id": 9,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Дискуссия: Чтение печатных книг или электронные ридеры?",
+  "speakingTime": "20 phút",
+  "topic": "Văn hóa đọc số: So sánh sách giấy in truyền thống và thiết bị đọc e-book",
+  "intro": "Rèn luyện kỹ năng tranh biện, đưa ra luận cứ xác đáng về thị hiếu đọc sách thời đại công nghệ.",
+  "shadowingPhrases": [
+    {
+      "text": "Печа́тная кни́га да́рит неповтори́мые такти́льные ощуще́ния и шо́рох страни́ц.",
+      "meaning": "Cuốn sách in mang lại xúc giác sờ chạm độc nhất vô nhị và âm thanh sột soạt của trang giấy.",
+      "phonetic": "Pe-chat-na-ya kni-ga da-rit ne-pav-ta-ri-my-ye tak-til'-ny-ye a-shchu-shche-ni-ya i sho-rakh stra-nits.",
+      "tips": "Cụm 'тактильные ощущения' chỉ cảm giác qua xúc giác ngón tay."
+    },
+    {
+      "text": "Электро́нные носи́тели выи́грывают за счёт компа́ктности и моби́льности.",
+      "meaning": "Các thiết bị số chiếm ưu thế vượt trội nhờ sự gọn nhẹ và tính linh hoạt cơ động.",
+      "phonetic": "E-lek-tron-ny-ye na-si-te-li vy-ig-ry-va-yut za schot kam-pakt-nas-ti i ma-bil'-nas-ti.",
+      "tips": "Thành ngữ 'выигрывать за счёт чего' (chiếm ưu thế nhờ vào điều gì)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Trình bày lập luận của bạn trong cuộc tranh luận: Liệu sách giấy có bị tuyệt chủng?",
+    "sampleGuidance": [
+      "Phân tích ưu thế của sách điện tử (chứa cả thư viện trong máy, đèn đọc ban đêm, giá thành rẻ).",
+      "Giá trị trường tồn không thể thay thế của sách in (vẻ đẹp mỹ thuật, bảo vệ thị lực, tính lưu trữ gia bảo).",
+      "Thói quen cá nhân của bạn khi tiếp cận tri thức."
+    ]
+  }
+}

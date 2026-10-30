@@ -1,0 +1,32 @@
+{
+  "id": 12,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Культурный шок: Трудности адаптации иностранцев",
+  "speakingTime": "20 phút",
+  "topic": "Hòa nhập quốc tế: Vượt qua cú sốc văn hóa và rào cản tập quán",
+  "intro": "Phân tích các giai đoạn thích nghi tâm lý khi sinh sống tại một đất nước xa lạ và các giải pháp dung hòa.",
+  "shadowingPhrases": [
+    {
+      "text": "Адапта́ция к ино́й культу́рной среде́ тре́бует терпе́ния и откры́тости мы́шления.",
+      "meaning": "Sự thích nghi với một môi trường văn hóa khác biệt đòi hỏi lòng kiên nhẫn và tư duy rộng mở.",
+      "phonetic": "A-dap-ta-tsi-ya k i-noy kul'-tur-nay sre-de tre-bu-yet ter-pe-ni-ya i at-kry-tas-ti mysh-le-ni-ya.",
+      "tips": "Cấu trúc 'требовать чего' (đòi hỏi cái gì - Sinh cách)."
+    },
+    {
+      "text": "Понима́ние чужи́х обы́чаев помога́ет избежа́ть оби́дных недоразуме́ний.",
+      "meaning": "Sự thấu hiểu các tập tục của người khác giúp tránh khỏi những hiểu lầm đáng tiếc.",
+      "phonetic": "Pa-ni-ma-ni-ye chu-zhikh a-by-cha-yev pa-ma-ga-yet iz-be-zhat' a-bid-nykh ne-da-ra-zu-me-niy.",
+      "tips": "Động từ 'избежать' đòi hỏi danh từ ở Sinh cách (Родительный падеж)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Nói về những khác biệt văn hóa lớn nhất bạn từng nhận thấy giữa Nga và Việt Nam.",
+    "sampleGuidance": [
+      "Những phong tục tập quán trong giao tiếp (mỉm cười, bắt tay, xưng hô, tiếp khách).",
+      "Khác biệt về quan niệm đúng giờ, cách thể hiện cảm xúc nơi công cộng.",
+      "Lời khuyên thiết thực cho một du học sinh mới đặt chân tới nước bạn."
+    ]
+  }
+}

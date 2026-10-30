@@ -1,0 +1,63 @@
+{
+  "id": 7,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Разговор на почте: Отправка заказного письма",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Gửi thư bảo đảm và mua phong bì tại bưu cục",
+  "dialogue": [
+    {
+      "speaker": "Посетитель",
+      "ru": "Здравствуйте! Мне нужно отправить заказное письмо с уведомлением о вручении.",
+      "vi": "Xin chào! Tôi cần gửi một lá thư bảo đảm có báo phát."
+    },
+    {
+      "speaker": "Оператор",
+      "ru": "Пожалуйста, положите письмо на весы. Адрес получателя и индекс заполнили?",
+      "vi": "Mời bạn đặt thư lên cân. Bạn đã điền địa chỉ người nhận và mã bưu điện chưa?"
+    },
+    {
+      "speaker": "Посетитель",
+      "ru": "Да, индекс 190000, Санкт-Петербург. Вот бланк.",
+      "vi": "Vâng, mã 190000, Saint Petersburg. Đây là tờ khai ạ."
+    },
+    {
+      "speaker": "Оператор",
+      "ru": "Отлично. Стоимость отправления — 140 рублей. Вот ваш чек с трек-номером для отслеживания.",
+      "vi": "Tốt rồi. Cước phí gửi thư là 140 rúp. Đây là hóa đơn có mã vận đơn để bạn tra cứu."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Вот ваш чек с трек-номером для отслеживания письма.",
+    "hint": "Lắng nghe từ ngữ về hóa đơn bưu chính."
+  },
+  "questions": [
+    {
+      "id": "a2_l7_q1",
+      "prompt": "Какую сумму заплатил посетитель за отправку письма?",
+      "hint": "Xem cước phí trong lời của nhân viên bưu cục.",
+      "options": [
+        {
+          "key": "A",
+          "text": "50 рублей"
+        },
+        {
+          "key": "B",
+          "text": "140 рублей"
+        },
+        {
+          "key": "C",
+          "text": "300 рублей"
+        },
+        {
+          "key": "D",
+          "text": "Бесплатно"
+        }
+      ],
+      "ans": "B",
+      "explain": "Оператор озвучил стоимость заказного отправления: 140 рублей."
+    }
+  ]
+}

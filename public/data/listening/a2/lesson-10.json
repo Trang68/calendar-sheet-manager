@@ -1,0 +1,63 @@
+{
+  "id": 10,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Покупка экскурсионного тура в турагентстве",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đặt tour du lịch tham quan Vành đai Vàng",
+  "dialogue": [
+    {
+      "speaker": "Турист",
+      "ru": "Здравствуйте! Мы хотим поехать на экскурсию по Золотому кольцу на майские праздники.",
+      "vi": "Xin chào! Chúng tôi muốn đi tour du lịch Vành đai Vàng vào dịp nghỉ lễ tháng Năm."
+    },
+    {
+      "speaker": "Агент",
+      "ru": "Прекрасный выбор! Могу предложить трёхдневный автобусный тур: Владимир — Суздаль — Ярославль.",
+      "vi": "Lựa chọn tuyệt vời! Tôi xin gợi ý tour ô tô 3 ngày: Vladimir - Suzdal - Yaroslavl."
+    },
+    {
+      "speaker": "Турист",
+      "ru": "Что включено в стоимость тура?",
+      "vi": "Giá tour đã bao gồm những gì ạ?"
+    },
+    {
+      "speaker": "Агент",
+      "ru": "Проезд на комфортабельном автобусе, проживание в гостинице, завтраки и все экскурсии с гидом.",
+      "vi": "Xe du lịch tiện nghi, phòng khách sạn, các bữa sáng và toàn bộ chương trình hướng dẫn viên."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Трёхдневный тур включает проживание в гостинице и завтраки.",
+    "hint": "Nghe về quyền lợi chỗ ở và ăn sáng trong chuyến đi."
+  },
+  "questions": [
+    {
+      "id": "a2_l10_q1",
+      "prompt": "Какие города входят в предложенный маршрут тура?",
+      "hint": "Xem 3 thành phố cổ được đại lý du lịch đề xuất.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Владимир, Суздаль, Ярославль"
+        },
+        {
+          "key": "B",
+          "text": "Сочи и Казань"
+        },
+        {
+          "key": "C",
+          "text": "Владивосток и Хабаровск"
+        },
+        {
+          "key": "D",
+          "text": "Только Санкт-Петербург"
+        }
+      ],
+      "ans": "A",
+      "explain": "Турагент предложил популярный классический маршрут: Владимир — Суздаль — Ярославль."
+    }
+  ]
+}

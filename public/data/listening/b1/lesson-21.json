@@ -1,0 +1,63 @@
+{
+  "id": 21,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Врачебная консультация: Профилактика переутомления",
+  "listeningTime": "15 phút",
+  "topic": "Y học dự phòng: Tư vấn của bác sĩ về giấc ngủ và phục hồi thể lực",
+  "dialogue": [
+    {
+      "speaker": "Пациент",
+      "ru": "Доктор, в последнее время я постоянно чувствую усталость, головную боль и не могу сосредоточиться на работе.",
+      "vi": "Thưa bác sĩ, dạo gần đây tôi liên tục cảm thấy uể oải, đau đầu và không thể tập trung vào công việc."
+    },
+    {
+      "speaker": "Врач",
+      "ru": "Судя по анализам, у вас классические симптомы хронического синдрома усталости и дефицита сна. Сколько часов вы спите?",
+      "vi": "Căn cứ theo xét nghiệm, anh có triệu chứng kinh điển của hội chứng mệt mỏi mạn tính và thiếu ngủ trầm trọng. Anh ngủ mấy tiếng mỗi đêm?"
+    },
+    {
+      "speaker": "Пациент",
+      "ru": "Около пяти часов, часто работаю за компьютером до глубокой ночи.",
+      "vi": "Chỉ khoảng năm tiếng thôi, tôi hay ngồi làm việc bên máy tính tới tận đêm khuya."
+    },
+    {
+      "speaker": "Врач",
+      "ru": "Это недопустимо. Синий свет экранов блокирует выработку мелатонина. Я настоятельно рекомендую нормализовать сон до 8 часов и добавить ежедневные пешие прогулки.",
+      "vi": "Điều đó vô cùng có hại. Ánh sáng xanh màn hình ức chế sản sinh hormone melatonin. Tôi kiên quyết đề nghị anh đưa giấc ngủ về 8 tiếng và bổ sung đi bộ hàng ngày."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Синий свет экранов гаджетов блокирует выработку гормона сна мелатонина.",
+    "hint": "Cơ chế sinh học của ánh sáng màn hình đối với giấc ngủ."
+  },
+  "questions": [
+    {
+      "id": "b1_l21_q1",
+      "prompt": "Какую главную причину переутомления пациента назвал врач?",
+      "hint": "Xem phân tích về thời lượng ngủ và ánh sáng xanh.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Хронический дефицит сна и ночную работу за экраном компьютера"
+        },
+        {
+          "key": "B",
+          "text": "Чрезмерное занятие спортом"
+        },
+        {
+          "key": "C",
+          "text": "Слишком долгий сон"
+        },
+        {
+          "key": "D",
+          "text": "Употребление витаминов"
+        }
+      ],
+      "ans": "A",
+      "explain": "Врач констатировал дефицит сна (5 часов) и негативное влияние экранов ночью."
+    }
+  ]
+}

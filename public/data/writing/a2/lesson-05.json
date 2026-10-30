@@ -1,0 +1,51 @@
+{
+  "id": 5,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Записка соседу с просьбой о помощи",
+  "writingTime": "20 phút",
+  "topic": "Mẩu ghi chú ngắn nhờ hàng xóm nhận hộ bưu phẩm",
+  "targetWordRange": [
+    40,
+    65
+  ],
+  "task": "Bạn vắng nhà vào chiều nay và shipper sẽ giao bưu kiện. Hãy để lại một mẩu giấy ghi chú gửi người hàng xóm thân thiết nhờ nhận giùm.",
+  "requirements": [
+    "Lời chào và xưng hô lịch thiệp",
+    "Nêu rõ lý do bận vắng nhà và nhờ nhận gói hàng từ người giao hàng",
+    "Cam kết thời gian sang lấy lại và gửi lời cảm ơn"
+  ],
+  "cliches": [
+    {
+      "ru": "Здравствуйте, уважаемый Алексей!",
+      "vi": "Xin chào bác Aleksey kính mến!"
+    },
+    {
+      "ru": "У меня к вам небольшая просьба.",
+      "vi": "Cháu có một lời nhờ vả nhỏ này gửi tới bác ạ."
+    },
+    {
+      "ru": "Буду очень благодарен за помощь!",
+      "vi": "Cháu sẽ vô cùng biết ơn sự giúp đỡ của bác!"
+    }
+  ],
+  "modelAnswer": "Здравствуйте, уважаемый Алексей!\n\nИзвините за беспокойство. Сегодня с 14:00 до 16:00 курьер должен привезти мне посылку с книгами. К сожалению, я задерживаюсь на лекциях в университете.\n\nНе могли бы вы принять посылку? Я зайду к вам вечером в 19:00 и всё заберу.\n\nОгромное спасибо за помощь!\n\nС уважением,\nТхань (кв. 42)",
+  "modelWordCount": 52,
+  "rubric": [
+    {
+      "criteria": "Mục đích giao tiếp rõ ràng",
+      "weight": "40%",
+      "desc": "Trình bày cụ thể việc cần nhờ và giờ giấc hẹn gặp."
+    },
+    {
+      "criteria": "Tính lịch sự & Ngữ pháp chuẩn xác",
+      "weight": "35%",
+      "desc": "Sử dụng lối nói nhã nhặn 'не могли бы вы', 'извините'."
+    },
+    {
+      "criteria": "Định dạng mẩu ghi chú",
+      "weight": "25%",
+      "desc": "Ghi rõ số phòng căn hộ và ký tên người gửi."
+    }
+  ]
+}

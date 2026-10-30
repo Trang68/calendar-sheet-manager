@@ -1,0 +1,51 @@
+{
+  "id": 19,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Эссе: Мой любимый праздник в году",
+  "writingTime": "25 phút",
+  "topic": "Bài văn ngắn: Ngày lễ em háo hức mong đợi nhất trong năm",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Hãy viết đoạn văn ngắn (60–85 từ) kể về ngày lễ bạn yêu thích nhất trong năm và cách bạn kỷ niệm ngày đó.",
+  "requirements": [
+    "Tên ngày lễ và thời điểm diễn ra",
+    "Lý do bạn yêu mến ngày lễ này (được quây quần, nhận quà, nghỉ ngơi)",
+    "Các hoạt động và món ăn đặc sắc gắn liền với ngày lễ"
+  ],
+  "cliches": [
+    {
+      "ru": "Мой самый любимый праздник — это...",
+      "vi": "Ngày lễ yêu thích nhất của tôi là..."
+    },
+    {
+      "ru": "В этот день вся семья собирается вместе.",
+      "vi": "Vào ngày này cả gia đình lại sum họp đông đủ."
+    },
+    {
+      "ru": "Этот день дарит ощущение сказки.",
+      "vi": "Ngày này mang lại cảm giác như trong truyện cổ tích."
+    }
+  ],
+  "modelAnswer": "Мой самый любимый праздник в году — это Новый год. Я люблю его с детства за сказочную атмосферу и запах свежей хвои и мандаринов.\n\nВ канун праздника мы всей семьёй украшаем пушистую ёлку разноцветными гирляндами и готовим праздничные блюда. В полночь под бой часов мы поздравляем друг друга, загадываем самые сокровенные желания и дарим подарки.\n\nЭтот праздник дарит веру в чудеса, надежду на лучшее и объединяет самых дорогих людей.",
+  "modelWordCount": 65,
+  "rubric": [
+    {
+      "criteria": "Nội dung & Hình ảnh biểu cảm",
+      "weight": "40%",
+      "desc": "Khắc họa được không khí ấm áp, thiêng liêng của lễ hội."
+    },
+    {
+      "criteria": "Ngữ pháp câu phức A2",
+      "weight": "35%",
+      "desc": "Sử dụng tốt các liên từ 'за что', 'когда', 'чтобы'."
+    },
+    {
+      "criteria": "Vốn từ văn hóa",
+      "weight": "25%",
+      "desc": "Các từ vựng đặc trưng: атмосфера, канун праздника, чудеса."
+    }
+  ]
+}

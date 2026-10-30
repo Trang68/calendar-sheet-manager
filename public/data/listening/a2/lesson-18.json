@@ -1,0 +1,63 @@
+{
+  "id": 18,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Разговор в автосервисе: Замена колеса",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đưa xe vào tiệm sửa chữa và thay bánh xe",
+  "dialogue": [
+    {
+      "speaker": "Водитель",
+      "ru": "Здравствуйте! На трассе я пробил переднее правое колесо. Можете посмотреть?",
+      "vi": "Xin chào! Trên đường cao tốc tôi bị thủng lốp trước bên phải. Các anh kiểm tra giúp được không?"
+    },
+    {
+      "speaker": "Механик",
+      "ru": "Давайте загоним машину на подъёмник. Сейчас снимем колесо и проверим давление.",
+      "vi": "Bác đánh xe lên cầu nâng nhé. Giờ tụi em tháo bánh ra và đo áp suất lốp ngay."
+    },
+    {
+      "speaker": "Водитель",
+      "ru": "Сколько времени займёт ремонт и балансировка?",
+      "vi": "Sửa và cân mâm hết bao nhiêu thời gian anh?"
+    },
+    {
+      "speaker": "Механик",
+      "ru": "Примерно тридцать минут. Можете пока выпить кофе в комнате для клиентов.",
+      "vi": "Tầm 30 phút thôi ạ. Bác vào phòng chờ uống cà phê nghỉ ngơi nhé."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Ремонт и балансировка колеса займут примерно тридцать минут.",
+    "hint": "Thời lượng hoàn thành việc sửa chữa lốp xe."
+  },
+  "questions": [
+    {
+      "id": "a2_l18_q1",
+      "prompt": "Какое колесо повредил водитель автомобиля?",
+      "hint": "Xem vị trí bánh xe bị hỏng ở đầu hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Переднее правое колесо"
+        },
+        {
+          "key": "B",
+          "text": "Заднее левое колесо"
+        },
+        {
+          "key": "C",
+          "text": "Запасное колесо в багажнике"
+        },
+        {
+          "key": "D",
+          "text": "Все четыре колеса"
+        }
+      ],
+      "ans": "A",
+      "explain": "Водитель сообщил: пробил переднее правое колесо."
+    }
+  ]
+}

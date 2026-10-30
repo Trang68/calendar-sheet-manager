@@ -1,0 +1,63 @@
+{
+  "id": 18,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Дискуссия на семинаре: Влияние искусственного интеллекта",
+  "listeningTime": "15 phút",
+  "topic": "Hội thảo kinh tế xã hội: Biến động thị trường việc làm trước làn sóng AI",
+  "dialogue": [
+    {
+      "speaker": "Докладчик",
+      "ru": "Коллеги, согласно последним отчётам, автоматизация затронет до трети офисных специальностей в ближайшие десять лет.",
+      "vi": "Thưa các đồng nghiệp, theo các báo cáo mới nhất, tự động hóa sẽ tác động đến một phần ba các công việc văn phòng trong 10 năm tới."
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Значит ли это, что миллионы людей останутся без работы?",
+      "vi": "Điều đó có đồng nghĩa hàng triệu người sẽ lâm vào cảnh thất nghiệp không ạ?"
+    },
+    {
+      "speaker": "Докладчик",
+      "ru": "История технологических революций показывает: одни профессии исчезают, но взамен рождаются новые, требующие творческих и междисциплинарных компетенций.",
+      "vi": "Lịch sử các cuộc cách mạng kỹ thuật cho thấy: ngành nghề cũ mất đi nhưng sẽ khai sinh những ngành mới đòi hỏi năng lực sáng tạo và liên ngành."
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Следовательно, ключевым навыком становится готовность учиться и переучиваться на протяжении всей жизни.",
+      "vi": "Do đó, kỹ năng then chốt chính là tâm thế sẵn sàng học tập và tái đào tạo suốt đời."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Ключевым навыком становится готовность учиться на протяжении всей жизни.",
+    "hint": "Kỹ năng học tập suốt đời trong thời đại số."
+  },
+  "questions": [
+    {
+      "id": "b1_l18_q1",
+      "prompt": "Какой навык становится ключевым для специалистов в эпоху автоматизации?",
+      "hint": "Xem kết luận về tư duy thích ứng ở cuối hội thoại.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Готовность учиться и переучиваться на протяжении всей жизни"
+        },
+        {
+          "key": "B",
+          "text": "Умение печатать на пишущей машинке"
+        },
+        {
+          "key": "C",
+          "text": "Полный отказ от цифровых инструментов"
+        },
+        {
+          "key": "D",
+          "text": "Заучивание наизусть всех справочников"
+        }
+      ],
+      "ans": "A",
+      "explain": "Докладчик подчеркнул концепцию Lifelong Learning как основу конкурентоспособности."
+    }
+  ]
+}

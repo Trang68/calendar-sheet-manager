@@ -1,0 +1,56 @@
+{
+  "id": 19,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Эссе: Что значит быть гражданином мира в XXI веке?",
+  "writingTime": "45 phút",
+  "topic": "Tiểu luận triết học xã hội: Khái niệm 'Công dân toàn cầu' trong thế giới hiện đại",
+  "targetWordRange": [
+    110,
+    145
+  ],
+  "task": "Hãy viết một bài văn nghị luận (110–145 từ) bày tỏ quan điểm của bạn về khái niệm «Công dân toàn cầu» (гражданин мира) và mối tương quan với tình yêu quê hương bản quán.",
+  "requirements": [
+    "Mở bài: Định nghĩa khái niệm công dân toàn cầu trong kỷ nguyên hội nhập",
+    "Thân bài: Phẩm chất của công dân thế giới: hiểu biết đa văn hóa, trách nhiệm với hòa bình và môi trường Trái Đất",
+    "Mối quan hệ hài hòa: Làm công dân toàn cầu không đồng nghĩa với chối bỏ nguồn cội dân tộc",
+    "Kết bài: Tinh thần cởi mở hướng ra thế giới nhưng giữ trọn trái tim quê hương"
+  ],
+  "cliches": [
+    {
+      "ru": "В эпоху глобализации всё чаще звучит понятие «гражданин мира».",
+      "vi": "Trong thời đại toàn cầu hóa, khái niệm 'công dân toàn cầu' ngày càng được nhắc đến nhiều hơn."
+    },
+    {
+      "ru": "Это человек, свободный от предрассудков и открытый миру.",
+      "vi": "Đó là con người không vướng bận định kiến và luôn mở lòng với thế giới."
+    },
+    {
+      "ru": "Глобальное мышление гармонично сочетается с любовью к родине.",
+      "vi": "Tư duy toàn cầu kết hợp hài hòa với tình yêu tha thiết dành cho quê hương."
+    },
+    {
+      "ru": "Мы все несём ответственность за общий дом — планету Земля.",
+      "vi": "Tất cả chúng ta đều chung tay gánh vác trách nhiệm vì ngôi nhà chung — Trái Đất."
+    }
+  ],
+  "modelAnswer": "В современном взаимосвязанном мире всё большую популярность приобретает концепция «гражданина мира». Но что на самом деле означает этот статус в XXI веке?\n\nБыть гражданином мира — значит обладать широким кругозором, свободным от национальных и расовых предрассудков, проявлять глубокое уважение к культурному многообразию планеты и осознавать личную сопричастность глобальным вызовам человечества, будь то защита экологии или сохранение мира. Такой человек владеет иностранными языками, легко адаптируется в международной среде и стремится к диалогу.\n\nОднако ошибочно полагать, что космополитизм означает отказ от своих корней. Напротив, подлинный гражданин мира глубоко ценит историю и традиции собственного народа, выступая культурным послом своей родины за рубежом. Чем глубже наши корни, тем увереннее мы чувствуем себя в мировом пространстве.\n\nГлобальное мышление и патриотизм не противоречат, а дополняют друг друга, помогая созидать гармоничное будущее.",
+  "modelWordCount": 133,
+  "rubric": [
+    {
+      "criteria": "Tầm vóc tư tưởng & Chiều sâu nhân văn",
+      "weight": "40%",
+      "desc": "Lập luận biện chứng giữa tính dân tộc và tính quốc tế, bác bỏ định kiến cực đoan."
+    },
+    {
+      "criteria": "Từ vựng chính trị xã hội cao cấp",
+      "weight": "35%",
+      "desc": "Cụm từ: культурное многообразие, глобальные вызовы, культурный посол."
+    },
+    {
+      "criteria": "Tính thuyết phục chặt chẽ",
+      "weight": "25%",
+      "desc": "Mệnh đề đối chứng 'однако ошибочно полагать..., напротив...' rất đắt giá."
+    }
+  ]
+}

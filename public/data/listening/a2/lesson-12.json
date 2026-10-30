@@ -1,0 +1,63 @@
+{
+  "id": 12,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Заказ такси и разговор с водителем",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đi xe taxi và hướng dẫn đường đi tới trường",
+  "dialogue": [
+    {
+      "speaker": "Водитель",
+      "ru": "Здравствуйте! Вы заказывали такси до главного корпуса университета?",
+      "vi": "Xin chào! Bạn vừa đặt chuyến xe tới tòa nhà chính của trường đại học phải không?"
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Добрый день! Да, всё верно. Скажите, пожалуйста, на дорогах сейчас есть пробки?",
+      "vi": "Chào anh! Dạ đúng rồi. Bác tài cho em hỏi trên đường bây giờ có bị tắc xe không ạ?"
+    },
+    {
+      "speaker": "Водитель",
+      "ru": "На Садовом кольце плотное движение, но навигатор ведёт по набережной. Доедем минут за двадцать.",
+      "vi": "Đường Vành đai Sadovoye xe đông, nhưng định vị đang dẫn vòng men theo bờ kè. Tầm 20 phút là tới nơi."
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Отлично, у меня лекция начинается через полчаса, как раз успеваю.",
+      "vi": "Thế thì tốt quá, nửa tiếng nữa em vào giờ giảng, vừa kịp giờ luôn ạ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Навигатор ведёт по набережной, доедем минут за двадцать.",
+    "hint": "Chú ý đường đi của xe qua định vị vệ tinh."
+  },
+  "questions": [
+    {
+      "id": "a2_l12_q1",
+      "prompt": "Сколько времени займёт поездка по расчёту навигатора?",
+      "hint": "Xem thời gian di chuyển trong câu của tài xế.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Около 20 минут"
+        },
+        {
+          "key": "B",
+          "text": "Больше двух часов"
+        },
+        {
+          "key": "C",
+          "text": "Пять минут"
+        },
+        {
+          "key": "D",
+          "text": "Ровно один час"
+        }
+      ],
+      "ans": "A",
+      "explain": "Водитель уточнил, что маршрут по набережной займёт около 20 минут."
+    }
+  ]
+}

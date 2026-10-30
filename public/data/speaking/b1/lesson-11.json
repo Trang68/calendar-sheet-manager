@@ -1,0 +1,32 @@
+{
+  "id": 11,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Профессии будущего: Какие навыки станут ключевыми?",
+  "speakingTime": "20 phút",
+  "topic": "Tương lai nghề nghiệp: Kỹ năng mềm, trí tuệ cảm xúc và chuyển đổi số",
+  "intro": "Luyện nói về xu hướng thị trường lao động toàn cầu và những kỹ năng cốt lõi cần tôi luyện.",
+  "shadowingPhrases": [
+    {
+      "text": "В э́ру автоматиза́ции на пе́рвый план выхо́дят так называ́емые «ги́бкие на́выки».",
+      "meaning": "Trong kỷ nguyên tự động hóa, các kỹ năng gọi là 'kỹ năng mềm' (soft skills) bước lên hàng đầu.",
+      "phonetic": "V e-ru af-ta-ma-ti-za-tsii na per-vy plan vy-kho-dyat tak na-zy-va-ye-my-ye gib-ki-ye na-vy-ki.",
+      "tips": "Cụm 'на первый план выходят' chỉ sự vươn lên chiếm vị trí ưu tiên."
+    },
+    {
+      "text": "Эмоциона́льный интелле́кт и креати́вность невозмо́жно замени́ть алгори́тмами.",
+      "meaning": "Trí tuệ cảm xúc (EQ) và tính sáng tạo là những điều không thuật toán nào có thể thay thế được.",
+      "phonetic": "E-ma-tsi-a-nal'-ny in-tel-lekt i kre-a-tiv-nast' nev-az-mozh-na za-me-nit' al-ga-rit-ma-mi.",
+      "tips": "Nhấn mạnh sức mạnh độc bản của phẩm chất người."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Trình bày suy nghĩ về những ngành nghề sẽ phát triển mạnh mẽ trong 10–15 năm tới.",
+    "sampleGuidance": [
+      "Dự đoán các lĩnh vực sẽ bùng nổ (công nghệ sinh học, năng lượng tái tạo, an ninh mạng, chăm sóc sức khỏe).",
+      "Tại sao sự kết hợp giữa kiến thức chuyên môn và kỹ năng giao tiếp lại quyết định thành công?",
+      "Bạn đang tự rèn luyện những kỹ năng nào ngay từ hôm nay?"
+    ]
+  }
+}

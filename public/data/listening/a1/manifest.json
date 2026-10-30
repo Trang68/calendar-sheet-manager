@@ -179,5 +179,50 @@
     "listeningTime": "12 phút",
     "topic": "Phần thi vấn đáp kết thúc khóa học tiếng Nga trình độ A1",
     "questionCount": 8
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "На вокзале: Какой поезд едет в Петербург?",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hội thoại: Hỏi thông tin tại nhà ga xe lửa",
+    "questionCount": 1
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "В аптеке: Витамины и чай с лимоном",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hội thoại: Mua vitamin và trà thảo mộc tại quầy thuốc",
+    "questionCount": 1
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "В музее: Покупка студенческого билета",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hội thoại: Mua vé tham quan bảo tàng cho sinh viên",
+    "questionCount": 1
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "В парке: Прокат велосипедов",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "10 phút",
+    "topic": "Hội thoại: Thuê xe đạp dạo chơi công viên",
+    "questionCount": 1
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое аудирование A1: Приглашение на праздник",
+    "badge": "A1 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Hội thoại tổng kết: Nghe lời mời dự tiệc và chuẩn bị quà",
+    "questionCount": 1
   }
 ]

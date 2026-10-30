@@ -1,0 +1,56 @@
+{
+  "id": 6,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Короткий отзыв о ресторане или кафе",
+  "writingTime": "25 phút",
+  "topic": "Viết bài đánh giá ngắn gọn về nhà hàng, quán ăn trên mạng",
+  "targetWordRange": [
+    50,
+    75
+  ],
+  "task": "Hãy viết một bài nhận xét ngắn (50–75 từ) trên ứng dụng bản đồ về một quán ăn Nga mà bạn vừa trải nghiệm.",
+  "requirements": [
+    "Tên quán ăn và thời điểm bạn ghé thăm",
+    "Đánh giá về món ăn (hương vị, độ tươi ngon)",
+    "Đánh giá về thái độ phục vụ của nhân viên và không gian quán",
+    "Đưa ra lời khuyên hoặc thang điểm đánh giá"
+  ],
+  "cliches": [
+    {
+      "ru": "Вчера мы ужинали в кафе...",
+      "vi": "Hôm qua chúng tôi dùng bữa tối tại quán cà phê..."
+    },
+    {
+      "ru": "Еда была очень вкусной и свежей.",
+      "vi": "Đồ ăn rất ngon miệng và tươi mới."
+    },
+    {
+      "ru": "Официанты вежливые и внимательные.",
+      "vi": "Nhân viên phục vụ nhã nhặn và chu đáo."
+    },
+    {
+      "ru": "Рекомендую всем посетить это место!",
+      "vi": "Tôi khuyên mọi người nên ghé thăm nơi này!"
+    }
+  ],
+  "modelAnswer": "Вчера мы ужинали в ресторане русской кухни «Теремок». Заказывали традиционный борщ со сметаной и горячие блины с красной рыбой.\n\nВсе блюда были невероятно вкусными, свежими и ароматными! Персонал очень внимательный и доброжелательный, заказ принесли быстро. В зале играет приятная музыка и царит уютная атмосфера.\n\nСтавлю пять звёзд из пяти и обязательно вернусь сюда снова!",
+  "modelWordCount": 56,
+  "rubric": [
+    {
+      "criteria": "Nội dung nhận xét",
+      "weight": "40%",
+      "desc": "Đầy đủ các khía cạnh: món ăn, phục vụ, không gian, mức điểm."
+    },
+    {
+      "criteria": "Vốn từ vựng ẩm thực",
+      "weight": "35%",
+      "desc": "Các tính từ đánh giá chính xác: свежий, вкусный, доброжелательный."
+    },
+    {
+      "criteria": "Tính mạch lạc",
+      "weight": "25%",
+      "desc": "Câu văn trôi chảy, sử dụng tốt các liên từ."
+    }
+  ]
+}

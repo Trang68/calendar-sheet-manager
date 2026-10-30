@@ -1,0 +1,32 @@
+{
+  "id": 6,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Искусство в моей жизни: Музыка, живопись или театр",
+  "speakingTime": "20 phút",
+  "topic": "Mỹ học & Tâm hồn: Vai trò của nghệ thuật trong việc thanh lọc tâm trí",
+  "intro": "Luyện diễn đạt cảm thụ thẩm mỹ sâu sắc về các tác phẩm hội họa, âm nhạc cổ điển hay nghệ thuật kịch.",
+  "shadowingPhrases": [
+    {
+      "text": "Иску́сство обогаща́ет наш вну́тренний мир и помога́ет осмы́слить реа́льность.",
+      "meaning": "Nghệ thuật làm giàu thế giới nội tâm của chúng ta và giúp thấu suốt hiện thực đời sống.",
+      "phonetic": "Is-kust-va a-ba-ga-shcha-yet nash vnut-ren-niy mir i pa-ma-ga-yet as-mys-lit' re-al'-nast'.",
+      "tips": "Từ 'осмыслить' có nghĩa nhận thức, chiêm nghiệm thấu đáo."
+    },
+    {
+      "text": "Класси́ческая му́зыка облада́ет мо́щной целе́бной си́лой для ду́ши.",
+      "meaning": "Âm nhạc cổ điển sở hữu nguồn năng lượng chữa lành mạnh mẽ đối với tâm hồn.",
+      "phonetic": "Klas-si-ches-ka-ya mu-zy-ka ab-la-da-yet moshch-nay tse-leb-nay si-lay dlya du-shi.",
+      "tips": "Động từ 'обладать' đi với cách công cụ (творительный): целебной силой."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Nói về loại hình nghệ thuật có sức lay động sâu xa nhất đối với cuộc đời bạn.",
+    "sampleGuidance": [
+      "Loại hình nghệ thuật bạn say mê là gì (hội họa, âm nhạc, văn học, vũ đạo)?",
+      "Một tác phẩm cụ thể đã từng để lại rung động mãnh liệt trong lòng bạn là gì?",
+      "Nghệ thuật đã giúp bạn định hình nhân sinh quan và đối diện với thử thách như thế nào?"
+    ]
+  }
+}

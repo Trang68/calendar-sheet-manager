@@ -1,0 +1,63 @@
+{
+  "id": 17,
+  "level": "A2",
+  "skill": "listening",
+  "title": "В книжном магазине: Поиск учебника русского языка",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Tìm mua sách ngữ pháp và từ điển trong nhà sách",
+  "dialogue": [
+    {
+      "speaker": "Покупатель",
+      "ru": "Здравствуйте! Подскажите, где у вас отдел учебников русского языка как иностранного?",
+      "vi": "Xin chào! Làm ơn cho tôi hỏi khu vực giáo trình tiếng Nga cho người nước ngoài ở đâu ạ?"
+    },
+    {
+      "speaker": "Консультант",
+      "ru": "Добрый день! Это на втором этаже, секция номер двенадцать, рядом со словарями.",
+      "vi": "Chào bạn! Ở trên tầng hai nhé, quầy số 12, ngay bên cạnh khu từ điển."
+    },
+    {
+      "speaker": "Покупатель",
+      "ru": "А есть ли у вас сборник упражнений по грамматике для уровня A2?",
+      "vi": "Bên mình có cuốn bài tập thực hành ngữ pháp trình độ A2 không ạ?"
+    },
+    {
+      "speaker": "Консультант",
+      "ru": "Да, только вчера поступил отличный практический курс с аудиодиском и ключами.",
+      "vi": "Có chứ, vừa hôm qua mới về bộ bài tập kèm đĩa nghe và đáp án rất hay."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Отдел учебников находится на втором этаже в двенадцатой секции.",
+    "hint": "Chỉ dẫn vị trí quầy sách trên tầng 2."
+  },
+  "questions": [
+    {
+      "id": "a2_l17_q1",
+      "prompt": "Где находится отдел литературы по русскому языку как иностранному?",
+      "hint": "Xem số tầng và số quầy ở câu chỉ dẫn.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На первом этаже у кассы"
+        },
+        {
+          "key": "B",
+          "text": "На втором этаже, секция 12"
+        },
+        {
+          "key": "C",
+          "text": "В подвальном помещении"
+        },
+        {
+          "key": "D",
+          "text": "Такого отдела нет"
+        }
+      ],
+      "ans": "B",
+      "explain": "Консультант направил покупателя на второй этаж в секцию 12."
+    }
+  ]
+}

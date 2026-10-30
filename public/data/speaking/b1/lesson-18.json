@@ -1,0 +1,32 @@
+{
+  "id": 18,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Русские праздники: Духовный смысл и этикет",
+  "speakingTime": "20 phút",
+  "topic": "Văn hóa phong tục: Chiều sâu tâm linh của lễ hội truyền thống Nga",
+  "intro": "Học cách phân tích ý nghĩa nhân văn của các dịp lễ: Maslenitsa, Phục Sinh, Ngày Chiến Thắng, Giáng Sinh.",
+  "shadowingPhrases": [
+    {
+      "text": "Традицио́нные пра́здники отража́ют духо́вную исто́рию и идеа́лы наро́да.",
+      "meaning": "Các lễ hội truyền thống phản chiếu lịch sử tâm linh và các lý tưởng cao đẹp của nhân dân.",
+      "phonetic": "Tra-di-tsi-on-ny-ye praz-ni-ki at-ra-zha-yut du-khov-nu-yu is-to-ri-yu i i-de-a-ly na-ro-da.",
+      "tips": "Phát âm từ 'праздники' không có âm 'д'."
+    },
+    {
+      "text": "День Побе́ды объединя́ет все поколе́ния в чу́встве свяще́нной па́мяти.",
+      "meaning": "Ngày Chiến Thắng gắn kết mọi thế hệ trong niềm tưởng nhớ thiêng liêng và tri ân sâu sắc.",
+      "phonetic": "Den' Pa-be-dy ab-ye-di-nya-yet vse pa-ka-le-ni-ya v chuvst-ve svya-shchen-nay pa-mya-ti.",
+      "tips": "Cụm 'священная память' biểu thị lòng tôn kính vĩnh hằng."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Hãy giới thiệu với người nghe về một ngày lễ của Nga mà bạn thấy xúc động nhất.",
+    "sampleGuidance": [
+      "Tên ngày lễ, nguồn gốc lịch sử và thời điểm diễn ra trong năm.",
+      "Các phong tục, nghi lễ và biểu tượng đặc trưng gắn liền với ngày này.",
+      "Thông điệp nhân văn nào của ngày lễ này có sức lay động trái tim bạn?"
+    ]
+  }
+}

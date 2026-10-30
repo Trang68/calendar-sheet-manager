@@ -1,0 +1,32 @@
+{
+  "id": 25,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Чего я достиг на уровне A2: Мои цели на будущее",
+  "speakingTime": "15 phút",
+  "topic": "Tổng kết kỹ năng Nói A2: Đánh giá sự tiến bộ và mục tiêu tiến lên B1",
+  "intro": "Luyện bài phát biểu tổng kết quá trình rèn luyện khẩu ngữ: từ bỡ ngỡ ban đầu đến giao tiếp tự tin và trôi chảy.",
+  "shadowingPhrases": [
+    {
+      "text": "Сего́дня я могу́ свобо́дно объясня́ться на ру́сском языке́ в быту́.",
+      "meaning": "Hôm nay tôi đã có thể tự tin biểu đạt ý kiến bằng tiếng Nga trong đời sống sinh hoạt thường ngày.",
+      "phonetic": "Se-vod-nya ya ma-gu sva-bod-na ab-yas-nyat'-sya na rus-skam ya-zy-ke v by-tu.",
+      "tips": "Cụm 'в быту' nghĩa là trong môi trường giao tiếp thực tế hàng ngày."
+    },
+    {
+      "text": "Моя сле́дующая цель — сдать сертификацио́нный экза́мен ТРКИ-1 на отли́чно!",
+      "meaning": "Mục tiêu kế tiếp của tôi là thi đỗ kỳ thi cấp chứng chỉ TRKI-1 với điểm số xuất sắc!",
+      "phonetic": "Ma-ya sle-du-yu-shcha-ya tsel' — sdat' ser-ti-fi-ka-tsi-on-ny ek-za-men ter-ka-i a-din na at-lich-na!",
+      "tips": "Ngữ điệu tự tin, biểu đạt quyết tâm mạnh mẽ."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình bài tổng kết khóa học Nói A2 (2 phút).",
+    "sampleGuidance": [
+      "Bạn cảm thấy mình tiến bộ vượt bậc ở điểm nào sau 25 bài học?",
+      "Tình huống giao tiếp thực tế nào bạn tự tin xử lý bằng tiếng Nga nhất?",
+      "Kế hoạch rèn luyện khẩu ngữ của bạn trong giai đoạn B1 sắp tới là gì?"
+    ]
+  }
+}

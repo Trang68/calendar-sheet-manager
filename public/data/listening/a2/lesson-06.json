@@ -1,0 +1,68 @@
+{
+  "id": 6,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Покупка зимней одежды в торговом центре",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Mua áo khoác lông vũ tại trung tâm thương mại",
+  "dialogue": [
+    {
+      "speaker": "Консультант",
+      "ru": "Здравствуйте! Чем я могу вам помочь?",
+      "vi": "Xin chào quý khách! Tôi có thể giúp gì cho bạn?"
+    },
+    {
+      "speaker": "Покупатель",
+      "ru": "Добрый день. Я ищу тёплый зимний пуховик. Мне нужен сорок восьмой размер.",
+      "vi": "Chào bạn. Tôi đang tìm một chiếc áo phao lông vũ ấm áp mùa đông. Tôi cần size 48."
+    },
+    {
+      "speaker": "Консультант",
+      "ru": "Посмотрите эту удлинённую модель тёмно-синего цвета. Наполнитель — натуральный пух, выдерживает до -25 градусов.",
+      "vi": "Bạn hãy xem mẫu dáng dài màu xanh thẫm này nhé. Lớp lót lông vũ tự nhiên, chịu được nhiệt độ tới -25 độ C."
+    },
+    {
+      "speaker": "Покупатель",
+      "ru": "Очень красивый. Где я могу его примерить?",
+      "vi": "Đẹp quá. Tôi có thể thử áo ở đâu?"
+    },
+    {
+      "speaker": "Консультант",
+      "ru": "Примерочные кабины прямо по коридору направо. Пожалуйста, проходите.",
+      "vi": "Phòng thử đồ ở ngay hành lang bên phải. Mời bạn vào trong."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Примерочные кабины находятся прямо по коридору направо.",
+    "hint": "Chú ý vị trí chỉ dẫn phòng thay đồ của nhân viên."
+  },
+  "questions": [
+    {
+      "id": "a2_l6_q1",
+      "prompt": "Какой размер пуховика нужен покупателю?",
+      "hint": "Xem số đo kích cỡ trong lời nói của khách hàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "42-й"
+        },
+        {
+          "key": "B",
+          "text": "48-й"
+        },
+        {
+          "key": "C",
+          "text": "54-й"
+        },
+        {
+          "key": "D",
+          "text": "Универсальный"
+        }
+      ],
+      "ans": "B",
+      "explain": "Покупатель сообщил консультанту: «Мне нужен сорок восьмой размер»."
+    }
+  ]
+}

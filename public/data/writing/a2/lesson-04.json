@@ -1,0 +1,56 @@
+{
+  "id": 4,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо другу о переезде в новую квартиру",
+  "writingTime": "25 phút",
+  "topic": "Viết thư kể cho bạn thân về việc dọn sang căn hộ mới",
+  "targetWordRange": [
+    50,
+    80
+  ],
+  "task": "Hãy viết một bức thư ngắn (50–80 từ) gửi cho bạn thân kể về căn phòng mới mà bạn vừa chuyển đến thuê.",
+  "requirements": [
+    "Lời chào thân mật mở đầu thư",
+    "Nêu lý do chuyển nhà và vị trí của căn hộ mới (gần ga tàu điện ngầm, công viên)",
+    "Miêu tả không gian phòng và tiện nghi (bàn học, ban công, máy giặt)",
+    "Lời mời bạn tới chơi và lời chúc sức khỏe kết thư"
+  ],
+  "cliches": [
+    {
+      "ru": "Привет, Антон!",
+      "vi": "Chào Anton!"
+    },
+    {
+      "ru": "Хочу поделиться отличной новостью: я переехал!",
+      "vi": "Mình muốn chia sẻ một tin vui: mình vừa chuyển nhà rồi!"
+    },
+    {
+      "ru": "Квартира очень светлая и уютная.",
+      "vi": "Căn hộ rất sáng sủa và ấm cúng."
+    },
+    {
+      "ru": "Приходи ко мне в гости на выходных!",
+      "vi": "Cuối tuần này sang nhà mình chơi nhé!"
+    }
+  ],
+  "modelAnswer": "Привет, Антон!\n\nХочу поделиться радостной новостью: я наконец переехал в новую квартиру! Она находится всего в пяти минутах от станции метро «Университет».\n\nКомната очень светлая и просторная. Здесь есть большой письменный стол, удобная кровать và ban công nhìn ra công viên cây xanh.\n\nПриглашаю тебя в гости в эту субботу на чай с пирогами!\n\nТвой друг,\nНам",
+  "modelWordCount": 58,
+  "rubric": [
+    {
+      "criteria": "Nội dung & Hoàn thành yêu cầu đề bài",
+      "weight": "40%",
+      "desc": "Nêu đầy đủ thông tin vị trí, tiện nghi và lời mời chân thành."
+    },
+    {
+      "criteria": "Từ vựng & Cấu trúc ngữ pháp A2",
+      "weight": "35%",
+      "desc": "Sử dụng đúng biến cách giới từ, tính từ miêu tả phòng ốc."
+    },
+    {
+      "criteria": "Bố cục & Phong cách thư từ",
+      "weight": "25%",
+      "desc": "Lời chào, ngắt đoạn logic và ký tên chuẩn văn phong thân mật."
+    }
+  ]
+}

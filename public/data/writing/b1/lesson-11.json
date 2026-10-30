@@ -1,0 +1,56 @@
+{
+  "id": 11,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Статья в студенческую газету: Как адаптироваться в вузе?",
+  "writingTime": "40 phút",
+  "topic": "Bài báo sinh viên: Cẩm nang kinh nghiệm hòa nhập cuộc sống du học",
+  "targetWordRange": [
+    105,
+    140
+  ],
+  "task": "Hãy viết một bài viết ngắn (105–140 từ) cho báo sinh viên của trường chia sẻ lời khuyên thiết thực giúp các tân sinh viên quốc tế nhanh chóng thích nghi với môi trường học tập mới.",
+  "requirements": [
+    "Tiêu đề bài báo hấp dẫn, thu hút người đọc",
+    "Nêu những khó khăn phổ biến (nhớ nhà, thời tiết lạnh giá, tiếng Nga học thuật)",
+    "3 lời khuyên cốt lõi: kết bạn bản địa, tham gia CLB và lập kế hoạch học tập",
+    "Lời động viên tinh thần khép lại bài viết"
+  ],
+  "cliches": [
+    {
+      "ru": "Первые месяцы учёбы вдали от дома — серьёзное испытание.",
+      "vi": "Những tháng ngày đầu học tập xa nhà là một thử thách cam go."
+    },
+    {
+      "ru": "Не бойтесь задавать вопросы преподавателям и кураторам.",
+      "vi": "Đừng ngần ngại đặt câu hỏi cho thầy cô và cán bộ quản nhiệm."
+    },
+    {
+      "ru": "Активная студенческая жизнь помогает быстрее найти друзей.",
+      "vi": "Đời sống sinh viên năng nổ giúp nhanh chóng tìm được bạn bè."
+    },
+    {
+      "ru": "Верьте в свои силы, и всё обязательно получится!",
+      "vi": "Hãy tin vào năng lực của mình, mọi sự nhất định sẽ thành công!"
+    }
+  ],
+  "modelAnswer": "ПЕРВЫЙ ГОД В РОССИИ: ПУТЬ ОТ СТРЕССА К УСПЕХУ\n\nПоступление в российский университет — мечта многих иностранных абитуриентов, однако первые месяцы вдали от дома нередко сопровождаются тоской по родине, непривычными морозами и языковыми барьерами. Как преодолеть эти трудности?\n\nВо-первых, не замыкайтесь в своей комнате в общежитии. Самый быстрый способ овладеть русским языком — живое общение с соседями и однокурсниками. Во-вторых, обязательно запишитесь в студенческие кружки, спортивные секции или волонтёрские организации. Это не только обогатит ваш досуг, но и подарит надёжных друзей на всю жизнь. Наконец, научитесь грамотно планировать своё время, не откладывая подготовку к зачётам на последний вечер.\n\nПомните: каждый пройденный шаг делает вас сильнее и мудрее. Верьте в свои силы, и этот университетский путь станет лучшим периодом вашей жизни!",
+  "modelWordCount": 126,
+  "rubric": [
+    {
+      "criteria": "Văn phong báo chí truyền cảm hứng",
+      "weight": "40%",
+      "desc": "Giọng văn gần gũi, khích lệ, tiêu đề ấn tượng."
+    },
+    {
+      "criteria": "Tính mạch lạc của lời khuyên",
+      "weight": "35%",
+      "desc": "Các luận điểm được đánh số thứ tự logic (во-первых, во-вторых, наконец)."
+    },
+    {
+      "criteria": "Từ vựng phong phú",
+      "weight": "25%",
+      "desc": "Các cụm từ: языковой барьер, тоска по родине, грамотно планировать."
+    }
+  ]
+}

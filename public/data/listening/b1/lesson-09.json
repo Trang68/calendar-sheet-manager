@@ -1,0 +1,63 @@
+{
+  "id": 9,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Радиодебаты: Дистанционное образование — за и против",
+  "listeningTime": "15 phút",
+  "topic": "Tranh luận phát thanh: Lợi ích và hạn chế của học tập trực tuyến",
+  "dialogue": [
+    {
+      "speaker": "Ведущий",
+      "ru": "В прямом эфире дебаты о будущем образования: победит ли онлайн традиционные университетские аудитории?",
+      "vi": "Trên sóng trực tiếp là cuộc tranh luận về tương lai giáo dục: liệu trực tuyến có lấn át giảng đường truyền thống?"
+    },
+    {
+      "speaker": "Эксперт 1",
+      "ru": "Дистанционный формат даёт беспрецедентную гибкость: студент из любой точки мира может слушать лекции ведущих профессоров МГУ.",
+      "vi": "Hình thức từ xa mang lại sự linh hoạt chưa từng có: sinh viên từ mọi ngóc ngách địa cầu đều có thể nghe giáo sư MSU giảng bài."
+    },
+    {
+      "speaker": "Эксперт 2",
+      "ru": "Однако без живого контакта теряется академическая среда, социализация и навыки командной исследовательской работы в лабораториях.",
+      "vi": "Thế nhưng thiếu vắng sự tiếp xúc trực tiếp sẽ đánh mất môi trường học thuật, sự giao lưu xã hội và kỹ năng làm việc nhóm tại phòng thí nghiệm."
+    },
+    {
+      "speaker": "Ведущий",
+      "ru": "Похоже, оптимальным решением остаётся гибридный формат, объединяющий преимущества обоих подходов.",
+      "vi": "Dường như giải pháp tối ưu vẫn là mô hình kết hợp lai (hybrid), quy tụ trọn vẹn ưu điểm của cả hai bên."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Оптимальным решением остаётся гибридный формат обучения.",
+    "hint": "Kết luận về mô hình giáo dục kết hợp."
+  },
+  "questions": [
+    {
+      "id": "b1_l9_q1",
+      "prompt": "К какому выводу пришёл ведущий передачи в финале дебатов?",
+      "hint": "Xem giải pháp dung hòa ở câu chốt.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Полностью закрыть все классические университеты"
+        },
+        {
+          "key": "B",
+          "text": "Оптимален гибридный формат, сочетающий онлайн и очные занятия"
+        },
+        {
+          "key": "C",
+          "text": "Запретить использование компьютеров студентам"
+        },
+        {
+          "key": "D",
+          "text": "Отменить высшее образование"
+        }
+      ],
+      "ans": "B",
+      "explain": "Ведущий резюмировал: будущее за гармоничным гибридным форматом."
+    }
+  ]
+}

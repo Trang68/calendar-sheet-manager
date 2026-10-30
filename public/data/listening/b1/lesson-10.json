@@ -1,0 +1,63 @@
+{
+  "id": 10,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Репортаж с международного кинофестиваля в Москве",
+  "listeningTime": "15 phút",
+  "topic": "Phóng sự hiện trường: Điện ảnh và giải thưởng liên hoan phim",
+  "dialogue": [
+    {
+      "speaker": "Корреспондент",
+      "ru": "Мы ведём репортаж с церемонии открытия 46-го Московского международного кинофестиваля.",
+      "vi": "Chúng tôi đang đưa tin trực tiếp từ lễ khai mạc Liên hoan phim Quốc tế Moskva lần thứ 46."
+    },
+    {
+      "speaker": "Режиссёр",
+      "ru": "Для меня огромная честь представить нашу историческую драму в основном конкурсе фестиваля с такой богатой вековой традицией.",
+      "vi": "Đối với tôi là niềm vinh dự tột bậc khi giới thiệu tác phẩm tâm lý lịch sử trong hạng mục tranh giải chính của một liên hoan giàu truyền thống trăm năm."
+    },
+    {
+      "speaker": "Корреспондент",
+      "ru": "Какова главная философская идея вашей картины?",
+      "vi": "Đâu là tư tưởng triết học trung tâm của bộ phim thưa đạo diễn?"
+    },
+    {
+      "speaker": "Режиссёр",
+      "ru": "Это размышление о человеческом выборе перед лицом исторических потрясений и сохранении достоинства.",
+      "vi": "Đó là những suy ngẫm về sự lựa chọn của con người trước biến động thời cuộc và việc giữ gìn nhân phẩm cao quý."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Это размышление о сохранении человеческого достоинства в эпоху перемен.",
+    "hint": "Tư tưởng triết lý nhân văn về giữ gìn nhân phẩm."
+  },
+  "questions": [
+    {
+      "id": "b1_l10_q1",
+      "prompt": "О чём размышляет режиссёр в своей конкурсной картине?",
+      "hint": "Xem thông điệp về nhân phẩm và thời đại ở đoạn cuối.",
+      "options": [
+        {
+          "key": "A",
+          "text": "О космических войнах"
+        },
+        {
+          "key": "B",
+          "text": "О нравственном выборе и сохранении достоинства перед лицом перемен"
+        },
+        {
+          "key": "C",
+          "text": "О кулинарных рецептах"
+        },
+        {
+          "key": "D",
+          "text": "О спортивных соревнованиях"
+        }
+      ],
+      "ans": "B",
+      "explain": "Режиссёр акцентировал тему нравственного выбора и человеческого достоинства."
+    }
+  ]
+}

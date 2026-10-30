@@ -1,0 +1,32 @@
+{
+  "id": 14,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Профессия моей мечты",
+  "speakingTime": "15 phút",
+  "topic": "Định hướng nghề nghiệp: Ngành nghề mơ ước và kế hoạch tương lai",
+  "intro": "Sử dụng các cấu trúc biểu đạt nguyện vọng 'я хочу стать...', 'моя цель...' để nói về công việc tương lai.",
+  "shadowingPhrases": [
+    {
+      "text": "Я хочу́ стать высо́коквалифицированным специали́стом в сфе́ре IT.",
+      "meaning": "Tôi mong muốn trở thành một chuyên gia trình độ cao trong lĩnh vực công nghệ thông tin.",
+      "phonetic": "Ya kha-chu stat' vy-sa-ka-kva-li-fi-tsi-ra-van-nym spe-tsi-a-lis-tam v sfe-re ay-ti.",
+      "tips": "Động từ 'стать' đòi hỏi danh từ đi kèm ở cách công cụ (творительный)."
+    },
+    {
+      "text": "Для э́того я усе́рдно изуча́ю языки́ и совреме́нные техноло́гии.",
+      "meaning": "Vì mục tiêu đó, tôi chăm chỉ trau dồi ngoại ngữ và công nghệ hiện đại.",
+      "phonetic": "Dlya e-ta-va ya u-serd-na i-zu-cha-yu ya-zy-ki i sav-re-men-ny-ye tekh-na-lo-gii.",
+      "tips": "Từ 'усердно' mang nghĩa miệt mài, siêng năng."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về nghề nghiệp bạn theo đuổi hoặc công việc bạn mơ ước trong tương lai.",
+    "sampleGuidance": [
+      "Ngành nghề bạn chọn là gì và vì sao bạn đam mê lĩnh vực đó?",
+      "Công việc đó đòi hỏi những tố chất và kỹ năng quan trọng nào?",
+      "Bạn đang chuẩn bị những gì ngay từ bây giờ để đạt được mục tiêu?"
+    ]
+  }
+}

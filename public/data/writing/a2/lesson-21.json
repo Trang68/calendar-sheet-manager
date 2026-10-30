@@ -1,0 +1,52 @@
+{
+  "id": 21,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо благодарности другу за тёплый приём",
+  "writingTime": "20 phút",
+  "topic": "Bức thư cảm ơn bạn bè đã tiếp đãi chu đáo khi đến chơi nhà",
+  "targetWordRange": [
+    50,
+    75
+  ],
+  "task": "Bạn vừa có chuyến thăm nhà một người bạn Nga ở ngoại ô. Hãy viết thư cảm ơn bạn và gia đình bạn vì sự đón tiếp nồng hậu.",
+  "requirements": [
+    "Lời chào thân mật",
+    "Cảm ơn vì bữa tối thịnh soạn và sự chu đáo của bố mẹ bạn",
+    "Nhắc lại kỷ niệm đáng nhớ (uống trà samovar, đi dạo)",
+    "Mời bạn đến thăm lại nhà mình trong dịp tới"
+  ],
+  "cliches": [
+    {
+      "ru": "Хочу сказать огромное спасибо за гостеприимство!",
+      "vi": "Mình muốn nói lời cảm ơn sâu sắc vì sự hiếu khách tuyệt vời!"
+    },
+    {
+      "ru": "Я отлично провёл время у вас дома.",
+      "vi": "Mình đã có một khoảng thời gian tuyệt vời tại nhà cậu."
+    },
+    {
+      "ru": "Передавай большой привет родителям!",
+      "vi": "Cho mình gửi lời chào hỏi thăm tới hai bác nhé!"
+    }
+  ],
+  "modelAnswer": "Дорогой Иван!\n\nЯ благополучно доехал до дома и хочу от всего сердца поблагодарить тебя и твоих родителей за тёплый и радушный приём!\n\nВаша загородная дача просто чудесна, а домашние пироги твоей мамы были самыми вкусными, что я пробовал в России. Наша вечерняя беседа у камина за чаем навсегда останется в моей памяти.\n\nПередавай огромный привет родителям! В следующий раз жду тебя в гости во Вьетнаме!\n\nТвой друг,\nНам",
+  "modelWordCount": 64,
+  "rubric": [
+    {
+      "criteria": "Tính chân thành & Tình bạn",
+      "weight": "40%",
+      "desc": "Lời cảm ơn ấm áp, thể hiện sự trân trọng văn hóa gia đình Nga."
+    },
+    {
+      "criteria": "Cấu trúc biểu cảm A2",
+      "weight": "35%",
+      "desc": "Cụm từ: от всего сердца поблагодарить, радушный приём."
+    },
+    {
+      "criteria": "Phong cách thư từ",
+      "weight": "25%",
+      "desc": "Mở đầu và kết thúc tự nhiên, đúng ngữ điệu bè bạn."
+    }
+  ]
+}

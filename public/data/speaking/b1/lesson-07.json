@@ -1,0 +1,32 @@
+{
+  "id": 7,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Плюсы и минусы глобализации и массового туризма",
+  "speakingTime": "20 phút",
+  "topic": "Toàn cầu hóa: Cơ hội giao lưu kinh tế và thách thức bảo tồn bản sắc",
+  "intro": "Thực hành cấu trúc lập luận đối chứng 'с одной стороны..., с другой стороны...' trong tranh luận học thuật.",
+  "shadowingPhrases": [
+    {
+      "text": "С одно́й стороны́, глобализа́ция стира́ет грани́цы и ускоря́ет обме́н зна́ниями.",
+      "meaning": "Một mặt, toàn cầu hóa xóa nhòa biên giới và thúc đẩy sự trao đổi tri thức.",
+      "phonetic": "S ad-noy sta-ra-ny, gla-ba-li-za-tsi-ya sti-ra-yet gra-ni-tsy i us-ka-rya-yet ab-men zna-ni-ya-mi.",
+      "tips": "Cụm trạng ngữ lập luận kinh điển: 'с одной стороны'."
+    },
+    {
+      "text": "С друго́й стороны́, возросла́ угро́за утра́ты национа́льной самобы́тности.",
+      "meaning": "Mặt khác, nguy cơ đánh mất bản sắc độc đáo của dân tộc ngày một gia tăng.",
+      "phonetic": "S dru-goy sta-ra-ny, vaz-ras-la ug-ro-za ut-ra-ty na-tsi-a-nal'-nay sa-ma-byt-nas-ti.",
+      "tips": "Từ 'самобытность' chỉ tính độc đáo, bản sắc riêng biệt."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Hãy phân tích hai mặt tích cực và tiêu cực của du lịch đại chúng toàn cầu.",
+    "sampleGuidance": [
+      "Những đóng góp to lớn của du lịch cho phát triển kinh tế và giao lưu văn hóa quốc tế.",
+      "Những áp lực tiêu cực lên di sản lịch sử và cảnh quan môi trường tại các điểm nóng du lịch.",
+      "Quan điểm của bạn về mô hình du lịch sinh thái có trách nhiệm."
+    ]
+  }
+}

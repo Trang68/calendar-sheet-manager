@@ -1,0 +1,63 @@
+{
+  "id": 20,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Обсуждение фильма после похода в кино",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Trao đổi cảm nhận về tác phẩm điện ảnh vừa xem",
+  "dialogue": [
+    {
+      "speaker": "Марина",
+      "ru": "Ну как тебе фильм? Мне очень понравилась игра главных актёров!",
+      "vi": "Cậu thấy phim thế nào? Mình rất ưng diễn xuất của các diễn viên chính!"
+    },
+    {
+      "speaker": "Виктор",
+      "ru": "Сюжет действительно захватывающий, особенно неожиданная развязка в финале.",
+      "vi": "Cốt truyện thực sự cuốn hút, nhất là cái kết bất ngờ không thể đoán trước ở đoạn cuối."
+    },
+    {
+      "speaker": "Марина",
+      "ru": "Да, и музыкальное сопровождение создаёт невероятную атмосферу.",
+      "vi": "Chuẩn luôn, cả phần âm nhạc nền cũng tạo ra bầu không khí tuyệt vời."
+    },
+    {
+      "speaker": "Виктор",
+      "ru": "Обязательно посоветую этот фильм своим университетским друзьям.",
+      "vi": "Nhất định mình sẽ giới thiệu bộ phim này cho nhóm bạn ở trường đại học."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Сюжет фильма действительно захватывающий и очень динамичный.",
+    "hint": "Đánh giá về cốt truyện phim điện ảnh."
+  },
+  "questions": [
+    {
+      "id": "a2_l20_q1",
+      "prompt": "Что особенно впечатлило Виктора в фильме?",
+      "hint": "Xem nhận xét của Viktor về kịch bản.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Захватывающий сюжет и неожиданная развязка"
+        },
+        {
+          "key": "B",
+          "text": "Короткая продолжительность"
+        },
+        {
+          "key": "C",
+          "text": "Удобные кресла в кинотеатре"
+        },
+        {
+          "key": "D",
+          "text": "Вкусный попкорн"
+        }
+      ],
+      "ans": "A",
+      "explain": "Виктор отметил захватывающий сюжет и неожиданный финал картины."
+    }
+  ]
+}

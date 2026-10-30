@@ -1,0 +1,63 @@
+{
+  "id": 24,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Подготовка к экзамену по русскому языку",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đôi bạn cùng ôn luyện ngữ pháp trước kỳ thi TRKI",
+  "dialogue": [
+    {
+      "speaker": "Лена",
+      "ru": "Привет, Нам! Завтра у нас тест по глаголам движения с приставками. Ты всё повторил?",
+      "vi": "Chào Nam! Ngày mai tụi mình thi kiểm tra động từ chuyển động có tiền tố đấy. Cậu ôn hết chưa?"
+    },
+    {
+      "speaker": "Нам",
+      "ru": "Привет, Лена! Я хорошо выучил приставки «по-», «в-» и «вы-», но иногда путаю «дойти» и «перейти».",
+      "vi": "Chào Lena! Mình đã nắm chắc các tiền tố po-, v- và vy-, nhưng đôi khi vẫn nhầm lẫn giữa dojti và perejti."
+    },
+    {
+      "speaker": "Лена",
+      "ru": "Смотри: «дойти» означает достичь цели, а «перейти» — пересечь улицу или реку. Давай сделаем пару упражнений вместе!",
+      "vi": "Nhìn này: dojti là đi đến đích điểm, còn perejti là băng qua một con đường hay qua sông. Nào, tụi mình cùng làm vài bài tập nhé!"
+    },
+    {
+      "speaker": "Нам",
+      "ru": "Отличная идея, так учиться намного понятнее и веселее!",
+      "vi": "Ý tưởng tuyệt quá, cùng học thế này dễ hiểu và vui hơn hẳn!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Глагол перейти означает пересечь улицу или дорогу с одной стороны на другую.",
+    "hint": "Quy tắc ngữ pháp về ý nghĩa của động từ có tiền tố pere-."
+  },
+  "questions": [
+    {
+      "id": "a2_l24_q1",
+      "prompt": "В чём разница между «дойти» и «перейти» по объяснению Лены?",
+      "hint": "Xem giải thích của Lena về mục tiêu và phương hướng di chuyển.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Дойти» — достичь цели, «перейти» — пересечь улицу"
+        },
+        {
+          "key": "B",
+          "text": "Они означают одно и то же"
+        },
+        {
+          "key": "C",
+          "text": "«Перейти» значит лететь на самолёте"
+        },
+        {
+          "key": "D",
+          "text": "«Дойти» используется только зимой"
+        }
+      ],
+      "ans": "A",
+      "explain": "Лена объяснила: «дойти» — дойти до цели, «перейти» — пересечь преграду или дорогу."
+    }
+  ]
+}

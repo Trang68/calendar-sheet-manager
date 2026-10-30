@@ -1,0 +1,45 @@
+{
+  "id": 25,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Итоговое эссе A1: Мой путь в изучении русского языка",
+  "writingTime": "25 phút",
+  "topic": "Bài luận tổng kết A1: Chặng đường đã qua và mục tiêu chinh phục A2",
+  "targetWordRange": [
+    50,
+    70
+  ],
+  "task": "Viết một bài luận ngắn (50–70 từ) tổng kết quá trình học tiếng Nga trình độ A1 của bạn.",
+  "requirements": [
+    "1. Thời gian bạn bắt đầu học tiếng Nga.",
+    "2. Điều bạn thấy thú vị và khó khăn nhất.",
+    "3. Những gì bạn đã có thể tự tin nói.",
+    "4. Mục tiêu tiếp theo ở cấp độ A2."
+  ],
+  "cliches": [
+    {
+      "ru": "Я начал изучать русский язык...",
+      "vi": "Tôi bắt đầu học tiếng Nga..."
+    },
+    {
+      "ru": "Сначала было трудно, но очень интересно.",
+      "vi": "Ban đầu hơi khó nhưng rất thú vị."
+    },
+    {
+      "ru": "Теперь я могу читать и говорить простые фразы.",
+      "vi": "Bây giờ tôi đã có thể đọc và nói các câu đơn giản."
+    },
+    {
+      "ru": "Моя следующая цель — успешно сдать экзамен A2.",
+      "vi": "Mục tiêu tiếp theo của tôi là thi đỗ A2."
+    }
+  ],
+  "modelAnswer": "Я начал изучать русский язык три месяца назад на платформе TAIGA TALK. Сначала грамматика казалась сложной, но уроки были очень увлекательными. Теперь я знаю алфавит, могу читать тексты, делать покупки и рассказывать о себе. Я очень рад своим успехам! Моя следующая цель — уверенно перейти на уровень A2.",
+  "modelWordCount": 52,
+  "rubric": [
+    {
+      "criteria": "Nội dung tổng kết",
+      "desc": "Nêu được quá trình và cam kết tiếp tục học lên A2."
+    }
+  ]
+}

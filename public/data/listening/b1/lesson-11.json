@@ -1,0 +1,63 @@
+{
+  "id": 11,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Консультация с юристом: Оформление трудового договора",
+  "listeningTime": "15 phút",
+  "topic": "Pháp lý lao động: Quyền lợi người lao động nước ngoài tại Nga",
+  "dialogue": [
+    {
+      "speaker": "Иностранец",
+      "ru": "Здравствуйте! Я получил предложение о работе в международной логистической компании. На что обратить внимание в договоре?",
+      "vi": "Xin chào luật sư! Tôi vừa nhận được lời mời làm việc tại một công ty logistic quốc tế. Tôi cần chú ý những gì trong hợp đồng ạ?"
+    },
+    {
+      "speaker": "Юрист",
+      "ru": "Добрый день! Прежде всего проверьте размер оклада до и после налогообложения, а также график отпусков.",
+      "vi": "Chào bạn! Trước hết hãy đối chiếu kỹ mức lương cứng trước và sau thuế, cũng như chế độ nghỉ phép năm."
+    },
+    {
+      "speaker": "Иностранец",
+      "ru": "А как оформляется медицинская страховка для иностранных специалистов?",
+      "vi": "Thế còn bảo hiểm y tế cho chuyên gia nước ngoài được xử lý như thế nào ạ?"
+    },
+    {
+      "speaker": "Юрист",
+      "ru": "Работодатель обязан предоставить полис добровольного медицинского страхования (ДМС) или оформить ОМС при наличии вида на жительство.",
+      "vi": "Người sử dụng lao động có trách nhiệm cung cấp bảo hiểm y tế tự nguyện (DMS) hoặc làm bảo hiểm bắt buộc nếu bạn đã có thẻ thường trú."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Работодатель обязан предоставить полис медицинского страхования сотруднику.",
+    "hint": "Nghĩa vụ pháp lý của doanh nghiệp về bảo hiểm."
+  },
+  "questions": [
+    {
+      "id": "b1_l11_q1",
+      "prompt": "Что юрист порекомендовал проверить в трудовом договоре в первую очередь?",
+      "hint": "Xem các yếu tố tiền lương và ngày nghỉ ở lời khuyên đầu tiên.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Цвет офисной мебели"
+        },
+        {
+          "key": "B",
+          "text": "Размер оклада до и после налогов, а также график отпусков"
+        },
+        {
+          "key": "C",
+          "text": "Наличие столовой"
+        },
+        {
+          "key": "D",
+          "text": "Марку служебного автомобиля"
+        }
+      ],
+      "ans": "B",
+      "explain": "Юрист рекомендовал в первую очередь изучить финансовые условия и отпускной период."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 13,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Встреча книжного клуба: Повесть Пушкина «Метель»",
+  "listeningTime": "15 phút",
+  "topic": "Hội luận văn chương: Phân tích tư tưởng số phận trong tác phẩm kinh điển",
+  "dialogue": [
+    {
+      "speaker": "Модератор",
+      "ru": "Сегодня на заседании книжного клуба мы обсуждаем шедевр пушкинской прозы — повесть «Метель». Какова роль стихии в сюжете?",
+      "vi": "Hôm nay tại buổi sinh hoạt CLB sách chúng ta cùng thảo luận kiệt tác văn xuôi của Pushkin - truyện vừa 'Bão tuyết'. Vai trò của cơn giông bão thiên nhiên trong cốt truyện là gì?"
+    },
+    {
+      "speaker": "Участник 1",
+      "ru": "Метель здесь выступает не просто как погодное явление, а как олицетворение судьбы, которая венчает героев против их изначальной воли.",
+      "vi": "Cơn bão tuyết ở đây không đơn thuần là thời tiết, mà chính là hóa thân của định mệnh, đưa hai nhân vật đến hôn nhân ngoài ý muốn ban đầu."
+    },
+    {
+      "speaker": "Участник 2",
+      "ru": "Согласен. Ирония судьбы оборачивается подлинным счастьем благодаря благородству и терпению главных действующих лиц.",
+      "vi": "Tôi đồng tình. Sự trớ trêu của số phận đã biến thành hạnh phúc đích thực nhờ phẩm giá cao thượng và sự kiên nhẫn của các nhân vật chính."
+    },
+    {
+      "speaker": "Модератор",
+      "ru": "Именно поэтому Пушкин остаётся непревзойдённым мастером психологической новеллы.",
+      "vi": "Chính bởi vậy mà Pushkin mãi là bậc thầy không thể vượt qua của thể loại truyện ngắn tâm lý."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Метель в повести выступает как олицетворение неумолимой судьбы.",
+    "hint": "Hình tượng ẩn dụ nghệ thuật của đại thi hào Pushkin."
+  },
+  "questions": [
+    {
+      "id": "b1_l13_q1",
+      "prompt": "Чем выступает образ метели в произведении А. С. Пушкина?",
+      "hint": "Xem phân tích biểu tượng số phận ở câu của thành viên 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Олицетворением судьбы и рокового случая"
+        },
+        {
+          "key": "B",
+          "text": "Обычным прогнозом погоды"
+        },
+        {
+          "key": "C",
+          "text": "Причиной опоздания на поезд"
+        },
+        {
+          "key": "D",
+          "text": "Фантастическим чудовищем"
+        }
+      ],
+      "ans": "A",
+      "explain": "В повести Пушкина метель символизирует неподвластную человеку силу судьбы."
+    }
+  ]
+}

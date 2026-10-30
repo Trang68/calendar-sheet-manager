@@ -894,3 +894,4 @@ with open(f"{BASE_DIR}/writing/a2/manifest.json", "w", encoding="utf-8") as f:
     json.dump(manifest_w, f, ensure_ascii=False, indent=2)
 
 print("A2 Writing generated successfully.")
+

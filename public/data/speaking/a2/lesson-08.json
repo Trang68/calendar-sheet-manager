@@ -1,0 +1,32 @@
+{
+  "id": 8,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Мой дом: Описание комнаты и уюта",
+  "speakingTime": "15 phút",
+  "topic": "Không gian sống: Miêu tả căn phòng, bàn học và góc thư giãn",
+  "intro": "Luyện tập sử dụng giới từ vị trí và cấu trúc miêu tả đồ đạc trong phòng ngủ/phòng làm việc.",
+  "shadowingPhrases": [
+    {
+      "text": "В мое́й ко́мнате стои́т широ́кий пи́сьменный стол у окна́.",
+      "meaning": "Trong phòng tôi có đặt một chiếc bàn viết rộng rãi ngay cạnh cửa sổ.",
+      "phonetic": "V ma-yey kom-na-te sta-it shi-ro-kiy pis'-men-ny stol u ak-na.",
+      "tips": "Cụm 'у окна' biểu thị vị trí kề cận bên khung cửa."
+    },
+    {
+      "text": "На стена́х вися́т фотогра́фии мои́х друзе́й и плака́ты.",
+      "meaning": "Trên tường treo những bức ảnh kỷ niệm cùng bạn bè và các tấm áp phích.",
+      "phonetic": "Na ste-nakh vi-syat fa-tag-ra-fii ma-ikh dru-zey i pla-ka-ty.",
+      "tips": "Động từ 'висят' (số nhiều) ăn khớp với danh từ số nhiều 'фотографии'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình miêu tả phòng riêng hoặc phòng ký túc xá của bạn.",
+    "sampleGuidance": [
+      "Căn phòng rộng bao nhiêu mét vuông và có mấy cửa sổ?",
+      "Bố trí các đồ nội thất cơ bản (giường, tủ, bàn học, giá sách).",
+      "Góc nào trong phòng khiến bạn cảm thấy thư giãn và thoải mái nhất?"
+    ]
+  }
+}

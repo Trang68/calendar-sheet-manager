@@ -1,0 +1,63 @@
+{
+  "id": 16,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Подкаст об искусстве: Архитектура конструктивизма",
+  "listeningTime": "15 phút",
+  "topic": "Lịch sử nghệ thuật: Trào lưu Kiến trúc Tiền phong Avant-garde Nga",
+  "dialogue": [
+    {
+      "speaker": "Искусствовед",
+      "ru": "Конструктивизм 1920-х годов — один из величайших вкладов России в мировую архитектурную мысль.",
+      "vi": "Trào lưu Kiến trúc Kiến tạo Thập niên 1920 là một trong những đóng góp vĩ đại nhất của Nga vào tư tưởng kiến trúc thế giới."
+    },
+    {
+      "speaker": "Слушатель",
+      "ru": "В чём заключался революционный принцип конструктивистов?",
+      "vi": "Nguyên lý mang tính cách mạng của các kiến trúc sư kiến tạo là gì thưa chuyên gia?"
+    },
+    {
+      "speaker": "Искусствовед",
+      "ru": "Их девиз гласил: «Форма следует за функцией». Здания проектировались из стекла, бетона и металла с максимальной практичностью для человека нового общества.",
+      "vi": "Phương châm của họ là: 'Hình thức tuân theo công năng'. Các công trình được thiết kế từ kính, bê tông và kim loại với tính ứng dụng tối đa cho con người của xã hội mới."
+    },
+    {
+      "speaker": "Слушатель",
+      "ru": "Такие шедевры, как Дом Мельникова или Шуховская башня, до сих пор вдохновляют современных архитекторов.",
+      "vi": "Những tuyệt tác như Nhà Melnikov hay Tháp Shukhov đến nay vẫn truyền cảm hứng bất tận cho các kiến trúc sư đương đại."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Главный революционный девиз конструктивистов: форма следует за функцией.",
+    "hint": "Châm ngôn kinh điển của trào lưu kiến trúc hiện đại."
+  },
+  "questions": [
+    {
+      "id": "b1_l16_q1",
+      "prompt": "Какой принцип лежал в основе архитектуры советского конструктивизма?",
+      "hint": "Xem mối quan hệ giữa hình thức và công năng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "«Форма следует за функцией» — функциональность и лаконизм"
+        },
+        {
+          "key": "B",
+          "text": "Обилие золотых украшений"
+        },
+        {
+          "key": "C",
+          "text": "Копирование античных храмов"
+        },
+        {
+          "key": "D",
+          "text": "Использование только дерева"
+        }
+      ],
+      "ans": "A",
+      "explain": "Конструктивизм провозгласил примат рациональной функции над декоративными элементами."
+    }
+  ]
+}

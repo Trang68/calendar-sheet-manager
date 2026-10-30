@@ -1,0 +1,68 @@
+{
+  "id": 4,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Лекция в университете: История освоения космоса",
+  "listeningTime": "15 phút",
+  "topic": "Hội thoại học thuật: Bài giảng lịch sử thám hiểm vũ trụ",
+  "dialogue": [
+    {
+      "speaker": "Профессор",
+      "ru": "Здравствуйте, коллеги! Тема сегодняшней лекции — советская космическая программа и её вклад в мировую науку.",
+      "vi": "Xin chào các đồng nghiệp tương lai! Đề tài bài giảng hôm nay là chương trình không gian của Liên Xô và đóng góp cho khoa học thế giới."
+    },
+    {
+      "speaker": "Студент",
+      "ru": "Профессор, скажите, пожалуйста, почему запуск первого искусственного спутника в 1957 году вызвал такой резонанс?",
+      "vi": "Thưa giáo sư, xin thầy cho biết vì sao việc phóng vệ tinh nhân tạo đầu tiên vào năm 1957 lại gây tiếng vang lớn như vậy ạ?"
+    },
+    {
+      "speaker": "Профессор",
+      "ru": "Дело в том, что «Спутник-1» доказал возможность преодоления земного притяжения и открыл космическую эру для всего человечества.",
+      "vi": "Vấn đề ở chỗ, Sputnik-1 đã chứng minh khả năng vượt thắng lực hút trái đất và mở ra kỷ nguyên không gian cho toàn nhân loại."
+    },
+    {
+      "speaker": "Студент",
+      "ru": "А какие задачи стояли перед Юрием Гагариным во время его полёта?",
+      "vi": "Thế còn những nhiệm vụ đặt ra trước Yuri Gagarin trong chuyến bay của ông là gì ạ?"
+    },
+    {
+      "speaker": "Профессор",
+      "ru": "Главной задачей было проверить, способен ли человеческий организм сохранять работоспособность в условиях невесомости.",
+      "vi": "Nhiệm vụ cốt lõi là kiểm chứng xem cơ thể con người liệu có duy trì được năng lực làm việc trong môi trường không trọng lượng hay không."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Запуск первого спутника доказал возможность преодоления земного притяжения.",
+    "hint": "Ghi chép thuật ngữ khoa học về lực hút trái đất."
+  },
+  "questions": [
+    {
+      "id": "b1_l4_q1",
+      "prompt": "Какова была главная цель первого пилотируемого полёта Юрия Гагарина?",
+      "hint": "Xem giải thích của giáo sư về phản ứng của cơ thể người.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Высадиться на поверхность Луны"
+        },
+        {
+          "key": "B",
+          "text": "Проверить работоспособность человека в невесомости"
+        },
+        {
+          "key": "C",
+          "text": "Построить орбитальную станцию"
+        },
+        {
+          "key": "D",
+          "text": "Сделать фотографии других планет"
+        }
+      ],
+      "ans": "B",
+      "explain": "Профессор подчеркнул: медики проверяли физиологические реакции в невесомости."
+    }
+  ]
+}

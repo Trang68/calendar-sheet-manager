@@ -1,0 +1,35 @@
+{
+  "id": 23,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Поздравления и пожелания",
+  "speakingTime": "15 phút",
+  "topic": "Chúc mừng ngày lễ và sinh nhật bằng tiếng Nga",
+  "intro": "Luyện các câu chúc mừng quen thuộc trong văn hóa Nga.",
+  "shadowingPhrases": [
+    {
+      "id": "spk_23_1",
+      "text": "Поздравляю с днём рождения! Желаю счастья!",
+      "meaning": "Chúc mừng sinh nhật! Chúc bạn hạnh phúc!",
+      "phonetic": "Pozdravlyayu s dnyom rozhdeniya! Zhelayu schast'ya!",
+      "tips": "«Счастья» đọc âm /shchastya/."
+    },
+    {
+      "id": "spk_23_2",
+      "text": "С Новым годом и Рождеством!",
+      "meaning": "Chúc mừng Năm Mới và Giáng Sinh!",
+      "phonetic": "S Novym godom i Rozhdestvom!",
+      "tips": "Chúc mừng Năm mới dùng Cách 5."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Nói tự do",
+    "task": "Nói 3–4 câu chúc mừng sinh nhật gửi tới một người bạn thân.",
+    "sampleGuidance": [
+      "Дорогой друг!",
+      "Поздравляю тебя...",
+      "Желаю тебе здоровья...",
+      "Всего самого доброго!"
+    ]
+  }
+}

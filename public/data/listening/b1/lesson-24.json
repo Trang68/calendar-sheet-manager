@@ -1,0 +1,63 @@
+{
+  "id": 24,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Экскурсия на озеро Селигер: Экотуризм",
+  "listeningTime": "15 phút",
+  "topic": "Du lịch sinh thái: Vẻ đẹp hoang sơ của hồ băng tích Seliger",
+  "dialogue": [
+    {
+      "speaker": "Инструктор",
+      "ru": "Озеро Селигер — это уникальная система плесов и островов ледникового происхождения в Тверской и Новгородской областях.",
+      "vi": "Hồ Seliger là một hệ sinh thái đầm hồ và đảo nhỏ có nguồn gốc từ kỷ băng hà nằm tại hai tỉnh Tver và Novgorod."
+    },
+    {
+      "speaker": "Турист",
+      "ru": "Вода здесь удивительно прозрачная! Разрешено ли здесь разбивать палаточные лагеря?",
+      "vi": "Nước ở đây trong vắt đến kinh ngạc! Ở đây có được phép cắm trại dựng lều không anh?"
+    },
+    {
+      "speaker": "Инструктор",
+      "ru": "Да, но только на специально оборудованных экологических стоянках. Главное правило — увозить весь мусор с собой и беречь хвойный лес.",
+      "vi": "Có chứ, nhưng chỉ tại những điểm dừng chân sinh thái được quy hoạch sẵn. Nguyên tắc cốt tử là phải mang toàn bộ rác thải về và bảo vệ rừng thông."
+    },
+    {
+      "speaker": "Турист",
+      "ru": "Завтра мы планируем совершить водный поход на байдарках к старинному монастырю Нилова Пустынь.",
+      "vi": "Ngày mai chúng tôi dự định chèo thuyền kayak khám phá tu viện cổ Nilova Pustyn nằm giữa đảo."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Главное правило экотуризма — беречь первозданную природу и не оставлять мусор.",
+    "hint": "Ý thức bảo vệ môi trường du lịch sinh thái."
+  },
+  "questions": [
+    {
+      "id": "b1_l24_q1",
+      "prompt": "Куда туристы планируют отправиться на байдарках на следующий день?",
+      "hint": "Xem tên quần thể tu viện trên đảo ở câu kết.",
+      "options": [
+        {
+          "key": "A",
+          "text": "К старинному монастырю Нилова Пустынь"
+        },
+        {
+          "key": "B",
+          "text": "В Москву"
+        },
+        {
+          "key": "C",
+          "text": "На Красную площадь"
+        },
+        {
+          "key": "D",
+          "text": "В торговый центр"
+        }
+      ],
+      "ans": "A",
+      "explain": "Туристы запланировали водный поход к знаменитой Ниловой Пустыни на острове Столобный."
+    }
+  ]
+}

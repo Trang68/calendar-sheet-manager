@@ -1,0 +1,56 @@
+{
+  "id": 22,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Эссе: «Технологии объединяют или разобщают людей?»",
+  "writingTime": "45 phút",
+  "topic": "Tiểu luận xã hội học: Mặt trái của sự siêu kết nối số và nỗi cô đơn thời hiện đại",
+  "targetWordRange": [
+    110,
+    145
+  ],
+  "task": "Hãy viết một bài văn nghị luận (110–145 từ) bàn về nghịch lý: Công nghệ và mạng xã hội kết nối hàng tỷ con người trên toàn cầu nhưng liệu chúng ta có đang trở nên cô độc hơn trong thế giới thực?",
+  "requirements": [
+    "Mở bài: Nghịch lý của kỷ nguyên siêu kết nối internet",
+    "Thân bài: Mặt tích cực (giao tiếp xuyên lục địa, xóa nhòa khoảng cách) vs Mặt tiêu cực (ảo tưởng tình bạn, giảm tương tác mắt đối mắt)",
+    "Hiện tượng 'cô đơn giữa đám đông' trong xã hội hiện đại",
+    "Kết bài: Lời khuyên giữ gìn sự kết nối chân thật của trái tim ngoài đời thực"
+  ],
+  "cliches": [
+    {
+      "ru": "Никогда в истории человечество не было столь связано между собой.",
+      "vi": "Chưa từng có thời điểm nào trong lịch sử nhân loại lại được kết nối mật thiết như vậy."
+    },
+    {
+      "ru": "Однако виртуальное общение не способно заменить теплоту живого взгляда.",
+      "vi": "Thế nhưng giao tiếp ảo không thể nào thay thế được hơi ấm của ánh mắt đời thực."
+    },
+    {
+      "ru": "Мы рискуем стать одинокими среди миллионов подписчиков.",
+      "vi": "Chúng ta có nguy cơ trở nên đơn độc giữa hàng triệu người theo dõi ảo."
+    },
+    {
+      "ru": "Баланс между онлайном и реальностью — залог душевного здоровья.",
+      "vi": "Sự cân bằng giữa thế giới ảo và hiện thực chính là chìa khóa cho sức khỏe tâm hồn."
+    }
+  ],
+  "modelAnswer": "В XXI веке технологии подарили нам невероятную возможность мгновенно связываться с любой точкой земного шара. Социальные сети, мессенджеры и видеозвонки стёрли географические границы, позволив родственникам и коллегам общаться через океаны.\n\nПарадокс заключается в том, что техническая доступность не сделала людей ближе духовно. Виртуальное общение часто подменяет подлинную близость иллюзией дружбы, выраженной в «лайках» и смайликах. Проводя часы перед экранами смартфонов, люди всё реже смотрят в глаза собеседнику, разучившись слушать и искренне сопереживать. Возникает феномен «одиночества в толпе», когда человек окружён тысячами виртуальных подписчиков, но в трудный момент остаётся один на один со своей тревогой.\n\nТехнологии сами по себе нейтральны: они могут как соединять, так и разделять нас. Всё зависит от того, используем ли мы гаджеты для укрепления реальных отношений или прячемся за ними от настоящей жизни.",
+  "modelWordCount": 133,
+  "rubric": [
+    {
+      "criteria": "Năng lực phân tích nghịch lý triết học",
+      "weight": "40%",
+      "desc": "Chỉ ra mâu thuẫn sâu sắc giữa kết nối công nghệ và sự đứt gãy cảm xúc thực."
+    },
+    {
+      "criteria": "Ngữ pháp phong phú & Biểu cảm",
+      "weight": "35%",
+      "desc": "Cụm từ: одиночество в толпе, подлинная близость, иллюзия дружбы."
+    },
+    {
+      "criteria": "Tính cân đối toàn bài",
+      "weight": "25%",
+      "desc": "Không cực đoan bài trừ công nghệ, hướng tới sự cân bằng tỉnh thức."
+    }
+  ]
+}

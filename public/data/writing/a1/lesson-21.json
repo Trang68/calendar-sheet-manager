@@ -1,0 +1,49 @@
+{
+  "id": 21,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Записка соседу по комнате",
+  "writingTime": "20 phút",
+  "topic": "Viết mẩu giấy nhắn ngắn cho bạn cùng phòng ký túc xá",
+  "targetWordRange": [
+    30,
+    50
+  ],
+  "task": "Viết một mẩu giấy nhắn (30–50 từ) để lại trên bàn cho bạn cùng phòng báo rằng bạn đã đi siêu thị và nhờ bạn ấy nấu cơm.",
+  "requirements": [
+    "1. Lời xưng hô tên bạn cùng phòng.",
+    "2. Báo bạn đi đâu và khi nào về.",
+    "3. Lời nhờ vả ngắn gọn.",
+    "4. Lời cảm ơn và ký tên."
+  ],
+  "cliches": [
+    {
+      "ru": "Привет, Саша!",
+      "vi": "Chào Sasha!"
+    },
+    {
+      "ru": "Я ушёл в супермаркет за продуктами.",
+      "vi": "Tôi đã đi siêu thị mua thực phẩm."
+    },
+    {
+      "ru": "Я вернусь через час.",
+      "vi": "Tôi sẽ về sau 1 tiếng."
+    },
+    {
+      "ru": "Свари, пожалуйста, рис на ужин.",
+      "vi": "Bạn nấu giúp cơm bữa tối nhé."
+    }
+  ],
+  "modelAnswer": "Привет, Саша!\n\nЯ ушёл в супермаркет купить хлеб, молоко и овощи. Я вернусь примерно в шесть вечера. Свари, пожалуйста, рис на ужин. Деньги лежат на столе.\n\nСпасибо большое!\nАнтон.",
+  "modelWordCount": 35,
+  "rubric": [
+    {
+      "criteria": "Mục đích giao tiếp",
+      "desc": "Nêu rõ tin nhắn cần để lại."
+    },
+    {
+      "criteria": "Ngữ pháp A1",
+      "desc": "Đúng thì quá khứ và mệnh lệnh thức."
+    }
+  ]
+}

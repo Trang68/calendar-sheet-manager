@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Builder script to generate full 25 lessons for Level A2 across Reading, Listening, Speaking, Writing.
+"""
+import json
+import os
+
+from gen_a2_reading import A2_READING_6_TO_25
+from gen_a2_listening import A2_LISTENING_4_TO_25
+from gen_a2_speaking import A2_SPEAKING_4_TO_25
+from gen_a2_writing import A2_WRITING_4_TO_25
+
+BASE_DIR = "public/data"
+
+def load_existing_lessons(skill):
+    dir_path = os.path.join(BASE_DIR, skill, "a2")
+    lessons = []
+    for i in range(1, 26):
+        file_path = os.path.join(dir_path, f"lesson-{i:02d}.json")
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                lessons.append(json.load(f))
+    return lessons
+
+def build_a2_skill(skill, extra_lessons, badge, time_key):
+    dir_path = os.path.join(BASE_DIR, skill, "a2")
+    os.makedirs(dir_path, exist_ok=True)
+    
+    existing = load_existing_lessons(skill)
+    existing_ids = {item["id"] for item in existing}
+    
+    # Merge existing and new
+    all_lessons = list(existing)
+    for extra in extra_lessons:
+        if extra["id"] not in existing_ids:
+            all_lessons.append(extra)
+        else:
+            # Overwrite or update
+            for idx, item in enumerate(all_lessons):
+                if item["id"] == extra["id"]:
+                    all_lessons[idx] = extra
+                    break
+                    
+    all_lessons.sort(key=lambda x: x["id"])
+    
+    # Write each lesson file
+    manifest_items = []
+    for item in all_lessons:
+        lid = item["id"]
+        fname = f"lesson-{lid:02d}.json"
+        fpath = os.path.join(dir_path, fname)
+        with open(fpath, "w", encoding="utf-8") as f:
+            json.dump(item, f, ensure_ascii=False, indent=2)
+            
+        m_item = {
+            "id": lid,
+            "file": fname,
+            "title": item["title"],
+            "badge": badge,
+            time_key: item.get(time_key, "15 phút"),
+            "topic": item.get("topic", "")
+        }
+        if skill == "reading":
+            m_item["questionCount"] = len(item.get("questions", []))
+        elif skill == "listening":
+            m_item["questionCount"] = len(item.get("questions", []))
+        elif skill == "speaking":
+            m_item["questionCount"] = len(item.get("shadowingPhrases", []))
+        elif skill == "writing":
+            m_item["targetWordRange"] = item.get("targetWordRange", [50, 75])
+            
+        manifest_items.append(m_item)
+        
+    manifest_path = os.path.join(dir_path, "manifest.json")
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest_items, f, ensure_ascii=False, indent=2)
+        
+    print(f"Built A2 {skill}: {len(all_lessons)} lessons, manifest updated.")
+
+if __name__ == "__main__":
+    build_a2_skill("reading", A2_READING_6_TO_25, "A2 Đọc hiểu", "readingTime")
+    build_a2_skill("listening", A2_LISTENING_4_TO_25, "A2 Nghe hiểu", "listeningTime")
+    build_a2_skill("speaking", A2_SPEAKING_4_TO_25, "A2 Nói", "speakingTime")
+    build_a2_skill("writing", A2_WRITING_4_TO_25, "A2 Viết", "writingTime")

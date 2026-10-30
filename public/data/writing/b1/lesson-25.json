@@ -1,0 +1,56 @@
+{
+  "id": 25,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Итоговое контрольное эссе по стандарту ТРКИ-1 / B1",
+  "writingTime": "50 phút",
+  "topic": "Bài thi viết tổng hợp: Đánh giá toàn diện năng lực nghị luận chuẩn TRKI-1",
+  "targetWordRange": [
+    115,
+    150
+  ],
+  "task": "Đề tài thi chuẩn TRKI-1: Hãy viết một bài luận hoàn chỉnh (115–150 từ) trả lời câu hỏi: «Liệu một cá nhân có thể thay đổi tiến trình lịch sử, hay lịch sử được quyết định bởi hoàn cảnh xã hội?»",
+  "requirements": [
+    "Mở bài: Đặt ra cuộc tranh luận vĩ đại giữa thuyết anh hùng cá nhân và thuyết tất yếu lịch sử",
+    "Thân bài: Phân tích vai trò của những nhân vật kiệt xuất (như Pyotr Đại Đế, danh nhân khoa học) nhưng đặt trong bối cảnh các quy luật xã hội",
+    "Mối tương quan biện chứng giữa tài năng lãnh đạo và thời thế",
+    "Kết bài: Khẳng định sự hòa quyện: Thời thế tạo anh hùng, và anh hùng định hình tương lai"
+  ],
+  "cliches": [
+    {
+      "ru": "Роль личности в истории — один из сложнейших философских вопросов.",
+      "vi": "Vai trò của cá nhân trong lịch sử là một trong những câu hỏi triết học phức tạp nhất."
+    },
+    {
+      "ru": "С одной стороны, выдающиеся лидеры способны повести за собой массы.",
+      "vi": "Một mặt, các thủ lĩnh kiệt xuất có khả năng dẫn dắt quần chúng."
+    },
+    {
+      "ru": "С другой стороны, великие люди являются порождением своей эпохи.",
+      "vi": "Mặt khác, những vĩ nhân cũng chính là sản phẩm được kết tinh từ thời đại của họ."
+    },
+    {
+      "ru": "В заключение можно подчеркнуть...",
+      "vi": "Để kết luận có thể nhấn mạnh rằng..."
+    }
+  ],
+  "modelAnswer": "Вопрос о роли выдающейся личности в историческом процессе на протяжении многих веков волнует историков и философов. Что определяет ход цивилизации: воля великих лидеров или объективные социально-экономические законы?\n\nС одной стороны, история знает немало примеров, когда смелость и несгибаемая воля одного человека меняли судьбы целых континентов. Реформы Петра I превратили Россию в передовую европейскую державу, а научные открытия Исаака Ньютона и Дмитрия Менделеева совершили революцию в познании Вселенной. Лидер с ясным видением цели способен вдохновить миллионы людей на героические свершения.\n\nС другой стороны, ни один гений не способен повернуть историю вспять вопреки законам развития общества. Великая личность может преуспеть лишь тогда, когда её идеи созвучны чаяниям народа и назревшим потребностям эпохи. Не случайно русская пословица утверждает, что «один в поле не воин».\n\nПодводя итог, можно сделать вывод: подлинно великие деятели — это те, кто умеет чутко уловить требования своего времени и направить энергию общества на созидание светлого будущего.",
+  "modelWordCount": 147,
+  "rubric": [
+    {
+      "criteria": "Tầm vóc tư duy & Tiêu chuẩn khảo thí TRKI-1",
+      "weight": "40%",
+      "desc": "Bài luận đáp ứng hoàn hảo tiêu chí C2/B1 nâng cao về cấu trúc logic và dẫn chứng lịch sử."
+    },
+    {
+      "criteria": "Phong cách học thuật chính luận tuyệt đối",
+      "weight": "35%",
+      "desc": "Dùng thành thạo các cặp đối ứng: с одной стороны..., с другой стороны..., подводя итог."
+    },
+    {
+      "criteria": "Chính xác ngữ pháp & Chính tả tiếng Nga",
+      "weight": "25%",
+      "desc": "Không mắc lỗi ngữ pháp, phối hợp thì, thể và cách nhuần nhuyễn."
+    }
+  ]
+}

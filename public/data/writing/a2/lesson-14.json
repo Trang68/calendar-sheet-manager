@@ -1,0 +1,52 @@
+{
+  "id": 14,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Отзыв о гостинице после поездки",
+  "writingTime": "25 phút",
+  "topic": "Nhận xét dịch vụ khách sạn trên trang đặt phòng du lịch",
+  "targetWordRange": [
+    50,
+    75
+  ],
+  "task": "Hãy viết một bài đánh giá khách quan về khách sạn bạn đã lưu trú trong chuyến du lịch Saint Petersburg vừa qua.",
+  "requirements": [
+    "Tên khách sạn và vị trí địa lý",
+    "Đánh giá về phòng ốc (độ sạch sẽ, tiện nghi phòng, giường ngủ)",
+    "Đánh giá về bữa sáng buffet và nhân viên lễ tân",
+    "Lời khuyên cho các du khách khác"
+  ],
+  "cliches": [
+    {
+      "ru": "Мы останавливались в отеле...",
+      "vi": "Chúng tôi đã lưu trú tại khách sạn..."
+    },
+    {
+      "ru": "Номер чистый и комфортный.",
+      "vi": "Phòng ốc sạch sẽ và tiện nghi."
+    },
+    {
+      "ru": "Завтрак типа «шведский стол» был отличным.",
+      "vi": "Bữa sáng buffet tự chọn rất tuyệt vời."
+    }
+  ],
+  "modelAnswer": "Мы останавливались в отеле «Северная пальмира» в Санкт-Петербурге на четыре дня. Отель расположен идеально — всего 10 минут пешком до Эрмитажа.\n\nНомер оказался очень чистым, тёплым и тихим. Постельное бельё белоснежное, уборка проводилась каждый день. Завтраки вкусные và đa dạng món tráng miệng. Персонал на ресепшене был очень приветливым и помог заказать такси.\n\nОбязательно рекомендую этот отель для семейного отдыха!",
+  "modelWordCount": 58,
+  "rubric": [
+    {
+      "criteria": "Tiêu chí đánh giá khách quan",
+      "weight": "40%",
+      "desc": "Nhận xét cụ thể về vị trí, phòng, bữa ăn và dịch vụ."
+    },
+    {
+      "criteria": "Độ chính xác ngữ pháp A2",
+      "weight": "35%",
+      "desc": "Tính từ bổ nghĩa cho danh từ: тёплый, чистый, приветливый."
+    },
+    {
+      "criteria": "Tính ứng dụng thực tế",
+      "weight": "25%",
+      "desc": "Bố cục đánh giá dịch vụ chuẩn mực trên các app du lịch."
+    }
+  ]
+}

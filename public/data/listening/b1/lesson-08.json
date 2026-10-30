@@ -1,0 +1,63 @@
+{
+  "id": 8,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Обсуждение договора аренды коммерческой недвижимости",
+  "listeningTime": "15 phút",
+  "topic": "Đàm phán thương mại: Ký kết hợp đồng thuê văn phòng",
+  "dialogue": [
+    {
+      "speaker": "Юрист",
+      "ru": "Мы внимательно изучили проект договора аренды офиса в бизнес-центре. Есть несколько принципиальных пунктов.",
+      "vi": "Chúng tôi đã nghiên cứu kỹ dự thảo hợp đồng thuê văn phòng tại trung tâm thương mại. Có một vài điều khoản mang tính nguyên tắc."
+    },
+    {
+      "speaker": "Арендатор",
+      "ru": "Что именно вызывает наши опасения?",
+      "vi": "Cụ thể điều gì khiến chúng ta cần bận tâm vậy anh?"
+    },
+    {
+      "speaker": "Юрист",
+      "ru": "Пункт об одностороннем повышении арендной платы. Мы настаиваем на фиксации ставки минимум на два года без права пересмотра.",
+      "vi": "Điều khoản về việc đơn phương tăng giá thuê mặt bằng. Chúng ta cần kiên quyết yêu cầu cố định mức phí tối thiểu 2 năm không đổi."
+    },
+    {
+      "speaker": "Арендатор",
+      "ru": "Согласен. Направьте арендодателю протокол разногласий сегодня до конца рабочего дня.",
+      "vi": "Tôi đồng ý. Anh hãy gửi biên bản ghi nhận bất đồng tới bên cho thuê ngay trước khi hết giờ làm việc hôm nay."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Мы настаиваем на фиксации ставки аренды минимум на два года.",
+    "hint": "Điều khoản pháp lý về cố định mức giá thuê."
+  },
+  "questions": [
+    {
+      "id": "b1_l8_q1",
+      "prompt": "На чём настаивает сторона арендатора в договоре?",
+      "hint": "Xem giải pháp bảo vệ tài chính của luật sư.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На бесплатной аренде навсегда"
+        },
+        {
+          "key": "B",
+          "text": "На фиксации арендной ставки на два года без права пересмотра"
+        },
+        {
+          "key": "C",
+          "text": "На отказе от офиса"
+        },
+        {
+          "key": "D",
+          "text": "На покупке здания бизнес-центра"
+        }
+      ],
+      "ans": "B",
+      "explain": "Юрист рекомендовал зафиксировать ставку аренды минимум на два года."
+    }
+  ]
+}

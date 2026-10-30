@@ -1,0 +1,32 @@
+{
+  "id": 24,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Интернет и гаджеты в повседневной жизни",
+  "speakingTime": "15 phút",
+  "topic": "Công nghệ số: Điện thoại thông minh, mạng xã hội và việc học trực tuyến",
+  "intro": "Luyện nói về lợi ích và tác hại của smartphone, mạng internet và phương pháp quản lý thời gian sử dụng màn hình.",
+  "shadowingPhrases": [
+    {
+      "text": "Смартфо́н стал незамени́мым помо́щником в учёбе и рабо́те.",
+      "meaning": "Điện thoại thông minh đã trở thành một trợ thủ đắc lực không thể thiếu trong học tập và công việc.",
+      "phonetic": "Smart-fon stal ne-za-me-ni-mym pa-moshch-ni-kam v u-cho-be i ra-bo-te.",
+      "tips": "Từ 'незаменимый' nghĩa là không thể thay thế được."
+    },
+    {
+      "text": "Ва́жно конроли́ровать вре́мя, проведённое в социа́льных сетя́х.",
+      "meaning": "Điều cốt lõi là phải kiểm soát được lượng thời gian dành lướt trên mạng xã hội.",
+      "phonetic": "Vazh-na kan-tra-li-ra-vat' vre-mya, pra-ve-dyon-na-ye v sa-tsi-al'-nykh se-tyakh.",
+      "tips": "Nhấn rõ trọng âm từ 'сетях'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Trình bày về vai trò của công nghệ và điện thoại thông minh trong đời sống của bạn.",
+    "sampleGuidance": [
+      "Bạn sử dụng điện thoại bao nhiêu giờ mỗi ngày và làm những việc gì?",
+      "Ứng dụng nào hữu ích nhất cho bạn khi học tiếng Nga?",
+      "Làm thế nào để không bị nghiện mạng xã hội và lãng phí thời gian?"
+    ]
+  }
+}

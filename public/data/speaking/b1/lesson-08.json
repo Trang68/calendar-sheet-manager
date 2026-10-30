@@ -1,0 +1,32 @@
+{
+  "id": 8,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Монолог: Мой опыт преодоления языкового барьера",
+  "speakingTime": "20 phút",
+  "topic": "Tâm lý học ngôn ngữ: Hành trình phá vỡ sự rụt rè khi nói ngoại ngữ",
+  "intro": "Học cách chia sẻ cởi mở về cảm giác lo sợ nói sai và các chiến lược thực tiễn để tự tin giao tiếp.",
+  "shadowingPhrases": [
+    {
+      "text": "Страх соверши́ть оши́бку — гла́вное препя́тствие на пути́ к свобо́дной ре́чи.",
+      "meaning": "Nỗi sợ mắc lỗi chính là rào cản lớn nhất ngăn cản sự lưu loát trong khẩu ngữ.",
+      "phonetic": "Strakh sa-ver-shit' a-ship-ku — glav-na-ye pre-pyat-stvi-ye na pu-ti k sva-bod-nay re-chi.",
+      "tips": "Nhấn rõ trọng âm từ 'препятствие' (trở ngại)."
+    },
+    {
+      "text": "То́лько постоя́нная пра́ктика позволя́ет обрести́ подли́нную уве́ренность.",
+      "meaning": "Chỉ có việc thực hành kiên trì liên tục mới mang lại sự tự tin đích thực.",
+      "phonetic": "Tol'-ka pas-ta-yan-na-ya prak-ti-ka paz-va-lya-yet ab-res-ti pad-lin-nu-yu u-ve-ren-nast'.",
+      "tips": "Động từ 'обрести' mang sắc thái văn phong trang trọng (đạt được, tìm thấy)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Kể lại một tình huống bạn từng lúng túng vì rào cản ngôn ngữ và cách bạn vượt qua.",
+    "sampleGuidance": [
+      "Bối cảnh xảy ra câu chuyện (sân bay, cửa hàng, lớp học)?",
+      "Cảm xúc bối rối lúc ban đầu và bạn đã xoay sở diễn đạt ra sao (ngôn ngữ cơ thể, từ đồng nghĩa)?",
+      "Bài học quý giá bạn rút ra về thái độ học ngoại ngữ."
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": 22,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Открытка маме на 8 Марта",
+  "writingTime": "20 phút",
+  "topic": "Viết bưu thiếp chúc mừng mẹ ngày Quốc tế Phụ nữ",
+  "targetWordRange": [
+    35,
+    55
+  ],
+  "task": "Viết một tấm thiệp ngắn (35–55 từ) chúc mừng mẹ nhân ngày 8/3 bằng tiếng Nga.",
+  "requirements": [
+    "1. Lời chào mẹ yêu thương (Дорогая мама!).",
+    "2. Lời chúc mừng ngày 8/3.",
+    "3. Lời chúc sức khỏe, nụ cười và hạnh phúc.",
+    "4. Lời bày tỏ tình yêu thương (Я тебя очень люблю!)."
+  ],
+  "cliches": [
+    {
+      "ru": "Дорогая и любимая мама!",
+      "vi": "Mẹ yêu quý của con!"
+    },
+    {
+      "ru": "Поздравляю тебя с праздником Восьмого марта!",
+      "vi": "Chúc mừng mẹ ngày 8 tháng 3!"
+    },
+    {
+      "ru": "Желаю тебе крепкого здоровья и радости!",
+      "vi": "Chúc mẹ dồi dào sức khỏe và niềm vui!"
+    },
+    {
+      "ru": "Спасибо за твою заботу и любовь!",
+      "vi": "Cảm ơn mẹ vì sự chăm sóc và tình yêu thương!"
+    }
+  ],
+  "modelAnswer": "Дорогая, любимая мама!\n\nОт всего сердца поздравляю тебя с праздником Восьмого марта! Желаю тебе крепкого здоровья, весеннего настроения, улыбок и счастья! Спасибо за твою бесконечную заботу. Я тебя очень сильно люблю!\n\nТвой сын, Минх.",
+  "modelWordCount": 38,
+  "rubric": [
+    {
+      "criteria": "Tình cảm & Ngữ cảnh",
+      "desc": "Diễn đạt ấm áp, đúng thể thức chúc mừng."
+    },
+    {
+      "criteria": "Cấu trúc chúc",
+      "desc": "Dùng đúng «Желаю тебе + Cách 2»."
+    }
+  ]
+}

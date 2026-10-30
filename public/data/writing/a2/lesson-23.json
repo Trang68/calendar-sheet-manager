@@ -1,0 +1,51 @@
+{
+  "id": 23,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Описание своего рабочего места и любимых предметов",
+  "writingTime": "20 phút",
+  "topic": "Miêu tả góc học tập, bàn làm việc và các vật dụng gắn bó thân quen",
+  "targetWordRange": [
+    50,
+    75
+  ],
+  "task": "Hãy viết đoạn văn ngắn (50–75 từ) miêu tả góc bàn học tập của bạn tại nhà hoặc ký túc xá.",
+  "requirements": [
+    "Vị trí đặt bàn học trong phòng (gần cửa sổ, góc phòng)",
+    "Các đồ vật chính trên bàn (máy tính xách tay, đèn học, từ điển, cốc trà)",
+    "Ý nghĩa của không gian này đối với sự tập trung học tập"
+  ],
+  "cliches": [
+    {
+      "ru": "Моё рабочее место находится...",
+      "vi": "Nơi làm việc của tôi nằm ở..."
+    },
+    {
+      "ru": "На столе всегда царит идеальный порядок.",
+      "vi": "Trên bàn bao giờ cũng duy trì trật tự ngăn nắp."
+    },
+    {
+      "ru": "Здесь мне легко сосредоточиться на учёбе.",
+      "vi": "Ở đây tôi rất dễ tập trung vào việc học."
+    }
+  ],
+  "modelAnswer": "Моё рабочее место находится у широкого окна, поэтому днём здесь всегда много солнечного света. На деревянном столе стоит мой ноутбук, лампа с тёплым светом и подставка для книг.\n\nСправа всегда лежат тетради по русскому языку и большой словарь, а слева стоит любимая керамическая кружка для чая. На стене висит календарь с планами на месяц.\n\nЭто мой любимый уголок, где я могу часами спокойно учиться и читать книги.",
+  "modelWordCount": 64,
+  "rubric": [
+    {
+      "criteria": "Trật tự không gian rõ nét",
+      "weight": "40%",
+      "desc": "Dùng từ định vị chuẩn xác: у окна, справа, слева, на стене."
+    },
+    {
+      "criteria": "Tính từ miêu tả đồ vật",
+      "weight": "35%",
+      "desc": "Phối hợp tính từ và danh từ nhịp nhàng."
+    },
+    {
+      "criteria": "Tính cảm xúc",
+      "weight": "25%",
+      "desc": "Thể hiện được sự gắn bó và thư thái của góc học tập."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 16,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Транспорт в моём городе",
+  "speakingTime": "15 phút",
+  "topic": "Hạ tầng giao thông: Xe buýt, tàu điện ngầm, xe đạp và xe ôm",
+  "intro": "Rèn luyện cách trình bày về các phương tiện đi lại trong đô thị, ưu điểm và tình trạng ùn tắc.",
+  "shadowingPhrases": [
+    {
+      "text": "Метро́ — са́мый надёжный и бы́стрый ви́д тра́нспорта в мегапо́лисе.",
+      "meaning": "Tàu điện ngầm là loại hình giao thông nhanh chóng và tin cậy nhất ở đại đô thị.",
+      "phonetic": "Met-ro — sa-my na-dyozh-ny i bys-try vid tran-spar-ta v me-ga-po-li-se.",
+      "tips": "Từ 'метро' là danh từ bất biến (không đổi đuôi)."
+    },
+    {
+      "text": "В часа́ пик на доро́гах ча́сто возника́ют автомоби́льные про́бки.",
+      "meaning": "Vào giờ cao điểm trên đường phố thường xuất hiện tình trạng tắc nghẽn giao thông.",
+      "phonetic": "V cha-sy pik na da-ro-gakh chas-ta vaz-ni-ka-yut af-ta-ma-bil'-ny-ye prop-ki.",
+      "tips": "Cụm từ 'часы пик' chỉ các khung giờ tan tầm đông đúc."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy so sánh các phương tiện giao thông ở thành phố bạn đang sống.",
+    "sampleGuidance": [
+      "Bạn thường đi học/đi làm bằng phương tiện gì hàng ngày?",
+      "Giao thông ở thành phố bạn có hay bị tắc đường không?",
+      "Theo bạn, thành phố cần làm gì để cải thiện tình hình đi lại?"
+    ]
+  }
+}

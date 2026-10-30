@@ -1,0 +1,63 @@
+{
+  "id": 14,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Поздравление друга по телефону с Новым годом",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Gọi điện thoại gửi lời chúc Tết bạn thân",
+  "dialogue": [
+    {
+      "speaker": "Максим",
+      "ru": "Алло, Тхань! С наступающим Новым годом тебя и всю твою семью!",
+      "vi": "A lô Thành ơi! Chúc mừng năm mới sắp đến với cậu và cả gia đình nhé!"
+    },
+    {
+      "speaker": "Тхань",
+      "ru": "Привет, Максим! Огромное спасибо! И тебя от всей души поздравляю!",
+      "vi": "Chào Maksim! Cảm ơn cậu rất nhiều! Mình cũng chúc mừng năm mới cậu hết lòng!"
+    },
+    {
+      "speaker": "Максим",
+      "ru": "Желаю тебе крепкого здоровья, удачи в учёбе и успешной сдачи всех экзаменов на отлично!",
+      "vi": "Chúc cậu dồi dào sức khỏe, may mắn trong học tập và thi cử toàn điểm xuất sắc nhé!"
+    },
+    {
+      "speaker": "Тхань",
+      "ru": "Спасибо за тёплые слова! Встретимся на каникулах!",
+      "vi": "Cảm ơn những lời chúc ấm áp của cậu! Hẹn gặp nhau đợt nghỉ này nhé!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Желаю тебе крепкого здоровья и успешной сдачи экзаменов.",
+    "hint": "Lời chúc tốt lành quen thuộc dịp năm mới."
+  },
+  "questions": [
+    {
+      "id": "a2_l14_q1",
+      "prompt": "Чего пожелал Максим своему другу?",
+      "hint": "Xem các điều ước được nhắc tới trong lời chúc.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Здоровья, удачи в учёбе и отличных оценок на экзаменах"
+        },
+        {
+          "key": "B",
+          "text": "Купить новый автомобиль"
+        },
+        {
+          "key": "C",
+          "text": "Уехать в другую страну"
+        },
+        {
+          "key": "D",
+          "text": "Больше спать"
+        }
+      ],
+      "ans": "A",
+      "explain": "Максим пожелал здоровья и учебных успехов в новом году."
+    }
+  ]
+}

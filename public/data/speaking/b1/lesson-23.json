@@ -1,0 +1,32 @@
+{
+  "id": 23,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Межкультурная коммуникация: Как избегать недопонимания?",
+  "speakingTime": "20 phút",
+  "topic": "Ngoại giao nhân dân: Nghệ thuật thấu hiểu và tôn trọng sự khác biệt văn hóa",
+  "intro": "Luyện kỹ năng đối thoại hòa giải, lắng nghe tích cực và tôn trọng sự đa dạng của các nền văn minh.",
+  "shadowingPhrases": [
+    {
+      "text": "Уваже́ние к тради́циям други́х наро́дов — осно́ва ми́рного сосуществова́ния.",
+      "meaning": "Sự tôn trọng truyền thống của các dân tộc khác là nền tảng của sự cùng tồn tại hòa bình.",
+      "phonetic": "U-va-zhe-ni-ye k tra-di-tsi-yam dru-gikh na-ro-dav — as-no-va mir-na-va sa-su-shchest-va-va-ni-ya.",
+      "tips": "Thuật ngữ chính trị học 'мирное сосуществование' (cùng tồn tại hòa bình)."
+    },
+    {
+      "text": "Уме́ние слу́шать и слы́шать собесе́дника помога́ет преодолева́ть стереоти́пы.",
+      "meaning": "Kỹ năng biết lắng nghe và thấu hiểu đối phương giúp phá vỡ các định kiến hẹp hòi.",
+      "phonetic": "U-me-ni-ye slu-shat' i sly-shat' sa-be-sed-ni-ka pa-ma-ga-yet pre-a-da-le-vat' ste-re-a-ti-py.",
+      "tips": "Đối lập hai hành động 'слушать' (nghe thấy) và 'слышать' (thấu suốt)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về các nguyên tắc vàng để giao tiếp thành công trong môi trường đa quốc gia.",
+    "sampleGuidance": [
+      "Tại sao định kiến (стереотипы) lại nguy hiểm trong quan hệ quốc tế?",
+      "Làm thế nào để bày tỏ sự bất đồng một cách lịch sự, nhã nhặn mà không gây tổn thương?",
+      "Vai trò của ngôn ngữ tiếng Nga như một cầu nối hữu nghị đa văn hóa."
+    ]
+  }
+}

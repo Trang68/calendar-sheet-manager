@@ -1,0 +1,32 @@
+{
+  "id": 13,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Роль спорта в формировании характера человека",
+  "speakingTime": "20 phút",
+  "topic": "Tâm lý học thể thao: Rèn luyện kỷ luật, bản lĩnh và tinh thần đồng đội",
+  "intro": "Luyện nói về ý chí kiên định, khả năng đứng dậy sau thất bại và tinh thần thượng võ trong thể thao.",
+  "shadowingPhrases": [
+    {
+      "text": "Спорт закаля́ет во́лю, у́чит дисципли́не и уме́нию держа́ть уда́р.",
+      "meaning": "Thể thao tôi luyện ý chí, dạy cho ta tính kỷ luật và bản lĩnh đứng vững trước phong ba bão táp.",
+      "phonetic": "Sport za-ka-lya-yet vo-lyu, u-chit dis-tsip-li-ne i u-me-ni-yu der-zhat' u-dar.",
+      "tips": "Thành ngữ 'держать удар' nghĩa là bản lĩnh chịu đựng và vượt qua sóng gió."
+    },
+    {
+      "text": "Кома́ндные ви́ды спо́рта развива́ют чу́вство плеча́ и взаи́мную отве́тственность.",
+      "meaning": "Các môn thể thao đồng đội trui rèn tinh thần kề vai sát cánh và trách nhiệm lẫn nhau.",
+      "phonetic": "Ka-mand-ny-ye vi-dy spor-ta raz-vi-va-yut chuvst-va ple-cha i vza-im-nu-yu at-vet-stven-nast'.",
+      "tips": "Cụm từ 'чувство плеча' ẩn dụ cho tình đồng chí, sự tương trợ bền bỉ."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về ảnh hưởng của việc rèn luyện thể thao đối với sự thành đạt trong cuộc sống.",
+    "sampleGuidance": [
+      "Tại sao những người có thói quen thể thao thường có tính kỷ luật cao trong công việc?",
+      "Kể về một lần thể thao giúp bạn rèn luyện ý chí vượt qua khó khăn.",
+      "Quan điểm của bạn về triết lý: Chiến thắng chính mình là chiến thắng vinh quang nhất."
+    ]
+  }
+}

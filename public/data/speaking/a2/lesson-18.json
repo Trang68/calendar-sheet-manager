@@ -1,0 +1,32 @@
+{
+  "id": 18,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Один день из студенческой жизни",
+  "speakingTime": "15 phút",
+  "topic": "Đời sống học đường: Lịch trình một ngày sinh viên trên giảng đường",
+  "intro": "Luyện cấu trúc thời gian biểu: thức dậy, lên giảng đường, học nhóm tại thư viện và sinh hoạt câu lạc bộ.",
+  "shadowingPhrases": [
+    {
+      "text": "Па́ры начина́ются в де́вять утра́ и для́тся до четырёх дня.",
+      "meaning": "Các ca học trên lớp bắt đầu lúc 9 giờ sáng và kéo dài đến 4 giờ chiều.",
+      "phonetic": "Pa-ry na-chi-na-yut-sya v de-vyat' ut-ra i dlyat-sya da che-ty-ryokh dnya.",
+      "tips": "Từ 'пара' trong tiếng Nga đại học có nghĩa là 1 tiết đôi (90 phút)."
+    },
+    {
+      "text": "По́сле заня́тий мы идём в студе́нческую столо́вую обе́дать.",
+      "meaning": "Sau giờ tan học, chúng tôi xuống nhà ăn sinh viên dùng bữa trưa.",
+      "phonetic": "Pos-le za-nya-tiy my i-dyom v stu-den-ches-ku-yu sta-lo-vu-yu a-be-dat'.",
+      "tips": "Cụm 'в столовую' (cách 4 chỉ hướng đích đến)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình kể lại một ngày học tập bận rộn nhưng thú vị của bạn.",
+    "sampleGuidance": [
+      "Bạn thức dậy lúc mấy giờ và chuẩn bị đi học như thế nào?",
+      "Trên lớp bạn học những môn gì và tương tác với bạn bè ra sao?",
+      "Buổi tối bạn dành thời gian làm bài tập hay tham gia hoạt động gì?"
+    ]
+  }
+}

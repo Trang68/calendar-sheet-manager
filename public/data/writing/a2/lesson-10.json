@@ -1,0 +1,51 @@
+{
+  "id": 10,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Рассказ о прошедших выходных на природе",
+  "writingTime": "25 phút",
+  "topic": "Bài văn ngắn kể lại chuyến dã ngoại ngoại ô cuối tuần",
+  "targetWordRange": [
+    55,
+    80
+  ],
+  "task": "Hãy viết một đoạn văn (55–80 từ) kể về ngày cuối tuần tuyệt vời bạn đã trải qua cùng bạn bè tại vùng ngoại ô.",
+  "requirements": [
+    "Giới thiệu thời gian và địa điểm chuyến đi",
+    "Các hoạt động đã tham gia (đi dạo trong rừng thông, nướng thịt, chụp ảnh)",
+    "Cảm xúc sau chuyến đi đối với tinh thần và sức khỏe"
+  ],
+  "cliches": [
+    {
+      "ru": "В прошлую субботу мы решили поехать...",
+      "vi": "Thứ Bảy tuần trước chúng tôi quyết định đi..."
+    },
+    {
+      "ru": "Погода была просто великолепная!",
+      "vi": "Thời tiết hôm ấy tuyệt vời làm sao!"
+    },
+    {
+      "ru": "Мы отлично отдохнули и набрались сил.",
+      "vi": "Chúng tôi đã nghỉ ngơi tuyệt vời và nạp lại đầy năng lượng."
+    }
+  ],
+  "modelAnswer": "В прошлые выходные мы с друзьями решили отдохнуть от городской суеты и поехали за город на природу. Погода стояла тёплая и ясная.\n\nМы гуляли по красивому сосновому лесу, дышали чистым воздухом, делали яркие фотографии и готовили шашлыки на костре. Мы много смеялись và hát những bài ca quen thuộc.\n\nЭто был незабываемый день! Мы прекрасно отдохнули и зарядились энергией на всю неделю.",
+  "modelWordCount": 61,
+  "rubric": [
+    {
+      "criteria": "Sử dụng thì quá khứ hoàn thành",
+      "weight": "40%",
+      "desc": "Sử dụng chuẩn xác thể hoàn thành và chưa hoàn thành của động từ."
+    },
+    {
+      "criteria": "Từ vựng miêu tả thiên nhiên",
+      "weight": "35%",
+      "desc": "Các cụm từ: за город, на костре, чистый воздух."
+    },
+    {
+      "criteria": "Tính biểu cảm",
+      "weight": "25%",
+      "desc": "Truyền tải được cảm xúc hào hứng và thư thái."
+    }
+  ]
+}

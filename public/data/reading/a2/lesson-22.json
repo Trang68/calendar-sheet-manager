@@ -1,0 +1,68 @@
+{
+  "id": 22,
+  "level": "A2",
+  "skill": "reading",
+  "title": "Музеи Москвы: Государственная Третьяковская галерея",
+  "badge": "A2 Đọc hiểu",
+  "readingTime": "15 phút",
+  "source": "Giáo trình TRKI-A2 Chuẩn Quốc Tế",
+  "topic": "Hội họa & Bảo tàng: Phòng tranh Tretyakov",
+  "vocabCategories": [
+    {
+      "title": "Bảo tàng hội họa (Художественный музей)",
+      "rows": [
+        {
+          "word": "карти́на",
+          "gram": "danh từ giống cái",
+          "meaning": "bức tranh nghệ thuật",
+          "example": "В залах галереи представлены тысячи картин русских художников."
+        },
+        {
+          "word": "худо́жник",
+          "gram": "danh từ giống đực",
+          "meaning": "họa sĩ",
+          "example": "Илья Репин и Иван Шишкин — знаменитые русские художники."
+        },
+        {
+          "word": "шеде́вр",
+          "gram": "danh từ giống đực",
+          "meaning": "kiệt tác",
+          "example": "«Утро в сосновом лесу» — признанный шедевр пейзажа."
+        }
+      ]
+    }
+  ],
+  "readingText": [
+    "Третьяковская галерея — один из ведущих художественных музеев мира, основанный московским купцом Павлом Третьяковым в середине XIX века.",
+    "Здесь собраны шедевры русской живописи từ các biểu tượng tôn giáo thế kỷ XII đến các tuyệt tác của Repin, Shishkin, Vasnetsov và Vrubel.",
+    "Посещение галереи позволяет совершить путешествие сквозь века русской истории và cảm nhận chiều sâu tâm hồn Nga qua lăng kính hội họa."
+  ],
+  "questions": [
+    {
+      "id": "a2_r22_q1",
+      "lang": "ru",
+      "prompt": "Кто основал знаменитую галерею в Москве?",
+      "hint": "Xem tên nhà sáng lập ở đoạn 1.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Павел Третьяков"
+        },
+        {
+          "key": "B",
+          "text": "Пётр I"
+        },
+        {
+          "key": "C",
+          "text": "Иван Шишкин"
+        },
+        {
+          "key": "D",
+          "text": "Лев Толстой"
+        }
+      ],
+      "ans": "A",
+      "explain": "Основатель галереи — меценат и коллекционер Павел Михайлович Третьяков."
+    }
+  ]
+}

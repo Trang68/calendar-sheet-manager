@@ -1,0 +1,63 @@
+{
+  "id": 15,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Консультация в отделе аспирантуры: Тема диссертации",
+  "listeningTime": "15 phút",
+  "topic": "Học thuật cao học: Trao đổi với giáo sư hướng dẫn về đề tài nghiên cứu",
+  "dialogue": [
+    {
+      "speaker": "Научный руководитель",
+      "ru": "Здравствуйте, Нгуен! Я ознакомился с вашей концепцией кандидатской диссертации. Тема актуальная, но требует сужения рамок.",
+      "vi": "Chào bạn Nguyễn! Thầy đã xem qua đề cương luận án phó tiến sĩ của em. Đề tài rất có tính thời sự, song cần thu hẹp phạm vi nghiên cứu lại."
+    },
+    {
+      "speaker": "Аспирант",
+      "ru": "Профессор, какую конкретно часть историографии вы рекомендуете взять за основу?",
+      "vi": "Thưa giáo sư, thầy khuyên em nên lấy phần cụ thể nào trong sử liệu làm nền tảng ạ?"
+    },
+    {
+      "speaker": "Научный руководитель",
+      "ru": "Сконцентрируйтесь на сравнительном анализе торгово-экономических связей России и стран Юго-Восточной Азии в начале XXI века.",
+      "vi": "Em hãy tập trung vào phân tích so sánh quan hệ kinh tế thương mại giữa Nga và các nước Đông Nam Á đầu thế kỷ XXI."
+    },
+    {
+      "speaker": "Аспирант",
+      "ru": "Спасибо огромное за ценный совет! Я скорректирую план работы и подготовлю первую главу к декабрю.",
+      "vi": "Em cảm ơn thầy rất nhiều vì lời khuyên quý báu! Em sẽ điều chỉnh đề cương và hoàn thành chương 1 trước tháng Mười Hai."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Сконцентрируйтесь на сравнительном анализе торгово-экономических связей.",
+    "hint": "Phương pháp luận nghiên cứu phân tích đối chiếu."
+  },
+  "questions": [
+    {
+      "id": "b1_l15_q1",
+      "prompt": "Какой совет дал научный руководитель аспиранту по поводу диссертации?",
+      "hint": "Xem yêu cầu về phạm vi đề tài nghiên cứu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Бросить аспирантуру"
+        },
+        {
+          "key": "B",
+          "text": "Сузить рамки исследования и сконцентрироваться на сравнительном анализе"
+        },
+        {
+          "key": "C",
+          "text": "Переписать работу на английском"
+        },
+        {
+          "key": "D",
+          "text": "Не читать книги"
+        }
+      ],
+      "ans": "B",
+      "explain": "Профессор посоветовал сузить тему и сфокусироваться на компаративном анализе."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": 10,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Официальная жалоба на качество туристических услуг",
+  "writingTime": "40 phút",
+  "topic": "Đơn khiếu nại dịch vụ gửi Giám đốc công ty lữ hành",
+  "targetWordRange": [
+    100,
+    135
+  ],
+  "task": "Trong chuyến du lịch vừa qua, công ty lữ hành đã không thực hiện đúng các cam kết trong hợp đồng (khách sạn xa trung tâm, hủy tour không báo trước). Hãy viết đơn khiếu nại chính thức yêu cầu bồi thường.",
+  "requirements": [
+    "Người nhận (Tổng Giám đốc công ty du lịch), người làm đơn",
+    "Số hợp đồng du lịch, ngày tháng và lịch trình chuyến đi",
+    "Liệt kê các vi phạm cụ thể so với cam kết ban đầu",
+    "Yêu cầu bồi hoàn một phần kinh phí và câu trả lời trong hạn định",
+    "Chữ ký và ngày làm đơn"
+  ],
+  "cliches": [
+    {
+      "ru": "Настоящим выражаю категорическое несогласие с качеством...",
+      "vi": "Tôi xin bày tỏ sự hoàn toàn không đồng tình với chất lượng..."
+    },
+    {
+      "ru": "Условия договора были грубо нарушены.",
+      "vi": "Các điều khoản của hợp đồng đã bị vi phạm nghiêm trọng."
+    },
+    {
+      "ru": "Требую возместить понесённый ущерб в размере...",
+      "vi": "Tôi yêu cầu bồi thường thiệt hại đã phát sinh với số tiền là..."
+    },
+    {
+      "ru": "В противном случае буду вынужден обратиться в суд.",
+      "vi": "Trong trường hợp ngược lại tôi sẽ buộc phải khiếu kiện ra tòa án."
+    }
+  ],
+  "modelAnswer": "Генеральному директору туристической компании «Вояж»\nСмирнову Андрею Викторовичу\nот клиента Чан Дык Тханя\n\nПРЕТЕНЗИЯ\n\n10 июля 2026 года мной был заключён договор № 452 на приобретение экскурсионного тура «Золотое кольцо России» сроком на пять дней. К сожалению, качество предоставленных услуг не соответствовало условиям подписанного соглашения.\n\nВо-первых, вместо заявленной четырёхзвёздочной гостиницы в центре Ярославля группу заселили в двухзвёздочный отель на окраине города без горячей воды и интернета. Во-вторых, запланированная экскурсия в музей деревянного зодчества в Суздале была отменена гидом без предварительного уведомления и предоставления альтернативной программы.\n\nВ связи с ненадлежащим исполнением обязательств требую компенсировать 30% стоимости путёвки в сумме 18 000 рублей на мой банковский счёт в течение десяти рабочих дней. В случае отказа я буду вынужден обратиться в общество защиты прав потребителей и суд.\n\n25 июля 2026 года\nЧан Дык Тхань",
+  "modelWordCount": 133,
+  "rubric": [
+    {
+      "criteria": "Tuân thủ thể thức khiếu nại pháp lý",
+      "weight": "40%",
+      "desc": "Nêu chuẩn xác mã hợp đồng, số tiền, điều khoản và kỳ hạn xử lý."
+    },
+    {
+      "criteria": "Văn phong pháp lý đanh thép",
+      "weight": "35%",
+      "desc": "Lập luận có chứng cứ, không biểu cảm thái quá, chuẩn văn phong претензия."
+    },
+    {
+      "criteria": "Độ chuẩn xác ngữ pháp",
+      "weight": "25%",
+      "desc": "Sử dụng chuẩn xác các thể hoàn thành của động từ và giới từ chỉ thời gian."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 5,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Интервью с молодым IT-предпринимателем о стартапах",
+  "listeningTime": "15 phút",
+  "topic": "Phỏng vấn truyền hình: Khởi nghiệp công nghệ và đổi mới sáng tạo",
+  "dialogue": [
+    {
+      "speaker": "Журналист",
+      "ru": "Добрый день, Артём! Ваш стартап в области искусственного интеллекта привлёк рекордные инвестиции. В чём секрет успеха?",
+      "vi": "Chào bạn Artem! Startup trong lĩnh vực AI của bạn vừa thu hút nguồn đầu tư kỷ lục. Đâu là bí quyết thành công vậy?"
+    },
+    {
+      "speaker": "Артём",
+      "ru": "Приветствую! Мы разработали платформу, которая автоматизирует анализ медицинских снимков, экономя время врачам.",
+      "vi": "Xin chào! Chúng tôi phát triển một nền tảng tự động hóa phân tích phim chụp y khoa, tiết kiệm thời gian quý báu cho các bác sĩ."
+    },
+    {
+      "speaker": "Журналист",
+      "ru": "С какими трудностями сталкивается молодой основатель технологической компании в России?",
+      "vi": "Một nhà sáng lập trẻ của công ty công nghệ tại Nga phải đối mặt với những khó khăn nào?"
+    },
+    {
+      "speaker": "Артём",
+      "ru": "Самое сложное — сформировать слаженную команду высококлассных специалистов и найти первых корпоративных клиентов.",
+      "vi": "Điều trăn trở nhất là gây dựng một đội ngũ chuyên gia ăn ý trình độ cao và tìm kiếm những khách hàng doanh nghiệp đầu tiên."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Самое сложное — сформировать слаженную команду профессионалов.",
+    "hint": "Lắng nghe quan điểm về nhân sự khởi nghiệp."
+  },
+  "questions": [
+    {
+      "id": "b1_l5_q1",
+      "prompt": "В какой сфере работает успешный стартап Артёма?",
+      "hint": "Xem giải pháp ứng dụng AI vào lĩnh vực nào.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В сфере онлайн-игр"
+        },
+        {
+          "key": "B",
+          "text": "В медицине: анализ диагностических снимков с помощью ИИ"
+        },
+        {
+          "key": "C",
+          "text": "В сфере туризма"
+        },
+        {
+          "key": "D",
+          "text": "В сельском хозяйстве"
+        }
+      ],
+      "ans": "B",
+      "explain": "Компания разрабатывает платформу анализа медицинских снимков на базе ИИ."
+    }
+  ]
+}

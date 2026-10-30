@@ -1,0 +1,52 @@
+{
+  "id": 17,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо другу с рецептом традиционного блюда",
+  "writingTime": "25 phút",
+  "topic": "Viết thư hướng dẫn bạn ngoại quốc nấu món Phở hoặc Nem rán",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Người bạn Nga rất thích ẩm thực Việt Nam và muốn học nấu món nem rán (вьетнамские блинчики). Hãy viết thư hướng dẫn cách làm đơn giản.",
+  "requirements": [
+    "Lời chào bạn và bày tỏ sự hào hứng",
+    "Liệt kê các nguyên liệu chính (bánh đa nem, thịt xay, miến, mộc nhĩ, trứng)",
+    "Hướng dẫn các bước: trộn nhân, cuộn bánh và rán giòn trên chảo dầu",
+    "Lời chúc ngon miệng kết thư"
+  ],
+  "cliches": [
+    {
+      "ru": "Рад, что тебе понравилась наша кухня!",
+      "vi": "Rất vui vì cậu thích ẩm thực nước mình!"
+    },
+    {
+      "ru": "Приготовить это блюдо совсем не сложно.",
+      "vi": "Nấu món ăn này không hề phức tạp chút nào."
+    },
+    {
+      "ru": "Приятного аппетита!",
+      "vi": "Chúc cậu ăn ngon miệng nhé!"
+    }
+  ],
+  "modelAnswer": "Привет, Саша!\n\nОчень рад, что ты хочешь приготовить наши вьетнамские блинчики — нэм! Это очень просто и вкусно.\n\nТебе понадобятся: рисовая бумага, мясной фарш, стеклянная лапша, сушёные грибы, морковь и одно яйцо. Сначала мелко нарежь грибы и лапшу, смешай их с фаршем и яйцом. Затем заверни начинку в тонкую рисовую бумагу и обжарь блинчики на сковороде в горячем масле до золотистой корочки.\n\nПодавай горячими с соусом! Приятного аппетита!\n\nТвой друг Нам",
+  "modelWordCount": 68,
+  "rubric": [
+    {
+      "criteria": "Trình tự hướng dẫn hành động",
+      "weight": "40%",
+      "desc": "Dùng chuẩn các động từ mệnh lệnh: нарежь, смешай, заверни, обжарь."
+    },
+    {
+      "criteria": "Từ vựng ẩm thực",
+      "weight": "35%",
+      "desc": "Nguyên liệu và cách chế biến chính xác."
+    },
+    {
+      "criteria": "Tính thân mật và dễ hiểu",
+      "weight": "25%",
+      "desc": "Câu văn trực quan, sinh động."
+    }
+  ]
+}

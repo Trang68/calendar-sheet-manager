@@ -1,0 +1,32 @@
+{
+  "id": 12,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Любимый фильм или книга",
+  "speakingTime": "15 phút",
+  "topic": "Văn hóa nghệ thuật: Tóm tắt nội dung và cảm nghĩ về phim ảnh/sách",
+  "intro": "Học cách giới thiệu cốt truyện, nhân vật trung tâm và bài học nhân văn rút ra từ tác phẩm.",
+  "shadowingPhrases": [
+    {
+      "text": "Фильм расска́зывает о си́ле ду́ха и настоя́щей челове́ческой дру́жбе.",
+      "meaning": "Bộ phim kể về nghị lực phi thường và tình bạn chân thành giữa con người.",
+      "phonetic": "Fil'm ras-ska-zy-va-yet a si-le du-kha i nas-ta-ya-shchey che-la-vye-ches-kay druzh-be.",
+      "tips": "Cấu trúc 'рассказывать о чём' (cách Giới từ - Предложный падеж)."
+    },
+    {
+      "text": "Главный геро́й преодолева́ет все тру́дности на пути́ к мечта́м.",
+      "meaning": "Nhân vật chính đã vượt qua mọi gian truân trên nấc thang vươn tới ước mơ.",
+      "phonetic": "Glav-ny ge-roy pre-a-da-le-va-yet vse trud-nas-ti na pu-ti k mech-tam.",
+      "tips": "Nhấn rõ trọng âm từ 'преодолевает' (vượt qua)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình giới thiệu một cuốn sách hoặc bộ phim bạn tâm đắc nhất.",
+    "sampleGuidance": [
+      "Ai là đạo diễn/tác giả và thể loại tác phẩm là gì?",
+      "Nội dung chính xoay quanh những nhân vật và biến cố nào?",
+      "Tại sao bạn khuyên mọi người nên xem hoặc đọc tác phẩm này?"
+    ]
+  }
+}

@@ -34,5 +34,269 @@
       100,
       130
     ]
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Официальное письмо-запрос в оргкомитет научной конференции",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Văn bản học thuật: Thư gửi ban tổ chức hội thảo khoa học quốc tế",
+    "targetWordRange": [
+      100,
+      135
+    ]
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Эссе-рассуждение: Должно ли высшее образование быть бесплатным?",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Tiểu luận nghị luận xã hội: Vấn đề học phí đại học và công bằng giáo dục",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Сопроводительное письмо к резюме для стажировки",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Thư ứng tuyển thực tập sinh tại tập đoàn quốc tế",
+    "targetWordRange": [
+      100,
+      135
+    ]
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Развёрнутый отзыв на спектакль для журнала",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Phê bình nghệ thuật: Đánh giá vở diễn sân khấu kịch cổ điển",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Докладная записка руководству с предложением проекта",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Văn bản nội bộ: Bản đề xuất dự án tối ưu hóa quy trình làm việc",
+    "targetWordRange": [
+      100,
+      130
+    ]
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Эссе: «Человек и природа: Путь к гармонии или кризис?»",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Tiểu luận triết học môi trường: Mối quan hệ giữa nhân loại và tự nhiên",
+    "targetWordRange": [
+      110,
+      145
+    ]
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Официальная жалоба на качество туристических услуг",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Đơn khiếu nại dịch vụ gửi Giám đốc công ty lữ hành",
+    "targetWordRange": [
+      100,
+      135
+    ]
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Статья в студенческую газету: Как адаптироваться в вузе?",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Bài báo sinh viên: Cẩm nang kinh nghiệm hòa nhập cuộc sống du học",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Письмо научному руководителю о статусе работы",
+    "badge": "B1 Viết",
+    "writingTime": "35 phút",
+    "topic": "Email học vụ: Báo cáo tiến độ nghiên cứu luận văn thạc sĩ",
+    "targetWordRange": [
+      100,
+      130
+    ]
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Эссе: Жизнь в центре или в спальном районе?",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Nghị luận so sánh: Đời sống tại khu phố cổ trung tâm và khu đô thị vệ tinh",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Мотивационное письмо на образовательный грант",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Hồ sơ du học: Thư bày tỏ nguyện vọng xin học bổng toàn phần",
+    "targetWordRange": [
+      110,
+      145
+    ]
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Открытое письмо в защиту памятника архитектуры",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Văn bản công dân: Thư ngỏ kêu gọi bảo tồn di sản kiến trúc cổ kính",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Эссе: Роль книги в эпоху цифровой информации",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Tiểu luận: Sức sống của văn hóa đọc sách in giữa kỷ nguyên số",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Текст экскурсии для иностранных гостей по Москве",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Kịch bản thuyết minh du lịch: Giới thiệu Quảng trường Đỏ và Điện Kremlin",
+    "targetWordRange": [
+      105,
+      140
+    ]
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Официальное заявление на академический отпуск",
+    "badge": "B1 Viết",
+    "writingTime": "35 phút",
+    "topic": "Văn bản hành chính học vụ: Đơn xin tạm hoãn bảo lưu học tập",
+    "targetWordRange": [
+      95,
+      125
+    ]
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Эссе: Что значит быть гражданином мира в XXI веке?",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Tiểu luận triết học xã hội: Khái niệm 'Công dân toàn cầu' trong thế giới hiện đại",
+    "targetWordRange": [
+      110,
+      145
+    ]
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Рекомендательное письмо студенту для стажировки",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Thư giới thiệu sinh viên xuất sắc tham gia kỳ thực tập chuyên môn",
+    "targetWordRange": [
+      105,
+      135
+    ]
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Аналитическая записка о тенденциях на рынке труда",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Bản phân tích xu hướng: Chuyển dịch nhu cầu nhân lực trong nền kinh tế số",
+    "targetWordRange": [
+      110,
+      140
+    ]
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Эссе: «Технологии объединяют или разобщают людей?»",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Tiểu luận xã hội học: Mặt trái của sự siêu kết nối số và nỗi cô đơn thời hiện đại",
+    "targetWordRange": [
+      110,
+      145
+    ]
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Пресс-релиз о благотворительной культурной акции",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Thông cáo báo chí: Triển lãm tranh từ thiện gây quỹ học bổng",
+    "targetWordRange": [
+      105,
+      135
+    ]
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Официальное приглашение иностранного профессора",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Thư tín ngoại giao học thuật: Mời giáo sư quốc tế sang thuyết giảng",
+    "targetWordRange": [
+      105,
+      135
+    ]
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое контрольное эссе по стандарту ТРКИ-1 / B1",
+    "badge": "B1 Viết",
+    "writingTime": "50 phút",
+    "topic": "Bài thi viết tổng hợp: Đánh giá toàn diện năng lực nghị luận chuẩn TRKI-1",
+    "targetWordRange": [
+      115,
+      150
+    ]
   }
 ]

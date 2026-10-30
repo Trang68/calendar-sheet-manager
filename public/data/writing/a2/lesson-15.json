@@ -1,0 +1,52 @@
+{
+  "id": 15,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Сообщение другу с предложением сходить в театр",
+  "writingTime": "20 phút",
+  "topic": "Tin nhắn rủ bạn cùng mua vé đi xem kịch tại nhà hát",
+  "targetWordRange": [
+    45,
+    65
+  ],
+  "task": "Bạn muốn rủ người bạn Nga cùng đi xem một vở kịch vào cuối tuần. Hãy soạn một tin nhắn rủ bạn đi cùng.",
+  "requirements": [
+    "Lời chào thân mật",
+    "Gợi ý tên vở kịch hoặc nhà hát, ngày giờ biểu diễn",
+    "Hỏi xem bạn có rảnh không và đề xuất đặt vé",
+    "Hẹn gặp lại"
+  ],
+  "cliches": [
+    {
+      "ru": "Привет, Маша! Как твои дела?",
+      "vi": "Chào Masha! Cậu khỏe không?"
+    },
+    {
+      "ru": "Не хочешь пойти со мной в театр?",
+      "vi": "Cậu có muốn cùng mình đi xem kịch không?"
+    },
+    {
+      "ru": "Дай знать, если у тебя получится!",
+      "vi": "Báo cho mình biết nếu cậu đi được nhé!"
+    }
+  ],
+  "modelAnswer": "Привет, Маша! Как твои дела?\n\nВ следующее воскресенье в Малом театре показывают замечательный спектакль «Ревизор». Я знаю, что ты очень любишь классическую русскую литературу.\n\nТы свободна в воскресенье в 18:00? Если хочешь пойти вместе, я могу купить нам билеты в партер онлайн прямо сейчас. Напиши мне, пожалуйста, до вечера!\n\nЖду ответа,\nТхань",
+  "modelWordCount": 54,
+  "rubric": [
+    {
+      "criteria": "Mục đích mời mọc rõ ràng",
+      "weight": "40%",
+      "desc": "Thời gian, địa điểm, tên vở diễn và đề xuất mua vé cụ thể."
+    },
+    {
+      "criteria": "Văn phong hội thoại tin nhắn",
+      "weight": "35%",
+      "desc": "Tự nhiên, thân tình, dùng tốt các câu nghi vấn rủ rê."
+    },
+    {
+      "criteria": "Ngữ pháp câu điều kiện 'если'",
+      "weight": "25%",
+      "desc": "Vận dụng câu điều kiện chân thực: nếu rảnh thì mình mua vé."
+    }
+  ]
+}

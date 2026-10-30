@@ -1,0 +1,51 @@
+{
+  "id": 16,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Короткое эссе: Почему спорт важен для каждого?",
+  "writingTime": "25 phút",
+  "topic": "Tiểu luận nghị luận ngắn: Lợi ích của thể thao đối với đời sống",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Hãy viết bài văn ngắn (60–85 từ) bày tỏ quan điểm của bạn về tầm quan trọng của việc rèn luyện thể thao hàng ngày.",
+  "requirements": [
+    "Mở bài: Khẳng định vai trò của thể thao với sức khỏe",
+    "Thân bài: Thể thao giúp tăng cường miễn dịch, giảm căng thẳng và tạo kỷ luật",
+    "Kết bài: Lời khuyên mọi người nên dành ít nhất 30 phút mỗi ngày vận động"
+  ],
+  "cliches": [
+    {
+      "ru": "Спорт играет важную роль в жизни человека.",
+      "vi": "Thể thao đóng vai trò quan trọng trong đời sống con người."
+    },
+    {
+      "ru": "В здоровом теле — здоровый дух.",
+      "vi": "Một tinh thần minh mẫn trong một cơ thể cường tráng."
+    },
+    {
+      "ru": "Регулярные тренировки помогают...",
+      "vi": "Việc tập luyện đều đặn giúp ích..."
+    }
+  ],
+  "modelAnswer": "Сегодня спорт играет ключевую роль в жизни современного человека. Известная поговорка гласит: «В здоровом теле — здоровый дух».\n\nВо-первых, физические упражнения укрепляют иммунитет, сердце и мышцы. Во-вторых, спорт отлично снимает стресс после учёбы или напряжённой работы и заряжает отличным настроением. Даже простая утренняя пробежка или плавание делают нас бодрыми.\n\nПоэтому я считаю, что каждый человек должен находить время для физической активности каждый день.",
+  "modelWordCount": 63,
+  "rubric": [
+    {
+      "criteria": "Cấu trúc lập luận",
+      "weight": "40%",
+      "desc": "Có mở bài, thân bài với từ nối (во-первых, во-вторых) và kết bài."
+    },
+    {
+      "criteria": "Vốn từ học thuật A2",
+      "weight": "35%",
+      "desc": "Cụm từ: физические упражнения, снимает стресс, играет ключевую роль."
+    },
+    {
+      "criteria": "Tính mạch lạc",
+      "weight": "25%",
+      "desc": "Luận điểm rõ ràng, thuyết phục."
+    }
+  ]
+}

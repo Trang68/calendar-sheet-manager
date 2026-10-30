@@ -1,0 +1,32 @@
+{
+  "id": 15,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Животные в нашей жизни",
+  "speakingTime": "15 phút",
+  "topic": "Thế giới động vật: Thú cưng trong nhà và tình yêu động vật",
+  "intro": "Luyện nói về các loài thú cưng (chó, mèo), cách chăm sóc và sự gắn kết giữa con người và vật nuôi.",
+  "shadowingPhrases": [
+    {
+      "text": "Дома́шние пито́мцы да́рят нам искреннюю радость и пре́данность.",
+      "meaning": "Vật nuôi trong nhà mang lại cho chúng ta niềm vui chân thành và sự trung thành.",
+      "phonetic": "Da-mash-ni-ye pi-tom-tsy da-ryat nam is-kren-nyu-yu ra-dast' i pre-dan-nast'.",
+      "tips": "Nhấn rõ trọng âm từ 'преданность' (sự trung thành)."
+    },
+    {
+      "text": "За соба́кой ну́жно регуля́рно уха́живать и гуля́ть два ра́за в день.",
+      "meaning": "Nuôi chó cần phải chăm sóc thường xuyên và dẫn đi dạo hai lần mỗi ngày.",
+      "phonetic": "Za sa-ba-kay nuzh-na re-gul-yar-na u-kha-zhi-vat' i gul-yat' dva ra-za v den'.",
+      "tips": "Cấu trúc 'ухаживать за кем/чем' (chăm sóc ai/cái gì)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy chia sẻ về một con vật cưng của bạn hoặc của bạn bè.",
+    "sampleGuidance": [
+      "Đó là loài vật gì, tên gọi là gì và có màu lông thế nào?",
+      "Nó có tính cách và thói quen ngộ nghĩnh gì đặc biệt?",
+      "Bạn hoặc chủ nhân chăm sóc nó hàng ngày như thế nào?"
+    ]
+  }
+}

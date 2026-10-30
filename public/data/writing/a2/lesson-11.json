@@ -1,0 +1,52 @@
+{
+  "id": 11,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Поздравление коллеге с Новым годом",
+  "writingTime": "20 phút",
+  "topic": "Viết thiệp chúc Tết gửi đồng nghiệp cùng nhóm làm việc",
+  "targetWordRange": [
+    45,
+    65
+  ],
+  "task": "Hãy viết một tấm thiệp chúc mừng năm mới (45–65 từ) gửi cho một người bạn hoặc đồng nghiệp cơ quan.",
+  "requirements": [
+    "Lời chúc mừng năm mới ấm áp",
+    "Lời chúc sức khỏe, hạnh phúc và thành công trong công việc",
+    "Cảm ơn vì sự hợp tác tốt đẹp trong năm qua",
+    "Ký tên trang trọng"
+  ],
+  "cliches": [
+    {
+      "ru": "Поздравляю тебя с наступающим Новым годом!",
+      "vi": "Chúc mừng bạn nhân dịp năm mới sắp sang!"
+    },
+    {
+      "ru": "Желаю крепкого здоровья, радости и успехов!",
+      "vi": "Chúc bạn dồi dào sức khỏe, niềm vui và thành tựu!"
+    },
+    {
+      "ru": "Пусть все твои мечты сбудутся!",
+      "vi": "Mong mọi ước mơ của bạn đều trở thành hiện thực!"
+    }
+  ],
+  "modelAnswer": "Дорогой Алексей!\n\nОт всей души поздравляю тебя с наступающим Новым годом и Рождеством! Искренне благодарю тебя за помощь и отличную совместную работу в уходящем году.\n\nЖелаю тебе и твоей семье крепкого сибирского здоровья, неиссякаемой энергии, финансового благополучия и новых профессиональных побед! Пусть в доме всегда царят уют и радость!\n\nС наилучшими пожеланиями,\nТвой коллега Тхань",
+  "modelWordCount": 54,
+  "rubric": [
+    {
+      "criteria": "Văn phong chúc mừng trang trọng",
+      "weight": "40%",
+      "desc": "Cấu trúc chúc tụng: от всей души поздравляю, желаю чего."
+    },
+    {
+      "criteria": "Cách danh từ đi sau желаю",
+      "weight": "35%",
+      "desc": "Đúng cách Sinh cách (Родительный падеж): здоровья, энергии, побед."
+    },
+    {
+      "criteria": "Thể thức thiệp mừng",
+      "weight": "25%",
+      "desc": "Trình bày đẹp mắt, lời chúc ý nghĩa."
+    }
+  ]
+}

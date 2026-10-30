@@ -1,0 +1,57 @@
+{
+  "id": 17,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Текст экскурсии для иностранных гостей по Москве",
+  "writingTime": "40 phút",
+  "topic": "Kịch bản thuyết minh du lịch: Giới thiệu Quảng trường Đỏ và Điện Kremlin",
+  "targetWordRange": [
+    105,
+    140
+  ],
+  "task": "Bạn là hướng dẫn viên đón đoàn đại biểu quốc tế. Hãy soạn một bài thuyết minh du lịch (105–140 từ) giới thiệu về Quảng trường Đỏ và Nhà thờ Thánh Basil.",
+  "requirements": [
+    "Lời chào nồng nhiệt gửi đoàn khách quốc tế",
+    "Giới thiệu vị trí trung tâm và ý nghĩa lịch sử của Quảng trường Đỏ",
+    "Miêu tả nét đẹp kiến trúc kỳ ảo của Nhà thờ Thánh Basil (Покровский собор)",
+    "Kể vắn tắt một truyền thuyết kiến trúc thú vị",
+    "Lời chúc quý khách có những kỷ niệm tuyệt vời"
+  ],
+  "cliches": [
+    {
+      "ru": "Рад приветствовать вас в самом сердце столицы!",
+      "vi": "Rất hân hạnh được chào đón quý vị tại trái tim của thủ đô!"
+    },
+    {
+      "ru": "Перед нами открывается величественный ансамбль...",
+      "vi": "Trước mắt chúng ta mở ra quần thể tráng lệ..."
+    },
+    {
+      "ru": "Купола храма поражают неповторимой росписью.",
+      "vi": "Những mái vòm của ngôi đền làm kinh ngạc bởi hoa văn độc nhất vô nhị."
+    },
+    {
+      "ru": "Желаю вам незабываемых впечатлений от знакомства с городом!",
+      "vi": "Kính chúc quý vị có những trải nghiệm khó quên khi làm quen với thành phố!"
+    }
+  ],
+  "modelAnswer": "Дорогие друзья, добро пожаловать в самое сердце Москвы! Мы находимся на Красной площади — главном историческом и культурном символе России, включённом в список Всемирного наследия ЮНЕСКО. В древнерусском языке слово «красная» означало не только цвет, но и «красивая».\n\nПеред вами возвышается подлинное чудо средневекового зодчества — собор Василия Блаженного, возведённый в XVI веке в честь взятия Казани по указу царя Ивана Грозного. Поразительно, что храм объединяет девять церквей на одном фундаменте, и каждый из его куполов обладает своим неповторимым архитектурным узором и яркой расцветкой.\n\nСуществует легенда, что царь приказал ослепить мастеров Постника и Барму, дабы они никогда не смогли повторить подобную красоту. Сегодня этот собор остаётся визитной карточкой страны. Желаю вам прекрасной прогулки и вдохновляющих открытий!",
+  "modelWordCount": 130,
+  "rubric": [
+    {
+      "criteria": "Tính sinh động & Hấp dẫn của lời thuyết minh",
+      "weight": "40%",
+      "desc": "Giọng văn lôi cuốn, kết hợp kiến thức lịch sử và giai thoại dân gian."
+    },
+    {
+      "criteria": "Từ vựng kiến trúc & Lịch sử",
+      "weight": "35%",
+      "desc": "Cụm từ: чудо зодчества, единый фундамент, визитная карточка страны."
+    },
+    {
+      "criteria": "Cấu trúc văn bản hướng dẫn viên",
+      "weight": "25%",
+      "desc": "Mở đầu nhiệt tình, dẫn dắt tự nhiên, kết thúc chu đáo."
+    }
+  ]
+}

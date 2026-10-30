@@ -1,0 +1,34 @@
+{
+  "id": 22,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Спрашиваем дорогу на улице",
+  "speakingTime": "15 phút",
+  "topic": "Hỏi đường đi đến ga tàu điện ngầm và trạm xe buýt",
+  "intro": "Luyện mẫu câu hỏi phương hướng và chỉ đường đơn giản.",
+  "shadowingPhrases": [
+    {
+      "id": "spk_22_1",
+      "text": "Скажите, пожалуйста, где здесь метро?",
+      "meaning": "Xin cho hỏi ở đây ga metro ở đâu?",
+      "phonetic": "Skazhite, pozhaluysta, gde zdes' metro?",
+      "tips": "«Скажите» phát âm mềm mại."
+    },
+    {
+      "id": "spk_22_2",
+      "text": "Идите прямо и поверните направо.",
+      "meaning": "Hãy đi thẳng rồi rẽ phải.",
+      "phonetic": "Idite pryamo i povernite napravo.",
+      "tips": "«Прямо» nhấn âm đầu."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Nói tự do",
+    "task": "Hướng dẫn một người bạn đi từ cổng trường đến trạm xe buýt gần nhất.",
+    "sampleGuidance": [
+      "Метро находится...",
+      "Идите прямо...",
+      "Потом поверните..."
+    ]
+  }
+}

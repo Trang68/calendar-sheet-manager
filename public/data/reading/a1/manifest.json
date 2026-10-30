@@ -198,5 +198,55 @@
     "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
     "topic": "Tổng ôn toàn diện kiến thức & Bứt phá năng lực TRKI A1",
     "questionCount": 10
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "В гостинице: Регистрация и проживание",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Khách sạn, Nhận phòng & Tiện nghi phòng",
+    "questionCount": 2
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "На почте: Открытки и посылки",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Bưu điện: Gửi bưu thiếp, thư từ & bưu phẩm",
+    "questionCount": 1
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "В кинотеатре: Мой любимый фильм",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Giải trí: Đi xem phim và rạp chiếu phim",
+    "questionCount": 1
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Дружба и совместные увлечения",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "12 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Tình bạn & Các hoạt động giải trí yêu thích",
+    "questionCount": 1
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоги A1: Я готов говорить и учиться дальше!",
+    "badge": "A1 Đọc hiểu",
+    "readingTime": "15 phút",
+    "source": "Giáo trình tiếng Nga A1 Chuẩn Quốc Tế (TRKI)",
+    "topic": "Tổng kết A1: Đánh giá thành quả và bước tiếp lên A2",
+    "questionCount": 1
   }
 ]

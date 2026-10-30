@@ -1,0 +1,56 @@
+{
+  "id": 9,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Заявление преподавателю о пропуске занятий",
+  "writingTime": "20 phút",
+  "topic": "Viết đơn xin phép vắng học ngắn gọn gửi thầy cô giáo",
+  "targetWordRange": [
+    45,
+    65
+  ],
+  "task": "Bạn bị sốt cảm cúm không thể đến lớp vào sáng mai. Hãy viết thư điện tử gửi giảng viên xin phép nghỉ học và xin bài tập tự ôn.",
+  "requirements": [
+    "Lời chào kính trọng tới giảng viên",
+    "Trình bày lý do vắng mặt (bị ốm, cảm sốt) và thời gian nghỉ",
+    "Xin tài liệu bài giảng và bài tập về nhà để tự học",
+    "Lời cảm ơn và ký tên đầy đủ mã lớp"
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемая Анна Сергеевна!",
+      "vi": "Kính gửi cô Anna Sergeevna!"
+    },
+    {
+      "ru": "К сожалению, я заболел и не смогу прийти...",
+      "vi": "Rất tiếc là em bị ốm nên không thể đến lớp..."
+    },
+    {
+      "ru": "Обязательно выполню все домашние задания.",
+      "vi": "Em nhất định sẽ hoàn thành toàn bộ bài tập về nhà."
+    },
+    {
+      "ru": "С уважением...",
+      "vi": "Kính thư..."
+    }
+  ],
+  "modelAnswer": "Уважаемая Анна Сергеевна!\n\nК сожалению, я сильно простудился и заболел, поэтому не смогу присутствовать на практических занятиях по русскому языку завтра, 20 ноября.\n\nВрач назначил мне постельный режим на три дня. Справку из поликлиники я обязательно принесу на следующий урок. Вышлите, пожалуйста, список домашних заданий.\n\nС уважением,\nСтудент группы 102 Нам",
+  "modelWordCount": 51,
+  "rubric": [
+    {
+      "criteria": "Tính trang trọng & Phép lịch sự",
+      "weight": "40%",
+      "desc": "Xưng hô đúng tên đệm (Имя Отчество), câu văn nhã nhặn."
+    },
+    {
+      "criteria": "Ngữ pháp lý do & Thời gian",
+      "weight": "35%",
+      "desc": "Sử dụng đúng liên từ chỉ nguyên nhân (поэтому, так как)."
+    },
+    {
+      "criteria": "Cấu trúc thư tín học vụ",
+      "weight": "25%",
+      "desc": "Đề ngày tháng, nêu rõ lớp và cam kết nộp giấy tờ."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 7,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Научно-популярный подкаст: Изменение климата",
+  "listeningTime": "15 phút",
+  "topic": "Podcast khoa học: Biến đổi khí hậu và tầng đất đóng băng vĩnh cửu",
+  "dialogue": [
+    {
+      "speaker": "Ведущий",
+      "ru": "В эфире подкаст «Планета Земля». Сегодня обсуждаем таяние вечной мерзлоты в Сибири и Арктике.",
+      "vi": "Đang phát sóng podcast 'Hành tinh Trái Đất'. Hôm nay chúng ta thảo luận về hiện tượng tan chảy tầng đất đóng băng vĩnh cửu ở Siberi và Bắc Cực."
+    },
+    {
+      "speaker": "Климатолог",
+      "ru": "Потепление в северных широтах идёт в два-три раза быстрее, чем в среднем по планете. Это несёт серьёзные риски для инфраструктуры городов.",
+      "vi": "Sự ấm lên ở các vĩ độ phương Bắc diễn ra nhanh gấp hai đến ba lần mức trung bình toàn cầu. Điều này mang lại rủi ro nghiêm trọng cho cơ sở hạ tầng đô thị."
+    },
+    {
+      "speaker": "Ведущий",
+      "ru": "Какие конкретные меры предпринимают учёные и инженеры?",
+      "vi": "Các nhà khoa học và kỹ sư đang thực hiện những biện pháp cụ thể nào?"
+    },
+    {
+      "speaker": "Климатолог",
+      "ru": "Внедряются термостабилизаторы грунтов, ведётся спутниковый мониторинг фундаментов зданий и промышленных трубопроводов.",
+      "vi": "Họ lắp đặt các thiết bị ổn định nhiệt nền móng đất, đồng thời giám sát qua vệ tinh chân móng công trình và đường ống công nghiệp."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Потепление в северных широтах идёт быстрее, чем в среднем по планете.",
+    "hint": "Nhận thức hiện tượng tốc độ nóng lên toàn cầu."
+  },
+  "questions": [
+    {
+      "id": "b1_l7_q1",
+      "prompt": "Во сколько раз быстрее теплеет климат в северных регионах?",
+      "hint": "Xem tốc độ chênh lệch ở đoạn phân tích của nhà khí hậu học.",
+      "options": [
+        {
+          "key": "A",
+          "text": "В два-три раза быстрее"
+        },
+        {
+          "key": "B",
+          "text": "В десять раз медленнее"
+        },
+        {
+          "key": "C",
+          "text": "Температура вообще не меняется"
+        },
+        {
+          "key": "D",
+          "text": "На один процент"
+        }
+      ],
+      "ans": "A",
+      "explain": "Климатолог отметил, что потепление на севере идёт в 2–3 раза интенсивнее."
+    }
+  ]
+}

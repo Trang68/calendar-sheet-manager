@@ -1,0 +1,56 @@
+{
+  "id": 7,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Развёрнутый отзыв на спектакль для журнала",
+  "writingTime": "40 phút",
+  "topic": "Phê bình nghệ thuật: Đánh giá vở diễn sân khấu kịch cổ điển",
+  "targetWordRange": [
+    105,
+    140
+  ],
+  "task": "Hãy viết một bài bình luận sâu sắc (105–140 từ) cho chuyên mục văn hóa về vở kịch cổ điển mà bạn đã thưởng thức tại nhà hát.",
+  "requirements": [
+    "Tên nhà hát, đạo diễn và tác phẩm sân khấu",
+    "Phân tích lối dàn dựng cảnh trí và thủ pháp nghệ thuật của đạo diễn",
+    "Đánh giá diễn xuất của diễn viên thủ vai chính",
+    "Cảm nghĩ về thông điệp tư tưởng và khuyến nghị cho khán giả"
+  ],
+  "cliches": [
+    {
+      "ru": "На сцене прославленного театра состоялась премьера...",
+      "vi": "Trên sân khấu nhà hát danh tiếng đã diễn ra buổi công diễn..."
+    },
+    {
+      "ru": "Постановка поражает оригинальным режиссёрским решением.",
+      "vi": "Vở kịch gây ấn tượng mạnh bởi giải pháp đạo diễn độc đáo."
+    },
+    {
+      "ru": "Актёрская игра отличается непревзойдённым психологизмом.",
+      "vi": "Lối diễn xuất của diễn viên nổi bật với chiều sâu tâm lý tuyệt hảo."
+    },
+    {
+      "ru": "Спектакль заслуживает самых высоких оценок.",
+      "vi": "Vở diễn xứng đáng nhận được những đánh giá cao nhất."
+    }
+  ],
+  "modelAnswer": "В прошлые выходные мне посчастливилось побывать на спектакле «Вишнёвый сад» по бессмертной комедии А. П. Чехова на исторической сцене Малого театра.\n\nРежиссёрская трактовка классического произведения оказалась невероятно чуткой и современной. Сценография спектакля построена на тонкой игре света и минимализме: белые цветущие ветви вишни контрастируют с надвигающейся пустотой вырубленного сада. Игра исполнительницы роли Раневской поразила меня глубоким трагизмом и душевным надрывом героини, не способной примириться с неумолимым наступлением новой буржуазной эпохи.\n\nМузыкальное оформление усиливает чувство светлой печали об уходящей дворянской культуре. Этот спектакль заставляет глубоко задуматься о быстротечности времени и верности своим корням. Настоятельно рекомендую постановку всем ценителям классики!",
+  "modelWordCount": 118,
+  "rubric": [
+    {
+      "criteria": "Năng lực cảm thụ & Phân tích nghệ thuật",
+      "weight": "40%",
+      "desc": "Sử dụng từ vựng sân khấu chuyên nghiệp (сценография, трагизм, сценическое воплощение)."
+    },
+    {
+      "criteria": "Tính biểu cảm và liên kết đoạn",
+      "weight": "35%",
+      "desc": "Ngôn từ giàu hình tượng, câu văn trau chuốt nhịp nhàng."
+    },
+    {
+      "criteria": "Ngữ pháp câu phức B1",
+      "weight": "25%",
+      "desc": "Dùng thành thạo các cấu trúc liên từ, phân từ và trạng ngữ chỉ thể cách."
+    }
+  ]
+}

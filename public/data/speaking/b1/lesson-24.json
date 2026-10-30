@@ -1,0 +1,32 @@
+{
+  "id": 24,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Интернет вещей и умные города: Угроза или благо?",
+  "speakingTime": "20 phút",
+  "topic": "Kỷ nguyên IoT: Tiện ích thành phố thông minh và bài toán bảo mật thông tin",
+  "intro": "Luyện nói về thiết bị thông minh kết nối mạng (Smart Home, Smart City) và rủi ro rò rỉ dữ liệu cá nhân.",
+  "shadowingPhrases": [
+    {
+      "text": "Техноло́гии «у́много до́ма» суще́ственно повыша́ют бытово́й комфор́т и энергоэффекти́вность.",
+      "meaning": "Công nghệ 'nhà thông minh' nâng cao rõ rệt sự tiện nghi sinh hoạt và hiệu quả tiết kiệm năng lượng.",
+      "phonetic": "Tekh-na-lo-gii um-na-va do-ma su-shchest-ven-na pa-vy-sha-yut by-ta-voy kam-fort i e-ner-ga-ef-fek-tiv-nast'.",
+      "tips": "Từ ghép 'энергоэффективность' (hiệu suất sử dụng năng lượng)."
+    },
+    {
+      "text": "Защи́та персона́льных да́нных стано́вится ключево́й зада́чей цифрово́й безопа́сности.",
+      "meaning": "Bảo vệ dữ liệu cá nhân đang trở thành nhiệm vụ cốt lõi của an ninh mạng.",
+      "phonetic": "Za-shchi-ta per-sa-nal'-nykh dan-nykh sta-no-vit-sya klyu-che-voy za-da-chey tsif-ra-voy be-za-pas-nas-ti.",
+      "tips": "Cụm 'персональные данные' (dữ liệu thông tin cá nhân)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Nêu quan điểm của bạn: Chúng ta có đang trao quá nhiều quyền kiểm soát đời sống cho máy móc?",
+    "sampleGuidance": [
+      "Những tiện ích không thể chối cãi của hệ thống cảm biến thông minh và AI trong đô thị.",
+      "Những mối lo ngại về quyền riêng tư và khả năng bị tấn công mạng làm tê liệt hạ tầng.",
+      "Giải pháp cân bằng giữa tiện nghi công nghệ và an toàn thông tin."
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": 13,
+  "level": "A2",
+  "skill": "listening",
+  "title": "В парикмахерской: Обсуждение стрижки",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Trao đổi kiểu tóc tại tiệm cắt tóc",
+  "dialogue": [
+    {
+      "speaker": "Мастер",
+      "ru": "Здравствуйте! Присаживайтесь в кресло. Как будем стричься?",
+      "vi": "Xin chào! Mời bạn ngồi vào ghế. Hôm nay chúng ta cắt kiểu gì đây bạn?"
+    },
+    {
+      "speaker": "Клиент",
+      "ru": "Здравствуйте! Сделайте, пожалуйста, покороче по бокам и сзади, а сверху оставьте немного длины.",
+      "vi": "Chào anh! Cắt giùm em ngắn hai bên mai và sau gáy, còn phần trên đỉnh đầu để dài một chút nhé."
+    },
+    {
+      "speaker": "Мастер",
+      "ru": "Хорошо, виски прямые или косые делать?",
+      "vi": "Được rồi, phần thái dương cắt vuông thẳng hay vát xéo?"
+    },
+    {
+      "speaker": "Клиент",
+      "ru": "Прямые, пожалуйста. И помойте голову перед стрижкой.",
+      "vi": "Cắt thẳng ạ. Và nhờ anh gội đầu cho em trước khi cắt nhé."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Сделайте покороче по бокам, а сверху оставьте длину.",
+    "hint": "Lắng nghe yêu cầu của khách hàng về độ dài tóc."
+  },
+  "questions": [
+    {
+      "id": "a2_l13_q1",
+      "prompt": "Какую стрижку попросил клиент?",
+      "hint": "Xem yêu cầu về hai bên và phần trên đỉnh đầu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Побрить наголо полностью"
+        },
+        {
+          "key": "B",
+          "text": "Покороче по бокам и сзади, оставить длину сверху"
+        },
+        {
+          "key": "C",
+          "text": "Только покрасить волосы"
+        },
+        {
+          "key": "D",
+          "text": "Ничего не стричь"
+        }
+      ],
+      "ans": "B",
+      "explain": "Клиент попросил классическую аккуратную форму: короче по бокам и длиннее сверху."
+    }
+  ]
+}

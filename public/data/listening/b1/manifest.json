@@ -25,5 +25,203 @@
     "listeningTime": "15 phút",
     "topic": "Tọa đàm: Bảo vệ môi trường đô thị và lối sống xanh",
     "questionCount": 1
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Лекция в университете: История освоения космоса",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Hội thoại học thuật: Bài giảng lịch sử thám hiểm vũ trụ",
+    "questionCount": 1
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Интервью с молодым IT-предпринимателем о стартапах",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Phỏng vấn truyền hình: Khởi nghiệp công nghệ và đổi mới sáng tạo",
+    "questionCount": 1
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Экскурсия по Третьяковской галерее: Шедевры живописи",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Thuyết minh nghệ thuật: Danh tác hội họa Nga thế kỷ XIX",
+    "questionCount": 1
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Научно-популярный подкаст: Изменение климата",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Podcast khoa học: Biến đổi khí hậu và tầng đất đóng băng vĩnh cửu",
+    "questionCount": 1
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Обсуждение договора аренды коммерческой недвижимости",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Đàm phán thương mại: Ký kết hợp đồng thuê văn phòng",
+    "questionCount": 1
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Радиодебаты: Дистанционное образование — за и против",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Tranh luận phát thanh: Lợi ích và hạn chế của học tập trực tuyến",
+    "questionCount": 1
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Репортаж с международного кинофестиваля в Москве",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Phóng sự hiện trường: Điện ảnh và giải thưởng liên hoan phim",
+    "questionCount": 1
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Консультация с юристом: Оформление трудового договора",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Pháp lý lao động: Quyền lợi người lao động nước ngoài tại Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Экскурсия по Суздалю: Белокаменные храмы",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Du lịch tâm linh: Thuyết minh di sản kiến trúc thành phố cổ",
+    "questionCount": 1
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Встреча книжного клуба: Повесть Пушкина «Метель»",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Hội luận văn chương: Phân tích tư tưởng số phận trong tác phẩm kinh điển",
+    "questionCount": 1
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Пресс-конференция перед запуском корабля к МКС",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Họp báo vũ trụ: Chuẩn bị phóng tàu có người lái lên trạm không gian",
+    "questionCount": 1
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Консультация в отделе аспирантуры: Тема диссертации",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Học thuật cao học: Trao đổi với giáo sư hướng dẫn về đề tài nghiên cứu",
+    "questionCount": 1
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Подкаст об искусстве: Архитектура конструктивизма",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Lịch sử nghệ thuật: Trào lưu Kiến trúc Tiền phong Avant-garde Nga",
+    "questionCount": 1
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Интервью с шеф-поваром: Секреты современной кухни",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Ẩm thực cao cấp: Hiện đại hóa các công thức nấu ăn dân gian",
+    "questionCount": 1
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Дискуссия на семинаре: Влияние искусственного интеллекта",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Hội thảo kinh tế xã hội: Biến động thị trường việc làm trước làn sóng AI",
+    "questionCount": 1
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Сюжет новостей: Открытие нового заповедника в Сибири",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Bản tin truyền hình: Thành lập khu bảo tồn thiên nhiên bảo vệ loài quý hiếm",
+    "questionCount": 1
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Телефонные переговоры с поставщиком оборудования",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Đàm phán kinh doanh: Thảo luận tiến độ giao hàng và điều kiện thanh toán",
+    "questionCount": 1
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Врачебная консультация: Профилактика переутомления",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Y học dự phòng: Tư vấn của bác sĩ về giấc ngủ và phục hồi thể lực",
+    "questionCount": 1
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Радиопрограмма: Театральные премьеры сезона",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Văn hóa nghệ thuật: Giới thiệu các tác phẩm sân khấu đỉnh cao",
+    "questionCount": 1
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Диалог на ярмарке вакансий: Собеседование в компанию",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Tuyển dụng nhân sự: Phỏng vấn sơ tuyển chuyên viên phân tích dữ liệu",
+    "questionCount": 1
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Экскурсия на озеро Селигер: Экотуризм",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Du lịch sinh thái: Vẻ đẹp hoang sơ của hồ băng tích Seliger",
+    "questionCount": 1
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое занятие курса B1: Практикум ТРКИ-1",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Luyện nghe tổng hợp: Chinh phục субтест «Аудирование» chuẩn TRKI-1",
+    "questionCount": 1
   }
 ]

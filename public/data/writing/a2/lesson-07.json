@@ -1,0 +1,56 @@
+{
+  "id": 7,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо родителям о жизни и учёбе в России",
+  "writingTime": "25 phút",
+  "topic": "Viết thư gửi bố mẹ cập nhật tình hình ăn ở và học tập nơi xứ người",
+  "targetWordRange": [
+    60,
+    90
+  ],
+  "task": "Hãy viết một bức thư (60–90 từ) gửi về quê nhà cho bố mẹ, kể về cuộc sống du học sinh của bạn.",
+  "requirements": [
+    "Lời chào yêu thương mở đầu gửi bố mẹ",
+    "Báo cáo tình hình sức khỏe và thời tiết nơi bạn đang ở",
+    "Kể về việc học tiếng Nga trên giảng đường và bạn bè cùng lớp",
+    "Lời dặn dò bố mẹ giữ gìn sức khỏe"
+  ],
+  "cliches": [
+    {
+      "ru": "Дорогие мама и папа!",
+      "vi": "Bố mẹ yêu quý của con!"
+    },
+    {
+      "ru": "У меня всё в порядке.",
+      "vi": "Con ở đây mọi sự đều tốt đẹp cả."
+    },
+    {
+      "ru": "Я успешно сдал первые зачёты.",
+      "vi": "Con đã vượt qua những bài thi điều kiện đầu tiên."
+    },
+    {
+      "ru": "Крепко вас обнимаю!",
+      "vi": "Con ôm bố mẹ thật chặt!"
+    }
+  ],
+  "modelAnswer": "Дорогие мама и папа!\n\nПишу вам из Москвы. У меня всё хорошо со здоровьем, питаюсь регулярно и тепло одеваюсь, так как на улице уже выпал первый снег.\n\nЗанятия в университете очень интересные. Мы каждый день учим новые русские слова, читаем тексты и тренируем диалоги. Мои преподаватели очень добрые и всегда помогают.\n\nНе волнуйтесь за меня. Берегите себя и не болейте!\n\nКрепко вас обнимаю,\nВаш сын Нам",
+  "modelWordCount": 65,
+  "rubric": [
+    {
+      "criteria": "Tình cảm & Nội dung bài viết",
+      "weight": "40%",
+      "desc": "Thể hiện sự hiếu thảo, cung cấp tin tức chân thực về học tập."
+    },
+    {
+      "criteria": "Ngữ pháp & Chia động từ",
+      "weight": "35%",
+      "desc": "Sử dụng đúng thì hiện tại và các phó từ chỉ tần suất."
+    },
+    {
+      "criteria": "Thể thức thư từ gia đình",
+      "weight": "25%",
+      "desc": "Mở đầu và kết thúc ấm áp đúng văn phong người Việt viết tiếng Nga."
+    }
+  ]
+}

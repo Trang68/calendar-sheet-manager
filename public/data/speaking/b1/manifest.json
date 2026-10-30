@@ -25,5 +25,203 @@
     "speakingTime": "20 phút",
     "topic": "Vấn đáp TRKI-1: Kể về tác phẩm văn học hoặc bộ phim yêu thích",
     "questionCount": 2
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Традиции и современность: Как меняется институт семьи?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Xã hội học: Chuyển biến giá trị gia đình truyền thống và hiện đại",
+    "questionCount": 2
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Экологическая ответственность: Мой вклад в сохранение планеты",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Ý thức môi trường: Hành động thiết thực bảo vệ hệ sinh thái",
+    "questionCount": 2
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Искусство в моей жизни: Музыка, живопись или театр",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Mỹ học & Tâm hồn: Vai trò của nghệ thuật trong việc thanh lọc tâm trí",
+    "questionCount": 2
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Плюсы и минусы глобализации и массового туризма",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Toàn cầu hóa: Cơ hội giao lưu kinh tế và thách thức bảo tồn bản sắc",
+    "questionCount": 2
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Монолог: Мой опыт преодоления языкового барьера",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Tâm lý học ngôn ngữ: Hành trình phá vỡ sự rụt rè khi nói ngoại ngữ",
+    "questionCount": 2
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Дискуссия: Чтение печатных книг или электронные ридеры?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Văn hóa đọc số: So sánh sách giấy in truyền thống và thiết bị đọc e-book",
+    "questionCount": 2
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Презентация: Историческая личность, которая меня вдохновляет",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Nhân vật lịch sử: Tấm gương cống hiến và nguồn cảm hứng bất tận",
+    "questionCount": 2
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Профессии будущего: Какие навыки станут ключевыми?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Tương lai nghề nghiệp: Kỹ năng mềm, trí tuệ cảm xúc và chuyển đổi số",
+    "questionCount": 2
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Культурный шок: Трудности адаптации иностранцев",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Hòa nhập quốc tế: Vượt qua cú sốc văn hóa và rào cản tập quán",
+    "questionCount": 2
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Роль спорта в формировании характера человека",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Tâm lý học thể thao: Rèn luyện kỷ luật, bản lĩnh và tinh thần đồng đội",
+    "questionCount": 2
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Путешествие мечты: По Транссибирской магистрали",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Du lịch khám phá: Cung đường xe lửa huyền thoại xuyên qua 8 múi giờ",
+    "questionCount": 2
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Архитектура города: Комфортная среда для человека",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Đô thị học: Cân bằng giữa bảo tồn di sản cổ và phát triển hiện đại",
+    "questionCount": 2
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Наука и этика: Границы экспериментов и клонирования",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Đạo đức sinh học: Ranh giới đạo đức của công nghệ gen và AI",
+    "questionCount": 2
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Здоровый образ жизни: Мода или осознанная необходимость?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Sống lành mạnh: Động lực nội tại hay sự chạy theo trào lưu số đông",
+    "questionCount": 2
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Русские праздники: Духовный смысл и этикет",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Văn hóa phong tục: Chiều sâu tâm linh của lễ hội truyền thống Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Мой любимый писатель или поэт: Темы творчества",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Văn học Nga: Phân tích tư tưởng nghệ thuật của Pushkin, Lermontov hay Dostoevsky",
+    "questionCount": 2
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Влияние кинематографа на ценности молодёжи",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Nghệ thuật thứ bảy: Tác động của phim ảnh đối với nhân sinh quan người trẻ",
+    "questionCount": 2
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Образование длиною в жизнь (Lifelong Learning)",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Học tập suốt đời: Khả năng thích ứng và tự đổi mới trong thế giới biến động",
+    "questionCount": 2
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Волонтёрство и благотворительность: Личный опыт",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Thiện nguyện cộng đồng: Hành động vì xã hội và sự trưởng thành nội tâm",
+    "questionCount": 2
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Межкультурная коммуникация: Как избегать недопонимания?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Ngoại giao nhân dân: Nghệ thuật thấu hiểu và tôn trọng sự khác biệt văn hóa",
+    "questionCount": 2
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Интернет вещей и умные города: Угроза или благо?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Kỷ nguyên IoT: Tiện ích thành phố thông minh và bài toán bảo mật thông tin",
+    "questionCount": 2
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Выпускная речь уровня B1: Мои достижения и горизонты",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Diễn văn tốt nghiệp TRKI-1: Chặng đường chinh phục ngôn ngữ Nga học thuật",
+    "questionCount": 2
   }
 ]

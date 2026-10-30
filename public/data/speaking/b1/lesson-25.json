@@ -1,0 +1,32 @@
+{
+  "id": 25,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Выпускная речь уровня B1: Мои достижения и горизонты",
+  "speakingTime": "20 phút",
+  "topic": "Diễn văn tốt nghiệp TRKI-1: Chặng đường chinh phục ngôn ngữ Nga học thuật",
+  "intro": "Thực hành bài phát biểu diễn cảm trang trọng, tổng kết toàn diện 25 bài học Nói cấp độ B1.",
+  "shadowingPhrases": [
+    {
+      "text": "Освое́ние ру́сского языка́ на у́ровне B1 откры́ло передо мно́й но́вые академи́ческие перспекти́вы.",
+      "meaning": "Việc làm chủ tiếng Nga ở cấp độ B1 đã mở ra trước mắt tôi những triển vọng học thuật vô cùng xán lạn.",
+      "phonetic": "As-va-ye-ni-ye rus-ska-va ya-zy-ka na u-rov-ne be a-din at-kry-la pe-re-da mnoy no-vy-ye a-ka-de-mi-ches-ki-ye pers-pek-ti-vy.",
+      "tips": "Ngữ điệu trang trọng, đĩnh đạc của bài phát biểu tổng kết."
+    },
+    {
+      "text": "Я выража́ю глубо́кую призна́тельность на́шим настав́никам за му́дрость и терпе́ние!",
+      "meaning": "Tôi xin bày tỏ lòng biết ơn sâu sắc nhất tới các thầy cô giáo hướng dẫn vì sự thông tuệ và kiên nhẫn khôn cùng!",
+      "phonetic": "Ya vy-ra-zha-yu glu-bo-ku-yu priz-na-tel'-nast' na-shim nas-tav-ni-kam za mud-rast' i ter-pe-ni-ye!",
+      "tips": "Cấu trúc tri ân chính thức: 'выражать признательность кому за что'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Hãy trình bày bài diễn văn tổng kết tốt nghiệp khóa học Nói B1 (3 phút).",
+    "sampleGuidance": [
+      "Điểm lại những thử thách bạn đã vượt qua (ngữ pháp phức hợp, từ vựng trừu tượng, ngữ điệu biểu cảm).",
+      "Sự tự tin hiện tại của bạn khi tranh luận, thuyết trình và viết bài luận học thuật.",
+      "Cam kết tiếp tục rèn luyện để bước lên đỉnh cao B2 và cống hiến cho tình hữu nghị hai nước."
+    ]
+  }
+}

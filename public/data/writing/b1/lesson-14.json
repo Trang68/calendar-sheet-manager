@@ -1,0 +1,57 @@
+{
+  "id": 14,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Мотивационное письмо на образовательный грант",
+  "writingTime": "45 phút",
+  "topic": "Hồ sơ du học: Thư bày tỏ nguyện vọng xin học bổng toàn phần",
+  "targetWordRange": [
+    110,
+    145
+  ],
+  "task": "Bạn đang nộp hồ sơ xin học bổng chính phủ để theo học chương trình Thạc sĩ tại Nga. Hãy viết thư động lực (Motivation Letter) thuyết phục hội đồng xét duyệt.",
+  "requirements": [
+    "Lời chào Hội đồng Tuyển chọn học bổng quốc tế",
+    "Mục tiêu học thuật và lý do lựa chọn ngành học cụ thể",
+    "Những thành tích xuất sắc đã đạt được trong thời gian đại học",
+    "Kế hoạch đóng góp cho mối quan hệ song phương sau khi tốt nghiệp",
+    "Lời kết cam kết nỗ lực học tập"
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемые члены отборочной комиссии!",
+      "vi": "Kính gửi quý thành viên Hội đồng Tuyển chọn!"
+    },
+    {
+      "ru": "Настоящим письмом выражаю стремление поступить...",
+      "vi": "Bằng bức thư này tôi xin bày tỏ khát khao được theo học..."
+    },
+    {
+      "ru": "Обучение в России откроет передо мной уникальные горизонты.",
+      "vi": "Học tập tại Nga sẽ mở ra trước mắt tôi những chân trời độc nhất vô nhị."
+    },
+    {
+      "ru": "Моя цель — способствовать развитию сотрудничества между нашими странами.",
+      "vi": "Mục tiêu của tôi là đóng góp cho sự phát triển hợp tác giữa hai quốc gia."
+    }
+  ],
+  "modelAnswer": "Уважаемые члены отборочной комиссии!\n\nНастоящим письмом выражаю своё искреннее желание получить государственную стипендию для обучения в магистратуре по программе «Международное право» в Санкт-Петербургском государственном университете.\n\nМой интерес к юриспруденции сформировался в годы бакалавриата, который я окончил с красным дипломом во Вьетнаме. В течение четырёх лет я активно занимался научной работой, опубликовал три статьи в рецензируемых журналах и стал призёром национальной юридической олимпиады. Российская школа права славится своими фундаментальными традициями и высоким авторитетом во всём мире.\n\nПолученные в России знания и исследовательский опыт позволят мне стать высококлассным экспертом в сфере международного арбитража. Моя долгосрочная цель — содействовать укреплению правового фундамента торгово-экономического партнёрства между Вьетнамом и Российской Федерацией.\n\nОбещаю приложить все силы для достижения выдающихся академических результатов и подтвердить высокое доверие комиссии.\n\nС глубоким почтением,\nНгуен Тхи Лан",
+  "modelWordCount": 134,
+  "rubric": [
+    {
+      "criteria": "Tính thuyết phục & Động lực học tập",
+      "weight": "40%",
+      "desc": "Nêu bật mục tiêu rõ ràng, kế hoạch cống hiến thực tế, không sáo rỗng."
+    },
+    {
+      "criteria": "Dẫn chứng thành tích học thuật",
+      "weight": "35%",
+      "desc": "Chứng minh bằng kết quả: bằng đỏ, bài báo nghiên cứu, giải thưởng."
+    },
+    {
+      "criteria": "Ngữ pháp & Hành văn trang nhã",
+      "weight": "25%",
+      "desc": "Văn phong hùng hồn, tự tin, chuẩn mực tiếng Nga học thuật."
+    }
+  ]
+}

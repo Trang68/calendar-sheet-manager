@@ -1,0 +1,63 @@
+{
+  "id": 19,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Бронирование столика на день рождения",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đặt bàn tiệc sinh nhật tại nhà hàng",
+  "dialogue": [
+    {
+      "speaker": "Хостес",
+      "ru": "Ресторан «Суздаль», добрый вечер! Слушаю вас.",
+      "vi": "Nhà hàng 'Suzdal', xin chào quý khách! Tôi có thể hỗ trợ gì ạ?"
+    },
+    {
+      "speaker": "Гость",
+      "ru": "Добрый вечер! Я хочу забронировать столик на субботу на шесть человек на 19:00.",
+      "vi": "Chào chị! Tôi muốn đặt một bàn cho 6 người vào tối thứ Bảy lúc 19:00."
+    },
+    {
+      "speaker": "Хостес",
+      "ru": "Прекрасно. У вас праздник? Мы дарим именинникам десерт и скидку 10%.",
+      "vi": "Tuyệt quá. Nhà mình có dịp lễ gì không ạ? Nhà hàng xin tặng món tráng miệng và giảm 10% cho tiệc sinh nhật ạ."
+    },
+    {
+      "speaker": "Гость",
+      "ru": "Да, у моей подруги день рождения! Забронируйте, пожалуйста, столик у окна.",
+      "vi": "Vâng, hôm đó là sinh nhật bạn tôi! Nhờ chị xếp giúp một bàn cạnh cửa sổ nhé."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Мы дарим именинникам праздничный десерт и скидку десять процентов.",
+    "hint": "Ưu đãi đặc biệt của nhà hàng dành cho tiệc sinh nhật."
+  },
+  "questions": [
+    {
+      "id": "a2_l19_q1",
+      "prompt": "Какой подарок ресторан делает гостям в честь дня рождения?",
+      "hint": "Xem ưu đãi của quản lý nhà hàng.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Бесплатный торт и скидку 10%"
+        },
+        {
+          "key": "B",
+          "text": "Билеты в кино"
+        },
+        {
+          "key": "C",
+          "text": "Бесплатный обед на месяц"
+        },
+        {
+          "key": "D",
+          "text": "Никаких подарков"
+        }
+      ],
+      "ans": "A",
+      "explain": "Ресторан дарит десерт и 10% скидку именинникам."
+    }
+  ]
+}

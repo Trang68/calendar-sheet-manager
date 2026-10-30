@@ -1,0 +1,32 @@
+{
+  "id": 22,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Волонтёрство и благотворительность: Личный опыт",
+  "speakingTime": "20 phút",
+  "topic": "Thiện nguyện cộng đồng: Hành động vì xã hội và sự trưởng thành nội tâm",
+  "intro": "Luyện nói về niềm hạnh phúc khi được sẻ chia, giúp đỡ những số phận kém may mắn và bảo vệ động vật.",
+  "shadowingPhrases": [
+    {
+      "text": "Бескоры́стная по́мощь бли́жнему де́лает на́ше о́бщество гума́ннее и сплочённее.",
+      "meaning": "Sự giúp đỡ vị tha đối với tha nhân làm cho xã hội chúng ta trở nên nhân văn và gắn kết hơn.",
+      "phonetic": "Bes-ka-rys-na-ya po-moshch' bliz-nye-mu de-la-yet na-she op-shchest-va gu-man-ne-ye i spla-chyon-ne-ye.",
+      "tips": "Tính từ 'сплочённый' chỉ sự đồng lòng, đoàn kết keo sơn."
+    },
+    {
+      "text": "Уча́стие в волонтёрских прое́ктах даёт бесце́нный о́пыт взаимоде́йствия.",
+      "meaning": "Việc tham gia vào các dự án tình nguyện mang lại kinh nghiệm tương tác xã hội vô giá.",
+      "phonetic": "U-chas-ti-ye v va-lan-tyor-skikh pra-yek-takh da-yot bes-tsen-ny o-pyt vza-i-ma-dey-stvi-ya.",
+      "tips": "Từ 'взаимодействие' chỉ sự tương tác, phối hợp nhịp nhàng."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Kể về một hoạt động từ thiện hoặc phong trào thanh niên tình nguyện bạn từng tham gia.",
+    "sampleGuidance": [
+      "Mục đích của chương trình thiện nguyện đó là gì (giúp trẻ em, trồng cây, dọn rác bãi biển)?",
+      "Nhiệm vụ cụ thể của bạn và những kỷ niệm đáng nhớ cùng đồng đội.",
+      "Trải nghiệm này đã thay đổi thế giới quan và trái tim bạn ra sao?"
+    ]
+  }
+}

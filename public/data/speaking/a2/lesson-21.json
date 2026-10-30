@@ -1,0 +1,32 @@
+{
+  "id": 21,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Подарки: Что я люблю дарить и получать",
+  "speakingTime": "15 phút",
+  "topic": "Văn hóa quà tặng: Lựa chọn quà, ý nghĩa và cảm xúc khi trao nhận",
+  "intro": "Luyện diễn đạt tấm lòng thành khi tặng quà sinh nhật, ngày lễ và cách đón nhận quà lịch thiệp.",
+  "shadowingPhrases": [
+    {
+      "text": "Я считаю́, что лу́чший пода́рок — э́то пода́рок, сде́ланный с душо́й.",
+      "meaning": "Tôi quan niệm rằng món quà tuyệt vời nhất chính là món quà trao tặng bằng cả tấm lòng.",
+      "phonetic": "Ya schi-ta-yu, shto luch-shiy pa-da-rak — e-ta pa-da-rak, sde-lan-ny s du-shoy.",
+      "tips": "Cụm 'с душой' nghĩa là bằng cả tâm huyết và tình cảm chân thành."
+    },
+    {
+      "text": "Всегда́ прия́тно не то́лько получа́ть, но и дари́ть пода́рки бли́зким.",
+      "meaning": "Bao giờ cũng vậy, không chỉ nhận quà mà tự tay tặng quà cho người thân cũng thật hạnh phúc.",
+      "phonetic": "Vseg-da pri-yat-na ne tol'-ka pa-lu-chat', no i da-rit' pa-dar-ki bliz-kim.",
+      "tips": "Cặp liên từ 'не только..., но и...' (không những... mà còn...)."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về món quà ý nghĩa nhất bạn từng tặng ai đó hoặc từng được nhận.",
+    "sampleGuidance": [
+      "Món quà đó là gì và nhân dịp ngày kỷ niệm nào?",
+      "Tại sao món quà đó lại mang ý nghĩa đặc biệt đối với bạn?",
+      "Cảm xúc của người nhận khi bóc quà lúc ấy như thế nào?"
+    ]
+  }
+}

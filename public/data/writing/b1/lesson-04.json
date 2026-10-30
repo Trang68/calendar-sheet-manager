@@ -1,0 +1,57 @@
+{
+  "id": 4,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Официальное письмо-запрос в оргкомитет научной конференции",
+  "writingTime": "40 phút",
+  "topic": "Văn bản học thuật: Thư gửi ban tổ chức hội thảo khoa học quốc tế",
+  "targetWordRange": [
+    100,
+    135
+  ],
+  "task": "Bạn là nghiên cứu sinh muốn đăng ký tham gia báo cáo tại Hội thảo Khoa học Quốc tế của trường đại học. Hãy viết một bức thư chính thức gửi ban tổ chức để đăng ký và hỏi về thủ tục gửi bài báo cáo.",
+  "requirements": [
+    "Lời chào trang trọng gửi Ban Tổ chức Hội thảo",
+    "Tự giới thiệu học vị, chuyên ngành và trường đại học đang theo học",
+    "Trình bày tên đề tài tham luận và tóm tắt ngắn gọn tính cấp thiết của nghiên cứu",
+    "Hỏi về hạn nộp toàn văn bài báo và yêu cầu định dạng kỹ thuật (formatting)",
+    "Lời cảm ơn và chữ ký chuẩn mực ngoại giao học thuật"
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемые члены организационного комитета!",
+      "vi": "Kính gửi quý vị thành viên Ban tổ chức!"
+    },
+    {
+      "ru": "Направляю заявку на участие в конференции...",
+      "vi": "Tôi xin gửi đơn đăng ký tham dự hội thảo..."
+    },
+    {
+      "ru": "Тема моего доклада посвящена...",
+      "vi": "Chủ đề bài tham luận của tôi dành cho..."
+    },
+    {
+      "ru": "Буду признателен за разъяснение требований к оформлению статьи.",
+      "vi": "Tôi xin chân thành cảm ơn sự giải đáp về quy cách trình bày bài viết."
+    }
+  ],
+  "modelAnswer": "Уважаемые члены организационного комитета!\n\nОбращаюсь к вам с просьбой рассмотреть мою заявку на участие в Международной научно-практической конференции «Актуальные вопросы международного сотрудничества в XXI веке».\n\nЯ являюсь аспирантом второго года обучения экономического факультета Московского государственного университета. Тема моего предполагаемого доклада — «Динамика торгово-экономических связей между Россией и Вьетнамом в условиях глобальной цифровизации». В исследовании анализируются перспективы взаимных инвестиций и развитие логистических коридоров.\n\nБуду искренне признателен, если вы вышлете детальные требования к оформлению статьи и регламент выступления. Тезисы доклада прилагаю к настоящему письму.\n\nБлагодарю за уделённое время и сотрудничество.\n\nС уважением,\nАспирант Нгуен Ван Нам",
+  "modelWordCount": 108,
+  "rubric": [
+    {
+      "criteria": "Tính trang trọng & Văn phong hành chính học thuật",
+      "weight": "40%",
+      "desc": "Sử dụng lối hành văn chuẩn mực, cấu trúc câu phức, không mắc lỗi lễ nghi."
+    },
+    {
+      "criteria": "Cấu trúc lập luận & Đầy đủ nội dung",
+      "weight": "35%",
+      "desc": "Nêu rõ đề tài nghiên cứu, viện dẫn tính cấp thiết và câu hỏi nghiệp vụ."
+    },
+    {
+      "criteria": "Ngữ pháp & Từ vựng B1",
+      "weight": "25%",
+      "desc": "Phân từ, giới từ quản cách, từ nối chuyển đoạn chuẩn xác."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 14,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Путешествие мечты: По Транссибирской магистрали",
+  "speakingTime": "20 phút",
+  "topic": "Du lịch khám phá: Cung đường xe lửa huyền thoại xuyên qua 8 múi giờ",
+  "intro": "Vận dụng vốn từ địa lý, văn hóa và phong cảnh để miêu tả một hành trình đường dài trong mơ.",
+  "shadowingPhrases": [
+    {
+      "text": "Трансси́б — э́то грандио́зный железнодоро́жный путь, соединя́ющий Евро́пу и А́зию.",
+      "meaning": "Tuyến đường sắt Xuyên Siberi là đại công trình nối liền hai châu lục Âu và Á.",
+      "phonetic": "Tran-sip — e-ta gran-di-oz-ny zhe-lez-na-da-rozh-ny put', sa-ye-di-nya-yu-shchiy Yev-ro-pu i A-zi-yu.",
+      "tips": "Sử dụng phân từ hiện tại chủ động 'соединяющий'."
+    },
+    {
+      "text": "Уви́деть ве́личественный Байка́л из окна́ по́езда — зало́г незабыва́емых впечатле́ний.",
+      "meaning": "Chiêm ngưỡng hồ Baikal hùng vĩ từ khung cửa sổ đoàn tàu là bảo chứng cho những ấn tượng không thể phai mờ.",
+      "phonetic": "U-vi-det' ve-li-chest-ven-ny Bay-kal iz ak-na po-yez-da — za-lok ne-za-by-va-ye-mykh vpe-chat-le-niy.",
+      "tips": "Tính từ 'величественный' chỉ sự kỳ vĩ, tráng lệ của thiên nhiên."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Mô tả một chuyến du hành mơ ước của bạn đi dọc nước Nga hoặc khám phá thế giới.",
+    "sampleGuidance": [
+      "Lộ trình bạn chọn bắt đầu từ đâu và kết thúc ở đâu?",
+      "Những thắng cảnh và nền văn hóa bản địa nào bạn khát khao được chiêm ngưỡng?",
+      "Bạn sẽ chọn đi cùng ai và chuyến đi này mang lại ý nghĩa gì cho cuộc đời bạn?"
+    ]
+  }
+}

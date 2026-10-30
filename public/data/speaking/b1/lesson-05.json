@@ -1,0 +1,32 @@
+{
+  "id": 5,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Экологическая ответственность: Мой вклад в сохранение планеты",
+  "speakingTime": "20 phút",
+  "topic": "Ý thức môi trường: Hành động thiết thực bảo vệ hệ sinh thái",
+  "intro": "Rèn luyện cách bảo vệ quan điểm về lối sống không rác thải (Zero Waste) và bảo tồn tài nguyên thiên nhiên.",
+  "shadowingPhrases": [
+    {
+      "text": "Ка́ждый из нас несёт персона́льную отве́тственность за состоя́ние окружа́ющей среды́.",
+      "meaning": "Mỗi một người trong chúng ta đều gánh vác trách nhiệm cá nhân đối với thực trạng môi trường xung quanh.",
+      "phonetic": "Kazh-dy iz nas ne-syot per-sa-nal'-nu-yu at-vet-stven-nast' za sas-ta-ya-ni-ye ak-ru-zha-yu-shchey sre-dy.",
+      "tips": "Động từ 'нести ответственность за что' (chịu trách nhiệm về điều gì)."
+    },
+    {
+      "text": "Разу́мное потребле́ние и отказ от однора́зового пла́стика спаса́ют приро́ду.",
+      "meaning": "Tiêu dùng hợp lý và từ bỏ đồ nhựa dùng một lần sẽ cứu rỗi mẹ thiên nhiên.",
+      "phonetic": "Ra-zum-na-ye pat-reb-le-ni-ye i at-kaz ot ad-na-ra-za-va-va plas-ti-ka spa-sa-yut pri-ro-du.",
+      "tips": "Cụm từ 'разумное потребление' biểu thị ý thức tiêu dùng văn minh."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Thuyết trình về trách nhiệm bảo vệ môi trường của thế hệ trẻ hiện nay.",
+    "sampleGuidance": [
+      "Nêu những hiểm họa sinh thái đáng báo động (ô nhiễm không khí, biến đổi khí hậu, rác thải nhựa).",
+      "Chia sẻ những hành động cụ thể bạn tự thực hiện mỗi ngày (tái chế, tiết kiệm năng lượng, đi phương tiện công cộng).",
+      "Kêu gọi cộng đồng chung tay hành động vì một tương lai bền vững."
+    ]
+  }
+}

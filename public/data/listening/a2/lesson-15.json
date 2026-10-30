@@ -1,0 +1,63 @@
+{
+  "id": 15,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Обсуждение планов на выходные с коллегой",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Bàn kế hoạch đi dã ngoại cuối tuần tại công viên",
+  "dialogue": [
+    {
+      "speaker": "Ольга",
+      "ru": "Сергей, синоптики обещают тёплую и солнечную погоду в эту субботу. Какие планы?",
+      "vi": "Sergey, dự báo thời tiết hứa hẹn thứ Bảy này trời ấm và có nắng đấy. Cậu có dự định gì chưa?"
+    },
+    {
+      "speaker": "Сергей",
+      "ru": "Я думал поехать в парк «Царицыно» покататься на велосипедах и устроить пикник. Поедешь со мной?",
+      "vi": "Mình tính tới công viên Tsaritsyno đạp xe và làm chuyến dã ngoại. Cậu đi cùng mình không?"
+    },
+    {
+      "speaker": "Ольга",
+      "ru": "С удовольствием! Я испеку яблочный пирог и возьму термос с ароматным чаем.",
+      "vi": "Rất sẵn lòng! Mình sẽ nướng bánh táo và mang theo bình giữ nhiệt trà thơm."
+    },
+    {
+      "speaker": "Сергей",
+      "ru": "Договорились. Встретимся в субботу в одиннадцать утра у главного входа.",
+      "vi": "Thống nhất nhé. Hẹn gặp nhau lúc 11 giờ sáng thứ Bảy tại cổng chính."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Встретимся в субботу в одиннадцать утра у главного входа.",
+    "hint": "Thời gian và địa điểm hẹn gặp mặt cuối tuần."
+  },
+  "questions": [
+    {
+      "id": "a2_l15_q1",
+      "prompt": "Что Ольга пообещала взять с собой на пикник?",
+      "hint": "Xem món đồ ăn thức uống mà bạn gái chuẩn bị.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Яблочный пирог и термос с чаем"
+        },
+        {
+          "key": "B",
+          "text": "Бутерброды с колбасой"
+        },
+        {
+          "key": "C",
+          "text": "Шашлыки и мангал"
+        },
+        {
+          "key": "D",
+          "text": "Фруктовый сок"
+        }
+      ],
+      "ans": "A",
+      "explain": "Ольга вызвалась испечь пирог и взять термос с горячим чаем."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": 22,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Рассказ о запомнившейся поездке на экскурсию",
+  "writingTime": "25 phút",
+  "topic": "Viết bài chia sẻ kỷ niệm chuyến đi tour danh thắng lịch sử",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Hãy viết đoạn văn ngắn (60–85 từ) kể lại chuyến tham quan thành phố cổ Suzdal cùng lớp học tiếng Nga.",
+  "requirements": [
+    "Thời điểm chuyến đi và phương tiện di chuyển",
+    "Những địa danh nổi bật bạn đã chiêm ngưỡng (nhà thờ gỗ, tu viện cổ)",
+    "Ấn tượng về không gian văn hóa lịch sử và ẩm thực địa phương"
+  ],
+  "cliches": [
+    {
+      "ru": "На прошлых выходных мы ездили на экскурсию в...",
+      "vi": "Cuối tuần trước chúng tôi đã đi tham quan ở..."
+    },
+    {
+      "ru": "Город поразил нас своей древней архитектурой.",
+      "vi": "Thành phố khiến chúng tôi sững sờ bởi kiến trúc cổ kính."
+    },
+    {
+      "ru": "Мы сделали много красивых снимков.",
+      "vi": "Chúng tôi đã chụp được rất nhiều bức ảnh đẹp."
+    }
+  ],
+  "modelAnswer": "В прошлые выходные наш студенческий курс отправился на автобусную экскурсию в старинный город Суздаль. Дорога из Москвы заняла около четырёх часов.\n\nСуздаль буквально дышит живой историей: здесь нет высотных зданий, зато повсюду стоят белокаменные храмы и деревянные дома с резными окнами. Мы посетили кремль, попробовали местную медовуху и свежие огурцы. Экскурсовод рассказал нам много древних легенд.\n\nЭта поездка помогла мне лучше узнать богатую русскую историю.",
+  "modelWordCount": 65,
+  "rubric": [
+    {
+      "criteria": "Miêu tả không gian & Lịch sử",
+      "weight": "40%",
+      "desc": "Khắc họa được nét cổ kính, nét đẹp kiến trúc của Suzdal."
+    },
+    {
+      "criteria": "Sử dụng thì quá khứ chuẩn xác",
+      "weight": "35%",
+      "desc": "Động từ hoàn thành thể chỉ chuỗi sự kiện: отправился, посетили, помогла."
+    },
+    {
+      "criteria": "Tính mạch lạc bài viết",
+      "weight": "25%",
+      "desc": "Trình tự chuyến đi hấp dẫn, giàu cảm xúc."
+    }
+  ]
+}

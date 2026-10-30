@@ -178,5 +178,65 @@
     "writingTime": "20 phút",
     "topic": "Bài luận tổng kết A1: Chặng đường đã qua và mục tiêu chinh phục A2",
     "targetWordRange": "45-70 từ"
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Записка соседу по комнате",
+    "badge": "A1 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết mẩu giấy nhắn ngắn cho bạn cùng phòng ký túc xá",
+    "targetWordRange": [
+      30,
+      50
+    ]
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Открытка маме на 8 Марта",
+    "badge": "A1 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết bưu thiếp chúc mừng mẹ ngày Quốc tế Phụ nữ",
+    "targetWordRange": [
+      35,
+      55
+    ]
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Анкета для библиотеки",
+    "badge": "A1 Viết",
+    "writingTime": "15 phút",
+    "topic": "Điền tờ khai thông tin cá nhân làm thẻ thư viện",
+    "targetWordRange": [
+      25,
+      45
+    ]
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Мой любимый день недели",
+    "badge": "A1 Viết",
+    "writingTime": "20 phút",
+    "topic": "Viết đoạn văn ngắn kể về thứ Bảy yêu thích",
+    "targetWordRange": [
+      40,
+      60
+    ]
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Итоговое эссе A1: Мой путь в изучении русского языка",
+    "badge": "A1 Viết",
+    "writingTime": "25 phút",
+    "topic": "Bài luận tổng kết A1: Chặng đường đã qua và mục tiêu chinh phục A2",
+    "targetWordRange": [
+      50,
+      70
+    ]
   }
 ]

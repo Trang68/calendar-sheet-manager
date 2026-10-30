@@ -1,0 +1,63 @@
+{
+  "id": 9,
+  "level": "A2",
+  "skill": "listening",
+  "title": "В фитнес-клубе: Оформление абонемента",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đăng ký thẻ hội viên câu lạc bộ thể hình",
+  "dialogue": [
+    {
+      "speaker": "Клиент",
+      "ru": "Здравствуйте! Я хочу узнать об условиях абонемента в ваш тренажёрный зал.",
+      "vi": "Xin chào! Tôi muốn tìm hiểu về các điều kiện gói tập gym bên mình."
+    },
+    {
+      "speaker": "Менеджер",
+      "ru": "Добрый день! У нас есть абонементы на 3 месяца, полгода и год. В годовую карту входят тренажёрный зал, бассейн и сауна.",
+      "vi": "Chào bạn! Bên mình có gói 3 tháng, 6 tháng và 1 năm. Gói năm bao gồm phòng gym, hồ bơi và phòng xông hơi."
+    },
+    {
+      "speaker": "Клиент",
+      "ru": "Отлично, бассейн для меня очень важен. А вводное занятие с тренером есть?",
+      "vi": "Tuyệt quá, bể bơi rất quan trọng với tôi. Có buổi tập kèm định hướng với HLV không?"
+    },
+    {
+      "speaker": "Менеджер",
+      "ru": "Да, в карту включены два вводных персональных инструктажа.",
+      "vi": "Có chứ, thẻ tập đã bao gồm 2 buổi hướng dẫn cá nhân cùng huấn luyện viên."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "В годовую карту входят тренажёрный зал и бассейн.",
+    "hint": "Chú ý tiện ích bao gồm trong gói tập."
+  },
+  "questions": [
+    {
+      "id": "a2_l9_q1",
+      "prompt": "Что входит в годовую карту фитнес-клуба?",
+      "hint": "Xem các tiện ích được quản lý liệt kê.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Только утренний зал"
+        },
+        {
+          "key": "B",
+          "text": "Тренажёрный зал, бассейн и сауна"
+        },
+        {
+          "key": "C",
+          "text": "Только теннисный корт"
+        },
+        {
+          "key": "D",
+          "text": "Массаж и ресторан"
+        }
+      ],
+      "ans": "B",
+      "explain": "В годовой абонемент включены зал, бассейн, сауна и персональные инструктажи."
+    }
+  ]
+}

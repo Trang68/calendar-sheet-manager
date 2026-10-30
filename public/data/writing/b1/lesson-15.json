@@ -1,0 +1,57 @@
+{
+  "id": 15,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Открытое письмо в защиту памятника архитектуры",
+  "writingTime": "40 phút",
+  "topic": "Văn bản công dân: Thư ngỏ kêu gọi bảo tồn di sản kiến trúc cổ kính",
+  "targetWordRange": [
+    105,
+    140
+  ],
+  "task": "Một tòa nhà cổ có giá trị lịch sử từ thế kỷ XIX đang đứng trước nguy cơ bị phá bỏ để xây trung tâm thương mại. Hãy viết bức thư ngỏ gửi chính quyền và nhân dân thành phố kêu gọi bảo vệ di tích.",
+  "requirements": [
+    "Địa chỉ gửi (Chính quyền thành phố và Cộng đồng cư dân)",
+    "Nêu giá trị văn hóa, lịch sử và nghệ thuật độc đáo của công trình",
+    "Phản đối kế hoạch phá dỡ và phân tích tác hại đối với ký ức đô thị",
+    "Đề xuất phương án trùng tu biến công trình thành bảo tàng hoặc không gian văn hóa",
+    "Lời kêu gọi ký tên ủng hộ"
+  ],
+  "cliches": [
+    {
+      "ru": "Мы глубоко обеспокоены судьбой исторического здания...",
+      "vi": "Chúng tôi vô cùng lo ngại trước số phận của công trình lịch sử..."
+    },
+    {
+      "ru": "Этот архитектурный памятник представляет огромную ценность.",
+      "vi": "Di tích kiến trúc này đại diện cho một giá trị to lớn."
+    },
+    {
+      "ru": "Уничтожение культурного наследия недопустимо.",
+      "vi": "Việc phá hủy di sản văn hóa là điều không thể chấp nhận được."
+    },
+    {
+      "ru": "Призываем остановить снос и провести научную реставрацию.",
+      "vi": "Kêu gọi đình chỉ việc phá dỡ và tiến hành trùng tu khoa học."
+    }
+  ],
+  "modelAnswer": "ОТКРЫТОЕ ПИСЬМО В ЗАЩИТУ УСАДЬБЫ КУПЦА СМИРНОВА\n\nМы, представители культурного и научного сообщества, выражаем глубокую тревогу в связи с планами сноса исторической деревянной усадьбы конца XIX века на улице Покровской ради строительства очередного торгового комплекса.\n\nЭто здание представляет собой уникальный образец русского деревянного зодчества с редчайшей резьбой по дереву, переживший революцию и войну. Уничтожение подобных памятников наносит непоправимый удар по исторической памяти города и лишает его неповторимого архитектурного лица.\n\nМы убеждены, что развитие мегаполиса не должно происходить ценой варварского разрушения культурного наследия. Призываем администрацию города отменить решение о сносе, присвоить зданию статус объекта культурного наследия и отреставрировать его под общественный культурный центр или музей городского быта.\n\nСохраним историю для наших детей!\n\nИнициативная группа градозащитников",
+  "modelWordCount": 122,
+  "rubric": [
+    {
+      "criteria": "Tính thuyết phục của lời hiệu triệu",
+      "weight": "40%",
+      "desc": "Giọng văn đanh thép, nhân văn, khơi dậy lương tri bảo tồn di sản."
+    },
+    {
+      "criteria": "Từ vựng di sản văn hóa",
+      "weight": "35%",
+      "desc": "Cụm từ: историческая память, непоправимый удар, статус объекта наследия."
+    },
+    {
+      "criteria": "Thể thức thư ngỏ công cộng",
+      "weight": "25%",
+      "desc": "Tiêu đề ấn tượng, có chữ ký đại diện cộng đồng."
+    }
+  ]
+}

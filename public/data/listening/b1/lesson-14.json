@@ -1,0 +1,63 @@
+{
+  "id": 14,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Пресс-конференция перед запуском корабля к МКС",
+  "listeningTime": "15 phút",
+  "topic": "Họp báo vũ trụ: Chuẩn bị phóng tàu có người lái lên trạm không gian",
+  "dialogue": [
+    {
+      "speaker": "Командир экипажа",
+      "ru": "Экипаж пилотируемого корабля «Союз МС» к выполнению программы полугодовой экспедиции на МКС готов.",
+      "vi": "Phi hành đoàn tàu có người lái 'Soyuz MS' đã sẵn sàng thực hiện chương trình thám hiểm 6 tháng trên Trạm Không gian Quốc tế ISS."
+    },
+    {
+      "speaker": "Журналист",
+      "ru": "Какие основные научные эксперименты запланированы в ходе данной миссии?",
+      "vi": "Những thí nghiệm khoa học trọng tâm nào được lên kế hoạch trong sứ mệnh lần này thưa chỉ huy?"
+    },
+    {
+      "speaker": "Командир экипажа",
+      "ru": "Нам предстоит провести более сорока исследований в области космической биотехнологии, материаловедения и медицины, а также два выхода в открытый космос.",
+      "vi": "Chúng tôi sẽ tiến hành hơn 40 nghiên cứu trong công nghệ sinh học vũ trụ, khoa học vật liệu và y học, cùng 2 chuyến bước ra ngoài khoảng không vũ trụ."
+    },
+    {
+      "speaker": "Журналист",
+      "ru": "Желаем вам успешного старта и благополучного возвращения на Землю!",
+      "vi": "Kính chúc phi hành đoàn phóng tàu thành công rực rỡ và trở về Trái Đất an toàn!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Экипажу предстоит провести более сорока научных исследований на орбите.",
+    "hint": "Số lượng các công trình nghiên cứu trên quỹ đạo."
+  },
+  "questions": [
+    {
+      "id": "b1_l14_q1",
+      "prompt": "Сколько научных исследований запланировано провести на борту МКС?",
+      "hint": "Xem số lượng thí nghiệm do chỉ huy công bố.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Более сорока исследований"
+        },
+        {
+          "key": "B",
+          "text": "Только одно исследование"
+        },
+        {
+          "key": "C",
+          "text": "Ни одного"
+        },
+        {
+          "key": "D",
+          "text": "Ровно тысячу"
+        }
+      ],
+      "ans": "A",
+      "explain": "Командир корабля сообщил о плане провести более 40 экспериментов."
+    }
+  ]
+}

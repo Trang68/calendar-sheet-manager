@@ -1,0 +1,52 @@
+{
+  "id": 25,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Итоговое эссе: Чему я научился за курс A2",
+  "writingTime": "30 phút",
+  "topic": "Bài viết tổng kết: Những tiến bộ vượt bậc sau khóa học tiếng Nga A2",
+  "targetWordRange": [
+    65,
+    95
+  ],
+  "task": "Hãy viết một bài văn ngắn tổng kết (65–95 từ) chia sẻ về những kết quả bạn đã đạt được và sự tự tin sau khi hoàn thành trình độ A2.",
+  "requirements": [
+    "Khẳng định việc hoàn thành xuất sắc 25 bài học cấp độ A2",
+    "Nêu những kỹ năng đã tiến bộ vượt trội (viết thư, giao tiếp hàng ngày, đọc báo)",
+    "Bày tỏ lòng biết ơn đối với người dạy và tinh thần học hỏi",
+    "Mục tiêu hướng tới cấp độ B1 trong giai đoạn tới"
+  ],
+  "cliches": [
+    {
+      "ru": "За время обучения я сделал большой шаг вперёд.",
+      "vi": "Trong suốt thời gian học tập tôi đã tiến một bước dài về phía trước."
+    },
+    {
+      "ru": "Теперь я могу уверенно выражать свои мысли.",
+      "vi": "Giờ đây tôi đã có thể tự tin biểu đạt suy nghĩ của bản thân."
+    },
+    {
+      "ru": "Моя главная цель — успешно сдать экзамен ТРКИ-1.",
+      "vi": "Mục tiêu trọng tâm của tôi là thi đỗ kỳ thi TRKI-1."
+    }
+  ],
+  "modelAnswer": "Завершение курса русского языка уровня A2 стало для меня важным личным достижением. За эти 25 уроков я проделал огромную работу и сделал большой шаг вперёд в освоении языка.\n\nТеперь я могу уверенно ориентироваться в городе, бронировать билеты, общаться с врачами и друзьями, а также писать грамотные письма и эссе. Русская грамматика больше не кажется мне непреодолимой преградой.\n\nЯ искренne благодарен преподавателям за терпение и вдохновение. Моя следующая цель — перейти на уровень B1 и сдать государственный сертификационный экзамен ТРКИ-1!",
+  "modelWordCount": 77,
+  "rubric": [
+    {
+      "criteria": "Tính tổng kết & Giá trị truyền cảm hứng",
+      "weight": "40%",
+      "desc": "Trình bày sâu sắc chặng đường nỗ lực và thành quả đạt được."
+    },
+    {
+      "criteria": "Ngữ pháp phong phú & Từ vựng nâng cao",
+      "weight": "35%",
+      "desc": "Dùng từ chuẩn mực: личное достижение, непреодолимая преграда, освоение языка."
+    },
+    {
+      "criteria": "Bố cục hoàn chỉnh",
+      "weight": "25%",
+      "desc": "Mở đầu tự hào, thân bài cụ thể, kết bài quyết tâm hướng tới B1."
+    }
+  ]
+}

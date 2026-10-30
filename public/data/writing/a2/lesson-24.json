@@ -1,0 +1,52 @@
+{
+  "id": 24,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Письмо другу о планах на летний отпуск",
+  "writingTime": "25 phút",
+  "topic": "Bức thư bàn về dự định đi nghỉ mát và du lịch mùa hè sắp tới",
+  "targetWordRange": [
+    55,
+    80
+  ],
+  "task": "Kỳ thi học kỳ sắp kết thúc. Hãy viết một bức thư (55–80 từ) kể cho bạn thân về những dự định thú vị của bạn trong kỳ nghỉ hè.",
+  "requirements": [
+    "Lời chào thân mật",
+    "Nêu kế hoạch sau khi thi xong (về quê, đi biển, du lịch)",
+    "Đề xuất hai bạn có thể cùng gặp nhau ở một địa điểm nào đó",
+    "Hỏi thăm kế hoạch nghỉ ngơi của bạn"
+  ],
+  "cliches": [
+    {
+      "ru": "Экзамены почти позади!",
+      "vi": "Kỳ thi coi như gần xong xuôi rồi!"
+    },
+    {
+      "ru": "Этим летом я планирую поехать...",
+      "vi": "Mùa hè này mình dự định sẽ đi..."
+    },
+    {
+      "ru": "А какие у тебя планы на лето?",
+      "vi": "Thế còn cậu có kế hoạch gì cho mùa hè chưa?"
+    }
+  ],
+  "modelAnswer": "Привет, Дима!\n\nУра, экзаменационная сессия почти закончилась! Остался всего один зачёт по истории, и начнутся долгожданные летние каникулы.\n\nВ июле я собираюсь поехать домой во Вьетнам к родителям на три недели, а в августе вернусь в Россию и мечтаю съездить на озеро Байкал. Я слышал, что там невероятная дикая природа и кристально чистая вода.\n\nА как ты планируешь провести отпуск? Может быть, поедем на Байкал вместе?\n\nЖду твоего ответа,\nНам",
+  "modelWordCount": 67,
+  "rubric": [
+    {
+      "criteria": "Sử dụng thì tương lai & Dự định",
+      "weight": "40%",
+      "desc": "Cấu trúc: планирую поехать, собираюсь, мечтаю съездить."
+    },
+    {
+      "criteria": "Tính liên kết đoạn văn",
+      "weight": "35%",
+      "desc": "Chuyển tiếp tự nhiên giữa kết quả học tập và kỳ nghỉ."
+    },
+    {
+      "criteria": "Lời mời gợi mở",
+      "weight": "25%",
+      "desc": "Khích lệ bạn bè cùng tham gia chuyến phiêu lưu."
+    }
+  ]
+}

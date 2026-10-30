@@ -1,0 +1,68 @@
+{
+  "id": 21,
+  "level": "A2",
+  "skill": "listening",
+  "title": "В банке: Обмен валюты и открытие карты",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Đổi ngoại tệ và mở thẻ ngân hàng tại quầy giao dịch",
+  "dialogue": [
+    {
+      "speaker": "Сотрудник",
+      "ru": "Здравствуйте! Возьмите талон электронной очереди. Какая операция вас интересует?",
+      "vi": "Xin chào! Mời bạn lấy phiếu số thứ tự điện tử. Bạn cần thực hiện giao dịch gì ạ?"
+    },
+    {
+      "speaker": "Клиент",
+      "ru": "Добрый день! Мне нужно обменять 300 долларов на рубли и открыть дебетовую карту «Мир».",
+      "vi": "Chào chị! Tôi cần đổi 300 đô la sang rúp và mở một thẻ ghi nợ nội địa Mir."
+    },
+    {
+      "speaker": "Сотрудник",
+      "ru": "Курс обмена сегодня девяносто два рубля за доллар. Предъявите, пожалуйста, ваш паспорт и миграционную карту.",
+      "vi": "Tỷ giá quy đổi hôm nay là 92 rúp một USD. Cho tôi xin hộ chiếu và thẻ di trú của bạn nhé."
+    },
+    {
+      "speaker": "Клиент",
+      "ru": "Вот все документы. Карта будет готова сегодня?",
+      "vi": "Dạ đủ giấy tờ đây ạ. Thẻ có lấy được ngay trong hôm nay không chị?"
+    },
+    {
+      "speaker": "Сотрудник",
+      "ru": "Моментальную неименную карту выдадим прямо сейчас за 10 минут.",
+      "vi": "Thẻ phát hành nhanh không in tên thì cấp cho bạn ngay bây giờ trong 10 phút ạ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Моментальную банковскую карту выдадут прямо сейчас за десять минут.",
+    "hint": "Thời gian phát hành thẻ ngân hàng lấy ngay."
+  },
+  "questions": [
+    {
+      "id": "a2_l21_q1",
+      "prompt": "Сколько времени займёт получение моментальной карты?",
+      "hint": "Xem thời gian nhân viên ngân hàng thông báo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Около 10 минут"
+        },
+        {
+          "key": "B",
+          "text": "Две недели"
+        },
+        {
+          "key": "C",
+          "text": "Три рабочих дня"
+        },
+        {
+          "key": "D",
+          "text": "Один месяц"
+        }
+      ],
+      "ans": "A",
+      "explain": "Сотрудник банка сообщил, что моментальную карту выдадут за 10 минут."
+    }
+  ]
+}

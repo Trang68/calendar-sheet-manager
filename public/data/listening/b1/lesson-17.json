@@ -1,0 +1,63 @@
+{
+  "id": 17,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Интервью с шеф-поваром: Секреты современной кухни",
+  "listeningTime": "15 phút",
+  "topic": "Ẩm thực cao cấp: Hiện đại hóa các công thức nấu ăn dân gian",
+  "dialogue": [
+    {
+      "speaker": "Интервьюер",
+      "ru": "Шеф, ваше заведение вошло в престижные гастрономические гиды. Как вы переосмысливаете традиции?",
+      "vi": "Thưa bếp trưởng, nhà hàng của ông vừa lọt vào các cuốn cẩm nang ẩm thực danh giá. Ông làm mới truyền thống như thế nào?"
+    },
+    {
+      "speaker": "Шеф-повар",
+      "ru": "Мы бережно сохраняем локальные сезонные продукты: северную рыбу, лесные грибы, бруснику, но используем современные технологии томления в печи.",
+      "vi": "Chúng tôi trân trọng giữ gìn các nông sản bản địa theo mùa: cá phương Bắc, nấm rừng, dâu dại lingonberry, nhưng áp dụng công nghệ hầm chậm trong lò hiện đại."
+    },
+    {
+      "speaker": "Интервьюер",
+      "ru": "Какое блюдо вызывает наибольший восторг у иностранных гостей?",
+      "vi": "Món ăn nào tạo nên sự trầm trồ lớn nhất nơi thực khách quốc tế?"
+    },
+    {
+      "speaker": "Шеф-повар",
+      "ru": "Томлёная утиная грудка с печёными яблоками и медовым взваром на основе старинных монастырских рецептов.",
+      "vi": "Ức vịt hầm mềm ăn kèm táo nướng và sốt mật ong lên men theo công thức cổ truyền từ tu viện."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Мы используем локальные сезонные продукты и традиционные рецепты.",
+    "hint": "Triết lý nguyên liệu ẩm thực địa phương theo mùa."
+  },
+  "questions": [
+    {
+      "id": "b1_l17_q1",
+      "prompt": "На чём базируется концепция современной русской кухни у шеф-повара?",
+      "hint": "Xem sự kết hợp nguyên liệu bản địa và kỹ thuật nấu.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На использовании только импортных полуфабрикатов"
+        },
+        {
+          "key": "B",
+          "text": "На локальных сезонных продуктах и современных кулинарных техниках"
+        },
+        {
+          "key": "C",
+          "text": "На фастфуде"
+        },
+        {
+          "key": "D",
+          "text": "На отказе от соли и сахара"
+        }
+      ],
+      "ans": "B",
+      "explain": "Шеф подчеркнул опору на аутентичные региональные ингредиенты в современном прочтении."
+    }
+  ]
+}

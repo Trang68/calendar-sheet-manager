@@ -1,0 +1,35 @@
+{
+  "id": 21,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "В кафе: Заказ любимых блюд",
+  "speakingTime": "15 phút",
+  "topic": "Luyện nói: Gọi đồ ăn, đồ uống và thanh toán",
+  "intro": "Luyện tập các cấu trúc gọi món ăn cơ bản và giao tiếp lịch sự với người phục vụ.",
+  "shadowingPhrases": [
+    {
+      "id": "spk_21_1",
+      "text": "Дайте, пожалуйста, чашку чёрного кофе с сахаром.",
+      "meaning": "Cho tôi một tách cà phê đen có đường.",
+      "phonetic": "Dayte, pozhaluysta, chashku chornogo kofe s sakharom.",
+      "tips": "Âm «чёрного» phát âm /chornava/."
+    },
+    {
+      "id": "spk_21_2",
+      "text": "Сколько стоит этот яблочный пирог?",
+      "meaning": "Bánh táo này giá bao nhiêu?",
+      "phonetic": "Skol'ko stoit etot yablochnyy pirog?",
+      "tips": "Trọng âm từ «яблочный» rơi vào âm tiết đầu."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Nói tự do",
+    "task": "Đóng vai khách hàng gọi món tại quán ăn nhanh kiểu Nga.",
+    "sampleGuidance": [
+      "Здравствуйте!",
+      "Я буду...",
+      "Сколько с меня?",
+      "Спасибо!"
+    ]
+  }
+}

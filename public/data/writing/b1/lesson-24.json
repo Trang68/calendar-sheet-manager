@@ -1,0 +1,57 @@
+{
+  "id": 24,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Официальное приглашение иностранного профессора",
+  "writingTime": "40 phút",
+  "topic": "Thư tín ngoại giao học thuật: Mời giáo sư quốc tế sang thuyết giảng",
+  "targetWordRange": [
+    105,
+    135
+  ],
+  "task": "Đại diện cho Ban Giám hiệu trường Đại học, hãy viết thư chính thức mời một Giáo sư danh tiếng sang thuyết trình một chuỗi bài giảng chuyên đề.",
+  "requirements": [
+    "Lời chào trang trọng gửi Giáo sư danh dự",
+    "Mục đích thư mời: Thuyết giảng chuỗi chuyên đề cho sinh viên và giảng viên",
+    "Thời gian dự kiến và chủ đề bài giảng",
+    "Cam kết chi trả toàn bộ chi phí vé máy bay, khách sạn và thù lao",
+    "Mong đợi sự hồi âm và chữ ký lãnh đạo nhà trường"
+  ],
+  "cliches": [
+    {
+      "ru": "Имею честь пригласить вас...",
+      "vi": "Tôi lấy làm vinh dự được trân trọng kính mời Giáo sư..."
+    },
+    {
+      "ru": "Ваш научный авторитет и выдающиеся труды широко известны...",
+      "vi": "Uy tín khoa học và các công trình xuất sắc của thầy được biết đến rộng rãi..."
+    },
+    {
+      "ru": "Университет берёт на себя все расходы по проезду и проживанию.",
+      "vi": "Trường Đại học xin đài thọ toàn bộ kinh phí đi lại và lưu trú."
+    },
+    {
+      "ru": "Искренне надеемся на ваше согласие.",
+      "vi": "Chúng tôi chân thành hy vọng nhận được sự đồng thuận của thầy."
+    }
+  ],
+  "modelAnswer": "Глубокоуважаемый профессор Чан Динь Хоа!\n\nОт имени руководства и Учёного совета Московского государственного лингвистического университета имею высокую честь пригласить вас посетить наш университет для прочтения курса лекций по сравнительной типологии восточных и славянских языков.\n\nВаши фундаментальные монографии и научный авторитет пользуются глубоким признанием среди российских исследователей. Мы были бы чрезвычайно признательны, если бы вы смогли провести цикл из четырёх лекций и мастер-класс для аспирантов в период с 15 по 22 мая 2027 года.\n\nНаш университет с радостью берёт на себя все финансовые обязательства, связанные с оформлением визы, авиаперелётом бизнес-классом, комфортабельным проживанием в гостинице университета и выплатой почётного профессорского гонорара.\n\nИскренне надеемся на ваше благосклонное согласие и будем рады приветствовать вас в Москве!\n\nС глубочайшим уважением,\nПроректор по международной деятельности\nпрофессор Васильев А. И.",
+  "modelWordCount": 129,
+  "rubric": [
+    {
+      "criteria": "Nghi thức ngoại giao học thuật đỉnh cao",
+      "weight": "40%",
+      "desc": "Sử dụng lối xưng hô cung kính (Глубокоуважаемый, имею честь), câu văn trang trọng."
+    },
+    {
+      "criteria": "Chi tiết hóa điều kiện hợp tác",
+      "weight": "35%",
+      "desc": "Cam kết tài chính, vé máy bay, khách sạn và thù lao minh bạch."
+    },
+    {
+      "criteria": "Ngữ pháp câu phức giả định lịch thiệp",
+      "weight": "25%",
+      "desc": "Sử dụng nhuần nhuyễn cấu trúc 'были бы признательны, если бы смогли'."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": 24,
+  "level": "A1",
+  "skill": "speaking",
+  "title": "Мои планы на выходные",
+  "speakingTime": "15 phút",
+  "topic": "Kể về dự định làm gì vào thứ Bảy và Chủ nhật",
+  "intro": "Luyện diễn đạt kế hoạch cuối tuần với động từ nguyên mẫu.",
+  "shadowingPhrases": [
+    {
+      "id": "spk_24_1",
+      "text": "В субботу я хочу пойти в парк с друзьями.",
+      "meaning": "Thứ Bảy tôi muốn đi công viên với bạn bè.",
+      "phonetic": "V subbotu ya khochu poyti v park s druz'yami.",
+      "tips": "«В субботу» dùng Cách 4."
+    },
+    {
+      "id": "spk_24_2",
+      "text": "В воскресенье я буду отдыхать дома.",
+      "meaning": "Chủ nhật tôi sẽ nghỉ ngơi ở nhà.",
+      "phonetic": "V voskresen'ye ya budu otdykhat' doma.",
+      "tips": "«Буду отдыхать» thể hiện tương lai chưa hoàn thành."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Nói tự do",
+    "task": "Kể về kế hoạch cuối tuần này của bạn.",
+    "sampleGuidance": [
+      "В субботу утром я...",
+      "Днём мы будем...",
+      "В воскресенье вечером я..."
+    ]
+  }
+}

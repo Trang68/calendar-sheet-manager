@@ -1,0 +1,32 @@
+{
+  "id": 13,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Погода и любимое время года",
+  "speakingTime": "15 phút",
+  "topic": "Thiên nhiên bốn mùa: Thời tiết, nhiệt độ và mùa yêu thích",
+  "intro": "Thực hành miêu tả đặc điểm thời tiết xuân, hạ, thu, đông và các hoạt động ngoài trời tương ứng.",
+  "shadowingPhrases": [
+    {
+      "text": "Бо́льше всего́ я люблю́ зо́лотую о́сень за тишину́ и кра́ски.",
+      "meaning": "Tôi thích nhất mùa thu vàng vì sự tĩnh lặng và màu sắc rực rỡ của nó.",
+      "phonetic": "Bol'-she vse-vo ya lyub-lyu zo-la-tu-yu o-sen' za ti-shi-nu i kras-ki.",
+      "tips": "Cụm từ 'золотая осень' là hình ảnh thi ca biểu tượng của nước Nga."
+    },
+    {
+      "text": "Зимо́й температу́ра ча́сто опуска́ется ни́же нуля́.",
+      "meaning": "Vào mùa đông nhiệt độ thường xuyên tụt xuống dưới mức 0 độ C.",
+      "phonetic": "Zi-moy tem-pe-ra-tu-ra chas-ta a-pus-ka-yet-sya ni-zhe nu-lya.",
+      "tips": "Cụm 'ниже нуля' dùng diễn tả nhiệt độ âm mùa đông."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về mùa yêu thích nhất trong năm của bạn và lý do tại sao.",
+    "sampleGuidance": [
+      "Mùa yêu thích của bạn là mùa nào (mùa xuân, hạ, thu, đông)?",
+      "Thời tiết và cảnh quan thiên nhiên trong mùa đó thay đổi như thế nào?",
+      "Bạn thích làm những hoạt động gì nhất trong tiết trời như vậy?"
+    ]
+  }
+}

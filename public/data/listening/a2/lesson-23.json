@@ -1,0 +1,63 @@
+{
+  "id": 23,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Потеря вещей: Разговор в бюро находок",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Tìm đồ thất lạc trên tàu điện ngầm tại quầy thông tin",
+  "dialogue": [
+    {
+      "speaker": "Пассажир",
+      "ru": "Здравствуйте! Кажется, я забыл свой синий рюкзак в вагоне метро на станции «Курская».",
+      "vi": "Xin chào! Hình như tôi để quên chiếc ba lô màu xanh trong toa tàu ở ga Kurskaya."
+    },
+    {
+      "speaker": "Дежурный",
+      "ru": "Добрый день. Опишите подробно, что находилось внутри рюкзака?",
+      "vi": "Chào bạn. Xin bạn mô tả chi tiết xem bên trong ba lô có những đồ đạc gì ạ?"
+    },
+    {
+      "speaker": "Пассажир",
+      "ru": "Там был ноутбук, синяя тетрадь по русскому языку и связка ключей с брелоком в виде матрёшки.",
+      "vi": "Trong đó có một chiếc laptop, quyển vở học tiếng Nga màu xanh và chùm chìa khóa móc búp bê matryoshka."
+    },
+    {
+      "speaker": "Дежурный",
+      "ru": "Минуту, проверяю по базе данных... Да, дежурный по станции передал похожий рюкзак. Предъявите паспорт для возврата.",
+      "vi": "Đợi tôi một phút để tra cơ sở dữ liệu... Có rồi, nhân viên trực ga đã bàn giao một chiếc ba lô y như vậy. Xin mời xuất trình hộ chiếu để nhận lại đồ."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Дежурный по станции передал найденный рюкзак в бюро находок.",
+    "hint": "Thủ tục bàn giao đồ thất lạc tìm thấy trong ga tàu."
+  },
+  "questions": [
+    {
+      "id": "a2_l23_q1",
+      "prompt": "Какой отличительный брелок был на связке ключей?",
+      "hint": "Xem món đồ lưu niệm gắn trên chùm chìa khóa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Брелок в виде матрёшки"
+        },
+        {
+          "key": "B",
+          "text": "Футбольный мяч"
+        },
+        {
+          "key": "C",
+          "text": "Автомобильный значок"
+        },
+        {
+          "key": "D",
+          "text": "Маленький фонарик"
+        }
+      ],
+      "ans": "A",
+      "explain": "Пассажир описал связку ключей с брелоком в виде русской матрёшки."
+    }
+  ]
+}

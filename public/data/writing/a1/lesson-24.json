@@ -1,0 +1,40 @@
+{
+  "id": 24,
+  "level": "A1",
+  "skill": "writing",
+  "title": "Мой любимый день недели",
+  "writingTime": "20 phút",
+  "topic": "Viết đoạn văn ngắn kể về thứ Bảy yêu thích",
+  "targetWordRange": [
+    40,
+    60
+  ],
+  "task": "Viết đoạn văn (40–60 từ) kể về ngày thứ Bảy của bạn: bạn làm gì và tại sao bạn thích ngày này.",
+  "requirements": [
+    "1. Nêu ngày yêu thích trong tuần.",
+    "2. Kể các hoạt động buổi sáng, chiều, tối.",
+    "3. Cảm xúc của bạn."
+  ],
+  "cliches": [
+    {
+      "ru": "Мой любимый день недели — это суббота.",
+      "vi": "Ngày yêu thích trong tuần của tôi là thứ Bảy."
+    },
+    {
+      "ru": "В этот день мне не нужно рано вставать.",
+      "vi": "Vào ngày này tôi không cần dậy sớm."
+    },
+    {
+      "ru": "Вечером мы с друзьями смотрим кино.",
+      "vi": "Buổi tối tôi và bạn bè xem phim."
+    }
+  ],
+  "modelAnswer": "Мой самый любимый день недели — это суббота. В этот день мне не нужно рано вставать на лекции. Утром я долго сплю и вкусно завтракаю. Днём я гуляю в красивом парке или катаюсь на велосипеде. А вечером мы с друзьями пьём чай и смотрим комедии. Суббота — это лучший день!",
+  "modelWordCount": 51,
+  "rubric": [
+    {
+      "criteria": "Mạch lạc",
+      "desc": "Có liên kết thời gian buổi sáng, chiều, tối."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 8,
+  "level": "A2",
+  "skill": "listening",
+  "title": "Запись на приём к врачу-стоматологу",
+  "listeningTime": "12 phút",
+  "topic": "Hội thoại: Gọi điện tới phòng khám nha khoa đặt lịch khám",
+  "dialogue": [
+    {
+      "speaker": "Администратор",
+      "ru": "Стоматологическая клиника «Здоровье», добрый день! Чем могу помочь?",
+      "vi": "Phòng khám nha khoa 'Sức Khỏe', xin chào! Tôi có thể giúp gì ạ?"
+    },
+    {
+      "speaker": "Пациент",
+      "ru": "Здравствуйте! У меня со вчерашнего дня сильно болит зуб. Можно записаться к врачу на сегодня?",
+      "vi": "Chào cô! Từ hôm qua cháu bị đau răng dữ dội. Cháu có thể đặt lịch khám hôm nay được không ạ?"
+    },
+    {
+      "speaker": "Администратор",
+      "ru": "С острой болью доктор Смирнов сможет принять вас сегодня в 16:30. Вам удобно?",
+      "vi": "Với trường hợp đau cấp, bác sĩ Smirnov có thể nhận khám vào 16:30 hôm nay. Giờ đó có tiện cho bạn không?"
+    },
+    {
+      "speaker": "Пациент",
+      "ru": "Да, замечательно! Запишите меня, пожалуйста.",
+      "vi": "Dạ rất tiện ạ! Cô ghi tên cho cháu với nhé."
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Доктор сможет принять вас сегодня в шестнадцать тридцать.",
+    "hint": "Chú ý mốc thời gian giờ hẹn khám bệnh."
+  },
+  "questions": [
+    {
+      "id": "a2_l8_q1",
+      "prompt": "На какое время пациента записали к врачу?",
+      "hint": "Xem giờ hẹn trong câu nói của lễ tân.",
+      "options": [
+        {
+          "key": "A",
+          "text": "На утро в 9:00"
+        },
+        {
+          "key": "B",
+          "text": "На сегодня в 16:30"
+        },
+        {
+          "key": "C",
+          "text": "На завтра в 14:00"
+        },
+        {
+          "key": "D",
+          "text": "Через неделю"
+        }
+      ],
+      "ans": "B",
+      "explain": "Администратор назначил приём на 16:30 текущего дня."
+    }
+  ]
+}

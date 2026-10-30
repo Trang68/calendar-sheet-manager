@@ -1,0 +1,57 @@
+{
+  "id": 20,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Рекомендательное письмо студенту для стажировки",
+  "writingTime": "40 phút",
+  "topic": "Thư giới thiệu sinh viên xuất sắc tham gia kỳ thực tập chuyên môn",
+  "targetWordRange": [
+    105,
+    135
+  ],
+  "task": "Dưới vai trò là một giảng viên phụ trách bộ môn, hãy viết một bức thư giới thiệu (Letter of Recommendation) gửi đối tác tuyển dụng đánh giá cao một sinh viên xuất sắc.",
+  "requirements": [
+    "Thông tin người viết (học hàm, học vị, bộ môn giảng dạy)",
+    "Xác nhận thời gian theo dõi học tập và nghiên cứu của sinh viên",
+    "Đánh giá về năng lực chuyên môn, kỷ luật và khả năng làm việc độc lập",
+    "Khẳng định sự tiến cử mạnh mẽ không ngần ngại",
+    "Chữ ký và thông tin liên lạc xác minh"
+  ],
+  "cliches": [
+    {
+      "ru": "Настоящим письмом подтверждаю, что...",
+      "vi": "Bằng thư này tôi xin xác nhận rằng..."
+    },
+    {
+      "ru": "За время обучения студент проявил себя как...",
+      "vi": "Trong thời gian học tập, sinh viên đã thể hiện mình là..."
+    },
+    {
+      "ru": "Обладает аналитическим складом ума и высокой ответственностью.",
+      "vi": "Sở hữu tư duy phân tích nhạy bén và tinh thần trách nhiệm cao độ."
+    },
+    {
+      "ru": "Без малейших сомнений рекомендую его кандидатуру.",
+      "vi": "Tôi xin tiến cử ứng viên mà không có chút ngần ngại nào."
+    }
+  ],
+  "modelAnswer": "РЕКОМЕНДАТЕЛЬНОЕ ПИСЬМО\n\nНастоящим письмом с удовольствием рекомендую студента 4 курса бакалавриата кафедры прикладной математики Доан Ван Миня для прохождения преддипломной стажировки в вашей компании.\n\nЯ являюсь научным руководителем Доан Ван Миня на протяжении двух лет. За время нашей совместной работы он зарекомендовал себя как исключительно талантливый, дисциплинированный и целеустремлённый исследователь. Он неизменно демонстрирует глубокие знания математического анализа, алгоритмов машинного обучения и умение находить нестандартные решения сложных инженерных задач. Его курсовая работа была признана лучшей на факультете и рекомендована к публикации.\n\nПомимо академических успехов, Доан Ван Минь отличается прекрасными коммуникативными навыками, умением работать в команде и высокой стрессоустойчивостью. Убеждён, что его участие принесёт существенную пользу вашим проектам.\n\nБез колебаний рекомендую его кандидатуру.\n\nЗаведующий кафедрой, профессор\nБелов Виктор Николаевич",
+  "modelWordCount": 128,
+  "rubric": [
+    {
+      "criteria": "Tính trang trọng & Uy tín học thuật",
+      "weight": "40%",
+      "desc": "Giọng văn chuẩn mực của giáo sư tiến cử học trò, thể hiện sự tin cậy cao độ."
+    },
+    {
+      "criteria": "Chi tiết hóa phẩm chất ứng viên",
+      "weight": "35%",
+      "desc": "Nêu cả phẩm chất trí tuệ lẫn kỹ năng mềm (стрессоустойчивость, коммуникативность)."
+    },
+    {
+      "criteria": "Thể thức thư giới thiệu",
+      "weight": "25%",
+      "desc": "Đầy đủ tiêu đề, các đánh giá cụ thể và lời cam kết mạnh mẽ."
+    }
+  ]
+}

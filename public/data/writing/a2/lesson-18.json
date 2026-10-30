@@ -1,0 +1,52 @@
+{
+  "id": 18,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Заказ товара в интернет-магазине с уточнениями",
+  "writingTime": "20 phút",
+  "topic": "Soạn thư hỏi nhân viên hỗ trợ khách hàng về thời gian giao hàng",
+  "targetWordRange": [
+    45,
+    65
+  ],
+  "task": "Bạn vừa đặt mua một chiếc máy đọc sách online nhưng cần thay đổi địa chỉ giao hàng. Hãy viết thư gửi bộ phận chăm sóc khách hàng.",
+  "requirements": [
+    "Mã đơn hàng và tên sản phẩm đã đặt",
+    "Lý do cần đổi địa chỉ hoặc thời gian nhận hàng",
+    "Cung cấp địa chỉ mới chính xác kèm số điện thoại",
+    "Lời cảm ơn và mong được hỗ trợ"
+  ],
+  "cliches": [
+    {
+      "ru": "Здравствуйте! Мой номер заказа...",
+      "vi": "Xin chào! Mã số đơn hàng của tôi là..."
+    },
+    {
+      "ru": "Прошу вас изменить адрес доставки.",
+      "vi": "Kính đề nghị các bạn đổi địa chỉ giao hàng."
+    },
+    {
+      "ru": "Спасибо за понимание и содействие.",
+      "vi": "Cảm ơn sự thấu hiểu và hỗ trợ của các bạn."
+    }
+  ],
+  "modelAnswer": "Здравствуйте, служба поддержки интернет-магазина!\n\nВчера я оформил заказ № 84920 на покупку электронной книги. К сожалению, в пятницу меня не будет по указанному адресу.\n\nПрошу вас изменить адрес доставки на следующий: улица Академика Королёва, дом 8, квартира 24. Мой контактный номер телефона не изменился: +7 (900) 555-33-22.\n\nПодтвердите, пожалуйста, изменение адреса ответным письмом. Большое спасибо за помощь!\n\nС уважением,\nНам",
+  "modelWordCount": 54,
+  "rubric": [
+    {
+      "criteria": "Chính xác thông tin nghiệp vụ",
+      "weight": "40%",
+      "desc": "Nêu rõ số đơn, địa chỉ cũ - mới và thông tin xác nhận."
+    },
+    {
+      "criteria": "Phong cách giao dịch thương mại",
+      "weight": "35%",
+      "desc": "Lịch sự, mạch lạc, dùng chuẩn mẫu câu 'прошу вас'."
+    },
+    {
+      "criteria": "Ngữ pháp tiếng Nga",
+      "weight": "25%",
+      "desc": "Giới từ và cách chỉ địa điểm chính xác."
+    }
+  ]
+}

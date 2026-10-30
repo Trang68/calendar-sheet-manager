@@ -1,0 +1,51 @@
+{
+  "id": 13,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Описание своей рабочей или учебной недели",
+  "writingTime": "25 phút",
+  "topic": "Bài viết miêu tả lịch trình một tuần làm việc và học tập bận rộn",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Hãy viết bài văn ngắn (60–85 từ) miêu tả một tuần bận rộn nhưng thú vị của bạn tại trường học hoặc công ty.",
+  "requirements": [
+    "Phân chia các hoạt động từ thứ Hai đến thứ Sáu",
+    "Nhắc đến các thói quen học tập, thể thao giữa tuần",
+    "Cảm giác mong đợi ngày cuối tuần để nạp lại năng lượng"
+  ],
+  "cliches": [
+    {
+      "ru": "Моя неделя проходит очень динамично.",
+      "vi": "Một tuần của tôi trôi qua rất năng động."
+    },
+    {
+      "ru": "С понедельника по пятницу я...",
+      "vi": "Từ thứ Hai đến thứ Sáu tôi..."
+    },
+    {
+      "ru": "Вечером я нахожу время для спорта.",
+      "vi": "Buổi tối tôi vẫn dành thời gian cho thể thao."
+    }
+  ],
+  "modelAnswer": "Моя учебная неделя проходит очень насыщенно и динамично. С понедельника по пятницу я встаю в семь утра и еду на занятия в университет.\n\nКаждый день у нас по три или четыре пары лекций и семинаров. По вторникам и четвергам после пар я обязательно хожу в бассейн, чтобы снять усталость.\n\nК пятнице я чувствую приятную усталость и с нетерпением жду субботы, чтобы выспаться и встретиться с близкими друзьями.",
+  "modelWordCount": 65,
+  "rubric": [
+    {
+      "criteria": "Tính liền mạch của bài viết",
+      "weight": "40%",
+      "desc": "Trình tự thời gian tuần hoàn logic từ đầu tuần đến cuối tuần."
+    },
+    {
+      "criteria": "Từ nối & Trạng ngữ thời gian",
+      "weight": "35%",
+      "desc": "Dùng chuẩn: с понедельника по пятницу, по вторникам, к пятнице."
+    },
+    {
+      "criteria": "Vốn từ phong phú",
+      "weight": "25%",
+      "desc": "Từ ngữ biểu đạt trạng thái: насыщенно, усталость, с нетерпением."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": 4,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Моя семья и семейные традиции",
+  "speakingTime": "15 phút",
+  "topic": "Miêu tả gia đình, nghề nghiệp người thân và thói quen sum họp",
+  "intro": "Luyện nói tự giới thiệu về gia đình, các thế hệ cùng chung sống và những kỷ niệm sum họp bên mâm cơm ấm cúng.",
+  "shadowingPhrases": [
+    {
+      "text": "У меня́ больша́я и дру́жная семья́: роди́тели, сестpа́ и де́душка.",
+      "meaning": "Tôi có một gia đình lớn và rất thuận hòa: bố mẹ, em gái và ông nội.",
+      "phonetic": "U me-nya bal'-sha-ya i druzh-na-ya sem'-ya: ra-di-te-li, ses-tra i de-dush-ka.",
+      "tips": "Nhấn rõ trọng âm ở các từ lớn (большая) và hòa thuận (дружная)."
+    },
+    {
+      "text": "По воскресе́ньям мы обяза́тельно собира́емся за обэ́денным столо́м.",
+      "meaning": "Vào mỗi Chủ nhật chúng tôi nhất định tập hợp quây quần bên bàn ăn.",
+      "phonetic": "Pa vas-kre-sen'-yam my a-bya-za-tel'-na sa-bi-ra-yem-sya za a-be-den-nym sta-lom.",
+      "tips": "Chú ý phát âm nối âm ở cụm 'по воскресеньям'."
+    },
+    {
+      "text": "Мой оте́ц рабо́тает инжене́ром, а ма́ма преподаёт в шко́ле.",
+      "meaning": "Bố tôi làm kỹ sư, còn mẹ dạy học tại trường phổ thông.",
+      "phonetic": "Moy a-tyets ra-bo-ta-yet in-zhe-ne-ram, a ma-ma pre-pa-da-yot v shko-le.",
+      "tips": "Sử dụng cách công cụ (Творительный падеж) khi nói nghề nghiệp: инженером."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy thuyết trình (1–2 phút) giới thiệu về các thành viên trong gia đình bạn.",
+    "sampleGuidance": [
+      "Nêu số lượng thành viên và nơi gia đình bạn đang sinh sống.",
+      "Kể nghề nghiệp và sở thích đặc trưng của bố mẹ hoặc anh chị em.",
+      "Chia sẻ một truyền thống hay hoạt động cả nhà cùng làm vào dịp cuối tuần."
+    ]
+  }
+}

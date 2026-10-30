@@ -1,0 +1,32 @@
+{
+  "id": 15,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Архитектура города: Комфортная среда для человека",
+  "speakingTime": "20 phút",
+  "topic": "Đô thị học: Cân bằng giữa bảo tồn di sản cổ và phát triển hiện đại",
+  "intro": "Luyện nói về quy hoạch không gian sống, kiến trúc xanh và giải quyết bài toán ô nhiễm khói bụi.",
+  "shadowingPhrases": [
+    {
+      "text": "Гармони́чный го́род долже́н сочета́ть истори́ческое насле́дие и совреме́нную инфраструкту́ру.",
+      "meaning": "Một thành phố hài hòa phải dung hợp được di sản lịch sử với cơ sở hạ tầng hiện đại.",
+      "phonetic": "Gar-ma-nich-ny go-rat dal-zhen sa-che-tat' is-ta-ri-ches-ka-ye nas-le-di-ye i sav-re-men-nu-yu in-fra-struk-tu-ru.",
+      "tips": "Cụm 'сочетать что и что' (kết hợp hài hòa giữa A và B)."
+    },
+    {
+      "text": "Разви́тие парко́вых зон де́лает жизнь горожа́н намно́го бо́лее здоро́вой.",
+      "meaning": "Sự phát triển của các công viên cây xanh giúp đời sống người dân đô thị lành mạnh hơn nhiều phần.",
+      "phonetic": "Raz-vi-ti-ye par-ka-vykh zon de-la-yet zhizn' ga-ra-zhan nam-no-ga bo-le-ye zda-ro-vay.",
+      "tips": "Cách so sánh hơn 'намного более здоровой'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Nêu quan điểm của bạn về diện mạo lý tưởng của một thành phố trong tương lai.",
+    "sampleGuidance": [
+      "Thành phố trong mơ của bạn có cần nhiều nhà chọc trời hay nhiều không gian mặt nước, cây xanh?",
+      "Vấn đề giao thông công cộng và xử lý rác thải nên được quy hoạch ra sao?",
+      "Làm thế nào để các công trình kiến trúc cổ không bị phá hủy bởi các dự án thương mại?"
+    ]
+  }
+}

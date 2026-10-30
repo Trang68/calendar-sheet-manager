@@ -1,0 +1,32 @@
+{
+  "id": 23,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Окружающая среда и чистота города",
+  "speakingTime": "15 phút",
+  "topic": "Bảo vệ môi trường: Không gian xanh, phân loại rác và lối sống xanh",
+  "intro": "Tập trình bày quan điểm cá nhân về việc giữ gìn vệ sinh chung, trồng cây và hạn chế đồ nhựa.",
+  "shadowingPhrases": [
+    {
+      "text": "Чистота́ на́шего го́рода зави́сит от ка́ждого из нас.",
+      "meaning": "Sự sạch đẹp của thành phố chúng ta phụ thuộc vào ý thức của từng người.",
+      "phonetic": "Chis-ta-ta na-she-va go-ra-da za-vi-sit ot kazh-da-va iz nas.",
+      "tips": "Cấu trúc 'зависеть от кого/чего' (phụ thuộc vào ai/cái gì)."
+    },
+    {
+      "text": "Я стара́юсь сортова́ть му́сор и не испо́льзовать пла́стиковые паке́ты.",
+      "meaning": "Tôi cố gắng phân loại rác thải và hạn chế dùng túi nilon nhựa.",
+      "phonetic": "Ya sta-ra-yus' sar-ta-vat' mu-sar i ne is-pol'-za-vat' plas-ti-ka-vy-ye pa-ke-ty.",
+      "tips": "Động từ 'сортировать мусор' nghĩa là phân loại rác."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về những hành động nhỏ bạn làm hàng ngày để bảo vệ môi trường.",
+    "sampleGuidance": [
+      "Nơi bạn ở môi trường và không khí như thế nào?",
+      "Bạn có tham gia trồng cây, tiết kiệm điện nước hay phân loại rác không?",
+      "Giới trẻ ngày nay có thể làm gì để thành phố xanh - sạch - đẹp hơn?"
+    ]
+  }
+}

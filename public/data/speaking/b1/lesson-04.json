@@ -1,0 +1,32 @@
+{
+  "id": 4,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Традиции и современность: Как меняется институт семьи?",
+  "speakingTime": "20 phút",
+  "topic": "Xã hội học: Chuyển biến giá trị gia đình truyền thống và hiện đại",
+  "intro": "Luyện thuyết trình nghị luận về mối quan hệ giữa các thế hệ trong gia đình và sự bình đẳng giới.",
+  "shadowingPhrases": [
+    {
+      "text": "Институ́т семьи́ в XXI ве́ке претерпева́ет суще́ственные трансформа́ции.",
+      "meaning": "Thiết chế gia đình trong thế kỷ XXI đang trải qua những bước biến đổi mang tính căn bản.",
+      "phonetic": "In-sti-tut sem'-i v dva-tsat' per-vam ve-ke pre-ter-pe-va-yet su-shchest-ven-ny-ye trans-far-ma-tsii.",
+      "tips": "Nhấn rõ ngữ điệu học thuật ИК-1 ở cuối mệnh đề."
+    },
+    {
+      "text": "Взаи́мное уваже́ние и диало́г поколе́ний позволя́ют сохраня́ть духо́вную связь.",
+      "meaning": "Sự tôn trọng lẫn nhau và đối thoại liên thế hệ cho phép gìn giữ mối liên kết tâm hồn bền chặt.",
+      "phonetic": "Vza-im-na-ye u-va-zhe-ni-ye i di-a-lok pa-ka-le-niy paz-va-lya-yut sa-khra-nyat' du-khov-nu-yu svyaz'.",
+      "tips": "Cụm danh từ 'диалог поколений' dùng thể hiện sự trao đổi giữa cha mẹ và con cái."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại TRKI-1 (Монологическое высказывание)",
+    "task": "Hãy trình bày bài thuyết trình ngắn (2–3 phút) về chủ đề: «Gia đình trong thế giới hiện đại».",
+    "sampleGuidance": [
+      "Nêu vai trò thiêng liêng của gia đình đối với sự định hình nhân cách cá nhân.",
+      "Phân tích sự khác biệt giữa quan niệm gia đình truyền thống và gia đình trẻ ngày nay.",
+      "Đề xuất những giải pháp để bảo tồn sự gắn kết ấm áp giữa các thành viên."
+    ]
+  }
+}

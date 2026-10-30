@@ -1,0 +1,52 @@
+{
+  "id": 8,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Объявление о пропаже ключей или вещей",
+  "writingTime": "20 phút",
+  "topic": "Viết mẩu tin thông báo tìm đồ đạc thất lạc dán tại bảng tin",
+  "targetWordRange": [
+    40,
+    60
+  ],
+  "task": "Bạn bị rơi một chùm chìa khóa tại sảnh trường đại học. Hãy viết mẩu thông báo tìm kiếm dán tại bảng tin sinh viên.",
+  "requirements": [
+    "Tiêu đề thông báo nổi bật",
+    "Mô tả chi tiết đồ vật bị mất (màu sắc, số lượng, đặc điểm nhận dạng)",
+    "Nơi và thời điểm có khả năng bị rơi",
+    "Thông tin liên lạc và lời cảm ơn kèm hậu tạ"
+  ],
+  "cliches": [
+    {
+      "ru": "Внимание! Потеряны ключи!",
+      "vi": "Chú ý! Bị rơi chùm chìa khóa!"
+    },
+    {
+      "ru": "Нашедшего просьба позвонить по номеру...",
+      "vi": "Ai nhặt được xin vui lòng gọi theo số..."
+    },
+    {
+      "ru": "Вознаграждение гарантируется!",
+      "vi": "Xin đảm bảo có quà hậu tạ!"
+    }
+  ],
+  "modelAnswer": "ВНИМАНИЕ! ПОТЕРЯНЫ КЛЮЧИ!\n\nВчера, 15 октября, около 14:00 в холле главного корпуса была утеряна связка ключей (3 штуки) с металлическим брелоком в виде Эйфелевой башни.\n\nНашедшего очень прошу вернуть за вознаграждение! Пожалуйста, позвоните или напишите в Telegram по номеру: +7 (999) 123-45-67.\n\nЗаранее большое спасибо!",
+  "modelWordCount": 46,
+  "rubric": [
+    {
+      "criteria": "Đầy đủ thông tin thiết yếu",
+      "weight": "40%",
+      "desc": "Nêu rõ thời gian, địa điểm, đặc điểm đồ vật và số liên hệ."
+    },
+    {
+      "criteria": "Văn phong thông báo",
+      "weight": "35%",
+      "desc": "Súc tích, rõ ràng, câu cú ngắn gọn chuẩn mực."
+    },
+    {
+      "criteria": "Định dạng văn bản",
+      "weight": "25%",
+      "desc": "Tiêu đề in hoa, cách dòng hợp lý."
+    }
+  ]
+}

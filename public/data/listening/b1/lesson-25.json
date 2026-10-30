@@ -1,0 +1,63 @@
+{
+  "id": 25,
+  "level": "B1",
+  "skill": "listening",
+  "title": "Итоговое занятие курса B1: Практикум ТРКИ-1",
+  "listeningTime": "15 phút",
+  "topic": "Luyện nghe tổng hợp: Chinh phục субтест «Аудирование» chuẩn TRKI-1",
+  "dialogue": [
+    {
+      "speaker": "Экзаменатор",
+      "ru": "Уважаемые кандидаты! Сегодня мы подводим итоги подготовки к сертификационному субтесту по аудированию первого уровня ТРКИ-1.",
+      "vi": "Kính thưa các thí sinh! Hôm nay chúng ta tổng kết quá trình chuẩn bị cho phần thi Nghe hiểu chứng chỉ cấp độ 1 TRKI-1."
+    },
+    {
+      "speaker": "Кандидат",
+      "ru": "Скажите, пожалуйста, сколько времени отводится на выполнение заданий и сколько раз звучит каждый текст?",
+      "vi": "Xin thầy cho biết thời gian làm bài là bao nhiêu và mỗi đoạn ghi âm được nghe mấy lần ạ?"
+    },
+    {
+      "speaker": "Экзаменатор",
+      "ru": "Субтест длится 35 минут. Короткие диалоги звучат один раз, а развёрнутые монологи, радиопередачи и лекции — дважды с паузой для чтения вопросов.",
+      "vi": "Phần thi kéo dài 35 phút. Các hội thoại ngắn nghe 1 lần, còn các độc thoại dài, phóng sự và bài giảng nghe 2 lần kèm khoảng nghỉ đọc đề."
+    },
+    {
+      "speaker": "Кандидат",
+      "ru": "Благодаря пройденному 25-урочному курсу мы уверенно ориентируемся в темпе живой русской речи и готовы к сдаче!",
+      "vi": "Nhờ khóa học 25 bài chuyên sâu vừa qua, chúng em đã nắm bắt rất vững nhịp điệu tiếng Nga đời sống và hoàn toàn sẵn sàng cho kỳ thi!"
+    }
+  ],
+  "dictation": {
+    "title": "Chính tả nghe hiểu (Диктант)",
+    "instruction": "Nghe và điền chính xác câu sau:",
+    "targetText": "Мы уверенно понимаем темп живой русской речи и успешно сдадим экзамен.",
+    "hint": "Sự tự tin sau khi hoàn thành toàn bộ khóa luyện nghe B1."
+  },
+  "questions": [
+    {
+      "id": "b1_l25_q1",
+      "prompt": "Сколько времени отводится на сертификационный субтест «Аудирование» ТРКИ-1?",
+      "hint": "Xem quy chế thời gian thi chuẩn quốc tế do giám thị công bố.",
+      "options": [
+        {
+          "key": "A",
+          "text": "35 минут"
+        },
+        {
+          "key": "B",
+          "text": "Пять минут"
+        },
+        {
+          "key": "C",
+          "text": "Два часа"
+        },
+        {
+          "key": "D",
+          "text": "Весь день"
+        }
+      ],
+      "ans": "A",
+      "explain": "По государственному стандарту ТРКИ-1 субтест «Аудирование» занимает ровно 35 минут."
+    }
+  ]
+}

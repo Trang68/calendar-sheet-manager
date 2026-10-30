@@ -1,0 +1,32 @@
+{
+  "id": 9,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Моё любимое хобби и свободное время",
+  "speakingTime": "15 phút",
+  "topic": "Sở thích cá nhân: Âm nhạc, nhiếp ảnh, hội họa và đọc sách",
+  "intro": "Luyện nói về đam mê cá nhân, lý do say mê và thời gian dành cho các hoạt động tiêu khiển.",
+  "shadowingPhrases": [
+    {
+      "text": "В свобо́дное вре́мя я увлека́юсь фотогра́фией приро́ды.",
+      "meaning": "Vào thời gian rảnh, tôi say mê nhiếp ảnh thiên nhiên cảnh vật.",
+      "phonetic": "V sva-bod-na-ye vre-mya ya uv-le-ka-yus' fa-tag-ra-fi-yey pri-ro-dy.",
+      "tips": "Động từ 'увлекаться' đi với cách công cụ (творительный): фотографией."
+    },
+    {
+      "text": "Му́зыка помога́ет мне рассла́биться по́сле тру́дного дня.",
+      "meaning": "Âm nhạc giúp tôi thư giãn thả lỏng sau một ngày làm việc vất vả.",
+      "phonetic": "Mu-zy-ka pa-ma-ga-yet mne ras-sla-bit'-sya pos-le trud-na-va dnya.",
+      "tips": "Chú ý ngắt nhịp và nhấn trọng âm từ 'расслабиться'."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Nói về một sở thích giúp bạn cân bằng cuộc sống và nạp lại năng lượng.",
+    "sampleGuidance": [
+      "Sở thích đó là gì và bạn bắt đầu theo đuổi từ khi nào?",
+      "Bạn thường dành bao nhiêu thời gian mỗi tuần cho sở thích này?",
+      "Sở thích mang lại cho bạn những cảm xúc và kỹ năng gì mới?"
+    ]
+  }
+}

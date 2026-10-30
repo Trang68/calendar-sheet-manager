@@ -1,0 +1,32 @@
+{
+  "id": 11,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Праздники в моей стране и в России",
+  "speakingTime": "15 phút",
+  "topic": "Giao lưu văn hóa: So sánh ngày lễ truyền thống quê hương và Nga",
+  "intro": "Luyện so sánh phong tục tập quán: Tết Nguyên Đán Việt Nam và Tết Dương Lịch / Giáng sinh tại Nga.",
+  "shadowingPhrases": [
+    {
+      "text": "Во Вьетна́ме гла́вный семе́йный пра́здник — э́то лу́нный Но́вый год Тэт.",
+      "meaning": "Tại Việt Nam ngày lễ sum họp gia đình lớn nhất là Tết Âm Lịch.",
+      "phonetic": "Va V'yet-na-me glav-ny se-mey-ny praz-nik — e-ta lun-ny No-vy got Tet.",
+      "tips": "Âm 'д' trong từ 'праздник' là âm câm, phát âm thành /ˈpraz-nʲɪk/."
+    },
+    {
+      "text": "В обе́их страна́х в пра́здники лю́ди да́рят друг дру́гу пода́рки.",
+      "meaning": "Ở cả hai quốc gia vào các ngày lễ người ta đều trao tặng quà cho nhau.",
+      "phonetic": "V a-be-ikh stra-nakh v praz-ni-ki lyu-di da-ryat druk dru-gu pa-dar-ki.",
+      "tips": "Cụm 'друг другу' mang nghĩa lẫn nhau, tương hỗ."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thực hành Độc thoại (Монологическая речь)",
+    "task": "Hãy so sánh Tết cổ truyền Việt Nam và ngày Tết năm mới tại Nga.",
+    "sampleGuidance": [
+      "Thời gian diễn ra lễ hội ở hai quốc gia khác nhau thế nào?",
+      "Mọi người chuẩn bị những món ăn truyền thống gì đặc biệt?",
+      "Không khí đón chào khoảnh khắc giao thừa diễn ra như thế nào?"
+    ]
+  }
+}

@@ -25,5 +25,203 @@
     "speakingTime": "15 phút",
     "topic": "Bàn về kế hoạch du lịch, mua vé và đặt phòng khách sạn",
     "questionCount": 3
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Моя семья и семейные традиции",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Miêu tả gia đình, nghề nghiệp người thân và thói quen sum họp",
+    "questionCount": 3
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Поход за покупками: Что и где я покупаю",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Thói quen tiêu dùng: Mua thực phẩm, quần áo và đồ gia dụng",
+    "questionCount": 2
+  },
+  {
+    "id": 6,
+    "file": "lesson-06.json",
+    "title": "Моё любимое блюдо русской кухни",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Ẩm thực yêu thích: Món ăn Nga và trải nghiệm vị giác",
+    "questionCount": 2
+  },
+  {
+    "id": 7,
+    "file": "lesson-07.json",
+    "title": "Как я забочусь о своём здоровье",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Chăm sóc sức khỏe: Luyện tập thể dục, dinh dưỡng và lối sống",
+    "questionCount": 2
+  },
+  {
+    "id": 8,
+    "file": "lesson-08.json",
+    "title": "Мой дом: Описание комнаты и уюта",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Không gian sống: Miêu tả căn phòng, bàn học và góc thư giãn",
+    "questionCount": 2
+  },
+  {
+    "id": 9,
+    "file": "lesson-09.json",
+    "title": "Моё любимое хобби и свободное время",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Sở thích cá nhân: Âm nhạc, nhiếp ảnh, hội họa và đọc sách",
+    "questionCount": 2
+  },
+  {
+    "id": 10,
+    "file": "lesson-10.json",
+    "title": "Моя поездка на поезде или самолёте",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Trải nghiệm du hành: Chuyến đi xa đáng nhớ bằng máy bay/tàu hỏa",
+    "questionCount": 2
+  },
+  {
+    "id": 11,
+    "file": "lesson-11.json",
+    "title": "Праздники в моей стране и в России",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Giao lưu văn hóa: So sánh ngày lễ truyền thống quê hương và Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 12,
+    "file": "lesson-12.json",
+    "title": "Любимый фильм или книга",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Văn hóa nghệ thuật: Tóm tắt nội dung và cảm nghĩ về phim ảnh/sách",
+    "questionCount": 2
+  },
+  {
+    "id": 13,
+    "file": "lesson-13.json",
+    "title": "Погода и любимое время года",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Thiên nhiên bốn mùa: Thời tiết, nhiệt độ và mùa yêu thích",
+    "questionCount": 2
+  },
+  {
+    "id": 14,
+    "file": "lesson-14.json",
+    "title": "Профессия моей мечты",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Định hướng nghề nghiệp: Ngành nghề mơ ước và kế hoạch tương lai",
+    "questionCount": 2
+  },
+  {
+    "id": 15,
+    "file": "lesson-15.json",
+    "title": "Животные в нашей жизни",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Thế giới động vật: Thú cưng trong nhà và tình yêu động vật",
+    "questionCount": 2
+  },
+  {
+    "id": 16,
+    "file": "lesson-16.json",
+    "title": "Транспорт в моём городе",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Hạ tầng giao thông: Xe buýt, tàu điện ngầm, xe đạp và xe ôm",
+    "questionCount": 2
+  },
+  {
+    "id": 17,
+    "file": "lesson-17.json",
+    "title": "Мой лучший друг: Характер и внешность",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Chân dung con người: Ngoại hình, tính cách và phẩm chất của bạn thân",
+    "questionCount": 2
+  },
+  {
+    "id": 18,
+    "file": "lesson-18.json",
+    "title": "Один день из студенческой жизни",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Đời sống học đường: Lịch trình một ngày sinh viên trên giảng đường",
+    "questionCount": 2
+  },
+  {
+    "id": 19,
+    "file": "lesson-19.json",
+    "title": "Как я провожу выходные дни",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Nghỉ ngơi cuối tuần: Thư giãn, dạo phố, thể thao và gặp gỡ bạn bè",
+    "questionCount": 2
+  },
+  {
+    "id": 20,
+    "file": "lesson-20.json",
+    "title": "Посещение музея или картинной галереи",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Trải nghiệm văn hóa: Tham quan triển lãm, bảo tàng nghệ thuật",
+    "questionCount": 2
+  },
+  {
+    "id": 21,
+    "file": "lesson-21.json",
+    "title": "Подарки: Что я люблю дарить и получать",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Văn hóa quà tặng: Lựa chọn quà, ý nghĩa và cảm xúc khi trao nhận",
+    "questionCount": 2
+  },
+  {
+    "id": 22,
+    "file": "lesson-22.json",
+    "title": "Мой родной язык и сложности изучения русского",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Ngôn ngữ học giao tiếp: Tiếng mẹ đẻ và kinh nghiệm chinh phục tiếng Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 23,
+    "file": "lesson-23.json",
+    "title": "Окружающая среда и чистота города",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Bảo vệ môi trường: Không gian xanh, phân loại rác và lối sống xanh",
+    "questionCount": 2
+  },
+  {
+    "id": 24,
+    "file": "lesson-24.json",
+    "title": "Интернет и гаджеты в повседневной жизни",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Công nghệ số: Điện thoại thông minh, mạng xã hội và việc học trực tuyến",
+    "questionCount": 2
+  },
+  {
+    "id": 25,
+    "file": "lesson-25.json",
+    "title": "Чего я достиг на уровне A2: Мои цели на будущее",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Tổng kết kỹ năng Nói A2: Đánh giá sự tiến bộ và mục tiêu tiến lên B1",
+    "questionCount": 2
   }
 ]
