@@ -19,7 +19,7 @@
       sessionStorage.removeItem('taiga_swipe_transition');
       setTimeout(() => {
         delete document.documentElement.dataset.swipeDirection;
-      }, 500);
+      }, 600);
     }
   } catch (_) {}
 
