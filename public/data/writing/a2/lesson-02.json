@@ -1,0 +1,54 @@
+{
+  "id": 2,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Электронное письмо другу: Приглашение на выставку",
+  "writingTime": "25 phút",
+  "topic": "Viết email thân mật rủ bạn đi xem triển lãm nghệ thuật",
+  "targetWordRange": [
+    60,
+    85
+  ],
+  "task": "Viết một bức thư điện tử (60–85 từ) rủ bạn cùng phòng đi xem triển lãm tranh tại bảo tàng vào Chủ nhật.",
+  "requirements": [
+    "1. Lời chào và hỏi thăm sức khỏe.",
+    "2. Nêu mục đích viết thư: rủ đi triển lãm tranh.",
+    "3. Cung cấp thông tin: địa điểm, thời gian và giá vé sinh viên.",
+    "4. Hẹn địa điểm gặp nhau (trước cửa ga metro).",
+    "5. Đề nghị bạn phản hồi sớm."
+  ],
+  "cliches": [
+    {
+      "ru": "Как твои дела? Надеюсь, ты хорошо себя чувствуешь.",
+      "vi": "Bạn thế nào? Mong bạn vẫn khỏe."
+    },
+    {
+      "ru": "Я пишу, чтобы пригласить тебя на новую выставку.",
+      "vi": "Tôi viết thư này để mời bạn cùng đi xem triển lãm mới."
+    },
+    {
+      "ru": "Выставка проходит в центральном музее.",
+      "vi": "Triển lãm diễn ra ở bảo tàng trung tâm."
+    },
+    {
+      "ru": "Давай встретимся около входа в метро в два часа.",
+      "vi": "Chúng mình hẹn gặp nhau gần lối vào metro lúc 2 giờ nhé."
+    }
+  ],
+  "modelAnswer": "Привет, Максим!\n\nКак твои дела? Надеюсь, ты свободен в эти выходные. Я пишу тебе, чтобы пригласить на интересную художественную выставку в центре города. Там показывают редкие картины современных художников.\n\nДля студентов вход стоит всего двести рублей. Давай встретимся в воскресенье в два часа дня возле станции метро «Театральная». Напиши мне, сможешь ли ты пойти!\n\nДо встречи,\nМинх.",
+  "modelWordCount": 63,
+  "rubric": [
+    {
+      "criteria": "Nội dung & Mục đích",
+      "desc": "Truyền đạt đầy đủ thời gian, địa điểm và đề nghị rủ bạn."
+    },
+    {
+      "criteria": "Văn phong thân mật",
+      "desc": "Sử dụng đại từ «ты», lối hành văn tự nhiên và các liên từ mạch lạc."
+    },
+    {
+      "criteria": "Từ vựng & Ngữ pháp A2",
+      "desc": "Sử dụng đúng giới từ chỉ thời gian và địa điểm."
+    }
+  ]
+}

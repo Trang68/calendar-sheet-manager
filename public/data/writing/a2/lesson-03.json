@@ -1,0 +1,53 @@
+{
+  "id": 3,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Короткое эссе: Моё любимое время года",
+  "writingTime": "30 phút",
+  "topic": "Viết đoạn văn ngắn miêu tả mùa yêu thích trong năm",
+  "targetWordRange": [
+    70,
+    95
+  ],
+  "task": "Viết một bài văn ngắn (70–95 từ) kể về mùa mà bạn thích nhất trong năm và lý do vì sao.",
+  "requirements": [
+    "1. Giới thiệu mùa yêu thích của bạn.",
+    "2. Miêu tả đặc điểm thời tiết và cảnh sắc thiên nhiên vào mùa đó.",
+    "3. Kể những hoạt động bạn thường làm khi mùa đó đến.",
+    "4. Cảm xúc và ấn tượng đặc biệt của bạn về mùa này."
+  ],
+  "cliches": [
+    {
+      "ru": "Моё самое любимое время года — это...",
+      "vi": "Mùa mà tôi yêu thích nhất trong năm là..."
+    },
+    {
+      "ru": "В это время года на улице стоит прекрасная погода.",
+      "vi": "Vào mùa này thời tiết ngoài trời rất tuyệt vời."
+    },
+    {
+      "ru": "Деревья становятся золотыми и жёлтыми.",
+      "vi": "Cây cối ngả sang màu vàng ươm rực rỡ."
+    },
+    {
+      "ru": "Я очень люблю гулять в парке и делать фотографии.",
+      "vi": "Tôi rất thích đi dạo trong công viên và chụp ảnh."
+    }
+  ],
+  "modelAnswer": "Моё самое любимое время года в России — это золотая осень. Она начинается в сентябре и продолжается до середины октября.\n\nВ это время года погода ещё достаточно тёплая, а воздух удивительно свежий и прозрачный. Все парки и леса становятся невероятно красивыми: листья на деревьях окрашиваются в жёлтый, оранжевый и красный цвета.\n\nЯ обожаю гулять по старым аллеям, шуршать опавшими листьями и фотографировать природу. Осень вдохновляет меня на творчество и учёбу.",
+  "modelWordCount": 71,
+  "rubric": [
+    {
+      "criteria": "Chủ đề & Bố cục",
+      "desc": "Bài viết có mở bài, thân bài miêu tả và cảm nghĩ kết bài."
+    },
+    {
+      "criteria": "Tính từ & Từ vựng miêu tả",
+      "desc": "Sử dụng phong phú tính từ chỉ màu sắc, cảm xúc và thời tiết."
+    },
+    {
+      "criteria": "Độ dài & Ngữ pháp",
+      "desc": "Đạt số lượng từ yêu cầu, sử dụng đúng các thì của động từ."
+    }
+  ]
+}

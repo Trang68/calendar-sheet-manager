@@ -1,5 +1,5 @@
 // TAIGA TALK Progressive Web App (PWA) Service Worker
-const CACHE_NAME = 'taiga-talk-v3.21';
+const CACHE_NAME = 'taiga-talk-v3.22';
 const PRECACHE_ASSETS = [
   '/',
   '/home',
@@ -24,7 +24,16 @@ const PRECACHE_ASSETS = [
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png',
-  '/favicon.png'
+  '/favicon.png',
+  '/data/skills.json',
+  '/data/reading/a2/manifest.json',
+  '/data/listening/a2/manifest.json',
+  '/data/speaking/a2/manifest.json',
+  '/data/writing/a2/manifest.json',
+  '/data/reading/b1/manifest.json',
+  '/data/listening/b1/manifest.json',
+  '/data/speaking/b1/manifest.json',
+  '/data/writing/b1/manifest.json'
 ];
 
 // Install: Pre-cache static assets

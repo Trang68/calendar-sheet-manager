@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Студенческая жизнь в МГУ имени М. В. Ломоносова",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Hệ thống Giáo dục Đại học & Đời sống du học sinh tại Nga",
+    "questionCount": 3
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "А. С. Пушкин и феномен Болдинской осени",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Văn hóa, Danh nhân & Văn học Kinh điển",
+    "questionCount": 3
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Озеро Байкал — священное море и колодец планеты",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Thiên nhiên, Địa lý & Bảo tồn môi trường Siberia",
+    "questionCount": 3
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Цифровые технологии и трансформация рынка труда",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Khoa học, Trí tuệ Nhân tạo & Nghề nghiệp tương lai",
+    "questionCount": 2
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Государственный Эрмитаж в Санкт-Петербурге",
+    "badge": "B1 Đọc hiểu",
+    "readingTime": "20 phút",
+    "topic": "Lịch sử, Kiến trúc Hoàng gia & Nghệ thuật Bảo tàng",
+    "questionCount": 2
+  }
+]

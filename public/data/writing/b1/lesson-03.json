@@ -1,0 +1,53 @@
+{
+  "id": 3,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Благодарственное письмо коллегам после стажировки",
+  "writingTime": "35 phút",
+  "topic": "Viết thư cảm ơn các đồng nghiệp sau thời gian hoàn thành kỳ thực tập",
+  "targetWordRange": [
+    100,
+    130
+  ],
+  "task": "Sau khi kết thúc kỳ thực tập 3 tháng tại một công ty công nghệ tại Nga, hãy viết thư cảm ơn gửi tới toàn thể đồng nghiệp trong nhóm làm việc.",
+  "requirements": [
+    "1. Lời chào tập thể trân trọng và thân thiện.",
+    "2. Bày tỏ lòng biết ơn sâu sắc về sự chỉ bảo tận tình của các tiền bối.",
+    "3. Nêu những kiến thức và kỹ năng quý giá bạn đã tích lũy được.",
+    "4. Chúc công ty ngày càng phát triển và duy trì liên lạc trong tương lai."
+  ],
+  "cliches": [
+    {
+      "ru": "Дорогие коллеги, уважаемые друзья!",
+      "vi": "Các đồng nghiệp thân mến, các bạn quý mến!"
+    },
+    {
+      "ru": "Хочу выразить искреннюю благодарность за...",
+      "vi": "Tôi muốn bày tỏ lòng biết ơn chân thành vì..."
+    },
+    {
+      "ru": "Благодаря вашей поддержке я приобрёл ценный практический опыт.",
+      "vi": "Nhờ sự hỗ trợ của các bạn, tôi đã tích lũy được kinh nghiệm thực tiễn quý giá."
+    },
+    {
+      "ru": "Надеюсь на дальнейшее плодотворное сотрудничество.",
+      "vi": "Hy vọng vào sự hợp tác tốt đẹp và hiệu quả trong tương lai."
+    }
+  ],
+  "modelAnswer": "Дорогие коллеги и уважаемые друзья!\n\nПодошла к концу моя трёхмесячная стажировка в вашей замечательной компании. Хочу выразить каждому из вас самую искреннюю благодарность за тёплый приём, терпение и постоянную готовность помочь.\n\nБлагодаря вашей профессиональной поддержке я не только улучшил свой русский язык, но и приобрёл бесценный практический опыт в области разработки программных решений. Работа в вашей дружной команде стала для меня настоящей школой мастерства.\n\nЯ желаю вашей компании процветания, новых масштабных проектов и творческих побед! Буду рад поддерживать профессиональный и дружеский контакт.\n\nС глубоким уважением и наилучшими пожеланиями,\nМинх Нгуен.",
+  "modelWordCount": 102,
+  "rubric": [
+    {
+      "criteria": "Ngữ cảnh giao tiếp văn hóa công sở",
+      "desc": "Thể hiện lòng biết ơn chân thành, lịch thiệp và chuẩn mực văn hóa Nga."
+    },
+    {
+      "criteria": "Độ chính xác ngữ pháp",
+      "desc": "Chia đúng các cách, sử dụng linh hoạt các liên từ và trạng từ."
+    },
+    {
+      "criteria": "Độ dài văn bản",
+      "desc": "Đạt số lượng từ tiêu chuẩn 100-130 từ."
+    }
+  ]
+}

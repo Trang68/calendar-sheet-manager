@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Мой родной город и любимые места",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Miêu tả thành phố quê hương, danh lam thắng cảnh và phương tiện",
+    "questionCount": 4
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Мой обычный день: Распорядок и привычки",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Kể về lịch trình thường nhật, giờ giấc sinh hoạt và học tập",
+    "questionCount": 4
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Планы на отпуск и путешествия",
+    "badge": "A2 Nói",
+    "speakingTime": "15 phút",
+    "topic": "Bàn về kế hoạch du lịch, mua vé và đặt phòng khách sạn",
+    "questionCount": 3
+  }
+]

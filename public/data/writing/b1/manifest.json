@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Официальное заявление в международный отдел университета",
+    "badge": "B1 Viết",
+    "writingTime": "40 phút",
+    "topic": "Văn bản hành chính: Đơn xin gia hạn visa và xác nhận học bổng",
+    "targetWordRange": [
+      100,
+      130
+    ]
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Эссе-рассуждение: Роль социальных сетей в жизни молодёжи",
+    "badge": "B1 Viết",
+    "writingTime": "45 phút",
+    "topic": "Bài luận nghị luận xã hội TRKI-1: Tác động hai mặt của mạng xã hội",
+    "targetWordRange": [
+      130,
+      160
+    ]
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Благодарственное письмо коллегам после стажировки",
+    "badge": "B1 Viết",
+    "writingTime": "35 phút",
+    "topic": "Viết thư cảm ơn các đồng nghiệp sau thời gian hoàn thành kỳ thực tập",
+    "targetWordRange": [
+      100,
+      130
+    ]
+  }
+]

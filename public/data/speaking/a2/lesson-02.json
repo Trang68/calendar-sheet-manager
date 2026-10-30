@@ -1,0 +1,49 @@
+{
+  "id": 2,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Мой обычный день: Распорядок и привычки",
+  "speakingTime": "15 phút",
+  "topic": "Kể về lịch trình thường nhật, giờ giấc sinh hoạt và học tập",
+  "intro": "Luyện sử dụng các động từ chỉ hành động thường ngày, cách nói giờ trong tiếng Nga và các liên từ chỉ thứ tự thời gian.",
+  "shadowingPhrases": [
+    {
+      "id": "a2_spk_5",
+      "text": "Обычно я просыпаюсь в семь часов утра и делаю зарядку.",
+      "meaning": "Thông thường tôi thức dậy lúc 7 giờ sáng và tập thể dục.",
+      "phonetic": "Obychno ya prosypayus' v sem' chasov utra i delayu zaryadku.",
+      "tips": "«Просыпаюсь» đuôi /-s'/ đọc êm, không kéo dài."
+    },
+    {
+      "id": "a2_spk_6",
+      "text": "После плотного завтрака я еду на учёбу на автобусе.",
+      "meaning": "Sau bữa ăn sáng no nê tôi đi xe buýt đến trường học.",
+      "phonetic": "Posle plotnogo zavtraka ya yedu na uchyobu na avtobuse.",
+      "tips": "Sau giới từ «после» dùng danh từ và tính từ ở Cách 2."
+    },
+    {
+      "id": "a2_spk_7",
+      "text": "Занятия в университете начинаются ровно в девять часов.",
+      "meaning": "Các tiết học ở trường đại học bắt đầu đúng vào 9 giờ.",
+      "phonetic": "Zanyatiya v universitete nachinayutsya rovno v devyat' chasov.",
+      "tips": "«Начинаются» đọc đuôi «-тся» thành âm /-tsa/."
+    },
+    {
+      "id": "a2_spk_8",
+      "text": "Вечером я делаю домашние задания и повторяю новые слова.",
+      "meaning": "Buổi tối tôi làm bài tập về nhà và ôn lại các từ vựng mới.",
+      "phonetic": "Vecherom ya delayu domashnie zadaniya i povtoryayu novye slova.",
+      "tips": "«Повторяю» nhấn trọng âm ở âm tiết cuối."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Мой распорядок дня)",
+    "task": "Hãy mô tả một ngày bình thường của bạn từ sáng đến tối (khoảng 6–8 câu).",
+    "sampleGuidance": [
+      "Во сколько вы обычно встаёте? (Mấy giờ bạn thức dậy?)",
+      "Что вы едите на завтрак, обед и ужин? (Bạn ăn gì các bữa?)",
+      "Что вы делаете днём на учёбе или работе? (Ban ngày bạn học tập/làm việc ra sao?)",
+      "Как вы отдыхаете перед сном? (Bạn thư giãn thế nào trước khi đi ngủ?)"
+    ]
+  }
+}

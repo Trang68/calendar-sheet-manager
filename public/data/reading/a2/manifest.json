@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Московское метро: ориентирование и подземные дворцы",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Giao thông công cộng & Chỉ đường trong đô thị",
+    "questionCount": 4
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Покупки: Супермаркет или традиционный рынок?",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Mua sắm, Thực phẩm & Chi tiêu hàng ngày",
+    "questionCount": 3
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Русская зима и четыре времени года в России",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Thời tiết, Khí hậu & Bốn mùa tại Nga",
+    "questionCount": 3
+  },
+  {
+    "id": 4,
+    "file": "lesson-04.json",
+    "title": "Здоровье: Визит к врачу и покупка лекарств",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Sức khỏe, Triệu chứng bệnh & Nhà thuốc",
+    "questionCount": 2
+  },
+  {
+    "id": 5,
+    "file": "lesson-05.json",
+    "title": "Русская дача: Традиция загородного отдыха",
+    "badge": "A2 Đọc hiểu",
+    "readingTime": "15 phút",
+    "topic": "Sở thích, Kỳ nghỉ cuối tuần & Văn hóa Dacha",
+    "questionCount": 2
+  }
+]

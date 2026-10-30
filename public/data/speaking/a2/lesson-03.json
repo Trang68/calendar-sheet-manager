@@ -1,0 +1,42 @@
+{
+  "id": 3,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Планы на отпуск и путешествия",
+  "speakingTime": "15 phút",
+  "topic": "Bàn về kế hoạch du lịch, mua vé và đặt phòng khách sạn",
+  "intro": "Luyện tập diễn đạt các kế hoạch trong tương lai với động từ hoàn thành (СВ) và cấu trúc «хотеть / планировать + động từ nguyên mẫu».",
+  "shadowingPhrases": [
+    {
+      "id": "a2_spk_9",
+      "text": "Следующим летом я планирую поехать в Санкт-Петербург.",
+      "meaning": "Mùa hè tới tôi dự định sẽ đi du lịch Saint Petersburg.",
+      "phonetic": "Sleduyushchim letom ya planiruyu poyekhat' v Sankt-Peterburg.",
+      "tips": "«Следующим летом» dùng Cách 5 chỉ thời gian diễn ra hành động."
+    },
+    {
+      "id": "a2_spk_10",
+      "text": "Я хочу увидеть знаменитые белые ночи и разводные мосты.",
+      "meaning": "Tôi muốn chiêm ngưỡng hiện tượng Đêm trắng nổi tiếng và cầu mở.",
+      "phonetic": "Ya khochu uvidet' znamenitye belye nochi i razvodnye mosty.",
+      "tips": "Động từ hoàn thành «увидеть» thể hiện kết quả mong muốn."
+    },
+    {
+      "id": "a2_spk_11",
+      "text": "Мы заранее забронировали уютный номер в гостинице рядом с центром.",
+      "meaning": "Chúng tôi đã đặt trước một phòng khách sạn ấm cúng gần trung tâm.",
+      "phonetic": "My zaranee zabronirovali uyutnyy nomer v gostinitse ryadom s tsentrom.",
+      "tips": "Trọng âm từ «заброни́ровали» rơi vào âm tiết thứ 3."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Планы на путешествие)",
+    "task": "Kể về chuyến du lịch lý tưởng mà bạn đang ấp ủ hoặc chuẩn bị thực hiện.",
+    "sampleGuidance": [
+      "Куда именно вы хотите поехать? (Bạn muốn đi đâu?)",
+      "С кем вы поедете и на каком транспорте? (Đi cùng ai và bằng phương tiện gì?)",
+      "Что вы собираетесь там посмотреть? (Bạn dự định ngắm nhìn những gì?)",
+      "Сколько дней продлится поездка? (Chuyến đi kéo dài bao nhiêu ngày?)"
+    ]
+  }
+}

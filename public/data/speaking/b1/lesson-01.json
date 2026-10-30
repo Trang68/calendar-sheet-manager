@@ -1,0 +1,42 @@
+{
+  "id": 1,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Презентация: Зачем изучать иностранные языки в XXI веке?",
+  "speakingTime": "20 phút",
+  "topic": "Thuyết trình học thuật: Vai trò của đa ngôn ngữ và mở rộng chân trời",
+  "intro": "Luyện tập kỹ năng thuyết trình có cấu trúc (Mở đầu, Luận điểm 1-2-3, Kết luận) theo chuẩn vấn đáp TRKI-1.",
+  "shadowingPhrases": [
+    {
+      "id": "b1_spk_1",
+      "text": "В эпоху глобализации владение иностранными языками открывает безграничные перспективы.",
+      "meaning": "Trong kỷ nguyên toàn cầu hóa, việc thông thạo ngoại ngữ mở ra những triển vọng vô hạn.",
+      "phonetic": "V epokhu globalizatsii vladenie inostrannymi yazykami otkryvaet bezgranichnye perspektivy.",
+      "tips": "«Глобализации» đọc rõ âm /ts/, «владение» kết hợp Cách 5."
+    },
+    {
+      "id": "b1_spk_2",
+      "text": "Во-первых, знание языка позволяет глубже понять менталитет и культуру другого народа.",
+      "meaning": "Thứ nhất, hiểu biết ngôn ngữ cho phép ta thấu hiểu sâu sắc tâm hồn và văn hóa của một dân tộc.",
+      "phonetic": "Vo-pervykh, znanie yazyka pozvolyaet glubzhe ponyat' mentalitet i kul'turu drugogo naroda.",
+      "tips": "Từ nối lập luận: «Во-первых» luôn có dấu phẩy đi kèm khi phát biểu."
+    },
+    {
+      "id": "b1_spk_3",
+      "text": "Во-вторых, специалисты со знанием русского языка высоко ценятся на международном рынке.",
+      "meaning": "Thứ hai, những chuyên gia biết tiếng Nga được đánh giá rất cao trên thị trường quốc tế.",
+      "phonetic": "Vo-vtorykh, spetsialisty so znaniem russkogo yazyka vysoko tsenyatsya na mezhdunarodnom rynke.",
+      "tips": "«Ценятся» đọc âm cuối /-tsa/ dứt khoát."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Thuyết trình tự do (Презентация TRKI-1)",
+    "task": "Hãy trình bày bài nói độc thoại dài 2–3 phút về chủ đề: «Почему я решил изучать русский язык и как он поможет моей будущей профессии?»",
+    "sampleGuidance": [
+      "Введение: личная мотивация выбора языка (Mở đầu: động lực cá nhân)",
+      "Основная часть: трудности и успехи в изучении (Thân bài: khó khăn và kết quả đạt được)",
+      "Практическая польза: карьера, учёба, друзья (Lợi ích thực tế: sự nghiệp, du học, bạn bè)",
+      "Заключение: пожелание единомышленникам (Kết luận: lời khuyên cho bạn bè cùng học)"
+    ]
+  }
+}

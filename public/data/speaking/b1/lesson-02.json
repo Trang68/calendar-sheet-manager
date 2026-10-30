@@ -1,0 +1,35 @@
+{
+  "id": 2,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Дискуссия: Жизнь в мегаполисе или в провинции?",
+  "speakingTime": "20 phút",
+  "topic": "Tranh luận & Phản biện: Đô thị hóa vs Cuộc sống thanh bình vùng quê",
+  "intro": "Luyện cấu trúc so sánh, biểu đạt quan điểm cá nhân («Я считаю, что...», «С одной стороны..., с другой стороны...») và phản biện lịch sự.",
+  "shadowingPhrases": [
+    {
+      "id": "b1_spk_4",
+      "text": "С одной стороны, мегаполис предоставляет колоссальные возможности для карьеры и образования.",
+      "meaning": "Một mặt, các đại đô thị mang lại cơ hội to lớn cho sự nghiệp và giáo dục.",
+      "phonetic": "S odnoy storony, megapolis predostavlyaet kolossal'nye vozmozhnosti dlya kar'yery i obrazovaniya.",
+      "tips": "Mở đầu mệnh đề so sánh: «С одной стороны...»."
+    },
+    {
+      "id": "b1_spk_5",
+      "text": "С другой стороны, постоянный стресс, шум и плохая экология отрицательно влияют на здоровье.",
+      "meaning": "Mặt khác, căng thẳng triền miên, tiếng ồn và môi trường ô nhiễm ảnh hưởng tiêu cực tới sức khỏe.",
+      "phonetic": "S drugoy storony, postoyannyy stress, shum i plokhaya ekologiya otritsatel'no vliyayut na zdorov'ye.",
+      "tips": "«Отрицательно влияют на» đòi hỏi Cách 4."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Tranh biện có đối lập (Дискуссия)",
+    "task": "Nêu và bảo vệ quan điểm của bạn: Nếu được tự do lựa chọn, bạn sẽ mua nhà sống ở trung tâm thủ đô hay ở một vùng quê yên bình ngoại ô?",
+    "sampleGuidance": [
+      "Сравнение ритма жизни и темпа работы (So sánh nhịp sống)",
+      "Доступ к медицине, культуре и развлечениям (Tiếp cận dịch vụ)",
+      "Экологическая обстановка и душевное спокойствие (Môi trường sống)",
+      "Мой личный выбор и обоснование (Lựa chọn dứt khoát của bản thân)"
+    ]
+  }
+}

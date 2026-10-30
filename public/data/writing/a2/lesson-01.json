@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "level": "A2",
+  "skill": "writing",
+  "title": "Поздравительная открытка другу с днём рождения",
+  "writingTime": "25 phút",
+  "topic": "Viết thiệp chúc mừng sinh nhật cho bạn bè người Nga",
+  "targetWordRange": [
+    50,
+    75
+  ],
+  "task": "Hãy viết một bưu thiếp chúc mừng sinh nhật (50–75 từ) gửi cho bạn cùng lớp người Nga tên là Denis.",
+  "requirements": [
+    "1. Lời chúc mừng mở đầu trang trọng hoặc thân mật (Дорогой Денис!).",
+    "2. Chúc sức khỏe, thành công trong học tập và niềm vui (Здоровья, успехов в учёбе).",
+    "3. Nhắc lại một kỷ niệm đẹp hoặc món quà bạn gửi tặng.",
+    "4. Lời mời gặp mặt ăn mừng cuối tuần.",
+    "5. Lời kết và ký tên thân mật."
+  ],
+  "cliches": [
+    {
+      "ru": "От всей души поздравляю тебя с днём рождения!",
+      "vi": "Từ tận đáy lòng xin chúc mừng sinh nhật bạn!"
+    },
+    {
+      "ru": "Желаю тебе крепкого здоровья, счастья и удачи!",
+      "vi": "Chúc bạn dồi dào sức khỏe, hạnh phúc và may mắn!"
+    },
+    {
+      "ru": "Пусть все твои мечты сбываются!",
+      "vi": "Chúc cho mọi ước mơ của bạn đều trở thành hiện thực!"
+    },
+    {
+      "ru": "С нетерпением жду нашей встречи в субботу.",
+      "vi": "Háo hức mong chờ buổi gặp mặt của chúng mình vào thứ Bảy."
+    }
+  ],
+  "modelAnswer": "Дорогой Денис!\n\nОт всей души поздравляю тебя с днём рождения! Желаю тебе крепкого здоровья, отличного настроения и больших успехов в учёбе. Пусть все твои заветные мечты обязательно сбудутся!\n\nЯ приготовил для тебя небольшой подарок из Вьетнама. Надеюсь, мы увидимся в субботу и отпразднуем этот день вместе.\n\nТвой друг, Ан.",
+  "modelWordCount": 54,
+  "rubric": [
+    {
+      "criteria": "Bố cục thiệp chúc mừng",
+      "desc": "Có lời xưng hô mở đầu, lời chúc chính và chữ ký kết thúc."
+    },
+    {
+      "criteria": "Cấu trúc lời chúc (Cách 2)",
+      "desc": "Sử dụng chính xác cấu trúc «Желаю тебе + Cách 2»."
+    },
+    {
+      "criteria": "Ngữ pháp & Chính tả",
+      "desc": "Chia đúng thì và không mắc lỗi chính tả căn bản."
+    }
+  ]
+}

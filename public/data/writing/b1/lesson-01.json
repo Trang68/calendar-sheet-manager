@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "level": "B1",
+  "skill": "writing",
+  "title": "Официальное заявление в международный отдел университета",
+  "writingTime": "40 phút",
+  "topic": "Văn bản hành chính: Đơn xin gia hạn visa và xác nhận học bổng",
+  "targetWordRange": [
+    100,
+    130
+  ],
+  "task": "Bạn là sinh viên quốc tế đang theo học tại một trường đại học Nga. Hãy viết một bức thư chính thức (100–130 từ) gửi cho Trưởng phòng Hợp tác Quốc tế để xin cấp giấy xác nhận sinh viên và hỗ trợ thủ tục gia hạn thị thực sinh viên.",
+  "requirements": [
+    "1. Tiêu đề gửi đúng chức danh (Декану / Начальнику международного отдела).",
+    "2. Nêu rõ họ tên đầy đủ, quốc tịch, khoa và mã số sinh viên.",
+    "3. Trình bày lý do xin cấp giấy chứng nhận (gia hạn visa hoặc nộp hồ sơ học bổng).",
+    "4. Đề nghị thời gian nhận kết quả phù hợp.",
+    "5. Lời cảm ơn trang trọng và chữ ký ngày tháng."
+  ],
+  "cliches": [
+    {
+      "ru": "Уважаемый господин начальник международного отдела!",
+      "vi": "Kính gửi Ông Trưởng phòng Hợp tác Quốc tế!"
+    },
+    {
+      "ru": "Я являюсь студентом второго курса факультета...",
+      "vi": "Tôi hiện là sinh viên năm thứ hai khoa..."
+    },
+    {
+      "ru": "В связи с необходимостью продления учебной визы...",
+      "vi": "Do yêu cầu cần gia hạn thị thực sinh viên..."
+    },
+    {
+      "ru": "Убедительно прошу Вас предоставить справку об обучении.",
+      "vi": "Kính đề nghị Ông xem xét cấp giấy chứng nhận quá trình học tập."
+    },
+    {
+      "ru": "Заранее благодарю за содействие и понимание.",
+      "vi": "Xin chân thành cảm ơn sự hỗ trợ và thấu hiểu của Quý cơ quan."
+    }
+  ],
+  "modelAnswer": "Начальнику Управления международного сотрудничества\nпрофессору Смирнову А. В.\nстудента 2 курса филологического факультета\nНгуена Ван Минха (паспорт № B1234567)\n\nУважаемый Александр Васильевич!\n\nОбращаюсь к Вам с просьбой оказать содействие в оформлении документов для продления моей учебной визы. Срок действия текущей визы истекает двадцать пятого ноября текущего года.\n\nВ связи с этим прошу Вас выдать мне официальную академическую справку, подтверждающую факт моего обучения на контрактной основе, а также ходатайство в миграционную службу.\n\nВсе необходимые документы, включая квитанцию об оплате обучения и полис медицинского страхования, прилагаются к данному заявлению.\n\nЗаранее благодарю Вас за помощь.\n\n25 октября 2026 года\nПодпись: Нгуен В. М.",
+  "modelWordCount": 105,
+  "rubric": [
+    {
+      "criteria": "Thể thức văn bản hành chính",
+      "desc": "Đúng quy chuẩn đơn từ tiếng Nga: góc trên bên phải người nhận/người gửi, lời xưng hô, chữ ký."
+    },
+    {
+      "criteria": "Văn phong công vụ (Официально-деловой стиль)",
+      "desc": "Sử dụng từ ngữ chuẩn mực, không dùng từ khẩu ngữ tuỳ tiện."
+    },
+    {
+      "criteria": "Ngữ pháp & Thể động từ",
+      "desc": "Sử dụng chính xác các cấu trúc câu phức và giới từ hành chính."
+    }
+  ]
+}

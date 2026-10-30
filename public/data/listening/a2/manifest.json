@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Как доехать до центра: Покупка билета и ориентирование",
+    "badge": "A2 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Hội thoại: Hỏi đường đi tàu điện ngầm và mua thẻ giao thông",
+    "questionCount": 2
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Заказ столика и ужин в ресторане русской кухни",
+    "badge": "A2 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Hội thoại: Đặt bàn và gọi các món ăn truyền thống Nga",
+    "questionCount": 2
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Телефонный разговор: Самочувствие друга и визит врача",
+    "badge": "A2 Nghe hiểu",
+    "listeningTime": "12 phút",
+    "topic": "Hội thoại qua điện thoại: Hỏi thăm khi bạn bị ốm",
+    "questionCount": 2
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Интервью с иностранным аспирантом: Опыт учёбы в России",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Phỏng vấn nghiên cứu sinh quốc tế về học tập và hòa nhập văn hóa",
+    "questionCount": 2
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Радиопередача: Путешествие по Транссибирской магистрали",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Phóng sự phát thanh: Chuyến tàu hỏa huyền thoại dài nhất hành tinh",
+    "questionCount": 2
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Круглый стол: Экологические инициативы и сортировка мусора",
+    "badge": "B1 Nghe hiểu",
+    "listeningTime": "15 phút",
+    "topic": "Tọa đàm: Bảo vệ môi trường đô thị và lối sống xanh",
+    "questionCount": 1
+  }
+]

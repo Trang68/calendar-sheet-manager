@@ -1,0 +1,49 @@
+{
+  "id": 1,
+  "level": "A2",
+  "skill": "speaking",
+  "title": "Мой родной город и любимые места",
+  "speakingTime": "15 phút",
+  "topic": "Miêu tả thành phố quê hương, danh lam thắng cảnh và phương tiện",
+  "intro": "Luyện nói về nơi chôn rau cắt rốn hoặc thành phố bạn đang sinh sống. Sử dụng các cấu trúc chỉ vị trí, phương tiện giao thông và bày tỏ cảm xúc.",
+  "shadowingPhrases": [
+    {
+      "id": "a2_spk_1",
+      "text": "Я родился и вырос в красивом и древнем городе Ханое.",
+      "meaning": "Tôi sinh ra và lớn lên ở thủ đô Hà Nội cổ kính và tươi đẹp.",
+      "phonetic": "Ya rodilsya i vyros v krasivom i drevnem gorode Khanoye.",
+      "tips": "«Родился» nhấn vào âm đầu /ro-/, «вырос» âm /y/ đọc sâu trong vòm họng."
+    },
+    {
+      "id": "a2_spk_2",
+      "text": "В моём городе много парков, зелёных озёр и старинных улиц.",
+      "meaning": "Ở thành phố của tôi có nhiều công viên, hồ nước xanh và các con phố cổ.",
+      "phonetic": "V moyom gorode mnogo parkov, zelyonykh ozyor i starinnykh ulits.",
+      "tips": "Cách 2 số nhiều sau «много»: «парков», «озёр», «улиц»."
+    },
+    {
+      "id": "a2_spk_3",
+      "text": "Здесь очень развит общественный транспорт: автобусы и метро.",
+      "meaning": "Ở đây giao thông công cộng rất phát triển: xe buýt và tàu điện ngầm.",
+      "phonetic": "Zdes' ochen' razvit obshchestvennyy transport: avtobusy i metro.",
+      "tips": "«Общественный» đọc âm /shch/ bật mạnh và dứt khoát."
+    },
+    {
+      "id": "a2_spk_4",
+      "text": "Я очень люблю гулять по набережной вечером с друзьями.",
+      "meaning": "Tôi rất thích đi dạo dọc bờ kè/bờ sông vào buổi tối cùng bạn bè.",
+      "phonetic": "Ya ochen' lyublyu gulyat' po naberezhnoy vecherom s druz'yami.",
+      "tips": "Cụm «по набережной» dùng Cách 3 giống cái."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Luyện nói tự do (Монолог о городе)",
+    "task": "Hãy thuyết trình ngắn (1 - 2 phút, khoảng 6 - 8 câu) kể về thành phố quê hương của bạn hoặc một thành phố bạn từng đến thăm.",
+    "sampleGuidance": [
+      "Как называется ваш город и где он находится? (Tên thành phố và vị trí địa lý)",
+      "Какая там погода зимой и летом? (Khí hậu các mùa)",
+      "Какие интересные достопримечательности там есть? (Danh lam thắng cảnh nổi bật)",
+      "За что вы любите этот город? (Vì sao bạn yêu mến thành phố này?)"
+    ]
+  }
+}

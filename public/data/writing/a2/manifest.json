@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Поздравительная открытка другу с днём рождения",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết thiệp chúc mừng sinh nhật cho bạn bè người Nga",
+    "targetWordRange": [
+      50,
+      75
+    ]
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Электронное письмо другу: Приглашение на выставку",
+    "badge": "A2 Viết",
+    "writingTime": "25 phút",
+    "topic": "Viết email thân mật rủ bạn đi xem triển lãm nghệ thuật",
+    "targetWordRange": [
+      60,
+      85
+    ]
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Короткое эссе: Моё любимое время года",
+    "badge": "A2 Viết",
+    "writingTime": "30 phút",
+    "topic": "Viết đoạn văn ngắn miêu tả mùa yêu thích trong năm",
+    "targetWordRange": [
+      70,
+      95
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "file": "lesson-01.json",
+    "title": "Презентация: Зачем изучать иностранные языки в XXI веке?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Thuyết trình học thuật: Vai trò của đa ngôn ngữ và mở rộng chân trời",
+    "questionCount": 3
+  },
+  {
+    "id": 2,
+    "file": "lesson-02.json",
+    "title": "Дискуссия: Жизнь в мегаполисе или в провинции?",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Tranh luận & Phản biện: Đô thị hóa vs Cuộc sống thanh bình vùng quê",
+    "questionCount": 2
+  },
+  {
+    "id": 3,
+    "file": "lesson-03.json",
+    "title": "Монолог TRKI-1: Книга или фильм, изменивший мой взгляд на мир",
+    "badge": "B1 Nói",
+    "speakingTime": "20 phút",
+    "topic": "Vấn đáp TRKI-1: Kể về tác phẩm văn học hoặc bộ phim yêu thích",
+    "questionCount": 2
+  }
+]

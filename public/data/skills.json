@@ -50,6 +50,38 @@
       "count": 20,
       "manifestUrl": "/data/writing/a1/manifest.json"
     },
+    "A2_reading": {
+      "count": 5,
+      "manifestUrl": "/data/reading/a2/manifest.json"
+    },
+    "A2_listening": {
+      "count": 3,
+      "manifestUrl": "/data/listening/a2/manifest.json"
+    },
+    "A2_speaking": {
+      "count": 3,
+      "manifestUrl": "/data/speaking/a2/manifest.json"
+    },
+    "A2_writing": {
+      "count": 3,
+      "manifestUrl": "/data/writing/a2/manifest.json"
+    },
+    "B1_reading": {
+      "count": 5,
+      "manifestUrl": "/data/reading/b1/manifest.json"
+    },
+    "B1_listening": {
+      "count": 3,
+      "manifestUrl": "/data/listening/b1/manifest.json"
+    },
+    "B1_speaking": {
+      "count": 3,
+      "manifestUrl": "/data/speaking/b1/manifest.json"
+    },
+    "B1_writing": {
+      "count": 3,
+      "manifestUrl": "/data/writing/b1/manifest.json"
+    },
     "B2_reading": {
       "count": 4,
       "manifestUrl": "/data/reading/b2/manifest.json"

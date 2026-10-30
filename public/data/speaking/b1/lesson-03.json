@@ -1,0 +1,35 @@
+{
+  "id": 3,
+  "level": "B1",
+  "skill": "speaking",
+  "title": "Монолог TRKI-1: Книга или фильм, изменивший мой взгляд на мир",
+  "speakingTime": "20 phút",
+  "topic": "Vấn đáp TRKI-1: Kể về tác phẩm văn học hoặc bộ phim yêu thích",
+  "intro": "Luyện tóm tắt cốt truyện, phân tích tâm lý nhân vật và rút ra bài học triết lý nhân sinh theo barem chấm điểm thi Nói TRKI-1.",
+  "shadowingPhrases": [
+    {
+      "id": "b1_spk_6",
+      "text": "Это произведение произвело на меня неизгладимое впечатление.",
+      "meaning": "Tác phẩm này đã để lại trong tôi ấn tượng không thể phai mờ.",
+      "phonetic": "Eto proizvedenie proizvelo na menya neizgladimoe vpechatlenie.",
+      "tips": "Thành ngữ học thuật: «произвести впечатление на кого»."
+    },
+    {
+      "id": "b1_spk_7",
+      "text": "Главный герой сталкивается с непреодолимыми трудностями, но не сдаётся.",
+      "meaning": "Nhân vật chính phải đối mặt với muôn vàn trắc trở tưởng chừng không vượt qua nổi, nhưng không hề bỏ cuộc.",
+      "phonetic": "Glavnyy geroy stalkivaetsya s nepreodolimymi trudnostyami, no ne sdayotsya.",
+      "tips": "«Сталкивается с» đi kèm danh từ và tính từ Cách 5."
+    }
+  ],
+  "freeSpeakingPrompt": {
+    "title": "Phỏng vấn trực tiếp (Интервью TRKI-1)",
+    "task": "Kể chi tiết về một bộ phim hoặc cuốn sách đã truyền cảm hứng sâu sắc nhất cho cuộc đời bạn.",
+    "sampleGuidance": [
+      "Название произведения и автор / режиссёр (Tên tác phẩm, tác giả)",
+      "Краткий сюжет и ключевой конфликт (Cốt truyện chính và mâu thuẫn)",
+      "Характеристика главного героя (Đặc điểm tính cách nhân vật chính)",
+      "Чему учит эта история? (Bài học rút ra cho cuộc sống)"
+    ]
+  }
+}
