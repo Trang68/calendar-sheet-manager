@@ -23,18 +23,6 @@
     }
   } catch (_) {}
 
-  // Restore fallback animation for Safari / non-ViewTransition browsers
-  try {
-    const bookEnter = sessionStorage.getItem('taiga_book_enter');
-    if (bookEnter) {
-      document.body.classList.add('ff-book-turn-enter');
-      sessionStorage.removeItem('taiga_book_enter');
-      setTimeout(() => {
-        document.body.classList.remove('ff-book-turn-enter');
-      }, 400);
-    }
-  } catch (_) {}
-
   // Standard Cross-Document View Transition event support (Chrome 125+)
   if ('onpageswap' in window) {
     window.addEventListener('pageswap', (e) => {
@@ -633,8 +621,11 @@
 
   function initTabNavigation() {
     const routes = ['/home', '/roadmap', '/articles', '/test', '/app', '/contact'];
-    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/home';
+    let currentPath = window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/home';
+    if (currentPath === '') currentPath = '/home';
     const currentIndex = routes.indexOf(currentPath);
+
+    let swipeDirectionOverride = null;
 
     const setDirection = (direction) => {
       document.documentElement.dataset.swipeDirection = direction;
@@ -680,11 +671,12 @@
         const href = anchor.getAttribute('href');
         if (!href || !href.startsWith('/')) return;
 
-        const targetPath = href.split('?')[0].split('#')[0].replace(/\/+$/, '') || '/home';
+        const targetPath = href.split('?')[0].split('#')[0].replace(/\.html$/, '').replace(/\/+$/, '') || '/home';
         const targetIndex = routes.indexOf(targetPath);
         if (targetIndex === -1 || targetIndex === currentIndex) return;
 
-        const direction = targetIndex > currentIndex ? 'forward' : 'back';
+        const direction = swipeDirectionOverride || (targetIndex > currentIndex ? 'forward' : 'back');
+        swipeDirectionOverride = null;
         setDirection(direction);
 
         // Instant tactile feedback on header tab & auto-scroll header
@@ -694,17 +686,6 @@
           if (oldActive && oldActive !== navTab) oldActive.classList.remove('active');
           navTab.classList.add('active');
           scrollActiveTabIntoView(true);
-        }
-
-        // Safari / Non-ViewTransition fallback: animate 3D book exit before navigating
-        const hasNativeCrossDocVT = ('onpageswap' in window || 'onpagereveal' in window);
-        if (!hasNativeCrossDocVT) {
-          e.preventDefault();
-          document.body.classList.add('ff-book-turn-exit');
-          try { sessionStorage.setItem('taiga_book_enter', direction); } catch (_) {}
-          setTimeout(() => {
-            window.location.assign(targetPath);
-          }, 240);
         }
       },
       { capture: true }
@@ -802,6 +783,7 @@
           const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
           const targetUrl = routes[targetIndex];
 
+          swipeDirectionOverride = direction;
           setDirection(direction);
 
           // Update header tab active & scroll to it immediately
@@ -810,17 +792,9 @@
             document.querySelectorAll('.ff-nav-tab').forEach((t) => t.classList.remove('active'));
             targetTab.classList.add('active');
             scrollActiveTabIntoView(true);
-          }
-
-          // Trigger native link click so browser View Transitions engine captures the navigation
-          if (targetTab) {
             targetTab.click();
           } else {
-            const link = document.createElement('a');
-            link.href = targetUrl;
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
+            window.location.assign(targetUrl);
           }
         }
       },

@@ -9,11 +9,11 @@ html {
 }
 
 /* ==========================================================================
-   CROSS-DOCUMENT VIEW TRANSITIONS: 3D REALISTIC BOOK & PAPER PAGE FLIP
-   - Hiệu ứng lật trang sách / từ điển thanh lịch, mượt mà trên nền GPU
-   - Giữ nguyên Header (.game-topbar) bất động 100% ở tầng cao nhất (z-index 9999)
-   - Lật trang 3D xoay Y quanh gáy sách thẳng đứng (0% 50%), KHÔNG dùng skew nghiêng chéo
-   - Tích hợp bóng đổ gáy sách (box-shadow) và độ bắt sáng tự nhiên (brightness)
+   CROSS-DOCUMENT VIEW TRANSITIONS: CLEAN HORIZONTAL SLIDE
+   - Đồng bộ hoàn toàn giữa Desktop Web và Mobile (như Zalo / iOS / Android)
+   - Tắt hoàn toàn hiệu ứng lật trang 3D (không rotateY, không gáy sách, không perspective)
+   - Chuyển tab trượt ngang nhẹ nhàng, mượt mà (smooth 220ms GPU)
+   - Giữ nguyên Header (.game-topbar) bất động 100% ở tầng cao nhất
    ========================================================================== */
 @view-transition {
   navigation: auto;
@@ -35,141 +35,99 @@ html {
   z-index: 9999 !important;
 }
 
-/* Ensure smooth 3D GPU rendering with normal blend mode */
+/* Ensure smooth GPU rendering with normal blend mode */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   mix-blend-mode: normal !important;
   backface-visibility: hidden;
-  transform-style: preserve-3d;
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
 }
 
-/* ==========================================================================
-   DEFAULT & FORWARD: 3D BOOK PAGE TURN (LẬT SANG TRANG TIẾP THEO)
-   - Mặc định 100% luôn là hiệu ứng lật sách 3D quanh gáy sách thẳng đứng (0% 50%)
-   - KHÔNG dùng fade mờ, KHÔNG nháy qua (luôn luôn hiển thị chuyển động lật sách)
-   - Xoay Y 3D mượt mà 380ms theo góc nhìn phối cảnh rộng 2000px
-   ========================================================================== */
-::view-transition-old(root),
-:root[data-swipe-direction='forward']::view-transition-old(root),
+/* Default subtle fade if no direction is specified */
+::view-transition-old(root) {
+  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-slide-fade-in;
+}
+
+/* FORWARD: Tab sau nằm bên phải -> trượt ngang sang trái */
+html[data-swipe-direction='forward']::view-transition-old(root),
 :root:active-view-transition-type(forward)::view-transition-old(root) {
-  animation: 380ms cubic-bezier(0.2, 0.9, 0.3, 1) both ff-book-turn-out-forward;
-  transform-origin: 0% 50%;
-  z-index: 2;
+  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-forward;
+  z-index: 1;
 }
 
-::view-transition-new(root),
-:root[data-swipe-direction='forward']::view-transition-new(root),
+html[data-swipe-direction='forward']::view-transition-new(root),
 :root:active-view-transition-type(forward)::view-transition-new(root) {
-  animation: 380ms cubic-bezier(0.2, 0.9, 0.3, 1) both ff-book-turn-in-forward;
-  z-index: 1;
-}
-
-/* ==========================================================================
-   BACK: 3D BOOK PAGE TURN (LẬT NGƯỢC VỀ TRANG TRƯỚC)
-   - Trang trước từ gáy sách bên trái lật úp ngược về bên phải
-   - Trang hiện tại chìm nhẹ xuống dưới đón trang trước đè lên
-   ========================================================================== */
-:root[data-swipe-direction='back']::view-transition-old(root),
-:root:active-view-transition-type(back)::view-transition-old(root) {
-  animation: 380ms cubic-bezier(0.2, 0.9, 0.3, 1) both ff-book-turn-out-back;
-  z-index: 1;
-}
-
-:root[data-swipe-direction='back']::view-transition-new(root),
-:root:active-view-transition-type(back)::view-transition-new(root) {
-  animation: 380ms cubic-bezier(0.2, 0.9, 0.3, 1) both ff-book-turn-in-back;
-  transform-origin: 0% 50%;
+  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-forward;
   z-index: 2;
+  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
 }
 
-/* ==========================================================================
-   FALLBACK CHO SAFARI & TRÌNH DUYỆT CHƯA HỖ TRỢ VIEW TRANSITIONS
-   - Áp dụng hiệu ứng lật sách 3D ngay trên cấu trúc DOM của trang
-   - Giữ nguyên Header (.game-topbar) bất động 100%
-   ========================================================================== */
-body.ff-book-turn-exit > *:not(.game-topbar):not(#pwaModalOverlay):not(#pwaToast):not(.dict-widget-panel):not(.dict-widget-launcher) {
-  transform-origin: 0% 50% !important;
-  animation: 360ms cubic-bezier(0.2, 0.9, 0.3, 1) forwards ff-book-turn-out-forward !important;
-  pointer-events: none !important;
+/* BACK: Tab trước nằm bên trái -> trượt ngang sang phải */
+html[data-swipe-direction='back']::view-transition-old(root),
+:root:active-view-transition-type(back)::view-transition-old(root) {
+  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-out-back;
+  z-index: 2;
+  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.16);
 }
 
-body.ff-book-turn-enter > *:not(.game-topbar):not(#pwaModalOverlay):not(#pwaToast):not(.dict-widget-panel):not(.dict-widget-launcher) {
-  animation: 340ms cubic-bezier(0.2, 0.9, 0.3, 1) both ff-book-turn-in-forward !important;
+html[data-swipe-direction='back']::view-transition-new(root),
+:root:active-view-transition-type(back)::view-transition-new(root) {
+  animation: 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both ff-slide-in-back;
+  z-index: 1;
 }
 
-/* Forward: Trang hiện tại nhấc mép lật về phía gáy sách bên trái (trục Y thẳng đứng, không nghiêng chéo) */
-@keyframes ff-book-turn-out-forward {
-  0% {
-    transform: perspective(2000px) rotateY(0deg);
-    filter: brightness(1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+@keyframes ff-slide-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes ff-slide-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Forward: Trang cũ lùi nhẹ sang trái 28%, trang mới từ bên phải 100% trượt vào */
+@keyframes ff-slide-out-forward {
+  from {
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
-  30% {
-    box-shadow: -10px 0 24px rgba(0, 0, 0, 0.2);
-  }
-  75% {
-    filter: brightness(0.72);
-    box-shadow: -20px 0 38px rgba(0, 0, 0, 0.28);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(2000px) rotateY(-86deg);
-    filter: brightness(0.52);
-    box-shadow: -26px 0 45px rgba(0, 0, 0, 0.12);
-    opacity: 0;
-  }
-}
-
-/* Forward: Trang mới ở dưới đón ánh sáng mở rộng ra */
-@keyframes ff-book-turn-in-forward {
-  0% {
-    transform: scale(0.96) translate3d(12px, 0, -20px);
-    filter: brightness(0.82);
-    opacity: 0.92;
-  }
-  100% {
-    transform: scale(1) translate3d(0, 0, 0);
-    filter: brightness(1);
-    opacity: 1;
+  to {
+    transform: translate3d(-28%, 0, 0);
+    opacity: 0.7;
   }
 }
 
-/* Back: Trang hiện tại chìm nhẹ xuống dưới khi trang trước lật úp đè lên */
-@keyframes ff-book-turn-out-back {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-    filter: brightness(1);
-    opacity: 1;
+@keyframes ff-slide-in-forward {
+  from {
+    transform: translate3d(100%, 0, 0);
   }
-  100% {
-    transform: scale(0.96) translate3d(12px, 0, -20px);
-    filter: brightness(0.82);
-    opacity: 0.92;
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* Back: Trang trước từ gáy sách lật úp ngược về bên phải (trục Y thẳng đứng, không nghiêng chéo) */
-@keyframes ff-book-turn-in-back {
-  0% {
-    transform: perspective(2000px) rotateY(-86deg);
-    filter: brightness(0.52);
-    box-shadow: -26px 0 45px rgba(0, 0, 0, 0.24);
-    opacity: 0;
+/* Back: Trang cũ trượt ra bên phải 100%, trang mới từ bên trái -28% tiến vào */
+@keyframes ff-slide-out-back {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  25% {
-    opacity: 1;
+  to {
+    transform: translate3d(100%, 0, 0);
   }
-  65% {
-    filter: brightness(0.82);
-    box-shadow: -16px 0 30px rgba(0, 0, 0, 0.22);
+}
+
+@keyframes ff-slide-in-back {
+  from {
+    transform: translate3d(-28%, 0, 0);
+    opacity: 0.7;
   }
-  100% {
-    transform: perspective(2000px) rotateY(0deg);
-    filter: brightness(1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    opacity: 1;
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
