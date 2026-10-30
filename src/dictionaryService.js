@@ -38,7 +38,7 @@ class DictionaryService {
     return /^[а-я]/.test(w) ? w[0] : null;
   }
 
-  async ensureFile(filename) {
+  async ensureFile(filename, timeoutMs = 4000) {
     const filePath = path.join(this.dataDir, filename);
     if (fs.existsSync(filePath)) return true;
     try {
@@ -47,7 +47,10 @@ class DictionaryService {
       }
       const url = `https://rusitrki.com/data/${encodeURIComponent(filename)}`;
       console.log(`[DictionaryService] Downloading ${filename}...`);
-      const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" },
+        signal: AbortSignal.timeout(timeoutMs),
+      });
       if (res.ok) {
         const buf = await res.arrayBuffer();
         fs.writeFileSync(filePath, Buffer.from(buf));
@@ -398,18 +401,18 @@ class DictionaryService {
           const relFilename = `dict-rel-${letter}.json`;
           const relPath = path.join(this.dataDir, relFilename);
           if (!fs.existsSync(relPath)) {
-            await this.ensureFile(relFilename);
+            await this.ensureFile(relFilename, 3000);
           }
           if (fs.existsSync(relPath)) {
             try {
               relMap = JSON.parse(fs.readFileSync(relPath, "utf8"));
-              this.relCache.set(letter, relMap);
             } catch (e) {
               relMap = {};
             }
           } else {
             relMap = {};
           }
+          this.relCache.set(letter, relMap);
         }
 
         let formsMap = this.formsCache.get(letter);
@@ -417,18 +420,18 @@ class DictionaryService {
           const formsFilename = `dict-forms-${letter}.json`;
           const formsPath = path.join(this.dataDir, formsFilename);
           if (!fs.existsSync(formsPath)) {
-            await this.ensureFile(formsFilename);
+            await this.ensureFile(formsFilename, 3000);
           }
           if (fs.existsSync(formsPath)) {
             try {
               formsMap = JSON.parse(fs.readFileSync(formsPath, "utf8"));
-              this.formsCache.set(letter, formsMap);
             } catch (e) {
               formsMap = {};
             }
           } else {
             formsMap = {};
           }
+          this.formsCache.set(letter, formsMap);
         }
 
         const relItem = relMap ? relMap[cyrillicWord] : null;
@@ -463,9 +466,13 @@ class DictionaryService {
     const q = String(text || "").trim().replace(/\s+/g, " ").slice(0, 1000);
     if (!q) return null;
 
+    // Tự động nhận diện hướng dịch chuẩn xác dựa trên chữ cái Cyrillic
+    // Có ký tự Cyrillic -> luôn là Nga -> Việt
+    // Không có ký tự Cyrillic -> luôn là Việt -> Nga
     const isRu = this.isCyrillic(q);
-    const sl = from === "auto" ? (isRu ? "ru" : "vi") : from;
+    const sl = from === "auto" ? (isRu ? "ru" : "vi") : (isRu ? "ru" : "vi");
     const tl = to || (sl === "ru" ? "vi" : "ru");
+
     const cacheKey = `${sl}:${tl}:${q.toLowerCase()}`;
     const cached = this.translationCache.get(cacheKey);
     if (cached && cached.expiresAt > Date.now()) {
@@ -478,25 +485,91 @@ class DictionaryService {
     const pending = this.translationInFlight.get(cacheKey);
     if (pending) return pending;
 
-    const translationPromise = (async () => {
-      try {
-        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&q=${encodeURIComponent(q)}`;
-        const res = await fetch(url, {
-          signal: AbortSignal.timeout(3000),
-        });
-        if (!res.ok) return null;
+    const ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
-        const json = await res.json();
-        const translatedText = json[0] ? json[0].map((segment) => segment[0]).filter(Boolean).join("") : "";
-        if (!translatedText) return null;
-        return {
-          translatedText,
-          matches: [{ segment: q, translation: translatedText }],
-          engine: "google",
-        };
-      } catch (e) {
-        console.warn("[DictionaryService] Online translate failed completely:", e.message);
+    const translationPromise = (async () => {
+      // Động cơ 1: Google Chrome Dictionary Client API (kháng bot-challenge, ổn định tuyệt đối)
+      try {
+        const u1 = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&q=${encodeURIComponent(q)}`;
+        const r1 = await fetch(u1, {
+          headers: { "User-Agent": ua },
+          signal: AbortSignal.timeout(4000),
+        });
+        if (r1.ok) {
+          const txt = await r1.text();
+          if (txt && !txt.startsWith("<")) {
+            const j1 = JSON.parse(txt);
+            let trans1 = "";
+            if (Array.isArray(j1) && j1.length > 0) {
+              trans1 = Array.isArray(j1[0]) ? j1[0][0] : j1[0];
+            }
+            if (trans1 && typeof trans1 === "string" && trans1.trim()) {
+              return {
+                translatedText: trans1.trim(),
+                matches: [{ segment: q, translation: trans1.trim() }],
+                engine: "google",
+              };
+            }
+          }
+        }
+      } catch (e1) {
+        // Dự phòng sang động cơ 2
       }
+
+      // Động cơ 2: Google Translate GTX
+      try {
+        const u2 = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${encodeURIComponent(sl)}&tl=${encodeURIComponent(tl)}&dt=t&q=${encodeURIComponent(q)}`;
+        const r2 = await fetch(u2, {
+          headers: { "User-Agent": ua },
+          signal: AbortSignal.timeout(4000),
+        });
+        if (r2.ok) {
+          const txt2 = await r2.text();
+          if (txt2 && !txt2.startsWith("<")) {
+            const j2 = JSON.parse(txt2);
+            const trans2 = j2[0] ? j2[0].map((s) => s[0]).filter(Boolean).join("") : "";
+            if (trans2 && trans2.trim()) {
+              return {
+                translatedText: trans2.trim(),
+                matches: [{ segment: q, translation: trans2.trim() }],
+                engine: "google",
+              };
+            }
+          }
+        }
+      } catch (e2) {
+        // Dự phòng sang động cơ 3
+      }
+
+      // Động cơ 3: MyMemory Translation API
+      try {
+        const pair = `${sl}|${tl}`;
+        const u3 = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}&de=contact@taigatalk.edu.vn`;
+        const r3 = await fetch(u3, {
+          headers: { "User-Agent": ua },
+          signal: AbortSignal.timeout(4500),
+        });
+        if (r3.ok) {
+          const j3 = await r3.json();
+          if (j3 && j3.responseData && j3.responseData.translatedText) {
+            const trans3 = j3.responseData.translatedText.trim();
+            if (trans3 && !trans3.includes("MYMEMORY WARNING")) {
+              const matches = (j3.matches || []).slice(0, 3).map((m) => ({
+                segment: m.segment,
+                translation: m.translation,
+              }));
+              return {
+                translatedText: trans3,
+                matches: matches.length > 0 ? matches : [{ segment: q, translation: trans3 }],
+                engine: "mymemory",
+              };
+            }
+          }
+        }
+      } catch (e3) {
+        console.warn("[DictionaryService] All translation engines failed:", e3.message);
+      }
+
       return null;
     })();
 

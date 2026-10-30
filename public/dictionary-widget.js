@@ -761,7 +761,7 @@
 
       results.forEach((item) => {
         const primaryWord = isRuVi ? item.ru : item.vi;
-        const subWord = isRuVi ? item.vi.split("\n")[0] : item.ru;
+        const subWord = ((isRuVi ? item.vi : item.ru) || "").split("\n")[0];
         const pron = item.pron ? `<span class="dict-card-pron">${this.escapeHtml(item.pron)}</span>` : "";
         const pos = item.pos ? `<span class="dict-card-pos">${this.escapeHtml(item.pos)}</span>` : "";
         const exFirst = item.ex ? item.ex.split("\n")[0] : "";
@@ -798,7 +798,7 @@
       const forceBtn = this.resultsEl.querySelector("#dictBtnForceTranslate");
       if (forceBtn) {
         forceBtn.addEventListener("click", () => {
-          this.renderOnlineFallback(query, dir);
+          this.renderOnlineFallback(query, this.isCyrillic(query) ? "ru-vi" : "vi-ru");
         });
       }
 
@@ -823,11 +823,14 @@
       let engineLabel = "Google Translate";
       let matches = [];
 
+      const isRu = this.isCyrillic(query);
+      const sl = isRu ? "ru" : "vi";
+      const tl = isRu ? "vi" : "ru";
+
       // 1. Thử gọi backend /api/dict/translate
       try {
-        const sourceLanguage = direction === "ru-vi" ? "ru" : direction === "vi-ru" ? "vi" : "auto";
-        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}&from=${sourceLanguage}`, {
-          signal: AbortSignal.timeout(3500),
+        const res = await fetch(`/api/dict/translate?text=${encodeURIComponent(query)}&from=${sl}`, {
+          signal: AbortSignal.timeout(4000),
         });
         if (res.ok) {
           const data = await res.json();
@@ -839,8 +842,65 @@
         }
       } catch (e) {}
 
+      // 2. Dự phòng trực tiếp từ client nếu backend chưa phản hồi hoặc gặp lỗi
+      if (!trans) {
+        try {
+          const cUrl = `https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=${sl}&tl=${tl}&q=${encodeURIComponent(query)}`;
+          const cRes = await fetch(cUrl, { signal: AbortSignal.timeout(4000) });
+          if (cRes.ok) {
+            const cJson = await cRes.json();
+            if (Array.isArray(cJson) && cJson.length > 0) {
+              const resTxt = Array.isArray(cJson[0]) ? cJson[0][0] : cJson[0];
+              if (resTxt && typeof resTxt === "string" && resTxt.trim()) {
+                trans = resTxt.trim();
+                engineLabel = "Google Translate";
+                matches = [{ segment: query, translation: trans }];
+              }
+            }
+          }
+        } catch (e) {}
+      }
+
+      // 3. Dự phòng Google Translate GTX
+      if (!trans) {
+        try {
+          const gUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(query)}`;
+          const gRes = await fetch(gUrl, { signal: AbortSignal.timeout(4000) });
+          if (gRes.ok) {
+            const gText = await gRes.text();
+            if (gText && !gText.startsWith("<")) {
+              const gJson = JSON.parse(gText);
+              const gTrans = gJson[0] ? gJson[0].map((x) => x[0]).filter(Boolean).join("") : "";
+              if (gTrans && gTrans.trim()) {
+                trans = gTrans.trim();
+                engineLabel = "Google Translate";
+                matches = [{ segment: query, translation: trans }];
+              }
+            }
+          }
+        } catch (e) {}
+      }
+
+      // 4. Dự phòng MyMemory
+      if (!trans) {
+        try {
+          const mUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(query)}&langpair=${sl}|${tl}&de=contact@taigatalk.edu.vn`;
+          const mRes = await fetch(mUrl, { signal: AbortSignal.timeout(4000) });
+          if (mRes.ok) {
+            const mJson = await mRes.json();
+            if (mJson && mJson.responseData && mJson.responseData.translatedText) {
+              const mText = mJson.responseData.translatedText.trim();
+              if (mText && !mText.includes("MYMEMORY WARNING")) {
+                trans = mText;
+                engineLabel = "Song ngữ AI";
+                matches = (mJson.matches || []).slice(0, 3).map((m) => ({ segment: m.segment, translation: m.translation }));
+              }
+            }
+          }
+        } catch (e) {}
+      }
+
       if (trans) {
-        const isRu = direction === "auto" ? this.isCyrillic(query) : direction === "ru-vi";
         const dir = isRu ? "ru-vi" : "vi-ru";
         this.addToHistory(query, trans, dir);
 
@@ -947,7 +1007,8 @@
         this.currentDetail = data;
         this.renderDetailView(data);
       } else {
-        this.handleSearch(word, false);
+        // Nếu không có dữ liệu từ điển offline, chuyển mượt sang dịch trực tuyến để người dùng luôn có kết quả
+        this.renderOnlineFallback(word, dir);
       }
     }
 
