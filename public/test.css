@@ -2421,6 +2421,247 @@ body {
 }
 
 /* ==========================================================================
+   AI SPEECH EVALUATION CARD (CHẤM ĐIỂM BÀI NÓI THU ÂM CHUẨN TRKI)
+   ========================================================================== */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.2); }
+}
+
+.pulsing-record-dot {
+  display: inline-block;
+  animation: pulseDot 1.2s infinite ease-in-out;
+}
+
+.speech-eval-card {
+  margin-top: 18px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(26, 36, 50, 0.06);
+  animation: fadeIn 0.3s ease;
+}
+
+.eval-hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.eval-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.eval-score-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  border: 3px solid;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(39, 196, 181, 0.25);
+  background: #fff;
+}
+
+.eval-score-num {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.eval-score-denom {
+  font-size: 9px;
+  opacity: 0.8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.eval-hero-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--ink);
+}
+
+.eval-hero-stars {
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.eval-hero-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.eval-criteria-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.eval-criterion-row {
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.eval-crit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.eval-crit-bar-bg {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.eval-crit-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.eval-crit-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.eval-transcript-box {
+  background: #f8fafc;
+  border-left: 3.5px solid var(--brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.eval-matched-chip {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+
+.eval-unmatched-chip {
+  display: inline-block;
+  background: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+
+.eval-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-eval-retry {
+  padding: 9px 16px;
+  background: #fff;
+  border: 1.5px solid #cbd5e1;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-eval-retry:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.btn-eval-claim {
+  padding: 9px 18px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(26, 122, 94, 0.25);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-eval-claim:hover {
+  background: var(--brand-strong);
+  transform: translateY(-1px);
+}
+
+.btn-eval-claim:disabled {
+  background: #16a34a;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Assisted Rubric Checklist */
+.assisted-rubric-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.assisted-rubric-item:hover {
+  background: #f8fafc;
+}
+
+.assisted-rubric-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--brand);
+  cursor: pointer;
+}
+
+/* ==========================================================================
    SKILL 4: WRITING (VIẾT LUẬN & THƯ - ПИСЬМО)
    ========================================================================== */
 .writing-card {

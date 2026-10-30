@@ -1727,13 +1727,21 @@
                 <div class="record-timer-badge" id="recordTimer">00:00</div>
               </div>
 
+              <!-- LIVE RECORDING STATUS -->
+              <div id="liveRecordingStatus" style="display: none; margin-top: 12px; font-size: 12.5px; color: #ef4444; font-weight: 600; align-items: center; gap: 6px;">
+                <span class="pulsing-record-dot">🔴</span> <span>Đang thu âm bài nói & AI đang lắng nghe... Hãy nói to, rõ ràng câu tiếng Nga!</span>
+              </div>
+
               <div id="audioPlaybackWrap" style="margin-top: 18px; display: none;">
                 <strong style="font-size: 13px; color: var(--ink); display: block; margin-bottom: 6px;">🎧 Bản ghi âm giọng nói của bạn:</strong>
                 <audio id="recordedAudioPlayer" controls style="width: 100%; border-radius: 8px; margin-top: 4px;"></audio>
                 <div style="margin-top: 8px; font-size: 12px; color: #16a34a; font-weight: 600;">
-                  ✓ Ghi âm hoàn tất! Bạn có thể bấm nghe lại để tự đánh giá ngữ điệu và phát âm của mình.
+                  ✓ Ghi âm hoàn tất! Bạn có thể bấm nghe lại để tự kiểm tra ngữ điệu.
                 </div>
               </div>
+
+              <!-- SPEECH EVALUATION WRAPPER -->
+              <div id="speechEvaluationWrap" style="display: none;"></div>
             </div>
 
             <!-- TIÊU CHÍ ĐÁNH GIÁ NÓI A1 -->
@@ -2403,6 +2411,10 @@
       let recordedChunks = [];
       let recordTimerInterval = null;
       let recordSeconds = 0;
+      let freeSpeechRec = null;
+      let freeRecordedTranscript = '';
+      let isFreeSpeechActive = false;
+      let speechAwardClaimed = false;
 
       function compareRussianSpeech(spoken, target) {
         const cleanSpoken = cleanTextForSpeech(spoken).toLowerCase().split(/\s+/).filter(Boolean);
@@ -2507,10 +2519,16 @@
         const iconEl = document.getElementById('recordIcon');
         const labelEl = document.getElementById('recordLabel');
         const timerEl = document.getElementById('recordTimer');
+        const liveStatusEl = document.getElementById('liveRecordingStatus');
         const playbackWrap = document.getElementById('audioPlaybackWrap');
         const audioPlayer = document.getElementById('recordedAudioPlayer');
+        const evalWrap = document.getElementById('speechEvaluationWrap');
 
         if (mediaRecorder && mediaRecorder.state === 'recording') {
+          isFreeSpeechActive = false;
+          if (freeSpeechRec) {
+            try { freeSpeechRec.stop(); } catch(e) {}
+          }
           mediaRecorder.stop();
           if (recordTimerInterval) {
             clearInterval(recordTimerInterval);
@@ -2519,13 +2537,52 @@
           btn.classList.remove('recording');
           if (iconEl) iconEl.textContent = '🔴';
           if (labelEl) labelEl.textContent = 'Thu âm lại';
+          if (liveStatusEl) liveStatusEl.style.display = 'none';
           return;
         }
 
         try {
           const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
           recordedChunks = [];
+          speechAwardClaimed = false;
+          freeRecordedTranscript = '';
           mediaRecorder = new MediaRecorder(stream);
+
+          if (evalWrap) evalWrap.style.display = 'none';
+
+          // Initialize Web Speech Recognition in parallel
+          const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (SpeechRec) {
+            try {
+              freeSpeechRec = new SpeechRec();
+              freeSpeechRec.lang = 'ru-RU';
+              freeSpeechRec.continuous = true;
+              freeSpeechRec.interimResults = true;
+              isFreeSpeechActive = true;
+
+              freeSpeechRec.onresult = function(e) {
+                let full = '';
+                for (let i = 0; i < e.results.length; i++) {
+                  full += e.results[i][0].transcript + ' ';
+                }
+                freeRecordedTranscript = full.trim();
+              };
+
+              freeSpeechRec.onerror = function(err) {
+                console.log('FreeSpeechRec status:', err.error);
+              };
+
+              freeSpeechRec.onend = function() {
+                if (isFreeSpeechActive && mediaRecorder && mediaRecorder.state === 'recording') {
+                  try { freeSpeechRec.start(); } catch(e) {}
+                }
+              };
+
+              freeSpeechRec.start();
+            } catch(e) {
+              console.warn('SpeechRec could not start:', e);
+            }
+          }
 
           mediaRecorder.ondataavailable = e => {
             if (e.data.size > 0) recordedChunks.push(e.data);
@@ -2537,6 +2594,11 @@
             if (audioPlayer) audioPlayer.src = audioUrl;
             if (playbackWrap) playbackWrap.style.display = 'block';
             stream.getTracks().forEach(track => track.stop());
+
+            // Run evaluation!
+            setTimeout(() => {
+              evaluateSpeakingSubmission(recordSeconds, freeRecordedTranscript, currentLessonData);
+            }, 350);
           };
 
           mediaRecorder.start();
@@ -2544,7 +2606,8 @@
           if (timerEl) timerEl.textContent = '00:00';
           btn.classList.add('recording');
           if (iconEl) iconEl.textContent = '⏹️';
-          if (labelEl) labelEl.textContent = 'Dừng thu âm';
+          if (labelEl) labelEl.textContent = 'Dừng & Chấm điểm';
+          if (liveStatusEl) liveStatusEl.style.display = 'flex';
 
           recordTimerInterval = setInterval(() => {
             recordSeconds++;
@@ -2558,6 +2621,327 @@
           alert('Không thể truy cập microphone. Vui lòng cho phép quyền truy cập micro trên trình duyệt để ghi âm!');
         }
       }
+
+      function evaluateSpeakingSubmission(duration, transcript, lesson) {
+        const evalWrap = document.getElementById('speechEvaluationWrap');
+        if (!evalWrap) return;
+
+        duration = Math.max(1, duration || 0);
+        const freePrompt = (lesson && lesson.freeSpeakingPrompt) || {};
+        const guidance = freePrompt.sampleGuidance || [];
+        const vocabCats = (lesson && lesson.vocabCategories) || [];
+        const lvl = (lesson && lesson.level) ? lesson.level.toUpperCase() : 'A1';
+
+        // Targets based on level
+        let targetWordsMin = 12;
+        let targetWordsIdeal = 25;
+        let targetDurationMin = 15;
+        if (lvl === 'A2') {
+          targetWordsMin = 22;
+          targetWordsIdeal = 45;
+          targetDurationMin = 25;
+        } else if (lvl === 'B1' || lvl === 'B2') {
+          targetWordsMin = 40;
+          targetWordsIdeal = 70;
+          targetDurationMin = 40;
+        }
+
+        const rawTranscript = (transcript || '').trim();
+        const hasTranscript = rawTranscript.length > 0;
+
+        if (hasTranscript) {
+          // 1. Tokenize words
+          const cleanSpoken = cleanTextForSpeech(rawTranscript).toLowerCase();
+          const words = cleanSpoken.split(/\s+/).filter(w => w.length > 0 && !/^[.,!?;:«»"—]+$/.test(w));
+          const wordCount = words.length;
+
+          // 2. Metric 1: Hoàn thành đề bài & Dung lượng (Max 30)
+          let taskScore = 0;
+          if (wordCount >= targetWordsIdeal) {
+            taskScore = 30;
+          } else if (wordCount >= targetWordsMin) {
+            taskScore = 20 + Math.round(((wordCount - targetWordsMin) / (targetWordsIdeal - targetWordsMin)) * 10);
+          } else {
+            taskScore = Math.max(8, Math.round((wordCount / targetWordsMin) * 20));
+          }
+
+          // 3. Metric 2: Vận dụng Mẫu câu & Từ vựng chủ đề (Max 35)
+          let matchedGuidance = [];
+          let unmatchedGuidance = [];
+          guidance.forEach(g => {
+            const rawParts = g.split(/[\(\/]/)[0].trim().replace(/\.\.\./g, '').trim();
+            const cleanPhrase = cleanTextForSpeech(rawParts).toLowerCase();
+            const firstWords = cleanPhrase.split(/\s+/).slice(0, 3).join(' ');
+            if (firstWords.length >= 3 && cleanSpoken.includes(firstWords)) {
+              matchedGuidance.push(rawParts);
+            } else {
+              unmatchedGuidance.push(rawParts);
+            }
+          });
+
+          let matchedVocab = [];
+          vocabCats.forEach(cat => {
+            (cat.rows || []).forEach(r => {
+              const cleanWord = cleanTextForSpeech(r.word || '').toLowerCase();
+              if (cleanWord.length >= 3 && words.some(w => w.includes(cleanWord) || cleanWord.includes(w))) {
+                if (!matchedVocab.includes(r.word)) matchedVocab.push(r.word);
+              }
+            });
+          });
+
+          const totalMatchedItems = matchedGuidance.length + matchedVocab.length;
+          let vocabScore = 0;
+          if (totalMatchedItems >= 3) {
+            vocabScore = 35;
+          } else if (totalMatchedItems === 2) {
+            vocabScore = 28;
+          } else if (totalMatchedItems === 1) {
+            vocabScore = 22;
+          } else {
+            vocabScore = Math.min(20, Math.max(10, Math.round(wordCount * 0.8)));
+          }
+
+          // 4. Metric 3: Tốc độ & Độ trôi chảy (WPM) (Max 35)
+          const wpm = Math.round((wordCount / duration) * 60);
+          let fluencyScore = 0;
+          let fluencyNote = '';
+          if (wpm >= 40 && wpm <= 90) {
+            fluencyScore = 35;
+            fluencyNote = `Tốc độ nói lý tưởng (${wpm} từ/phút), ngữ điệu tự nhiên.`;
+          } else if (wpm >= 25 && wpm < 40) {
+            fluencyScore = 28;
+            fluencyNote = `Tốc độ vừa phải (${wpm} từ/phút), có thể tăng nhịp độ liền mạch hơn.`;
+          } else if (wpm > 90) {
+            fluencyScore = 28;
+            fluencyNote = `Tốc độ khá nhanh (${wpm} từ/phút), hãy chú ý phát âm rõ từng nguyên âm.`;
+          } else {
+            fluencyScore = 18;
+            fluencyNote = `Tốc độ nói còn chậm hoặc nhiều khoảng dừng (${wpm} từ/phút).`;
+          }
+
+          // Overall
+          const overallScore = Math.min(100, taskScore + vocabScore + fluencyScore);
+          let badgeColor = overallScore >= 80 ? '#16a34a' : (overallScore >= 60 ? '#d97706' : '#dc2626');
+          let starRating = overallScore >= 80 ? '⭐⭐⭐ Xuất sắc! (Отлично)' : (overallScore >= 60 ? '⭐⭐ Khá tốt! (Хорошо)' : '⭐ Cần luyện thêm! (Повторите)');
+          let earnedXP = overallScore >= 80 ? 25 : (overallScore >= 60 ? 15 : 10);
+
+          let guidanceHtml = '';
+          if (matchedGuidance.length > 0) {
+            guidanceHtml += `<div style="margin-top: 6px;"><strong>✓ Mẫu câu đã dùng tốt:</strong> ` +
+              matchedGuidance.map(m => `<span class="eval-matched-chip">✓ ${m}</span>`).join(' ') + `</div>`;
+          }
+          if (matchedVocab.length > 0) {
+            guidanceHtml += `<div style="margin-top: 6px;"><strong>✓ Từ vựng chủ đề đã vận dụng:</strong> ` +
+              matchedVocab.map(v => `<span class="eval-matched-chip">✓ ${v}</span>`).join(' ') + `</div>`;
+          }
+          if (unmatchedGuidance.length > 0) {
+            guidanceHtml += `<div style="margin-top: 6px;"><strong>💡 Mẫu câu gợi ý nên bổ sung thêm:</strong> ` +
+              unmatchedGuidance.slice(0, 3).map(u => `<span class="eval-unmatched-chip">+ ${u}</span>`).join(' ') + `</div>`;
+          }
+
+          evalWrap.innerHTML = `
+            <div class="speech-eval-card">
+              <div class="eval-hero-header">
+                <div class="eval-hero-left">
+                  <div class="eval-score-circle" style="border-color: ${badgeColor}; color: ${badgeColor};">
+                    <span class="eval-score-num">${overallScore}</span>
+                    <span class="eval-score-denom">ĐIỂM TRKI</span>
+                  </div>
+                  <div class="eval-hero-info">
+                    <div class="eval-hero-stars" style="color: ${badgeColor};">${starRating}</div>
+                    <div class="eval-hero-desc">Đã ghi nhận ${wordCount} từ trong ${duration} giây (${wpm} từ/phút)</div>
+                  </div>
+                </div>
+                <div style="font-size: 13px; font-weight: 800; color: var(--brand); text-shadow: 0 0 12px rgba(39, 196, 181, 0.45);">
+                  ⚡ +${earnedXP} XP
+                </div>
+              </div>
+
+              <div class="eval-criteria-list">
+                <!-- Tiêu chí 1 -->
+                <div class="eval-criterion-row">
+                  <div class="eval-crit-header">
+                    <span>🎯 Hoàn thành đề bài & Dung lượng (${lvl})</span>
+                    <span style="color: ${badgeColor};">${taskScore}/30 điểm</span>
+                  </div>
+                  <div class="eval-crit-bar-bg">
+                    <div class="eval-crit-bar-fill" style="width: ${(taskScore/30)*100}%; background: ${badgeColor};"></div>
+                  </div>
+                  <div class="eval-crit-sub">Đạt ${wordCount} từ (Mục tiêu chuẩn: ${targetWordsMin}–${targetWordsIdeal} từ cho trình độ ${lvl}).</div>
+                </div>
+
+                <!-- Tiêu chí 2 -->
+                <div class="eval-criterion-row">
+                  <div class="eval-crit-header">
+                    <span>📚 Mẫu câu & Vốn từ vựng chủ đề</span>
+                    <span style="color: ${badgeColor};">${vocabScore}/35 điểm</span>
+                  </div>
+                  <div class="eval-crit-bar-bg">
+                    <div class="eval-crit-bar-fill" style="width: ${(vocabScore/35)*100}%; background: ${badgeColor};"></div>
+                  </div>
+                  <div class="eval-crit-sub">${guidanceHtml || 'Hãy sử dụng thêm các từ vựng và mẫu câu gợi ý của bài học để bài nói thêm phong phú.'}</div>
+                </div>
+
+                <!-- Tiêu chí 3 -->
+                <div class="eval-criterion-row">
+                  <div class="eval-crit-header">
+                    <span>⚡ Tốc độ & Độ trôi chảy (Fluency)</span>
+                    <span style="color: ${badgeColor};">${fluencyScore}/35 điểm</span>
+                  </div>
+                  <div class="eval-crit-bar-bg">
+                    <div class="eval-crit-bar-fill" style="width: ${(fluencyScore/35)*100}%; background: ${badgeColor};"></div>
+                  </div>
+                  <div class="eval-crit-sub">${fluencyNote}</div>
+                </div>
+              </div>
+
+              <!-- LỜI THOẠI NHẬN DIỆN -->
+              <div class="eval-transcript-box">
+                <div style="font-weight: 700; color: var(--ink); margin-bottom: 4px; font-size: 12px;">
+                  🎙️ AI Transcription (Lời thoại đã nhận diện qua micro):
+                </div>
+                <div style="color: var(--ink-secondary); font-style: italic;">
+                  "${rawTranscript}"
+                </div>
+              </div>
+
+              <!-- NÚT HÀNH ĐỘNG -->
+              <div class="eval-actions-row">
+                <button type="button" class="btn-eval-retry" onclick="document.getElementById('btnToggleRecord').click();">
+                  🔄 Thu âm lại để nâng điểm
+                </button>
+                <button type="button" class="btn-eval-claim" id="btnClaimSpeakingXP" onclick="claimSpeakingXP(${earnedXP})">
+                  ✨ Nộp bài & Nhận +${earnedXP} XP
+                </button>
+              </div>
+            </div>
+          `;
+          evalWrap.style.display = 'block';
+          evalWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        } else {
+          // Assisted Mode: Self-Assessment Rubric (Khi chưa có transcript tự động)
+          renderAssistedRubric(duration, lesson, targetWordsMin, targetDurationMin);
+        }
+      }
+
+      function renderAssistedRubric(duration, lesson, targetWords, targetDuration) {
+        const evalWrap = document.getElementById('speechEvaluationWrap');
+        if (!evalWrap) return;
+
+        evalWrap.innerHTML = `
+          <div class="speech-eval-card">
+            <div class="eval-hero-header">
+              <div class="eval-hero-left">
+                <div class="eval-score-circle" id="assistedScoreCircle" style="border-color: var(--brand); color: var(--brand);">
+                  <span class="eval-score-num" id="assistedScoreNum">50</span>
+                  <span class="eval-score-denom">ĐIỂM TRKI</span>
+                </div>
+                <div class="eval-hero-info">
+                  <h4 style="margin: 0 0 2px 0;">Barem Tự Đánh Giá Bài Nói (TRKI)</h4>
+                  <div class="eval-hero-desc">Thời lượng ghi âm: <strong>${duration} giây</strong> (Mục tiêu: ≥ ${targetDuration}s). Hãy nghe lại bản thu và tự tích chọn:</div>
+                </div>
+              </div>
+              <div style="font-size: 13px; font-weight: 800; color: var(--brand); text-shadow: 0 0 12px rgba(39, 196, 181, 0.45);" id="assistedXpBadge">
+                ⚡ +15 XP
+              </div>
+            </div>
+
+            <div style="margin: 16px 0;">
+              <label class="assisted-rubric-item">
+                <input type="checkbox" class="rubric-chk" checked onchange="updateAssistedScore()">
+                <div>
+                  <strong style="font-size: 13px; color: var(--ink); display: block;">1. Hoàn thành nhiệm vụ giao tiếp (+25đ)</strong>
+                  <span style="font-size: 12px; color: var(--muted);">Đã trả lời đúng trọng tâm đề bài và nêu đầy đủ thông tin yêu cầu.</span>
+                </div>
+              </label>
+
+              <label class="assisted-rubric-item">
+                <input type="checkbox" class="rubric-chk" checked onchange="updateAssistedScore()">
+                <div>
+                  <strong style="font-size: 13px; color: var(--ink); display: block;">2. Sử dụng mẫu câu gợi ý & từ vựng (+25đ)</strong>
+                  <span style="font-size: 12px; color: var(--muted);">Đã đưa được ít nhất 2 mẫu câu hoặc từ vựng chủ đề vào bài nói.</span>
+                </div>
+              </label>
+
+              <label class="assisted-rubric-item">
+                <input type="checkbox" class="rubric-chk" onchange="updateAssistedScore()">
+                <div>
+                  <strong style="font-size: 13px; color: var(--ink); display: block;">3. Phát âm chuẩn & đúng trọng âm (+25đ)</strong>
+                  <span style="font-size: 12px; color: var(--muted);">Phát âm rõ ràng các nguyên âm, phân biệt được trọng âm của các từ chính.</span>
+                </div>
+              </label>
+
+              <label class="assisted-rubric-item">
+                <input type="checkbox" class="rubric-chk" onchange="updateAssistedScore()">
+                <div>
+                  <strong style="font-size: 13px; color: var(--ink); display: block;">4. Ngữ điệu & Độ liên tục (+25đ)</strong>
+                  <span style="font-size: 12px; color: var(--muted);">Nói trôi chảy, lên xuống giọng tự nhiên theo cấu trúc câu tiếng Nga.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="eval-actions-row">
+              <button type="button" class="btn-eval-retry" onclick="document.getElementById('btnToggleRecord').click();">
+                🔄 Thu âm lại
+              </button>
+              <button type="button" class="btn-eval-claim" id="btnClaimSpeakingXP" onclick="claimAssistedSpeakingXP()">
+                ✨ Nộp bài & Nhận XP
+              </button>
+            </div>
+          </div>
+        `;
+        evalWrap.style.display = 'block';
+        evalWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        updateAssistedScore();
+      }
+
+      function updateAssistedScore() {
+        const chks = document.querySelectorAll('.rubric-chk');
+        let count = 0;
+        chks.forEach(c => { if (c.checked) count++; });
+        const score = count * 25;
+        const scoreNum = document.getElementById('assistedScoreNum');
+        const scoreCircle = document.getElementById('assistedScoreCircle');
+        const xpBadge = document.getElementById('assistedXpBadge');
+
+        if (scoreNum) scoreNum.textContent = score;
+        const color = score >= 75 ? '#16a34a' : (score >= 50 ? '#d97706' : '#dc2626');
+        if (scoreCircle) {
+          scoreCircle.style.borderColor = color;
+          scoreCircle.style.color = color;
+        }
+        const earnedXP = score >= 75 ? 25 : (score >= 50 ? 15 : 10);
+        if (xpBadge) xpBadge.textContent = '⚡ +' + earnedXP + ' XP';
+      }
+
+      function claimSpeakingXP(earnedXP) {
+        if (speechAwardClaimed) return;
+        speechAwardClaimed = true;
+        const btn = document.getElementById('btnClaimSpeakingXP');
+        if (btn) {
+          btn.disabled = true;
+          btn.innerHTML = '✓ Đã nhận +' + earnedXP + ' XP!';
+          btn.style.background = '#16a34a';
+        }
+        if (window.TaigaFlash) {
+          window.TaigaFlash.addXP(earnedXP, true);
+        }
+      }
+
+      function claimAssistedSpeakingXP() {
+        if (speechAwardClaimed) return;
+        const chks = document.querySelectorAll('.rubric-chk');
+        let count = 0;
+        chks.forEach(c => { if (c.checked) count++; });
+        const score = count * 25;
+        const earnedXP = score >= 75 ? 25 : (score >= 50 ? 15 : 10);
+        claimSpeakingXP(earnedXP);
+      }
+
+      window.claimSpeakingXP = claimSpeakingXP;
+      window.claimAssistedSpeakingXP = claimAssistedSpeakingXP;
+      window.updateAssistedScore = updateAssistedScore;
 
       function insertAtCursor(myField, myValue) {
         if (!myField) return;
