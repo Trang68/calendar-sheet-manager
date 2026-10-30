@@ -53,7 +53,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("../media/map_flag_border.png") center center / cover no-repeat;
+  background: url("/media/map_flag_border.png") center center / cover no-repeat;
   opacity: 0.06;
   filter: blur(1px) saturate(60%);
   pointer-events: none;

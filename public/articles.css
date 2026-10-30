@@ -45,10 +45,10 @@ body {
   min-height: 100vh;
   font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   color: var(--ink);
-  background-color: var(--bg-1);
+  background-color: var(--bg-1, #f7f5ef);
   background-image:
-    radial-gradient(circle at 10% 12%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
-    radial-gradient(circle at 90% 75%, rgba(0, 70, 70, 0.05) 0, transparent 40%);
+    radial-gradient(circle at 15% 15%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 85% 75%, rgba(0, 70, 70, 0.05) 0, transparent 40%);
   background-attachment: fixed;
   position: relative;
   isolation: isolate;
@@ -59,9 +59,9 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("../media/map_flag_border.png") center center / cover no-repeat;
-  opacity: 0.12;
-  filter: blur(1px) saturate(70%);
+  background: url("/media/map_flag_border.png") center center / cover no-repeat;
+  opacity: 0.06;
+  filter: blur(1px) saturate(60%);
   pointer-events: none;
   z-index: -1;
 }

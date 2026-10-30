@@ -198,20 +198,37 @@ html {
   --ff-shadow-lg: 0 20px 50px rgba(0, 70, 70, 0.14);
 }
 
-/* Base resets & typography */
+/* Base resets & typography - Unified Background identical to Home */
 body.ff-body {
-  background-color: var(--ff-bg);
-  color: var(--ff-text);
+  background-color: var(--ff-bg, #f7f5ef) !important;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 85% 75%, rgba(0, 70, 70, 0.05) 0, transparent 40%) !important;
+  background-attachment: fixed !important;
+  color: var(--ff-text, #1a2e2c);
   font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  position: relative;
+  isolation: isolate;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
+body.ff-body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/media/map_flag_border.png") center center / cover no-repeat;
+  opacity: 0.06;
+  filter: blur(1px) saturate(60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .game-shell {
-  background: var(--ff-bg);
+  background: transparent !important;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;

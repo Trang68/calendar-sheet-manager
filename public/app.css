@@ -20,10 +20,25 @@
         min-height: 100vh;
         font-family: "Manrope", sans-serif;
         color: var(--ink);
-        background:
-          radial-gradient(circle at 8% 8%, rgba(255, 210, 160, 0.7) 0, transparent 34%),
-          radial-gradient(circle at 92% 6%, rgba(159, 218, 189, 0.72) 0, transparent 28%),
-          linear-gradient(155deg, var(--bg-1), var(--bg-2));
+        background-color: var(--bg-1, #f7f5ef);
+        background-image:
+          radial-gradient(circle at 15% 15%, rgba(39, 196, 181, 0.08) 0, transparent 35%),
+          radial-gradient(circle at 85% 75%, rgba(0, 70, 70, 0.05) 0, transparent 40%);
+        background-attachment: fixed;
+        line-height: 1.6;
+        position: relative;
+        isolation: isolate;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("/media/map_flag_border.png") center center / cover no-repeat;
+        opacity: 0.06;
+        filter: blur(1px) saturate(60%);
+        pointer-events: none;
+        z-index: -1;
       }
 
       .page {
