@@ -657,108 +657,8 @@
       { capture: true }
     );
 
-    // 2. High-performance, interactive 3D page-turn touch gesture on mobile
+    // 2. Ultra-snappy mobile swipe navigation (0ms instant transition, no fake layers, no delay)
     if (currentIndex === -1) return;
-
-    // Locate or create the content surface below the header (header is completely isolated outside)
-    function getPageSurface() {
-      let surface = document.getElementById('ffSwipeSurface');
-      if (surface) return surface;
-
-      const topbar = document.querySelector('.game-topbar');
-      if (!topbar || !topbar.parentNode) return null;
-
-      surface = document.createElement('div');
-      surface.id = 'ffSwipeSurface';
-      surface.className = 'ff-swipe-surface';
-
-      const parent = topbar.parentNode;
-      const nodesToMove = [];
-      let next = topbar.nextSibling;
-      while (next) {
-        const cur = next;
-        next = next.nextSibling;
-        if (cur.nodeType === 1) {
-          const tag = cur.tagName.toLowerCase();
-          if (tag === 'script' ||
-              cur.classList.contains('dict-widget-panel') ||
-              cur.classList.contains('dict-widget-launcher') ||
-              cur.classList.contains('back-to-top-btn') ||
-              cur.classList.contains('pwa-instructions-modal') ||
-              cur.classList.contains('pwa-widget-dock') ||
-              cur.id === 'dictSelectionPopup') {
-            continue;
-          }
-        }
-        nodesToMove.push(cur);
-      }
-
-      nodesToMove.forEach((node) => surface.appendChild(node));
-      parent.appendChild(surface);
-      return surface;
-    }
-
-    const tabMeta = {
-      '/home': { badge: 'TRANG CHỦ', icon: '🇷🇺', title: 'Học Tiếng Nga Chuyên Nghiệp', desc: 'Phản xạ thực chiến & Flashcard thông minh' },
-      '/roadmap': { badge: 'LỘ TRÌNH A0 → B2', icon: '🚀', title: 'Lộ Trình Học Toàn Diện', desc: 'Du học Nga, Thương mại, TRKI và Giao tiếp 1-1' },
-      '/articles': { badge: 'KHO BÀI VIẾT', icon: '📚', title: 'Cẩm Nang & Bài Viết', desc: 'Ngữ pháp 6 cách, biến cách & mẹo phát âm' },
-      '/test': { badge: 'LUYỆN TẬP PHẢN XẠ', icon: '⚡', title: 'Luyện Phản Xạ & Từ Vựng', desc: 'Flashcard 25 chủ đề, trắc nghiệm & kiểm tra' },
-      '/app': { badge: 'TÀI KHOẢN HỌC VIÊN', icon: '👤', title: 'Quản Lý Tiến Độ Học', desc: 'Theo dõi điểm XP, chuỗi streak & tài khoản' },
-      '/contact': { badge: 'TƯ VẤN & XẾP LỚP', icon: '💬', title: 'Liên Hệ Tuyển Sinh', desc: 'Đăng ký kiểm tra năng lực & xếp lớp phù hợp' }
-    };
-
-    let peekLayer = null;
-    let peekTargetIndex = -1;
-
-    function getPeekLayer(targetIdx, direction) {
-      if (peekLayer && peekTargetIndex === targetIdx) return peekLayer;
-      if (peekLayer) peekLayer.remove();
-
-      const topbar = document.querySelector('.game-topbar');
-      const topbarHeight = topbar ? topbar.offsetHeight : 76;
-      const route = routes[targetIdx];
-      const meta = tabMeta[route] || { badge: 'TIẾP THEO', icon: '📖', title: 'Đang mở trang...', desc: '' };
-
-      const el = document.createElement('div');
-      el.className = 'ff-peek-layer';
-      el.style.top = `${topbarHeight}px`;
-      el.style.height = `calc(100vh - ${topbarHeight}px)`;
-      el.style.height = `calc(100dvh - ${topbarHeight}px)`;
-      el.innerHTML = `
-        <div class="ff-peek-inner">
-          <div class="ff-peek-badge">${meta.icon} ${meta.badge}</div>
-          <h2 class="ff-peek-title">${meta.title}</h2>
-          <p class="ff-peek-desc">${meta.desc}</p>
-          <div class="ff-peek-hint">Thả tay để chuyển trang ➔</div>
-        </div>
-      `;
-      document.body.appendChild(el);
-      peekLayer = el;
-      peekTargetIndex = targetIdx;
-      return el;
-    }
-
-    function removePeekLayer() {
-      if (peekLayer) {
-        peekLayer.remove();
-        peekLayer = null;
-        peekTargetIndex = -1;
-      }
-    }
-
-    function resetSurface(el) {
-      if (!el) return;
-      el.style.transition = 'transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms ease, opacity 220ms ease';
-      el.style.transform = 'translate3d(0, 0, 0)';
-      el.style.boxShadow = 'none';
-      el.style.opacity = '1';
-      setTimeout(() => {
-        el.style.removeProperty('transition');
-        el.style.removeProperty('transform');
-        el.style.removeProperty('box-shadow');
-        el.style.removeProperty('opacity');
-      }, 240);
-    }
 
     const ignoredTargets = [
       'a',
@@ -800,20 +700,16 @@
     };
 
     let touchStart = null;
-    let isDragging = false;
-    let surface = null;
 
     document.addEventListener(
       'touchstart',
       (e) => {
         if (e.touches.length !== 1 || window.getSelection()?.toString()) {
           touchStart = null;
-          isDragging = false;
           return;
         }
         if (isIgnoredTouchTarget(e.target)) {
           touchStart = null;
-          isDragging = false;
           return;
         }
         touchStart = {
@@ -821,67 +717,21 @@
           y: e.touches[0].clientY,
           time: Date.now(),
         };
-        isDragging = false;
-        surface = getPageSurface();
-        if (surface) {
-          surface.style.transition = 'none';
-        }
+
+        // Prefetch adjacent routes immediately on touch start so page is 100% in memory
+        const nextUrl = routes[(currentIndex + 1) % routes.length];
+        const prevUrl = routes[(currentIndex - 1 + routes.length) % routes.length];
+        prefetchUrl(nextUrl);
+        prefetchUrl(prevUrl);
       },
       { passive: true }
     );
 
     document.addEventListener(
-      'touchmove',
-      (e) => {
-        if (!touchStart || e.touches.length !== 1) return;
-        const deltaX = e.touches[0].clientX - touchStart.x;
-        const deltaY = e.touches[0].clientY - touchStart.y;
-
-        if (!isDragging) {
-          if (Math.abs(deltaY) > 8 && Math.abs(deltaY) > Math.abs(deltaX) * 0.9) {
-            touchStart = null;
-            return;
-          }
-          if (Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
-            isDragging = true;
-          }
-        }
-
-        if (isDragging) {
-          if (e.cancelable) e.preventDefault();
-          if (!surface) surface = getPageSurface();
-          if (!surface) return;
-
-          const direction = deltaX < 0 ? -1 : 1;
-          const targetIndex = (currentIndex + (direction < 0 ? 1 : -1) + routes.length) % routes.length;
-          const peek = getPeekLayer(targetIndex, direction);
-
-          // Trang hiện tại trượt nhẹ parallax dưới ngón tay (như Zalo / iOS)
-          surface.style.transition = 'none';
-          surface.style.transform = `translate3d(${deltaX * 0.4}px, 0, 0)`;
-
-          // Mép trang mới trượt từ cạnh vào bám sát ngón tay 1:1 theo thời gian thực
-          if (peek) {
-            peek.style.transition = 'none';
-            const peekX = direction < 0 ? window.innerWidth + deltaX : -window.innerWidth + deltaX;
-            peek.style.transform = `translate3d(${peekX}px, 0, 0)`;
-            peek.style.boxShadow = direction < 0
-              ? `-14px 0 32px rgba(0, 0, 0, 0.16)`
-              : `14px 0 32px rgba(0, 0, 0, 0.16)`;
-          }
-        }
-      },
-      { passive: false }
-    );
-
-    document.addEventListener(
       'touchend',
       (e) => {
-        if (!touchStart || !isDragging || e.changedTouches.length !== 1) {
-          if (peekLayer) removePeekLayer();
-          if (surface && isDragging) resetSurface(surface);
+        if (!touchStart || e.changedTouches.length !== 1) {
           touchStart = null;
-          isDragging = false;
           return;
         }
 
@@ -889,33 +739,19 @@
         const deltaY = e.changedTouches[0].clientY - touchStart.y;
         const elapsed = Math.max(1, Date.now() - touchStart.time);
         const velocity = Math.abs(deltaX) / elapsed;
-
         touchStart = null;
-        isDragging = false;
 
-        const isFlick = velocity > 0.28 && Math.abs(deltaX) >= 28;
-        const isDragPast = Math.abs(deltaX) >= Math.min(65, window.innerWidth * 0.18);
+        const isFlick = velocity > 0.22 && Math.abs(deltaX) >= 25;
+        const isDragPast = Math.abs(deltaX) >= Math.min(50, window.innerWidth * 0.15);
 
-        if ((isFlick || isDragPast) && Math.abs(deltaX) > Math.abs(deltaY) * 1.05) {
+        if ((isFlick || isDragPast) && Math.abs(deltaX) > Math.abs(deltaY) * 1.1) {
           const direction = deltaX < 0 ? 'forward' : 'back';
           const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
           const targetUrl = routes[targetIndex];
 
-          // Trang mới trượt hoàn toàn vào khớp vị trí màn hình!
-          if (peekLayer) {
-            peekLayer.style.transition = 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-            peekLayer.style.transform = 'translate3d(0, 0, 0)';
-          }
-          if (surface) {
-            surface.style.transition = 'transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 180ms ease';
-            const exitX = direction === 'forward' ? -window.innerWidth * 0.35 : window.innerWidth * 0.35;
-            surface.style.transform = `translate3d(${exitX}px, 0, 0)`;
-            surface.style.opacity = '0.6';
-          }
-
           setDirection(direction);
 
-          // Update header tab active & scroll to it right away
+          // Update header tab active & scroll to it immediately
           const targetTab = document.querySelectorAll('.ff-nav-tab')[targetIndex];
           if (targetTab) {
             document.querySelectorAll('.ff-nav-tab').forEach((t) => t.classList.remove('active'));
@@ -923,28 +759,15 @@
             scrollActiveTabIntoView(true);
           }
 
-          setTimeout(() => {
-            window.location.assign(targetUrl);
-          }, 160);
-        } else {
-          // Cancelled: smoothly spring peek back out, and current page back to 0
-          if (peekLayer) {
-            peekLayer.style.transition = 'transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-            const outX = deltaX < 0 ? window.innerWidth : -window.innerWidth;
-            peekLayer.style.transform = `translate3d(${outX}px, 0, 0)`;
-            setTimeout(() => removePeekLayer(), 220);
-          }
-          if (surface) resetSurface(surface);
+          // Instant 0ms navigation! Browser handles GPU View Transition seamlessly!
+          window.location.assign(targetUrl);
         }
       },
       { passive: true }
     );
 
     document.addEventListener('touchcancel', () => {
-      if (peekLayer) removePeekLayer();
-      if (surface && isDragging) resetSurface(surface);
       touchStart = null;
-      isDragging = false;
     });
   }
 
