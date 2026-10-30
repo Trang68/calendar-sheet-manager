@@ -28,5 +28,36 @@
       "Chia sẻ những hành động cụ thể bạn tự thực hiện mỗi ngày (tái chế, tiết kiệm năng lượng, đi phương tiện công cộng).",
       "Kêu gọi cộng đồng chung tay hành động vì một tương lai bền vững."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Ý thức bảo vệ hành tinh (Экологический след)",
+      "rows": [
+        {
+          "word": "осо́знанность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự tỉnh thức, ý thức trách nhiệm",
+          "example": "Экологическая осознанность начинается с бережного отношения к ресурсам."
+        },
+        {
+          "word": "экологи́ческий след",
+          "gram": "cụm danh từ đực",
+          "meaning": "dấu chân carbon / sinh thái",
+          "example": "Каждый человек может уменьшить свой экологический след."
+        },
+        {
+          "word": "ресу́рсы",
+          "gram": "danh từ số nhiều",
+          "meaning": "nguồn tài nguyên thiên nhiên",
+          "example": "Природные ресурсы планеты не безграничны."
+        },
+        {
+          "word": "бере́чь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gìn giữ, trân trọng bảo vệ",
+          "example": "Мы обязаны беречь родную природу для будущих потомков."
+        }
+      ]
+    }
+  ]
 }

@@ -45,5 +45,36 @@
       "Какие интересные достопримечательности там есть? (Danh lam thắng cảnh nổi bật)",
       "За что вы любите этот город? (Vì sao bạn yêu mến thành phố này?)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thành phố quê hương (Родной город)",
+      "rows": [
+        {
+          "word": "родно́й го́род",
+          "gram": "cụm danh từ đực",
+          "meaning": "thành phố quê hương",
+          "example": "Мой родной город славится богатой историей."
+        },
+        {
+          "word": "достопримеча́тельность",
+          "gram": "danh từ giống cái",
+          "meaning": "danh lam thắng cảnh",
+          "example": "Главные архитектурные достопримечательности столицы."
+        },
+        {
+          "word": "населе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "dân số đô thị",
+          "example": "Население мегаполиса стремительно растёт."
+        },
+        {
+          "word": "па́мятник",
+          "gram": "danh từ giống đực",
+          "meaning": "đài tưởng niệm",
+          "example": "Исторический памятник в центре площади."
+        }
+      ]
+    }
+  ]
 }

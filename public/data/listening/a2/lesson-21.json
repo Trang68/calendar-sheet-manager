@@ -64,5 +64,36 @@
       "ans": "A",
       "explain": "Сотрудник банка сообщил, что моментальную карту выдадут за 10 минут."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mở thẻ & Ngoại tệ (Банк)",
+      "rows": [
+        {
+          "word": "де́бетовая ка́рта",
+          "gram": "cụm danh từ cái",
+          "meaning": "thẻ thanh toán ghi nợ",
+          "example": "Оформление дебетовой карты национальной системы."
+        },
+        {
+          "word": "курс обме́на",
+          "gram": "cụm danh từ đực",
+          "meaning": "tỷ giá chuyển đổi tiền",
+          "example": "Выгодный курс обмена валют."
+        },
+        {
+          "word": "тало́н",
+          "gram": "danh từ giống đực",
+          "meaning": "phiếu số thứ tự",
+          "example": "Возьмите талон электронной очереди."
+        },
+        {
+          "word": "миграцио́нная ка́рта",
+          "gram": "cụm danh từ cái",
+          "meaning": "thẻ nhập cảnh di trú",
+          "example": "Предъявите миграционную карту с регистрацией."
+        }
+      ]
+    }
   ]
 }

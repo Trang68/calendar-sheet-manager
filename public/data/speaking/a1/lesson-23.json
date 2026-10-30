@@ -31,5 +31,36 @@
       "Желаю тебе здоровья...",
       "Всего самого доброго!"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Chúc mừng và Ước nguyện (Пожелания)",
+      "rows": [
+        {
+          "word": "жела́ть",
+          "gram": "động từ",
+          "meaning": "chúc / mong ước",
+          "example": "Желаю счастья и здоровья!"
+        },
+        {
+          "word": "сча́стье",
+          "gram": "danh từ giống trung",
+          "meaning": "hạnh phúc",
+          "example": "Много радости и счастья."
+        },
+        {
+          "word": "уда́ча",
+          "gram": "danh từ giống cái",
+          "meaning": "may mắn",
+          "example": "Удачи на завтрашнем экзамене!"
+        },
+        {
+          "word": "день рожде́ния",
+          "gram": "cụm danh từ đực",
+          "meaning": "sinh nhật",
+          "example": "С днём рождения тебя!"
+        }
+      ]
+    }
+  ]
 }

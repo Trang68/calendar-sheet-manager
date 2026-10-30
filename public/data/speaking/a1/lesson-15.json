@@ -52,5 +52,36 @@
       "Сеанс начинается в восемь вечера... (Suất chiếu bắt đầu lúc 8 giờ tối...)",
       "Я куплю билеты онлайн... (Tôi sẽ mua vé trực tuyến...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đi xem phim (В кинотеатре)",
+      "rows": [
+        {
+          "word": "кинотеа́тр",
+          "gram": "danh từ giống đực",
+          "meaning": "rạp chiếu phim",
+          "example": "Встретимся возле кинотеатра."
+        },
+        {
+          "word": "фильм",
+          "gram": "danh từ giống đực",
+          "meaning": "bộ phim",
+          "example": "Очень интересный комедийный фильм."
+        },
+        {
+          "word": "ряд",
+          "gram": "danh từ giống đực",
+          "meaning": "hàng ghế",
+          "example": "Пятый ряд, место десять."
+        },
+        {
+          "word": "экра́н",
+          "gram": "danh từ giống đực",
+          "meaning": "màn hình chiếu",
+          "example": "Большой яркий экран."
+        }
+      ]
+    }
+  ]
 }

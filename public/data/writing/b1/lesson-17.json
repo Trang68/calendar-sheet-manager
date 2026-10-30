@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Mở đầu nhiệt tình, dẫn dắt tự nhiên, kết thúc chu đáo."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Văn bản hướng dẫn tour (Экскурсия по Москве)",
+      "rows": [
+        {
+          "word": "достопримеча́тельность",
+          "gram": "danh từ giống cái",
+          "meaning": "danh lam thắng cảnh di tích",
+          "example": "Красная площадь — главная историческая достопримечательность столицы."
+        },
+        {
+          "word": "экскурсова́ть",
+          "gram": "động từ",
+          "meaning": "hướng dẫn thuyết minh du lịch",
+          "example": "Гид увлекательно экскурсовал туристов по переулкам старой Москвы."
+        },
+        {
+          "word": "панора́ма",
+          "gram": "danh từ giống cái",
+          "meaning": "toàn cảnh quan bao quát",
+          "example": "Со смотровой площадки Воробьёвых гор открывается потрясающая панорама."
+        },
+        {
+          "word": "пешехо́дный маршру́т",
+          "gram": "cụm danh từ đực",
+          "meaning": "cung đường tản bộ khám phá",
+          "example": "Пешеходный маршрут охватывает старинные купеческие особняки Замоскворечья."
+        }
+      ]
+    }
   ]
 }

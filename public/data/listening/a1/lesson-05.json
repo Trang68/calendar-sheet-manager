@@ -262,5 +262,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng Hiệu thuốc & Sức khỏe (В аптеке)",
+      "rows": [
+        {
+          "word": "апте́ка",
+          "gram": "danh từ giống cái",
+          "meaning": "hiệu thuốc",
+          "example": "Аптека работает круглосуточно."
+        },
+        {
+          "word": "лека́рство",
+          "gram": "danh từ giống trung",
+          "meaning": "thuốc men",
+          "example": "Дайте лекарство от простуды."
+        },
+        {
+          "word": "реце́пт",
+          "gram": "danh từ giống đực",
+          "meaning": "đơn thuốc",
+          "example": "Это лекарство продаётся без рецепта."
+        },
+        {
+          "word": "гра́дусник",
+          "gram": "danh từ giống đực",
+          "meaning": "nhiệt kế",
+          "example": "Мне нужно купить градусник."
+        }
+      ]
+    }
+  ]
 }

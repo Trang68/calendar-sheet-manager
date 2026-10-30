@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Ghi rõ số phòng căn hộ và ký tên người gửi."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ghi chú nhờ hàng xóm (Записка)",
+      "rows": [
+        {
+          "word": "про́сьба",
+          "gram": "danh từ giống cái",
+          "meaning": "lời nhờ vả",
+          "example": "У меня к вам небольшая вежливая просьба."
+        },
+        {
+          "word": "посы́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "kiện hàng bưu phẩm",
+          "example": "Курьер должен привезти посылку с книгами."
+        },
+        {
+          "word": "сосе́д",
+          "gram": "danh từ giống đực",
+          "meaning": "người hàng xóm",
+          "example": "Уважаемый сосед по лестничной площадке."
+        },
+        {
+          "word": "благода́рен",
+          "gram": "tính từ ngắn",
+          "meaning": "vô cùng biết ơn",
+          "example": "Буду искренне благодарен за помощь."
+        }
+      ]
+    }
   ]
 }

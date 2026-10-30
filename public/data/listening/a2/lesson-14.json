@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Максим пожелал здоровья и учебных успехов в новом году."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Gọi điện thoại chúc Tết (Поздравление)",
+      "rows": [
+        {
+          "word": "наступа́ть",
+          "gram": "động từ",
+          "meaning": "đang đến gần (năm mới)",
+          "example": "С наступающим Новым годом!"
+        },
+        {
+          "word": "искренне",
+          "gram": "phó từ",
+          "meaning": "từ đáy lòng, chân thành",
+          "example": "Искренне желаю счастья и удачи."
+        },
+        {
+          "word": "сда́ча",
+          "gram": "danh từ giống cái",
+          "meaning": "việc thi đỗ",
+          "example": "Успешная сдача всех экзаменов."
+        },
+        {
+          "word": "кани́кулы",
+          "gram": "danh từ số nhiều",
+          "meaning": "kỳ nghỉ lễ / nghỉ hè",
+          "example": "Встретимся на зимних каникулах."
+        }
+      ]
+    }
   ]
 }

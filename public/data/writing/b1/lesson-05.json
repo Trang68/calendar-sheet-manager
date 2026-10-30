@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Đề xuất giải pháp hài hòa, lý lẽ sắc bén."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận Giáo dục đại học (Высшее образование)",
+      "rows": [
+        {
+          "word": "вы́сшее образова́ние",
+          "gram": "cụm danh từ trung",
+          "meaning": "giáo dục bậc đại học",
+          "example": "Доступность высшего образования — важный показатель развития общества."
+        },
+        {
+          "word": "бюдже́тные места́",
+          "gram": "cụm danh từ số nhiều",
+          "meaning": "chỉ tiêu học bổng ngân sách nhà nước",
+          "example": "Отличники имеют право претендовать на бесплатные бюджетные места."
+        },
+        {
+          "word": "госфинанси́рование",
+          "gram": "danh từ giống trung",
+          "meaning": "nguồn vốn ngân sách nhà nước cấp",
+          "example": "Госфинансирование науки гарантирует развитие фундаментальных исследований."
+        },
+        {
+          "word": "доступность",
+          "gram": "danh từ giống cái",
+          "meaning": "tính bình đẳng dễ tiếp cận",
+          "example": "Образование должно быть доступным для каждого талантливого человека."
+        }
+      ]
+    }
   ]
 }

@@ -28,5 +28,36 @@
       "Nhiệm vụ cụ thể của bạn và những kỷ niệm đáng nhớ cùng đồng đội.",
       "Trải nghiệm này đã thay đổi thế giới quan và trái tim bạn ra sao?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Hoạt động tình nguyện sẻ chia (Волонтёрство)",
+      "rows": [
+        {
+          "word": "волонтёрство",
+          "gram": "danh từ giống trung",
+          "meaning": "hoạt động thiện nguyện tình nguyện",
+          "example": "Волонтёрство воспитывает отзывчивость и сострадание к ближнему."
+        },
+        {
+          "word": "благотвори́тельность",
+          "gram": "danh từ giống cái",
+          "meaning": "công việc từ thiện cứu trợ",
+          "example": "Фонд занимается благотворительностью и помощью детским больницам."
+        },
+        {
+          "word": "бескоры́стно",
+          "gram": "phó từ",
+          "meaning": "vô tư, không vụ lợi cá nhân",
+          "example": "Добровольцы бескорыстно помогают пожилым людям."
+        },
+        {
+          "word": "соо́бщество",
+          "gram": "danh từ giống trung",
+          "meaning": "cộng đồng kết nối",
+          "example": "Волонтёрское сообщество организует уборку лесопарковых зон."
+        }
+      ]
+    }
+  ]
 }

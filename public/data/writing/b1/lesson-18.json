@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Sử dụng lối hành văn cô đọng, khách quan, không sai lỗi chính tả."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đơn xin bảo lưu kết quả (Академический отпуск)",
+      "rows": [
+        {
+          "word": "академи́ческий о́тпуск",
+          "gram": "cụm danh từ đực",
+          "meaning": "kỳ nghỉ phép bảo lưu kết quả học tập",
+          "example": "Студент вынужден взять академический отпуск по состоянию здоровья."
+        },
+        {
+          "word": "семе́йные обстоя́тельства",
+          "gram": "cụm danh từ số nhiều",
+          "meaning": "hoàn cảnh gia đình đặc biệt",
+          "example": "Прошу предоставить отпуск по непредвиденным семейным обстоятельствам."
+        },
+        {
+          "word": "спра́вка",
+          "gram": "danh từ giống cái",
+          "meaning": "giấy xác nhận y tế / cơ quan",
+          "example": "К заявлению приложена медицинская справка установленного образца."
+        },
+        {
+          "word": "ректора́т",
+          "gram": "danh từ giống đực",
+          "meaning": "ban giám hiệu nhà trường",
+          "example": "Решение о предоставлении академического отпуска утверждено ректоратом."
+        }
+      ]
+    }
   ]
 }

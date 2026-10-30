@@ -45,5 +45,36 @@
       "Что вы делаете днём на учёбе или работе? (Ban ngày bạn học tập/làm việc ra sao?)",
       "Как вы отдыхаете перед сном? (Bạn thư giãn thế nào trước khi đi ngủ?)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thói quen hàng ngày (Распорядок)",
+      "rows": [
+        {
+          "word": "привы́чка",
+          "gram": "danh từ giống cái",
+          "meaning": "thói quen sinh hoạt",
+          "example": "Полезная привычка делать утреннюю зарядку."
+        },
+        {
+          "word": "буди́льник",
+          "gram": "danh từ giống đực",
+          "meaning": "đồng hồ báo thức",
+          "example": "Будильник звонит ровно в шесть утра."
+        },
+        {
+          "word": "собира́ться",
+          "gram": "động từ",
+          "meaning": "chuẩn bị đồ đạc",
+          "example": "Я быстро собираюсь на работу."
+        },
+        {
+          "word": "распоря́док",
+          "gram": "danh từ giống đực",
+          "meaning": "lịch trình giờ giấc",
+          "example": "Строгий распорядок трудового дня."
+        }
+      ]
+    }
+  ]
 }

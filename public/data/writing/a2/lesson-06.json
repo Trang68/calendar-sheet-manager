@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Câu văn trôi chảy, sử dụng tốt các liên từ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đánh giá nhà hàng ẩm thực (Отзыв)",
+      "rows": [
+        {
+          "word": "рестора́н",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà hàng quán ăn",
+          "example": "Традиционный ресторан русской кухни."
+        },
+        {
+          "word": "персона́л",
+          "gram": "danh từ giống đực",
+          "meaning": "đội ngũ nhân viên",
+          "example": "Очень вежливый и внимательный персонал."
+        },
+        {
+          "word": "све́жий",
+          "gram": "tính từ",
+          "meaning": "tươi ngon",
+          "example": "Все блюда были невероятно свежими и вкусными."
+        },
+        {
+          "word": "оце́нка",
+          "gram": "danh từ giống cái",
+          "meaning": "đánh giá sao điểm",
+          "example": "Ставлю высшую оценку — пять звёзд."
+        }
+      ]
+    }
   ]
 }

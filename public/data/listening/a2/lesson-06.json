@@ -64,5 +64,36 @@
       "ans": "B",
       "explain": "Покупатель сообщил консультанту: «Мне нужен сорок восьмой размер»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mua áo ấm mùa đông (Зимняя одежда)",
+      "rows": [
+        {
+          "word": "пухови́к",
+          "gram": "danh từ giống đực",
+          "meaning": "áo khoác lông vũ",
+          "example": "Длинный тёплый пуховик с капюшоном."
+        },
+        {
+          "word": "наполни́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "chất liệu lót bên trong",
+          "example": "Натуральный гусиный пух."
+        },
+        {
+          "word": "приме́рить",
+          "gram": "động từ",
+          "meaning": "thử đồ (quần áo)",
+          "example": "Где я могу примерить эту куртку?"
+        },
+        {
+          "word": "непромока́емый",
+          "gram": "tính từ",
+          "meaning": "chống thấm nước",
+          "example": "Непромокаемая зимняя обувь."
+        }
+      ]
+    }
   ]
 }

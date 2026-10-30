@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Luận điểm rõ ràng, thuyết phục."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận về thể thao và sức khỏe (Спорт)",
+      "rows": [
+        {
+          "word": "роль",
+          "gram": "danh từ giống cái",
+          "meaning": "vai trò then chốt",
+          "example": "Спорт играет ключевую роль в жизни человека."
+        },
+        {
+          "word": "погово́рка",
+          "gram": "danh từ giống cái",
+          "meaning": "câu ngạn ngữ",
+          "example": "«В здоровом теле — здоровый дух»."
+        },
+        {
+          "word": "упражне́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "bài tập vận động",
+          "example": "Регулярные физические упражнения укрепляют сердце."
+        },
+        {
+          "word": "стресс",
+          "gram": "danh từ giống đực",
+          "meaning": "căng thẳng tinh thần",
+          "example": "Спорт отлично снимает рабочий стресс."
+        }
+      ]
+    }
   ]
 }

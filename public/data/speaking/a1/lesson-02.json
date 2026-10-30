@@ -52,5 +52,36 @@
       "Справа стоит компьютер... (Bên phải có máy tính...)",
       "Это очень нужные вещи... (Đây là những vật dụng rất cần thiết...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đồ vật xung quanh (Предметы вокруг)",
+      "rows": [
+        {
+          "word": "ру́чка",
+          "gram": "danh từ giống cái",
+          "meaning": "cây bút bi",
+          "example": "Вот моя синяя ручка."
+        },
+        {
+          "word": "тетра́дь",
+          "gram": "danh từ giống cái",
+          "meaning": "quyển vở",
+          "example": "Это тетрадь по грамматике."
+        },
+        {
+          "word": "стол",
+          "gram": "danh từ giống đực",
+          "meaning": "cái bàn",
+          "example": "Учебник лежит на столе."
+        },
+        {
+          "word": "компью́тер",
+          "gram": "danh từ giống đực",
+          "meaning": "máy tính",
+          "example": "Я работаю за компьютером."
+        }
+      ]
+    }
+  ]
 }

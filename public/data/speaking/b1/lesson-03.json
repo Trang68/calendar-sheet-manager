@@ -31,5 +31,36 @@
       "Характеристика главного героя (Đặc điểm tính cách nhân vật chính)",
       "Чему учит эта история? (Bài học rút ra cho cuộc sống)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Nhân sinh quan & Nghệ thuật (Мировоззрение)",
+      "rows": [
+        {
+          "word": "мировоззре́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thế giới quan, nhân sinh quan",
+          "example": "Классическая литература глубоко влияет на наше мировоззрение."
+        },
+        {
+          "word": "впечатле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "ấn tượng sâu sắc",
+          "example": "Прочитанная книга произвела на меня неизгладимое впечатление."
+        },
+        {
+          "word": "переосмы́слить",
+          "gram": "động từ hoàn thành",
+          "meaning": "nhìn nhận lại, suy ngẫm lại",
+          "example": "После этой лекции он переосмыслил свои жизненные цели."
+        },
+        {
+          "word": "вдохнове́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "nguồn cảm hứng sáng tạo",
+          "example": "Путешествия дарят автору неисчерпаемое вдохновение."
+        }
+      ]
+    }
+  ]
 }

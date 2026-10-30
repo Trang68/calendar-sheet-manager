@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Lời mở đầu và kết thư trang nhã chuẩn mực."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư hỏi khóa học ngôn ngữ (Курсы языка)",
+      "rows": [
+        {
+          "word": "интенси́в",
+          "gram": "danh từ giống đực",
+          "meaning": "khóa học cấp tốc",
+          "example": "Летний интенсивный курс русского языка."
+        },
+        {
+          "word": "сто́имость",
+          "gram": "danh từ giống cái",
+          "meaning": "mức học phí",
+          "example": "Какова полная стоимость обучения за семестр?"
+        },
+        {
+          "word": "расписа́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thời khóa biểu lớp học",
+          "example": "В какие дни недели проходят занятия?"
+        },
+        {
+          "word": "материа́лы",
+          "gram": "danh từ số nhiều",
+          "meaning": "tài liệu giáo trình",
+          "example": "Предоставляются ли учебные материалы бесплатно?"
+        }
+      ]
+    }
   ]
 }

@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Trường lớp và Bạn bè (Университет)",
+      "rows": [
+        {
+          "word": "факульте́т",
+          "gram": "danh từ giống đực",
+          "meaning": "khoa đào tạo",
+          "example": "Я учусь на филологическом факультете."
+        },
+        {
+          "word": "одноку́рсник",
+          "gram": "danh từ giống đực",
+          "meaning": "bạn cùng khóa",
+          "example": "Мои однокурсники всегда помогают."
+        },
+        {
+          "word": "библиоте́ка",
+          "gram": "danh từ giống cái",
+          "meaning": "thư viện trường",
+          "example": "Мы занимаемся в библиотеке."
+        },
+        {
+          "word": "лекция",
+          "gram": "danh từ giống cái",
+          "meaning": "bài giảng",
+          "example": "Интересная лекция по истории."
+        }
+      ]
+    }
   ]
 }

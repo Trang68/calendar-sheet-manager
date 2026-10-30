@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Sử dụng chuẩn xác các thể hoàn thành của động từ và giới từ chỉ thời gian."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Khiếu nại dịch vụ vi phạm (Жалоба)",
+      "rows": [
+        {
+          "word": "жа́лоба",
+          "gram": "danh từ giống cái",
+          "meaning": "đơn khiếu nại bức xúc",
+          "example": "Турист направил официальную жалобу на неудовлетворительный сервис в отеле."
+        },
+        {
+          "word": "претензи́я",
+          "gram": "danh từ giống cái",
+          "meaning": "yêu sách khiếu tố bồi thường",
+          "example": "В досудебной претензии указаны факты нарушения условий договора."
+        },
+        {
+          "word": "компенса́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "tiền đền bù thiệt hại",
+          "example": "Агентство выплатило денежную компенсацию за отменённую экскурсию."
+        },
+        {
+          "word": "неусто́йка",
+          "gram": "danh từ giống cái",
+          "meaning": "khoản phạt vi phạm nghĩa vụ hợp đồng",
+          "example": "Потребитель вправе требовать выплаты неустойки за каждый день задержки."
+        }
+      ]
+    }
   ]
 }

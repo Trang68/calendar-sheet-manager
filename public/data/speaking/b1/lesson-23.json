@@ -28,5 +28,36 @@
       "Làm thế nào để bày tỏ sự bất đồng một cách lịch sự, nhã nhặn mà không gây tổn thương?",
       "Vai trò của ngôn ngữ tiếng Nga như một cầu nối hữu nghị đa văn hóa."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đối thoại đa văn hóa (Межкультурный диалог)",
+      "rows": [
+        {
+          "word": "межкульту́рный диало́г",
+          "gram": "cụm danh từ đực",
+          "meaning": "đối thoại giao lưu liên văn hóa",
+          "example": "Межкультурный диалог учит уважать чужие взгляды и традиции."
+        },
+        {
+          "word": "толера́нтность",
+          "gram": "danh từ giống cái",
+          "meaning": "lòng khoan dung, sự cởi mở hòa đồng",
+          "example": "В многонациональном университете важна атмосфера взаимной толерантности."
+        },
+        {
+          "word": "недопонима́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự hiểu lầm, khúc mắc giao tiếp",
+          "example": "Уточняющие вопросы помогают предотвратить недопонимание между партнёрами."
+        },
+        {
+          "word": "диплома́тия",
+          "gram": "danh từ giống cái",
+          "meaning": "nghệ thuật đối thoại ngoại giao",
+          "example": "Бытовая дипломатия помогает мирно решать любые бытовые конфликты."
+        }
+      ]
+    }
+  ]
 }

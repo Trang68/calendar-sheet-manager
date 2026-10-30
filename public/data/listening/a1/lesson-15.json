@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Nhận tiền và biên lai hóa đơn.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ngân hàng & Đổi tiền (В банке)",
+      "rows": [
+        {
+          "word": "банк",
+          "gram": "danh từ giống đực",
+          "meaning": "ngân hàng",
+          "example": "Банк открыт с девяти до шести."
+        },
+        {
+          "word": "валю́та",
+          "gram": "danh từ giống cái",
+          "meaning": "ngoại tệ",
+          "example": "Какой курс обмена валюты?"
+        },
+        {
+          "word": "рубль",
+          "gram": "danh từ giống đực",
+          "meaning": "đồng Rúp Nga",
+          "example": "Сто рублей за доллар."
+        },
+        {
+          "word": "ка́рта",
+          "gram": "danh từ giống cái",
+          "meaning": "thẻ ngân hàng",
+          "example": "Можно оплатить банковской картой?"
+        }
+      ]
+    }
   ]
 }

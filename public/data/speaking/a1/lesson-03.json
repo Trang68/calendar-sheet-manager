@@ -52,5 +52,36 @@
       "У меня есть брат / сестра... (Tôi có anh/chị/em...)",
       "В выходные мы любим гулять... (Cuối tuần chúng tôi thích đi dạo...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Gia đình yêu thương (Моя семья)",
+      "rows": [
+        {
+          "word": "семья́",
+          "gram": "danh từ giống cái",
+          "meaning": "gia đình",
+          "example": "У меня дружная семья."
+        },
+        {
+          "word": "оте́ц",
+          "gram": "danh từ giống đực",
+          "meaning": "người cha, bố",
+          "example": "Мой отец инженер."
+        },
+        {
+          "word": "мать",
+          "gram": "danh từ giống cái",
+          "meaning": "người mẹ",
+          "example": "Моя мать преподаватель."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ",
+          "meaning": "yêu quý",
+          "example": "Я очень люблю свою семью."
+        }
+      ]
+    }
+  ]
 }

@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Lợi ích rõ nét, giải pháp thiết thực khả thi."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tờ trình đề án kinh doanh (Докладная записка)",
+      "rows": [
+        {
+          "word": "докладна́я запи́ска",
+          "gram": "cụm danh từ cái",
+          "meaning": "tờ trình nội bộ gửi ban giám đốc",
+          "example": "Начальник отдела составил докладную записку с предложением по модернизации."
+        },
+        {
+          "word": "предложе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "phương án đề xuất",
+          "example": "Наше предложение позволит оптимизировать внутренние процессы компании."
+        },
+        {
+          "word": "рента́бельность",
+          "gram": "danh từ giống cái",
+          "meaning": "tỷ suất sinh lời, hiệu quả kinh tế",
+          "example": "Расчёты подтверждают высокую рентабельность нового проекта."
+        },
+        {
+          "word": "внедре́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự triển khai áp dụng thực tiễn",
+          "example": "Внедрение программного обеспечения займёт около двух месяцев."
+        }
+      ]
+    }
   ]
 }

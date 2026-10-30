@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Chúc chuyến bay tốt lành.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Sân bay (В аэропорту)",
+      "rows": [
+        {
+          "word": "аэропо́рт",
+          "gram": "danh từ giống đực",
+          "meaning": "sân bay",
+          "example": "Мы приехали в международный аэропорт."
+        },
+        {
+          "word": "рейс",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyến bay",
+          "example": "Объявляется посадка на рейс 104."
+        },
+        {
+          "word": "бага́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "hành lý ký gửi",
+          "example": "Где можно получить багаж?"
+        },
+        {
+          "word": "па́спортный контро́ль",
+          "gram": "cụm danh từ đực",
+          "meaning": "kiểm tra hộ chiếu",
+          "example": "Пройдите на паспортный контроль."
+        }
+      ]
+    }
   ]
 }

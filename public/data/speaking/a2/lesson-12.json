@@ -28,5 +28,36 @@
       "Nội dung chính xoay quanh những nhân vật và biến cố nào?",
       "Tại sao bạn khuyên mọi người nên xem hoặc đọc tác phẩm này?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Bình luận phim và sách (Кино и книги)",
+      "rows": [
+        {
+          "word": "персона́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "nhân vật hư cấu",
+          "example": "Главный персонаж преодолевает все невзгоды."
+        },
+        {
+          "word": "режиссёр",
+          "gram": "danh từ giống đực",
+          "meaning": "đạo diễn",
+          "example": "Известный кинорежиссёр снял шедевр."
+        },
+        {
+          "word": "мысль",
+          "gram": "danh từ giống cái",
+          "meaning": "tư tưởng tác phẩm",
+          "example": "Глубокая философская мысль автора."
+        },
+        {
+          "word": "сопережива́ть",
+          "gram": "động từ",
+          "meaning": "thấu cảm cùng nhân vật",
+          "example": "Зритель искренне сопереживает героям."
+        }
+      ]
+    }
+  ]
 }

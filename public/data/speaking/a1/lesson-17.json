@@ -52,5 +52,36 @@
       "Сколько мест багажа разрешено? (Được gửi mấy kiện hành lý?)",
       "Спасибо, всего доброго! (Cảm ơn, chúc mọi điều tốt lành!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thủ tục hàng không (В аэропорту)",
+      "rows": [
+        {
+          "word": "термина́л",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà ga sân bay",
+          "example": "Вылет из терминала C."
+        },
+        {
+          "word": "самолёт",
+          "gram": "danh từ giống đực",
+          "meaning": "máy bay",
+          "example": "Самолёт готов к вылету."
+        },
+        {
+          "word": "поса́дочный тало́н",
+          "gram": "cụm danh từ đực",
+          "meaning": "thẻ lên máy bay",
+          "example": "Предъявите посадочный талон."
+        },
+        {
+          "word": "ручна́я кладь",
+          "gram": "cụm danh từ cái",
+          "meaning": "hành lý xách tay",
+          "example": "Одно место ручной клади."
+        }
+      ]
+    }
+  ]
 }

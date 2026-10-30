@@ -34,5 +34,36 @@
       "Kể nghề nghiệp và sở thích đặc trưng của bố mẹ hoặc anh chị em.",
       "Chia sẻ một truyền thống hay hoạt động cả nhà cùng làm vào dịp cuối tuần."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Gia đình và sum họp (Семейные традиции)",
+      "rows": [
+        {
+          "word": "поколе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thế hệ",
+          "example": "Связь старшего и младшего поколений."
+        },
+        {
+          "word": "тради́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "truyền thống",
+          "example": "Прекрасная семейная традиция собираться за ужином."
+        },
+        {
+          "word": "дру́жный",
+          "gram": "tính từ",
+          "meaning": "hòa thuận, khăng khít",
+          "example": "У нас большая и очень дружная семья."
+        },
+        {
+          "word": "засто́лье",
+          "gram": "danh từ giống trung",
+          "meaning": "mâm cỗ sum vầy",
+          "example": "Праздничное домашнее застолье."
+        }
+      ]
+    }
+  ]
 }

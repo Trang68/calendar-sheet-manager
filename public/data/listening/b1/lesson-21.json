@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Врач констатировал дефицит сна (5 часов) и негативное влияние экранов ночью."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Sức khỏe & Phòng suy nhược (Профилактика)",
+      "rows": [
+        {
+          "word": "переутомле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "tình trạng kiệt sức, làm việc quá độ",
+          "example": "Хроническое переутомление негативно влияет на память."
+        },
+        {
+          "word": "профила́ктика",
+          "gram": "danh từ giống cái",
+          "meaning": "biện pháp phòng ngừa bệnh tật",
+          "example": "Профилактика простудных заболеваний включает спорт и витамины."
+        },
+        {
+          "word": "иммуните́т",
+          "gram": "danh từ giống đực",
+          "meaning": "hệ miễn dịch",
+          "example": "Здоровый сон укрепляет иммунитет."
+        },
+        {
+          "word": "нагру́зка",
+          "gram": "danh từ giống cái",
+          "meaning": "tải trọng công việc/thể lực",
+          "example": "Студентам нужно грамотно распределять умственную нагрузку."
+        }
+      ]
+    }
   ]
 }

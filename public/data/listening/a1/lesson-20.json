@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Đạt điểm Giỏi (отлично).."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Vấn đáp kết thúc khóa học (Экзамен)",
+      "rows": [
+        {
+          "word": "экза́мен",
+          "gram": "danh từ giống đực",
+          "meaning": "kỳ thi",
+          "example": "Завтра у нас экзамен по русскому языку."
+        },
+        {
+          "word": "преподава́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "giảng viên, thầy giáo",
+          "example": "Преподаватель задаёт вопросы."
+        },
+        {
+          "word": "отве́т",
+          "gram": "danh từ giống đực",
+          "meaning": "câu trả lời",
+          "example": "Правильный и чёткий ответ."
+        },
+        {
+          "word": "оце́нка",
+          "gram": "danh từ giống cái",
+          "meaning": "điểm số",
+          "example": "Я получил отличную оценку."
+        }
+      ]
+    }
   ]
 }

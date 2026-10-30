@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Mở đầu tự hào, thân bài cụ thể, kết bài quyết tâm hướng tới B1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Bài văn tổng kết tiến bộ A2 (Итоговое эссе)",
+      "rows": [
+        {
+          "word": "прогре́сс",
+          "gram": "danh từ giống đực",
+          "meaning": "sự tiến bộ vượt bậc",
+          "example": "Огромный прогресс в освоении русской речи."
+        },
+        {
+          "word": "прегра́да",
+          "gram": "danh từ giống cái",
+          "meaning": "rào cản trở ngại",
+          "example": "Грамматика больше не кажется непреодолимой преградой."
+        },
+        {
+          "word": "терпе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lòng kiên nhẫn",
+          "example": "Искренняя благодарность учителям за терпение."
+        },
+        {
+          "word": "сертифика́т",
+          "gram": "danh từ giống đực",
+          "meaning": "chứng chỉ chuẩn hóa",
+          "example": "Успешно сдать экзамен на сертификат ТРКИ-1."
+        }
+      ]
+    }
   ]
 }

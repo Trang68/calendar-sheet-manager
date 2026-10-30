@@ -50,5 +50,36 @@
       "criteria": "Ngữ pháp & Chính tả",
       "desc": "Chia đúng thì và không mắc lỗi chính tả căn bản."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Bưu thiếp chúc mừng sinh nhật (Открытка)",
+      "rows": [
+        {
+          "word": "поздравле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lời chúc mừng",
+          "example": "Сердечное поздравление с днём рождения."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ",
+          "meaning": "chúc (đi với cách 2)",
+          "example": "Желаю крепкого здоровья и больших успехов."
+        },
+        {
+          "word": "благополу́чие",
+          "gram": "danh từ giống trung",
+          "meaning": "sự an khang thịnh vượng",
+          "example": "Мира, добра и семейного благополучия."
+        },
+        {
+          "word": "имени́нник",
+          "gram": "danh từ giống đực",
+          "meaning": "người có ngày sinh nhật",
+          "example": "Подарки и поздравления для дорогого именинника."
+        }
+      ]
+    }
   ]
 }

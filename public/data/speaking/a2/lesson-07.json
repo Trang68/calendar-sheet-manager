@@ -28,5 +28,36 @@
       "Bạn tập môn thể thao gì để giữ vóc dáng?",
       "Khi bị cảm lạnh hay đau họng, bạn thường làm gì để hồi phục?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Chăm sóc sức khỏe (Здоровый образ жизни)",
+      "rows": [
+        {
+          "word": "иммуните́т",
+          "gram": "danh từ giống đực",
+          "meaning": "hệ miễn dịch",
+          "example": "Свежий воздух и спорт укрепляют иммунитет."
+        },
+        {
+          "word": "пита́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "chế độ ăn uống",
+          "example": "Правильное сбалансированное питание."
+        },
+        {
+          "word": "закаля́ться",
+          "gram": "động từ",
+          "meaning": "tôi luyện thân thể",
+          "example": "Полезно закаляться прохладной водой."
+        },
+        {
+          "word": "витами́нный",
+          "gram": "tính từ",
+          "meaning": "giàu vitamin",
+          "example": "Витаминный ягодный чай зимой."
+        }
+      ]
+    }
+  ]
 }

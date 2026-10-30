@@ -28,5 +28,36 @@
       "Tại sao món quà đó lại mang ý nghĩa đặc biệt đối với bạn?",
       "Cảm xúc của người nhận khi bóc quà lúc ấy như thế nào?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Văn hóa trao nhận quà (Подарки)",
+      "rows": [
+        {
+          "word": "внима́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự quan tâm chu đáo",
+          "example": "Главное в подарке — это душевное внимание."
+        },
+        {
+          "word": "сюрпри́з",
+          "gram": "danh từ giống đực",
+          "meaning": "điều bất ngờ thú vị",
+          "example": "Подготовить приятный праздничный сюрприз."
+        },
+        {
+          "word": "буке́т",
+          "gram": "danh từ giống đực",
+          "meaning": "bó hoa tươi",
+          "example": "Букет свежих роз для хозяйки дома."
+        },
+        {
+          "word": "благода́рность",
+          "gram": "danh từ giống cái",
+          "meaning": "lòng biết ơn",
+          "example": "Выразить глубокую благодарность за подарок."
+        }
+      ]
+    }
+  ]
 }

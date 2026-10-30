@@ -250,5 +250,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Cấp giấy nghỉ ốm 5 ngày.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Phòng khám & Bác sĩ (У врача)",
+      "rows": [
+        {
+          "word": "врач",
+          "gram": "danh từ giống đực",
+          "meaning": "bác sĩ",
+          "example": "Врач внимательно слушает пациента."
+        },
+        {
+          "word": "боли́т",
+          "gram": "động từ",
+          "meaning": "đau nhức",
+          "example": "У меня сильно болит голова."
+        },
+        {
+          "word": "температу́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "thân nhiệt, sốt",
+          "example": "У пациента высокая температура."
+        },
+        {
+          "word": "просту́да",
+          "gram": "danh từ giống cái",
+          "meaning": "bệnh cảm lạnh",
+          "example": "Обычная сезонная простуда."
+        }
+      ]
+    }
   ]
 }

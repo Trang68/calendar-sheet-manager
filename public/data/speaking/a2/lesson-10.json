@@ -28,5 +28,36 @@
       "Bạn di chuyển bằng phương tiện gì (máy bay, tàu hỏa, ô tô)?",
       "Điều gì khiến bạn nhớ nhất trong suốt chuyến đi đó?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Kỷ niệm chuyến đi xa (Поездка)",
+      "rows": [
+        {
+          "word": "путеше́ствие",
+          "gram": "danh từ giống trung",
+          "meaning": "hành trình du ngoạn",
+          "example": "Увлекательное путешествие на поезде дальнего следования."
+        },
+        {
+          "word": "пейза́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "phong cảnh thiên nhiên",
+          "example": "Живописные лесные пейзажи за окном."
+        },
+        {
+          "word": "проводни́к",
+          "gram": "danh từ giống đực",
+          "meaning": "nhân viên toa tàu",
+          "example": "Вежливый проводник принёс горячий чай."
+        },
+        {
+          "word": "па́мять",
+          "gram": "danh từ giống cái",
+          "meaning": "ký ức, kỷ niệm",
+          "example": "Поездка надолго останется в моей памяти."
+        }
+      ]
+    }
+  ]
 }

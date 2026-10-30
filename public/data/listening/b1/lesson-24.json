@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Туристы запланировали водный поход к знаменитой Ниловой Пустыни на острове Столобный."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Du lịch sinh thái Seliger (Экотуризм)",
+      "rows": [
+        {
+          "word": "экотури́зм",
+          "gram": "danh từ giống đực",
+          "meaning": "du lịch sinh thái dã ngoại",
+          "example": "Экотуризм позволяет отдохнуть от городского шума на лоне природы."
+        },
+        {
+          "word": "похо́д",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyến đi bộ dã ngoại / leo núi",
+          "example": "Летом друзья отправились в трёхдневный поход на байдарках."
+        },
+        {
+          "word": "пала́тка",
+          "gram": "danh từ giống cái",
+          "meaning": "lều trại cắm trại",
+          "example": "Мы поставили палатку на живописном берегу озера."
+        },
+        {
+          "word": "костёр",
+          "gram": "danh từ giống đực",
+          "meaning": "đống lửa trại",
+          "example": "Вечером туристы грелись у костра и пели песни под гитару."
+        }
+      ]
+    }
   ]
 }

@@ -52,5 +52,36 @@
       "Русский язык очень богатый и красивый... (Tiếng Nga rất phong phú và tuyệt đẹp...)",
       "Спасибо за внимание и поддержку! (Xin cảm ơn sự chú ý lắng nghe và đồng hành của quý thầy cô!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thuyết trình tổng kết (Самопрезентация)",
+      "rows": [
+        {
+          "word": "расска́зывать",
+          "gram": "động từ",
+          "meaning": "kể chuyện",
+          "example": "Я хочу рассказать о себе."
+        },
+        {
+          "word": "цель",
+          "gram": "danh từ giống cái",
+          "meaning": "mục tiêu",
+          "example": "Моя цель — выучить русский язык."
+        },
+        {
+          "word": "учи́ть",
+          "gram": "động từ",
+          "meaning": "học, học thuộc",
+          "example": "Я учу новые слова каждый день."
+        },
+        {
+          "word": "бу́дущее",
+          "gram": "danh từ giống trung",
+          "meaning": "tương lai",
+          "example": "Планы на успешное будущее."
+        }
+      ]
+    }
+  ]
 }

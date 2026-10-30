@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Турагент предложил популярный классический маршрут: Владимир — Суздаль — Ярославль."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Du lịch Vành đai Vàng (Турагентство)",
+      "rows": [
+        {
+          "word": "экскурсио́нный тур",
+          "gram": "cụm danh từ đực",
+          "meaning": "tour du lịch tham quan",
+          "example": "Популярный тур по Золотому кольцу."
+        },
+        {
+          "word": "маршру́т",
+          "gram": "danh từ giống đực",
+          "meaning": "lộ trình tuyến đường",
+          "example": "Маршрут включает три старинных города."
+        },
+        {
+          "word": "прожива́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "chỗ lưu trú",
+          "example": "Проживание в комфортабельном отеле."
+        },
+        {
+          "word": "гид",
+          "gram": "danh từ giống đực",
+          "meaning": "hướng dẫn viên du lịch",
+          "example": "Профессиональный гид-экскурсовод."
+        }
+      ]
+    }
   ]
 }

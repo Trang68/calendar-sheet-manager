@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Câu văn trực quan, sinh động."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Hướng dẫn công thức món ăn (Рецепт)",
+      "rows": [
+        {
+          "word": "реце́пт",
+          "gram": "danh từ giống đực",
+          "meaning": "công thức nấu ăn",
+          "example": "Традиционный рецепт вьетнамских блинчиков."
+        },
+        {
+          "word": "ингредие́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "nguyên liệu chế biến",
+          "example": "Подготовить все необходимые ингредиенты."
+        },
+        {
+          "word": "фарш",
+          "gram": "danh từ giống đực",
+          "meaning": "thịt băm xay",
+          "example": "Свежий мясной фарш с зеленью и яйцом."
+        },
+        {
+          "word": "сковорода́",
+          "gram": "danh từ giống cái",
+          "meaning": "chảo rán dầu",
+          "example": "Обжарить блинчики на горячей сковороде."
+        }
+      ]
+    }
   ]
 }

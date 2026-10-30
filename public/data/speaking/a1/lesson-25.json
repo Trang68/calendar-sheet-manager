@@ -31,5 +31,36 @@
       "Я умею...",
       "Моя цель — уровень A2!"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Tiếng Nga của tôi (Итоги говорения)",
+      "rows": [
+        {
+          "word": "говори́ть",
+          "gram": "động từ",
+          "meaning": "nói",
+          "example": "Я говорю по-русски."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ",
+          "meaning": "hiểu",
+          "example": "Я понимаю русскую речь."
+        },
+        {
+          "word": "пра́ктика",
+          "gram": "danh từ giống cái",
+          "meaning": "thực hành",
+          "example": "Языковая практика очень важна."
+        },
+        {
+          "word": "прогре́сс",
+          "gram": "danh từ giống đực",
+          "meaning": "sự tiến bộ",
+          "example": "Большой прогресс в учёбе."
+        }
+      ]
+    }
+  ]
 }

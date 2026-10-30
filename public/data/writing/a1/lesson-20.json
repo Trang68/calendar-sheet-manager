@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thành tích học tập (Мои успехи A1)",
+      "rows": [
+        {
+          "word": "успе́х",
+          "gram": "danh từ giống đực",
+          "meaning": "thành quả, tiến bộ",
+          "example": "Мои успехи в изучении языка."
+        },
+        {
+          "word": "сло́во",
+          "gram": "danh từ giống trung",
+          "meaning": "từ vựng",
+          "example": "Я выучил более пятисот русских слов."
+        },
+        {
+          "word": "уве́ренность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự tự tin",
+          "example": "Уверенность в разговоре с людьми."
+        },
+        {
+          "word": "продолжа́ть",
+          "gram": "động từ",
+          "meaning": "tiếp tục",
+          "example": "Я продолжаю учиться на уровне A2."
+        }
+      ]
+    }
   ]
 }

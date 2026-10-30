@@ -56,5 +56,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Lời mời dự tiệc tổng kết (Приглашение)",
+      "rows": [
+        {
+          "word": "гость",
+          "gram": "danh từ giống đực",
+          "meaning": "khách mời",
+          "example": "В субботу к нам придут гости."
+        },
+        {
+          "word": "торт",
+          "gram": "danh từ giống đực",
+          "meaning": "bánh ngọt",
+          "example": "Вкусный праздничный торт."
+        },
+        {
+          "word": "ра́дость",
+          "gram": "danh từ giống cái",
+          "meaning": "niềm vui",
+          "example": "Желаю много радости и улыбок."
+        },
+        {
+          "word": "успе́х",
+          "gram": "danh từ giống đực",
+          "meaning": "thành công",
+          "example": "Успехов в изучении русского языка!"
+        }
+      ]
+    }
+  ]
 }

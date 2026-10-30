@@ -28,5 +28,36 @@
       "Thời tiết và cảnh quan thiên nhiên trong mùa đó thay đổi như thế nào?",
       "Bạn thích làm những hoạt động gì nhất trong tiết trời như vậy?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thời tiết và Bốn mùa (Времена года)",
+      "rows": [
+        {
+          "word": "прогно́з",
+          "gram": "danh từ giống đực",
+          "meaning": "dự báo khí tượng",
+          "example": "Точный прогноз погоды на неделю."
+        },
+        {
+          "word": "снегопа́д",
+          "gram": "danh từ giống đực",
+          "meaning": "trận mưa tuyết",
+          "example": "Обильный зимний снегопад в городе."
+        },
+        {
+          "word": "листопа́д",
+          "gram": "danh từ giống đực",
+          "meaning": "mùa lá rụng mùa thu",
+          "example": "Золотой осенний листопад в парке."
+        },
+        {
+          "word": "жара́",
+          "gram": "danh từ giống cái",
+          "meaning": "cái nắng nóng mùa hè",
+          "example": "В июле стояла сильная жара."
+        }
+      ]
+    }
+  ]
 }

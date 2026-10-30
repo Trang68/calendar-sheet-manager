@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Kỳ nghỉ cuối tuần (Выходные)",
+      "rows": [
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ",
+          "meaning": "nghỉ ngơi",
+          "example": "В воскресенье мы отдыхали в парке."
+        },
+        {
+          "word": "прогу́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "chuyến đi dạo",
+          "example": "Пешая прогулка по лесу."
+        },
+        {
+          "word": "пого́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thời tiết",
+          "example": "Погода была великолепной."
+        },
+        {
+          "word": "настрое́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "tâm trạng",
+          "example": "Отличное бодрое настроение."
+        }
+      ]
+    }
   ]
 }

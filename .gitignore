@@ -10,3 +10,5 @@ TEU.pdf
 
 storage/
 data/student_accounts.json
+__pycache__/
+*.pyc

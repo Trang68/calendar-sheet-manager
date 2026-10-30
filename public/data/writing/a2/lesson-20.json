@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Cấu trúc: строго в разрешённые часы, приносим извинения."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Quy định trật tự khu dân cư (Правила дома)",
+      "rows": [
+        {
+          "word": "жиле́ц",
+          "gram": "danh từ giống đực",
+          "meaning": "cư dân trong tòa nhà",
+          "example": "Обращение к уважаемым жильцам дома."
+        },
+        {
+          "word": "ремо́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "công việc sửa chữa",
+          "example": "Шумные ремонтные работы по сборке мебели."
+        },
+        {
+          "word": "тишина́",
+          "gram": "danh từ giống cái",
+          "meaning": "sự yên tĩnh trật tự",
+          "example": "Строгое соблюдение закона о тишине."
+        },
+        {
+          "word": "извине́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lời cáo lỗi",
+          "example": "Приносим извинения за временные неудобства."
+        }
+      ]
+    }
   ]
 }

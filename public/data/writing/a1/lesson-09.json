@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mùa em yêu thích (Время года)",
+      "rows": [
+        {
+          "word": "любо́вь",
+          "gram": "danh từ giống cái",
+          "meaning": "tình yêu, sự yêu thích",
+          "example": "Моя любовь к весне."
+        },
+        {
+          "word": "со́лнце",
+          "gram": "danh từ giống trung",
+          "meaning": "mặt trời",
+          "example": "На небе ярко светит солнце."
+        },
+        {
+          "word": "теплы́нь",
+          "gram": "danh từ giống cái",
+          "meaning": "tiết trời ấm áp",
+          "example": "Летом стоит приятная теплота."
+        },
+        {
+          "word": "приро́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thiên nhiên",
+          "example": "Красота родной природы."
+        }
+      ]
+    }
   ]
 }

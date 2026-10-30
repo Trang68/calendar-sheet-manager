@@ -38,5 +38,36 @@
       "Что вы собираетесь там посмотреть? (Bạn dự định ngắm nhìn những gì?)",
       "Сколько дней продлится поездка? (Chuyến đi kéo dài bao nhiêu ngày?)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Kế hoạch đi nghỉ mát (Отпуск)",
+      "rows": [
+        {
+          "word": "о́тпуск",
+          "gram": "danh từ giống đực",
+          "meaning": "kỳ nghỉ phép",
+          "example": "Долгожданный отпуск на берегу моря."
+        },
+        {
+          "word": "куро́рт",
+          "gram": "danh từ giống đực",
+          "meaning": "khu nghỉ dưỡng",
+          "example": "Популярный горнолыжный курорт."
+        },
+        {
+          "word": "заброни́ровать",
+          "gram": "động từ",
+          "meaning": "đặt chỗ trước",
+          "example": "Забронировать номер с видом на море."
+        },
+        {
+          "word": "путеше́ственник",
+          "gram": "danh từ giống đực",
+          "meaning": "người đi du lịch",
+          "example": "Опытный путешественник знает все тонкости."
+        }
+      ]
+    }
+  ]
 }

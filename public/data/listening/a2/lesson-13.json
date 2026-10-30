@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "Клиент попросил классическую аккуратную форму: короче по бокам и длиннее сверху."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tiệm làm tóc (В парикмахерской)",
+      "rows": [
+        {
+          "word": "стри́жка",
+          "gram": "danh từ giống cái",
+          "meaning": "kiểu tóc, việc cắt tóc",
+          "example": "Модная модельная стрижка."
+        },
+        {
+          "word": "парикма́хер",
+          "gram": "danh từ giống đực",
+          "meaning": "thợ cắt tóc",
+          "example": "Опытный парикмахер-стилист."
+        },
+        {
+          "word": "висо́к",
+          "gram": "danh từ giống đực",
+          "meaning": "phần tóc thái dương",
+          "example": "Сделайте прямые короткие виски."
+        },
+        {
+          "word": "кре́сло",
+          "gram": "danh từ giống trung",
+          "meaning": "chiếc ghế đệm tựa",
+          "example": "Присаживайтесь, пожалуйста, в кресло."
+        }
+      ]
+    }
   ]
 }

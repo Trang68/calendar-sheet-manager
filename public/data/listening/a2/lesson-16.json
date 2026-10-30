@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "Продавец пояснил, что в этой модели ровно семь кукол."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Cửa hàng đồ lưu niệm (Сувениры)",
+      "rows": [
+        {
+          "word": "сувени́р",
+          "gram": "danh từ giống đực",
+          "meaning": "quà lưu niệm",
+          "example": "Традиционный русский сувенир."
+        },
+        {
+          "word": "ручна́я ро́спись",
+          "gram": "cụm danh từ cái",
+          "meaning": "vẽ thủ công mỹ nghệ",
+          "example": "Деревянная шкатулка ручной росписи."
+        },
+        {
+          "word": "сюже́т",
+          "gram": "danh từ giống đực",
+          "meaning": "cốt truyện, tích truyện",
+          "example": "Сюжеты русских народных сказок."
+        },
+        {
+          "word": "упакова́ть",
+          "gram": "động từ",
+          "meaning": "đóng gói hộp",
+          "example": "Упаковать подарок в красивую бумагу."
+        }
+      ]
+    }
   ]
 }

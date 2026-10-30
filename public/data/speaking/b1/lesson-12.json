@@ -28,5 +28,36 @@
       "Khác biệt về quan niệm đúng giờ, cách thể hiện cảm xúc nơi công cộng.",
       "Lời khuyên thiết thực cho một du học sinh mới đặt chân tới nước bạn."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Hòa nhập và Sốc văn hóa (Адаптация)",
+      "rows": [
+        {
+          "word": "культу́рный шок",
+          "gram": "cụm danh từ đực",
+          "meaning": "cú sốc văn hóa tiếp xúc môi trường mới",
+          "example": "С культурным шоком сталкивается большинство иностранных студентов."
+        },
+        {
+          "word": "менталите́т",
+          "gram": "danh từ giống đực",
+          "meaning": "tâm thức dân tộc, nếp nghĩ",
+          "example": "Понимание местного менталитета облегчает коммуникацию."
+        },
+        {
+          "word": "интегра́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "quá trình hội nhập cộng đồng",
+          "example": "Участие в университетских клубах ускоряет интеграцию."
+        },
+        {
+          "word": "обы́чай",
+          "gram": "danh từ giống đực",
+          "meaning": "phong tục tập quán",
+          "example": "Уважение к местным обычаям вызывает ответную доброжелательность."
+        }
+      ]
+    }
+  ]
 }

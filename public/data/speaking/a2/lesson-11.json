@@ -28,5 +28,36 @@
       "Mọi người chuẩn bị những món ăn truyền thống gì đặc biệt?",
       "Không khí đón chào khoảnh khắc giao thừa diễn ra như thế nào?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "So sánh ngày lễ văn hóa (Праздники)",
+      "rows": [
+        {
+          "word": "обы́чай",
+          "gram": "danh từ giống đực",
+          "meaning": "phong tục tập quán",
+          "example": "Древние народные обычаи празднования."
+        },
+        {
+          "word": "символизи́ровать",
+          "gram": "động từ",
+          "meaning": "tượng trưng cho",
+          "example": "Круглый блин символизирует весеннее солнце."
+        },
+        {
+          "word": "салю́т",
+          "gram": "danh từ giống đực",
+          "meaning": "pháo hoa rực rỡ",
+          "example": "Праздничный фейерверк озарил ночное небо."
+        },
+        {
+          "word": "едине́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự gắn kết đồng lòng",
+          "example": "Чувство всеобщего духовного единения."
+        }
+      ]
+    }
+  ]
 }

@@ -28,5 +28,36 @@
       "Nó có tính cách và thói quen ngộ nghĩnh gì đặc biệt?",
       "Bạn hoặc chủ nhân chăm sóc nó hàng ngày như thế nào?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thú cưng trong đô thị (Животные)",
+      "rows": [
+        {
+          "word": "пито́мец",
+          "gram": "danh từ giống đực",
+          "meaning": "vật nuôi trong nhà",
+          "example": "Забота о любимом домашнем питомце."
+        },
+        {
+          "word": "поводо́к",
+          "gram": "danh từ giống đực",
+          "meaning": "dây dắt chó đi dạo",
+          "example": "Выгуливать собаку строго на поводке."
+        },
+        {
+          "word": "пре́данность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự trung thành tận tụy",
+          "example": "Собачья верность и безграничная преданность."
+        },
+        {
+          "word": "ветерина́р",
+          "gram": "danh từ giống đực",
+          "meaning": "bác sĩ thú y",
+          "example": "Регулярный осмотр животного у ветеринара."
+        }
+      ]
+    }
+  ]
 }

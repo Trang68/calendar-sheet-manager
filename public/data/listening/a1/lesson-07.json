@@ -262,5 +262,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Ngày mai.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nhà ga xe lửa (На вокзале)",
+      "rows": [
+        {
+          "word": "вокза́л",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà ga đường sắt",
+          "example": "Поезд прибывает на вокзал."
+        },
+        {
+          "word": "по́езд",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyến tàu hỏa",
+          "example": "Скорый поезд до Санкт-Петербурга."
+        },
+        {
+          "word": "биле́т",
+          "gram": "danh từ giống đực",
+          "meaning": "vé tàu",
+          "example": "Один билет до Москвы, пожалуйста."
+        },
+        {
+          "word": "платфо́рма",
+          "gram": "danh từ giống cái",
+          "meaning": "sân ga, ke ga",
+          "example": "Поезд стоит на второй платформе."
+        }
+      ]
+    }
   ]
 }

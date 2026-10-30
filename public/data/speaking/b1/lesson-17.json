@@ -28,5 +28,36 @@
       "Mối liên hệ mật thiết giữa giấc ngủ, sự bình an trong tâm hồn và thể chất.",
       "Bí quyết để duy trì lối sống lành mạnh một cách bền bỉ không gượng ép."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Chăm sóc sức khỏe chủ động (ЗОЖ)",
+      "rows": [
+        {
+          "word": "здоро́вый о́браз жи́зни",
+          "gram": "cụm danh từ đực",
+          "meaning": "lối sống lành mạnh (viết tắt ЗОЖ)",
+          "example": "Здоровый образ жизни включает правильное питание и спорт."
+        },
+        {
+          "word": "привы́чка",
+          "gram": "danh từ giống cái",
+          "meaning": "thói quen hàng ngày",
+          "example": "Полезная привычка пить чистую воду укрепляет организм."
+        },
+        {
+          "word": "пита́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "chế độ dinh dưỡng ăn uống",
+          "example": "Сбалансированное питание даёт энергию на весь рабочий день."
+        },
+        {
+          "word": "бала́нс",
+          "gram": "danh từ giống đực",
+          "meaning": "sự cân bằng giữa công việc và nghỉ ngơi",
+          "example": "Очень важно соблюдать баланс между учёбой и отдыхом."
+        }
+      ]
+    }
+  ]
 }

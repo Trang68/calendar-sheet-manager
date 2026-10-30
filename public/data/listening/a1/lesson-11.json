@@ -250,5 +250,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Mặc ấm khi ra ngoài.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thời tiết (Погода)",
+      "rows": [
+        {
+          "word": "пого́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thời tiết",
+          "example": "Сегодня отличная солнечная погода."
+        },
+        {
+          "word": "снег",
+          "gram": "danh từ giống đực",
+          "meaning": "tuyết",
+          "example": "На улице идёт пушистый снег."
+        },
+        {
+          "word": "моро́з",
+          "gram": "danh từ giống đực",
+          "meaning": "giá rét",
+          "example": "Зимой в Москве бывает сильный мороз."
+        },
+        {
+          "word": "гра́дус",
+          "gram": "danh từ giống đực",
+          "meaning": "độ C",
+          "example": "Сейчас минус пять градусов."
+        }
+      ]
+    }
   ]
 }

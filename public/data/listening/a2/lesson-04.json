@@ -74,5 +74,36 @@
       "ans": "B",
       "explain": "Пассажир выбрал ночной поезд и нижнюю полку в купейном вагоне."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mua vé tàu hỏa (Покупка билета)",
+      "rows": [
+        {
+          "word": "купе́",
+          "gram": "danh từ không đổi",
+          "meaning": "khoang nằm 4 giường có cửa",
+          "example": "Билет в четырёхместное купе."
+        },
+        {
+          "word": "по́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "giường nằm trên toa tàu",
+          "example": "Нижняя полка гораздо удобнее верхней."
+        },
+        {
+          "word": "ско́рый",
+          "gram": "tính từ",
+          "meaning": "chạy nhanh, tốc hành",
+          "example": "Скорый поезд «Сапсан» доставит за 4 часа."
+        },
+        {
+          "word": "сто́имость",
+          "gram": "danh từ giống cái",
+          "meaning": "giá thành, chi phí",
+          "example": "Стоимость включает комплект белья."
+        }
+      ]
+    }
   ]
 }

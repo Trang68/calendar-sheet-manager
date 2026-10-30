@@ -52,5 +52,36 @@
       "Где находится лифт? (Thang máy nằm ở đâu?)",
       "Спасибо за теплый приём! (Cảm ơn vì sự đón tiếp nồng hậu!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Nhận phòng khách sạn (Гостиница)",
+      "rows": [
+        {
+          "word": "администра́тор",
+          "gram": "danh từ giống đực",
+          "meaning": "lễ tân",
+          "example": "Администратор проверил паспорт."
+        },
+        {
+          "word": "одноме́стный",
+          "gram": "tính từ",
+          "meaning": "phòng đơn",
+          "example": "Мне нужен одноместный номер."
+        },
+        {
+          "word": "эта́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "tầng lầu",
+          "example": "На каком этаже номер?"
+        },
+        {
+          "word": "вайфа́й",
+          "gram": "danh từ giống đực",
+          "meaning": "mạng Wi-Fi",
+          "example": "Какой пароль от Wi-Fi?"
+        }
+      ]
+    }
+  ]
 }

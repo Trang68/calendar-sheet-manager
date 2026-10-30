@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Chuyến đi xa (Путешествие)",
+      "rows": [
+        {
+          "word": "поездка",
+          "gram": "danh từ giống cái",
+          "meaning": "chuyến đi",
+          "example": "Незабываемая поездка в Петербург."
+        },
+        {
+          "word": "па́мятник",
+          "gram": "danh từ giống đực",
+          "meaning": "đài tưởng niệm, tượng đài",
+          "example": "Знаменитый памятник Петру I."
+        },
+        {
+          "word": "красота́",
+          "gram": "danh từ giống cái",
+          "meaning": "vẻ đẹp",
+          "example": "Красота старинных дворцов."
+        },
+        {
+          "word": "впечатле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "ấn tượng",
+          "example": "Много ярких впечатлений."
+        }
+      ]
+    }
   ]
 }

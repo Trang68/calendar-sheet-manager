@@ -49,5 +49,36 @@
       "criteria": "Vốn từ vựng TRKI-1",
       "desc": "Vốn từ phong phú, đạt số lượng từ yêu cầu từ 130 đến 160 từ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận xã hội mạng (Социальные сети)",
+      "rows": [
+        {
+          "word": "социа́льные се́ти",
+          "gram": "danh từ số nhiều",
+          "meaning": "các mạng xã hội trực tuyến",
+          "example": "Социальные сети стали основным каналом получения новостей для молодёжи."
+        },
+        {
+          "word": "зави́симость",
+          "gram": "danh từ giống cái",
+          "meaning": "sự lệ thuộc, thói nghiện ngập",
+          "example": "Психологи предупреждают об опасности цифровой зависимости."
+        },
+        {
+          "word": "виртуа́льное обще́ние",
+          "gram": "cụm danh từ trung",
+          "meaning": "giao lưu thế giới ảo",
+          "example": "Виртуальное общение не может полностью заменить живые встречи."
+        },
+        {
+          "word": "ко́нтент",
+          "gram": "danh từ giống đực",
+          "meaning": "nội dung số truyền thông",
+          "example": "Качественный образовательный контент привлекает миллионы подписчиков."
+        }
+      ]
+    }
   ]
 }

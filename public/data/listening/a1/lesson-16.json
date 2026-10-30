@@ -250,5 +250,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Cần thắt dây an toàn.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Gọi xe Taxi (В такси)",
+      "rows": [
+        {
+          "word": "такси́",
+          "gram": "danh từ không đổi",
+          "meaning": "xe taxi",
+          "example": "Я вызвал такси через приложение."
+        },
+        {
+          "word": "води́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "bác tài, người lái",
+          "example": "Водитель знает короткую дорогу."
+        },
+        {
+          "word": "центр",
+          "gram": "danh từ giống đực",
+          "meaning": "trung tâm",
+          "example": "Сколько стоит доехать в центр?"
+        },
+        {
+          "word": "про́бка",
+          "gram": "danh từ giống cái",
+          "meaning": "tắc đường",
+          "example": "На кольцевой дороге большая пробка."
+        }
+      ]
+    }
   ]
 }

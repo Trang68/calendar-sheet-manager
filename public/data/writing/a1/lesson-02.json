@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tả gia đình thân yêu (Моя семья)",
+      "rows": [
+        {
+          "word": "роди́тели",
+          "gram": "danh từ số nhiều",
+          "meaning": "bố mẹ",
+          "example": "Мои родители добрые и заботливые."
+        },
+        {
+          "word": "рабо́тать",
+          "gram": "động từ",
+          "meaning": "làm việc",
+          "example": "Отец работает в банке."
+        },
+        {
+          "word": "шко́ла",
+          "gram": "danh từ giống cái",
+          "meaning": "trường học",
+          "example": "Сестра учится в школе."
+        },
+        {
+          "word": "вме́сте",
+          "gram": "phó từ",
+          "meaning": "cùng nhau",
+          "example": "Мы часто проводим время вместе."
+        }
+      ]
+    }
   ]
 }

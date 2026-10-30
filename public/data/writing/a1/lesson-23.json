@@ -36,5 +36,36 @@
       "criteria": "Tính chính xác thông tin",
       "desc": "Cung cấp đầy đủ các trường thông tin theo yêu cầu."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mẩu ghi chú ngắn (Записка)",
+      "rows": [
+        {
+          "word": "запи́ска",
+          "gram": "danh từ giống cái",
+          "meaning": "mẩu giấy nhắn",
+          "example": "Я оставил записку на столе."
+        },
+        {
+          "word": "магази́н",
+          "gram": "danh từ giống đực",
+          "meaning": "cửa hàng",
+          "example": "Я ушёл в магазин за хлебом."
+        },
+        {
+          "word": "ско́ро",
+          "gram": "phó từ",
+          "meaning": "sớm, nhanh chóng",
+          "example": "Я скоро вернусь домой."
+        },
+        {
+          "word": "ключи́",
+          "gram": "danh từ số nhiều",
+          "meaning": "chùm chìa khóa",
+          "example": "Ключи лежат на полке в прихожей."
+        }
+      ]
+    }
   ]
 }

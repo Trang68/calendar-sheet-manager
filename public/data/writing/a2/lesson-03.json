@@ -49,5 +49,36 @@
       "criteria": "Độ dài & Ngữ pháp",
       "desc": "Đạt số lượng từ yêu cầu, sử dụng đúng các thì của động từ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tiểu luận về mùa yêu thích (Время года)",
+      "rows": [
+        {
+          "word": "люби́мый",
+          "gram": "tính từ",
+          "meaning": "yêu thích nhất",
+          "example": "Моё любимое время года — золотая осень."
+        },
+        {
+          "word": "приро́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thiên nhiên cây cỏ",
+          "example": "Природа преображается и радует глаз."
+        },
+        {
+          "word": "прогу́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "chuyến tản bộ",
+          "example": "Долгие пешие прогулки по тихому парку."
+        },
+        {
+          "word": "вдохновля́ть",
+          "gram": "động từ",
+          "meaning": "truyền cảm hứng",
+          "example": "Красота природы вдохновляет поэтов и художников."
+        }
+      ]
+    }
   ]
 }

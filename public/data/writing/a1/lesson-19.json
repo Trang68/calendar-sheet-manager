@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thiệp chúc Tết (Новый год)",
+      "rows": [
+        {
+          "word": "новогодний",
+          "gram": "tính từ",
+          "meaning": "thuộc về năm mới",
+          "example": "Новогоднее поздравление другу."
+        },
+        {
+          "word": "жела́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "điều ước",
+          "example": "Пусть все твои желания сбудутся!"
+        },
+        {
+          "word": "чу́до",
+          "gram": "danh từ giống trung",
+          "meaning": "điều kỳ diệu",
+          "example": "Вера в новогоднее чудо."
+        },
+        {
+          "word": "улы́бка",
+          "gram": "danh từ giống cái",
+          "meaning": "nụ cười",
+          "example": "Много улыбок и тепла в новом году."
+        }
+      ]
+    }
   ]
 }

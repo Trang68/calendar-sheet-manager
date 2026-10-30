@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Ресторан дарит десерт и 10% скидку именинникам."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đặt tiệc sinh nhật (День рождения)",
+      "rows": [
+        {
+          "word": "имени́нник",
+          "gram": "danh từ giống đực",
+          "meaning": "chủ nhân bữa tiệc sinh nhật",
+          "example": "Поздравления и подарки для именинника."
+        },
+        {
+          "word": "десе́рт",
+          "gram": "danh từ giống đực",
+          "meaning": "món tráng miệng ngọt",
+          "example": "Праздничный десерт со свечами."
+        },
+        {
+          "word": "ски́дка",
+          "gram": "danh từ giống cái",
+          "meaning": "mức chiết khấu giảm giá",
+          "example": "Скидка десять процентов в честь праздника."
+        },
+        {
+          "word": "хо́стес",
+          "gram": "danh từ giống cái",
+          "meaning": "nhân viên tiếp đón nhà hàng",
+          "example": "Хостес проводила гостей к столику."
+        }
+      ]
+    }
   ]
 }

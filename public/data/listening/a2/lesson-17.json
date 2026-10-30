@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "Консультант направил покупателя на второй этаж в секцию 12."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mua giáo trình tiếng Nga (Книжный магазин)",
+      "rows": [
+        {
+          "word": "уче́бник",
+          "gram": "danh từ giống đực",
+          "meaning": "sách giáo khoa, giáo trình",
+          "example": "Учебник русского языка для иностранцев."
+        },
+        {
+          "word": "отде́л",
+          "gram": "danh từ giống đực",
+          "meaning": "quầy hàng, phân khu",
+          "example": "Отдел иностранной литературы."
+        },
+        {
+          "word": "се́кция",
+          "gram": "danh từ giống cái",
+          "meaning": "gian hàng, dãy quầy",
+          "example": "Секция учебных пособий на втором этаже."
+        },
+        {
+          "word": "сбо́рник",
+          "gram": "danh từ giống đực",
+          "meaning": "tập hợp bài tập",
+          "example": "Сборник упражнений по грамматике."
+        }
+      ]
+    }
   ]
 }

@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Tiêu đề ấn tượng, có chữ ký đại diện cộng đồng."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư ngỏ bảo vệ di tích (Памятник архитектуры)",
+      "rows": [
+        {
+          "word": "па́мятник архитекту́ры",
+          "gram": "cụm danh từ đực",
+          "meaning": "di tích công trình kiến trúc lịch sử",
+          "example": "Деревянная усадьба XIX века признана ценным памятником архитектуры."
+        },
+        {
+          "word": "истори́ческий о́блик",
+          "gram": "cụm danh từ đực",
+          "meaning": "diện mạo lịch sử cổ kính",
+          "example": "Реконструкция должна сохранить уникальный исторический облик здания."
+        },
+        {
+          "word": "реставра́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "công tác trùng tu tôn tạo",
+          "example": "Для спасения старинного особняка требуется бережная научная реставрация."
+        },
+        {
+          "word": "обще́ственность",
+          "gram": "danh từ giống cái",
+          "meaning": "dư luận quần chúng nhân dân",
+          "example": "Городская общественность выступила против сноса исторического квартала."
+        }
+      ]
+    }
   ]
 }

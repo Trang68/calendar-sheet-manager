@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Водитель сообщил: пробил переднее правое колесо."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Sửa chữa ô tô (Автосервис)",
+      "rows": [
+        {
+          "word": "автосе́рвис",
+          "gram": "danh từ giống đực",
+          "meaning": "tiệm bảo dưỡng sửa xe",
+          "example": "Заехать на станцию техобслуживания."
+        },
+        {
+          "word": "колесо́",
+          "gram": "danh từ giống trung",
+          "meaning": "bánh xe ô tô",
+          "example": "Замена переднего правого колеса."
+        },
+        {
+          "word": "проби́ть",
+          "gram": "động từ",
+          "meaning": "làm thủng, dập xẹp",
+          "example": "Водитель пробил колесо на трассе."
+        },
+        {
+          "word": "подъёмник",
+          "gram": "danh từ giống đực",
+          "meaning": "cầu nâng xe cơ giới",
+          "example": "Загнать автомобиль на подъёмник."
+        }
+      ]
+    }
   ]
 }

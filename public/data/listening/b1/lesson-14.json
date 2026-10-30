@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Командир корабля сообщил о плане провести более 40 экспериментов."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Chuyến bay vũ trụ (МКС)",
+      "rows": [
+        {
+          "word": "раке́та-носи́тель",
+          "gram": "danh từ giống cái",
+          "meaning": "tên lửa đẩy mang tải",
+          "example": "Ракета-носитель «Союз» стартовала точно по графику."
+        },
+        {
+          "word": "космодро́м",
+          "gram": "danh từ giống đực",
+          "meaning": "sân bay vũ trụ",
+          "example": "С космодрома Байконур отправляются международные миссии."
+        },
+        {
+          "word": "стыко́вка",
+          "gram": "danh từ giống cái",
+          "meaning": "sự kết nối ghép nối ngoài không gian",
+          "example": "Автоматическая стыковка с МКС прошла успешно."
+        },
+        {
+          "word": "экипа́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "phi hành đoàn",
+          "example": "Экипаж космического корабля состоит из трёх космонавтов."
+        }
+      ]
+    }
   ]
 }

@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Món ăn yêu thích (Любимое блюдо)",
+      "rows": [
+        {
+          "word": "блю́до",
+          "gram": "danh từ giống trung",
+          "meaning": "món ăn",
+          "example": "Моё любимое блюдо — суп фо."
+        },
+        {
+          "word": "мя́со",
+          "gram": "danh từ giống trung",
+          "meaning": "thịt",
+          "example": "Суп с говяжьим мясом."
+        },
+        {
+          "word": "вку́сный",
+          "gram": "tính từ",
+          "meaning": "ngon miệng",
+          "example": "Очень вкусный и ароматный суп."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ",
+          "meaning": "nấu ăn",
+          "example": "Мама вкусно готовит обед."
+        }
+      ]
+    }
   ]
 }

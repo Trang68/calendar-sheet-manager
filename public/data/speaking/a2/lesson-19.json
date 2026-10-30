@@ -28,5 +28,36 @@
       "Thứ Bảy bạn thường làm những việc gì?",
       "Chủ nhật bạn chuẩn bị tâm lý và năng lượng cho tuần mới ra sao?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Hai ngày cuối tuần (Выходные дни)",
+      "rows": [
+        {
+          "word": "восстановле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "phục hồi thể lực",
+          "example": "Выходные нужны для восстановления сил."
+        },
+        {
+          "word": "обще́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "giao tiếp trò chuyện",
+          "example": "Живое общение в кругу близких людей."
+        },
+        {
+          "word": "суета́",
+          "gram": "danh từ giống cái",
+          "meaning": "sự hối hả ồn ào đô thị",
+          "example": "Отдохнуть от повседневной городской суеты."
+        },
+        {
+          "word": "энергия",
+          "gram": "danh từ giống cái",
+          "meaning": "năng lượng tươi mới",
+          "example": "Зарядиться бодростью и позитивной энергией."
+        }
+      ]
+    }
+  ]
 }

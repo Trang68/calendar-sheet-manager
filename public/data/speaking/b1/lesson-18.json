@@ -28,5 +28,36 @@
       "Các phong tục, nghi lễ và biểu tượng đặc trưng gắn liền với ngày này.",
       "Thông điệp nhân văn nào của ngày lễ này có sức lay động trái tim bạn?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Phong tục & Ngày lễ truyền thống (Русские праздники)",
+      "rows": [
+        {
+          "word": "пра́зднование",
+          "gram": "danh từ giống trung",
+          "meaning": "sự chào mừng lễ kỷ niệm",
+          "example": "Празднование Нового года в России наполнено теплом и волшебством."
+        },
+        {
+          "word": "духо́вный смысл",
+          "gram": "cụm danh từ đực",
+          "meaning": "ý nghĩa thiêng liêng tâm linh",
+          "example": "Пасха и Рождество имеют глубокий духовный смысл для верующих."
+        },
+        {
+          "word": "обря́д",
+          "gram": "danh từ giống đực",
+          "meaning": "nghi thức, nghi lễ truyền thống",
+          "example": "На Масленицу соблюдаются старинные обряды проводов зимы."
+        },
+        {
+          "word": "этике́т",
+          "gram": "danh từ giống đực",
+          "meaning": "quy tắc phép lịch sự xã giao",
+          "example": "Знание праздничного этикета помогает чувствовать себя уверенно в гостях."
+        }
+      ]
+    }
+  ]
 }

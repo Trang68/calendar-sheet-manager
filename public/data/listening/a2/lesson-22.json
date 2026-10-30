@@ -64,5 +64,36 @@
       "ans": "A",
       "explain": "В заказе были традиционные русские блюда: пельмени, борщ и ягодный морс."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Giao đồ ăn tận nhà (Доставка)",
+      "rows": [
+        {
+          "word": "курье́р",
+          "gram": "danh từ giống đực",
+          "meaning": "người giao hàng (shipper)",
+          "example": "Курьер доставит заказ в термосумке."
+        },
+        {
+          "word": "домофо́н",
+          "gram": "danh từ giống đực",
+          "meaning": "chuông cửa căn hộ có mã",
+          "example": "Назовите номер квартиры и код домофона."
+        },
+        {
+          "word": "подтверди́ть",
+          "gram": "động từ",
+          "meaning": "xác nhận đơn hàng",
+          "example": "Подтвердить адрес доставки по телефону."
+        },
+        {
+          "word": "порция",
+          "gram": "danh từ giống cái",
+          "meaning": "suất ăn, khẩu phần",
+          "example": "Две порции горячих пельменей."
+        }
+      ]
+    }
   ]
 }

@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Phân từ, giới từ quản cách, từ nối chuyển đoạn chuẩn xác."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư trao đổi hội thảo (Письмо-запрос)",
+      "rows": [
+        {
+          "word": "оргкомите́т",
+          "gram": "danh từ giống đực",
+          "meaning": "ban tổ chức hội nghị khoa học",
+          "example": "Письмо адресовано в оргкомитет международной конференции."
+        },
+        {
+          "word": "регла́мент",
+          "gram": "danh từ giống đực",
+          "meaning": "quy chế, thời lượng quy định",
+          "example": "Регламент устного доклада составляет пятнадцать минут."
+        },
+        {
+          "word": "докла́д",
+          "gram": "danh từ giống đực",
+          "meaning": "bài báo cáo tham luận khoa học",
+          "example": "Тема научного доклада посвящена современным методам преподавания."
+        },
+        {
+          "word": "уча́стие",
+          "gram": "danh từ giống trung",
+          "meaning": "sự tham gia dự thính",
+          "example": "Для подтверждения участия просим прислать тезисы до конца месяца."
+        }
+      ]
+    }
   ]
 }

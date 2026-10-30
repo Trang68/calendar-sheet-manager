@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Dự báo thời tiết (Погода)",
+      "rows": [
+        {
+          "word": "дождь",
+          "gram": "danh từ giống đực",
+          "meaning": "cơn mưa",
+          "example": "На улице идёт осенний дождь."
+        },
+        {
+          "word": "зонт",
+          "gram": "danh từ giống đực",
+          "meaning": "cái ô, chiếc dù",
+          "example": "Не забудь взять с собой зонт."
+        },
+        {
+          "word": "хо́лодно",
+          "gram": "phó từ",
+          "meaning": "lạnh lẽo",
+          "example": "Сегодня на улице очень холодно."
+        },
+        {
+          "word": "тепло́",
+          "gram": "phó từ",
+          "meaning": "ấm áp",
+          "example": "В комнате уютно и тепло."
+        }
+      ]
+    }
   ]
 }

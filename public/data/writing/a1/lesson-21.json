@@ -45,5 +45,36 @@
       "criteria": "Ngữ pháp A1",
       "desc": "Đúng thì quá khứ và mệnh lệnh thức."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thiệp chúc Tết ngắn (Открытка)",
+      "rows": [
+        {
+          "word": "наступа́ющий",
+          "gram": "tính từ",
+          "meaning": "sắp đến (năm mới)",
+          "example": "С наступающим Новым годом!"
+        },
+        {
+          "word": "здоро́вье",
+          "gram": "danh từ giống trung",
+          "meaning": "sức khỏe dồi dào",
+          "example": "Крепкого здоровья тебе и близким."
+        },
+        {
+          "word": "добра́",
+          "gram": "danh từ giống trung",
+          "meaning": "điều thiện lành",
+          "example": "Мира, добра и благополучия."
+        },
+        {
+          "word": "искренне",
+          "gram": "phó từ",
+          "meaning": "chân thành",
+          "example": "Искренне твой друг Нам."
+        }
+      ]
+    }
   ]
 }

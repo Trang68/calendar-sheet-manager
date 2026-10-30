@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Có thông tin liên hệ, hòm thư và số điện thoại cấp thẻ tác nghiệp."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thông cáo báo chí thiện nguyện (Пресс-релиз)",
+      "rows": [
+        {
+          "word": "пресс-рели́з",
+          "gram": "danh từ giống đực",
+          "meaning": "thông cáo báo chí gửi phóng viên",
+          "example": "Пресс-релиз благотворительного фонда был разослан ведущим СМИ города."
+        },
+        {
+          "word": "спо́нсор",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà tài trợ hỗ trợ tài chính",
+          "example": "Генеральный спонсор удвоил сумму всех собранных средств."
+        },
+        {
+          "word": "сбор средств",
+          "gram": "cụm danh từ đực",
+          "meaning": "chiến dịch quyên góp tiền thiện nguyện",
+          "example": "Сбор средств на реставрацию старинной библиотеки успешно завершён."
+        },
+        {
+          "word": "акция",
+          "gram": "danh từ giống cái",
+          "meaning": "hoạt động phong trào quy mô",
+          "example": "В благотворительной культурной акции приняли участие сотни волонтёров."
+        }
+      ]
+    }
   ]
 }

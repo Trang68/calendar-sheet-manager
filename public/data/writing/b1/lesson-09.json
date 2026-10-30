@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Câu văn giàu nhịp điệu, lay động tâm can người đọc."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận Con người và Thiên nhiên (Человек и природа)",
+      "rows": [
+        {
+          "word": "экологи́ческий кри́зис",
+          "gram": "cụm danh từ đực",
+          "meaning": "cuộc khủng hoảng sinh thái toàn cầu",
+          "example": "Преодоление экологического кризиса требует совместных усилий всех стран."
+        },
+        {
+          "word": "сосуществова́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự chung sống hòa bình cộng sinh",
+          "example": "Гармоничное сосуществование человека и природы — цель устойчивого развития."
+        },
+        {
+          "word": "потребле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "tiêu dùng xả thải phung phí",
+          "example": "Разумное ограничение потребления сохраняет природные богатства."
+        },
+        {
+          "word": "равнове́сие",
+          "gram": "danh từ giống trung",
+          "meaning": "trạng thái cân bằng sinh thái",
+          "example": "Нарушение природного равновесия влечёт необратимые последствия."
+        }
+      ]
+    }
   ]
 }

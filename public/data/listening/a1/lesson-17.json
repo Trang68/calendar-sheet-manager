@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Bánh kếp blini với mật ong.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nhà hàng món Nga (В ресторане)",
+      "rows": [
+        {
+          "word": "рестора́н",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà hàng",
+          "example": "Уютный ресторан русской кухни."
+        },
+        {
+          "word": "борщ",
+          "gram": "danh từ giống đực",
+          "meaning": "súp củ dền borscht",
+          "example": "Горячий борщ со сметаной."
+        },
+        {
+          "word": "пельме́ни",
+          "gram": "danh từ số nhiều",
+          "meaning": "bánh sủi cảo Nga",
+          "example": "Порция домашних пельменей."
+        },
+        {
+          "word": "официант",
+          "gram": "danh từ giống đực",
+          "meaning": "bồi bàn, phục vụ",
+          "example": "Официант принял наш заказ."
+        }
+      ]
+    }
   ]
 }

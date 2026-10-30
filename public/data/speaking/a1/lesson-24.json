@@ -30,5 +30,36 @@
       "Днём мы будем...",
       "В воскресенье вечером я..."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Kế hoạch cuối tuần (Выходные)",
+      "rows": [
+        {
+          "word": "суббо́та",
+          "gram": "danh từ giống cái",
+          "meaning": "thứ Bảy",
+          "example": "В субботу мы идём в кино."
+        },
+        {
+          "word": "воскресе́нье",
+          "gram": "danh từ giống trung",
+          "meaning": "Chủ nhật",
+          "example": "В воскресенье я отдыхаю дома."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ",
+          "meaning": "đi dạo",
+          "example": "Гулять в парке с друзьями."
+        },
+        {
+          "word": "план",
+          "gram": "danh từ giống đực",
+          "meaning": "kế hoạch",
+          "example": "Какие у тебя планы на вечер?"
+        }
+      ]
+    }
+  ]
 }

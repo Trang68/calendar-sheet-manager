@@ -28,5 +28,36 @@
       "Những hiểm họa khôn lường nếu công nghệ bị lạm dụng vào mục đích phi nhân tính.",
       "Trách nhiệm lương tâm của nhà khoa học trước các phát minh của chính mình."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đạo đức nghiên cứu khoa học (Наука и этика)",
+      "rows": [
+        {
+          "word": "нау́чная э́тика",
+          "gram": "cụm danh từ cái",
+          "meaning": "đạo đức học thuật và nghiên cứu",
+          "example": "Научная этика запрещает фальсификацию результатов экспериментов."
+        },
+        {
+          "word": "клони́рование",
+          "gram": "danh từ giống trung",
+          "meaning": "nhân bản vô tính",
+          "example": "Вопрос клонирования человека вызывает бурные этические дискуссии."
+        },
+        {
+          "word": "гене́тика",
+          "gram": "danh từ giống cái",
+          "meaning": "di truyền học",
+          "example": "Открытия в генетике позволяют лечить наследственные заболевания."
+        },
+        {
+          "word": "гра́ницы",
+          "gram": "danh từ số nhiều",
+          "meaning": "ranh giới, giới hạn chuẩn mực",
+          "example": "Учёные обязаны осознавать границы допустимого вмешательства в природу."
+        }
+      ]
+    }
+  ]
 }

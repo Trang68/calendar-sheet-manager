@@ -28,5 +28,36 @@
       "Tại sao sự kết hợp giữa kiến thức chuyên môn và kỹ năng giao tiếp lại quyết định thành công?",
       "Bạn đang tự rèn luyện những kỹ năng nào ngay từ hôm nay?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Năng lực nghề nghiệp tương lai (Навыки будущего)",
+      "rows": [
+        {
+          "word": "ги́бкие на́выки",
+          "gram": "danh từ số nhiều",
+          "meaning": "kỹ năng mềm (soft skills)",
+          "example": "Гибкие навыки становятся определяющим фактором при найме сотрудников."
+        },
+        {
+          "word": "адапти́вность",
+          "gram": "danh từ giống cái",
+          "meaning": "khả năng thích ứng linh hoạt",
+          "example": "Адаптивность помогает быстро осваивать новые профессии."
+        },
+        {
+          "word": "цифровиза́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "quá trình số hóa kinh tế",
+          "example": "Цифровизация меняет требования к современным специалистам."
+        },
+        {
+          "word": "востре́бованность",
+          "gram": "danh từ giống cái",
+          "meaning": "nhu cầu săn đón, sức hút thị trường",
+          "example": "Специалисты по искусственному интеллекту имеют высокую востребованность."
+        }
+      ]
+    }
+  ]
 }

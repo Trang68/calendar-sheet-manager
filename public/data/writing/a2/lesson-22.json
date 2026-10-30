@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Trình tự chuyến đi hấp dẫn, giàu cảm xúc."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Chuyến tham quan di tích lịch sử (Экскурсия)",
+      "rows": [
+        {
+          "word": "экску́рсия",
+          "gram": "danh từ giống cái",
+          "meaning": "chuyến tham quan học tập",
+          "example": "Автобусная экскурсия в древний Суздаль."
+        },
+        {
+          "word": "белока́менный",
+          "gram": "tính từ",
+          "meaning": "xây bằng đá trắng",
+          "example": "Белокаменные старинные храмы и монастыри."
+        },
+        {
+          "word": "легенда",
+          "gram": "danh từ giống cái",
+          "meaning": "huyền thoại truyền thuyết",
+          "example": "Экскурсовод рассказал много древних легенд."
+        },
+        {
+          "word": "исто́рия",
+          "gram": "danh từ giống cái",
+          "meaning": "lịch sử hào hùng",
+          "example": "Прикоснуться к живой русской истории."
+        }
+      ]
+    }
   ]
 }

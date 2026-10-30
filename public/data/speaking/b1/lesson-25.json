@@ -28,5 +28,36 @@
       "Sự tự tin hiện tại của bạn khi tranh luận, thuyết trình và viết bài luận học thuật.",
       "Cam kết tiếp tục rèn luyện để bước lên đỉnh cao B2 và cống hiến cho tình hữu nghị hai nước."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Diễn văn bế giảng TRKI-1 (Выпускная речь)",
+      "rows": [
+        {
+          "word": "достиже́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thành quả đạt được",
+          "example": "Успешная сдача уровня B1 — наше общее гордое достижение."
+        },
+        {
+          "word": "горизо́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "chân trời mới, tầm nhìn tương lai",
+          "example": "Русский язык открывает перед нами новые широкие горизонты."
+        },
+        {
+          "word": "выпускни́к",
+          "gram": "danh từ giống đực",
+          "meaning": "học viên tốt nghiệp khóa học",
+          "example": "Каждый выпускник получил государственный сертификат."
+        },
+        {
+          "word": "упо́рный труд",
+          "gram": "cụm danh từ đực",
+          "meaning": "sự nỗ lực lao động miệt mài",
+          "example": "Благодаря упорному труду мы овладели сложными грамматическими конструкциями."
+        }
+      ]
+    }
+  ]
 }

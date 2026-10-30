@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Ольга вызвалась испечь пирог и взять термос с горячим чаем."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Kế hoạch dã ngoại (Пикник)",
+      "rows": [
+        {
+          "word": "пикни́к",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyến dã ngoại ăn uống",
+          "example": "Устроить пикник на поляне в парке."
+        },
+        {
+          "word": "сино́птики",
+          "gram": "danh từ số nhiều",
+          "meaning": "các chuyên gia dự báo thời tiết",
+          "example": "Синоптики обещают солнце без осадков."
+        },
+        {
+          "word": "пиро́г",
+          "gram": "danh từ giống đực",
+          "meaning": "bánh nướng có nhân",
+          "example": "Домашний яблочный пирог с корицей."
+        },
+        {
+          "word": "те́рмос",
+          "gram": "danh từ giống đực",
+          "meaning": "bình giữ nhiệt",
+          "example": "Термос с горячим травяным чаем."
+        }
+      ]
+    }
   ]
 }

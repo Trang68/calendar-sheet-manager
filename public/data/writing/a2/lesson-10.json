@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Truyền tải được cảm xúc hào hứng và thư thái."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Kể về chuyến đi dã ngoại (На природе)",
+      "rows": [
+        {
+          "word": "костёр",
+          "gram": "danh từ giống đực",
+          "meaning": "đống lửa trại",
+          "example": "Готовить ароматные шашлыки на костре."
+        },
+        {
+          "word": "сосно́вый лес",
+          "gram": "cụm danh từ đực",
+          "meaning": "rừng thông ngoại ô",
+          "example": "Прогулка по красивому сосновому лесу."
+        },
+        {
+          "word": "чи́стый во́здух",
+          "gram": "cụm danh từ đực",
+          "meaning": "bầu không khí trong lành",
+          "example": "Дышать свежим чистым воздухом."
+        },
+        {
+          "word": "отдохну́ть",
+          "gram": "động từ",
+          "meaning": "nghỉ ngơi nạp năng lượng",
+          "example": "Мы отлично отдохнули и набрались сил."
+        }
+      ]
+    }
   ]
 }

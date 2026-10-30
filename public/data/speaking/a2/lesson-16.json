@@ -28,5 +28,36 @@
       "Giao thông ở thành phố bạn có hay bị tắc đường không?",
       "Theo bạn, thành phố cần làm gì để cải thiện tình hình đi lại?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Giao thông đô thị (Транспорт)",
+      "rows": [
+        {
+          "word": "мегапо́лис",
+          "gram": "danh từ giống đực",
+          "meaning": "đại đô thị hàng triệu dân",
+          "example": "Транспортная сеть современного мегаполиса."
+        },
+        {
+          "word": "час пик",
+          "gram": "cụm danh từ đực",
+          "meaning": "giờ cao điểm tan tầm",
+          "example": "В часы пик на дорогах образуются пробки."
+        },
+        {
+          "word": "экологи́чный",
+          "gram": "tính từ",
+          "meaning": "thân thiện môi trường",
+          "example": "Метро — самый экологичный вид транспорта."
+        },
+        {
+          "word": "удо́бство",
+          "gram": "danh từ giống trung",
+          "meaning": "sự tiện nghi thoải mái",
+          "example": "Комфорт и удобство бесконтактной оплаты."
+        }
+      ]
+    }
+  ]
 }

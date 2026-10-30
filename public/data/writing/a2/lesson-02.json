@@ -50,5 +50,36 @@
       "criteria": "Từ vựng & Ngữ pháp A2",
       "desc": "Sử dụng đúng giới từ chỉ thời gian và địa điểm."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư rủ bạn đi triển lãm (Приглашение)",
+      "rows": [
+        {
+          "word": "вы́ставка",
+          "gram": "danh từ giống cái",
+          "meaning": "cuộc triển lãm nghệ thuật",
+          "example": "Интересная художественная выставка в центре."
+        },
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ",
+          "meaning": "mời mọc",
+          "example": "Приглашаю тебя пойти на выставку в субботу."
+        },
+        {
+          "word": "экспози́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "không gian trưng bày",
+          "example": "Уникальная экспозиция картин молодых мастеров."
+        },
+        {
+          "word": "биле́т",
+          "gram": "danh từ giống đực",
+          "meaning": "vé vào cửa",
+          "example": "Я могу купить билеты онлайн заранее."
+        }
+      ]
+    }
   ]
 }

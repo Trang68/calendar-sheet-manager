@@ -266,5 +266,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Phòng đơn 1 người.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Khách sạn (В гостинице)",
+      "rows": [
+        {
+          "word": "гости́ница",
+          "gram": "danh từ giống cái",
+          "meaning": "khách sạn",
+          "example": "Мы живём в центре в гостинице."
+        },
+        {
+          "word": "но́мер",
+          "gram": "danh từ giống đực",
+          "meaning": "phòng khách sạn",
+          "example": "Ваш номер на третьем этаже."
+        },
+        {
+          "word": "ключ",
+          "gram": "danh từ giống đực",
+          "meaning": "chìa khóa",
+          "example": "Вот электронный ключ от номера."
+        },
+        {
+          "word": "бронь",
+          "gram": "danh từ giống cái",
+          "meaning": "đặt chỗ trước",
+          "example": "У меня есть бронь на три дня."
+        }
+      ]
+    }
   ]
 }

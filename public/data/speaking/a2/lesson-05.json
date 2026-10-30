@@ -28,5 +28,36 @@
       "Bạn có thói quen lập danh sách trước khi đi chợ không?",
       "Kể 3 món đồ thiết yếu bạn luôn luôn mua khi đi chợ."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thói quen tiêu dùng (Покупки)",
+      "rows": [
+        {
+          "word": "суперма́ркет",
+          "gram": "danh từ giống đực",
+          "meaning": "siêu thị",
+          "example": "Покупать продукты в сетевом супермаркете."
+        },
+        {
+          "word": "ры́нок",
+          "gram": "danh từ giống đực",
+          "meaning": "chợ dân sinh",
+          "example": "На традиционном рынке всегда свежие овощи."
+        },
+        {
+          "word": "спи́сок поку́пок",
+          "gram": "cụm danh từ đực",
+          "meaning": "danh sách đồ cần mua",
+          "example": "Я никогда не забываю список покупок."
+        },
+        {
+          "word": "эконо́мить",
+          "gram": "động từ",
+          "meaning": "tiết kiệm tiền",
+          "example": "Скидки помогают существенно экономить бюджет."
+        }
+      ]
+    }
+  ]
 }

@@ -28,5 +28,36 @@
       "Những thắng cảnh và nền văn hóa bản địa nào bạn khát khao được chiêm ngưỡng?",
       "Bạn sẽ chọn đi cùng ai và chuyến đi này mang lại ý nghĩa gì cho cuộc đời bạn?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Chuyến viễn hành mơ ước (Мечта о путешествии)",
+      "rows": [
+        {
+          "word": "путеше́ствие мечты́",
+          "gram": "cụm danh từ trung",
+          "meaning": "chuyến đi trong mơ ước",
+          "example": "Поездка на Байкал зимой стала моим путешествием мечты."
+        },
+        {
+          "word": "маршру́т",
+          "gram": "danh từ giống đực",
+          "meaning": "lộ trình, cung đường hành trình",
+          "example": "Мы заранее спланировали весь туристический маршрут по городам Сибири."
+        },
+        {
+          "word": "пейза́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "phong cảnh thiên nhiên",
+          "example": "Заснеженные горы и бескрайние леса создают сказочный пейзаж."
+        },
+        {
+          "word": "незабыва́емый",
+          "gram": "tính từ",
+          "meaning": "không thể nào quên, ấn tượng sâu đậm",
+          "example": "Этот отпуск подарил нам незабываемые воспоминания."
+        }
+      ]
+    }
+  ]
 }

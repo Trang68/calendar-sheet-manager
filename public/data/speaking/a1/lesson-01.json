@@ -52,5 +52,36 @@
       "Я работаю... / Я учусь... (Tôi làm việc... / Tôi học...)",
       "В свободное время я люблю... (Thời gian rảnh tôi thích...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Giới thiệu bản thân (О себе)",
+      "rows": [
+        {
+          "word": "меня́ зову́т",
+          "gram": "cụm từ",
+          "meaning": "tên tôi là",
+          "example": "Здравствуйте, меня зовут Нам."
+        },
+        {
+          "word": "возраст",
+          "gram": "danh từ giống đực",
+          "meaning": "tuổi tác",
+          "example": "Мне двадцать лет."
+        },
+        {
+          "word": "ро́дина",
+          "gram": "danh từ giống cái",
+          "meaning": "quê hương",
+          "example": "Моя родина — Вьетнам."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ",
+          "meaning": "học tập",
+          "example": "Я учусь на первом курсе."
+        }
+      ]
+    }
+  ]
 }

@@ -52,5 +52,36 @@
       "Это помогает мне отдохнуть... (Điều này giúp tôi thư giãn...)",
       "А чем увлекаешься ты? (Còn bạn say mê điều gì?)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Sở thích cá nhân (Хобби)",
+      "rows": [
+        {
+          "word": "хо́бби",
+          "gram": "danh từ không đổi",
+          "meaning": "sở thích",
+          "example": "Моё главное хобби — музыка."
+        },
+        {
+          "word": "чита́ть",
+          "gram": "động từ",
+          "meaning": "đọc sách",
+          "example": "Я люблю читать классику."
+        },
+        {
+          "word": "гита́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "đàn guitar",
+          "example": "Он играет на гитаре."
+        },
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ",
+          "meaning": "du lịch",
+          "example": "Мы любим путешествовать по миру."
+        }
+      ]
+    }
+  ]
 }

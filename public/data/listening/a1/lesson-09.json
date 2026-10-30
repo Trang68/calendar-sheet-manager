@@ -262,5 +262,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Gia đình đầm ấm và hòa thuận.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Gia đình & Người thân (Семья)",
+      "rows": [
+        {
+          "word": "роди́тели",
+          "gram": "danh từ số nhiều",
+          "meaning": "bố mẹ, phụ huynh",
+          "example": "Мои родители живут во Вьетнаме."
+        },
+        {
+          "word": "брат",
+          "gram": "danh từ giống đực",
+          "meaning": "anh / em trai",
+          "example": "Мой брат учится в школе."
+        },
+        {
+          "word": "сестра́",
+          "gram": "danh từ giống cái",
+          "meaning": "chị / em gái",
+          "example": "Моя старшая сестра работает врачом."
+        },
+        {
+          "word": "профе́ссия",
+          "gram": "danh từ giống cái",
+          "meaning": "nghề nghiệp",
+          "example": "Какая у вас профессия?"
+        }
+      ]
+    }
   ]
 }

@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "Администратор назначил приём на 16:30 текущего дня."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nha khoa & Đặt hẹn (Стоматолог)",
+      "rows": [
+        {
+          "word": "стомато́лог",
+          "gram": "danh từ giống đực",
+          "meaning": "bác sĩ răng hàm mặt",
+          "example": "Регулярный осмотр у стоматолога."
+        },
+        {
+          "word": "о́страя боль",
+          "gram": "cụm danh từ cái",
+          "meaning": "cơn đau buốt cấp tính",
+          "example": "Пациент с острой зубной болью."
+        },
+        {
+          "word": "приём",
+          "gram": "danh từ giống đực",
+          "meaning": "buổi khám bệnh",
+          "example": "Запись на приём к врачу в 16:30."
+        },
+        {
+          "word": "пломби́ровать",
+          "gram": "động từ",
+          "meaning": "hàn trám răng",
+          "example": "Врач аккуратно запломбировал зуб."
+        }
+      ]
+    }
   ]
 }

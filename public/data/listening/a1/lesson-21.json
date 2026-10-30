@@ -60,5 +60,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Nhà ga & Tàu tốc hành (Поезд на Петербург)",
+      "rows": [
+        {
+          "word": "направле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "phương hướng, tuyến",
+          "example": "Поезд в северном направлении."
+        },
+        {
+          "word": "ваго́н",
+          "gram": "danh từ giống đực",
+          "meaning": "toa tàu",
+          "example": "Наш вагон номер девять."
+        },
+        {
+          "word": "ме́сто",
+          "gram": "danh từ giống trung",
+          "meaning": "chỗ ngồi, giường nằm",
+          "example": "Какое у вас место в билете?"
+        },
+        {
+          "word": "отправле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "giờ khởi hành",
+          "example": "Время отправления по расписанию."
+        }
+      ]
+    }
+  ]
 }

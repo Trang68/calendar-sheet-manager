@@ -106,5 +106,36 @@
       "ans": "B",
       "explain": "Khách chọn: «Кувшин домашнего клюквенного морса, пожалуйста»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ẩm thực nhà hàng Nga (Русская кухня)",
+      "rows": [
+        {
+          "word": "брони́рование",
+          "gram": "danh từ giống trung",
+          "meaning": "việc đặt bàn trước",
+          "example": "У нас бронирование столика на вечер."
+        },
+        {
+          "word": "фи́рменное блю́до",
+          "gram": "cụm danh từ trung",
+          "meaning": "món ăn đặc sản thương hiệu",
+          "example": "Фирменное блюдо нашего шеф-повара."
+        },
+        {
+          "word": "уха́",
+          "gram": "danh từ giống cái",
+          "meaning": "súp cá truyền thống",
+          "example": "Горячая царская уха со стерлядью."
+        },
+        {
+          "word": "морс",
+          "gram": "danh từ giống đực",
+          "meaning": "nước quả mọng giải khát",
+          "example": "Кувшин клюквенного морса со льдом."
+        }
+      ]
+    }
   ]
 }

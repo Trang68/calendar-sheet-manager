@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Trình bày đẹp mắt, lời chúc ý nghĩa."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thiệp chúc Tết đồng nghiệp (Поздравление)",
+      "rows": [
+        {
+          "word": "колле́га",
+          "gram": "danh từ",
+          "meaning": "đồng nghiệp cơ quan",
+          "example": "Уважаемый коллега, поздравляю с Новым годом!"
+        },
+        {
+          "word": "сотрудничество",
+          "gram": "danh từ giống trung",
+          "meaning": "sự cộng tác làm việc",
+          "example": "Благодарю за плодотворное сотрудничество."
+        },
+        {
+          "word": "побе́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thắng lợi thành công",
+          "example": "Новых профессиональных побед и свершений!"
+        },
+        {
+          "word": "пожела́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lời chúc tốt đẹp",
+          "example": "С наилучшими праздничными пожеланиями."
+        }
+      ]
+    }
   ]
 }

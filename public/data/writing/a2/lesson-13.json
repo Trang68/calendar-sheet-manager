@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Từ ngữ biểu đạt trạng thái: насыщенно, усталость, с нетерпением."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Lịch trình một tuần làm việc (Учебная неделя)",
+      "rows": [
+        {
+          "word": "насы́щенный",
+          "gram": "tính từ",
+          "meaning": "bận rộn, đầy ắp sự kiện",
+          "example": "Очень насыщенная и динамичная учебная неделя."
+        },
+        {
+          "word": "лекция",
+          "gram": "danh từ giống cái",
+          "meaning": "buổi nghe giảng",
+          "example": "По три пары лекций и практических занятий в день."
+        },
+        {
+          "word": "уста́лость",
+          "gram": "danh từ giống cái",
+          "meaning": "sự mỏi mệt",
+          "example": "Приятная усталость к концу рабочей недели."
+        },
+        {
+          "word": "нетерпе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự nôn nóng mong đợi",
+          "example": "С нетерпением ждать выходных дней."
+        }
+      ]
+    }
   ]
 }

@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Пассажир описал связку ключей с брелоком в виде русской матрёшки."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đồ đạc thất lạc (Бюро находок)",
+      "rows": [
+        {
+          "word": "бюро́ нахо́док",
+          "gram": "cụm danh từ trung",
+          "meaning": "phòng xử lý đồ thất lạc",
+          "example": "Обратиться за помощью в бюро находок."
+        },
+        {
+          "word": "рюкза́к",
+          "gram": "danh từ giống đực",
+          "meaning": "chiếc ba lô",
+          "example": "Забытый в вагоне метро синий рюкзак."
+        },
+        {
+          "word": "брело́к",
+          "gram": "danh từ giống đực",
+          "meaning": "móc khóa treo",
+          "example": "Связка ключей с ярким брелоком."
+        },
+        {
+          "word": "дежу́рный",
+          "gram": "danh từ giống đực",
+          "meaning": "nhân viên trực ca ga",
+          "example": "Дежурный по станции вернул вещи."
+        }
+      ]
+    }
   ]
 }

@@ -102,5 +102,36 @@
       "ans": "B",
       "explain": "Đoạn thoại nêu: «это займёт около пятнадцати минут»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Giao thông đô thị (Ориентирование в метро)",
+      "rows": [
+        {
+          "word": "ста́нция",
+          "gram": "danh từ giống cái",
+          "meaning": "nhà ga (tàu điện ngầm)",
+          "example": "Следующая станция — «Театральная»."
+        },
+        {
+          "word": "переса́дка",
+          "gram": "danh từ giống cái",
+          "meaning": "chuyển tuyến tàu",
+          "example": "Пересадка на радиальную линию."
+        },
+        {
+          "word": "ка́рта «Тро́йка»",
+          "gram": "cụm danh từ cái",
+          "meaning": "thẻ quẹt giao thông Troika",
+          "example": "Пополнить баланс карты «Тройка»."
+        },
+        {
+          "word": "эскала́тор",
+          "gram": "danh từ giống đực",
+          "meaning": "thang cuốn tự động",
+          "example": "Спускайтесь аккуратно на эскалаторе."
+        }
+      ]
+    }
   ]
 }

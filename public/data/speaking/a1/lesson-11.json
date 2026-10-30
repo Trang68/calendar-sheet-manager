@@ -52,5 +52,36 @@
       "Посоветуйте хорошее средство... (Hãy khuyên tôi phương thuốc tốt...)",
       "Спасибо, я буду лечиться! (Cảm ơn, tôi sẽ điều trị theo lời dặn!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Miêu tả triệu chứng ốm (В аптеке)",
+      "rows": [
+        {
+          "word": "горло",
+          "gram": "danh từ giống trung",
+          "meaning": "cổ họng",
+          "example": "У меня болит горло."
+        },
+        {
+          "word": "ка́шель",
+          "gram": "danh từ giống đực",
+          "meaning": "cơn ho",
+          "example": "Лекарство от сильного кашля."
+        },
+        {
+          "word": "табле́тка",
+          "gram": "danh từ giống cái",
+          "meaning": "viên thuốc",
+          "example": "Принимайте по одной таблетке."
+        },
+        {
+          "word": "ка́пли",
+          "gram": "danh từ số nhiều",
+          "meaning": "thuốc nhỏ giọt",
+          "example": "Капли для носа."
+        }
+      ]
+    }
+  ]
 }

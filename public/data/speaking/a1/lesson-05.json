@@ -52,5 +52,36 @@
       "У вас есть свежий хлеб? (Ở đây có bánh mì tươi không?)",
       "Я оплачу картой... (Tôi sẽ trả bằng thẻ...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Mua sắm & Giá cả (В магазине)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ",
+          "meaning": "mua",
+          "example": "Я хочу купить яблоки."
+        },
+        {
+          "word": "це́на",
+          "gram": "danh từ giống cái",
+          "meaning": "giá tiền",
+          "example": "Какая цена за килограмм?"
+        },
+        {
+          "word": "сто́ить",
+          "gram": "động từ",
+          "meaning": "có giá là",
+          "example": "Сколько это стоит?"
+        },
+        {
+          "word": "ка́сса",
+          "gram": "danh từ giống cái",
+          "meaning": "quầy thanh toán",
+          "example": "Оплатите покупку на кассе."
+        }
+      ]
+    }
+  ]
 }

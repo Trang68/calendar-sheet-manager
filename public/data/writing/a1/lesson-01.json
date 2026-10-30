@@ -70,5 +70,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư giới thiệu bản thân (Письмо о себе)",
+      "rows": [
+        {
+          "word": "письмо́",
+          "gram": "danh từ giống trung",
+          "meaning": "lá thư",
+          "example": "Я пишу письмо другу."
+        },
+        {
+          "word": "друг",
+          "gram": "danh từ giống đực",
+          "meaning": "người bạn",
+          "example": "Мой русский друг живёт в Москве."
+        },
+        {
+          "word": "жить",
+          "gram": "động từ",
+          "meaning": "sống, cư ngụ",
+          "example": "Я живу в общежитии."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ",
+          "meaning": "học tập",
+          "example": "Я учусь в университете."
+        }
+      ]
+    }
   ]
 }

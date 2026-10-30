@@ -52,5 +52,36 @@
       "Можно ли перевести деньги через телефон? (Có chuyển tiền qua điện thoại được không?)",
       "Благодарю за консультацию! (Cảm ơn bạn đã tư vấn!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Giao dịch ngân hàng (В банке)",
+      "rows": [
+        {
+          "word": "счёт",
+          "gram": "danh từ giống đực",
+          "meaning": "tài khoản ngân hàng",
+          "example": "Открыть банковский счёт."
+        },
+        {
+          "word": "банкома́т",
+          "gram": "danh từ giống đực",
+          "meaning": "cây ATM",
+          "example": "Снять наличные в банкомате."
+        },
+        {
+          "word": "нали́чные",
+          "gram": "danh từ số nhiều",
+          "meaning": "tiền mặt",
+          "example": "У вас есть наличные деньги?"
+        },
+        {
+          "word": "па́спорт",
+          "gram": "danh từ giống đực",
+          "meaning": "hộ chiếu",
+          "example": "Предъявите оригинал паспорта."
+        }
+      ]
+    }
+  ]
 }

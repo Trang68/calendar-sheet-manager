@@ -49,5 +49,36 @@
       "criteria": "Độ dài văn bản",
       "desc": "Đạt số lượng từ tiêu chuẩn 100-130 từ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư cảm ơn thực tập (Благодарность)",
+      "rows": [
+        {
+          "word": "благода́рность",
+          "gram": "danh từ giống cái",
+          "meaning": "lòng biết ơn chân thành",
+          "example": "Выражаю искреннюю благодарность коллегам за поддержку и ценные советы."
+        },
+        {
+          "word": "стажиро́вка",
+          "gram": "danh từ giống cái",
+          "meaning": "kỳ thực tập chuyên môn",
+          "example": "Месячная стажировка в банке дала мне бесценный практический опыт."
+        },
+        {
+          "word": "коллекти́в",
+          "gram": "danh từ giống đực",
+          "meaning": "tập thể đồng nghiệp công ty",
+          "example": "Дружный коллектив тепло принял нового стажёра в команду."
+        },
+        {
+          "word": "профессионали́зм",
+          "gram": "danh từ giống đực",
+          "meaning": "tác phong làm việc chuyên nghiệp",
+          "example": "Высокий профессионализм наставников вдохновляет на развитие."
+        }
+      ]
+    }
   ]
 }

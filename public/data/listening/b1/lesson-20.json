@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Оплата 40% производится строго после подписания приёмо-сдаточного акта."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đàm phán trang thiết bị (Поставка)",
+      "rows": [
+        {
+          "word": "поставщи́к",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà cung cấp thiết bị/hàng hóa",
+          "example": "Надёжный поставщик гарантирует своевременную доставку."
+        },
+        {
+          "word": "обору́дование",
+          "gram": "danh từ giống trung",
+          "meaning": "thiết bị, máy móc công nghiệp",
+          "example": "Завод закупил современное высокоточное оборудование."
+        },
+        {
+          "word": "специфика́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "bản đặc tả kỹ thuật",
+          "example": "Техническая спецификация согласована обеими сторонами."
+        },
+        {
+          "word": "неусто́йка",
+          "gram": "danh từ giống cái",
+          "meaning": "tiền bồi thường chậm phạt hợp đồng",
+          "example": "В случае срыва сроков поставщик выплачивает неустойку."
+        }
+      ]
+    }
   ]
 }

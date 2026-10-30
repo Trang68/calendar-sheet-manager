@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Lịch trình một ngày (Распорядок дня)",
+      "rows": [
+        {
+          "word": "встава́ть",
+          "gram": "động từ",
+          "meaning": "thức dậy",
+          "example": "Я встаю рано утром."
+        },
+        {
+          "word": "заня́тия",
+          "gram": "danh từ số nhiều",
+          "meaning": "các tiết học",
+          "example": "Занятия начинаются в девять."
+        },
+        {
+          "word": "обе́д",
+          "gram": "danh từ giống đực",
+          "meaning": "bữa trưa",
+          "example": "В час дня у нас перерыв на обед."
+        },
+        {
+          "word": "о́тдых",
+          "gram": "danh từ giống đực",
+          "meaning": "sự nghỉ ngơi",
+          "example": "Вечер — время для отдыха."
+        }
+      ]
+    }
   ]
 }

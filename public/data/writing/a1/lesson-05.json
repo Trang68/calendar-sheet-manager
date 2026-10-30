@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thành phố quê hương (Мой город)",
+      "rows": [
+        {
+          "word": "го́род",
+          "gram": "danh từ giống đực",
+          "meaning": "thành phố",
+          "example": "Ханой — красивый старинный город."
+        },
+        {
+          "word": "парк",
+          "gram": "danh từ giống đực",
+          "meaning": "công viên",
+          "example": "В городе много зелёных парков."
+        },
+        {
+          "word": "мост",
+          "gram": "danh từ giống đực",
+          "meaning": "cây cầu",
+          "example": "Широкий мост через реку."
+        },
+        {
+          "word": "пло́щадь",
+          "gram": "danh từ giống cái",
+          "meaning": "quảng trường",
+          "example": "Центральная площадь города."
+        }
+      ]
+    }
   ]
 }

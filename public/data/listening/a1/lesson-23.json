@@ -56,5 +56,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Vé sinh viên tham quan (В музее)",
+      "rows": [
+        {
+          "word": "студе́нческий",
+          "gram": "tính từ",
+          "meaning": "thuộc về sinh viên",
+          "example": "Покажите студенческий билет."
+        },
+        {
+          "word": "ски́дка",
+          "gram": "danh từ giống cái",
+          "meaning": "giảm giá",
+          "example": "Для студентов есть скидка 50%."
+        },
+        {
+          "word": "вы́ставка",
+          "gram": "danh từ giống cái",
+          "meaning": "triển lãm",
+          "example": "Интересная выставка древней культуры."
+        },
+        {
+          "word": "зал",
+          "gram": "danh từ giống đực",
+          "meaning": "phòng trưng bày",
+          "example": "Пройдите в главный выставочный зал."
+        }
+      ]
+    }
+  ]
 }

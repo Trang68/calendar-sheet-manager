@@ -28,5 +28,36 @@
       "Một tác phẩm cụ thể đã từng để lại rung động mãnh liệt trong lòng bạn là gì?",
       "Nghệ thuật đã giúp bạn định hình nhân sinh quan và đối diện với thử thách như thế nào?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Mỹ cảm & Nghệ thuật biểu diễn (Эстетика)",
+      "rows": [
+        {
+          "word": "эсте́тика",
+          "gram": "danh từ giống cái",
+          "meaning": "tính thẩm mỹ, mỹ học",
+          "example": "Театральная постановка поразила зрителей тонкой эстетикой."
+        },
+        {
+          "word": "духо́вность",
+          "gram": "danh từ giống cái",
+          "meaning": "đời sống tâm hồn, tâm linh văn hóa",
+          "example": "Музыка развивает духовность и эмоциональную чуткость."
+        },
+        {
+          "word": "гармо́ния",
+          "gram": "danh từ giống cái",
+          "meaning": "sự hài hòa, hòa hợp",
+          "example": "В живописи Левитана ощущается гармония с природой."
+        },
+        {
+          "word": "эмо́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "cảm xúc rung động",
+          "example": "Искусство пробуждает в человеке самые светлые эмоции."
+        }
+      ]
+    }
+  ]
 }

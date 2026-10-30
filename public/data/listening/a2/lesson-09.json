@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "В годовой абонемент включены зал, бассейн, сауна и персональные инструктажи."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Câu lạc bộ thể hình (Фитнес-клуб)",
+      "rows": [
+        {
+          "word": "абонеме́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "thẻ hội viên dài hạn",
+          "example": "Годовой абонемент в тренажёрный зал."
+        },
+        {
+          "word": "тренажёр",
+          "gram": "danh từ giống đực",
+          "meaning": "máy tập gym",
+          "example": "Современные кардиотренажёры."
+        },
+        {
+          "word": "инструкта́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "hướng dẫn chỉ dẫn kỹ thuật",
+          "example": "Вводный инструктаж с персональным тренером."
+        },
+        {
+          "word": "са́уна",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng xông hơi",
+          "example": "После тренировки приятно посетить сауну."
+        }
+      ]
+    }
   ]
 }

@@ -262,5 +262,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng Chào hỏi & Làm quen (Знакомство)",
+      "rows": [
+        {
+          "word": "знако́миться",
+          "gram": "động từ",
+          "meaning": "làm quen",
+          "example": "Давайте познакомимся!"
+        },
+        {
+          "word": "и́мя",
+          "gram": "danh từ giống trung",
+          "meaning": "tên gọi",
+          "example": "Как ваше имя?"
+        },
+        {
+          "word": "студе́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "nam sinh viên",
+          "example": "Я иностранный студент."
+        },
+        {
+          "word": "страна́",
+          "gram": "danh từ giống cái",
+          "meaning": "quốc gia, đất nước",
+          "example": "Из какой вы страны?"
+        }
+      ]
+    }
+  ]
 }

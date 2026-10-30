@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghề nghiệp tương lai (Профессия)",
+      "rows": [
+        {
+          "word": "стать",
+          "gram": "động từ",
+          "meaning": "trở thành",
+          "example": "Я хочу стать хорошим инженером."
+        },
+        {
+          "word": "программи́ст",
+          "gram": "danh từ giống đực",
+          "meaning": "lập trình viên",
+          "example": "Профессия программиста очень популярна."
+        },
+        {
+          "word": "зна́ния",
+          "gram": "danh từ số nhiều",
+          "meaning": "kiến thức",
+          "example": "Для работы нужны глубокие знания."
+        },
+        {
+          "word": "мечта́",
+          "gram": "danh từ giống cái",
+          "meaning": "ước mơ",
+          "example": "Моя детская мечта сбылась."
+        }
+      ]
+    }
   ]
 }

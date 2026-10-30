@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Sức khỏe dồi dào và hạnh phúc.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đón Năm Mới (Новый год)",
+      "rows": [
+        {
+          "word": "пра́здник",
+          "gram": "danh từ giống đực",
+          "meaning": "ngày lễ",
+          "example": "Новый год — любимый зимний праздник."
+        },
+        {
+          "word": "ёлка",
+          "gram": "danh từ giống cái",
+          "meaning": "cây thông Tết",
+          "example": "Красивая ёлка с гирляндами."
+        },
+        {
+          "word": "пода́рок",
+          "gram": "danh từ giống đực",
+          "meaning": "món quà tặng",
+          "example": "Дети с нетерпением ждут подарков."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ",
+          "meaning": "chúc mừng",
+          "example": "Поздравляю вас с праздником!"
+        }
+      ]
+    }
   ]
 }

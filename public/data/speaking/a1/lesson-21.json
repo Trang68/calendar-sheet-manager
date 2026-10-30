@@ -31,5 +31,36 @@
       "Сколько с меня?",
       "Спасибо!"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Gọi món yêu thích (В кафе)",
+      "rows": [
+        {
+          "word": "ча́шка",
+          "gram": "danh từ giống cái",
+          "meaning": "cốc / tách",
+          "example": "Чашка горячего зелёного чая."
+        },
+        {
+          "word": "пиро́жное",
+          "gram": "danh từ giống trung",
+          "meaning": "bánh ngọt nhỏ",
+          "example": "Сладкое шоколадное пирожное."
+        },
+        {
+          "word": "са́хар",
+          "gram": "danh từ giống đực",
+          "meaning": "đường",
+          "example": "Чай без сахара, пожалуйста."
+        },
+        {
+          "word": "смета́на",
+          "gram": "danh từ giống cái",
+          "meaning": "kem chua",
+          "example": "Блины со сметаной и мёдом."
+        }
+      ]
+    }
+  ]
 }

@@ -28,5 +28,36 @@
       "Tình huống giao tiếp thực tế nào bạn tự tin xử lý bằng tiếng Nga nhất?",
       "Kế hoạch rèn luyện khẩu ngữ của bạn trong giai đoạn B1 sắp tới là gì?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Tổng kết chặng đường A2 (Итоги)",
+      "rows": [
+        {
+          "word": "достиже́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thành quả đạt được",
+          "example": "Освоение уровня A2 — важное личное достижение."
+        },
+        {
+          "word": "уве́ренность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự tự tin giao tiếp",
+          "example": "Уверенность в диалогах с носителями языка."
+        },
+        {
+          "word": "сертифика́т",
+          "gram": "danh từ giống đực",
+          "meaning": "chứng chỉ chuẩn hóa",
+          "example": "Подготовка к сдаче теста на сертификат ТРКИ."
+        },
+        {
+          "word": "стремле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "khát vọng vươn lên",
+          "example": "Стремление достичь уровня B1."
+        }
+      ]
+    }
+  ]
 }

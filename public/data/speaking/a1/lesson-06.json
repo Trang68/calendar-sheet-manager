@@ -52,5 +52,36 @@
       "В час дня я обедаю... (Lúc 1 giờ trưa tôi ăn trưa...)",
       "Вечером я люблю... (Buổi tối tôi thích...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Lịch sinh hoạt thường nhật (Мой день)",
+      "rows": [
+        {
+          "word": "у́тро",
+          "gram": "danh từ giống trung",
+          "meaning": "buổi sáng",
+          "example": "Доброе утро!"
+        },
+        {
+          "word": "день",
+          "gram": "danh từ giống đực",
+          "meaning": "ban ngày / ngày",
+          "example": "Днём я на занятиях."
+        },
+        {
+          "word": "обе́дать",
+          "gram": "động từ",
+          "meaning": "ăn trưa",
+          "example": "Мы обедаем в столовой."
+        },
+        {
+          "word": "спать",
+          "gram": "động từ",
+          "meaning": "ngủ",
+          "example": "Я ложусь спать в одиннадцать."
+        }
+      ]
+    }
+  ]
 }

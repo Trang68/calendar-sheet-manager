@@ -262,5 +262,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng Thư viện (В библиотеке)",
+      "rows": [
+        {
+          "word": "библиоте́ка",
+          "gram": "danh từ giống cái",
+          "meaning": "thư viện",
+          "example": "В библиотеке очень тихо."
+        },
+        {
+          "word": "кни́га",
+          "gram": "danh từ giống cái",
+          "meaning": "cuốn sách",
+          "example": "Где лежит эта книга?"
+        },
+        {
+          "word": "слова́рь",
+          "gram": "danh từ giống đực",
+          "meaning": "cuốn từ điển",
+          "example": "Мне нужен русско-вьетнамский словарь."
+        },
+        {
+          "word": "чита́льный зал",
+          "gram": "cụm danh từ đực",
+          "meaning": "phòng đọc sách",
+          "example": "Читальный зал открыт до восьми вечера."
+        }
+      ]
+    }
+  ]
 }

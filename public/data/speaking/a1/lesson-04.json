@@ -52,5 +52,36 @@
       "А пить я буду... (Còn uống thì tôi sẽ dùng...)",
       "Сколько это стоит? Принесите счёт... (Bao nhiêu tiền? Cho tôi xin hóa đơn...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Gọi món tại nhà hàng (В ресторане)",
+      "rows": [
+        {
+          "word": "зака́зывать",
+          "gram": "động từ",
+          "meaning": "gọi món, đặt",
+          "example": "Что вы хотите заказать?"
+        },
+        {
+          "word": "суп",
+          "gram": "danh từ giống đực",
+          "meaning": "món súp / canh",
+          "example": "Я закажу куриный суп."
+        },
+        {
+          "word": "ры́ба",
+          "gram": "danh từ giống cái",
+          "meaning": "cá",
+          "example": "Жареная рыба с рисом."
+        },
+        {
+          "word": "напи́ток",
+          "gram": "danh từ giống đực",
+          "meaning": "thức uống",
+          "example": "Какой напиток вы предпочитаете?"
+        }
+      ]
+    }
+  ]
 }

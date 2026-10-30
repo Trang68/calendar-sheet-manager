@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thiệp chúc mừng (Поздравление)",
+      "rows": [
+        {
+          "word": "откры́тка",
+          "gram": "danh từ giống cái",
+          "meaning": "bưu thiếp",
+          "example": "Красивая поздравительная открытка."
+        },
+        {
+          "word": "здоро́вье",
+          "gram": "danh từ giống trung",
+          "meaning": "sức khỏe",
+          "example": "Желаю крепкого здоровья и счастья."
+        },
+        {
+          "word": "успе́х",
+          "gram": "danh từ giống đực",
+          "meaning": "thành công",
+          "example": "Больших успехов в учёбе."
+        },
+        {
+          "word": "пра́здник",
+          "gram": "danh từ giống đực",
+          "meaning": "ngày vui, ngày lễ",
+          "example": "С праздником тебя, дорогой друг!"
+        }
+      ]
+    }
   ]
 }

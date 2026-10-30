@@ -59,5 +59,36 @@
       "ans": "B",
       "explain": "Оператор озвучил стоимость заказного отправления: 140 рублей."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Dịch vụ bưu cục (На почте)",
+      "rows": [
+        {
+          "word": "заказно́е письмо́",
+          "gram": "cụm danh từ trung",
+          "meaning": "thư gửi bảo đảm",
+          "example": "Отправить заказное письмо с уведомлением."
+        },
+        {
+          "word": "уведомле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "giấy báo phát",
+          "example": "Уведомление о вручении письма адресату."
+        },
+        {
+          "word": "и́ндекс",
+          "gram": "danh từ giống đực",
+          "meaning": "mã bưu điện",
+          "example": "Шестизначный почтовый индекс города."
+        },
+        {
+          "word": "весы́",
+          "gram": "danh từ số nhiều",
+          "meaning": "chiếc cân",
+          "example": "Положите отправление на весы."
+        }
+      ]
+    }
   ]
 }

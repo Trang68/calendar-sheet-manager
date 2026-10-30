@@ -28,5 +28,36 @@
       "Kể về một lần thể thao giúp bạn rèn luyện ý chí vượt qua khó khăn.",
       "Quan điểm của bạn về triết lý: Chiến thắng chính mình là chiến thắng vinh quang nhất."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Ý chí và Thể thao (Спорт и характер)",
+      "rows": [
+        {
+          "word": "си́ла во́ли",
+          "gram": "cụm danh từ cái",
+          "meaning": "nghị lực, sức mạnh ý chí",
+          "example": "Регулярные тренировки развивают силу воли и целеустремлённость."
+        },
+        {
+          "word": "выно́сливость",
+          "gram": "danh từ giống cái",
+          "meaning": "sức chịu đựng dẻo dai",
+          "example": "Марафонский бег требует исключительной физической выносливости."
+        },
+        {
+          "word": "кома́ндный дух",
+          "gram": "cụm danh từ đực",
+          "meaning": "tinh thần đồng đội tập thể",
+          "example": "Командный дух помог сборной выиграть решающий матч."
+        },
+        {
+          "word": "упо́рство",
+          "gram": "danh từ giống trung",
+          "meaning": "sự kiên trì bền bỉ",
+          "example": "Благодаря упорству спортсмен завоевал золотую медаль."
+        }
+      ]
+    }
+  ]
 }

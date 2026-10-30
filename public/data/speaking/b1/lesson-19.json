@@ -28,5 +28,36 @@
       "Những chủ đề lớn xuyên suốt tác phẩm (tình yêu, sự tự do, lương tâm, số phận).",
       "Ảnh hưởng của nhà văn đó đối với văn học thế giới và bản thân bạn."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Thi ca & Ngòi bút văn chương (Любимый писатель)",
+      "rows": [
+        {
+          "word": "тво́рчество",
+          "gram": "danh từ giống trung",
+          "meaning": "sự nghiệp sáng tác văn nghệ",
+          "example": "Творчество Достоевского исследует глубины человеческой души."
+        },
+        {
+          "word": "ли́рика",
+          "gram": "danh từ giống cái",
+          "meaning": "thơ trữ tình",
+          "example": "Лирика Есенина воспевает красоту русской природы."
+        },
+        {
+          "word": "сюже́тная ли́ния",
+          "gram": "cụm danh từ cái",
+          "meaning": "mạch phát triển cốt truyện",
+          "example": "В романе тесно переплетаются несколько сюжетных линий."
+        },
+        {
+          "word": "драматурги́я",
+          "gram": "danh từ giống cái",
+          "meaning": "kịch bản nghệ thuật kịch trường",
+          "example": "Чеховская драматургия открыла новый этап мирового театра."
+        }
+      ]
+    }
+  ]
 }

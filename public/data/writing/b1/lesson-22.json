@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Không cực đoan bài trừ công nghệ, hướng tới sự cân bằng tỉnh thức."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận Công nghệ & Gắn kết (Связь и разобщение)",
+      "rows": [
+        {
+          "word": "разобще́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự xa cách, cô lập ngăn cách",
+          "example": "Гаджеты создают иллюзию близости, но порой ведут к эмоциональному разобщению."
+        },
+        {
+          "word": "сплочённость",
+          "gram": "danh từ giống cái",
+          "meaning": "sự đoàn kết gắn bó keo sơn",
+          "example": "Онлайн-сообщества укрепляют солидарность людей с общими интересами."
+        },
+        {
+          "word": "га́джет",
+          "gram": "danh từ giống đực",
+          "meaning": "thiết bị thông minh cầm tay",
+          "example": "Чрезмерное увлечение гаджетами сокращает время живого общения с близкими."
+        },
+        {
+          "word": "одино́чество",
+          "gram": "danh từ giống trung",
+          "meaning": "sự cô đơn lạc lõng",
+          "example": "Парадокс эпохи сетей заключается в росте ощущения одиночества среди молодёжи."
+        }
+      ]
+    }
   ]
 }

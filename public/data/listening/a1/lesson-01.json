@@ -262,5 +262,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng Quán Cà Phê (В кафе)",
+      "rows": [
+        {
+          "word": "кафе́",
+          "gram": "danh từ không đổi",
+          "meaning": "quán cà phê",
+          "example": "Мы сидим в уютном кафе."
+        },
+        {
+          "word": "меню́",
+          "gram": "danh từ không đổi",
+          "meaning": "thực đơn",
+          "example": "Покажите, пожалуйста, меню."
+        },
+        {
+          "word": "ко́фе",
+          "gram": "danh từ giống đực",
+          "meaning": "cà phê",
+          "example": "Я пью чёрный кофе без сахара."
+        },
+        {
+          "word": "счёт",
+          "gram": "danh từ giống đực",
+          "meaning": "hóa đơn",
+          "example": "Принесите, пожалуйста, счёт."
+        }
+      ]
+    }
+  ]
 }

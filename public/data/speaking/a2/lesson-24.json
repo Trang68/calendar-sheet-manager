@@ -28,5 +28,36 @@
       "Ứng dụng nào hữu ích nhất cho bạn khi học tiếng Nga?",
       "Làm thế nào để không bị nghiện mạng xã hội và lãng phí thời gian?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Công nghệ số trong đời sống (Интернет)",
+      "rows": [
+        {
+          "word": "га́джет",
+          "gram": "danh từ giống đực",
+          "meaning": "thiết bị điện tử cầm tay",
+          "example": "Смартфоны и планшеты облегчают учёбу."
+        },
+        {
+          "word": "социа́льные се́ти",
+          "gram": "cụm danh từ nhiều",
+          "meaning": "mạng xã hội",
+          "example": "Ограничивать время в социальных сетях."
+        },
+        {
+          "word": "приложе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "ứng dụng di động",
+          "example": "Полезное мобильное приложение для языков."
+        },
+        {
+          "word": "по́льза",
+          "gram": "danh từ giống cái",
+          "meaning": "lợi ích thực tiễn",
+          "example": "Интернет приносит огромную пользу образованию."
+        }
+      ]
+    }
+  ]
 }

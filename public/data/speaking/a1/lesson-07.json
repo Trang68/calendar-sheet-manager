@@ -52,5 +52,36 @@
       "Сколько минут ехать на метро? (Đi tàu điện ngầm mất mấy phút?)",
       "Большое спасибо за помощь! (Cảm ơn bạn rất nhiều vì đã giúp đỡ!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Hỏi đường trong thành phố (В городе)",
+      "rows": [
+        {
+          "word": "у́лица",
+          "gram": "danh từ giống cái",
+          "meaning": "đường phố",
+          "example": "На какой улице вы живёте?"
+        },
+        {
+          "word": "пря́мо",
+          "gram": "phó từ",
+          "meaning": "đi thẳng",
+          "example": "Идите прямо двести метров."
+        },
+        {
+          "word": "напра́во",
+          "gram": "phó từ",
+          "meaning": "rẽ phải",
+          "example": "Поверните направо у аптеки."
+        },
+        {
+          "word": "нале́во",
+          "gram": "phó từ",
+          "meaning": "rẽ trái",
+          "example": "Остановка автобуса налево."
+        }
+      ]
+    }
+  ]
 }

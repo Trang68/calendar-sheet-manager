@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Sử dụng nhuần nhuyễn cấu trúc 'были бы признательны, если бы смогли'."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư mời học giả quốc tế (Официальное приглашение)",
+      "rows": [
+        {
+          "word": "официа́льное приглаше́ние",
+          "gram": "cụm danh từ trung",
+          "meaning": "thư mời danh dự chính thức",
+          "example": "Ректор направил официальное приглашение зарубежному профессору."
+        },
+        {
+          "word": "визи́т",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyến thăm làm việc chính thức",
+          "example": "В рамках трёхдневного визита запланировано чтение цикла открытых лекций."
+        },
+        {
+          "word": "ле́кционный курс",
+          "gram": "cụm danh từ đực",
+          "meaning": "chuỗi bài giảng chuyên đề",
+          "example": "Лекционный курс по квантовой физике вызвал огромный интерес студентов."
+        },
+        {
+          "word": "сотрудничество",
+          "gram": "danh từ giống trung",
+          "meaning": "quan hệ hợp tác đối tác",
+          "example": "Визит укрепит академическое сотрудничество между двумя университетами."
+        }
+      ]
+    }
   ]
 }

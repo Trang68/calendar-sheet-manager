@@ -28,5 +28,36 @@
       "Bức tranh hoặc hiện vật nào khiến bạn ấn tượng sâu sắc nhất?",
       "Bạn cảm nhận được điều gì về văn hóa và lịch sử qua chuyến tham quan?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Tham quan bảo tàng (Музеи и галереи)",
+      "rows": [
+        {
+          "word": "экспона́т",
+          "gram": "danh từ giống đực",
+          "meaning": "hiện vật trưng bày",
+          "example": "Редкие археологические экспонаты музея."
+        },
+        {
+          "word": "шеде́вр",
+          "gram": "danh từ giống đực",
+          "meaning": "kiệt tác nghệ thuật",
+          "example": "Шедевры русской портретной живописи."
+        },
+        {
+          "word": "галере́я",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng trưng bày tranh",
+          "example": "Знаменитая Третьяковская галерея в Москве."
+        },
+        {
+          "word": "восхище́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự trầm trồ thán phục",
+          "example": "Картина вызывает искреннее восхищение."
+        }
+      ]
+    }
+  ]
 }

@@ -61,5 +61,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Mô tả căn phòng (Моя комната)",
+      "rows": [
+        {
+          "word": "ко́мната",
+          "gram": "danh từ giống cái",
+          "meaning": "căn phòng",
+          "example": "Моя комната светлая и тёплая."
+        },
+        {
+          "word": "окно́",
+          "gram": "danh từ giống trung",
+          "meaning": "cửa sổ",
+          "example": "Письменный стол стоит у окна."
+        },
+        {
+          "word": "крова́ть",
+          "gram": "danh từ giống cái",
+          "meaning": "chiếc giường",
+          "example": "Удобная мягкая кровать."
+        },
+        {
+          "word": "шкаф",
+          "gram": "danh từ giống đực",
+          "meaning": "tủ quần áo",
+          "example": "В углу комнаты стоит шкаф."
+        }
+      ]
+    }
   ]
 }

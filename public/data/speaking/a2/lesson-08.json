@@ -28,5 +28,36 @@
       "Bố trí các đồ nội thất cơ bản (giường, tủ, bàn học, giá sách).",
       "Góc nào trong phòng khiến bạn cảm thấy thư giãn và thoải mái nhất?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Không gian phòng ở (Мой дом)",
+      "rows": [
+        {
+          "word": "уют",
+          "gram": "danh từ giống đực",
+          "meaning": "sự ấm cúng tiện nghi",
+          "example": "В моей комнате царит домашний уют."
+        },
+        {
+          "word": "по́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "giá sách, kệ gỗ",
+          "example": "Книжные полки вдоль стены."
+        },
+        {
+          "word": "освеще́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "ánh sáng",
+          "example": "Мягкое тёплое освещение от торшера."
+        },
+        {
+          "word": "просторо́рный",
+          "gram": "tính từ",
+          "meaning": "rộng rãi thoáng đãng",
+          "example": "Просторная светлая комната с балконом."
+        }
+      ]
+    }
+  ]
 }

@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Đồng ý cùng đi trượt băng.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thể thao & Sở thích (Спорт и хобби)",
+      "rows": [
+        {
+          "word": "спорт",
+          "gram": "danh từ giống đực",
+          "meaning": "thể thao",
+          "example": "Спорт помогает быть здоровым."
+        },
+        {
+          "word": "футбо́л",
+          "gram": "danh từ giống đực",
+          "meaning": "bóng đá",
+          "example": "Мы играем в футбол по субботам."
+        },
+        {
+          "word": "пла́вание",
+          "gram": "danh từ giống trung",
+          "meaning": "bơi lội",
+          "example": "Я люблю плавание в бассейне."
+        },
+        {
+          "word": "увлека́ться",
+          "gram": "động từ",
+          "meaning": "say mê, thích",
+          "example": "Чем вы увлекаетесь?"
+        }
+      ]
+    }
   ]
 }

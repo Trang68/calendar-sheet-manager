@@ -28,5 +28,36 @@
       "Tính cách của bạn ấy có điểm gì khiến bạn quý mến nhất?",
       "Hai bạn thường cùng làm những việc gì khi rảnh rỗi?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Bạn thân & Nhân phẩm (Мой друг)",
+      "rows": [
+        {
+          "word": "надёжный",
+          "gram": "tính từ",
+          "meaning": "đáng tin cậy, vững chãi",
+          "example": "Надёжный друг никогда не подведёт."
+        },
+        {
+          "word": "че́стный",
+          "gram": "tính từ",
+          "meaning": "chân thành, trung thực",
+          "example": "Честный и открытый человек."
+        },
+        {
+          "word": "подде́ржка",
+          "gram": "danh từ giống cái",
+          "meaning": "sự nâng đỡ tương trợ",
+          "example": "Дружеская поддержка в трудную минуту."
+        },
+        {
+          "word": "дове́рие",
+          "gram": "danh từ giống trung",
+          "meaning": "sự tín nhiệm, niềm tin",
+          "example": "Дружба строится на взаимном доверии."
+        }
+      ]
+    }
+  ]
 }

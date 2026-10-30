@@ -28,5 +28,36 @@
       "Những đóng góp, phát minh hoặc cống hiến lớn nhất mà người đó để lại cho nhân loại.",
       "Phẩm chất nào ở người đó truyền cho bạn động lực phấn đấu trong đời sống?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Nhân vật lịch sử truyền cảm hứng (Личность)",
+      "rows": [
+        {
+          "word": "истори́ческая ли́чность",
+          "gram": "cụm danh từ cái",
+          "meaning": "nhân vật lịch sử kiệt xuất",
+          "example": "Пётр Первый — великая историческая личность в судьбе России."
+        },
+        {
+          "word": "вклад",
+          "gram": "danh từ giống đực",
+          "meaning": "đóng góp to lớn",
+          "example": "Его вклад в мировую науку трудно переоценить."
+        },
+        {
+          "word": "герои́зм",
+          "gram": "danh từ giống đực",
+          "meaning": "chủ nghĩa anh hùng, lòng quả cảm",
+          "example": "Подвиги Юрия Гагарина олицетворяют героизм первооткрывателей."
+        },
+        {
+          "word": "авторите́т",
+          "gram": "danh từ giống đực",
+          "meaning": "uy tín thanh danh",
+          "example": "Учёный пользовался безусловным авторитетом среди коллег."
+        }
+      ]
+    }
+  ]
 }

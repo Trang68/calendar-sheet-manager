@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Thể hiện được sự gắn bó và thư thái của góc học tập."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Góc bàn học tập thân quen (Рабочее место)",
+      "rows": [
+        {
+          "word": "рабо́чее ме́сто",
+          "gram": "cụm danh từ trung",
+          "meaning": "góc bàn làm việc / học tập",
+          "example": "Моё удобное рабочее место у широкого окна."
+        },
+        {
+          "word": "поря́док",
+          "gram": "danh từ giống đực",
+          "meaning": "sự ngăn nắp trật tự",
+          "example": "На столе всегда поддерживается идеальный порядок."
+        },
+        {
+          "word": "сосредото́читься",
+          "gram": "động từ",
+          "meaning": "tập trung cao độ",
+          "example": "Здесь легко сосредоточиться на чтении и учёбе."
+        },
+        {
+          "word": "уголо́к",
+          "gram": "danh từ giống đực",
+          "meaning": "góc nhỏ thân thương",
+          "example": "Мой любимый тихий уголок в комнате."
+        }
+      ]
+    }
   ]
 }

@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Danh sách mua đồ (Список покупок)",
+      "rows": [
+        {
+          "word": "спи́сок",
+          "gram": "danh từ giống đực",
+          "meaning": "danh sách",
+          "example": "Я составил список продуктов."
+        },
+        {
+          "word": "хлеб",
+          "gram": "danh từ giống đực",
+          "meaning": "bánh mì",
+          "example": "Купить свежий белый хлеб."
+        },
+        {
+          "word": "молоко́",
+          "gram": "danh từ giống trung",
+          "meaning": "sữa tươi",
+          "example": "Пакет свежего молока."
+        },
+        {
+          "word": "я́блоко",
+          "gram": "danh từ giống trung",
+          "meaning": "quả táo",
+          "example": "Два килограмма сладких яблок."
+        }
+      ]
+    }
   ]
 }

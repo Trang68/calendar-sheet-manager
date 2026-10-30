@@ -54,5 +54,36 @@
       "criteria": "Ngữ pháp & Thể động từ",
       "desc": "Sử dụng chính xác các cấu trúc câu phức và giới từ hành chính."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thủ tục hành chính trường học (Заявление)",
+      "rows": [
+        {
+          "word": "заявле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "đơn từ chính thức",
+          "example": "Студент подал заявление в международный отдел университета."
+        },
+        {
+          "word": "хода́тайство",
+          "gram": "danh từ giống trung",
+          "meaning": "công văn kiến nghị, đơn đề bạt",
+          "example": "Деканат направил ходатайство о продлении учебной визы."
+        },
+        {
+          "word": "проре́ктор",
+          "gram": "danh từ giống đực",
+          "meaning": "phó hiệu trưởng trường đại học",
+          "example": "Документ подписан проректором по международной деятельности."
+        },
+        {
+          "word": "ви́за",
+          "gram": "danh từ giống cái",
+          "meaning": "thị thực nhập cảnh du học",
+          "example": "Для продления визы необходима справка из учебного отдела."
+        }
+      ]
+    }
   ]
 }

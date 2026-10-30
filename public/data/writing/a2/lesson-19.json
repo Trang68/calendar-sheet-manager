@@ -47,5 +47,36 @@
       "weight": "25%",
       "desc": "Các từ vựng đặc trưng: атмосфера, канун праздника, чудеса."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ngày lễ mong chờ nhất (Любимый праздник)",
+      "rows": [
+        {
+          "word": "ска́зочный",
+          "gram": "tính từ",
+          "meaning": "kỳ diệu như cổ tích",
+          "example": "Сказочная праздничная атмосфера в доме."
+        },
+        {
+          "word": "гирля́нда",
+          "gram": "danh từ giống cái",
+          "meaning": "dây đèn nhấp nháy",
+          "example": "Украшать ёлку разноцветными гирляндами."
+        },
+        {
+          "word": "полночь",
+          "gram": "danh từ giống cái",
+          "meaning": "nửa đêm giao thừa",
+          "example": "В полночь под бой курантов загадывают желания."
+        },
+        {
+          "word": "чу́до",
+          "gram": "danh từ giống trung",
+          "meaning": "phép màu kỳ diệu",
+          "example": "Искренняя вера в добро и новогодние чудеса."
+        }
+      ]
+    }
   ]
 }

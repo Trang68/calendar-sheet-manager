@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Không mắc lỗi ngữ pháp, phối hợp thì, thể và cách nhuần nhuyễn."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận TRKI-1 Chuẩn mực (Итоговое эссе)",
+      "rows": [
+        {
+          "word": "аргумента́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "hệ thống luận cứ lập luận",
+          "example": "Убедительная аргументация подтверждает правоту позиции автора."
+        },
+        {
+          "word": "рассужде́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "phương thức lập luận suy lý",
+          "example": "Эссе-рассуждение требует чёткой композиции и логики изложения."
+        },
+        {
+          "word": "вы́вод",
+          "gram": "danh từ giống đực",
+          "meaning": "kết luận tổng kết bài viết",
+          "example": "В заключительной части автор формулирует главный вывод работы."
+        },
+        {
+          "word": "пи́сьменная речь",
+          "gram": "cụm danh từ cái",
+          "meaning": "văn phong viết chuẩn mực",
+          "example": "Развитая письменная речь демонстрирует высокий уровень культуры и образования."
+        }
+      ]
+    }
   ]
 }

@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Dùng thành thạo các cấu trúc liên từ, phân từ và trạng ngữ chỉ thể cách."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Bài phê bình nghệ thuật (Рецензия)",
+      "rows": [
+        {
+          "word": "реце́нзия",
+          "gram": "danh từ giống cái",
+          "meaning": "bài đánh giá phê bình chuyên môn",
+          "example": "Театральный критик написал глубокую рецензию на новую постановку."
+        },
+        {
+          "word": "режиссу́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "nghệ thuật đạo diễn sân khấu",
+          "example": "Необычная режиссура открыла классическую пьесу с неожиданной стороны."
+        },
+        {
+          "word": "актёрская игра́",
+          "gram": "cụm danh từ cái",
+          "meaning": "diễn xuất của dàn diễn viên",
+          "example": "Искренняя актёрская игра заставила зал сопереживать героям до слёз."
+        },
+        {
+          "word": "сценогра́фия",
+          "gram": "danh từ giống cái",
+          "meaning": "mỹ thuật thiết kế sân khấu",
+          "example": "Лаконичная сценография подчеркнула драматизм спектакля."
+        }
+      ]
+    }
   ]
 }

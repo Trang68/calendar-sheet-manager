@@ -28,5 +28,36 @@
       "Giá trị của dòng phim nghệ thuật (art-house) độc lập khai thác chiều sâu tâm lý.",
       "Một bộ phim đã làm thay đổi cách nhìn của bạn về cuộc đời."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Nghệ thuật thứ bảy (Кинематограф)",
+      "rows": [
+        {
+          "word": "кинемато́граф",
+          "gram": "danh từ giống đực",
+          "meaning": "nghệ thuật điện ảnh",
+          "example": "Классический советский кинематограф отличается душевной искренностью."
+        },
+        {
+          "word": "мора́ль",
+          "gram": "danh từ giống cái",
+          "meaning": "đạo lý, bài học luân lý",
+          "example": "Фильм заставляет задуматься о морали и справедливости."
+        },
+        {
+          "word": "о́браз",
+          "gram": "danh từ giống đực",
+          "meaning": "hình tượng nghệ thuật",
+          "example": "Актёр создал яркий и запоминающийся образ героя."
+        },
+        {
+          "word": "влия́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sức ảnh hưởng tác động",
+          "example": "Качественное кино оказывает сильное воспитательное влияние на молодёжь."
+        }
+      ]
+    }
+  ]
 }

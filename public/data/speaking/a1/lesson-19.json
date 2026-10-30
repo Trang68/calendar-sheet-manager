@@ -52,5 +52,36 @@
       "Мы готовим вкусные традиционные блюда... (Chúng tôi nấu những món ăn truyền thống ngon...)",
       "Все дарят друг другу подарки... (Mọi người tặng quà cho nhau...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Ngày Tết và Lễ hội (Праздники)",
+      "rows": [
+        {
+          "word": "поздравле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lời chúc mừng",
+          "example": "Сердечные поздравления с праздником."
+        },
+        {
+          "word": "салю́т",
+          "gram": "danh từ giống đực",
+          "meaning": "pháo hoa",
+          "example": "Праздничный салют над городом."
+        },
+        {
+          "word": "тради́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "truyền thống",
+          "example": "Старинная добрая традиция."
+        },
+        {
+          "word": "весе́лье",
+          "gram": "danh từ giống trung",
+          "meaning": "sự vui vẻ, hân hoan",
+          "example": "Шумное праздничное веселье."
+        }
+      ]
+    }
+  ]
 }

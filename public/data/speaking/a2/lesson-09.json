@@ -28,5 +28,36 @@
       "Bạn thường dành bao nhiêu thời gian mỗi tuần cho sở thích này?",
       "Sở thích mang lại cho bạn những cảm xúc và kỹ năng gì mới?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Sở thích và Đam mê (Хобби)",
+      "rows": [
+        {
+          "word": "увлече́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "đam mê, thú vui",
+          "example": "Моё давнее увлечение живописью."
+        },
+        {
+          "word": "расслабля́ться",
+          "gram": "động từ",
+          "meaning": "thư giãn thả lỏng",
+          "example": "Музыка помогает расслабиться после пар."
+        },
+        {
+          "word": "вдохнове́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "nguồn cảm hứng",
+          "example": "Природа дарит неиссякаемое вдохновение."
+        },
+        {
+          "word": "тала́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "tài năng",
+          "example": "Развивать творческие таланты."
+        }
+      ]
+    }
+  ]
 }

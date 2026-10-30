@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Kết luận đúc rút thành công thức sắc bén, hữu ích."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Báo cáo xu hướng nghề nghiệp (Рынок труда)",
+      "rows": [
+        {
+          "word": "ры́нок труда́",
+          "gram": "cụm danh từ đực",
+          "meaning": "thị trường lao động việc làm",
+          "example": "Современный рынок труда требует постоянного освоения смежных навыков."
+        },
+        {
+          "word": "тенде́нция",
+          "gram": "danh từ giống cái",
+          "meaning": "xu hướng phát triển vận động",
+          "example": "Главная тенденция — рост популярности удалённой и проектной занятости."
+        },
+        {
+          "word": "за́нятость",
+          "gram": "danh từ giống cái",
+          "meaning": "tình trạng có việc làm",
+          "example": "Уровень занятости выпускников технических специальностей остаётся высоким."
+        },
+        {
+          "word": "прогно́з",
+          "gram": "danh từ giống đực",
+          "meaning": "dự báo tương lai",
+          "example": "Аналитический прогноз предсказывает рост спроса на специалистов в сфере биотехнологий."
+        }
+      ]
+    }
   ]
 }

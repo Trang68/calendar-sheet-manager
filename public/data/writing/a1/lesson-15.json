@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thú cưng trong nhà (Питомцы)",
+      "rows": [
+        {
+          "word": "соба́ка",
+          "gram": "danh từ giống cái",
+          "meaning": "con chó",
+          "example": "У меня живёт преданная собака."
+        },
+        {
+          "word": "кот / ко́шка",
+          "gram": "danh từ",
+          "meaning": "con mèo",
+          "example": "Пушистый серый кот."
+        },
+        {
+          "word": "корми́ть",
+          "gram": "động từ",
+          "meaning": "cho ăn",
+          "example": "Я кормлю кота два раза в день."
+        },
+        {
+          "word": "друг",
+          "gram": "danh từ giống đực",
+          "meaning": "người bạn",
+          "example": "Собака — верный друг человека."
+        }
+      ]
+    }
   ]
 }

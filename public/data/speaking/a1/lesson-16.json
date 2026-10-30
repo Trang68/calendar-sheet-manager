@@ -52,5 +52,36 @@
       "После пар мы идём в библиотеку... (Sau giờ học chúng tôi vào thư viện...)",
       "Учиться трудно, но очень интересно! (Học tuy khó nhưng vô cùng thú vị!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Giờ học trên giảng đường (В университете)",
+      "rows": [
+        {
+          "word": "университе́т",
+          "gram": "danh từ giống đực",
+          "meaning": "trường đại học",
+          "example": "Я учусь в университете в Москве."
+        },
+        {
+          "word": "па́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "tiết học đôi (90p)",
+          "example": "Сегодня у нас четыре пары."
+        },
+        {
+          "word": "аудито́рия",
+          "gram": "danh từ giống cái",
+          "meaning": "giảng đường, phòng học",
+          "example": "Аудитория номер триста пять."
+        },
+        {
+          "word": "заня́тие",
+          "gram": "danh từ giống trung",
+          "meaning": "buổi học",
+          "example": "Занятия начинаются вовремя."
+        }
+      ]
+    }
+  ]
 }

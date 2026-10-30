@@ -98,5 +98,36 @@
       "ans": "A",
       "explain": "Anna hứa: mua thuốc ở tiệm thuốc kèm theo mật ong và chanh."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Hỏi thăm sức khỏe & Khám bệnh (Здоровье)",
+      "rows": [
+        {
+          "word": "самочу́вствие",
+          "gram": "danh từ giống trung",
+          "meaning": "tình trạng sức khỏe, thể trạng",
+          "example": "Как ваше сегодняшнее самочувствие?"
+        },
+        {
+          "word": "вызыва́ть врача́",
+          "gram": "cụm động từ",
+          "meaning": "gọi bác sĩ tới khám",
+          "example": "Нужно вызвать врача на дом."
+        },
+        {
+          "word": "сла́бость",
+          "gram": "danh từ giống cái",
+          "meaning": "sự suy nhược, mệt mỏi",
+          "example": "Я чувствую слабость и озноб."
+        },
+        {
+          "word": "посте́льный режи́м",
+          "gram": "cụm danh từ đực",
+          "meaning": "chế độ nghỉ ngơi tại giường",
+          "example": "Врач назначил строгий постельный режим."
+        }
+      ]
+    }
   ]
 }

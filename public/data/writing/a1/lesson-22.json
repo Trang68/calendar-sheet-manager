@@ -45,5 +45,36 @@
       "criteria": "Cấu trúc chúc",
       "desc": "Dùng đúng «Желаю тебе + Cách 2»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tin nhắn rủ bạn (Сообщение)",
+      "rows": [
+        {
+          "word": "свобо́ден",
+          "gram": "tính từ ngắn",
+          "meaning": "rảnh rỗi",
+          "example": "Ты свободен сегодня вечером?"
+        },
+        {
+          "word": "встре́титься",
+          "gram": "động từ",
+          "meaning": "gặp nhau",
+          "example": "Давай встретимся в кафе у метро."
+        },
+        {
+          "word": "ча́шка",
+          "gram": "danh từ giống cái",
+          "meaning": "tách / ly",
+          "example": "Выпьем по чашке кофе."
+        },
+        {
+          "word": "ждать",
+          "gram": "động từ",
+          "meaning": "chờ đợi",
+          "example": "Я буду ждать тебя в шесть часов."
+        }
+      ]
+    }
   ]
 }

@@ -254,5 +254,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Hẹn gặp lúc 18h40 trước rạp.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Điện thoại & Mời mọc (По телефону)",
+      "rows": [
+        {
+          "word": "телефо́н",
+          "gram": "danh từ giống đực",
+          "meaning": "điện thoại",
+          "example": "Алло, кто у телефона?"
+        },
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ",
+          "meaning": "mời mọc",
+          "example": "Я хочу пригласить тебя в кино."
+        },
+        {
+          "word": "сеа́нс",
+          "gram": "danh từ giống đực",
+          "meaning": "suất chiếu phim",
+          "example": "Сеанс начинается в шесть вечера."
+        },
+        {
+          "word": "встре́ча",
+          "gram": "danh từ giống cái",
+          "meaning": "cuộc gặp mặt",
+          "example": "Договорились о встрече у метро."
+        }
+      ]
+    }
   ]
 }

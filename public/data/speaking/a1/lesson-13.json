@@ -52,5 +52,36 @@
       "Пирог был невероятно вкусным... (Bánh pỉ-rốc ngon không thể tin nổi...)",
       "Приглашаю вас в гости ко мне! (Tôi mời bạn dịp tới ghé thăm nhà tôi!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đến chơi nhà & Trà bánh (В гостях)",
+      "rows": [
+        {
+          "word": "хозя́ин / хозя́йка",
+          "gram": "danh từ",
+          "meaning": "chủ nhà",
+          "example": "Хозяева очень рады гостям."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ",
+          "meaning": "mời ăn, tiếp đãi",
+          "example": "Хозяйка угощает пирогами."
+        },
+        {
+          "word": "вку́сно",
+          "gram": "phó từ",
+          "meaning": "ngon miệng",
+          "example": "Всё было невероятно вкусно!"
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ",
+          "meaning": "cảm ơn",
+          "example": "Благодарю за тёплый приём."
+        }
+      ]
+    }
+  ]
 }

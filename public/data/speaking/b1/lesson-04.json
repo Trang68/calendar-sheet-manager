@@ -28,5 +28,36 @@
       "Phân tích sự khác biệt giữa quan niệm gia đình truyền thống và gia đình trẻ ngày nay.",
       "Đề xuất những giải pháp để bảo tồn sự gắn kết ấm áp giữa các thành viên."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Gia đình & Giá trị truyền thống (Институт семьи)",
+      "rows": [
+        {
+          "word": "институ́т семьи́",
+          "gram": "cụm danh từ đực",
+          "meaning": "thiết chế gia đình xã hội",
+          "example": "Институт семьи трансформируется под влиянием времени."
+        },
+        {
+          "word": "поколе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thế hệ",
+          "example": "Диалог поколений необходим для сохранения семейных традиций."
+        },
+        {
+          "word": "взаимопонима́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự thấu hiểu lẫn nhau",
+          "example": "Взаимопонимание между супругами — основа крепкого брака."
+        },
+        {
+          "word": "воспита́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự nuôi dưỡng giáo dục",
+          "example": "Воспитание детей требует безграничного терпения и любви."
+        }
+      ]
+    }
+  ]
 }

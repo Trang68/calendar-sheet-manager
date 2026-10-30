@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Khích lệ bạn bè cùng tham gia chuyến phiêu lưu."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư bàn kế hoạch nghỉ hè (Летний отпуск)",
+      "rows": [
+        {
+          "word": "кани́кулы",
+          "gram": "danh từ số nhiều",
+          "meaning": "kỳ nghỉ hè sau kỳ thi",
+          "example": "Долгожданные трёхмесячные летние каникулы."
+        },
+        {
+          "word": "о́зеро",
+          "gram": "danh từ giống trung",
+          "meaning": "hồ nước",
+          "example": "Мечта съездить на священное озеро Байкал."
+        },
+        {
+          "word": "криста́льный",
+          "gram": "tính từ",
+          "meaning": "trong suốt như pha lê",
+          "example": "Кристально чистая прозрачная вода."
+        },
+        {
+          "word": "отве́т",
+          "gram": "danh từ giống đực",
+          "meaning": "thư hồi âm",
+          "example": "С нетерпением жду твоего скорого ответа."
+        }
+      ]
+    }
   ]
 }

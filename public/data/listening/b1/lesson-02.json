@@ -90,5 +90,36 @@
       "ans": "C",
       "explain": "Bài phóng sự nêu rõ: «Поезд пересекает восемь часовых поясов»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Hành trình Trans-Siberian (Транссиб)",
+      "rows": [
+        {
+          "word": "магистра́ль",
+          "gram": "danh từ giống cái",
+          "meaning": "tuyến đường huyết mạch, đại lộ ray",
+          "example": "Транссибирская магистраль соединяет Москву и Владивосток."
+        },
+        {
+          "word": "купе́",
+          "gram": "danh từ không đổi",
+          "meaning": "khoang tàu (4 giường/2 giường)",
+          "example": "Мы купили билеты в четырёхместное купе."
+        },
+        {
+          "word": "проводни́к",
+          "gram": "danh từ giống đực",
+          "meaning": "nhân viên phục vụ toa tàu",
+          "example": "Проводник принёс горячий чай в подстаканниках."
+        },
+        {
+          "word": "просто́ры",
+          "gram": "danh từ số nhiều",
+          "meaning": "không gian bao la, vùng đất rộng lớn",
+          "example": "За окном поезда открываются сибирские просторы."
+        }
+      ]
+    }
   ]
 }

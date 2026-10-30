@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Đề ngày tháng, nêu rõ lớp và cam kết nộp giấy tờ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đơn xin nghỉ học vì ốm (Заявление)",
+      "rows": [
+        {
+          "word": "заявле́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lá đơn xin phép",
+          "example": "Официальное заявление декану факультета."
+        },
+        {
+          "word": "про́пуск",
+          "gram": "danh từ giống đực",
+          "meaning": "buổi vắng mặt nghỉ học",
+          "example": "Пропуск занятий по уважительной причине."
+        },
+        {
+          "word": "спра́вка",
+          "gram": "danh từ giống cái",
+          "meaning": "giấy khám chứng nhận y tế",
+          "example": "Справка от врача из студенческой поликлиники."
+        },
+        {
+          "word": "уважи́тельный",
+          "gram": "tính từ",
+          "meaning": "chính đáng, có lý do",
+          "example": "Пропуск занятий по уважительной причине болезни."
+        }
+      ]
+    }
   ]
 }

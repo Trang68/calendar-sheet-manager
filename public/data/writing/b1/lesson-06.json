@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Chia động từ, kết hợp từ chính xác (обладать навыками, реализовать проекты)."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Hồ sơ xin việc và Thư ngỏ (Сопроводительное письмо)",
+      "rows": [
+        {
+          "word": "сопроводи́тельное письмо́",
+          "gram": "cụm danh từ trung",
+          "meaning": "thư ngỏ giới thiệu ứng tuyển (Cover Letter)",
+          "example": "Сопроводительное письмо раскрывает мотивацию соискателя работать в компании."
+        },
+        {
+          "word": "кандида́т",
+          "gram": "danh từ giống đực",
+          "meaning": "ứng viên nộp hồ sơ",
+          "example": "Кандидат обладает всеми необходимыми профессиональными навыками."
+        },
+        {
+          "word": "мотива́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "động lực thôi thúc cống hiến",
+          "example": "Высокая мотивация и желание учиться важнее многолетнего стажа."
+        },
+        {
+          "word": "приложе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "tài liệu đính kèm hồ sơ",
+          "example": "В приложении к письму направляю резюме и копии дипломов."
+        }
+      ]
+    }
   ]
 }

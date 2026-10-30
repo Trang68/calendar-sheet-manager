@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Đầy đủ tiêu đề, các đánh giá cụ thể và lời cam kết mạnh mẽ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư giới thiệu học thuật (Рекомендательное письмо)",
+      "rows": [
+        {
+          "word": "рекоменда́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "người viết thư giới thiệu bảo lãnh",
+          "example": "Профессор выступил рекомендателем выпускника для поступления в аспирантуру."
+        },
+        {
+          "word": "приле́жность",
+          "gram": "danh từ giống cái",
+          "meaning": "tính cần cù chăm chỉ chuyên tâm",
+          "example": "Студент отличается исключительной прилежностью и научной честностью."
+        },
+        {
+          "word": "потенциа́л",
+          "gram": "danh từ giống đực",
+          "meaning": "tiềm năng phát triển tương lai",
+          "example": "Молодой исследователь обладает высоким творческим и научным потенциалом."
+        },
+        {
+          "word": "характери́стика",
+          "gram": "danh từ giống cái",
+          "meaning": "bản nhận xét đánh giá phẩm chất",
+          "example": "В положительной характеристике отмечены лидерские качества кандидата."
+        }
+      ]
+    }
   ]
 }

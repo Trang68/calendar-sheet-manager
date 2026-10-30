@@ -250,5 +250,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Đi sang phòng trưng bày kế tiếp.."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Bảo tàng (В музее)",
+      "rows": [
+        {
+          "word": "музе́й",
+          "gram": "danh từ giống đực",
+          "meaning": "bảo tàng",
+          "example": "В субботу мы идём в исторический музей."
+        },
+        {
+          "word": "карти́на",
+          "gram": "danh từ giống cái",
+          "meaning": "bức tranh",
+          "example": "В этом зале висят знаменитые картины."
+        },
+        {
+          "word": "экскурсово́д",
+          "gram": "danh từ giống đực",
+          "meaning": "hướng dẫn viên",
+          "example": "Экскурсовод рассказывает историю города."
+        },
+        {
+          "word": "биле́т",
+          "gram": "danh từ giống đực",
+          "meaning": "vé vào cửa",
+          "example": "Один студенческий билет, пожалуйста."
+        }
+      ]
+    }
   ]
 }

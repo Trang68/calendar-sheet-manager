@@ -28,5 +28,36 @@
       "Những áp lực tiêu cực lên di sản lịch sử và cảnh quan môi trường tại các điểm nóng du lịch.",
       "Quan điểm của bạn về mô hình du lịch sinh thái có trách nhiệm."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Du lịch và Bản sắc văn hóa (Массовый туризм)",
+      "rows": [
+        {
+          "word": "ма́ссовый тури́зм",
+          "gram": "cụm danh từ đực",
+          "meaning": "du lịch ồ ạt đại trà",
+          "example": "Массовый туризм создаёт серьёзную нагрузку на исторические памятники."
+        },
+        {
+          "word": "аутенти́чность",
+          "gram": "danh từ giống cái",
+          "meaning": "tính nguyên bản, bản sắc chân thực",
+          "example": "Путешественники ценят аутентичность древних русских сёл."
+        },
+        {
+          "word": "гостеприи́мство",
+          "gram": "danh từ giống trung",
+          "meaning": "lòng hiếu khách nồng hậu",
+          "example": "Традиционное русское гостеприимство известно далеко за пределами страны."
+        },
+        {
+          "word": "самобы́тность",
+          "gram": "danh từ giống cái",
+          "meaning": "tính độc đáo đặc sắc riêng có",
+          "example": "Каждый регион сохраняет свою культурную самобытность."
+        }
+      ]
+    }
+  ]
 }

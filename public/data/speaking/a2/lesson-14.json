@@ -28,5 +28,36 @@
       "Công việc đó đòi hỏi những tố chất và kỹ năng quan trọng nào?",
       "Bạn đang chuẩn bị những gì ngay từ bây giờ để đạt được mục tiêu?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Nghề nghiệp mơ ước (Профессия мечты)",
+      "rows": [
+        {
+          "word": "специали́ст",
+          "gram": "danh từ giống đực",
+          "meaning": "chuyên gia trình độ cao",
+          "example": "Востребованный IT-специалист на рынке труда."
+        },
+        {
+          "word": "карье́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "sự nghiệp công danh",
+          "example": "Успешная профессиональная карьера."
+        },
+        {
+          "word": "на́вык",
+          "gram": "danh từ giống đực",
+          "meaning": "kỹ năng thực tiễn",
+          "example": "Практические навыки командной работы."
+        },
+        {
+          "word": "достига́ть",
+          "gram": "động từ",
+          "meaning": "chinh phục, đạt được",
+          "example": "Достигать поставленных профессиональных целей."
+        }
+      ]
+    }
+  ]
 }

@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Водитель уточнил, что маршрут по набережной займёт около 20 минут."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Lái xe & Định vị đường đi (Такси)",
+      "rows": [
+        {
+          "word": "навига́тор",
+          "gram": "danh từ giống đực",
+          "meaning": "thiết bị định vị GPS",
+          "example": "Навигатор проложил оптимальный маршрут."
+        },
+        {
+          "word": "на́бережная",
+          "gram": "danh từ giống cái",
+          "meaning": "đường ven bờ kè sông",
+          "example": "Поехать в объезд по набережной реки."
+        },
+        {
+          "word": "движе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lưu thông xe cộ",
+          "example": "Плотное движение в вечерний час пик."
+        },
+        {
+          "word": "успева́ть",
+          "gram": "động từ",
+          "meaning": "kịp giờ",
+          "example": "Мы успеваем точно к началу занятий."
+        }
+      ]
+    }
   ]
 }

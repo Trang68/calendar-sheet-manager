@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Mở đầu và kết thúc ấm áp đúng văn phong người Việt viết tiếng Nga."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư gửi cha mẹ ở quê nhà (Письмо)",
+      "rows": [
+        {
+          "word": "роди́тели",
+          "gram": "danh từ số nhiều",
+          "meaning": "bố mẹ kính yêu",
+          "example": "Дорогие и любимые мама и папа!"
+        },
+        {
+          "word": "здоро́вье",
+          "gram": "danh từ giống trung",
+          "meaning": "sức khỏe bình an",
+          "example": "Не волнуйтесь, со здоровьем всё в порядке."
+        },
+        {
+          "word": "учёба",
+          "gram": "danh từ giống cái",
+          "meaning": "học tập giảng đường",
+          "example": "Учёба в университете очень интересная."
+        },
+        {
+          "word": "обнима́ть",
+          "gram": "động từ",
+          "meaning": "ôm ấp yêu thương",
+          "example": "Крепко обнимаю вас и скучаю."
+        }
+      ]
+    }
   ]
 }

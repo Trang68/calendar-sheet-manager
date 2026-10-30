@@ -262,5 +262,36 @@
       "ans": "A",
       "explain": "Giúp người học ghi nhớ và áp dụng mẫu câu: Lúc 18:00 (6 giờ tối).."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Lịch trình hàng ngày (Рабочий день)",
+      "rows": [
+        {
+          "word": "просыпа́ться",
+          "gram": "động từ",
+          "meaning": "thức giấc",
+          "example": "Я просыпаюсь в семь часов утра."
+        },
+        {
+          "word": "за́втракать",
+          "gram": "động từ",
+          "meaning": "ăn sáng",
+          "example": "Мы завтракаем вместе."
+        },
+        {
+          "word": "рабо́та",
+          "gram": "danh từ giống cái",
+          "meaning": "công việc",
+          "example": "Моя работа начинается в девять."
+        },
+        {
+          "word": "ве́чер",
+          "gram": "danh từ giống đực",
+          "meaning": "buổi tối",
+          "example": "Вечером я отдыхаю дома."
+        }
+      ]
+    }
   ]
 }

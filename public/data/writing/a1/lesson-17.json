@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đặt bàn và Đánh giá (Отзыв о кафе)",
+      "rows": [
+        {
+          "word": "зака́з",
+          "gram": "danh từ giống đực",
+          "meaning": "đơn đặt",
+          "example": "Наш заказ принесли очень быстро."
+        },
+        {
+          "word": "о́тзыв",
+          "gram": "danh từ giống đực",
+          "meaning": "bài đánh giá, nhận xét",
+          "example": "Я написал положительный отзыв."
+        },
+        {
+          "word": "обслу́живание",
+          "gram": "danh từ giống trung",
+          "meaning": "chất lượng phục vụ",
+          "example": "Вежливое и быстрое обслуживание."
+        },
+        {
+          "word": "рекомендова́ть",
+          "gram": "động từ",
+          "meaning": "khuyên, giới thiệu",
+          "example": "Рекомендую всем посетить это кафе."
+        }
+      ]
+    }
   ]
 }

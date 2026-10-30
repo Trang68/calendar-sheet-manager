@@ -28,5 +28,36 @@
       "Vấn đề giao thông công cộng và xử lý rác thải nên được quy hoạch ra sao?",
       "Làm thế nào để các công trình kiến trúc cổ không bị phá hủy bởi các dự án thương mại?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đô thị thông minh & Đáng sống (Городская среда)",
+      "rows": [
+        {
+          "word": "городска́я среда́",
+          "gram": "cụm danh từ cái",
+          "meaning": "môi trường đô thị sinh thái",
+          "example": "Удобная городская среда делает жизнь людей комфортнее."
+        },
+        {
+          "word": "благоустро́йство",
+          "gram": "danh từ giống trung",
+          "meaning": "chỉnh trang quy hoạch công cộng",
+          "example": "Благоустройство парков привлекает семьи с детьми."
+        },
+        {
+          "word": "пешехо́дная зо́на",
+          "gram": "cụm danh từ cái",
+          "meaning": "tuyến phố đi bộ",
+          "example": "В центре города создана большая пешеходная зона без машин."
+        },
+        {
+          "word": "урбани́стика",
+          "gram": "danh từ giống cái",
+          "meaning": "ngành quy hoạch đô thị",
+          "example": "Современная урбанистика уделяет главное внимание пешеходам."
+        }
+      ]
+    }
+  ]
 }

@@ -52,5 +52,36 @@
       "Светит солнце / идёт снег... (Trời có nắng / tuyết rơi...)",
       "Я очень люблю гулять, потому что... (Tôi rất thích đi dạo vì...)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Bốn mùa và Khí hậu (Времена года)",
+      "rows": [
+        {
+          "word": "зима́",
+          "gram": "danh từ giống cái",
+          "meaning": "mùa đông",
+          "example": "Зимой лежит белый снег."
+        },
+        {
+          "word": "весна́",
+          "gram": "danh từ giống cái",
+          "meaning": "mùa xuân",
+          "example": "Весной цветут деревья."
+        },
+        {
+          "word": "ле́то",
+          "gram": "danh từ giống trung",
+          "meaning": "mùa hè",
+          "example": "Летом тепло и солнечно."
+        },
+        {
+          "word": "о́сень",
+          "gram": "danh từ giống cái",
+          "meaning": "mùa thu",
+          "example": "Осенью желтеют листья."
+        }
+      ]
+    }
+  ]
 }

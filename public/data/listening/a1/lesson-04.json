@@ -262,5 +262,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Từ vựng Mua sắm quần áo (В магазине)",
+      "rows": [
+        {
+          "word": "оде́жда",
+          "gram": "danh từ giống cái",
+          "meaning": "quần áo, y phục",
+          "example": "Здесь продаётся тёплая одежда."
+        },
+        {
+          "word": "разме́р",
+          "gram": "danh từ giống đực",
+          "meaning": "kích cỡ (size)",
+          "example": "Какой у вас размер?"
+        },
+        {
+          "word": "ку́ртка",
+          "gram": "danh từ giống cái",
+          "meaning": "áo khoác",
+          "example": "Эта зимняя куртка очень удобная."
+        },
+        {
+          "word": "приме́рочная",
+          "gram": "danh từ giống cái",
+          "meaning": "phòng thử đồ",
+          "example": "Где находится примерочная?"
+        }
+      ]
+    }
+  ]
 }

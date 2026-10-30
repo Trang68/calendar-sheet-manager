@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Các cụm từ: языковой барьер, тоска по родине, грамотно планировать."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Bài viết báo tường sinh viên (Студенческая жизнь)",
+      "rows": [
+        {
+          "word": "первоку́рсник",
+          "gram": "danh từ giống đực",
+          "meaning": "sinh viên năm thứ nhất",
+          "example": "Старшекурсники подготовили памятку с полезными советами для первокурсников."
+        },
+        {
+          "word": "студсове́т",
+          "gram": "danh từ giống đực",
+          "meaning": "hội đồng tự quản sinh viên",
+          "example": "Студсовет организует спортивные турниры и творческие вечера."
+        },
+        {
+          "word": "сове́т",
+          "gram": "danh từ giống đực",
+          "meaning": "lời khuyên hữu ích",
+          "example": "Следуя советам наставников, легче сдать первую сессию."
+        },
+        {
+          "word": "тради́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "truyền thống gắn bó sinh viên",
+          "example": "Посвящение в студенты — старейшая традиция нашего университета."
+        }
+      ]
+    }
   ]
 }

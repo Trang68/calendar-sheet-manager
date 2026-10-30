@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Sử dụng câu phụ định ngữ, câu điều kiện lịch sự (был бы признателен, если бы)."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Báo cáo tiến độ luận văn (Письмо руководителю)",
+      "rows": [
+        {
+          "word": "ста́тус",
+          "gram": "danh từ giống đực",
+          "meaning": "tình trạng tiến độ hiện thời",
+          "example": "Сообщаю вам о статусе подготовки третьей главы дипломной работы."
+        },
+        {
+          "word": "чернови́к",
+          "gram": "danh từ giống đực",
+          "meaning": "bản thảo đầu tiên",
+          "example": "Направляю на проверку черновик теоретической части исследования."
+        },
+        {
+          "word": "пра́вки",
+          "gram": "danh từ số nhiều",
+          "meaning": "các chỉnh sửa sửa chữa",
+          "example": "Я учёл все замечания и внёс необходимые правки в текст."
+        },
+        {
+          "word": "консульта́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "buổi trao đổi tham vấn ý kiến",
+          "example": "Буду благодарен за возможность очной консультации на этой неделе."
+        }
+      ]
+    }
   ]
 }

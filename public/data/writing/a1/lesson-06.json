@@ -57,5 +57,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ngoại hình & Tính cách (Мой друг)",
+      "rows": [
+        {
+          "word": "характеристика",
+          "gram": "danh từ giống cái",
+          "meaning": "tính cách",
+          "example": "У моего друга весёлый характер."
+        },
+        {
+          "word": "глаза́",
+          "gram": "danh từ số nhiều",
+          "meaning": "đôi mắt",
+          "example": "У неё добрые карие глаза."
+        },
+        {
+          "word": "во́лосы",
+          "gram": "danh từ số nhiều",
+          "meaning": "mái tóc",
+          "example": "Тёмные короткие волосы."
+        },
+        {
+          "word": "у́мный",
+          "gram": "tính từ",
+          "meaning": "thông minh",
+          "example": "Он очень умный и начитанный."
+        }
+      ]
+    }
   ]
 }

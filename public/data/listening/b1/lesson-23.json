@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Соискатель окончил магистратуру по специальности «Прикладная математика»."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Ngày hội việc làm (Ярмарка вакансий)",
+      "rows": [
+        {
+          "word": "соиска́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "ứng viên tìm việc",
+          "example": "Соискатель представил портфолио с реализованными проектами."
+        },
+        {
+          "word": "вака́нсия",
+          "gram": "danh từ giống cái",
+          "meaning": "vị trí tuyển dụng trống",
+          "example": "Компания открыла вакансию ведущего аналитика данных."
+        },
+        {
+          "word": "собесе́дование",
+          "gram": "danh từ giống trung",
+          "meaning": "cuộc phỏng vấn tuyển dụng",
+          "example": "Успешное собеседование помогло получить предложение о работе."
+        },
+        {
+          "word": "стаж",
+          "gram": "danh từ giống đực",
+          "meaning": "thâm niên, kinh nghiệm nghề nghiệp",
+          "example": "Для этой должности требуется стаж работы от трёх лет."
+        }
+      ]
+    }
   ]
 }

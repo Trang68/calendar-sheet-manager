@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Студент сообщил преподавателю о планах пройти летнюю практику в Санкт-Петербурге."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tổng kết mục tiêu B1 (Каникулы)",
+      "rows": [
+        {
+          "word": "пра́ктика",
+          "gram": "danh từ giống cái",
+          "meaning": "kỳ thực tập thực tế",
+          "example": "Прохождение летней языковой практики."
+        },
+        {
+          "word": "сертифика́т",
+          "gram": "danh từ giống đực",
+          "meaning": "chứng chỉ chuẩn hóa",
+          "example": "Сертификационный экзамен государственного образца."
+        },
+        {
+          "word": "око́нчание",
+          "gram": "danh từ giống trung",
+          "meaning": "sự hoàn thành khóa học",
+          "example": "Поздравляю с успешным окончанием курса A2!"
+        },
+        {
+          "word": "интенси́вный",
+          "gram": "tính từ",
+          "meaning": "chuyên sâu, cấp tốc",
+          "example": "Интенсивная подготовка к уровню B1."
+        }
+      ]
+    }
   ]
 }

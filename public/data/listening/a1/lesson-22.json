@@ -60,5 +60,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Thuốc & Trà chanh (Аптека)",
+      "rows": [
+        {
+          "word": "витами́ны",
+          "gram": "danh từ số nhiều",
+          "meaning": "vitamin",
+          "example": "Зимой полезно принимать витамины."
+        },
+        {
+          "word": "чай",
+          "gram": "danh từ giống đực",
+          "meaning": "trà",
+          "example": "Горячий травяной чай с лимоном."
+        },
+        {
+          "word": "лимо́н",
+          "gram": "danh từ giống đực",
+          "meaning": "quả chanh vàng",
+          "example": "Чай с мёдом и лимоном."
+        },
+        {
+          "word": "здоро́вье",
+          "gram": "danh từ giống trung",
+          "meaning": "sức khỏe",
+          "example": "Желаю вам крепкого здоровья!"
+        }
+      ]
+    }
+  ]
 }

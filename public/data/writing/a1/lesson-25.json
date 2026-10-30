@@ -41,5 +41,36 @@
       "criteria": "Nội dung tổng kết",
       "desc": "Nêu được quá trình và cam kết tiếp tục học lên A2."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tổng kết chặng đường A1 (Итоги)",
+      "rows": [
+        {
+          "word": "заверше́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự hoàn thành",
+          "example": "Успешное завершение курса A1."
+        },
+        {
+          "word": "зна́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "kiến thức",
+          "example": "Хорошие базовые знания языка."
+        },
+        {
+          "word": "ра́дость",
+          "gram": "danh từ giống cái",
+          "meaning": "niềm hân hoan",
+          "example": "Радость от первых успехов."
+        },
+        {
+          "word": "горизо́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "chân trời mới",
+          "example": "Впереди новые языковые горизонты."
+        }
+      ]
+    }
   ]
 }

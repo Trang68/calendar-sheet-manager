@@ -28,5 +28,36 @@
       "Phần kiến thức nào khiến bạn thấy thử thách nhất (phát âm, cách, động từ)?",
       "Bạn có những bí quyết gì để nhớ từ vựng và tự tin nói chuyện?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Chinh phục tiếng Nga (Изучение языка)",
+      "rows": [
+        {
+          "word": "паде́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "cách ngữ pháp (6 cách)",
+          "example": "Таблица шести падежей русского языка."
+        },
+        {
+          "word": "произноше́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "ngữ âm phát âm",
+          "example": "Правильное мягкое произношение звуков."
+        },
+        {
+          "word": "ударе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "dấu trọng âm từ",
+          "example": "Ударение в русском языке подвижное."
+        },
+        {
+          "word": "словарный запас",
+          "gram": "cụm danh từ đực",
+          "meaning": "vốn từ vựng",
+          "example": "Постоянно расширять активный словарный запас."
+        }
+      ]
+    }
+  ]
 }

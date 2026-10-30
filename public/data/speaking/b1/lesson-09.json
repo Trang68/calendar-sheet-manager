@@ -28,5 +28,36 @@
       "Giá trị trường tồn không thể thay thế của sách in (vẻ đẹp mỹ thuật, bảo vệ thị lực, tính lưu trữ gia bảo).",
       "Thói quen cá nhân của bạn khi tiếp cận tri thức."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Sách điện tử vs Sách giấy (Чтение)",
+      "rows": [
+        {
+          "word": "печа́тное изда́ние",
+          "gram": "cụm danh từ trung",
+          "meaning": "ấn phẩm in trên giấy",
+          "example": "Многие предпочитают печатные издания из-за запаха типографской краски."
+        },
+        {
+          "word": "электро́нный ри́дер",
+          "gram": "cụm danh từ đực",
+          "meaning": "máy đọc sách kỹ thuật số",
+          "example": "Электронный ридер удобно брать с собой в дальнюю поездку."
+        },
+        {
+          "word": "такти́льный",
+          "gram": "tính từ",
+          "meaning": "thuộc về xúc giác cảm nhận",
+          "example": "Тактильные ощущения от перелистывания страниц незаменимы."
+        },
+        {
+          "word": "па́мять устро́йства",
+          "gram": "cụm danh từ cái",
+          "meaning": "dung lượng bộ nhớ thiết bị",
+          "example": "Память устройства позволяет хранить целую библиотеку."
+        }
+      ]
+    }
+  ]
 }

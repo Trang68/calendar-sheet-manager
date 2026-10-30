@@ -53,5 +53,36 @@
       "criteria": "Dung lượng từ",
       "desc": "Đạt đúng số lượng từ yêu cầu theo chuẩn khảo thí quốc tế TRKI A1."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thời gian rảnh rỗi (Моё хобби)",
+      "rows": [
+        {
+          "word": "свобо́дное вре́мя",
+          "gram": "cụm danh từ trung",
+          "meaning": "thời gian rảnh",
+          "example": "В свободное время я рисую."
+        },
+        {
+          "word": "рисова́ть",
+          "gram": "động từ",
+          "meaning": "vẽ tranh",
+          "example": "Я люблю рисовать пейзажи."
+        },
+        {
+          "word": "фотогра́фия",
+          "gram": "danh từ giống cái",
+          "meaning": "nhiếp ảnh, bức ảnh",
+          "example": "Увлекаться фотографией."
+        },
+        {
+          "word": "интере́сный",
+          "gram": "tính từ",
+          "meaning": "thú vị",
+          "example": "Очень интересное занятие."
+        }
+      ]
+    }
   ]
 }

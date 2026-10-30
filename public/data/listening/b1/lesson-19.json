@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "В заповедной зоне запрещены промышленная вырубка и любая хозяйственная эксплуатация."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Khu bảo tồn thiên nhiên (Заповедник)",
+      "rows": [
+        {
+          "word": "запове́дник",
+          "gram": "danh từ giống đực",
+          "meaning": "khu bảo tồn thiên nhiên quốc gia",
+          "example": "В сибирском заповеднике охраняются редкие виды животных."
+        },
+        {
+          "word": "тайга́",
+          "gram": "danh từ giống cái",
+          "meaning": "rừng lá kim taiga",
+          "example": "Бескрайняя тайга покрывает большую часть Сибири."
+        },
+        {
+          "word": "фа́уна",
+          "gram": "danh từ giống cái",
+          "meaning": "khu hệ động vật",
+          "example": "Учёные изучают уникальную фауну Байкальского региона."
+        },
+        {
+          "word": "экосисте́ма",
+          "gram": "danh từ giống cái",
+          "meaning": "hệ sinh thái",
+          "example": "Сохранение хрупкой экосистемы — главная задача экологов."
+        }
+      ]
+    }
   ]
 }

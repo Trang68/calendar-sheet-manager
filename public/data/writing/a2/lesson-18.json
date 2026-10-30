@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Giới từ và cách chỉ địa điểm chính xác."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thay đổi đơn hàng online (Интернет-заказ)",
+      "rows": [
+        {
+          "word": "зака́з",
+          "gram": "danh từ giống đực",
+          "meaning": "mã đơn mua hàng",
+          "example": "Номер заказа на покупку электронной книги."
+        },
+        {
+          "word": "слу́жба подде́ржки",
+          "gram": "cụm danh từ cái",
+          "meaning": "bộ phận chăm sóc khách hàng",
+          "example": "Написать обращение в службу поддержки."
+        },
+        {
+          "word": "измени́ть",
+          "gram": "động từ",
+          "meaning": "thay đổi điều chỉnh",
+          "example": "Прошу вас изменить адрес доставки товара."
+        },
+        {
+          "word": "подтвержде́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thư điện tử xác nhận",
+          "example": "Ожидаю письменного подтверждения изменений."
+        }
+      ]
+    }
   ]
 }

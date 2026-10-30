@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Mở đầu và kết thúc tự nhiên, đúng ngữ điệu bè bạn."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Cảm ơn sự tiếp đãi nồng hậu (Благодарность)",
+      "rows": [
+        {
+          "word": "гостеприи́мство",
+          "gram": "danh từ giống trung",
+          "meaning": "sự hiếu khách",
+          "example": "Огромное спасибо за тёплое гостеприимство!"
+        },
+        {
+          "word": "ра́душный",
+          "gram": "tính từ",
+          "meaning": "nồng hậu cởi mở",
+          "example": "Радушный и сердечный приём всей семьи."
+        },
+        {
+          "word": "бесе́да",
+          "gram": "danh từ giống cái",
+          "meaning": "cuộc trò chuyện tâm sự",
+          "example": "Уютная вечерняя беседа у камина за чаем."
+        },
+        {
+          "word": "па́мять",
+          "gram": "danh từ giống cái",
+          "meaning": "ký ức sâu đậm",
+          "example": "Эта поездка навсегда останется в моей памяти."
+        }
+      ]
+    }
   ]
 }

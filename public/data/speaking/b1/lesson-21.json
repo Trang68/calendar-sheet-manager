@@ -28,5 +28,36 @@
       "Các kênh tự học hiệu quả (khóa học trực tuyến MOOC, sách chuyên ngành, hội thảo khoa học).",
       "Kế hoạch phát triển bản thân của bạn trong vòng 5 năm tới."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Học tập không ngừng (Lifelong Learning)",
+      "rows": [
+        {
+          "word": "непреры́вное образова́ние",
+          "gram": "cụm danh từ trung",
+          "meaning": "giáo dục liên tục suốt đời",
+          "example": "Концепция непрерывного образования помогает оставаться конкурентоспособным."
+        },
+        {
+          "word": "саморазви́тие",
+          "gram": "danh từ giống trung",
+          "meaning": "sự tự trau dồi hoàn thiện bản thân",
+          "example": "Книги и курсы способствуют личностному саморазвитию."
+        },
+        {
+          "word": "квалифика́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "trình độ tay nghề chuyên môn",
+          "example": "Врач регулярно повышает квалификацию на профильных семинарах."
+        },
+        {
+          "word": "кругозо́р",
+          "gram": "danh từ giống đực",
+          "meaning": "tầm hiểu biết tri thức",
+          "example": "Путешествия и чтение расширяют интеллектуальный кругозор человека."
+        }
+      ]
+    }
+  ]
 }

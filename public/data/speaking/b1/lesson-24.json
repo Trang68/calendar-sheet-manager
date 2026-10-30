@@ -28,5 +28,36 @@
       "Những mối lo ngại về quyền riêng tư và khả năng bị tấn công mạng làm tê liệt hạ tầng.",
       "Giải pháp cân bằng giữa tiện nghi công nghệ và an toàn thông tin."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đô thị số & Internet vạn vật (Умный город)",
+      "rows": [
+        {
+          "word": "у́мный го́род",
+          "gram": "cụm danh từ đực",
+          "meaning": "thành phố thông minh (Smart City)",
+          "example": "Технологии умного города оптимизируют движение транспорта и освещение."
+        },
+        {
+          "word": "да́тчик",
+          "gram": "danh từ giống đực",
+          "meaning": "cảm biến đo lường tự động",
+          "example": "Датчики мониторинга воздуха установлены на всех перекрёстках."
+        },
+        {
+          "word": "интерне́т веще́й",
+          "gram": "cụm danh từ đực",
+          "meaning": "Internet vạn vật kết nối thiết bị",
+          "example": "Интернет вещей объединяет бытовую технику в единую экосистему."
+        },
+        {
+          "word": "иннова́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "đổi mới sáng tạo công nghệ",
+          "example": "Инновации делают повседневную жизнь горожан безопаснее и быстрее."
+        }
+      ]
+    }
+  ]
 }

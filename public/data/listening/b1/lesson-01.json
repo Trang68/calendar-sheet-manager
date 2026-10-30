@@ -94,5 +94,36 @@
       "ans": "B",
       "explain": "Minh giải thích: nhờ sự giúp đỡ thân tình của bạn cùng lớp và giảng viên khoa dự bị."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Học thuật & Sau đại học (Аспирантура)",
+      "rows": [
+        {
+          "word": "аспира́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "nghiên cứu sinh tiến sĩ",
+          "example": "Аспирант пишет диссертацию по лингвистике."
+        },
+        {
+          "word": "диссерта́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "luận án tiến sĩ / thạc sĩ",
+          "example": "Защита диссертации пройдёт в июне."
+        },
+        {
+          "word": "нау́чный руководи́тель",
+          "gram": "cụm danh từ đực",
+          "meaning": "giáo viên hướng dẫn khoa học",
+          "example": "Профессор Иванов — мой научный руководитель."
+        },
+        {
+          "word": "иссле́дование",
+          "gram": "danh từ giống trung",
+          "meaning": "công trình nghiên cứu",
+          "example": "Результаты исследования опубликованы в журнале."
+        }
+      ]
+    }
   ]
 }

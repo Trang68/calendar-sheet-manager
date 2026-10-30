@@ -52,5 +52,36 @@
       "Я не ем вредную еду... (Tôi không ăn đồ ăn có hại cho sức khỏe...)",
       "Чувствую себя отлично! (Tôi cảm thấy cơ thể tuyệt vời!)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Lối sống vận động (Спорт)",
+      "rows": [
+        {
+          "word": "заря́дка",
+          "gram": "danh từ giống cái",
+          "meaning": "thể dục buổi sáng",
+          "example": "Утром я всегда делаю зарядку."
+        },
+        {
+          "word": "бег",
+          "gram": "danh từ giống đực",
+          "meaning": "chạy bộ",
+          "example": "Бег в парке укрепляет здоровье."
+        },
+        {
+          "word": "бассе́йн",
+          "gram": "danh từ giống đực",
+          "meaning": "hồ bơi",
+          "example": "Мы ходим в бассейн дважды в неделю."
+        },
+        {
+          "word": "бо́дрость",
+          "gram": "danh từ giống cái",
+          "meaning": "sự sảng khoái, năng lượng",
+          "example": "Заряд бодрости на весь рабочий день."
+        }
+      ]
+    }
+  ]
 }

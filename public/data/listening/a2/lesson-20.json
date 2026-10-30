@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Виктор отметил захватывающий сюжет и неожиданный финал картины."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đánh giá phim chiếu rạp (Кино)",
+      "rows": [
+        {
+          "word": "сюже́т",
+          "gram": "danh từ giống đực",
+          "meaning": "cốt truyện",
+          "example": "Динамичный и захватывающий сюжет."
+        },
+        {
+          "word": "развя́зка",
+          "gram": "danh từ giống cái",
+          "meaning": "hồi kết, kết cục tháo gỡ",
+          "example": "Неожиданная драматическая развязка в финале."
+        },
+        {
+          "word": "актёр",
+          "gram": "danh từ giống đực",
+          "meaning": "diễn viên",
+          "example": "Блестящая игра главных актёров."
+        },
+        {
+          "word": "атмосфе́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "bầu không khí",
+          "example": "Музыка создаёт неповторимую атмосферу."
+        }
+      ]
+    }
   ]
 }

@@ -38,5 +38,36 @@
       "Практическая польза: карьера, учёба, друзья (Lợi ích thực tế: sự nghiệp, du học, bạn bè)",
       "Заключение: пожелание единомышленникам (Kết luận: lời khuyên cho bạn bè cùng học)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đa ngôn ngữ & Giao tiếp (Изучение языков)",
+      "rows": [
+        {
+          "word": "многоязы́чие",
+          "gram": "danh từ giống trung",
+          "meaning": "tình trạng đa ngôn ngữ",
+          "example": "Многоязычие расширяет профессиональные горизонты."
+        },
+        {
+          "word": "коммуника́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "sự giao tiếp truyền thông",
+          "example": "Эффективная коммуникация помогает находить общий язык с партнёрами."
+        },
+        {
+          "word": "языково́й барье́р",
+          "gram": "cụm danh từ đực",
+          "meaning": "rào cản ngôn ngữ",
+          "example": "Практика с носителями помогает преодолеть языковой барьер."
+        },
+        {
+          "word": "перспекти́ва",
+          "gram": "danh từ giống cái",
+          "meaning": "triển vọng tương lai",
+          "example": "Знание иностранных языков открывает отличные карьерные перспективы."
+        }
+      ]
+    }
+  ]
 }

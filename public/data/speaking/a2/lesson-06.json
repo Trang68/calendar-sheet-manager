@@ -28,5 +28,36 @@
       "Món ăn có hương vị như thế nào (chua, cay, mặn, béo)?",
       "Cách người ta thường nấu và thưởng thức món ăn đó ra sao?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Ẩm thực yêu thích (Русская кухня)",
+      "rows": [
+        {
+          "word": "смета́на",
+          "gram": "danh từ giống cái",
+          "meaning": "kem chua",
+          "example": "Горячие блины с густой сметаной."
+        },
+        {
+          "word": "начи́нка",
+          "gram": "danh từ giống cái",
+          "meaning": "nhân bánh",
+          "example": "Пирожки с мясной и грибной начинкой."
+        },
+        {
+          "word": "угоще́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "đồ ăn tiếp đãi",
+          "example": "Традиционные русские угощения для гостей."
+        },
+        {
+          "word": "вкус",
+          "gram": "danh từ giống đực",
+          "meaning": "hương vị",
+          "example": "Насыщенный и богатый вкус домашнего борща."
+        }
+      ]
+    }
+  ]
 }

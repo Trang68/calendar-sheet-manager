@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Tiêu đề in hoa, cách dòng hợp lý."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thông báo tìm đồ thất lạc (Объявление)",
+      "rows": [
+        {
+          "word": "внима́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự chú ý",
+          "example": "Внимание! Потеряны ключи от квартиры."
+        },
+        {
+          "word": "уте́рянный",
+          "gram": "tính từ",
+          "meaning": "bị đánh rơi, thất lạc",
+          "example": "Утеряна связка ключей с металлическим брелоком."
+        },
+        {
+          "word": "наше́дший",
+          "gram": "danh từ giống đực",
+          "meaning": "người nhặt được đồ",
+          "example": "Нашедшего просьба позвонить по номеру телефона."
+        },
+        {
+          "word": "вознагражде́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "quà hậu tạ",
+          "example": "Денежное вознаграждение гарантируется."
+        }
+      ]
+    }
   ]
 }

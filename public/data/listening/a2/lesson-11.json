@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Антон сообщил, что держит в руках жёлтый шарф для лёгкого ориентирования."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Đón bạn tại sân bay (Встреча)",
+      "rows": [
+        {
+          "word": "зал прилёта",
+          "gram": "cụm danh từ đực",
+          "meaning": "sảnh ga đến",
+          "example": "Встретить друга в зале прилёта."
+        },
+        {
+          "word": "табло́",
+          "gram": "danh từ không đổi",
+          "meaning": "bảng điện tử thông báo",
+          "example": "Информационное табло рейсов."
+        },
+        {
+          "word": "чемода́н",
+          "gram": "danh từ giống đực",
+          "meaning": "vali hành lý",
+          "example": "Большой дорожный чемодан на колёсиках."
+        },
+        {
+          "word": "шарф",
+          "gram": "danh từ giống đực",
+          "meaning": "khăn quàng cổ",
+          "example": "Я узнал его по яркому шарфу."
+        }
+      ]
+    }
   ]
 }

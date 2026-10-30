@@ -52,5 +52,36 @@
       "Сколько часов ехать? (Đi hết bao nhiêu tiếng?)",
       "Где находится справочное бюро? (Bàn thông tin ở đâu?)"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đi lại bằng tàu hỏa (На вокзале)",
+      "rows": [
+        {
+          "word": "расписа́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "bảng giờ tàu",
+          "example": "Посмотрите расписание поездов."
+        },
+        {
+          "word": "ка́сса",
+          "gram": "danh từ giống cái",
+          "meaning": "quầy bán vé",
+          "example": "Билетная касса дальнего следования."
+        },
+        {
+          "word": "поса́дка",
+          "gram": "danh từ giống cái",
+          "meaning": "lên tàu / lên máy bay",
+          "example": "Началась посадка на поезд."
+        },
+        {
+          "word": "ме́сто",
+          "gram": "danh từ giống trung",
+          "meaning": "chỗ ngồi",
+          "example": "Нижнее место в купе."
+        }
+      ]
+    }
+  ]
 }

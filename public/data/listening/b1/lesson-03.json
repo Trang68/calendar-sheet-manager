@@ -56,5 +56,36 @@
       "ans": "B",
       "explain": "Thùng màu xanh dùng cho rác tái chế: nhựa, giấy, thủy tinh và kim loại."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Môi trường & Tái chế (Экология)",
+      "rows": [
+        {
+          "word": "сортиро́вка",
+          "gram": "danh từ giống cái",
+          "meaning": "sự phân loại (rác)",
+          "example": "Сортировка мусора помогает беречь природу."
+        },
+        {
+          "word": "отхо́ды",
+          "gram": "danh từ số nhiều",
+          "meaning": "chất thải, phế liệu",
+          "example": "Пластиковые отходы отправляют на переработку."
+        },
+        {
+          "word": "перерабо́тка",
+          "gram": "danh từ giống cái",
+          "meaning": "sự tái chế, xử lý",
+          "example": "Завод занимается переработкой стекла и бумаги."
+        },
+        {
+          "word": "инициати́ва",
+          "gram": "danh từ giống cái",
+          "meaning": "sáng kiến",
+          "example": "Молодёжная экологическая инициатива получила поддержку."
+        }
+      ]
+    }
   ]
 }

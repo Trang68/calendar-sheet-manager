@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Kết luận rõ ràng dựa trên hệ giá trị cá nhân."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận Không gian sống (Центр или спальный район)",
+      "rows": [
+        {
+          "word": "спа́льный райо́н",
+          "gram": "cụm danh từ đực",
+          "meaning": "khu dân cư ngoại vi yên tĩnh",
+          "example": "В спальном районе тише, чище воздух и больше зелёных скверов."
+        },
+        {
+          "word": "досту́пность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự thuận tiện đi lại",
+          "example": "Отличная транспортная доступность — главное преимущество жизни в центре."
+        },
+        {
+          "word": "шум",
+          "gram": "danh từ giống đực",
+          "meaning": "tiếng ồn ào đô thị",
+          "example": "Постоянный уличный шум может вызывать усталость и бессонницу."
+        },
+        {
+          "word": "сто́имость жилья́",
+          "gram": "cụm danh từ cái",
+          "meaning": "giá cả nhà ở bất động sản",
+          "example": "Стоимость жилья в центре города значительно выше, чем на окраине."
+        }
+      ]
+    }
   ]
 }

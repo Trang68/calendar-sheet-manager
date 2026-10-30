@@ -28,5 +28,36 @@
       "Bạn có tham gia trồng cây, tiết kiệm điện nước hay phân loại rác không?",
       "Giới trẻ ngày nay có thể làm gì để thành phố xanh - sạch - đẹp hơn?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Môi trường và Đô thị xanh (Экология)",
+      "rows": [
+        {
+          "word": "чистота́",
+          "gram": "danh từ giống cái",
+          "meaning": "sự sạch sẽ trong lành",
+          "example": "Беречь чистоту городских улиц и парков."
+        },
+        {
+          "word": "сортиро́вка му́сора",
+          "gram": "cụm danh từ cái",
+          "meaning": "phân loại rác thải",
+          "example": "Раздельная сортировка пластика и бумаги."
+        },
+        {
+          "word": "перерабо́тка",
+          "gram": "danh từ giống cái",
+          "meaning": "tái chế phế liệu",
+          "example": "Вторичная переработка отходов производства."
+        },
+        {
+          "word": "озелене́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "phủ xanh cây cối",
+          "example": "Озеленение жилых районов города."
+        }
+      ]
+    }
+  ]
 }

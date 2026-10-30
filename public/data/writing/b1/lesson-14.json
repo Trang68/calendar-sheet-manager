@@ -53,5 +53,36 @@
       "weight": "25%",
       "desc": "Văn phong hùng hồn, tự tin, chuẩn mực tiếng Nga học thuật."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Thư bày tỏ nguyện vọng học bổng (Грант)",
+      "rows": [
+        {
+          "word": "грант",
+          "gram": "danh từ giống đực",
+          "meaning": "khoản tài trợ học bổng nghiên cứu",
+          "example": "Победа в конкурсе позволила получить исследовательский грант."
+        },
+        {
+          "word": "академи́ческие успе́хи",
+          "gram": "cụm danh từ số nhiều",
+          "meaning": "thành tích học tập xuất sắc",
+          "example": "Мои высокие академические успехи подтверждаются дипломом с отличием."
+        },
+        {
+          "word": "амби́ции",
+          "gram": "danh từ số nhiều",
+          "meaning": "hoài bão lớn, khát vọng tương lai",
+          "example": "Профессиональные амбиции мотивируют меня продолжать научную деятельность."
+        },
+        {
+          "word": "обоснова́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "lý lẽ thuyết phục giải trình",
+          "example": "В мотивационном письме представлено подробное обоснование выбора программы."
+        }
+      ]
+    }
   ]
 }

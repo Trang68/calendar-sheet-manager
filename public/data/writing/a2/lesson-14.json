@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Bố cục đánh giá dịch vụ chuẩn mực trên các app du lịch."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nhận xét khách sạn sau kỳ nghỉ (Отель)",
+      "rows": [
+        {
+          "word": "остана́вливаться",
+          "gram": "động từ",
+          "meaning": "lưu trú, trọ lại",
+          "example": "Мы останавливались в отеле в центре города."
+        },
+        {
+          "word": "расположе́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "vị trí địa lý",
+          "example": "Идеальное расположение рядом с метро."
+        },
+        {
+          "word": "убо́рка",
+          "gram": "danh từ giống cái",
+          "meaning": "dọn phòng vệ sinh",
+          "example": "Ежедневная качественная уборка номера."
+        },
+        {
+          "word": "шве́дский стол",
+          "gram": "cụm danh từ đực",
+          "meaning": "bữa sáng buffet tự chọn",
+          "example": "Разнообразный вкусный завтрак «шведский стол»."
+        }
+      ]
+    }
   ]
 }

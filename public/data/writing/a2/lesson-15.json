@@ -48,5 +48,36 @@
       "weight": "25%",
       "desc": "Vận dụng câu điều kiện chân thực: nếu rảnh thì mình mua vé."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Tin nhắn rủ bạn đi xem kịch (В театр)",
+      "rows": [
+        {
+          "word": "спектакль",
+          "gram": "danh từ giống đực",
+          "meaning": "vở kịch sân khấu",
+          "example": "Замечательный спектакль «Ревизор» в Малом театре."
+        },
+        {
+          "word": "парте́р",
+          "gram": "danh từ giống đực",
+          "meaning": "khu ghế tầng trệt nhà hát",
+          "example": "Купить два билета в седьмой ряд партера."
+        },
+        {
+          "word": "кла́ссика",
+          "gram": "danh từ giống cái",
+          "meaning": "văn học kịch nghệ kinh điển",
+          "example": "Любитель русской классической драматургии."
+        },
+        {
+          "word": "онла́йн",
+          "gram": "phó từ",
+          "meaning": "trực tuyến qua mạng",
+          "example": "Забронировать и оплатить билеты онлайн."
+        }
+      ]
+    }
   ]
 }

@@ -56,5 +56,36 @@
     }
   ],
   "level": "A1",
-  "skill": "listening"
+  "skill": "listening",
+  "vocabCategories": [
+    {
+      "title": "Thuê xe đạp trong công viên (В парке)",
+      "rows": [
+        {
+          "word": "парк",
+          "gram": "danh từ giống đực",
+          "meaning": "công viên",
+          "example": "Мы гуляем в городском парке."
+        },
+        {
+          "word": "велосипе́д",
+          "gram": "danh từ giống đực",
+          "meaning": "xe đạp",
+          "example": "Кататься на велосипеде по дорожкам."
+        },
+        {
+          "word": "прока́т",
+          "gram": "danh từ giống đực",
+          "meaning": "dịch vụ thuê mướn",
+          "example": "Пункт проката велосипедов и самокатов."
+        },
+        {
+          "word": "час",
+          "gram": "danh từ giống đực",
+          "meaning": "giờ đồng hồ",
+          "example": "Сколько стоит прокат на два часа?"
+        }
+      ]
+    }
+  ]
 }

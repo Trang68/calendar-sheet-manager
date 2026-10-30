@@ -28,5 +28,36 @@
       "Trên lớp bạn học những môn gì và tương tác với bạn bè ra sao?",
       "Buổi tối bạn dành thời gian làm bài tập hay tham gia hoạt động gì?"
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Đời sống giảng đường (Студенчество)",
+      "rows": [
+        {
+          "word": "семина́р",
+          "gram": "danh từ giống đực",
+          "meaning": "buổi thảo luận chuyên đề",
+          "example": "Активное выступление на научном семинаре."
+        },
+        {
+          "word": "конспе́кт",
+          "gram": "danh từ giống đực",
+          "meaning": "vở ghi chép bài giảng",
+          "example": "Писать подробный конспект лекции."
+        },
+        {
+          "word": "се́ссия",
+          "gram": "danh từ giống cái",
+          "meaning": "kỳ thi học kỳ",
+          "example": "Зимняя экзаменационная сессия."
+        },
+        {
+          "word": "стипе́ндия",
+          "gram": "danh từ giống cái",
+          "meaning": "học bổng sinh viên",
+          "example": "Получать повышенную академическую стипендию."
+        }
+      ]
+    }
+  ]
 }

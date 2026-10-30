@@ -36,5 +36,36 @@
       "criteria": "Mạch lạc",
       "desc": "Có liên kết thời gian buổi sáng, chiều, tối."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Kể về chuyến đi Moskva (Поездка)",
+      "rows": [
+        {
+          "word": "столи́ца",
+          "gram": "danh từ giống cái",
+          "meaning": "thủ đô",
+          "example": "Москва — величественная столица России."
+        },
+        {
+          "word": "Кремль",
+          "gram": "danh từ giống đực",
+          "meaning": "Điện Kremlin",
+          "example": "Мы гуляли возле стен Кремля."
+        },
+        {
+          "word": "красота́",
+          "gram": "danh từ giống cái",
+          "meaning": "vẻ đẹp",
+          "example": "Красота Красной площади ночью."
+        },
+        {
+          "word": "фотогра́фия",
+          "gram": "danh từ giống cái",
+          "meaning": "ảnh chụp",
+          "example": "Я сделал много замечательных фотографий."
+        }
+      ]
+    }
   ]
 }

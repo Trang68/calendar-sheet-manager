@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Lời chào, ngắt đoạn logic và ký tên chuẩn văn phong thân mật."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Chuyển tới căn hộ mới (Переезд)",
+      "rows": [
+        {
+          "word": "перее́зд",
+          "gram": "danh từ giống đực",
+          "meaning": "việc chuyển nhà dọn phòng",
+          "example": "Наконец-то завершился переезд в новую квартиру."
+        },
+        {
+          "word": "уютный",
+          "gram": "tính từ",
+          "meaning": "ấm cúng xinh xắn",
+          "example": "Очень уютная и светлая однокомнатная квартира."
+        },
+        {
+          "word": "ме́бель",
+          "gram": "danh từ giống cái",
+          "meaning": "đồ đạc nội thất",
+          "example": "В комнате есть вся необходимая мебель."
+        },
+        {
+          "word": "но́воселье",
+          "gram": "danh từ giống trung",
+          "meaning": "tiệc tân gia",
+          "example": "Приглашаю тебя в гости отметить новоселье!"
+        }
+      ]
+    }
   ]
 }

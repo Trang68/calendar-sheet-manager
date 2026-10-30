@@ -28,5 +28,36 @@
       "Cảm xúc bối rối lúc ban đầu và bạn đã xoay sở diễn đạt ra sao (ngôn ngữ cơ thể, từ đồng nghĩa)?",
       "Bài học quý giá bạn rút ra về thái độ học ngoại ngữ."
     ]
-  }
+  },
+  "vocabCategories": [
+    {
+      "title": "Sự tự tin khi giao tiếp (Преодоление барьера)",
+      "rows": [
+        {
+          "word": "стесне́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "sự e dè, rụt rè ngượng ngùng",
+          "example": "Из-за стеснения многие боятся первыми начать разговор."
+        },
+        {
+          "word": "уве́ренность",
+          "gram": "danh từ giống cái",
+          "meaning": "sự tự tin bản lĩnh",
+          "example": "Ежедневная практика придаёт уверенность в спонтанной речи."
+        },
+        {
+          "word": "акце́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "ngữ điệu, giọng phát âm địa phương",
+          "example": "Иностранный акцент не мешает успешному пониманию собеседника."
+        },
+        {
+          "word": "спонта́нный",
+          "gram": "tính từ",
+          "meaning": "tự nhiên, không chuẩn bị trước",
+          "example": "Спонтанная речь показывает реальный уровень владения языком."
+        }
+      ]
+    }
+  ]
 }

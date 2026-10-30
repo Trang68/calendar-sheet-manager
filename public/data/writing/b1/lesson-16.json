@@ -52,5 +52,36 @@
       "weight": "25%",
       "desc": "Các vế câu đối lập và nâng cấp tư tưởng rất chặt chẽ."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Nghị luận Sách thời chuyển đổi số (Эпоха информации)",
+      "rows": [
+        {
+          "word": "цифрова́я эпо́ха",
+          "gram": "cụm danh từ cái",
+          "meaning": "thời đại số hóa thông tin",
+          "example": "В цифровую эпоху чтение остаётся лучшим способом развития критического мышления."
+        },
+        {
+          "word": "исто́чник зна́ний",
+          "gram": "cụm danh từ đực",
+          "meaning": "nguồn cội tri thức uy tín",
+          "example": "Книга — надёжный и проверенный веками источник глубоких знаний."
+        },
+        {
+          "word": "глубина́ восприя́тия",
+          "gram": "cụm danh từ cái",
+          "meaning": "chiều sâu tiếp nhận thấu hiểu",
+          "example": "Медленное чтение длинных текстов тренирует глубину восприятия информации."
+        },
+        {
+          "word": "информацио́нный шум",
+          "gram": "cụm danh từ đực",
+          "meaning": "nhiễu loạn thông tin rác",
+          "example": "Умение отсеивать информационный шум защищает от перегрузки сознания."
+        }
+      ]
+    }
   ]
 }

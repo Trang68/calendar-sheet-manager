@@ -59,5 +59,36 @@
       "ans": "A",
       "explain": "Конструктивизм провозгласил примат рациональной функции над декоративными элементами."
     }
+  ],
+  "vocabCategories": [
+    {
+      "title": "Chủ nghĩa kiến tạo (Конструктивизм)",
+      "rows": [
+        {
+          "word": "конструктиви́зм",
+          "gram": "danh từ giống đực",
+          "meaning": "chủ nghĩa kiến tạo (trường phái kiến trúc)",
+          "example": "Конструктивизм 1920-х годов прославил советскую архитектуру."
+        },
+        {
+          "word": "аванга́рд",
+          "gram": "danh từ giống đực",
+          "meaning": "nghệ thuật tiên phong (avant-garde)",
+          "example": "Русский авангард оказал влияние на мировой дизайн."
+        },
+        {
+          "word": "фаса́д",
+          "gram": "danh từ giống đực",
+          "meaning": "mặt tiền công trình kiến trúc",
+          "example": "Геометрический фасад здания привлекает внимание прохожих."
+        },
+        {
+          "word": "функциона́льность",
+          "gram": "danh từ giống cái",
+          "meaning": "tính công năng, tính thực dụng",
+          "example": "Главный принцип направления — удобство и функциональность."
+        }
+      ]
+    }
   ]
 }
