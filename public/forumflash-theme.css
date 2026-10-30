@@ -9,7 +9,7 @@ html {
 }
 
 /* ==========================================================================
-   CROSS-DOCUMENT VIEW TRANSITIONS: 3D BOOK & PAPER PAGE TURN EFFECT
+   CROSS-DOCUMENT VIEW TRANSITIONS: CLEAN FLAT HORIZONTAL SLIDE (NHƯ ZALO)
    ========================================================================== */
 @view-transition {
   navigation: auto;
@@ -31,48 +31,45 @@ html {
   z-index: 9999 !important;
 }
 
-/* Ensure smooth 3D GPU rendering with normal blend mode */
+/* Ensure smooth GPU rendering with normal blend mode */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   mix-blend-mode: normal !important;
   backface-visibility: hidden;
-  transform-style: preserve-3d;
-  will-change: transform, opacity, filter;
+  transform-style: flat;
 }
 
 /* Default subtle fade if no direction is specified */
 ::view-transition-old(root) {
-  animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-out;
+  animation: 180ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-out;
 }
 
 ::view-transition-new(root) {
-  animation: 220ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-in;
+  animation: 200ms cubic-bezier(0.16, 1, 0.3, 1) both ff-page-fade-in;
 }
 
-/* Forward transition: Lật sang trang mới từ phải sang trái (như lật trang sách) */
+/* Forward transition: Trượt ngang phẳng sang trái (như Zalo / iOS) */
 html[data-swipe-direction='forward']::view-transition-old(root) {
-  animation: 420ms cubic-bezier(0.25, 1, 0.45, 1) both ff-page-turn-out-forward;
-  transform-origin: 0% 50%;
-  z-index: 2;
-  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.28);
+  animation: 260ms cubic-bezier(0.22, 1, 0.36, 1) both ff-slide-out-forward;
+  z-index: 1;
 }
 
 html[data-swipe-direction='forward']::view-transition-new(root) {
-  animation: 420ms cubic-bezier(0.25, 1, 0.45, 1) both ff-page-turn-in-forward;
-  z-index: 1;
+  animation: 260ms cubic-bezier(0.22, 1, 0.36, 1) both ff-slide-in-forward;
+  z-index: 2;
+  box-shadow: -14px 0 32px rgba(0, 0, 0, 0.16);
 }
 
-/* Back transition: Lật ngược lại trang trước từ trái úp về phải */
+/* Back transition: Trượt ngang phẳng sang phải (như Zalo / iOS) */
 html[data-swipe-direction='back']::view-transition-old(root) {
-  animation: 420ms cubic-bezier(0.25, 1, 0.45, 1) both ff-page-turn-out-back;
-  z-index: 1;
+  animation: 260ms cubic-bezier(0.22, 1, 0.36, 1) both ff-slide-out-back;
+  z-index: 2;
+  box-shadow: -14px 0 32px rgba(0, 0, 0, 0.16);
 }
 
 html[data-swipe-direction='back']::view-transition-new(root) {
-  animation: 420ms cubic-bezier(0.25, 1, 0.45, 1) both ff-page-turn-in-back;
-  transform-origin: 0% 50%;
-  z-index: 2;
-  box-shadow: 20px 0 40px rgba(0, 0, 0, 0.28);
+  animation: 260ms cubic-bezier(0.22, 1, 0.36, 1) both ff-slide-in-back;
+  z-index: 1;
 }
 
 @keyframes ff-page-fade-out {
@@ -93,68 +90,43 @@ html[data-swipe-direction='back']::view-transition-new(root) {
   }
 }
 
-/* Hiệu ứng lật trang giấy: nhấc mép, uốn cong 3D theo góc nhìn phối cảnh và bay sang gáy sách */
-@keyframes ff-page-turn-out-forward {
-  0% {
-    transform: perspective(1600px) rotateY(0deg) translate3d(0, 0, 0);
-    filter: brightness(1);
+/* Trượt ngang thuần túy (phẳng 100%, không 3D, không nghiêng chéo) */
+@keyframes ff-slide-out-forward {
+  from {
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
-  45% {
-    transform: perspective(1600px) rotateY(-38deg) skewY(-1.2deg) translate3d(-8%, 0, 25px);
-    filter: brightness(0.88);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(1600px) rotateY(-82deg) skewY(-2.2deg) translate3d(-24%, 0, 45px);
-    filter: brightness(0.5);
-    opacity: 0;
+  to {
+    transform: translate3d(-30%, 0, 0);
+    opacity: 0.65;
   }
 }
 
-/* Trang mới nằm ở dưới đón sáng và mở rộng khi trang trên lật đi */
-@keyframes ff-page-turn-in-forward {
-  0% {
-    transform: scale(0.95) translate3d(30px, 0, -50px);
-    filter: brightness(0.75);
-    opacity: 0.85;
+@keyframes ff-slide-in-forward {
+  from {
+    transform: translate3d(100%, 0, 0);
   }
-  100% {
-    transform: scale(1) translate3d(0, 0, 0);
-    filter: brightness(1);
-    opacity: 1;
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* Trang cũ chìm nhẹ xuống dưới khi trang trước lật úp đè lên */
-@keyframes ff-page-turn-out-back {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-    filter: brightness(1);
-    opacity: 1;
+@keyframes ff-slide-out-back {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: scale(0.95) translate3d(30px, 0, -50px);
-    filter: brightness(0.75);
-    opacity: 0.75;
+  to {
+    transform: translate3d(100%, 0, 0);
   }
 }
 
-/* Trang trước từ bên trái lật úp ngược về bên phải */
-@keyframes ff-page-turn-in-back {
-  0% {
-    transform: perspective(1600px) rotateY(-82deg) skewY(-2.2deg) translate3d(-24%, 0, 45px);
-    filter: brightness(0.5);
-    opacity: 0;
+@keyframes ff-slide-in-back {
+  from {
+    transform: translate3d(-30%, 0, 0);
+    opacity: 0.65;
   }
-  55% {
-    transform: perspective(1600px) rotateY(-35deg) skewY(-1.2deg) translate3d(-8%, 0, 25px);
-    filter: brightness(0.88);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(1600px) rotateY(0deg) skewY(0deg) translate3d(0, 0, 0);
-    filter: brightness(1);
+  to {
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -205,12 +177,11 @@ body.ff-body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Interactive 3D paper surface for touch gesture navigation */
+/* Interactive Flat Swipe Surface for mobile swipe navigation (như Zalo) */
 .ff-swipe-surface {
   width: 100%;
   min-height: calc(100vh - 76px);
-  will-change: transform, filter, box-shadow;
-  transform-style: preserve-3d;
+  will-change: transform;
   backface-visibility: hidden;
 }
 

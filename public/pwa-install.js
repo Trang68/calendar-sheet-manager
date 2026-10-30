@@ -700,19 +700,16 @@
 
     function resetSurface(el) {
       if (!el) return;
-      el.style.transition = 'transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 260ms ease, box-shadow 260ms ease, opacity 260ms ease';
-      el.style.transform = 'none';
-      el.style.filter = 'none';
+      el.style.transition = 'transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms ease, opacity 220ms ease';
+      el.style.transform = 'translate3d(0, 0, 0)';
       el.style.boxShadow = 'none';
       el.style.opacity = '1';
       setTimeout(() => {
         el.style.removeProperty('transition');
         el.style.removeProperty('transform');
-        el.style.removeProperty('transform-origin');
-        el.style.removeProperty('filter');
         el.style.removeProperty('box-shadow');
         el.style.removeProperty('opacity');
-      }, 280);
+      }, 240);
     }
 
     const ignoredTargets = [
@@ -807,21 +804,12 @@
           if (!surface) surface = getPageSurface();
           if (!surface) return;
 
-          const progress = deltaX / window.innerWidth;
-          // 3D paper rotation & curvature following the finger in real time:
-          const angle = Math.max(-55, Math.min(55, progress * 65));
-          const skew = Math.max(-2, Math.min(2, progress * 2.5));
-          const tx = deltaX * 0.75;
-          const z = Math.abs(deltaX) * 0.12;
-          const brightness = Math.max(0.72, 1 - Math.abs(progress) * 0.35);
-
+          // Trượt ngang phẳng 1:1 theo ngón tay như Zalo (không 3D, không nghiêng chéo)
           surface.style.transition = 'none';
-          surface.style.transformOrigin = deltaX < 0 ? '0% 50%' : '100% 50%';
-          surface.style.transform = `perspective(1400px) rotateY(${angle}deg) skewY(${skew}deg) translate3d(${tx}px, 0, ${z}px)`;
-          surface.style.filter = `brightness(${brightness})`;
+          surface.style.transform = `translate3d(${deltaX}px, 0, 0)`;
           surface.style.boxShadow = deltaX < 0
-            ? `-18px 0 35px rgba(0, 0, 0, ${Math.min(0.28, Math.abs(progress) * 0.4)})`
-            : `18px 0 35px rgba(0, 0, 0, ${Math.min(0.28, Math.abs(progress) * 0.4)})`;
+            ? `-12px 0 28px rgba(0, 0, 0, 0.16)`
+            : `12px 0 28px rgba(0, 0, 0, 0.16)`;
         }
       },
       { passive: false }
@@ -845,7 +833,7 @@
         touchStart = null;
         isDragging = false;
 
-        const isFlick = velocity > 0.32 && Math.abs(deltaX) >= 30;
+        const isFlick = velocity > 0.28 && Math.abs(deltaX) >= 28;
         const isDragPast = Math.abs(deltaX) >= Math.min(65, window.innerWidth * 0.18);
 
         if ((isFlick || isDragPast) && Math.abs(deltaX) > Math.abs(deltaY) * 1.05) {
@@ -853,14 +841,12 @@
           const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
           const targetUrl = routes[targetIndex];
 
-          // Animate completing the paper flip off-screen:
+          // Trượt phẳng vèo ra khỏi màn hình như Zalo:
           if (surface) {
-            surface.style.transition = 'transform 260ms cubic-bezier(0.25, 1, 0.45, 1), opacity 260ms ease, filter 260ms ease';
-            const exitAngle = deltaX < 0 ? -80 : 80;
-            const exitTx = deltaX < 0 ? -window.innerWidth * 0.45 : window.innerWidth * 0.45;
-            surface.style.transform = `perspective(1400px) rotateY(${exitAngle}deg) translate3d(${exitTx}px, 0, 40px)`;
-            surface.style.opacity = '0';
-            surface.style.filter = 'brightness(0.55)';
+            surface.style.transition = 'transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 200ms ease';
+            const exitTx = deltaX < 0 ? -window.innerWidth : window.innerWidth;
+            surface.style.transform = `translate3d(${exitTx}px, 0, 0)`;
+            surface.style.opacity = '0.75';
           }
 
           setDirection(direction);
