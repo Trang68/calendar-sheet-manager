@@ -9,31 +9,60 @@
   "topic": "Ngôn ngữ & Khả năng giao tiếp: Говорить, знать, понимать",
   "vocabCategories": [
     {
-      "title": "Từ vựng về ngôn ngữ (Языки и наречия)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "по-ру́сски",
-          "gram": "phó từ",
-          "meaning": "bằng tiếng Nga",
-          "example": "Я говорю по-русски."
+          "word": "язы́к",
+          "gram": "danh từ giống đực",
+          "meaning": "ngôn ngữ, tiếng",
+          "example": "Русский язык очень богатый и красивый."
         },
         {
-          "word": "по-вьетна́мски",
-          "gram": "phó từ",
-          "meaning": "bằng tiếng Việt",
-          "example": "Он понимает по-вьетнамски."
+          "word": "сло́во",
+          "gram": "danh từ giống trung",
+          "meaning": "từ ngữ",
+          "example": "Как пишется это трудное слово?"
         },
         {
-          "word": "хорошо́ / пло́хо",
-          "gram": "phó từ",
-          "meaning": "tốt, giỏi / kém, tồi",
-          "example": "Она хорошо говорит."
+          "word": "фра́за",
+          "gram": "danh từ giống cái",
+          "meaning": "cụm từ, câu nói",
+          "example": "Повторите эту полезную фразу."
         },
         {
-          "word": "чуть-чу́ть",
-          "gram": "phó từ",
-          "meaning": "một chút, một ít",
-          "example": "Я знаю чуть-чуть."
+          "word": "диало́г",
+          "gram": "danh từ giống đực",
+          "meaning": "đoạn hội thoại",
+          "example": "Студенты читают диалог по ролям."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "говори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nói",
+          "example": "Вы говорите по-русски?"
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hiểu",
+          "example": "Я хорошо понимаю этот текст."
+        },
+        {
+          "word": "изуча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu, học sâu",
+          "example": "Мы изучаем русскую литературу."
+        },
+        {
+          "word": "спра́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hỏi",
+          "example": "Ученик спрашивает учителя о правиле."
         }
       ]
     }

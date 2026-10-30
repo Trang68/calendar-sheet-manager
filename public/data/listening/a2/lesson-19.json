@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đặt tiệc sinh nhật (День рождения)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "имени́нник",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "nhân viên tiếp đón nhà hàng",
           "example": "Хостес проводила гостей к столику."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "печь (блины)",
+          "gram": "cụm động từ",
+          "meaning": "làm bánh đãi bạn",
+          "example": "На Масленицу студенты пекут блины на кухне общежития."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời bạn ăn bánh",
+          "example": "Анна щедро угощает однокурсников домашними блинами."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dạo chơi hội xuân",
+          "example": "Молодёжь гуляет в парке и смотрит праздничные забавы."
+        },
+        {
+          "word": "сжигать (чучело)",
+          "gram": "cụm động từ",
+          "meaning": "đốt hình nộm rơm",
+          "example": "В воскресенье по традиции сжигают соломенное чучело зимы."
         }
       ]
     }

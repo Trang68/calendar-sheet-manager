@@ -67,7 +67,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mua áo ấm mùa đông (Зимняя одежда)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "пухови́к",
@@ -92,6 +92,35 @@
           "gram": "tính từ",
           "meaning": "chống thấm nước",
           "example": "Непромокаемая зимняя обувь."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "регистри́роваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm thủ tục bay",
+          "example": "Пассажиры регистрируются на стойке в терминале."
+        },
+        {
+          "word": "сдава́ть (багаж)",
+          "gram": "cụm động từ",
+          "meaning": "gửi hành lý",
+          "example": "Мы сдаём тяжёлые чемоданы в багажное отделение."
+        },
+        {
+          "word": "взве́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cân xách tay",
+          "example": "Сотрудник взвешивает ручную кладь перед посадкой."
+        },
+        {
+          "word": "лете́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bay chuyển cánh",
+          "example": "Самолёт летит прямым рейсом в Новосибирск."
         }
       ]
     }

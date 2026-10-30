@@ -48,7 +48,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thiệp chúc Tết ngắn (Открытка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "наступа́ющий",
@@ -73,6 +73,35 @@
           "gram": "phó từ",
           "meaning": "chân thành",
           "example": "Искренне твой друг Нам."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lên đường du hành",
+          "example": "На каникулах мы едем в Санкт-Петербург на поезде."
+        },
+        {
+          "word": "собира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thu xếp đồ đạc",
+          "example": "Я аккуратно собираю чемодан перед дальней поездкой."
+        },
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm nhìn phong cảnh",
+          "example": "Из окна вагона приятно смотреть на заснеженные леса."
+        },
+        {
+          "word": "возвраща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trở về bình an",
+          "example": "С яркими впечатлениями мы возвращаемся домой."
         }
       ]
     }

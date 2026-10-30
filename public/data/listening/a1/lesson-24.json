@@ -59,7 +59,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Thuê xe đạp trong công viên (В парке)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "парк",
@@ -84,6 +84,35 @@
           "gram": "danh từ giống đực",
           "meaning": "giờ đồng hồ",
           "example": "Сколько стоит прокат на два часа?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo tản bộ",
+          "example": "Вечером мы гуляем по тихим аллеям парка."
+        },
+        {
+          "word": "сиде́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngồi nghỉ",
+          "example": "Старики сидят на деревянных скамейках."
+        },
+        {
+          "word": "дыша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hít thở",
+          "example": "Приятно дышать свежим лесным воздухом."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp ảnh",
+          "example": "Туристы фотографируют осенний пейзаж."
         }
       ]
     }

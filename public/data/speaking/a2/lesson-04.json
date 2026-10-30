@@ -37,7 +37,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Gia đình và sum họp (Семейные традиции)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "поколе́ние",
@@ -62,6 +62,35 @@
           "gram": "danh từ giống trung",
           "meaning": "mâm cỗ sum vầy",
           "example": "Праздничное домашнее застолье."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "собира́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sum họp quây quần",
+          "example": "По воскресеньям вся семья собирается за большим столом."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tương trợ lẫn nhau",
+          "example": "Родители и дети всегда помогают друг другу во всём."
+        },
+        {
+          "word": "храни́ть (традиции)",
+          "gram": "cụm động từ",
+          "meaning": "gìn giữ nếp nhà",
+          "example": "В нашей семье бережно хранят старинные кулинарные рецепты."
+        },
+        {
+          "word": "любить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý ruột thịt",
+          "example": "Я бесконечно люблю и уважаю своих дорогих родителей."
         }
       ]
     }

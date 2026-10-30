@@ -105,7 +105,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Giao thông đô thị (Ориентирование в метро)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "ста́нция",
@@ -130,6 +130,35 @@
           "gram": "danh từ giống đực",
           "meaning": "thang cuốn tự động",
           "example": "Спускайтесь аккуратно на эскалаторе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дое́хать",
+          "gram": "động từ hoàn thành",
+          "meaning": "đi xe đến đích",
+          "example": "Как доехать до Красной площади?"
+        },
+        {
+          "word": "переса́живаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển sang tuyến khác",
+          "example": "На станции «Охотный ряд» нужно пересаживаться."
+        },
+        {
+          "word": "спуска́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi xuống ga",
+          "example": "Пассажиры спускаются в метро на эскалаторе."
+        },
+        {
+          "word": "подска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chỉ đường mách bảo",
+          "example": "Прохожий вежливо подсказывает правильный маршрут."
         }
       ]
     }

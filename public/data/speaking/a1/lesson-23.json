@@ -34,7 +34,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Chúc mừng và Ước nguyện (Пожелания)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "жела́ть",
@@ -59,6 +59,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "sinh nhật",
           "example": "С днём рождения тебя!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu đọc",
+          "example": "В читальном зале студенты читают редкие книги."
+        },
+        {
+          "word": "учи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học thuộc lòng",
+          "example": "Я учу новые русские слова каждый день."
+        },
+        {
+          "word": "конспекти́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ghi chép tóm tắt",
+          "example": "Она аккуратно конспектирует лекции профессора."
+        },
+        {
+          "word": "повторя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ôn lại bài",
+          "example": "Перед зачётом необходимо повторить пройденный материал."
         }
       ]
     }

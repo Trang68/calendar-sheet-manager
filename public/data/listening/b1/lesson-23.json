@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ngày hội việc làm (Ярмарка вакансий)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "соиска́тель",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "thâm niên, kinh nghiệm nghề nghiệp",
           "example": "Для этой должности требуется стаж работы от трёх лет."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "проходи́ть (собеседование)",
+          "gram": "cụm động từ",
+          "meaning": "tham dự phỏng vấn ứng tuyển",
+          "example": "Выпускник успешно проходит собеседование в престижную международную компанию."
+        },
+        {
+          "word": "демонстри́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thể hiện năng lực chuyên môn",
+          "example": "Кандидат уверенно демонстрирует свои профессиональные и гибкие навыки."
+        },
+        {
+          "word": "претендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ứng cử vị trí công việc",
+          "example": "Молодой специалист претендует на вакансию ведущего аналитика данных."
+        },
+        {
+          "word": "трудоустра́иваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận việc chính thức",
+          "example": "Ярмарка вакансий помогает сотням студентов быстро трудоустроиться."
         }
       ]
     }

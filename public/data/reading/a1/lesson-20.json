@@ -9,31 +9,60 @@
   "topic": "Tổng ôn toàn diện kiến thức & Bứt phá năng lực TRKI A1",
   "vocabCategories": [
     {
-      "title": "Tổng hợp từ vựng chìa khóa A1 (Ключевые слова)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "студе́нт / студе́нтка",
-          "gram": "danh từ",
-          "meaning": "sinh viên nam / sinh viên nữ",
-          "example": "Мы студенты."
+          "word": "тест",
+          "gram": "danh từ giống đực",
+          "meaning": "bài kiểm tra",
+          "example": "Итоговый тест проверяет чтение и грамматику."
         },
         {
-          "word": "учи́ться",
-          "gram": "động từ",
-          "meaning": "học tập",
-          "example": "Они учатся в университете."
+          "word": "зна́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "kiến thức",
+          "example": "Знания помогают уверенно общаться."
         },
         {
-          "word": "знать",
-          "gram": "động từ",
-          "meaning": "biết",
-          "example": "Я знаю русский язык."
+          "word": "у́ровень",
+          "gram": "danh từ giống đực",
+          "meaning": "trình độ cấp độ",
+          "example": "Успешно освоен базовый уровень А1."
         },
         {
-          "word": "свобо́дно",
-          "gram": "phó từ",
-          "meaning": "lưu loát, tự do",
-          "example": "Он свободно говорит."
+          "word": "результа́т",
+          "gram": "danh từ giống đực",
+          "meaning": "kết quả",
+          "example": "Студент получил отличный результат."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "проверя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kiểm tra",
+          "example": "Учитель проверяет письменные работы."
+        },
+        {
+          "word": "повторя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ôn luyện lại",
+          "example": "Перед экзаменом нужно повторить правила."
+        },
+        {
+          "word": "отвеча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả lời câu hỏi",
+          "example": "Студент без ошибок отвечает на вопросы теста."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thấu hiểu",
+          "example": "Теперь я понимаю тексты на русском языке."
         }
       ]
     }

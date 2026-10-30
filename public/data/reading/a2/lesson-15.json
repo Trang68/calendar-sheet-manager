@@ -9,25 +9,60 @@
   "topic": "Thú cưng & Bảo vệ động vật trong đô thị",
   "vocabCategories": [
     {
-      "title": "Thú cưng (Домашние животные)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "пито́мец",
           "gram": "danh từ giống đực",
-          "meaning": "thú nuôi trong nhà",
-          "example": "Кошка или собака — полноправный член семьи."
+          "meaning": "thú cưng nuôi trong nhà",
+          "example": "Домашний питомец дарит радость и учит детей ответственности и заботе."
         },
         {
           "word": "поводо́к",
           "gram": "danh từ giống đực",
-          "meaning": "dây dắt chó",
-          "example": "В городе собак обязательно выгуливают на поводке."
+          "meaning": "dây dắt chó đi dạo",
+          "example": "В общественных парках собак обязательно выгуливают на крепком поводке."
         },
         {
           "word": "ветерина́р",
           "gram": "danh từ giống đực",
-          "meaning": "bác sĩ thú y",
-          "example": "Мы возим кота к ветеринару на регулярный осмотр."
+          "meaning": "bác sĩ thú y chữa bệnh",
+          "example": "Опытный ветеринар проводит плановый осмотр и делает прививки коту."
+        },
+        {
+          "word": "корм",
+          "gram": "danh từ giống đực",
+          "meaning": "thức ăn dinh dưỡng cho thú cưng",
+          "example": "Хозяева покупают качественный сухой корм для своих питомцев в зоомагазине."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гуля́ть (с собакой)",
+          "gram": "cụm động từ",
+          "meaning": "dẫn cún đi dạo công viên",
+          "example": "Каждое утро владелец выходит гулять со своим псом на площадку."
+        },
+        {
+          "word": "корми́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cho thú cưng ăn đều đặn",
+          "example": "Нужно вовремя кормить домашних животных сбалансированной пищей."
+        },
+        {
+          "word": "уха́живать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chăm sóc chu đáo động vật cảnh",
+          "example": "Дети с любовью ухаживают за пушистым котёнком и моют его миски."
+        },
+        {
+          "word": "лечи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chữa trị khi thú nuôi đau ốm",
+          "example": "Специалисты клиники успешно лечат заболевших четвероногих друзей."
         }
       ]
     }

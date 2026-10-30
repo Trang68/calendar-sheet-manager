@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thời tiết và Bốn mùa (Времена года)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "прогно́з",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "cái nắng nóng mùa hè",
           "example": "В июле стояла сильная жара."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi thiếp bưu điện",
+          "example": "К праздникам я отправляю поздравительные открытки родным."
+        },
+        {
+          "word": "получа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận kiện bưu phẩm",
+          "example": "Студент получает долгожданную посылку от родителей."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt mua trực tuyến",
+          "example": "Сейчас многие заказывают товары с доставкой в пункт выдачи."
+        },
+        {
+          "word": "опла́чивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả cước bưu chính",
+          "example": "Клиент оплачивает пересылку письма в окне оператора."
         }
       ]
     }

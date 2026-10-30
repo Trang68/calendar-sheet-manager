@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Hướng dẫn công thức món ăn (Рецепт)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "реце́пт",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống cái",
           "meaning": "chảo rán dầu",
           "example": "Обжарить блинчики на горячей сковороде."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đọc tác phẩm sâu sắc",
+          "example": "Недавно я прочитал трогательную повесть о верности и благородстве."
+        },
+        {
+          "word": "рекомендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên đọc truyện này",
+          "example": "Я искренне рекомендую эту замечательную книгу всем моим друзьям."
+        },
+        {
+          "word": "заду́мываться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "suy ngẫm cuộc đời",
+          "example": "Это глубокое произведение заставляет задуматься о ценности дружбы."
+        },
+        {
+          "word": "вдохновля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "truyền cảm hứng sống",
+          "example": "Поступки главных героев вдохновляют на добрые и смелые дела."
         }
       ]
     }

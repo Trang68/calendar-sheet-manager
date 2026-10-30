@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Chuyến bay vũ trụ (МКС)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "раке́та-носи́тель",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "phi hành đoàn",
           "example": "Экипаж космического корабля состоит из трёх космонавтов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "стартова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rời bệ phóng vũ trụ",
+          "example": "Ракета-носитель с пилотируемым кораблём успешно стартует с космодрома."
+        },
+        {
+          "word": "пилоти́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "điều khiển tàu bay",
+          "example": "Опытный экипаж уверенно пилотирует корабль на пути к международной станции."
+        },
+        {
+          "word": "стыкова́ться (с МКС)",
+          "gram": "cụm động từ",
+          "meaning": "kết nối ghép tàu lên trạm",
+          "example": "Космический аппарат плавно стыкуется с герметичным шлюзом МКС."
+        },
+        {
+          "word": "трансли́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "truyền hình trực tiếp",
+          "example": "Телеканалы в прямом эфире транслируют запуск космической экспедиции."
         }
       ]
     }

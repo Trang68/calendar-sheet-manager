@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Dịch vụ bưu cục (На почте)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "заказно́е письмо́",
@@ -87,6 +87,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "chiếc cân",
           "example": "Положите отправление на весы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "открыва́ть (счёт)",
+          "gram": "cụm động từ",
+          "meaning": "mở tài khoản ngân hàng",
+          "example": "Иностранец открывает рублёвый счёт в банке."
+        },
+        {
+          "word": "меня́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "quy đổi ngoại tệ",
+          "example": "Клиент меняет доллары по текущему курсу валют."
+        },
+        {
+          "word": "переводи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển khoản tiền",
+          "example": "Я перевожу деньги родителям через мобильный банк."
+        },
+        {
+          "word": "снима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rút tiền mặt ATM",
+          "example": "Он снимает нужную сумму в банкомате без комиссии."
         }
       ]
     }

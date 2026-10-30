@@ -9,60 +9,60 @@
   "topic": "Thời tiết, Khí hậu & Bốn mùa tại Nga",
   "vocabCategories": [
     {
-      "title": "Thời tiết & Thiên nhiên (Погода и природа)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "моро́з",
           "gram": "danh từ giống đực",
-          "meaning": "giá rét, băng giá",
-          "example": "Зимой в Сибири сильный мороз."
+          "meaning": "sương giá, giá rét buốt",
+          "example": "Зимой в Сибири бывает сильный мороз до минус тридцати."
         },
         {
           "word": "снегопа́д",
           "gram": "danh từ giống đực",
-          "meaning": "tuyết rơi dày",
-          "example": "После снегопада город стал белым."
+          "meaning": "tuyết rơi trắng xóa",
+          "example": "После ночного снегопада весь город покрыт белым ковром."
         },
         {
           "word": "гра́дус",
           "gram": "danh từ giống đực",
-          "meaning": "độ (C)",
-          "example": "Сегодня двадцать градусов мороза (-20°C)."
+          "meaning": "độ C (nhiệt độ)",
+          "example": "Сегодня на термометре ровно ноль градусов."
         },
         {
-          "word": "прогно́з пого́ды",
-          "gram": "cụm danh từ",
-          "meaning": "dự báo thời tiết",
-          "example": "По прогнозу погоды завтра будет солнце."
-        },
-        {
-          "word": "та́ять",
-          "gram": "động từ chưa hoàn thành",
-          "meaning": "tan chảy (tuyết, đá)",
-          "example": "Весной снег начинает таять."
+          "word": "сугро́б",
+          "gram": "danh từ giống đực",
+          "meaning": "đống tuyết dày",
+          "example": "Дети с радостью прыгают в мягкие сугробы во дворе."
         }
       ]
     },
     {
-      "title": "Trang phục mùa đông (Зимняя одежда)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "тёплая ку́ртка",
-          "gram": "cụm danh từ",
-          "meaning": "áo khoác ấm",
-          "example": "Обязательно наденьте тёплую куртку."
+          "word": "па́дать (снег)",
+          "gram": "cụm động từ",
+          "meaning": "tuyết rơi",
+          "example": "За окном тихо падает пушистый белый снег."
         },
         {
-          "word": "перча́тки",
-          "gram": "danh từ số nhiều",
-          "meaning": "găng tay",
-          "example": "Не забудьте шерстяные перчатки."
+          "word": "одева́ться (тепло)",
+          "gram": "cụm động từ",
+          "meaning": "mặc ấm chống rét",
+          "example": "Зимой обязательно нужно тепло одеваться перед выходом."
         },
         {
-          "word": "отопле́ние",
-          "gram": "danh từ giống trung",
-          "meaning": "hệ thống sưởi ấm",
-          "example": "В домах зимой работает центральное отопление."
+          "word": "замерза́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đóng băng, cảm thấy rét cóng",
+          "example": "Зимой реки замерзают и покрываются толстым льдом."
+        },
+        {
+          "word": "ката́ться (на коньках)",
+          "gram": "cụm động từ",
+          "meaning": "trượt băng ngoài trời",
+          "example": "В парке Горького мы любим кататься на коньках."
         }
       ]
     }

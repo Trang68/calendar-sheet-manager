@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Chinh phục tiếng Nga (Изучение языка)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "паде́ж",
@@ -56,6 +56,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "vốn từ vựng",
           "example": "Постоянно расширять активный словарный запас."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "посеща́ть (музей)",
+          "gram": "cụm động từ",
+          "meaning": "thưởng thức bảo tàng",
+          "example": "В выходной день мы посещаем Третьяковскую галерею в Москве."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm kiệt tác hội họa",
+          "example": "Посетители подолгу осматривают шедевры русских художников."
+        },
+        {
+          "word": "понима́ть (искусство)",
+          "gram": "cụm động từ",
+          "meaning": "thấu hiểu mỹ thuật",
+          "example": "Классическая живопись помогает глубже понимать душу народа."
+        },
+        {
+          "word": "вдохновля́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tìm thấy nguồn cảm hứng",
+          "example": "Многие вдохновляются прекрасными картинами для своего творчества."
         }
       ]
     }

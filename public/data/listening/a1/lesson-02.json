@@ -265,7 +265,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Từ vựng Chào hỏi & Làm quen (Знакомство)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "знако́миться",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống cái",
           "meaning": "quốc gia, đất nước",
           "example": "Из какой вы страны?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "знако́миться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm quen",
+          "example": "Давайте познакомимся поближе."
+        },
+        {
+          "word": "звать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi tên",
+          "example": "Как вас зовут? — Меня зовут Анна."
+        },
+        {
+          "word": "прие́хать",
+          "gram": "động từ hoàn thành",
+          "meaning": "đến nơi (xe/tàu)",
+          "example": "Откуда вы приехали в Москву?"
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thấu hiểu",
+          "example": "Я понимаю русскую речь."
         }
       ]
     }

@@ -67,7 +67,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Vũ trụ & Thiên văn (Космонавтика)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "освое́ние",
@@ -92,6 +92,35 @@
           "gram": "danh từ giống đực",
           "meaning": "vụ phóng (tên lửa)",
           "example": "Запуск ракеты транслировался в прямом эфире."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "осва́ивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khai phá không gian",
+          "example": "Россия первой открыла дорогу к освоению космического пространства."
+        },
+        {
+          "word": "выходи́ть (на орбиту)",
+          "gram": "cụm động từ",
+          "meaning": "tiến vào quỹ đạo Trái Đất",
+          "example": "Космический корабль успешно выходит на расчётную околоземную орбиту."
+        },
+        {
+          "word": "стыкова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ghép nối với trạm ISS",
+          "example": "Грузовой модуль в автоматическом режиме стыкуется с МКС."
+        },
+        {
+          "word": "проводи́ть (эксперименты)",
+          "gram": "cụm động từ",
+          "meaning": "tiến hành thí nghiệm vũ trụ",
+          "example": "Космонавты проводят уникальные биологические эксперименты в невесомости."
         }
       ]
     }

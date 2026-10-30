@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Kể về chuyến đi dã ngoại (На природе)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "костёр",
@@ -75,6 +75,35 @@
           "gram": "động từ",
           "meaning": "nghỉ ngơi nạp năng lượng",
           "example": "Мы отлично отдохнули и набрались сил."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "luyện tập thể hình",
+          "example": "Я регулярно занимаюсь спортом для поддержания бодрости и здоровья."
+        },
+        {
+          "word": "бе́гать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạy bộ mỗi sáng",
+          "example": "Каждое утро я с удовольствием бегаю по аллеям парка."
+        },
+        {
+          "word": "чувствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thấy người khỏe khoắn",
+          "example": "После физических упражнений я чувствую прилив сил и энергии."
+        },
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên vận động",
+          "example": "Советую каждому человеку уделять спорту хотя бы полчаса в день."
         }
       ]
     }

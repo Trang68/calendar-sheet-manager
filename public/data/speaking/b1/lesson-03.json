@@ -34,7 +34,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Nhân sinh quan & Nghệ thuật (Мировоззрение)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "мировоззре́ние",
@@ -59,6 +59,35 @@
           "gram": "danh từ giống trung",
           "meaning": "nguồn cảm hứng sáng tạo",
           "example": "Путешествия дарят автору неисчерпаемое вдохновение."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "влия́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tác động đến nhân sinh quan",
+          "example": "Шедевры литературы и кино глубоко влияют на наше мировоззрение."
+        },
+        {
+          "word": "переосмы́сливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhìn nhận lại giá trị sống",
+          "example": "После прочтения этой книги человек переосмысливает свои поступки."
+        },
+        {
+          "word": "вдохновля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "truyền cảm hứng sáng tạo",
+          "example": "Сильные образы героев вдохновляют читателя на самосовершенствование."
+        },
+        {
+          "word": "заставля́ть (задуматься)",
+          "gram": "cụm động từ",
+          "meaning": "thức tỉnh lương tri",
+          "example": "Глубокое произведение заставляет задуматься о смысле человеческой жизни."
         }
       ]
     }

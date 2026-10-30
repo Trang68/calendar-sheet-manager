@@ -9,54 +9,60 @@
   "topic": "Khoa học, Trí tuệ Nhân tạo & Nghề nghiệp tương lai",
   "vocabCategories": [
     {
-      "title": "Công nghệ số & Trí tuệ nhân tạo (Технологии и ИИ)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "иску́сственный интелле́кт",
           "gram": "cụm danh từ",
-          "meaning": "trí tuệ nhân tạo (AI)",
-          "example": "Искусственный интеллект меняет многие профессии."
+          "meaning": "trí tuệ nhân tạo hiện đại",
+          "example": "Искусственный интеллект кардинально меняет структуру мировой экономики."
         },
         {
           "word": "автоматиза́ция",
           "gram": "danh từ giống cái",
-          "meaning": "sự tự động hóa",
-          "example": "Автоматизация рутинных процессов экономит время."
+          "meaning": "quá trình tự động hóa sản xuất",
+          "example": "Автоматизация рутинных процессов освобождает человека для творческих задач."
         },
         {
-          "word": "удалённая рабо́та",
+          "word": "ры́нок труда́",
           "gram": "cụm danh từ",
-          "meaning": "làm việc từ xa (remote)",
-          "example": "Многие IT-специалисты перешли на удалённую работу."
+          "meaning": "thị trường việc làm số hóa",
+          "example": "На современном рынке труда растёт спрос на специалистов по анализу данных."
         },
         {
           "word": "на́вык",
           "gram": "danh từ giống đực",
-          "meaning": "kỹ năng",
-          "example": "Важно развивать гибкие навыки и критическое мышление."
+          "meaning": "kỹ năng nghề nghiệp chuyên môn",
+          "example": "Цифровые навыки и гибкость мышления становятся главными преимуществами соискателя."
         }
       ]
     },
     {
-      "title": "Thị trường lao động & Tuyển dụng (Карьера и занятость)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "ры́нок труда́",
-          "gram": "cụm danh từ",
-          "meaning": "thị trường lao động",
-          "example": "Рынок труда предъявляет новые требования к выпускникам."
+          "word": "адапти́роваться",
+          "gram": "động từ hoàn thành/chưa HT",
+          "meaning": "thích ứng chuyển đổi công nghệ",
+          "example": "Работники должны гибко адаптироваться к стремительным изменениям в отраслях."
         },
         {
-          "word": "конкурентоспосо́бность",
-          "gram": "danh từ giống cái",
-          "meaning": "năng lực cạnh tranh",
-          "example": "Знание языков повышает конкурентоспособность."
+          "word": "осва́ивать (профессии)",
+          "gram": "cụm động từ",
+          "meaning": "làm chủ ngành nghề tương lai",
+          "example": "Молодёжь активно осваивает новые перспективные специальности в сфере IT."
         },
         {
-          "word": "адапти́роваться к",
-          "gram": "động từ + Cách 3",
-          "meaning": "thích nghi với",
-          "example": "Специалисты должны быстро адаптироваться к изменениям."
+          "word": "конкури́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nâng cao năng lực cạnh tranh",
+          "example": "Специалистам приходится конкурировать в глобальном цифровом пространстве."
+        },
+        {
+          "word": "внедря́ть (технологии)",
+          "gram": "cụm động từ",
+          "meaning": "ứng dụng giải pháp thông minh",
+          "example": "Предприятия успешно внедряют передовые алгоритмы в производственные цепочки."
         }
       ]
     }

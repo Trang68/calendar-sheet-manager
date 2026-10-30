@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Danh sách mua đồ (Список покупок)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "спи́сок",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống trung",
           "meaning": "quả táo",
           "example": "Два килограмма сладких яблок."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дружи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kết bạn gắn bó",
+          "example": "Мы дружим со школьных лет."
+        },
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trò chuyện tâm tình",
+          "example": "Мы каждый день общаемся и делимся мыслями."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tương trợ lẫn nhau",
+          "example": "Друг всегда готов помочь в трудную минуту."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thấu hiểu bạn bè",
+          "example": "Мы понимаем друг друга с полуслова."
         }
       ]
     }

@@ -9,31 +9,60 @@
   "topic": "Tổng kết A1: Đánh giá thành quả và bước tiếp lên A2",
   "vocabCategories": [
     {
-      "title": "Tổng kết & Thành tựu (Итоги и достижения)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "результа́т",
+          "word": "успе́х",
           "gram": "danh từ giống đực",
-          "meaning": "kết quả",
-          "example": "У меня отличный результат на тесте."
+          "meaning": "thành công, tiến bộ",
+          "example": "Большой успех в изучении русского языка."
         },
         {
-          "word": "зна́ния",
-          "gram": "danh từ số nhiều",
-          "meaning": "kiến thức",
-          "example": "Я получил хорошие базовые знания."
-        },
-        {
-          "word": "прогре́сс",
+          "word": "сертифика́т",
           "gram": "danh từ giống đực",
-          "meaning": "sự tiến bộ",
-          "example": "Преподаватель похвалил мой прогресс."
+          "meaning": "chứng chỉ",
+          "example": "Студент получил сертификат уровня А1."
         },
         {
-          "word": "уве́ренно",
-          "gram": "phó từ",
-          "meaning": "tự tin",
-          "example": "Теперь я могу уверенно говорить по-русски."
+          "word": "цель",
+          "gram": "danh từ giống cái",
+          "meaning": "mục tiêu phấn đấu",
+          "example": "Моя новая цель — сдать экзамен А2."
+        },
+        {
+          "word": "горизо́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "chân trời mới",
+          "example": "Перед нами открываются новые горизонты."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "заверша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoàn thành",
+          "example": "Мы завершаем курс начального уровня."
+        },
+        {
+          "word": "достига́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đạt được",
+          "example": "Трудолюбивый человек достигает своей цели."
+        },
+        {
+          "word": "продолжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tiếp tục",
+          "example": "Я буду продолжать учить русский язык."
+        },
+        {
+          "word": "совершенствова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoàn thiện, nâng cao",
+          "example": "Мы совершенствуем свои разговорные навыки."
         }
       ]
     }

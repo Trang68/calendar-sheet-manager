@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Hỏi đường trong thành phố (В городе)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "у́лица",
@@ -80,6 +80,35 @@
           "gram": "phó từ",
           "meaning": "rẽ trái",
           "example": "Остановка автобуса налево."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu ăn",
+          "example": "Что вы любите готовить дома?"
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nếm thử món",
+          "example": "Я впервые пробую горячий борщ."
+        },
+        {
+          "word": "предпочита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuộng, thích hơn",
+          "example": "Я предпочитаю зелёный чай кофе."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món",
+          "example": "Мы заказываем суп и салат на обед."
         }
       ]
     }

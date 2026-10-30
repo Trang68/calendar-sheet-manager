@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Bài văn tổng kết tiến bộ A2 (Итоговое эссе)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "прогре́сс",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống đực",
           "meaning": "chứng chỉ chuẩn hóa",
           "example": "Успешно сдать экзамен на сертификат ТРКИ-1."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "подводи́ть (итоги)",
+          "gram": "cụm động từ",
+          "meaning": "tổng kết chặng đường",
+          "example": "Завершая курс А2, я с гордостью подвожу итоги своей упорной работы."
+        },
+        {
+          "word": "осва́ивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lĩnh hội kiến thức mới",
+          "example": "За это время я освоил множество сложных грамматических конструкций."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tri ân thầy cô",
+          "example": "Искренне благодарю преподавателей за терпение, вдохновение и поддержку."
+        },
+        {
+          "word": "стреми́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chinh phục cấp độ B1",
+          "example": "Я с энтузиазмом стремлюсь к новым горизонтам и покорению уровня B1!"
         }
       ]
     }

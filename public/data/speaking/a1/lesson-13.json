@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đến chơi nhà & Trà bánh (В гостях)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "хозя́ин / хозя́йка",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "cảm ơn",
           "example": "Благодарю за тёплый приём."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "одева́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc quần áo",
+          "example": "Зимой нужно одеваться очень тепло."
+        },
+        {
+          "word": "мёрзнуть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bị cóng, lạnh rét",
+          "example": "Без тёплых перчаток быстро мёрзнут руки."
+        },
+        {
+          "word": "носи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc, mang theo",
+          "example": "В холодные дни я ношу шерстяной шарф."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo",
+          "example": "В солнечную погоду приятно гулять в парке."
         }
       ]
     }

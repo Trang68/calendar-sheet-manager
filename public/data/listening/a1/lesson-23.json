@@ -59,7 +59,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Vé sinh viên tham quan (В музее)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "студе́нческий",
@@ -84,6 +84,35 @@
           "gram": "danh từ giống đực",
           "meaning": "phòng trưng bày",
           "example": "Пройдите в главный выставочный зал."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "вызыва́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi xe (qua app)",
+          "example": "Я вызываю такси через приложение в телефоне."
+        },
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi xe",
+          "example": "Мы едем в аэропорт без пробок."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả tiền cước",
+          "example": "Пассажир платит за поездку картой."
+        },
+        {
+          "word": "остана́вливаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dừng xe",
+          "example": "Водитель останавливается около входа."
         }
       ]
     }

@@ -9,31 +9,60 @@
   "topic": "Khách sạn, Nhận phòng & Tiện nghi phòng",
   "vocabCategories": [
     {
-      "title": "Từ vựng Khách sạn (Гостиница)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "гости́ница",
           "gram": "danh từ giống cái",
           "meaning": "khách sạn",
-          "example": "Мы живём в гостинице «Космос»."
+          "example": "Мы остановились в трёхзвёздочной гостинице."
         },
         {
           "word": "но́мер",
           "gram": "danh từ giống đực",
           "meaning": "phòng khách sạn",
-          "example": "Наш номер находится на пятом этаже."
+          "example": "Наш номер чистый, с видом на реку."
         },
         {
           "word": "ключ",
           "gram": "danh từ giống đực",
-          "meaning": "chìa khóa phòng",
-          "example": "Вот ваш электронный ключ от номера."
+          "meaning": "chìa khóa",
+          "example": "Администратор дал электронный ключ от номера."
         },
         {
           "word": "па́спорт",
           "gram": "danh từ giống đực",
           "meaning": "hộ chiếu",
-          "example": "Покажите, пожалуйста, ваш паспорт."
+          "example": "Для регистрации покажите ваш паспорт."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "брони́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt chỗ trước",
+          "example": "Я бронирую номер через интернет."
+        },
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cư trú, ở",
+          "example": "Туристы живут в гостинице пять дней."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả tiền",
+          "example": "Мы платим за номер при выезде."
+        },
+        {
+          "word": "выезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả phòng, rời đi",
+          "example": "Гости выезжают до двенадцати часов дня."
         }
       ]
     }

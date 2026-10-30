@@ -9,25 +9,60 @@
   "topic": "Đồ lưu niệm & Nghề thủ công dân gian",
   "vocabCategories": [
     {
-      "title": "Thủ công mỹ nghệ (Народные промыслы)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "матрёшка",
           "gram": "danh từ giống cái",
-          "meaning": "búp bê gỗ lồng nhau Matryoshka",
-          "example": "Внутри большой матрёшки прячется ещё несколько маленьких."
+          "meaning": "búp bê gỗ Matryoshka truyền thống",
+          "example": "Деревянная матрёшка стала главным всемирным символом русской культуры."
         },
         {
           "word": "гжель",
           "gram": "danh từ giống cái",
           "meaning": "gốm sứ men lam trắng Gzhel",
-          "example": "Сине-белая гжельская посуда известна во всём мире."
+          "example": "Посуда в стиле гжель расписана нежными сине-голубыми узорами."
         },
         {
           "word": "хохлома́",
           "gram": "danh từ giống cái",
-          "meaning": "nghệ thuật sơn mài Khokhloma",
-          "example": "Золотые узоры хохломы наносят на деревянные ложки и чаши."
+          "meaning": "nghệ thuật sơn mài vàng đen Khokhloma",
+          "example": "Хохлома привлекает золотыми растительными орнаментами на чёрном фоне."
+        },
+        {
+          "word": "янта́рь",
+          "gram": "danh từ giống đực",
+          "meaning": "đá hổ phách thiên nhiên Baltic",
+          "example": "На Балтийском побережье туристы покупают красивые украшения из янтаря."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "создава́ть (изделия)",
+          "gram": "cụm động từ",
+          "meaning": "sáng tác đồ thủ công mỹ nghệ",
+          "example": "Народные мастера создают уникальные деревянные сувениры вручную."
+        },
+        {
+          "word": "распи́сывать (узорами)",
+          "gram": "cụm động từ",
+          "meaning": "vẽ trang trí hoa văn dân gian",
+          "example": "Художники искусно расписывают тарелки и ложки яркими красками."
+        },
+        {
+          "word": "храни́ть (традиции)",
+          "gram": "cụm động từ",
+          "meaning": "gìn giữ lưu truyền bản sắc",
+          "example": "Потомственные ремесленники бережно хранят старинные секреты росписи."
+        },
+        {
+          "word": "покупа́ть (сувениры)",
+          "gram": "cụm động từ",
+          "meaning": "mua sắm quà lưu niệm độc đáo",
+          "example": "Иностранные гости с радостью покупают расписные матрешки на память."
         }
       ]
     }

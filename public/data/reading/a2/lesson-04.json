@@ -9,54 +9,60 @@
   "topic": "Sức khỏe, Triệu chứng bệnh & Nhà thuốc",
   "vocabCategories": [
     {
-      "title": "Triệu chứng & Cảm giác (Симптомы и самочувствие)",
-      "rows": [
-        {
-          "word": "просту́да",
-          "gram": "danh từ giống cái",
-          "meaning": "cảm lạnh",
-          "example": "Осенью многие болеют простудой."
-        },
-        {
-          "word": "температу́ра",
-          "gram": "danh từ giống cái",
-          "meaning": "nhiệt độ cơ thể, sốt",
-          "example": "У меня высокая температура — 38 градусов."
-        },
-        {
-          "word": "боле́ть",
-          "gram": "động từ",
-          "meaning": "đau, nhức",
-          "example": "У меня сильно болит горло и голова."
-        },
-        {
-          "word": "ка́шель",
-          "gram": "danh từ giống đực",
-          "meaning": "cơn ho",
-          "example": "Принимайте этот сироп от кашля."
-        }
-      ]
-    },
-    {
-      "title": "Khám bệnh & Thuốc men (Врач и лекарства)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "поликли́ника",
           "gram": "danh từ giống cái",
           "meaning": "phòng khám đa khoa",
-          "example": "Запишитесь на приём в поликлинику."
+          "example": "Студенты обращаются за помощью в поликлинику при университете."
+        },
+        {
+          "word": "терапе́вт",
+          "gram": "danh từ giống đực",
+          "meaning": "bác sĩ nội khoa",
+          "example": "Доктор-терапевт внимательно слушает лёгкие и измеряет давление."
         },
         {
           "word": "реце́пт",
           "gram": "danh từ giống đực",
-          "meaning": "đơn thuốc",
-          "example": "Врач выписал рецепт на антибиотики."
+          "meaning": "đơn thuốc điều trị",
+          "example": "Врач выписал пациенту рецепт на антибиотики."
         },
         {
-          "word": "табле́тки",
-          "gram": "danh từ số nhiều",
-          "meaning": "thuốc viên",
-          "example": "Пейте эти таблетки два раза в день после еды."
+          "word": "апте́ка",
+          "gram": "danh từ giống cái",
+          "meaning": "hiệu thuốc tân dược",
+          "example": "Возле станции метро находится круглосуточная аптека."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bị ốm, cảm thấy đau",
+          "example": "Если у вас болит горло и голова, оставайтесь дома."
+        },
+        {
+          "word": "выпи́сывать (рецепт)",
+          "gram": "cụm động từ",
+          "meaning": "kê đơn thuốc",
+          "example": "Доктор выписывает больничный лист и нужные лекарства."
+        },
+        {
+          "word": "принима́ть (лекарства)",
+          "gram": "cụm động từ",
+          "meaning": "uống thuốc theo chỉ dẫn",
+          "example": "Пациент принимает таблетки три раза в день после еды."
+        },
+        {
+          "word": "выздора́вливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bình phục sức khỏe",
+          "example": "Благодаря правильному лечению больной быстро выздоравливает."
         }
       ]
     }

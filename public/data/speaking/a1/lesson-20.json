@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thuyết trình tổng kết (Самопрезентация)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "расска́зывать",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống trung",
           "meaning": "tương lai",
           "example": "Планы на успешное будущее."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "говори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nói lưu loát",
+          "example": "Теперь я свободно говорю на простые темы по-русски."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thuyết trình kể",
+          "example": "Студент рассказывает о себе и своих планах."
+        },
+        {
+          "word": "дели́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ cảm xúc",
+          "example": "Я хочу поделиться радостью моих успехов в учёбе."
+        },
+        {
+          "word": "ра́доваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vui mừng hoan hỉ",
+          "example": "Мы радуемся отличным результатам курса."
         }
       ]
     }

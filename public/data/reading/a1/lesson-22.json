@@ -9,31 +9,60 @@
   "topic": "Bưu điện: Gửi bưu thiếp, thư từ & bưu phẩm",
   "vocabCategories": [
     {
-      "title": "Từ vựng Bưu điện (Почта)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "по́чта",
           "gram": "danh từ giống cái",
           "meaning": "bưu điện",
-          "example": "Почта открывается в восемь утра."
-        },
-        {
-          "word": "писько́",
-          "gram": "danh từ giống trung",
-          "meaning": "lá thư",
-          "example": "Я пишу письмо родителям."
+          "example": "Почта находится на соседней улице."
         },
         {
           "word": "откры́тка",
           "gram": "danh từ giống cái",
           "meaning": "bưu thiếp",
-          "example": "Купите красивые открытки с видами Москвы."
+          "example": "Анна отправляет открытку бабушке."
+        },
+        {
+          "word": "посы́лка",
+          "gram": "danh từ giống cái",
+          "meaning": "kiện hàng bưu phẩm",
+          "example": "Родители прислали тёплую посылку."
         },
         {
           "word": "ма́рка",
           "gram": "danh từ giống cái",
-          "meaning": "con tem",
-          "example": "Наклейте марку на конверт."
+          "meaning": "con tem bưu chính",
+          "example": "Купите две красивые марки на конверт."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi đi",
+          "example": "Он отправляет посылку в другой город."
+        },
+        {
+          "word": "получа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận về",
+          "example": "Я получаю заказное письмо по паспорту."
+        },
+        {
+          "word": "подпи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ký tên, ghi địa chỉ",
+          "example": "Она подписывает открытку с праздником."
+        },
+        {
+          "word": "взве́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cân trọng lượng",
+          "example": "Оператор взвешивает тяжёлую коробку."
         }
       ]
     }

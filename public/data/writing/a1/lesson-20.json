@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thành tích học tập (Мои успехи A1)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "успе́х",
@@ -81,6 +81,35 @@
           "gram": "động từ",
           "meaning": "tiếp tục",
           "example": "Я продолжаю учиться на уровне A2."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "вы́учить",
+          "gram": "động từ hoàn thành",
+          "meaning": "học thuộc lòng vững",
+          "example": "За курс А1 я выучил более пятисот русских слов."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hiểu thông thạo",
+          "example": "Теперь я без труда понимаю простые тексты и диалоги."
+        },
+        {
+          "word": "говори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự tin giao tiếp",
+          "example": "Я умею рассказывать о себе и поддерживать разговор."
+        },
+        {
+          "word": "горди́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự hào về bản thân",
+          "example": "Я горжусь своими первыми успехами в изучении языка."
         }
       ]
     }

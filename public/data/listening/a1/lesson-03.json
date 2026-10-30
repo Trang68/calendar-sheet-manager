@@ -265,7 +265,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Từ vựng Thư viện (В библиотеке)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "библиоте́ка",
@@ -290,6 +290,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "phòng đọc sách",
           "example": "Читальный зал открыт до восьми вечера."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đọc",
+          "example": "Студенты читают научные статьи."
+        },
+        {
+          "word": "брать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mượn, lấy",
+          "example": "Можно взять этот словарь домой?"
+        },
+        {
+          "word": "иска́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tìm kiếm",
+          "example": "Я ищу учебник по грамматике."
+        },
+        {
+          "word": "возвраща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả lại",
+          "example": "Книги нужно возвращать вовремя."
         }
       ]
     }

@@ -269,7 +269,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Khách sạn (В гостинице)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "гости́ница",
@@ -294,6 +294,35 @@
           "gram": "danh từ giống cái",
           "meaning": "đặt chỗ trước",
           "example": "У меня есть бронь на три дня."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "брони́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt phòng trước",
+          "example": "Я хочу забронировать одноместный номер."
+        },
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ở trọ, cư trú",
+          "example": "Туристы живут в гостинице в центре."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả tiền",
+          "example": "Можно заплатить кредитной картой?"
+        },
+        {
+          "word": "выезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả phòng rời đi",
+          "example": "Мы выезжаем завтра утром."
         }
       ]
     }

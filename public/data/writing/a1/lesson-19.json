@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thiệp chúc Tết (Новый год)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "новогодний",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống cái",
           "meaning": "nụ cười",
           "example": "Много улыбок и тепла в новом году."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "украша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trang hoàng cây thông",
+          "example": "Дети с восторгом украшают ёлку блестящими шарами."
+        },
+        {
+          "word": "отмеча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đón mừng năm mới",
+          "example": "В полночь вся страна торжественно отмечает Новый год."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cầu chúc an lành",
+          "example": "Мы желаем родным счастья, мира и крепкого здоровья."
+        },
+        {
+          "word": "собира́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "quây quần đoàn viên",
+          "example": "Все поколения семьи собираются за праздничным столом."
         }
       ]
     }

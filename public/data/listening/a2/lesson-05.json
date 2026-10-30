@@ -72,7 +72,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thuê nhà trọ (Аренда жилья)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "аре́нда",
@@ -97,6 +97,35 @@
           "gram": "cụm danh từ cái",
           "meaning": "máy giặt",
           "example": "В ванной установлена стиральная машина."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "снима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thuê căn hộ",
+          "example": "Студент хочет снять однокомнатную квартиру на длительный срок."
+        },
+        {
+          "word": "звони́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi điện hỏi tin",
+          "example": "Я звоню по объявлению об аренде жилья."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đến xem phòng",
+          "example": "Вечером арендатор осматривает состояние квартиры."
+        },
+        {
+          "word": "догова́риваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thỏa thuận giá cả",
+          "example": "Стороны договариваются о размере ежемесячной оплаты."
         }
       ]
     }

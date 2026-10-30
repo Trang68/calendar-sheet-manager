@@ -9,54 +9,60 @@
   "topic": "Lịch sử, Kiến trúc Hoàng gia & Nghệ thuật Bảo tàng",
   "vocabCategories": [
     {
-      "title": "Bảo tàng & Di sản (Музей и культурное наследие)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "экспона́т",
           "gram": "danh từ giống đực",
-          "meaning": "hiện vật trưng bày",
-          "example": "В коллекции музея более трёх миллионов экспонатов."
+          "meaning": "hiện vật cổ vật trưng bày",
+          "example": "В залах Эрмитажа хранится свыше трёх миллионов ценнейших экспонатов."
         },
         {
           "word": "Зи́мний дворе́ц",
           "gram": "cụm danh từ",
-          "meaning": "Cung điện Mùa Đông",
-          "example": "Зимний дворец был главной резиденцией русских царей."
-        },
-        {
-          "word": "коллекционе́р",
-          "gram": "danh từ giống đực",
-          "meaning": "nhà sưu tầm",
-          "example": "Екатерина II была страстным коллекционером живописи."
+          "meaning": "Cung điện Mùa Đông tráng lệ",
+          "example": "Зимний дворец — шедевр стиля барокко и главная резиденция русских царей."
         },
         {
           "word": "карти́нная галере́я",
           "gram": "cụm danh từ",
-          "meaning": "phòng trưng bày tranh",
-          "example": "В залах галереи представлены полотна Рембрандта и Леонардо да Винчи."
-        }
-      ]
-    },
-    {
-      "title": "Kiến trúc & Lịch sử (Архитектура и история)",
-      "rows": [
-        {
-          "word": "резиде́нция",
-          "gram": "danh từ giống cái",
-          "meaning": "dinh thự, nơi ngự trị",
-          "example": "Великолепная царская резиденция."
-        },
-        {
-          "word": "основа́тель",
-          "gram": "danh từ giống đực",
-          "meaning": "người sáng lập",
-          "example": "Основательницей музея считается Екатерина Великая."
+          "meaning": "phòng tranh hội họa danh tiếng",
+          "example": "Картинная галерея музея включает полотна Леонардо да Винчи и Рембрандта."
         },
         {
           "word": "пара́дный зал",
           "gram": "cụm danh từ",
-          "meaning": "đại sảnh nghi lễ",
-          "example": "Парадные залы украшены золотом и мрамором."
+          "meaning": "đại sảnh nghênh tân lộng lẫy",
+          "example": "Золотые парадные залы дворца поражают гостей своим великолепием и масштабом."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "экспони́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trưng bày bảo vật trước công chúng",
+          "example": "Музей экспонирует редкие археологические находки и предметы ювелирного искусства."
+        },
+        {
+          "word": "восхища́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm say đắm du khách toàn cầu",
+          "example": "Уникальные коллекции музея восхищают ценителей прекрасного со всего мира."
+        },
+        {
+          "word": "реставри́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trùng tu kiệt tác nghệ thuật",
+          "example": "Опытные специалисты бережно реставрируют старинные холсты и скульптуры."
+        },
+        {
+          "word": "посеща́ть (музей)",
+          "gram": "cụm động từ",
+          "meaning": "tham quan kho tàng văn hóa",
+          "example": "Каждый год миллионы туристов посещают Эрмитаж в Санкт-Петербурге."
         }
       ]
     }

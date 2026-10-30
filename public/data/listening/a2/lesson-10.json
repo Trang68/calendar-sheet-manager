@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Du lịch Vành đai Vàng (Турагентство)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "экскурсио́нный тур",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "hướng dẫn viên du lịch",
           "example": "Профессиональный гид-экскурсовод."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua thẻ tập gym",
+          "example": "Студент покупает годовой абонемент в фитнес-клуб."
+        },
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tập với máy",
+          "example": "Он занимается на современных силовых тренажёрах."
+        },
+        {
+          "word": "пла́вать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bơi trong bể",
+          "example": "После тренировки приятно поплавать в бассейне."
+        },
+        {
+          "word": "бе́гать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạy trên thảm",
+          "example": "Она бегает на беговой дорожке по двадцать минут."
         }
       ]
     }

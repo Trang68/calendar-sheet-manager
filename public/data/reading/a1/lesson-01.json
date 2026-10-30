@@ -9,60 +9,60 @@
   "topic": "Chào hỏi, Tên gọi & Đại từ nhân xưng",
   "vocabCategories": [
     {
-      "title": "Từ ngữ chào hỏi & Xã giao (Приветствия)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "Здра́вствуйте",
-          "gram": "lời chào lịch sự",
-          "meaning": "Xin chào (trang trọng)",
-          "example": "Здравствуйте, меня зовут Антон."
+          "word": "студе́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "nam sinh viên",
+          "example": "Антон — иностранный студент."
         },
         {
-          "word": "Приве́т",
-          "gram": "lời chào thân mật",
-          "meaning": "Chào bạn, chào cậu",
-          "example": "Привет, Анна!"
+          "word": "студе́нтка",
+          "gram": "danh từ giống cái",
+          "meaning": "nữ sinh viên",
+          "example": "Анна — прилежная студентка."
         },
         {
-          "word": "Спаси́бо",
-          "gram": "từ cảm ơn",
-          "meaning": "Cảm ơn",
-          "example": "Большое спасибо за помощь."
+          "word": "университе́т",
+          "gram": "danh từ giống đực",
+          "meaning": "trường đại học",
+          "example": "Мы учимся в московском университете."
         },
         {
-          "word": "До свида́ния",
-          "gram": "lời chào tạm biệt",
-          "meaning": "Tạm biệt (hẹn gặp lại)",
-          "example": "До свидания, до завтра!"
+          "word": "преподава́тель",
+          "gram": "danh từ giống đực",
+          "meaning": "giảng viên, thầy giáo",
+          "example": "Наш преподаватель очень умный человек."
         }
       ]
     },
     {
-      "title": "Đại từ nhân xưng (Личные местоимения)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "я",
-          "gram": "ngôi 1 số ít",
-          "meaning": "tôi, mình",
-          "example": "Я студент."
+          "word": "знако́миться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm quen",
+          "example": "Давайте познакомимся!"
         },
         {
-          "word": "ты",
-          "gram": "ngôi 2 số ít",
-          "meaning": "bạn, cậu",
-          "example": "Ты студент?"
+          "word": "познако́миться",
+          "gram": "động từ hoàn thành",
+          "meaning": "làm quen (đã xong)",
+          "example": "Очень приятно с вами познакомиться."
         },
         {
-          "word": "он / она́",
-          "gram": "ngôi 3 số ít",
-          "meaning": "anh ấy / cô ấy",
-          "example": "Он врач, а она преподаватель."
+          "word": "учи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tập",
+          "example": "Они учатся на первом курсе."
         },
         {
-          "word": "мы / вы / они́",
-          "gram": "đại từ số nhiều",
-          "meaning": "chúng tôi / các bạn / họ",
-          "example": "Мы учимся вместе."
+          "word": "звать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi tên",
+          "example": "Как вас зовут? — Меня зовут Антон."
         }
       ]
     }

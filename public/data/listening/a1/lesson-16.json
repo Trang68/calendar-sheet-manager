@@ -253,7 +253,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Gọi xe Taxi (В такси)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "такси́",
@@ -278,6 +278,35 @@
           "gram": "danh từ giống cái",
           "meaning": "tắc đường",
           "example": "На кольцевой дороге большая пробка."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tham quan ngắm nhìn",
+          "example": "Туристы осматривают шедевры живописи."
+        },
+        {
+          "word": "слу́шать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lắng nghe",
+          "example": "Экскурсанты слушают рассказ гида."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thuyết minh",
+          "example": "Экскурсовод рассказывает историю музея."
+        },
+        {
+          "word": "восхища́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trầm trồ thán phục",
+          "example": "Все восхищаются старинными залами."
         }
       ]
     }

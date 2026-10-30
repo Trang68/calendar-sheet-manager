@@ -9,25 +9,60 @@
   "topic": "Tổng kết chặng đường: Đạt trình độ TRKI-A2",
   "vocabCategories": [
     {
-      "title": "Tiến bộ ngôn ngữ (Успехи и цели)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "достиже́ние",
           "gram": "danh từ giống trung",
-          "meaning": "thành tựu, sự tiến bộ",
-          "example": "Успешное освоение уровня A2 — отличное достижение."
+          "meaning": "thành tựu và kết quả nỗ lực học tập",
+          "example": "Уверенная речь на русском языке — это наше главное общее достижение."
         },
         {
           "word": "уве́ренность",
           "gram": "danh từ giống cái",
-          "meaning": "sự tự tin trong giao tiếp",
-          "example": "Я чувствую уверенность при разговоре с носителями языка."
+          "meaning": "sự tự tin vững vàng khi giao tiếp",
+          "example": "Постоянная речевая практика придаёт уверенность в разговоре с носителями."
         },
         {
           "word": "сертифика́т",
           "gram": "danh từ giống đực",
-          "meaning": "chứng chỉ chuẩn hóa",
-          "example": "После сдачи экзамена выдаётся государственный сертификат TRKI."
+          "meaning": "chứng chỉ xác nhận trình độ ngôn ngữ",
+          "example": "После успешной сдачи тестов студент получает официальный сертификат A2."
+        },
+        {
+          "word": "словарны́й запас",
+          "gram": "cụm danh từ",
+          "meaning": "vốn từ vựng phong phú tích lũy",
+          "example": "За время обучения мы значительно расширили активный словарный запас."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "осва́ивать (грамматику)",
+          "gram": "cụm động từ",
+          "meaning": "làm chủ kiến thức ngữ pháp",
+          "example": "Мы успешно осваиваем грамматику продвинутого уровня сложности."
+        },
+        {
+          "word": "достига́ть (уровня B1)",
+          "gram": "cụm động từ",
+          "meaning": "chinh phục mục tiêu trình độ mới",
+          "example": "Благодаря упорному ежедневному труду студент достигает уровня B1."
+        },
+        {
+          "word": "сдава́ть (экзамен)",
+          "gram": "cụm động từ",
+          "meaning": "hoàn thành kỳ thi đánh giá năng lực",
+          "example": "Я готов сдать международный сертификационный экзамен по русскому языку."
+        },
+        {
+          "word": "продолжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kiên trì học tập không ngừng",
+          "example": "Мы с энтузиазмом продолжаем погружаться в богатую русскую культуру."
         }
       ]
     }

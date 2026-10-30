@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đồ đạc thất lạc (Бюро находок)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "бюро́ нахо́док",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "nhân viên trực ca ga",
           "example": "Дежурный по станции вернул вещи."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "бе́гать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạy bộ rèn sức",
+          "example": "Студенты регулярно бегают на стадионе по вечерам."
+        },
+        {
+          "word": "размина́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khởi động cơ bắp",
+          "example": "Перед забегом необходимо тщательно размяться."
+        },
+        {
+          "word": "уча́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tham gia giải chạy",
+          "example": "Друзья участвуют в городском благотворительном марафоне."
+        },
+        {
+          "word": "побежда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiến thắng vinh quang",
+          "example": "Благодаря упорству команда побеждает в эстафете."
         }
       ]
     }

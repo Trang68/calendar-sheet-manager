@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Công nghệ số trong đời sống (Интернет)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "га́джет",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "lợi ích thực tiễn",
           "example": "Интернет приносит огромную пользу образованию."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дружи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gắn bó keo sơn",
+          "example": "Настоящие друзья дружат годами и никогда не предают."
+        },
+        {
+          "word": "подде́рживать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sát cánh bên bạn",
+          "example": "Верный товарищ поддержит в любой радости и в трудную минуту."
+        },
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ chân thành",
+          "example": "Мы можем часами общаться и обсуждать любые жизненные вопросы."
+        },
+        {
+          "word": "ра́доваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mừng vui cho bạn",
+          "example": "Истинный друг искренне радуется твоим успехам и достижениям."
         }
       ]
     }

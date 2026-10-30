@@ -9,48 +9,60 @@
   "topic": "Du lịch bằng tàu hỏa & Đời sống trên đường ray Nga",
   "vocabCategories": [
     {
-      "title": "Thuật ngữ Đường sắt (Железная дорога)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "плацка́ртный ваго́н",
-          "gram": "cụm danh từ đực",
-          "meaning": "toa giường nằm khoang mở",
-          "example": "Билеты в плацкартный вагон стоят дешевле."
+          "gram": "cụm danh từ",
+          "meaning": "toa nằm khoang mở platskart",
+          "example": "В плацкартном вагоне всегда царит дружелюбная атмосфера общения."
         },
         {
           "word": "подстака́нник",
           "gram": "danh từ giống đực",
-          "meaning": "giá đỡ ly trà bằng kim loại",
-          "example": "В поезде чай всегда подают в стаканах с подстаканниками."
+          "meaning": "giá kim loại giữ ly trà nóng",
+          "example": "Горячий чай в поезде подают в стаканах с красивыми подстаканниками."
         },
         {
           "word": "проводни́к",
           "gram": "danh từ giống đực",
           "meaning": "nhân viên phục vụ toa tàu",
-          "example": "Проводник проверил наши билеты и выдал постельное бельё."
+          "example": "Проводник проверяет билеты и выдаёт чистое постельное бельё."
         },
         {
           "word": "посте́льное бельё",
-          "gram": "cụm danh từ trung",
-          "meaning": "chăn ga gối đệm trên tàu",
-          "example": "Комплект белья входит в стоимость билета."
+          "gram": "cụm danh từ",
+          "meaning": "bộ chăn ga gối đệm trên tàu",
+          "example": "Комплект постельного белья входит в стоимость билета."
         }
       ]
     },
     {
-      "title": "Hành động & Trải nghiệm (Действия в пути)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "отправля́ться",
+          "word": "путеше́ствовать",
           "gram": "động từ chưa hoàn thành",
-          "meaning": "khởi hành, xuất phát",
-          "example": "Поезд отправляется ровно в девятнадцать тридцать."
+          "meaning": "du ngoạn bằng tàu hỏa",
+          "example": "Миллионы людей путешествуют на поездах по бескрайней России."
         },
         {
-          "word": "пейза́ж",
-          "gram": "danh từ giống đực",
-          "meaning": "phong cảnh thiên nhiên",
-          "example": "За окном мелькают бескрайние берёзовые леса."
+          "word": "покупа́ть (билет)",
+          "gram": "cụm động từ",
+          "meaning": "đặt mua vé tàu trực tuyến",
+          "example": "Мы заранее покупаем электронные билеты на официальном сайте."
+        },
+        {
+          "word": "пить (чай)",
+          "gram": "cụm động từ",
+          "meaning": "nhâm nhi tách trà nóng",
+          "example": "Пассажиры любят пить чай с лимоном и печеньем во время поездки."
+        },
+        {
+          "word": "смотре́ть (в окно)",
+          "gram": "cụm động từ",
+          "meaning": "ngắm cảnh đẹp qua cửa sổ",
+          "example": "Особое удовольствие — смотреть в окно поезда на заснеженные леса."
         }
       ]
     }

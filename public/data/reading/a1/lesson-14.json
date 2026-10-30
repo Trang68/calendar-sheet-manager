@@ -9,31 +9,60 @@
   "topic": "Sở thích cá nhân, Thể thao & Giải trí",
   "vocabCategories": [
     {
-      "title": "Sở thích & Thể thao (Хобби и спорт)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "игра́ть в футбо́л",
-          "gram": "cụm từ",
-          "meaning": "chơi đá bóng",
-          "example": "Мальчики играют в футбол."
+          "word": "друг",
+          "gram": "danh từ giống đực",
+          "meaning": "người bạn",
+          "example": "Денис — мой лучший друг."
         },
         {
-          "word": "слу́шать му́зыку",
-          "gram": "cụm từ",
-          "meaning": "nghe nhạc",
-          "example": "Я люблю слушать рок."
+          "word": "му́зыка",
+          "gram": "danh từ giống cái",
+          "meaning": "âm nhạc",
+          "example": "Он слушает классическую музыку."
         },
         {
-          "word": "смотре́ть фи́льмы",
-          "gram": "cụm từ",
-          "meaning": "xem phim",
-          "example": "Мы смотрим кино."
+          "word": "спорт",
+          "gram": "danh từ giống đực",
+          "meaning": "thể thao",
+          "example": "Спорт помогает быть здоровым."
         },
         {
-          "word": "фотографи́ровать",
-          "gram": "động từ",
-          "meaning": "chụp ảnh",
-          "example": "Он любит фотографировать природу."
+          "word": "гита́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "đàn ghi-ta",
+          "example": "Вечером он играет на гитаре."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дружи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kết bạn, thân thiết",
+          "example": "Мы дружим уже много лет."
+        },
+        {
+          "word": "игра́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chơi (nhạc cụ / thể thao)",
+          "example": "Студенты играют в футбол на стадионе."
+        },
+        {
+          "word": "увлека́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đam mê, say mê",
+          "example": "Она увлекается фотографией."
+        },
+        {
+          "word": "петь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hát",
+          "example": "Друзья поют русские песни под гитару."
         }
       ]
     }

@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Tổng kết chặng đường A2 (Итоги)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "достиже́ние",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "khát vọng vươn lên",
           "example": "Стремление достичь уровня B1."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "достига́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạm mốc cấp độ",
+          "example": "Успешно освоив уровень А2, мы достигаем новой ступени в языке."
+        },
+        {
+          "word": "говори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nói chuyện lưu loát",
+          "example": "Теперь я могу свободно говорить и рассуждать на многие темы."
+        },
+        {
+          "word": "продолжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hướng tới B1",
+          "example": "Я планирую уверенно продолжать обучение на уровне B1."
+        },
+        {
+          "word": "совершенствова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nâng cao năng lực",
+          "example": "Мы совершенствуем свои навыки общения с носителями языка."
         }
       ]
     }

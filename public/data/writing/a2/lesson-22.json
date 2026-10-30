@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Chuyến tham quan di tích lịch sử (Экскурсия)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "экску́рсия",
@@ -75,6 +75,35 @@
           "gram": "danh từ giống cái",
           "meaning": "lịch sử hào hùng",
           "example": "Прикоснуться к живой русской истории."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "посеща́ть (галерею)",
+          "gram": "cụm động từ",
+          "meaning": "thăm phòng triển lãm",
+          "example": "Вчера я посетил персональную выставку известного пейзажиста."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêm ngưỡng đường nét",
+          "example": "Я внимательно осматривал каждую картину, поражаясь игре красок и света."
+        },
+        {
+          "word": "чувствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rung cảm tâm hồn",
+          "example": "Полотна передают дыхание живой природы и дарят умиротворение."
+        },
+        {
+          "word": "рекомендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giới thiệu người xem",
+          "example": "Рекомендую всем ценителям прекрасного не пропустить эту экспозицию."
         }
       ]
     }

@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Biến đổi khí hậu (Климат)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "кли́мат",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "bầu khí quyển",
           "example": "Углекислый газ накапливается в атмосфере."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "меня́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "biến đổi khí hậu toàn cầu",
+          "example": "Климат на планете стремительно меняется из-за деятельности человека."
+        },
+        {
+          "word": "тая́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tan chảy các sông băng",
+          "example": "Вековые ледники тают, приводя к постепенному подъёму уровня океана."
+        },
+        {
+          "word": "сокраща́ть (выбросы)",
+          "gram": "cụm động từ",
+          "meaning": "giảm thiểu khí thải độc",
+          "example": "Мировое сообщество договаривается сокращать промышленные выбросы в атмосферу."
+        },
+        {
+          "word": "предотвраща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngăn chặn thảm họa sinh thái",
+          "example": "Учёные ищут решения, чтобы предотвратить глобальный экологический кризис."
         }
       ]
     }

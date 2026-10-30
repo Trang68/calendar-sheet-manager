@@ -9,25 +9,60 @@
   "topic": "Khoa học cơ bản: Dmitry Mendeleev và Bảng tuần hoàn các nguyên tố",
   "vocabCategories": [
     {
-      "title": "Hóa học & Phát minh (Химическая наука)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "периоди́ческий зако́н",
-          "gram": "cụm danh từ đực",
+          "gram": "cụm danh từ",
           "meaning": "định luật tuần hoàn hóa học",
-          "example": "Периодический закон Менделеева открыл фундаментальные свойства материи."
+          "example": "Периодический закон Менделеева стал краеугольным камнем современной физики и химии."
         },
         {
-          "word": "элеме́нт",
-          "gram": "danh từ giống đực",
-          "meaning": "nguyên tố hóa học",
-          "example": "Учёный предсказал свойства ещё не открытых в его время элементов."
+          "word": "хими́ческий элеме́нт",
+          "gram": "cụm danh từ",
+          "meaning": "nguyên tố hóa học trong tự nhiên",
+          "example": "Учёный расположил все известные химические элементы в строгом порядке атомных весов."
         },
         {
           "word": "энциклопеди́ст",
           "gram": "danh từ giống đực",
-          "meaning": "nhà thông thái bách khoa toàn thư",
-          "example": "Менделеев был универсальным учёным-энциклопедистом."
+          "meaning": "nhà bác học bách khoa thông thái",
+          "example": "Дмитрий Менделеев был подлинным энциклопедистом: химиком, физиком, экономистом и метрологом."
+        },
+        {
+          "word": "табли́ца",
+          "gram": "danh từ giống cái",
+          "meaning": "bảng hệ thống hóa các nguyên tố",
+          "example": "Периодическая таблица элементов висит в каждом кабинете химии в любой точке мира."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "открыва́ть (закон)",
+          "gram": "cụm động từ",
+          "meaning": "khám phá ra quy luật cấu trúc vật chất",
+          "example": "В 1869 году русский учёный открыл фундаментальный закон периодичности свойств веществ."
+        },
+        {
+          "word": "систематизи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phân loại sắp xếp tính chất",
+          "example": "Менделеев блестяще систематизировал разрозненные знания о химических элементах."
+        },
+        {
+          "word": "предска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tiên đoán sự tồn tại của nguyên tố mới",
+          "example": "Гениальный мыслитель точно предсказал открытие и свойства ещё неизвестных науке элементов."
+        },
+        {
+          "word": "внести́ (вклад в науку)",
+          "gram": "cụm động từ",
+          "meaning": "cống hiến to lớn cho văn minh khoa học",
+          "example": "Российские учёные внесли неоценимый вклад в развитие фундаментального мирового знания."
         }
       ]
     }

@@ -9,31 +9,60 @@
   "topic": "Đời sống đô thị: Thuê nhà & Tiện ích sinh hoạt",
   "vocabCategories": [
     {
-      "title": "Thuê nhà (Аренда жилья)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
-        {
-          "word": "сдава́ть в аренду",
-          "gram": "cụm động từ",
-          "meaning": "cho thuê (nhà cửa)",
-          "example": "Хозяйка сдаёт однокомнатную квартиру рядом с метро."
-        },
         {
           "word": "зало́г",
           "gram": "danh từ giống đực",
-          "meaning": "tiền đặt cọc",
-          "example": "При подписании договора нужно внести залог за один месяц."
+          "meaning": "tiền đặt cọc thuê nhà",
+          "example": "При заселении арендатор обычно вносит залог за один месяц."
         },
         {
           "word": "коммуна́льные услуги",
-          "gram": "cụm danh từ nhiều",
-          "meaning": "tiền dịch vụ điện nước công cộng",
-          "example": "Свет и вода оплачиваются по счётчикам отдельно."
+          "gram": "cụm danh từ",
+          "meaning": "chi phí điện nước sưởi sinh hoạt",
+          "example": "Плата за коммунальные услуги оплачивается отдельно по квитанции."
         },
         {
           "word": "ме́бель",
           "gram": "danh từ giống cái",
-          "meaning": "đồ nội thất",
-          "example": "В квартире есть вся необходимая мебель и стиральная машина."
+          "meaning": "đồ đạc nội thất căn hộ",
+          "example": "В уютной квартире есть вся необходимая современная мебель."
+        },
+        {
+          "word": "догово́р аренды",
+          "gram": "cụm danh từ",
+          "meaning": "hợp đồng thuê nhà chính thức",
+          "example": "Стороны внимательно читают и подписывают договор аренды жилья."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "снима́ть (жильё)",
+          "gram": "cụm động từ",
+          "meaning": "thuê phòng trọ, căn hộ",
+          "example": "Иногородние студенты снимают квартиру рядом с институтом."
+        },
+        {
+          "word": "плати́ть (ежемесячно)",
+          "gram": "cụm động từ",
+          "meaning": "trả tiền thuê hàng tháng",
+          "example": "Они ежемесячно платят за аренду и коммунальные счета."
+        },
+        {
+          "word": "подпи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ký kết văn bản thỏa thuận",
+          "example": "Хозяин и жилец подписывают акт приёма-передачи помещения."
+        },
+        {
+          "word": "переезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển dọn sang nơi ở mới",
+          "example": "Семья переезжает в новую просторную квартиру в тихом районе."
         }
       ]
     }

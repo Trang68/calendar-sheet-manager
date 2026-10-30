@@ -34,7 +34,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Tiếng Nga của tôi (Итоги говорения)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "говори́ть",
@@ -59,6 +59,35 @@
           "gram": "danh từ giống đực",
           "meaning": "sự tiến bộ",
           "example": "Большой прогресс в учёбе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "мечта́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mơ ước khát khao",
+          "example": "Я мечтаю свободно владеть русским языком."
+        },
+        {
+          "word": "плани́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dự định tương lai",
+          "example": "Мы планируем поступить в магистратуру в Москве."
+        },
+        {
+          "word": "стреми́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nỗ lực vươn tới",
+          "example": "Трудолюбивый студент стремится к высшим баллам."
+        },
+        {
+          "word": "достига́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đạt tới đỉnh cao",
+          "example": "Упорством и трудом мы достигаем поставленных целей."
         }
       ]
     }

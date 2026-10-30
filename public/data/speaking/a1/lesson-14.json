@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Giao dịch ngân hàng (В банке)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "счёт",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống đực",
           "meaning": "hộ chiếu",
           "example": "Предъявите оригинал паспорта."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "брони́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt bàn trước",
+          "example": "Мы хотим забронировать столик на четверых."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món",
+          "example": "Что вы посоветуете заказать на горячее?"
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nếm thử ẩm thực",
+          "example": "Обязательно попробуйте фирменный пирог."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn phục vụ",
+          "example": "Клиенты благодарят официанта за отличный сервис."
         }
       ]
     }

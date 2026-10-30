@@ -34,7 +34,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Gọi món yêu thích (В кафе)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "ча́шка",
@@ -59,6 +59,35 @@
           "gram": "danh từ giống cái",
           "meaning": "kem chua",
           "example": "Блины со сметаной и мёдом."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "бе́гать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạy bộ rèn sức",
+          "example": "По утрам я бегаю на школьном стадионе."
+        },
+        {
+          "word": "пла́вать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bơi lội",
+          "example": "Два раза в неделю я плаваю в бассейне."
+        },
+        {
+          "word": "тренирова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tập luyện thể lực",
+          "example": "Спортсмены упорно тренируются в зале."
+        },
+        {
+          "word": "укрепля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nâng cao sức khỏe",
+          "example": "Регулярный спорт укрепляет иммунитет."
         }
       ]
     }

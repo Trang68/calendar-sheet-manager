@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Cửa hàng đồ lưu niệm (Сувениры)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "сувени́р",
@@ -87,6 +87,35 @@
           "gram": "động từ",
           "meaning": "đóng gói hộp",
           "example": "Упаковать подарок в красивую бумагу."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua áo ấm lông vũ",
+          "example": "Мы покупаем непромокаемый пуховик на зиму."
+        },
+        {
+          "word": "примеря́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thử áo khoác gương",
+          "example": "Покупатель примеряет зимнюю куртку в примерочной."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn màu hợp mốt",
+          "example": "Она выбирает стильный шерстяной шарф к пальто."
+        },
+        {
+          "word": "греть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giữ ấm tuyệt vời",
+          "example": "Натуральный пух отлично греет в тридцатиградусный мороз."
         }
       ]
     }

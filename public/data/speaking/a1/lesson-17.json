@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thủ tục hàng không (В аэропорту)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "термина́л",
@@ -80,6 +80,35 @@
           "gram": "cụm danh từ cái",
           "meaning": "hành lý xách tay",
           "example": "Одно место ручной клади."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi du lịch",
+          "example": "Я мечтаю путешествовать по городам Золотого кольца."
+        },
+        {
+          "word": "посеща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thăm quan di tích",
+          "example": "Туристы посещают старинные кремли и храмы."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm nhìn danh lam",
+          "example": "Мы осматриваем исторический центр города."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp ảnh lưu niệm",
+          "example": "Я фотографирую красивые памятники архитектуры."
         }
       ]
     }

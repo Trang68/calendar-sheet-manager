@@ -55,7 +55,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Chuyển tới căn hộ mới (Переезд)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "перее́зд",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống trung",
           "meaning": "tiệc tân gia",
           "example": "Приглашаю тебя в гости отметить новоселье!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "переезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển sang nhà mới",
+          "example": "На прошлой неделе мы переехали в новую двухкомнатную квартиру."
+        },
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ở nơi tiện ích",
+          "example": "Теперь мы живём в спокойном районе рядом с большим зелёным парком."
+        },
+        {
+          "word": "обустра́ивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bài trí nội thất",
+          "example": "Мы с удовольствием обустраиваем комнаты и покупаем новую мебель."
+        },
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời tân gia",
+          "example": "Приглашаю тебя в гости на новоселье в следующие выходные!"
         }
       ]
     }

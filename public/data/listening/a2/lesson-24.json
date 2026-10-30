@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ôn thi ngữ pháp (Подготовка к тесту)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "глаго́л движе́ния",
@@ -87,6 +87,35 @@
           "gram": "động từ",
           "meaning": "đi tới đích đến",
           "example": "Дойти до университетского корпуса за 10 минут."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trò chuyện gắn bó",
+          "example": "Мы часто общаемся за чашкой чая в уютной обстановке."
+        },
+        {
+          "word": "дели́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ bí mật",
+          "example": "Близкие друзья делятся самыми сокровенными переживаниями."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giúp đỡ vô tư",
+          "example": "Верный товарищ всегда поможет в любой сложной ситуации."
+        },
+        {
+          "word": "ценить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trân quý tình bạn",
+          "example": "Я высоко ценю нашу многолетнюю искреннюю дружбу."
         }
       ]
     }

@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Bốn mùa và Khí hậu (Времена года)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "зима́",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống cái",
           "meaning": "mùa thu",
           "example": "Осенью желтеют листья."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "идти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi bộ",
+          "example": "Идите прямо по этой широкой улице."
+        },
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi phương tiện",
+          "example": "В центр города лучше ехать на метро."
+        },
+        {
+          "word": "повора́чивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rẽ hướng",
+          "example": "Около музея поверните налево."
+        },
+        {
+          "word": "находи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tìm thấy",
+          "example": "С картой легко найти нужный адрес."
         }
       ]
     }

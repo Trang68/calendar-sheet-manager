@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Góc bàn học tập thân quen (Рабочее место)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "рабо́чее ме́сто",
@@ -75,6 +75,35 @@
           "gram": "danh từ giống đực",
           "meaning": "góc nhỏ thân thương",
           "example": "Мой любимый тихий уголок в комнате."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "рассужда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghị luận lối sống",
+          "example": "В своём сочинении я рассуждаю о важности здорового образа жизни."
+        },
+        {
+          "word": "соблюда́ть (баланс)",
+          "gram": "cụm động từ",
+          "meaning": "cân bằng học nghỉ",
+          "example": "Очень важно соблюдать разумный баланс между учёбой и отдыхом."
+        },
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vận động thường xuyên",
+          "example": "Регулярная физическая активность помогает сохранять ясность ума."
+        },
+        {
+          "word": "призыва́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kêu gọi sống lành mạnh",
+          "example": "Я призываю сверстников больше гулять на свежем воздухе и заниматься спортом."
         }
       ]
     }

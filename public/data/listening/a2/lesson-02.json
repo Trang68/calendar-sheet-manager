@@ -109,7 +109,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ẩm thực nhà hàng Nga (Русская кухня)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "брони́рование",
@@ -134,6 +134,35 @@
           "gram": "danh từ giống đực",
           "meaning": "nước quả mọng giải khát",
           "example": "Кувшин клюквенного морса со льдом."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "брони́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt bàn trước",
+          "example": "Я хочу забронировать столик на вечер пятницы."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món ăn",
+          "example": "Мы заказываем суп уху и запечённую рыбу."
+        },
+        {
+          "word": "рекомендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gợi ý món ngon",
+          "example": "Официант рекомендует фирменные сибирские пельмени."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thanh toán hóa đơn",
+          "example": "Гости платят по счёту кредитной картой."
         }
       ]
     }

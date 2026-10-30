@@ -48,7 +48,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tin nhắn rủ bạn (Сообщение)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "свобо́ден",
@@ -73,6 +73,35 @@
           "gram": "động từ",
           "meaning": "chờ đợi",
           "example": "Я буду ждать тебя в шесть часов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "писа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "viết thiệp gửi bạn",
+          "example": "Я пишу праздничную открытку своему другу в Россию."
+        },
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi bưu phẩm",
+          "example": "Она отправляет красивую открытку с видами Ханоя."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng dịp lễ",
+          "example": "От всей души поздравляю тебя с наступающим праздником!"
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc phúc",
+          "example": "Желаю тебе радости, вдохновения и отличных оценок!"
         }
       ]
     }

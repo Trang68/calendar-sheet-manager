@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Ngày Tết và Lễ hội (Праздники)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "поздравле́ние",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự vui vẻ, hân hoan",
           "example": "Шумное праздничное веселье."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "плани́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lên kế hoạch",
+          "example": "Что вы планируете делать на выходных?"
+        },
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dã ngoại",
+          "example": "В субботу мы едем на загородную дачу."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi thư giãn",
+          "example": "Я хочу отдохнуть от шумного города на природе."
+        },
+        {
+          "word": "собира́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuẩn bị, tụ họp",
+          "example": "Друзья собираются поехать на озеро на пикник."
         }
       ]
     }

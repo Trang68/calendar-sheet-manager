@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mua giáo trình tiếng Nga (Книжный магазин)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "уче́бник",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "tập hợp bài tập",
           "example": "Сборник упражнений по грамматике."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn cuốn sách hay",
+          "example": "Покупатель долго выбирает роман в книжном магазине."
+        },
+        {
+          "word": "рекомендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tư vấn sách mới",
+          "example": "Консультант рекомендует бестселлер известного автора."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua ấn phẩm in",
+          "example": "Я покупаю иллюстрированное подарочное издание."
+        },
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "say sưa đọc sách",
+          "example": "Он с увлечением читает книгу по вечерам."
         }
       ]
     }

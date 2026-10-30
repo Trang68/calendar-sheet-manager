@@ -9,31 +9,60 @@
   "topic": "Ngày nghỉ cuối tuần & Hướng di chuyển (Куда?)",
   "vocabCategories": [
     {
-      "title": "Địa điểm giải trí cuối tuần (Куда? - Cách 4)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "в парк",
-          "gram": "Cách 4",
-          "meaning": "đến công viên",
-          "example": "Мы идём в парк."
+          "word": "воскресе́нье",
+          "gram": "danh từ giống trung",
+          "meaning": "ngày chủ nhật",
+          "example": "В воскресенье мы идём на прогулку."
         },
         {
-          "word": "в теа́тр",
-          "gram": "Cách 4",
-          "meaning": "đến nhà hát",
-          "example": "Вечером я иду в театр."
+          "word": "музе́й",
+          "gram": "danh từ giống đực",
+          "meaning": "viện bảo tàng",
+          "example": "В историческом музее много экспонатов."
         },
         {
-          "word": "в музе́й",
-          "gram": "Cách 4",
-          "meaning": "đến viện bảo tàng",
-          "example": "В воскресенье мы идём в музей."
+          "word": "теа́тр",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà hát",
+          "example": "Вечером мы идём в Большой театр."
         },
         {
-          "word": "на конце́рт",
-          "gram": "Cách 4",
-          "meaning": "đến buổi hòa nhạc",
-          "example": "Билеты на концерт."
+          "word": "биле́т",
+          "gram": "danh từ giống đực",
+          "meaning": "vé vào cửa",
+          "example": "Я купил два билета на балет."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "ходи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi lại thường xuyên",
+          "example": "Каждую неделю мы ходим в театр."
+        },
+        {
+          "word": "посеща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thăm quan, dự",
+          "example": "Туристы посещают Третьяковскую галерею."
+        },
+        {
+          "word": "встреча́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gặp gỡ nhau",
+          "example": "Друзья встречаются около станции метро."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua",
+          "example": "Мы покупаем билеты в кассе."
         }
       ]
     }

@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Bất động sản thương mại (Аренда)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "аре́нда",
@@ -87,6 +87,35 @@
           "gram": "cụm danh từ số nhiều",
           "meaning": "chi phí tiện ích (điện, nước, sưởi)",
           "example": "Коммунальные платежи оплачиваются ежемесячно отдельно."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "арендова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thuê mặt bằng kinh doanh",
+          "example": "Компания планирует арендовать офис в современном деловом центре."
+        },
+        {
+          "word": "заключа́ть (договор)",
+          "gram": "cụm động từ",
+          "meaning": "ký kết hợp đồng thuê",
+          "example": "Арендатор и собственник заключают официальный договор аренды помещения."
+        },
+        {
+          "word": "опла́чивать (коммуналку)",
+          "gram": "cụm động từ",
+          "meaning": "trả phí dịch vụ điện nước",
+          "example": "Арендатор обязан своевременно оплачивать коммунальные платежи."
+        },
+        {
+          "word": "расторга́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chấm dứt thỏa thuận",
+          "example": "При нарушении условий стороны вправе расторгнуть соглашение."
         }
       ]
     }

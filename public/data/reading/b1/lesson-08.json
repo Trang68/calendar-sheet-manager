@@ -9,25 +9,60 @@
   "topic": "Nghệ thuật đỉnh cao: Trường phái múa Ballet cổ điển Nga",
   "vocabCategories": [
     {
-      "title": "Nghệ thuật Múa (Балетное искусство)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "хореогра́фия",
           "gram": "danh từ giống cái",
-          "meaning": "nghệ thuật biên đạo múa",
-          "example": "Классическая хореография требует строгой дисциплины."
+          "meaning": "nghệ thuật biên đạo múa hàn lâm",
+          "example": "Русская школа классической хореографии признана эталоном во всём мире."
         },
         {
           "word": "прима-балери́на",
           "gram": "danh từ giống cái",
-          "meaning": "nữ vũ công ngôi sao hàng đầu",
-          "example": "Майя Плисецкая — легендарная прима-балерина Большого театра."
+          "meaning": "ngôi sao nữ nghệ sĩ múa hàng đầu",
+          "example": "Прима-балерина Большого театра виртуозно исполняет партию Одетты."
         },
         {
           "word": "репертуа́р",
           "gram": "danh từ giống đực",
-          "meaning": "kịch mục biểu diễn",
-          "example": "В репертуаре театра ведущие партии шедевров Чайковского."
+          "meaning": "danh mục các vở diễn kinh điển",
+          "example": "В репертуаре театра представлены шедевры «Лебединое озеро» и «Жизель»."
+        },
+        {
+          "word": "пуа́нты",
+          "gram": "danh từ số nhiều",
+          "meaning": "đôi giày múa mũi cứng chuyên nghiệp",
+          "example": "Балерины с раннего детства учатся танцевать на шёлковых пуантах."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "танцева́ть (на пуантах)",
+          "gram": "cụm động từ",
+          "meaning": "biểu diễn trên đầu ngón chân",
+          "example": "Артисты балета грациозно танцуют на пуантах, создавая ощущение полёта."
+        },
+        {
+          "word": "репети́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tập luyện chăm chỉ hàng ngày",
+          "example": "Труппа часами репетирует сложнейшие танцевальные партии в балетном зале."
+        },
+        {
+          "word": "покоря́ть (сцену)",
+          "gram": "cụm động từ",
+          "meaning": "chinh phục trọn vẹn khán phòng",
+          "example": "Мастерство солистов Большого театра покоряет зрителей мировых столиц."
+        },
+        {
+          "word": "передава́ть (традиции)",
+          "gram": "cụm động từ",
+          "meaning": "trao truyền tinh hoa học thuật",
+          "example": "Выдающиеся педагоги передают секреты мастерства юным воспитанникам училища."
         }
       ]
     }

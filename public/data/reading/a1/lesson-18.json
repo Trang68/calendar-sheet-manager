@@ -9,25 +9,60 @@
   "topic": "Kỹ năng viết thư & Tường thuật cuộc sống A1",
   "vocabCategories": [
     {
-      "title": "Từ vựng viết thư (Структура письма)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "Дорого́й друг",
-          "gram": "lời xưng hô",
-          "meaning": "Bạn thân mến",
-          "example": "Дорогой друг Иван!"
+          "word": "письмо́",
+          "gram": "danh từ giống trung",
+          "meaning": "lá thư",
+          "example": "Я получил длинное письмо от друга."
         },
         {
-          "word": "Напиши́ мне",
-          "gram": "mệnh lệnh",
-          "meaning": "Hãy viết thư cho tôi",
-          "example": "Напиши мне ответ."
+          "word": "а́дрес",
+          "gram": "danh từ giống đực",
+          "meaning": "địa chỉ",
+          "example": "На конверте написан московский адрес."
         },
         {
-          "word": "Жду отве́та",
-          "gram": "cụm từ",
-          "meaning": "Tôi đợi thư trả lời",
-          "example": "С нетерпением жду ответа."
+          "word": "но́вость",
+          "gram": "danh từ giống cái",
+          "meaning": "tin tức, tin mới",
+          "example": "У меня есть отличная новость для вас."
+        },
+        {
+          "word": "отве́т",
+          "gram": "danh từ giống đực",
+          "meaning": "câu trả lời, lời hồi đáp",
+          "example": "Я с нетерпением жду твоего ответа."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi đi",
+          "example": "Она отправляет письмо по почте."
+        },
+        {
+          "word": "получа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận được",
+          "example": "Студент получает стипендию каждый месяц."
+        },
+        {
+          "word": "отвеча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả lời, hồi âm",
+          "example": "Я отвечу на твоё письмо завтра."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kể chuyện",
+          "example": "В письме он рассказывает о своей учёбе."
         }
       ]
     }

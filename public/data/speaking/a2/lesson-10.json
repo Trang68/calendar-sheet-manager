@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Kỷ niệm chuyến đi xa (Поездка)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "путеше́ствие",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "ký ức, kỷ niệm",
           "example": "Поездка надолго останется в моей памяти."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "занима́ться (спортом)",
+          "gram": "cụm động từ",
+          "meaning": "tập luyện thể dục",
+          "example": "Для поддержания формы я занимаюсь спортом три раза в неделю."
+        },
+        {
+          "word": "бе́гать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạy bộ giữ dáng",
+          "example": "Утром я бегаю в городском парке по пять километров."
+        },
+        {
+          "word": "пла́вать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bơi trong làn nước",
+          "example": "Плавание в бассейне отлично снимает усталость и стресс."
+        },
+        {
+          "word": "укрепля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tăng cường đề kháng",
+          "example": "Активный образ жизни укрепляет здоровье и дарит бодрость."
         }
       ]
     }

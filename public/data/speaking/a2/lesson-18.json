@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đời sống giảng đường (Студенчество)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "семина́р",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "học bổng sinh viên",
           "example": "Получать повышенную академическую стипендию."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "рабо́тать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "công tác chuyên môn",
+          "example": "После окончания института я мечтаю работать в IT-сфере."
+        },
+        {
+          "word": "выбира́ть (профессию)",
+          "gram": "cụm động từ",
+          "meaning": "chọn lựa hướng đi",
+          "example": "Молодёжь выбирает современные и востребованные профессии."
+        },
+        {
+          "word": "развива́ть (навыки)",
+          "gram": "cụm động từ",
+          "meaning": "rèn luyện kỹ năng",
+          "example": "Для успешной карьеры важно развивать коммуникабельность."
+        },
+        {
+          "word": "достига́ть (успеха)",
+          "gram": "cụm động từ",
+          "meaning": "chạm tới thành công",
+          "example": "Трудолюбием и упорством человек достигает высоких результатов."
         }
       ]
     }

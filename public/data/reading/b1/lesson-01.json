@@ -9,60 +9,60 @@
   "topic": "Hệ thống Giáo dục Đại học & Đời sống du học sinh tại Nga",
   "vocabCategories": [
     {
-      "title": "Học thuật & Trường Đại học (Университет и учёба)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "факульте́т",
           "gram": "danh từ giống đực",
-          "meaning": "khoa (trong trường đại học)",
-          "example": "Он учится на филологическом факультете."
+          "meaning": "khoa đào tạo đại học",
+          "example": "На филологическом факультете МГУ учатся студенты из десятков стран."
         },
         {
           "word": "се́ссия",
           "gram": "danh từ giống cái",
-          "meaning": "kỳ thi học kỳ",
-          "example": "Зимняя сессия начинается в январе."
+          "meaning": "kỳ thi học kỳ căng thẳng",
+          "example": "Зимняя экзаменационная сессия требует максимальной концентрации сил."
         },
         {
           "word": "зачёт",
           "gram": "danh từ giống đực",
-          "meaning": "bài kiểm tra điều kiện (đạt/không đạt)",
-          "example": "Завтра у нас зачёт по фонетике."
+          "meaning": "bài kiểm tra điều kiện tích lũy",
+          "example": "Перед экзаменами студенты должны успешно сдать все зачёты и коллоквиумы."
         },
         {
           "word": "стипе́ндия",
           "gram": "danh từ giống cái",
-          "meaning": "học bổng",
-          "example": "Отличники получают повышенную стипендию."
-        },
-        {
-          "word": "общежи́тие",
-          "gram": "danh từ giống trung",
-          "meaning": "ký túc xá",
-          "example": "Студенческое общежитие находится рядом с главным зданием."
+          "meaning": "học bổng khuyến khích sinh viên",
+          "example": "Отличникам учёбы университет ежемесячно выплачивает повышенную стипендию."
         }
       ]
     },
     {
-      "title": "Động từ học tập & Nghiên cứu (Глаголы обучения)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "поступи́ть в",
-          "gram": "động từ hoàn thành + Cách 4",
-          "meaning": "thi đỗ / nhập học vào",
-          "example": "Она мечтала поступить в МГУ."
-        },
-        {
-          "word": "защити́ть",
-          "gram": "động từ hoàn thành",
-          "meaning": "bảo vệ (luận văn/đồ án)",
-          "example": "Студент успешно защитил дипломную работу."
-        },
-        {
-          "word": "сдать экза́мен",
+          "word": "поступа́ть (в университет)",
           "gram": "cụm động từ",
-          "meaning": "thi đỗ kỳ thi (đã có kết quả)",
-          "example": "Все студенты сдали экзамен на отлично."
+          "meaning": "thi tuyển vào trường đại học",
+          "example": "Абитуриенты со всего мира мечтают поступить в престижный МГУ."
+        },
+        {
+          "word": "защища́ть (диплом)",
+          "gram": "cụm động từ",
+          "meaning": "bảo vệ luận văn tốt nghiệp",
+          "example": "Выпускники бакалавриата успешно защищают дипломы перед комиссией."
+        },
+        {
+          "word": "сдава́ть (экзамены)",
+          "gram": "cụm động từ",
+          "meaning": "vượt qua các bài thi học phần",
+          "example": "Студенты усердно готовятся, чтобы на отлично сдать сложные экзамены."
+        },
+        {
+          "word": "прожива́ть (в общежитии)",
+          "gram": "cụm động từ",
+          "meaning": "lưu trú tại ký túc xá sinh viên",
+          "example": "Иногородние учащиеся дружно проживают в студенческом общежитии."
         }
       ]
     }

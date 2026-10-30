@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nhận xét khách sạn sau kỳ nghỉ (Отель)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "остана́вливаться",
@@ -76,6 +76,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "bữa sáng buffet tự chọn",
           "example": "Разнообразный вкусный завтрак «шведский стол»."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дели́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ công thức",
+          "example": "В этом письме я хочу поделиться рецептом русского супа ухи."
+        },
+        {
+          "word": "вари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu nước dùng cá",
+          "example": "Сначала нужно сварить ароматный рыбный бульон с луком и морковью."
+        },
+        {
+          "word": "добавля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cho thêm gia vị",
+          "example": "В конце варки обязательно добавьте лавровый лист и свежий укроп."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời cả nhà cùng ăn",
+          "example": "Приготовьте этот суп и угостите своих близких вкусным обедом!"
         }
       ]
     }

@@ -97,7 +97,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Học thuật & Sau đại học (Аспирантура)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "аспира́нт",
@@ -122,6 +122,35 @@
           "gram": "danh từ giống trung",
           "meaning": "công trình nghiên cứu",
           "example": "Результаты исследования опубликованы в журнале."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поступа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thi tuyển nghiên cứu sinh",
+          "example": "Иностранцы поступают в аспирантуру российских университетов."
+        },
+        {
+          "word": "защища́ть (диссертацию)",
+          "gram": "cụm động từ",
+          "meaning": "bảo vệ luận án tiến sĩ",
+          "example": "Аспирант успешно защищает диссертацию перед учёным советом."
+        },
+        {
+          "word": "публикова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "công bố bài báo khoa học",
+          "example": "Молодой учёный публикует результаты исследований в профильном журнале."
+        },
+        {
+          "word": "стажирова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thực tập trao đổi",
+          "example": "Студенты стажируются в ведущих лабораториях страны."
         }
       ]
     }

@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Miêu tả triệu chứng ốm (В аптеке)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "горло",
@@ -80,6 +80,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "thuốc nhỏ giọt",
           "example": "Капли для носа."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bị ốm, đau",
+          "example": "Сегодня я не могу прийти, я болею."
+        },
+        {
+          "word": "принима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống thuốc",
+          "example": "Нужно принимать витамины три раза в день."
+        },
+        {
+          "word": "чу́вствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm thấy",
+          "example": "Как вы себя чувствуете сегодня?"
+        },
+        {
+          "word": "выздора́вливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bình phục",
+          "example": "Я уже чувствую себя лучше и выздоравливаю."
         }
       ]
     }

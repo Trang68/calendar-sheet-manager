@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ghi chú nhờ hàng xóm (Записка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "про́сьба",
@@ -75,6 +75,35 @@
           "gram": "tính từ ngắn",
           "meaning": "vô cùng biết ơn",
           "example": "Буду искренне благодарен за помощь."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "проси́ть (о помощи)",
+          "gram": "cụm động từ",
+          "meaning": "nhờ vả xóm giềng",
+          "example": "Обращаюсь к вам с вежливой просьбой о небольшой помощи."
+        },
+        {
+          "word": "уезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi vắng vài ngày",
+          "example": "Я уезжаю в командировку на три дня до конца недели."
+        },
+        {
+          "word": "полива́ть (цветы)",
+          "gram": "cụm động từ",
+          "meaning": "tưới cây trong phòng",
+          "example": "Пожалуйста, полейте комнатные цветы один раз в среду."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn trước",
+          "example": "Заранее сердечно благодарю вас за добрососедскую помощь!"
         }
       ]
     }

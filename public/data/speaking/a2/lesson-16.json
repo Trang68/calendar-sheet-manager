@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Giao thông đô thị (Транспорт)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "мегапо́лис",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự tiện nghi thoải mái",
           "example": "Комфорт и удобство бесконтактной оплаты."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "носи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc đồ giữ ấm",
+          "example": "Зимой в России обязательно носят тёплую шапку и шарф."
+        },
+        {
+          "word": "одева́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc đồ hợp mùa",
+          "example": "При низкой температуре нужно одеваться тепло и удобно."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn áo khoác tốt",
+          "example": "Я выбираю длинный пуховик с капюшоном от ветра."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua giày ủng đông",
+          "example": "Мы покупаем качественные зимние сапоги с мехом."
         }
       ]
     }

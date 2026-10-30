@@ -9,25 +9,60 @@
   "topic": "Kỳ quan thiên nhiên: Bán đảo Kamchatka và Thung lũng Mạch nước phun",
   "vocabCategories": [
     {
-      "title": "Địa chất & Cảnh quan (Природные стихии)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "де́йствующий вулка́н",
-          "gram": "cụm danh từ đực",
-          "meaning": "núi lửa đang hoạt động",
-          "example": "Ключевская Сопка — самый высокий действующий вулкан Евразии."
+          "gram": "cụm danh từ",
+          "meaning": "núi lửa đang âm ỉ hoạt động",
+          "example": "Ключевская Сопка — самый высокий действующий вулкан на всем континенте Евразия."
         },
         {
           "word": "ге́йзер",
           "gram": "danh từ giống đực",
-          "meaning": "mạch nước nóng phun tự nhiên",
-          "example": "В Долине гейзеров горячие струи воды вырываются высоко в воздух."
+          "meaning": "mạch nước ngầm phun trào tự nhiên",
+          "example": "Знаменитая Долина гейзеров на Камчатке входит в семёрку природных чудес России."
         },
         {
           "word": "запове́дник",
           "gram": "danh từ giống đực",
-          "meaning": "khu bảo tồn thiên nhiên nghiêm ngặt",
-          "example": "Кроноцкий заповедник охраняет уникальную экосистему полуострова."
+          "meaning": "khu bảo tồn thiên nhiên hoang dã",
+          "example": "Кроноцкий биосферный заповедник охраняет уникальные ландшафты и популяции бурых медведей."
+        },
+        {
+          "word": "кра́тер",
+          "gram": "danh từ giống đực",
+          "meaning": "miệng núi lửa kỳ vĩ khổng lồ",
+          "example": "Внутри кратера потухшего вулкана часто образуются изумрудные термальные озёра."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "изверга́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phun trào dung nham tro bụi",
+          "example": "Камчатские исполины периодически извергаются, выбрасывая столбы пепла на километры вверх."
+        },
+        {
+          "word": "бурли́ть (в котлах)",
+          "gram": "cụm động từ",
+          "meaning": "sục sôi nguồn khoáng nóng",
+          "example": "Подземные термальные воды с шумом бурлят в котлах и фонтанируют столбами пара."
+        },
+        {
+          "word": "восхища́ть (путешественников)",
+          "gram": "cụm động từ",
+          "meaning": "làm kinh ngạc khách khám phá",
+          "example": "Первозданная дикая природа Дальнего Востока восхищает фотографов со всей планеты."
+        },
+        {
+          "word": "иссле́довать (геологию)",
+          "gram": "cụm động từ",
+          "meaning": "khảo sát địa chất và địa nhiệt",
+          "example": "Вулканологи тщательно исследуют сейсмическую активность и состав вулканических пород."
         }
       ]
     }

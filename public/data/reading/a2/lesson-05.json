@@ -9,54 +9,60 @@
   "topic": "Sở thích, Kỳ nghỉ cuối tuần & Văn hóa Dacha",
   "vocabCategories": [
     {
-      "title": "Nghỉ ngơi & Nông thôn (Отдых за городом)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "да́ча",
           "gram": "danh từ giống cái",
-          "meaning": "nhà vườn ngoại ô",
-          "example": "Летом мы каждые выходные ездим на дачу."
+          "meaning": "nhà nghỉ ngoại ô dacha",
+          "example": "Летом многие горожане уезжают на дачу каждые выходные."
         },
         {
-          "word": "приро́да",
-          "gram": "danh từ giống cái",
-          "meaning": "thiên nhiên",
-          "example": "В деревне красивая и чистая природа."
-        },
-        {
-          "word": "шашлы́к",
+          "word": "огоро́д",
           "gram": "danh từ giống đực",
-          "meaning": "thịt nướng xiên kiểu Nga",
-          "example": "На даче мы жарим вкусный шашлык."
+          "meaning": "vườn rau củ gia đình",
+          "example": "Бабушка с утра до вечера ухаживает за овощами в огороде."
         },
         {
           "word": "ба́ня",
           "gram": "danh từ giống cái",
-          "meaning": "nhà xông hơi truyền thống",
-          "example": "Русская баня полезна для здоровья."
+          "meaning": "nhà tắm hơi truyền thống banya",
+          "example": "В субботу вечером на даче принято топить русскую баню."
+        },
+        {
+          "word": "шашлы́к",
+          "gram": "danh từ giống đực",
+          "meaning": "thịt nướng xiên shashlik",
+          "example": "На свежем воздухе мы жарим вкусный мясной шашлык на углях."
         }
       ]
     },
     {
-      "title": "Làm vườn & Thu hoạch (Сад и огород)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "огоро́д",
-          "gram": "danh từ giống đực",
-          "meaning": "vườn rau",
-          "example": "Бабушка выращивает помидоры на огороде."
+          "word": "отдыха́ть (за городом)",
+          "gram": "cụm động từ",
+          "meaning": "nghỉ ngơi nơi thôn dã",
+          "example": "Семья с удовольствием отдыхает на природе вдали от шума."
         },
         {
-          "word": "я́годы",
-          "gram": "danh từ số nhiều",
-          "meaning": "quả mọng (dâu, mâm xôi)",
-          "example": "Летом в саду созревают сладкие ягоды."
+          "word": "сажа́ть (овощи)",
+          "gram": "cụm động từ",
+          "meaning": "gieo trồng rau củ",
+          "example": "Весной на дачных участках сажают картофель и огурцы."
         },
         {
-          "word": "урожа́й",
-          "gram": "danh từ giống đực",
-          "meaning": "mùa thu hoạch",
-          "example": "Осенью мы собираем богатый урожай яблок."
+          "word": "собира́ть (урожай)",
+          "gram": "cụm động từ",
+          "meaning": "thu hoạch mùa màng",
+          "example": "В августе дачники собирают спелые яблоки и ягоды."
+        },
+        {
+          "word": "па́риться (в бане)",
+          "gram": "cụm động từ",
+          "meaning": "xông hơi thư giãn trong banya",
+          "example": "Русские люди любят париться с берёзовым веником для здоровья."
         }
       ]
     }

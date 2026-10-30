@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thông báo tìm đồ thất lạc (Объявление)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "внима́ние",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống trung",
           "meaning": "quà hậu tạ",
           "example": "Денежное вознаграждение гарантируется."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "посеща́ть (театр)",
+          "gram": "cụm động từ",
+          "meaning": "đi xem kịch nghệ",
+          "example": "Вчера мы посетили премьеру спектакля по пьесе классика."
+        },
+        {
+          "word": "восхища́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khen ngợi diễn xuất",
+          "example": "Зрители искренне восхищались великолепной игрой драматических актёров."
+        },
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên nên đi xem",
+          "example": "Я горячо советую всем друзьям посмотреть эту постановку."
+        },
+        {
+          "word": "аплоди́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vỗ tay không ngớt",
+          "example": "В финале весь зал долго аплодировал артистам стоя."
         }
       ]
     }

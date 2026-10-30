@@ -39,7 +39,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mẩu ghi chú ngắn (Записка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "запи́ска",
@@ -64,6 +64,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "chùm chìa khóa",
           "example": "Ключи лежат на полке в прихожей."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "есть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn uống điều độ",
+          "example": "Я стараюсь есть больше свежих овощей и фруктов."
+        },
+        {
+          "word": "пить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống đủ nước",
+          "example": "Каждый день я пью не менее полутора литров чистой воды."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự nấu ăn sạch",
+          "example": "Домашняя еда всегда полезнее и вкуснее фастфуда."
+        },
+        {
+          "word": "следи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chú ý sức khỏe",
+          "example": "Очень важно следить за своим ежедневным рационом."
         }
       ]
     }

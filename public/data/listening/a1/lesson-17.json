@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nhà hàng món Nga (В ресторане)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "рестора́н",
@@ -282,6 +282,35 @@
           "gram": "danh từ giống đực",
           "meaning": "bồi bàn, phục vụ",
           "example": "Официант принял наш заказ."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "игра́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chơi (thể thao)",
+          "example": "Футболисты играют решающий матч."
+        },
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cổ vũ đội bóng",
+          "example": "Мы болеем за команду «Спартак»."
+        },
+        {
+          "word": "выи́грывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiến thắng",
+          "example": "Наша команда выигрывает со счётом 2:0."
+        },
+        {
+          "word": "тренирова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tập luyện",
+          "example": "Спортсмены тренируются каждый день."
         }
       ]
     }

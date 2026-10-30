@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thể thao & Sở thích (Спорт и хобби)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "спорт",
@@ -282,6 +282,35 @@
           "gram": "động từ",
           "meaning": "say mê, thích",
           "example": "Чем вы увлекаетесь?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "свети́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiếu sáng",
+          "example": "На небе ярко светит солнце."
+        },
+        {
+          "word": "идти́ (дождь)",
+          "gram": "cụm động từ",
+          "meaning": "trời mưa",
+          "example": "На улице идёт сильный дождь."
+        },
+        {
+          "word": "тепле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ấm áp dần lên",
+          "example": "Весной погода быстро теплеет."
+        },
+        {
+          "word": "холода́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lạnh dần đi",
+          "example": "К вечеру на улице холодает."
         }
       ]
     }

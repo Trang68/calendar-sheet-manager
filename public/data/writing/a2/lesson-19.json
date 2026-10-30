@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ngày lễ mong chờ nhất (Любимый праздник)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "ска́зочный",
@@ -75,6 +75,35 @@
           "gram": "danh từ giống trung",
           "meaning": "phép màu kỳ diệu",
           "example": "Искренняя вера в добро и новогодние чудеса."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "опи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "miêu tả lễ hội",
+          "example": "В статье я описываю старинные русские обычаи встречи весны."
+        },
+        {
+          "word": "печь (блины)",
+          "gram": "cụm động từ",
+          "meaning": "làm bánh thơm giòn",
+          "example": "В масленичные дни в каждом доме пекут ароматные круглые блины."
+        },
+        {
+          "word": "собира́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tụ họp xóm giềng",
+          "example": "Люди выходят на городские площади, чтобы петь песни и водить хороводы."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc điều an lành",
+          "example": "В Прощёное воскресенье принято просить прощения и желать добра."
         }
       ]
     }

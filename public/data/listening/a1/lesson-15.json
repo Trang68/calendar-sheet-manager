@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ngân hàng & Đổi tiền (В банке)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "банк",
@@ -282,6 +282,35 @@
           "gram": "danh từ giống cái",
           "meaning": "thẻ ngân hàng",
           "example": "Можно оплатить банковской картой?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "меня́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đổi (tiền tệ)",
+          "example": "Я хочу поменять доллары на рубли."
+        },
+        {
+          "word": "снима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rút tiền mặt",
+          "example": "Он снимает наличные деньги в банкомате."
+        },
+        {
+          "word": "открыва́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mở tài khoản",
+          "example": "Студент открывает счёт в банке."
+        },
+        {
+          "word": "подпи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ký giấy tờ",
+          "example": "Подпишите квитанцию здесь, пожалуйста."
         }
       ]
     }

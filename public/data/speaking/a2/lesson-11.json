@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "So sánh ngày lễ văn hóa (Праздники)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "обы́чай",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự gắn kết đồng lòng",
           "example": "Чувство всеобщего духовного единения."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "создава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm đồ thủ công",
+          "example": "Народные умельцы создают удивительные деревянные игрушки."
+        },
+        {
+          "word": "распи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vẽ hoa văn gốm",
+          "example": "Художницы вручную расписывают посуду гжельскими розами."
+        },
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng lãm nghệ thuật",
+          "example": "Посетители выставки любуются золотыми хохломскими ложками."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua quà truyền thống",
+          "example": "Я покупаю палехскую лаковую миниатюру в подарок другу."
         }
       ]
     }

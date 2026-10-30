@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Gọi món tại nhà hàng (В ресторане)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "зака́зывать",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống đực",
           "meaning": "thức uống",
           "example": "Какой напиток вы предпочитаете?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ở trọ, cư ngụ",
+          "example": "Иностранные студенты живут в общежитии."
+        },
+        {
+          "word": "дели́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ chung",
+          "example": "Мы делим комнату с соседом из Китая."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu nướng",
+          "example": "На общей кухне мы готовим ужин."
+        },
+        {
+          "word": "убира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dọn dẹp",
+          "example": "По субботам мы убираем комнату."
         }
       ]
     }

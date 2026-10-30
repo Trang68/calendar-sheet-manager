@@ -63,7 +63,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Thuốc & Trà chanh (Аптека)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "витами́ны",
@@ -88,6 +88,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sức khỏe",
           "example": "Желаю вам крепкого здоровья!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "печь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nướng, rán bánh",
+          "example": "Бабушка печёт тонкие русские блины."
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nếm thử",
+          "example": "Попробуйте горячий блин со сгущёнкой!"
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món",
+          "example": "Мы заказываем блины с красной икрой."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêu đãi",
+          "example": "Друзья угощают друг друга на Масленицу."
         }
       ]
     }

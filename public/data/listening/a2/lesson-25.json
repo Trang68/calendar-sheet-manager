@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tổng kết mục tiêu B1 (Каникулы)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "пра́ктика",
@@ -87,6 +87,35 @@
           "gram": "tính từ",
           "meaning": "chuyên sâu, cấp tốc",
           "example": "Интенсивная подготовка к уровню B1."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́виться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ôn luyện thi cử",
+          "example": "Студент активно готовится к сдаче сертификационного теста."
+        },
+        {
+          "word": "повторя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ôn lại từ vựng",
+          "example": "Перед экзаменом нужно повторить все глаголы движения."
+        },
+        {
+          "word": "сдава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoàn thành bài thi",
+          "example": "Все студенты успешно сдают устную и письменную части."
+        },
+        {
+          "word": "горди́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự hào kết quả",
+          "example": "Мы гордимся получением официального сертификата ТРКИ."
         }
       ]
     }

@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ẩm thực cao cấp (Шеф-повар)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "шеф-по́вар",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "cách trình bày, bài trí món ăn",
           "example": "Оригинальная подача десерта удивила гостей ресторана."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "создава́ть (блюдо)",
+          "gram": "cụm động từ",
+          "meaning": "sáng tạo món ăn độc đáo",
+          "example": "Шеф-повар ресторана создаёт авторские блюда современной русской кухни."
+        },
+        {
+          "word": "сочета́ть (вкусы)",
+          "gram": "cụm động từ",
+          "meaning": "phối ngẫu hương vị",
+          "example": "Мастер смело сочетает традиционные северные ягоды и свежую рыбу."
+        },
+        {
+          "word": "переосмы́сливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm mới công thức cổ xưa",
+          "example": "Гастрономия переосмысливает старинные купеческие рецепты XIX века."
+        },
+        {
+          "word": "презентова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trình diễn thực đơn mới",
+          "example": "Ресторан с гордостью презентует гостям своё новое сезонное меню."
         }
       ]
     }

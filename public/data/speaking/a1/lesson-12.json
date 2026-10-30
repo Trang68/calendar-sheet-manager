@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đi lại bằng tàu hỏa (На вокзале)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "расписа́ние",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống trung",
           "meaning": "chỗ ngồi",
           "example": "Нижнее место в купе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua vé",
+          "example": "Один билет до Санкт-Петербурга, пожалуйста."
+        },
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi tàu",
+          "example": "Мы едем в купейном вагоне."
+        },
+        {
+          "word": "отправля́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khởi hành",
+          "example": "Поезд отправляется точно по расписанию."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thanh toán",
+          "example": "Я плачу за билет через банковское приложение."
         }
       ]
     }

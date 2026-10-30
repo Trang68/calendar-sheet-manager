@@ -9,25 +9,60 @@
   "topic": "Văn học kinh điển: Đại văn hào Lev Tolstoy và triết lý sống",
   "vocabCategories": [
     {
-      "title": "Văn học & Triết học (Литература и мысль)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "уса́дьба",
           "gram": "danh từ giống cái",
-          "meaning": "trang viên điền trang",
-          "example": "В усадьбе Ясная Поляна Толстой создал романы «Война и мир» и «Анна Каренина»."
+          "meaning": "dinh thự điền trang Yasnaya Polyana",
+          "example": "В родовом имении Ясная Поляна Лев Толстой создал свои бессмертные романы."
         },
         {
-          "word": "самосоверше́нствование",
-          "gram": "danh từ trung",
-          "meaning": "sự tu dưỡng tự hoàn thiện bản thân",
-          "example": "Толстой призывал к духовному самосовершенствованию и ненасилию."
+          "word": "рома́н-эпопе́я",
+          "gram": "danh từ giống đực",
+          "meaning": "tiểu thuyết sử thi tầm vóc vĩ đại",
+          "example": "«Война и мир» — грандиозный роман-эпопея о судьбах народа в эпоху наполеоновских войн."
         },
         {
           "word": "мировоззре́ние",
           "gram": "danh từ giống trung",
-          "meaning": "thế giới quan, nhân sinh quan",
-          "example": "Философское мировоззрение писателя оказало мировое влияние."
+          "meaning": "thế giới quan và triết lý sống",
+          "example": "Философское мировоззрение писателя оказало глубокое влияние на культуру XX века."
+        },
+        {
+          "word": "самосоверше́нствование",
+          "gram": "danh từ giống trung",
+          "meaning": "quá trình tự hoàn thiện nhân cách",
+          "example": "Толстой считал постоянное нравственное самосовершенствование главным долгом человека."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "размышля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "suy ngẫm sâu sắc về cuộc đời",
+          "example": "Писатель непрестанно размышлял о справедливости, добре и смысле бытия."
+        },
+        {
+          "word": "создава́ть (образы)",
+          "gram": "cụm động từ",
+          "meaning": "khắc họa những nhân vật bất hủ",
+          "example": "Автор создаёт живые психологические образы Андрея Болконского и Пьера Безухова."
+        },
+        {
+          "word": "обуча́ть (детей)",
+          "gram": "cụm động từ",
+          "meaning": "mở trường dạy học cho con em nông dân",
+          "example": "Толстой открыл в Ясной Поляне бесплатную школу и сам обучал крестьянских ребят."
+        },
+        {
+          "word": "отка́зываться (от роскоши)",
+          "gram": "cụm động từ",
+          "meaning": "giản dị hòa mình vào lao động",
+          "example": "В зрелые годы мыслитель сознательно отказался от дворянской роскоши и пахал землю."
         }
       ]
     }

@@ -101,7 +101,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Hỏi thăm sức khỏe & Khám bệnh (Здоровье)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "самочу́вствие",
@@ -126,6 +126,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "chế độ nghỉ ngơi tại giường",
           "example": "Врач назначил строгий постельный режим."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bị sốt cảm",
+          "example": "Друг заболел и не пришёл на лекции."
+        },
+        {
+          "word": "вызыва́ть (врача)",
+          "gram": "cụm động từ",
+          "meaning": "gọi bác sĩ đến nhà",
+          "example": "При высокой температуре нужно вызвать врача на дом."
+        },
+        {
+          "word": "измеря́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đo nhiệt độ",
+          "example": "Больной измеряет температуру градусником."
+        },
+        {
+          "word": "принима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống thuốc trị bệnh",
+          "example": "Принимайте жаропонижающие таблетки после еды."
         }
       ]
     }

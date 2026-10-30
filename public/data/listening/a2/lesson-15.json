@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Kế hoạch dã ngoại (Пикник)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "пикни́к",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "bình giữ nhiệt",
           "example": "Термос с горячим травяным чаем."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приводи́ть (к ветеринару)",
+          "gram": "cụm động từ",
+          "meaning": "đưa đi khám thú y",
+          "example": "Хозяин приводит заболевшую собаку в ветклинику."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thăm khám thú cưng",
+          "example": "Ветеринар внимательно осматривает лапу щенка."
+        },
+        {
+          "word": "де́лать (прививку)",
+          "gram": "cụm động từ",
+          "meaning": "tiêm vắc-xin",
+          "example": "Доктору нужно сделать плановую прививку котенку."
+        },
+        {
+          "word": "выпи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kê đơn thuốc nhỏ",
+          "example": "Врач выписывает витамины для шерсти и здоровья."
         }
       ]
     }

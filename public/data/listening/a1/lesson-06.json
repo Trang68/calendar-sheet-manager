@@ -265,7 +265,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Lịch trình hàng ngày (Рабочий день)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "просыпа́ться",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống đực",
           "meaning": "buổi tối",
           "example": "Вечером я отдыхаю дома."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "просыпа́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thức giấc",
+          "example": "Я просыпаюсь в семь часов утра."
+        },
+        {
+          "word": "за́втракать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn sáng",
+          "example": "Мы быстро завтракаем на кухне."
+        },
+        {
+          "word": "е́хать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi (bằng xe)",
+          "example": "Утром я еду на работу на метро."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi",
+          "example": "Вечером я отдыхаю и смотрю новости."
         }
       ]
     }

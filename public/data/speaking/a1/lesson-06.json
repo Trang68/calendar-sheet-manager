@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Lịch sinh hoạt thường nhật (Мой день)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "у́тро",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "ngủ",
           "example": "Я ложусь спать в одиннадцать."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "спеши́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vội vã",
+          "example": "Я спешу на занятия в университет."
+        },
+        {
+          "word": "начина́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bắt đầu",
+          "example": "Первая пара начинается ровно в восемь утра."
+        },
+        {
+          "word": "зака́нчиваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kết thúc",
+          "example": "Уроки заканчиваются в два часа дня."
+        },
+        {
+          "word": "опа́здывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "muộn, trễ giờ",
+          "example": "Студенты никогда не опаздывают на лекции."
         }
       ]
     }

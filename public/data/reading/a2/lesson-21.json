@@ -9,25 +9,60 @@
   "topic": "Địa danh nổi tiếng: Thủ đô phương Bắc Saint Petersburg",
   "vocabCategories": [
     {
-      "title": "Thành phố trên sông Neva (Северная столица)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "бе́лые но́чи",
-          "gram": "cụm danh từ nhiều",
-          "meaning": "đêm trắng (hiện tượng trời không tối hẳn)",
-          "example": "Белые ночи в Петербурге длятся с конца мая по середину июля."
+          "gram": "cụm danh từ",
+          "meaning": "hiện tượng đêm trắng Saint Petersburg",
+          "example": "В июне в Санкт-Петербурге наступает романтическая пора белых ночей."
         },
         {
           "word": "разводны́е мосты́",
-          "gram": "cụm danh từ nhiều",
-          "meaning": "những cây cầu mở cho tàu bè qua lại",
-          "example": "Ночью тысячи туристов приходят на набережную смотреть на развод мостов."
+          "gram": "cụm danh từ",
+          "meaning": "cầu cất nhịp mở qua sông Neva",
+          "example": "Тысячи туристов приходят к Неве, чтобы увидеть разведение знаменитых мостов."
         },
         {
           "word": "на́бережная",
           "gram": "danh từ giống cái",
-          "meaning": "đường bờ kè ven sông",
-          "example": "Мы гуляли по Дворцовой набережной реки Невы."
+          "meaning": "đường bờ kè lát đá ven sông",
+          "example": "Вдоль Дворцовой набережной приятно совершать неспешные вечерние прогулки."
+        },
+        {
+          "word": "Эрмита́ж",
+          "gram": "danh từ giống đực",
+          "meaning": "bảo tàng Hermitage lộng lẫy",
+          "example": "Государственный Эрмитаж хранит миллионы бесценных сокровищ мирового искусства."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гуля́ть (всю ночь)",
+          "gram": "cụm động từ",
+          "meaning": "dạo chơi ngắm cảnh đêm trắng",
+          "example": "Молодёжь любит гулять по набережным Северной столицы белыми ночами."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp lại khoảnh khắc cầu mở",
+          "example": "Туристы фотографируют разводной Дворцовый мост на фоне светлого неба."
+        },
+        {
+          "word": "ката́ться (на катере)",
+          "gram": "cụm động từ",
+          "meaning": "du ngoạn ca-nô ngắm sông nước",
+          "example": "Мы катаемся на экскурсионном катере по рекам и каналам Петербурга."
+        },
+        {
+          "word": "посеща́ть (дворцы)",
+          "gram": "cụm động từ",
+          "meaning": "tham quan các cung điện hoàng gia",
+          "example": "Путешественники обязательно посещают Петергоф и Царское Село."
         }
       ]
     }

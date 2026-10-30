@@ -63,7 +63,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Nhà ga & Tàu tốc hành (Поезд на Петербург)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "направле́ние",
@@ -88,6 +88,35 @@
           "gram": "danh từ giống trung",
           "meaning": "giờ khởi hành",
           "example": "Время отправления по расписанию."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выступа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "biểu diễn sân khấu",
+          "example": "Актёры выступают на сцене театра."
+        },
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xem kịch",
+          "example": "Зрители смотрят классический спектакль."
+        },
+        {
+          "word": "хло́пать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vỗ tay tán thưởng",
+          "example": "Зал громко хлопает любимым артистам."
+        },
+        {
+          "word": "смея́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cười vui",
+          "example": "Дети весело смеются во время представления."
         }
       ]
     }

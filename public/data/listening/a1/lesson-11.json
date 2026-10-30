@@ -253,7 +253,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thời tiết (Погода)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "пого́да",
@@ -278,6 +278,35 @@
           "gram": "danh từ giống đực",
           "meaning": "độ C",
           "example": "Сейчас минус пять градусов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thăm khám bệnh",
+          "example": "Врач внимательно осматривает пациента."
+        },
+        {
+          "word": "лечи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "điều trị chữa bệnh",
+          "example": "Доктор лечит простуду и грипп."
+        },
+        {
+          "word": "жа́ловаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "than phiền kêu đau",
+          "example": "Пациент жалуется на сильный кашель."
+        },
+        {
+          "word": "выпи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kê đơn thuốc",
+          "example": "Врач выписывает эффективный сироп."
         }
       ]
     }

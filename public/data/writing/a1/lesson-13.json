@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Trường lớp và Bạn bè (Университет)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "факульте́т",
@@ -85,6 +85,35 @@
           "gram": "danh từ giống cái",
           "meaning": "bài giảng",
           "example": "Интересная лекция по истории."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sinh sống hòa thuận",
+          "example": "Вся наша семья дружно живёт в уютной квартире."
+        },
+        {
+          "word": "украша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trang hoàng nhà cửa",
+          "example": "К празднику мы украшаем гостиную живыми цветами."
+        },
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời khách quý",
+          "example": "Мы с радостью приглашаем друзей в наш дом."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu mái ấm",
+          "example": "Я люблю наш дом за теплоту и уютную атмосферу."
         }
       ]
     }

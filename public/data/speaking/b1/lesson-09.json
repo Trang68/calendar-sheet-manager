@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Sách điện tử vs Sách giấy (Чтение)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "печа́тное изда́ние",
@@ -56,6 +56,35 @@
           "gram": "cụm danh từ cái",
           "meaning": "dung lượng bộ nhớ thiết bị",
           "example": "Память устройства позволяет хранить целую библиотеку."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "предпочита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuộng sách in truyền thống",
+          "example": "Многие читатели предпочитают бумажные книги из-за тактильных ощущений."
+        },
+        {
+          "word": "по́льзоваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sử dụng máy đọc sách số",
+          "example": "В путешествиях очень удобно пользоваться компактным электронным ридером."
+        },
+        {
+          "word": "запомина́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ghi nhớ chiều sâu nội dung",
+          "example": "Чтение на бумаге помогает лучше запоминать и осмысливать сложную информацию."
+        },
+        {
+          "word": "эконо́мить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tiết kiệm không gian lưu trữ",
+          "example": "Цифровые библиотеки позволяют экономить место в квартире и быстро находить текст."
         }
       ]
     }

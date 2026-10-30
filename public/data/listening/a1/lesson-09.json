@@ -265,7 +265,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Gia đình & Người thân (Семья)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "роди́тели",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống cái",
           "meaning": "nghề nghiệp",
           "example": "Какая у вас профессия?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "идти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi bộ",
+          "example": "Идите прямо до перекрёстка."
+        },
+        {
+          "word": "повора́чивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rẽ hướng",
+          "example": "Поверните направо около аптеки."
+        },
+        {
+          "word": "спра́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hỏi thăm",
+          "example": "Турист спрашивает дорогу к музею."
+        },
+        {
+          "word": "подска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chỉ bảo, hướng dẫn",
+          "example": "Подскажите, пожалуйста, где остановка?"
         }
       ]
     }

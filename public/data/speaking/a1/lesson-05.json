@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Mua sắm & Giá cả (В магазине)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "покупа́ть",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống cái",
           "meaning": "quầy thanh toán",
           "example": "Оплатите покупку на кассе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua sắm",
+          "example": "Я часто покупаю продукты в супермаркете."
+        },
+        {
+          "word": "сто́ить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "có giá bán",
+          "example": "Сколько стоит один килограмм яблок?"
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả tiền",
+          "example": "Я плачу за покупки наличными деньгами."
+        },
+        {
+          "word": "эконо́мить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tiết kiệm",
+          "example": "Скидки помогают экономить бюджет."
         }
       ]
     }

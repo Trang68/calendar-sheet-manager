@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Phong tục & Ngày lễ truyền thống (Русские праздники)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "пра́зднование",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống đực",
           "meaning": "quy tắc phép lịch sự xã giao",
           "example": "Знание праздничного этикета помогает чувствовать себя уверенно в гостях."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tổ chức lễ truyền thống",
+          "example": "Русские праздники на протяжении веков празднуют с размахом и душой."
+        },
+        {
+          "word": "раскрыва́ть (смысл)",
+          "gram": "cụm động từ",
+          "meaning": "hiểu sâu sắc tinh thần lễ",
+          "example": "Рождество и Пасха раскрывают глубокий духовный смысл любви и милосердия."
+        },
+        {
+          "word": "соблюда́ть (обычаи)",
+          "gram": "cụm động từ",
+          "meaning": "tuân thủ phong tục tập quán",
+          "example": "В каждой семье бережно соблюдают обычаи гостеприимства и застолья."
+        },
+        {
+          "word": "объединя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gắn kết mọi thành viên",
+          "example": "Народные торжества объединяют поколения за общим праздничным столом."
         }
       ]
     }

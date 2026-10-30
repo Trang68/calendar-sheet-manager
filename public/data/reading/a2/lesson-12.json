@@ -9,25 +9,60 @@
   "topic": "Văn hóa ứng xử: Làm khách tại gia đình người Nga",
   "vocabCategories": [
     {
-      "title": "Nghi thức khách mời (Гостевой этикет)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
-        {
-          "word": "снима́ть о́бувь",
-          "gram": "cụm động từ",
-          "meaning": "cởi giày dép khi vào nhà",
-          "example": "В прихожей гости сразу снимают уличную обувь."
-        },
         {
           "word": "та́почки",
           "gram": "danh từ số nhiều",
-          "meaning": "dép đi trong nhà",
-          "example": "Хозяева предлагают гостям мягкие домашние тапочки."
+          "meaning": "dép đi trong nhà ấm áp",
+          "example": "В русской квартире гостям сразу же предлагают мягкие домашние тапочки."
         },
         {
           "word": "угоще́ние",
           "gram": "danh từ giống trung",
-          "meaning": "đồ ăn tiếp đãi",
-          "example": "Стол ломится от вкусных домашних угощений."
+          "meaning": "món ăn đồ uống tiếp đãi khách",
+          "example": "На столе всегда приготовлено щедрое и разнообразное угощение."
+        },
+        {
+          "word": "гостеприи́мство",
+          "gram": "danh từ giống trung",
+          "meaning": "lòng hiếu khách chân thành",
+          "example": "Русское гостеприимство известно теплотой и заботой о каждом госте."
+        },
+        {
+          "word": "пода́рок",
+          "gram": "danh từ giống đực",
+          "meaning": "món quà tặng gia chủ",
+          "example": "Идя в гости, принято приносить с собой торт, конфеты или цветы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "снима́ть (обувь)",
+          "gram": "cụm động từ",
+          "meaning": "cởi giày ngoài cửa",
+          "example": "При входе в дом в России обязательно нужно снимать уличную обувь."
+        },
+        {
+          "word": "приглаша́ть (в гости)",
+          "gram": "cụm động từ",
+          "meaning": "mời bạn bè tới thăm nhà",
+          "example": "Хозяева тепло приглашают старых друзей провести вечер за чаем."
+        },
+        {
+          "word": "угоща́ть (чаем)",
+          "gram": "cụm động từ",
+          "meaning": "mời dùng bữa và thưởng trà",
+          "example": "Хозяйка щедро угощает гостей домашними пирогами и вареньем."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn sau bữa tiệc",
+          "example": "Гости искренне благодарят за тёплый приём и вкусный обед."
         }
       ]
     }

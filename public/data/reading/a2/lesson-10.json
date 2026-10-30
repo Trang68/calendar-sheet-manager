@@ -9,25 +9,60 @@
   "topic": "Thể thao & Rèn luyện thể chất",
   "vocabCategories": [
     {
-      "title": "Môn thể thao & Tập luyện (Спорт)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
-        {
-          "word": "бе́гать трусцо́й",
-          "gram": "cụm động từ",
-          "meaning": "chạy bộ rèn luyện sức bền",
-          "example": "По утрам многие москвичи бегают в парке Сокольники."
-        },
         {
           "word": "лы́жи",
           "gram": "danh từ số nhiều",
-          "meaning": "ván trượt tuyết",
-          "example": "Зимой катание на беговых лыжах — любимый отдых россиян."
+          "meaning": "ván trượt tuyết mùa đông",
+          "example": "Зимой в парке прокладывают отличную лыжню для любителей спорта."
         },
         {
           "word": "абонеме́нт",
           "gram": "danh từ giống đực",
-          "meaning": "vé tập định kỳ theo tháng/năm",
+          "meaning": "thẻ hội viên phòng tập gym",
           "example": "Я купил годовой абонемент в фитнес-клуб с бассейном."
+        },
+        {
+          "word": "тренажёрный зал",
+          "gram": "cụm danh từ",
+          "meaning": "phòng tập thể hình gym",
+          "example": "Молодёжь активно тренируется на силовых снарядах в тренажёрном зале."
+        },
+        {
+          "word": "кроссо́вки",
+          "gram": "danh từ số nhiều",
+          "meaning": "giày thể thao chạy bộ",
+          "example": "Для утренних пробежек нужны удобные амортизирующие кроссовки."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "тренирова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tập luyện thể lực",
+          "example": "Спортсмены регулярно тренируются перед важными соревнованиями."
+        },
+        {
+          "word": "бе́гать (в парке)",
+          "gram": "cụm động từ",
+          "meaning": "chạy bộ rèn luyện sức bền",
+          "example": "По утрам многие горожане бегают по тенистым дорожкам парка."
+        },
+        {
+          "word": "ката́ться (на лыжах)",
+          "gram": "cụm động từ",
+          "meaning": "trượt tuyết trên đường rừng",
+          "example": "Зимой мы любим кататься на беговых лыжах в загородном лесу."
+        },
+        {
+          "word": "укрепля́ть (здоровье)",
+          "gram": "cụm động từ",
+          "meaning": "tăng cường sức khỏe dẻo dai",
+          "example": "Регулярные физические упражнения укрепляют иммунитет и сердце."
         }
       ]
     }

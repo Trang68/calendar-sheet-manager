@@ -9,54 +9,60 @@
   "topic": "Vị trí không gian: Ở đâu, Bên phải, Bên trái, Ở giữa",
   "vocabCategories": [
     {
-      "title": "Phó từ chỉ vị trí (Наречия места)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "где",
-          "gram": "từ hỏi",
-          "meaning": "ở đâu?",
-          "example": "Где находится аудитория?"
+          "word": "аудито́рия",
+          "gram": "danh từ giống cái",
+          "meaning": "giảng đường",
+          "example": "Наша аудитория чистая и светлая."
         },
-        {
-          "word": "здесь / тут",
-          "gram": "phó từ",
-          "meaning": "ở đây",
-          "example": "Мы сидим здесь."
-        },
-        {
-          "word": "там",
-          "gram": "phó từ",
-          "meaning": "ở đằng kia, ở đó",
-          "example": "Там стоит доска."
-        },
-        {
-          "word": "спра́ва / сле́ва",
-          "gram": "phó từ",
-          "meaning": "bên phải / bên trái",
-          "example": "Справа окно, а слева дверь."
-        }
-      ]
-    },
-    {
-      "title": "Đồ đạc trong phòng học (Аудитория)",
-      "rows": [
         {
           "word": "доска́",
           "gram": "danh từ giống cái",
-          "meaning": "cái bảng",
-          "example": "На доске написано слово."
+          "meaning": "bảng viết",
+          "example": "Учитель пишет правила на доске."
+        },
+        {
+          "word": "окно́",
+          "gram": "danh từ giống trung",
+          "meaning": "cửa sổ",
+          "example": "Около окна стоят парты."
         },
         {
           "word": "дверь",
           "gram": "danh từ giống cái",
           "meaning": "cửa ra vào",
-          "example": "Дверь закрыта."
+          "example": "Справа находится входная дверь."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "висе́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "treo ở",
+          "example": "На стене висит географическая карта."
         },
         {
-          "word": "па́рта",
-          "gram": "danh từ giống cái",
-          "meaning": "bàn học sinh",
-          "example": "Это моя парта."
+          "word": "находи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tọa lạc, nằm ở",
+          "example": "Где находится лаборатория?"
+        },
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tập, làm bài",
+          "example": "Здесь студенты занимаются каждый день."
+        },
+        {
+          "word": "слу́шать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lắng nghe",
+          "example": "Мы внимательно слушаем лекцию."
         }
       ]
     }

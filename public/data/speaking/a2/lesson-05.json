@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thói quen tiêu dùng (Покупки)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "суперма́ркет",
@@ -56,6 +56,35 @@
           "gram": "động từ",
           "meaning": "tiết kiệm tiền",
           "example": "Скидки помогают существенно экономить бюджет."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sắm sửa thực phẩm",
+          "example": "Я покупаю свежие овощи и зелень на фермерском рынке."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lựa chọn kỹ càng",
+          "example": "Хозяйка тщательно выбирает спелые сезонные фрукты."
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thanh toán tiện lợi",
+          "example": "В супермаркете я всегда плачу бесконтактной картой."
+        },
+        {
+          "word": "эконо́мить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tiết kiệm chi tiêu",
+          "example": "Акции и скидочные купоны помогают существенно экономить бюджет."
         }
       ]
     }

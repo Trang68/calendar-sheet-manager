@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Kiến trúc cổ Suzdal (Белокаменное зодчество)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "белока́менный",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống trung",
           "meaning": "di sản",
           "example": "Историческое наследие страны бережно охраняется государством."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng ngoạn đền cổ Suzdal",
+          "example": "Туристы подолгу любуются белокаменными соборами древнего Suzdal."
+        },
+        {
+          "word": "сохраня́ть (наследие)",
+          "gram": "cụm động từ",
+          "meaning": "bảo tồn di tích vô giá",
+          "example": "Музей-заповедник бережно сохраняет шедевры древнерусского зодчества."
+        },
+        {
+          "word": "знако́мить (с историей)",
+          "gram": "cụm động từ",
+          "meaning": "giới thiệu lịch sử hào hùng",
+          "example": "Экскурсовод увлекательно знакомит гостей с эпохой княжеской Руси."
+        },
+        {
+          "word": "реставри́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trùng tu công trình cổ",
+          "example": "Специалисты бережно реставрируют старинные белокаменные храмы."
         }
       ]
     }

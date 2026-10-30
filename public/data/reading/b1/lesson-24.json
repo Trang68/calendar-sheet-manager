@@ -9,25 +9,60 @@
   "topic": "Di sản thế giới UNESCO: Kỳ quan kiến trúc gỗ không dùng đinh trên đảo Kizhi",
   "vocabCategories": [
     {
-      "title": "Kiến trúc gỗ Bắc Âu (Северное зодчество)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "ку́пол",
-          "gram": "danh từ giống đực",
-          "meaning": "mái vòm hình củ hành",
-          "example": "Преображенская церковь на Кижи увенчана двадцатью двумя куполами."
+          "word": "деревя́нный ку́пол",
+          "gram": "cụm danh từ",
+          "meaning": "mái vòm gỗ cong vút đặc trưng",
+          "example": "Двадцать два деревянных купола Преображенской церкви взмывают в северное карельское небо."
         },
         {
           "word": "ле́мех",
           "gram": "danh từ giống đực",
-          "meaning": "ngói gỗ aspen truyền thống",
-          "example": "Купола покрыты лемехом — осиновыми дощечками, серебрящимися на солнце."
+          "meaning": "ngói vảy gỗ cây dương chống chọi thời tiết",
+          "example": "Каждый купол покрыт тысячами осиновых пластинок-лемехов, сияющих серебром на солнце."
         },
         {
-          "word": "без еди́ного гвоздя́",
-          "gram": "thành ngữ",
-          "meaning": "không dùng một chiếc đinh kim loại nào",
-          "example": "Легенда гласит, что храм срублен топором без единого гвоздя."
+          "word": "Преображе́нская це́рковь",
+          "gram": "cụm danh từ",
+          "meaning": "Nhà thờ Biến Hình kiệt tác không dùng đinh",
+          "example": "Преображенская церковь на острове Кижи — вершина мирового деревянного зодчества."
+        },
+        {
+          "word": "па́мятник ЮНЕ́СКО",
+          "gram": "cụm danh từ",
+          "meaning": "quần thể di sản văn hóa thế giới UNESCO",
+          "example": "Архитектурный ансамбль Кижского погоста признан уникальным памятником всемирного наследия ЮНЕСКО."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "стро́ить (без гвоздей)",
+          "gram": "cụm động từ",
+          "meaning": "dựng công trình mộng gỗ không đinh",
+          "example": "Предание гласит, что мастер Нестор построил шедевр одним топором без единого железного гвоздя."
+        },
+        {
+          "word": "восхища́ть (мастерством)",
+          "gram": "cụm động từ",
+          "meaning": "làm kinh ngạc thế giới bởi bàn tay người thợ xưa",
+          "example": "Инженерный гений древних плотников и гармония с природой восхищают архитекторов всех стран."
+        },
+        {
+          "word": "сохраня́ть (уникальность)",
+          "gram": "cụm động từ",
+          "meaning": "giữ gìn nguyên vẹn giá trị di sản",
+          "example": "Музей-заповедник под открытым небом бережно сохраняет вековые деревянные избы и мельницы."
+        },
+        {
+          "word": "реставри́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phục dựng tỉ mỉ từng thớ gỗ cổ",
+          "example": "Реставраторы провели ювелирную работу по укреплению сруба старинного храма."
         }
       ]
     }

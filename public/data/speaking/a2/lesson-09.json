@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Sở thích và Đam mê (Хобби)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "увлече́ние",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống đực",
           "meaning": "tài năng",
           "example": "Развивать творческие таланты."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi nhà vườn",
+          "example": "Летом городские жители любят отдыхать на загородной даче."
+        },
+        {
+          "word": "выра́щивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trồng hoa quả",
+          "example": "Бабушка с любовью выращивает помидоры и клубнику в саду."
+        },
+        {
+          "word": "собира́ть (урожай)",
+          "gram": "cụm động từ",
+          "meaning": "thu hoạch mùa màng",
+          "example": "Осенью дачники собирают богатый урожай спелых яблок."
+        },
+        {
+          "word": "дыша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hít thở khí trời",
+          "example": "В сосновом лесу приятно дышать чистым целебным воздухом."
         }
       ]
     }

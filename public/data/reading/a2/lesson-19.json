@@ -9,25 +9,60 @@
   "topic": "Lễ hội dân gian: Tiễn mùa đông Maslenitsa",
   "vocabCategories": [
     {
-      "title": "Lễ hội Maslenitsa (Масленичные гуляния)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "Ма́сленица",
           "gram": "danh từ giống cái",
-          "meaning": "lễ hội tiễn mùa đông",
-          "example": "Масленица длится целую неделю перед Великим постом."
+          "meaning": "lễ hội Maslenitsa tiễn đông đón xuân",
+          "example": "Масленица — весёлый древний праздник проводов зимы и встречи весны."
         },
         {
           "word": "чу́чело",
           "gram": "danh từ giống trung",
           "meaning": "hình nộm rơm biểu tượng mùa đông",
-          "example": "В воскресенье сжигают соломенное чучело зимы."
+          "example": "В последний день масленичной недели на площади сжигают соломенное чучело."
         },
         {
           "word": "хорово́д",
           "gram": "danh từ giống đực",
           "meaning": "điệu múa vòng tròn dân gian",
-          "example": "Люди берутся за руки и водят весёлый хоровод."
+          "example": "Жители города водят дружные хороводы и поют народные песни."
+        },
+        {
+          "word": "сковорода́",
+          "gram": "danh từ giống cái",
+          "meaning": "chảo rán bánh kếp blini",
+          "example": "Хозяйка достаёт чугунную сковороду, чтобы испечь целую гору блинов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "печь (блины)",
+          "gram": "cụm động từ",
+          "meaning": "rán nướng bánh kếp thơm lừng",
+          "example": "На Масленицу в каждом доме всю неделю пекут румяные круглые блины."
+        },
+        {
+          "word": "сжига́ть (чучело)",
+          "gram": "cụm động từ",
+          "meaning": "đốt hình nộm đón xuân sang",
+          "example": "Обряд сжигания чучела зимы символизирует возрождение новой жизни природы."
+        },
+        {
+          "word": "танцева́ть (в хороводе)",
+          "gram": "cụm động từ",
+          "meaning": "nhảy múa trong vòng tròn hội tụ",
+          "example": "Празднующие весело танцуют и водят хороводы вокруг костра."
+        },
+        {
+          "word": "проща́ться (с зимой)",
+          "gram": "cụm động từ",
+          "meaning": "giã từ những ngày đông giá rét",
+          "example": "Народ радостно прощается с холодной зимой и встречает тепло весны."
         }
       ]
     }

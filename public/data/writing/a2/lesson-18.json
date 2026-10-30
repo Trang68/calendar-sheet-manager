@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thay đổi đơn hàng online (Интернет-заказ)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "зака́з",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống trung",
           "meaning": "thư điện tử xác nhận",
           "example": "Ожидаю письменного подтверждения изменений."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "составля́ть (резюме)",
+          "gram": "cụm động từ",
+          "meaning": "viết CV xin việc",
+          "example": "Я аккуратно составляю резюме для прохождения летней стажировки."
+        },
+        {
+          "word": "ука́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nêu rõ bằng cấp",
+          "example": "В анкете соискатель указывает уровень владения языками и навыки."
+        },
+        {
+          "word": "стреми́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học hỏi phát triển",
+          "example": "Я стремлюсь получить ценный практический опыт в международной фирме."
+        },
+        {
+          "word": "наде́яться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hy vọng nhận việc",
+          "example": "Надеюсь на приглашение на собеседование в удобное для вас время."
         }
       ]
     }

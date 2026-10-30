@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Lối sống vận động (Спорт)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "заря́дка",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống cái",
           "meaning": "sự sảng khoái, năng lượng",
           "example": "Заряд бодрости на весь рабочий день."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "корми́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cho ăn",
+          "example": "Утром я кормлю своего любимого кота."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dắt đi dạo",
+          "example": "Брат гуляет с собакой в парке каждый день."
+        },
+        {
+          "word": "игра́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chơi đùa",
+          "example": "Щенок любит играть с резиновым мячиком."
+        },
+        {
+          "word": "забо́титься",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chăm sóc yêu thương",
+          "example": "Мы с любовью заботимся о домашних животных."
         }
       ]
     }

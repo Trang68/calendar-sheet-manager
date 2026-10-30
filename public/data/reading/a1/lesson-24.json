@@ -9,31 +9,60 @@
   "topic": "Tình bạn & Các hoạt động giải trí yêu thích",
   "vocabCategories": [
     {
-      "title": "Tình bạn & Sở thích (Дружба и хобби)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "друг / подру́га",
-          "gram": "danh từ",
-          "meaning": "bạn trai / bạn gái",
-          "example": "Максим — мой лучший друг."
-        },
-        {
-          "word": "вме́сте",
-          "gram": "phó từ",
-          "meaning": "cùng nhau",
-          "example": "Мы часто учимся и гуляем вместе."
-        },
-        {
-          "word": "спорт",
-          "gram": "danh từ giống đực",
-          "meaning": "thể thao",
-          "example": "Спорт помогает быть здоровым."
-        },
-        {
-          "word": "му́зыка",
+          "word": "дру́жба",
           "gram": "danh từ giống cái",
-          "meaning": "âm nhạc",
-          "example": "Я люблю слушать классическую музыку."
+          "meaning": "tình bạn bè",
+          "example": "Крепкая дружба проверяется временем."
+        },
+        {
+          "word": "встре́ча",
+          "gram": "danh từ giống cái",
+          "meaning": "buổi gặp mặt",
+          "example": "Долгожданная встреча старых друзей."
+        },
+        {
+          "word": "разгово́р",
+          "gram": "danh từ giống đực",
+          "meaning": "cuộc trò chuyện",
+          "example": "Интересный разговор за чашкой чая."
+        },
+        {
+          "word": "по́мощь",
+          "gram": "danh từ giống cái",
+          "meaning": "sự giúp đỡ",
+          "example": "Друг всегда готов прийти на помощь."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giao tiếp, trò chuyện",
+          "example": "Мы часто общаемся в мессенджере."
+        },
+        {
+          "word": "дели́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chia sẻ",
+          "example": "Друзья делятся радостными новостями."
+        },
+        {
+          "word": "подде́рживать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ủng hộ, động viên",
+          "example": "Он всегда поддерживает меня в трудную минуту."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ghi nhớ",
+          "example": "Я помню нашу первую встречу в университете."
         }
       ]
     }

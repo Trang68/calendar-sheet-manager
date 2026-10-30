@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Du lịch sinh thái Seliger (Экотуризм)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "экотури́зм",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "đống lửa trại",
           "example": "Вечером туристы грелись у костра и пели песни под гитару."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du lịch sinh thái dã ngoại",
+          "example": "Горожане любят путешествовать на байдарках по чистым озёрам Селигера."
+        },
+        {
+          "word": "ста́вить (палатку)",
+          "gram": "cụm động từ",
+          "meaning": "dựng lều cắm trại ven hồ",
+          "example": "Туристы ставят палатки на живописном песчаном берегу соснового бора."
+        },
+        {
+          "word": "любова́ться (природой)",
+          "gram": "cụm động từ",
+          "meaning": "thưởng ngoạn thiên nhiên hoang sơ",
+          "example": "Мы часами любуемся зеркальной гладью воды и закатами над озером."
+        },
+        {
+          "word": "беречь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giữ sạch môi trường rừng",
+          "example": "Экотуристы всегда убирают за собой мусор и берегут чистоту природы."
         }
       ]
     }

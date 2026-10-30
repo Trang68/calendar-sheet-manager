@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Giờ học trên giảng đường (В университете)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "университе́т",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống trung",
           "meaning": "buổi học",
           "example": "Занятия начинаются вовремя."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "встреча́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gặp gỡ bạn bè",
+          "example": "Мы встречаемся в уютном кафе в шесть вечера."
+        },
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trò chuyện tâm sự",
+          "example": "Приятно общаться с близкими друзьями."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kể chuyện vui",
+          "example": "Друг рассказывает смешную историю из жизни."
+        },
+        {
+          "word": "смея́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cười rạng rỡ",
+          "example": "Все весело смеются и пьют чай."
         }
       ]
     }

@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Chăm sóc sức khỏe (Здоровый образ жизни)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "иммуните́т",
@@ -56,6 +56,35 @@
           "gram": "tính từ",
           "meaning": "giàu vitamin",
           "example": "Витаминный ягодный чай зимой."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu món truyền thống",
+          "example": "Я умею готовить настоящий украинский борщ с пампушками."
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thử đặc sản Nga",
+          "example": "В поездке туристы с аппетитом пробуют сибирские пельмени."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món ẩm thực",
+          "example": "В ресторане русской кухни мы заказываем уху и блины."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêu đãi bạn bè",
+          "example": "Хозяин щедро угощает гостей домашним ягодным пирогом."
         }
       ]
     }

@@ -9,25 +9,60 @@
   "topic": "Thị trường lao động & Các ngành nghề thời đại số",
   "vocabCategories": [
     {
-      "title": "Nghề nghiệp (Профессии и карьера)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "программи́ст",
           "gram": "danh từ giống đực",
-          "meaning": "lập trình viên phần mềm",
-          "example": "Программисты создают мобильные приложения и сервисы."
+          "meaning": "lập trình viên phần mềm IT",
+          "example": "Профессия программиста сегодня остаётся одной из самых востребованных."
         },
         {
           "word": "собесе́дование",
           "gram": "danh từ giống trung",
-          "meaning": "phỏng vấn tuyển dụng",
-          "example": "Завтра у меня важное собеседование в технологической компании."
+          "meaning": "buổi phỏng vấn tuyển dụng",
+          "example": "Кандидат успешно ответил на все вопросы на техническом собеседовании."
         },
         {
           "word": "удалённая рабо́та",
-          "gram": "cụm danh từ cái",
-          "meaning": "làm việc từ xa (remote)",
-          "example": "Многие специалисты перешли на удалённую работу из дома."
+          "gram": "cụm danh từ",
+          "meaning": "làm việc từ xa online",
+          "example": "Удалённая работа позволяет сотрудникам работать прямо из дома."
+        },
+        {
+          "word": "зарпла́та",
+          "gram": "danh từ giống cái",
+          "meaning": "tiền lương tháng đãi ngộ",
+          "example": "Квалифицированные специалисты получают высокую достойную зарплату."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "рабо́тать (в компании)",
+          "gram": "cụm động từ",
+          "meaning": "làm việc tại công ty công nghệ",
+          "example": "Молодой инженер работает в крупной международной IT-корпорации."
+        },
+        {
+          "word": "разраба́тывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu phát triển phần mềm",
+          "example": "Команда программистов разрабатывает полезное мобильное приложение."
+        },
+        {
+          "word": "проходи́ть (интервью)",
+          "gram": "cụm động từ",
+          "meaning": "trải qua bài phỏng vấn",
+          "example": "Выпускники вуза уверенно проходят вступительные этапы отбора кадров."
+        },
+        {
+          "word": "зараба́тывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kiếm thêm thu nhập xứng đáng",
+          "example": "Трудолюбивый специалист хорошо зарабатывает благодаря своим навыкам."
         }
       ]
     }

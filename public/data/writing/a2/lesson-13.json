@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Lịch trình một tuần làm việc (Учебная неделя)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "насы́щенный",
@@ -75,6 +75,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự nôn nóng mong đợi",
           "example": "С нетерпением ждать выходных дней."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi bưu thiếp từ xa",
+          "example": "Я отправляю тебе эту открытку прямо из заснеженной Москвы."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dạo chơi trung tâm",
+          "example": "Сегодня мы гуляли по Красной площади и Александровскому саду."
+        },
+        {
+          "word": "передава́ть (привет)",
+          "gram": "cụm động từ",
+          "meaning": "gửi lời chào thăm",
+          "example": "Передавай горячий привет родителям и всем школьным друзьям!"
+        },
+        {
+          "word": "скуча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhớ nhung bạn bè",
+          "example": "Я очень скучаю по нашим душевным разговорам за чашкой чая."
         }
       ]
     }

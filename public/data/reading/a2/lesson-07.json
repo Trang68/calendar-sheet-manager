@@ -9,48 +9,60 @@
   "topic": "Văn hóa lễ hội: Đón Tết Dương Lịch tại Nga",
   "vocabCategories": [
     {
-      "title": "Lễ hội & Phong tục (Праздник и обычаи)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "Но́вый год",
-          "gram": "cụm danh từ đực",
-          "meaning": "Tết Dương Lịch",
-          "example": "Новый год — самый любимый семейный праздник в России."
+          "gram": "cụm danh từ",
+          "meaning": "Tết Dương lịch Năm Mới",
+          "example": "Новый год — это самый любимый и долгожданный праздник в России."
         },
         {
-          "word": "ёлка",
-          "gram": "danh từ giống cái",
-          "meaning": "cây thông Noel/Tết",
-          "example": "Дети и взрослые украшают ёлку яркими игрушками."
+          "word": "новогодняя ёлка",
+          "gram": "cụm danh từ",
+          "meaning": "cây thông năm mới trang hoàng",
+          "example": "В центре комнаты стоит нарядная ёлка с яркими игрушками."
         },
         {
           "word": "куранты",
           "gram": "danh từ số nhiều",
-          "meaning": "đồng hồ chuông Điện Kremlin",
-          "example": "Под бой курантов загадывают самые заветные желания."
+          "meaning": "chuông đồng hồ Điện Kremlin",
+          "example": "Ровно в полночь начинают бить кремлёвские куранты на Спасской башне."
         },
         {
-          "word": "Дед Моро́з",
-          "gram": "cụm danh từ đực",
-          "meaning": "Ông già Tuyết",
-          "example": "Дед Мороз и Снегурочка дарят детям подарки."
+          "word": "сала́т оливье́",
+          "gram": "cụm danh từ",
+          "meaning": "món salad Olivier truyền thống",
+          "example": "На праздничном столе всегда присутствует традиционный салат оливье."
         }
       ]
     },
     {
-      "title": "Món ăn ngày Tết (Праздничный стол)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "сала́т Оливье́",
-          "gram": "danh từ giống đực",
-          "meaning": "salad Nga Olivier truyền thống",
-          "example": "Без оливье трудно представить новогодний стол."
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đón mừng lễ hội năm mới",
+          "example": "Вся семья собирается вместе, чтобы весело праздновать Новый год."
         },
         {
-          "word": "мандари́н",
-          "gram": "danh từ giống đực",
-          "meaning": "quả quýt",
-          "example": "Запах мандаринов ассоциируется с праздником."
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi lời chúc mừng người thân",
+          "example": "Друзья звонят и поздравляют друг друга с праздником."
+        },
+        {
+          "word": "дари́ть (подарки)",
+          "gram": "cụm động từ",
+          "meaning": "tặng quà cho bạn bè gia đình",
+          "example": "Дед Мороз дарит детям долгожданные сладкие подарки."
+        },
+        {
+          "word": "зага́дывать (желание)",
+          "gram": "cụm động từ",
+          "meaning": "ước nguyện giây phút giao thừa",
+          "example": "Под бой курантов принято загадывать заветное желание."
         }
       ]
     }

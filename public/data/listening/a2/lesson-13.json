@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tiệm làm tóc (В парикмахерской)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "стри́жка",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống trung",
           "meaning": "chiếc ghế đệm tựa",
           "example": "Присаживайтесь, пожалуйста, в кресло."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi bưu phẩm",
+          "example": "Я отправляю посылку с зимними вещами брату."
+        },
+        {
+          "word": "взве́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cân kiện hàng",
+          "example": "Оператор почты взвешивает коробку на весах."
+        },
+        {
+          "word": "опла́чивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thanh toán cước phí",
+          "example": "Клиент оплачивает доставку в окне кассы."
+        },
+        {
+          "word": "отсле́живать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tra cứu vận đơn",
+          "example": "По трек-номеру удобно отслеживать посылку онлайн."
         }
       ]
     }

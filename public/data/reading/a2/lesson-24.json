@@ -9,25 +9,60 @@
   "topic": "Giá trị nhân văn: Tình bạn & Sự sẻ chia",
   "vocabCategories": [
     {
-      "title": "Tình bạn (Дружба и верность)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "настоя́щий друг",
-          "gram": "cụm danh từ đực",
-          "meaning": "người bạn đích thực",
-          "example": "Настоящий друг всегда поддержит в трудную минуту."
-        },
-        {
-          "word": "доверя́ть",
-          "gram": "động từ chưa hoàn thành",
-          "meaning": "tin cậy, gửi gắm niềm tin",
-          "example": "Я могу доверять своему другу любые секреты."
+          "gram": "cụm danh từ",
+          "meaning": "người bạn tri kỷ chân thành",
+          "example": "Настоящий друг всегда готов выслушать и разделить с тобой радость и грусть."
         },
         {
           "word": "по́мощь",
           "gram": "danh từ giống cái",
-          "meaning": "sự tương trợ, giúp đỡ",
-          "example": "Взаимная помощь укрепляет дружбу."
+          "meaning": "sự trợ giúp tương trợ lúc khó khăn",
+          "example": "В трудную минуту бескорыстная помощь верного товарища бесценна."
+        },
+        {
+          "word": "дове́рие",
+          "gram": "danh từ giống trung",
+          "meaning": "lòng tin cậy giữa những người bạn",
+          "example": "Крепкая дружба всегда строится на взаимном уважении и доверии."
+        },
+        {
+          "word": "подде́ржка",
+          "gram": "danh từ giống cái",
+          "meaning": "sự ủng hộ động viên tinh thần",
+          "example": "Дружеская поддержка помогла ему успешно справиться со сложным испытанием."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "доверя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tâm sự gửi gắm niềm tin",
+          "example": "Близкие друзья безоговорочно доверяют друг другу сокровенные мысли."
+        },
+        {
+          "word": "помога́ть (в беде)",
+          "gram": "cụm động từ",
+          "meaning": "sát cánh giúp đỡ khi hoạn nạn",
+          "example": "Русская народная мудрость гласит: «Друг познаётся в беде»."
+        },
+        {
+          "word": "подде́рживать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "động viên khích lệ vượt khó",
+          "example": "Товарищи всегда тепло поддерживают друг друга в любых начинаниях."
+        },
+        {
+          "word": "цени́ть (дружбу)",
+          "gram": "cụm động từ",
+          "meaning": "biết trân trọng gìn giữ tình bạn",
+          "example": "Нужно беречь и искренне ценить настоящих проверенных временем друзей."
         }
       ]
     }

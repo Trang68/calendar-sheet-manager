@@ -9,60 +9,60 @@
   "topic": "Giao thông công cộng & Chỉ đường trong đô thị",
   "vocabCategories": [
     {
-      "title": "Từ vựng Giao thông & Chỉ đường (Транспорт и ориентирование)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "ста́нция метро́",
           "gram": "danh từ giống cái",
           "meaning": "ga tàu điện ngầm",
-          "example": "Эта станция метро очень красивая."
+          "example": "Эта станция метро украшена мраморными колоннами."
         },
         {
           "word": "переса́дка",
           "gram": "danh từ giống cái",
-          "meaning": "điểm chuyển tuyến",
-          "example": "Здесь удобная пересадка на другую линию."
+          "meaning": "sự chuyển tuyến / đổi tàu",
+          "example": "На кольцевой линии очень удобная пересадка."
         },
         {
           "word": "эскала́тор",
           "gram": "danh từ giống đực",
-          "meaning": "thang cuốn",
-          "example": "Вставайте справа на эскалаторе."
+          "meaning": "thang cuốn ngầm",
+          "example": "Пассажиры поднимаются наверх на эскалаторе."
         },
         {
           "word": "вы́ход в го́род",
           "gram": "cụm danh từ",
           "meaning": "lối ra thành phố",
-          "example": "Где находится выход в город?"
-        },
-        {
-          "word": "поверну́ть",
-          "gram": "động từ hoàn thành",
-          "meaning": "rẽ, quẹo",
-          "example": "Поверните направо возле аптеки."
+          "example": "Следуйте указателю «Выход в город»."
         }
       ]
     },
     {
-      "title": "Động từ chuyển động & Giới từ (Глаголы движения)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "дое́хать до",
-          "gram": "động từ + Cách 2",
-          "meaning": "đi xe đến tận",
-          "example": "Как доехать до центра города?"
+          "word": "спуска́ться (в метро)",
+          "gram": "cụm động từ",
+          "meaning": "đi xuống ga tàu điện",
+          "example": "Утром миллионы москвичей спускаются в метро."
         },
         {
-          "word": "пересе́сть на",
-          "gram": "động từ + Cách 4",
-          "meaning": "đổi sang tuyến/xe khác",
-          "example": "Вам нужно пересесть на Кольцевую линию."
+          "word": "переса́живаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển sang tuyến khác",
+          "example": "На станции «Театральная» нужно пересаживаться на зелёную ветку."
         },
         {
-          "word": "пройти́ ми́мо",
-          "gram": "động từ + Cách 2",
-          "meaning": "đi bộ ngang qua",
-          "example": "Пройдите мимо большого парка."
+          "word": "добира́ться (до центра)",
+          "gram": "cụm động từ",
+          "meaning": "đi đến khu trung tâm",
+          "example": "На метро можно быстро добраться до центра без пробок."
+        },
+        {
+          "word": "покупа́ть (проездной)",
+          "gram": "cụm động từ",
+          "meaning": "mua thẻ đi tàu",
+          "example": "Пассажиры покупают карту «Тройка» в кассе."
         }
       ]
     }

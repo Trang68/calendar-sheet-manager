@@ -50,7 +50,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nghị luận về thể thao và sức khỏe (Спорт)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "роль",
@@ -75,6 +75,35 @@
           "gram": "danh từ giống đực",
           "meaning": "căng thẳng tinh thần",
           "example": "Спорт отлично снимает рабочий стресс."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên bạn chuẩn bị đồ",
+          "example": "Советую тебе заранее купить тёплые вещи перед поездкой в Россию."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn áo phao lông",
+          "example": "Выбирай длинный пуховик из плотной ветрозащитной ткани."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua ủng ấm chống trơn",
+          "example": "Обязательно купи непромокаемую зимнюю обувь на толстой подошве."
+        },
+        {
+          "word": "носи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc giữ nhiệt tốt",
+          "example": "В морозную погоду комфортно носить термобельё и шерстяные носки."
         }
       ]
     }

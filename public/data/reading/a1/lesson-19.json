@@ -9,31 +9,60 @@
   "topic": "Văn hóa, Lễ hội & Lời chúc mừng (Поздравляю!)",
   "vocabCategories": [
     {
-      "title": "Ngày lễ & Lời chúc mừng (Праздники)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "пра́здник",
           "gram": "danh từ giống đực",
-          "meaning": "ngày lễ, ngày hội",
-          "example": "Сегодня большой праздник."
-        },
-        {
-          "word": "Но́вый год",
-          "gram": "danh từ",
-          "meaning": "Năm Mới",
-          "example": "С Новым годом!"
+          "meaning": "ngày lễ hội",
+          "example": "Новый год — самый волшебный праздник."
         },
         {
           "word": "пода́рок",
           "gram": "danh từ giống đực",
           "meaning": "món quà",
-          "example": "Дед Мороз дарит подарки."
+          "example": "Родители приготовили подарки для детей."
+        },
+        {
+          "word": "ёлка",
+          "gram": "danh từ giống cái",
+          "meaning": "cây thông noel",
+          "example": "В комнате стоит красивая новогодняя ёлка."
+        },
+        {
+          "word": "тради́ция",
+          "gram": "danh từ giống cái",
+          "meaning": "truyền thống",
+          "example": "Семейные традиции объединяют поколения."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn mừng, tổ chức lễ",
+          "example": "Мы празднуем Новый год тридцать первого декабря."
         },
         {
           "word": "поздравля́ть",
-          "gram": "động từ",
+          "gram": "động từ chưa hoàn thành",
           "meaning": "chúc mừng",
-          "example": "Поздравляю с праздником!"
+          "example": "Друзья поздравляют друг друга с праздником."
+        },
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tặng quà",
+          "example": "Дед Мороз дарит подарки детям."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc ước",
+          "example": "Мы желаем вам счастья и крепкого здоровья!"
         }
       ]
     }

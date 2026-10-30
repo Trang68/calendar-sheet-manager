@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đón bạn tại sân bay (Встреча)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "зал прилёта",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "khăn quàng cổ",
           "example": "Я узнал его по яркому шарфу."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn quà thủ công",
+          "example": "Туристы выбирают традиционные сувениры с ярмарки."
+        },
+        {
+          "word": "распи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chạm vẽ thủ công",
+          "example": "Мастера тонко расписывают деревянную шкатулку."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua đồ gốm sứ",
+          "example": "Я покупаю фарфоровую чашку с гжельским узором."
+        },
+        {
+          "word": "упако́вывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đóng gói hộp quà",
+          "example": "Продавец аккуратно упаковывает хрупкий сувенир."
         }
       ]
     }

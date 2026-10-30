@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Điện ảnh quốc tế (Кинофестиваль)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "кинофестива́ль",
@@ -87,6 +87,35 @@
           "gram": "danh từ không đổi",
           "meaning": "ban giám khảo",
           "example": "Председатель жюри объявил имя обладателя гран-при."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "демонстри́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "công chiếu tác phẩm mới",
+          "example": "На кинофестивале демонстрируют премьерные работы независимых режиссёров."
+        },
+        {
+          "word": "оце́нивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chấm điểm tranh tài",
+          "example": "Международное жюри строго оценивает режиссуру и актёрскую игру."
+        },
+        {
+          "word": "вруча́ть (награды)",
+          "gram": "cụm động từ",
+          "meaning": "trao giải thưởng cao quý",
+          "example": "На торжественной церемонии председатель жюри вручает гран-при фестиваля."
+        },
+        {
+          "word": "номини́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đề cử hạng mục",
+          "example": "Историческую драму номинировали на приз за лучший сценарий."
         }
       ]
     }

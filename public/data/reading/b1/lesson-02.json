@@ -9,54 +9,60 @@
   "topic": "Văn hóa, Danh nhân & Văn học Kinh điển",
   "vocabCategories": [
     {
-      "title": "Văn học & Nghệ thuật (Литература и искусство)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "произведе́ние",
           "gram": "danh từ giống trung",
-          "meaning": "tác phẩm",
-          "example": "«Евгений Онегин» — великое произведение Пушкина."
+          "meaning": "tác phẩm văn học kinh điển",
+          "example": "Осенью в Болдино Пушкин создал свои величайшие литературные произведения."
         },
         {
           "word": "вдохнове́ние",
           "gram": "danh từ giống trung",
-          "meaning": "nguồn cảm hứng",
-          "example": "Поэт нашёл вдохновение в тихой деревне."
+          "meaning": "nguồn cảm hứng nghệ thuật dạt dào",
+          "example": "Осенняя природа и деревенская тишина дарили поэту мощное вдохновение."
         },
         {
           "word": "шеде́вр",
           "gram": "danh từ giống đực",
-          "meaning": "kiệt tác",
-          "example": "Эта повесть признана мировым шедевром."
+          "meaning": "kiệt tác thi ca bất hủ",
+          "example": "«Повести Белкина» и «Маленькие трагедии» признаны шедеврами мировой словесности."
         },
         {
-          "word": "эпо́ха",
+          "word": "ру́копись",
           "gram": "danh từ giống cái",
-          "meaning": "thời đại, kỷ nguyên",
-          "example": "Золотой век русской поэзии."
+          "meaning": "bản thảo viết tay của tác giả",
+          "example": "В архивах бережно хранятся подлинные рукописи стихов великого поэта."
         }
       ]
     },
     {
-      "title": "Từ vựng chỉ Hoàn cảnh & Biến cố (Обстоятельства и события)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "каранти́н",
-          "gram": "danh từ giống đực",
-          "meaning": "lệnh cách ly, kiểm dịch",
-          "example": "Из-за эпидемии холеры объявили строгий карантин."
+          "word": "твори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sáng tác thơ ca nghệ thuật",
+          "example": "Гений Пушкина творил с невероятной продуктивностью в дни уединения."
         },
         {
-          "word": "заве́ршить",
-          "gram": "động từ hoàn thành",
-          "meaning": "hoàn thành trọn vẹn",
-          "example": "Автор завершил роман за три месяца."
+          "word": "заверша́ть (поэму)",
+          "gram": "cụm động từ",
+          "meaning": "hoàn thành tác phẩm đồ sộ",
+          "example": "В этот плодотворный период автор завершает роман в стихах «Евгений Онегин»."
         },
         {
-          "word": "творчество",
-          "gram": "danh từ giống trung",
-          "meaning": "sự nghiệp sáng tác",
-          "example": "Творчество Пушкина изучают во всём мире."
+          "word": "посвяща́ть (стихи)",
+          "gram": "cụm động từ",
+          "meaning": "dành tặng những vần thơ tình",
+          "example": "Поэт посвящает проникновенные строки своей невесте Наталье Гончаровой."
+        },
+        {
+          "word": "пережива́ть (карантин)",
+          "gram": "cụm động từ",
+          "meaning": "trải qua giai đoạn cách ly",
+          "example": "Вынужденный холерный карантин стал самым плодотворным временем в жизни классика."
         }
       ]
     }

@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thời gian rảnh rỗi (Моё хобби)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "свобо́дное вре́мя",
@@ -81,6 +81,35 @@
           "gram": "tính từ",
           "meaning": "thú vị",
           "example": "Очень интересное занятие."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "изуча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tập chuyên sâu",
+          "example": "Я изучаю русский язык уже шесть месяцев."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hiểu ngôn ngữ",
+          "example": "Я хочу понимать русскую литературу в оригинале."
+        },
+        {
+          "word": "говори́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nói chuyện giao tiếp",
+          "example": "Моя цель — свободно говорить без акцента."
+        },
+        {
+          "word": "мечта́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mơ ước du học",
+          "example": "Я мечтаю учиться в университете в Москве."
         }
       ]
     }

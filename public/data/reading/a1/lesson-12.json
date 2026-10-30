@@ -9,31 +9,60 @@
   "topic": "Mua sắm, Thực phẩm & Giá tiền (Сколько стоит?)",
   "vocabCategories": [
     {
-      "title": "Thực phẩm thông dụng (Продукты)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
+        {
+          "word": "магази́н",
+          "gram": "danh từ giống đực",
+          "meaning": "cửa hàng, siêu thị",
+          "example": "Продуктовый магазин работает до ночи."
+        },
         {
           "word": "хлеб",
           "gram": "danh từ giống đực",
           "meaning": "bánh mì",
-          "example": "Купи свежий хлеб."
+          "example": "Купите, пожалуйста, свежий белый хлеб."
         },
         {
           "word": "молоко́",
           "gram": "danh từ giống trung",
-          "meaning": "sữa tươi",
-          "example": "Я пью молоко каждый день."
+          "meaning": "sữa",
+          "example": "Дети пьют тёплое молоко с мёдом."
         },
         {
           "word": "сыр",
           "gram": "danh từ giống đực",
           "meaning": "phô mai",
-          "example": "Вкусный сыр."
+          "example": "В магазине продаётся вкусный сыр."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua",
+          "example": "Что вы хотите купить?"
         },
         {
-          "word": "я́блоко",
-          "gram": "danh từ giống trung",
-          "meaning": "quả táo",
-          "example": "Свежие яблоки."
+          "word": "продава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bán",
+          "example": "Здесь продают свежие овощи."
+        },
+        {
+          "word": "сто́ить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "có giá tiền",
+          "example": "Сколько стоит этот сыр?"
+        },
+        {
+          "word": "плати́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thanh toán",
+          "example": "Я плачу банковской картой."
         }
       ]
     }

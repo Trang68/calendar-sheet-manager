@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Lịch trình một ngày (Распорядок дня)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "встава́ть",
@@ -85,6 +85,35 @@
           "gram": "danh từ giống đực",
           "meaning": "sự nghỉ ngơi",
           "example": "Вечер — время для отдыха."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "просыпа́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thức giấc",
+          "example": "Я просыпаюсь в семь часов утра."
+        },
+        {
+          "word": "идти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi học",
+          "example": "В восемь часов я иду в университет на лекции."
+        },
+        {
+          "word": "возвраща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trở về nhà",
+          "example": "Вечером я возвращаюсь в общежитие."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi",
+          "example": "Перед сном я отдыхаю и читаю книгу."
         }
       ]
     }

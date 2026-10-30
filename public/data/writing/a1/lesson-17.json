@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đặt bàn và Đánh giá (Отзыв о кафе)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "зака́з",
@@ -81,6 +81,35 @@
           "gram": "động từ",
           "meaning": "khuyên, giới thiệu",
           "example": "Рекомендую всем посетить это кафе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp ảnh nghệ thuật",
+          "example": "Моё главное увлечение — фотографировать природу."
+        },
+        {
+          "word": "снима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bấm máy chụp cảnh",
+          "example": "Я люблю снимать старинные улочки на закате."
+        },
+        {
+          "word": "сохраня́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lưu giữ kỷ niệm",
+          "example": "Фотографии сохраняют самые счастливые моменты."
+        },
+        {
+          "word": "пока́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khoe hình ảnh",
+          "example": "Я показываю свои снимки друзьям в соцсетях."
         }
       ]
     }

@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Lái xe & Định vị đường đi (Такси)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "навига́тор",
@@ -87,6 +87,35 @@
           "gram": "động từ",
           "meaning": "kịp giờ",
           "example": "Мы успеваем точно к началу занятий."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приходи́ть (в гости)",
+          "gram": "cụm động từ",
+          "meaning": "đến chơi nhà bạn",
+          "example": "Друзья приходят в гости с тёплыми улыбками."
+        },
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trao hộp bánh",
+          "example": "Гость дарит хозяйке красивый букет цветов."
+        },
+        {
+          "word": "уса́живать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời ngồi vào bàn",
+          "example": "Хозяева радушно усаживают всех за праздничный стол."
+        },
+        {
+          "word": "налива́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rót trà nóng",
+          "example": "Она наливает ароматный чай из пузатого самовара."
         }
       ]
     }

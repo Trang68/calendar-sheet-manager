@@ -55,7 +55,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đánh giá nhà hàng ẩm thực (Отзыв)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "рестора́н",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống cái",
           "meaning": "đánh giá sao điểm",
           "example": "Ставлю высшую оценку — пять звёзд."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du ngoạn tàu hỏa",
+          "example": "Путешествовать по железной дороге — это лучший способ увидеть Россию."
+        },
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm cảnh qua cửa sổ",
+          "example": "Из окна купе пассажиры смотрят на бесконечные просторы тайги."
+        },
+        {
+          "word": "знако́миться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kết bạn trên tàu",
+          "example": "В пути приятно знакомиться и пить чай с попутчиками."
+        },
+        {
+          "word": "вспомина́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoài niệm kỷ niệm đẹp",
+          "example": "Я часто с теплотой вспоминаю эту незабываемую поездку."
         }
       ]
     }

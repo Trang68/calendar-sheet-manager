@@ -9,25 +9,60 @@
   "topic": "Chăm sóc sức khỏe: Dinh dưỡng khoa học & Giấc ngủ",
   "vocabCategories": [
     {
-      "title": "Sức khỏe & Thể chất (Здоровье)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "пра́вильное пита́ние",
-          "gram": "cụm danh từ trung",
+          "gram": "cụm danh từ",
           "meaning": "chế độ dinh dưỡng lành mạnh",
-          "example": "Правильное питание даёт заряд бодрости на весь день."
+          "example": "Правильное питание и баланс белков и овощей дают организму бодрость."
         },
         {
           "word": "сон",
           "gram": "danh từ giống đực",
-          "meaning": "giấc ngủ",
-          "example": "Взрослому человеку необходимо спать не менее семи-восьми часов в сутки."
+          "meaning": "giấc ngủ sâu tái tạo sức lực",
+          "example": "Здоровый восьмичасовой сон необходим для отличного самочувствия и памяти."
         },
         {
           "word": "иммуните́т",
           "gram": "danh từ giống đực",
-          "meaning": "hệ miễn dịch",
-          "example": "Витамины и свежий воздух укрепляют иммунитет."
+          "meaning": "hệ miễn dịch sức đề kháng",
+          "example": "Витамины, спорт и прогулки на свежем воздухе укрепляют иммунитет."
+        },
+        {
+          "word": "режи́м дня",
+          "gram": "cụm danh từ",
+          "meaning": "thời gian biểu sinh hoạt khoa học",
+          "example": "Чёткий режим дня помогает успевать делать все дела без лишней усталости."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "соблюда́ть (режим)",
+          "gram": "cụm động từ",
+          "meaning": "duy trì nề nếp sinh hoạt điều độ",
+          "example": "Врачи советуют строго соблюдать режим труда и полноценного отдыха."
+        },
+        {
+          "word": "высыпа́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngủ đủ giấc để tái tạo năng lượng",
+          "example": "Чтобы быть продуктивным на парах, студент должен хорошо высыпаться."
+        },
+        {
+          "word": "отка́зываться (от фастфуда)",
+          "gram": "cụm động từ",
+          "meaning": "từ bỏ các món ăn nhanh độc hại",
+          "example": "Многие люди отказываются от вредного фастфуда в пользу домашней еды."
+        },
+        {
+          "word": "занима́ться (зарядкой)",
+          "gram": "cụm động từ",
+          "meaning": "tập thể dục buổi sáng nhẹ nhàng",
+          "example": "По утрам полезно регулярно заниматься утренней гимнастикой."
         }
       ]
     }

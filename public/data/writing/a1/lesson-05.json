@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thành phố quê hương (Мой город)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "го́род",
@@ -85,6 +85,35 @@
           "gram": "danh từ giống cái",
           "meaning": "quảng trường",
           "example": "Центральная площадь города."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "обе́дать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dùng bữa trưa",
+          "example": "В час дня я обычно обедаю в студенческом кафе."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món",
+          "example": "Я часто заказываю традиционный русский борщ."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ưa thích món ăn",
+          "example": "Я очень люблю свежую домашнюю выпечку."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự nấu ăn",
+          "example": "На выходных я сам готовлю вьетнамский суп фо."
         }
       ]
     }

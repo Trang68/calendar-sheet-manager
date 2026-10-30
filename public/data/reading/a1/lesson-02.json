@@ -9,54 +9,60 @@
   "topic": "Nhận diện người & Đồ vật xung quanh",
   "vocabCategories": [
     {
-      "title": "Từ hỏi cơ bản (Вопросительные слова)",
-      "rows": [
-        {
-          "word": "Кто?",
-          "gram": "đại từ nghi vấn",
-          "meaning": "Ai? (dùng cho người, động vật)",
-          "example": "Кто это? — Это студент."
-        },
-        {
-          "word": "Что?",
-          "gram": "đại từ nghi vấn (đọc là /shto/)",
-          "meaning": "Cái gì? (dùng cho đồ vật, sự vật)",
-          "example": "Что это? — Это книга."
-        },
-        {
-          "word": "Э́то",
-          "gram": "đại từ chỉ định",
-          "meaning": "Đây là, cái này là",
-          "example": "Это стол, а это стул."
-        }
-      ]
-    },
-    {
-      "title": "Danh từ đồ vật lớp học (Предметы)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "стол",
           "gram": "danh từ giống đực",
           "meaning": "cái bàn",
-          "example": "Вот стол."
+          "example": "Это большой письменный стол."
+        },
+        {
+          "word": "стул",
+          "gram": "danh từ giống đực",
+          "meaning": "cái ghế",
+          "example": "Около стола стоит удобный стул."
         },
         {
           "word": "кни́га",
           "gram": "danh từ giống cái",
-          "meaning": "quyển sách",
-          "example": "Это интересная книга."
+          "meaning": "cuốn sách",
+          "example": "На столе лежит интересная книга."
         },
         {
-          "word": "ру́чка",
-          "gram": "danh từ giống cái",
-          "meaning": "cây bút",
-          "example": "Где ручка? Вот она."
+          "word": "слова́рь",
+          "gram": "danh từ giống đực",
+          "meaning": "cuốn từ điển",
+          "example": "Это новый русско-вьетнамский словарь."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "лежа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nằm ở",
+          "example": "Тетрадь и ручка лежат на столе."
         },
         {
-          "word": "окно́",
-          "gram": "danh từ giống trung",
-          "meaning": "cửa sổ",
-          "example": "Там большое окно."
+          "word": "стоя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đứng ở",
+          "example": "Лампа стоит на тумбочке."
+        },
+        {
+          "word": "сиде́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngồi",
+          "example": "Студенты сидят в светлой аудитории."
+        },
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đọc",
+          "example": "Мы читаем русский текст."
         }
       ]
     }

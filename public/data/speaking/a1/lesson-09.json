@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Nhận phòng khách sạn (Гостиница)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "администра́тор",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống đực",
           "meaning": "mạng Wi-Fi",
           "example": "Какой пароль от Wi-Fi?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "встава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thức dậy",
+          "example": "Я встаю рано и делаю зарядку."
+        },
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học bài, ôn tập",
+          "example": "Студенты занимаются в библиотеке."
+        },
+        {
+          "word": "обе́дать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn trưa",
+          "example": "Мы обедаем в студенческой столовой."
+        },
+        {
+          "word": "ложи́ться (спать)",
+          "gram": "cụm động từ",
+          "meaning": "đi ngủ",
+          "example": "Я ложусь спать в одиннадцать часов вечера."
         }
       ]
     }

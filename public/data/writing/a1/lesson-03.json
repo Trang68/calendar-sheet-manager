@@ -64,7 +64,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mô tả căn phòng (Моя комната)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "ко́мната",
@@ -89,6 +89,35 @@
           "gram": "danh từ giống đực",
           "meaning": "tủ quần áo",
           "example": "В углу комнаты стоит шкаф."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "стоя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đứng ở",
+          "example": "Около окна стоит мой большой рабочий стол."
+        },
+        {
+          "word": "лежа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nằm ở",
+          "example": "На кровати лежит мягкий тёплый плед."
+        },
+        {
+          "word": "находи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tọa lạc, nằm ở",
+          "example": "Моя комната находится на третьем этаже."
+        },
+        {
+          "word": "убира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dọn dẹp ngăn nắp",
+          "example": "Каждую субботу я убираю свою комнату."
         }
       ]
     }

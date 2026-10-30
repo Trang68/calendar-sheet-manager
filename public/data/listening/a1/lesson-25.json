@@ -59,7 +59,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Lời mời dự tiệc tổng kết (Приглашение)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "гость",
@@ -84,6 +84,35 @@
           "gram": "danh từ giống đực",
           "meaning": "thành công",
           "example": "Успехов в изучении русского языка!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời tham dự",
+          "example": "Друг приглашает меня на свой день рождения."
+        },
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn mừng tổ chức tiệc",
+          "example": "Мы празднуем окончание курса А1."
+        },
+        {
+          "word": "приходи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đến dự",
+          "example": "Гости приходят точно в назначенное время."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng",
+          "example": "Все поздравляют именинника с праздником."
         }
       ]
     }

@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Ẩm thực yêu thích (Русская кухня)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "смета́на",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống đực",
           "meaning": "hương vị",
           "example": "Насыщенный и богатый вкус домашнего борща."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "ориенти́роваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "định hướng giao thông",
+          "example": "По мобильной карте легко ориентироваться в незнакомом мегаполисе."
+        },
+        {
+          "word": "добира́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi đến nơi cần đến",
+          "example": "Быстрее всего добираться до аэропорта на аэроэкспрессе."
+        },
+        {
+          "word": "переса́живаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển đổi tuyến xe",
+          "example": "Вам нужно пересесть на Кольцевую линию метрополитена."
+        },
+        {
+          "word": "спра́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hỏi đường người đi",
+          "example": "Не стесняйтесь спрашивать дорогу у вежливых прохожих."
         }
       ]
     }

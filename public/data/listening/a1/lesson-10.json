@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Sân bay (В аэропорту)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "аэропо́рт",
@@ -282,6 +282,35 @@
           "gram": "cụm danh từ đực",
           "meaning": "kiểm tra hộ chiếu",
           "example": "Пройдите на паспортный контроль."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "лете́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bay trên không",
+          "example": "Самолёт летит в Санкт-Петербург."
+        },
+        {
+          "word": "регистри́роваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm thủ tục chuyến bay",
+          "example": "Пассажиры регистрируются на рейс."
+        },
+        {
+          "word": "сдава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ký gửi (hành lý)",
+          "example": "Я сдаю чемодан в багаж."
+        },
+        {
+          "word": "сади́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lên (máy bay/xe)",
+          "example": "Объявлена посадка на рейс номер сто."
         }
       ]
     }

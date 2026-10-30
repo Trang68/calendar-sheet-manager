@@ -265,7 +265,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nhà ga xe lửa (На вокзале)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "вокза́л",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống cái",
           "meaning": "sân ga, ke ga",
           "example": "Поезд стоит на второй платформе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "прибыва́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đến ga",
+          "example": "Поезд прибывает на первый путь."
+        },
+        {
+          "word": "отправля́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khởi hành",
+          "example": "Скорый поезд отправляется через пять минут."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua",
+          "example": "Пассажир покупает билет в кассе."
+        },
+        {
+          "word": "ждать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chờ đợi",
+          "example": "Люди ждут посадки на платформе."
         }
       ]
     }

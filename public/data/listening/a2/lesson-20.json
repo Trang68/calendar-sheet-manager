@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đánh giá phim chiếu rạp (Кино)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "сюже́т",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "bầu không khí",
           "example": "Музыка создаёт неповторимую атмосферу."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "встреча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đón chào ngày lễ",
+          "example": "Город торжественно встречает праздник Великой Победы."
+        },
+        {
+          "word": "возлага́ть (цветы)",
+          "gram": "cụm động từ",
+          "meaning": "dâng hoa tưởng niệm",
+          "example": "Люди возлагают красные гвоздики к Вечному огню."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng cựu binh",
+          "example": "Волонтёры поздравляют ветеранов и вручают подарки."
+        },
+        {
+          "word": "смотре́ть (парад)",
+          "gram": "cụm động từ",
+          "meaning": "theo dõi duyệt binh",
+          "example": "Миллионы семей смотрят военный парад по телевизору."
         }
       ]
     }

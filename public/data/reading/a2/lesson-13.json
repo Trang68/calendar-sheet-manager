@@ -9,25 +9,60 @@
   "topic": "Dịch vụ bưu chính & Giao vận hàng hóa",
   "vocabCategories": [
     {
-      "title": "Bưu điện (Почтовые услуги)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "посы́лка",
           "gram": "danh từ giống cái",
-          "meaning": "kiện hàng, bưu phẩm",
-          "example": "Я хочу отправить посылку родителям во Вьетнам."
+          "meaning": "bưu kiện gửi bưu điện",
+          "example": "Родители отправили студенту посылку с тёплыми вещами и гостинцами."
         },
         {
           "word": "индекс",
           "gram": "danh từ giống đực",
-          "meaning": "mã bưu chính",
-          "example": "Обязательно напишите шестизначный почтовый индекс."
+          "meaning": "mã bưu chính địa chỉ",
+          "example": "На конверте необходимо правильно указать шестизначный почтовый индекс."
         },
         {
           "word": "трек-но́мер",
           "gram": "danh từ giống đực",
-          "meaning": "mã định danh theo dõi vận đơn",
-          "example": "По трек-номеру можно отслеживать перемещение посылки в приложении."
+          "meaning": "mã vận đơn tra cứu bưu phẩm",
+          "example": "По специальному трек-номеру можно отслеживать перемещение посылки онлайн."
+        },
+        {
+          "word": "отделе́ние почты",
+          "gram": "cụm danh từ",
+          "meaning": "bưu cục giao dịch",
+          "example": "Ближайшее отделение почты находится на соседней улице."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отправля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gửi thư từ hoặc gói quà",
+          "example": "Клиенты отправляют ценные письма и посылки во все регионы страны."
+        },
+        {
+          "word": "получа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận kiện hàng tại quầy",
+          "example": "Получатель забирает доставленную коробку по паспорту или коду из смс."
+        },
+        {
+          "word": "отсле́живать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "theo dõi định vị hành trình kiện hàng",
+          "example": "В мобильном приложении удобно отслеживать каждый этап доставки заказа."
+        },
+        {
+          "word": "упако́вывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đóng gói hàng hóa cẩn thận",
+          "example": "Сотрудник почты помогает надёжно упаковывать хрупкие предметы."
         }
       ]
     }

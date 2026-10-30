@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Bình luận phim và sách (Кино и книги)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "персона́ж",
@@ -56,6 +56,35 @@
           "gram": "động từ",
           "meaning": "thấu cảm cùng nhân vật",
           "example": "Зритель искренне сопереживает героям."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời đến ăn cơm",
+          "example": "Русские люди с открытой душой приглашают гостей в дом."
+        },
+        {
+          "word": "накрыва́ть (стол)",
+          "gram": "cụm động từ",
+          "meaning": "bày biện bàn tiệc",
+          "example": "К приходу друзей хозяйка накрывает богатый праздничный стол."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thết đãi nhiệt tình",
+          "example": "Гостей принято угощать лучшими домашними угощениями."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn hiếu khách",
+          "example": "Уходя, гости сердечно благодарят хозяев за гостеприимство."
         }
       ]
     }

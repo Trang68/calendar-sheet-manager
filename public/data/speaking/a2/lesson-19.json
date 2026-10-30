@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Hai ngày cuối tuần (Выходные дни)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "восстановле́ние",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "năng lượng tươi mới",
           "example": "Зарядиться бодростью и позитивной энергией."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn mừng tuần lễ bánh",
+          "example": "Всю неделю народ весело празднует старинную Масленицу."
+        },
+        {
+          "word": "печь (блины)",
+          "gram": "cụm động từ",
+          "meaning": "rán bánh mời khách",
+          "example": "Хозяйки пекут тонкие румяные блины с маслом и мёдом."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời ăn ngày hội",
+          "example": "На площади всех бесплатно угощают горячим чаем и блинами."
+        },
+        {
+          "word": "проща́ться (с зимой)",
+          "gram": "cụm động từ",
+          "meaning": "tạm biệt giá lạnh",
+          "example": "С хороводами и песнями люди прощаются с долгой зимой."
         }
       ]
     }

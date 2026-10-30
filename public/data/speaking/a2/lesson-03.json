@@ -41,7 +41,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Kế hoạch đi nghỉ mát (Отпуск)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "о́тпуск",
@@ -66,6 +66,35 @@
           "gram": "danh từ giống đực",
           "meaning": "người đi du lịch",
           "example": "Опытный путешественник знает все тонкости."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "плани́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lên kế hoạch đi chơi",
+          "example": "Летом я планирую отправиться в путешествие на Байкал."
+        },
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du lịch bốn phương",
+          "example": "Путешествовать на поезде очень интересно и романтично."
+        },
+        {
+          "word": "покупа́ть (билеты)",
+          "gram": "cụm động từ",
+          "meaning": "mua vé hành trình",
+          "example": "Мы заранее покупаем билеты на самолёт со скидкой."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm cảnh danh thắng",
+          "example": "В поездке туристы осматривают уникальные памятники природы."
         }
       ]
     }

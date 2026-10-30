@@ -9,31 +9,60 @@
   "topic": "Nghệ thuật & Sân khấu kịch Nga",
   "vocabCategories": [
     {
-      "title": "Nhà hát & Biểu diễn (Театр и спектакль)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "Большо́й теа́тр",
-          "gram": "cụm danh từ đực",
-          "meaning": "Nhà hát Lớn Moskva",
-          "example": "Большой театр известен на весь мир своими операми и балетом."
+          "gram": "cụm danh từ",
+          "meaning": "Nhà hát Lớn Bolshoi huyền thoại",
+          "example": "Большой театр в Москве славится своими великолепными постановками."
         },
         {
           "word": "бале́т",
           "gram": "danh từ giống đực",
-          "meaning": "vở kịch múa ballet",
-          "example": "Музыку к балету написал Пётр Ильич Чайковский."
+          "meaning": "nghệ thuật múa ba lê kinh điển",
+          "example": "Балет «Щелкунчик» на музыку Чайковского любят взрослые и дети."
         },
         {
           "word": "парте́р",
           "gram": "danh từ giống đực",
           "meaning": "hàng ghế tầng trệt nhà hát",
-          "example": "Наши места находились в седьмом ряду партера."
+          "example": "Из первого ряда партера отлично видно каждое движение балерины."
         },
         {
           "word": "антра́кт",
           "gram": "danh từ giống đực",
-          "meaning": "giờ nghỉ giải lao giữa vở kịch",
-          "example": "В антракте зрители идут в театральный буфет."
+          "meaning": "giờ giải lao giữa hai màn",
+          "example": "В антракте зрители выходят в фойе и делятся впечатлениями."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выступа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "biểu diễn trên sân khấu",
+          "example": "Актёры выступают на сцене прославленного театра."
+        },
+        {
+          "word": "аплоди́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vỗ tay tán thưởng nồng nhiệt",
+          "example": "Зрители восторженно аплодируют артистам после спектакля."
+        },
+        {
+          "word": "покупа́ть (билеты)",
+          "gram": "cụm động từ",
+          "meaning": "mua vé trước ngày diễn",
+          "example": "Мы заранее покупаем билеты на балет через театральную кассу."
+        },
+        {
+          "word": "восхища́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "say mê thán phục nghệ thuật",
+          "example": "Публика восхищается высоким мастерством артистов балета."
         }
       ]
     }

@@ -39,7 +39,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Kể về chuyến đi Moskva (Поездка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "столи́ца",
@@ -64,6 +64,35 @@
           "gram": "danh từ giống cái",
           "meaning": "ảnh chụp",
           "example": "Я сделал много замечательных фотографий."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "бере́чь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gìn giữ trân trọng",
+          "example": "Мы должны беречь зелёную природу нашего родного города."
+        },
+        {
+          "word": "убира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thu dọn rác thải",
+          "example": "Студенты убирают мусор в городском парке на субботнике."
+        },
+        {
+          "word": "сажа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trồng thêm cây xanh",
+          "example": "Весной школьники сажают молодые деревья около школы."
+        },
+        {
+          "word": "защища́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bảo vệ môi trường",
+          "example": "Каждый из нас может защищать экологию простыми делами."
         }
       ]
     }

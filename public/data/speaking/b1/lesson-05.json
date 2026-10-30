@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Ý thức bảo vệ hành tinh (Экологический след)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "осо́знанность",
@@ -56,6 +56,35 @@
           "gram": "động từ chưa hoàn thành",
           "meaning": "gìn giữ, trân trọng bảo vệ",
           "example": "Мы обязаны беречь родную природу для будущих потомков."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "осознава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhận thức trách nhiệm",
+          "example": "Каждый житель Земли обязан осознавать свой личный экологический след."
+        },
+        {
+          "word": "сокраща́ть (потребление)",
+          "gram": "cụm động từ",
+          "meaning": "giảm tiêu dùng phung phí",
+          "example": "Мы можем разумно сокращать потребление одноразового пластика в быту."
+        },
+        {
+          "word": "перераба́тывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tái chế bảo vệ môi trường",
+          "example": "Сортировка бытовых отходов позволяет перерабатывать полезные ресурсы."
+        },
+        {
+          "word": "беречь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bảo vệ ngôi nhà chung",
+          "example": "Беречь планету — это не модный тренд, а жизненная необходимость."
         }
       ]
     }

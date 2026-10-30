@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Kỳ nghỉ cuối tuần (Выходные)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "отдыха́ть",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống trung",
           "meaning": "tâm trạng",
           "example": "Отличное бодрое настроение."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "свети́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tỏa sáng",
+          "example": "Летом в моем городе ярко светит солнце."
+        },
+        {
+          "word": "идти́ (дождь)",
+          "gram": "cụm động từ",
+          "meaning": "đổ mưa",
+          "example": "Осенью часто идёт тёплый тропический дождь."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu thích mùa hè",
+          "example": "Больше всего я люблю мягкую весну."
+        },
+        {
+          "word": "меня́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thay đổi theo mùa",
+          "example": "Погода быстро меняется в течение одного дня."
         }
       ]
     }

@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Dự báo thời tiết (Погода)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "дождь",
@@ -81,6 +81,35 @@
           "gram": "phó từ",
           "meaning": "ấm áp",
           "example": "В комнате уютно и тепло."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng thức phim",
+          "example": "Я советую всем посмотреть эту замечательную комедию."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhớ mãi cốt truyện",
+          "example": "Я навсегда запомнил трогательный финал этой картины."
+        },
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên nhủ giới thiệu",
+          "example": "Друг советует посмотреть новый исторический фильм."
+        },
+        {
+          "word": "нра́виться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm rung động",
+          "example": "Мне очень понравилась великолепная игра актёров."
         }
       ]
     }

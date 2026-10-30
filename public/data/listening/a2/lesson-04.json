@@ -77,7 +77,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mua vé tàu hỏa (Покупка билета)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "купе́",
@@ -102,6 +102,35 @@
           "gram": "danh từ giống cái",
           "meaning": "giá thành, chi phí",
           "example": "Стоимость включает комплект белья."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua vé tàu",
+          "example": "Пассажир покупает билет на скорый поезд."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn loại toa",
+          "example": "Мы выбираем нижнюю полку в купейном вагоне."
+        },
+        {
+          "word": "отправля́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rời ga xuất phát",
+          "example": "Фирменный поезд отправляется ровно в полночь."
+        },
+        {
+          "word": "предъявля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xuất trình vé giấy tờ",
+          "example": "При посадке предъявите паспорт и билет проводнику."
         }
       ]
     }

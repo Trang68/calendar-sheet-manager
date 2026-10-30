@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Khu bảo tồn thiên nhiên (Заповедник)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "запове́дник",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "hệ sinh thái",
           "example": "Сохранение хрупкой экосистемы — главная задача экологов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "охраня́ть (фауну)",
+          "gram": "cụm động từ",
+          "meaning": "bảo vệ động vật hoang dã",
+          "example": "Сибирский заповедник строго охраняет редкие популяции амурских тигров."
+        },
+        {
+          "word": "изуча́ть (экосистемы)",
+          "gram": "cụm động từ",
+          "meaning": "nghiên cứu rừng taiga",
+          "example": "Биологи наблюдают за естественным развитием нетронутых экосистем тайги."
+        },
+        {
+          "word": "восстана́вливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phục hồi các loài quý hiếm",
+          "example": "Учёные восстанавливают численность исчезающих видов флоры и фауны."
+        },
+        {
+          "word": "предотвраща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chống nạn săn bắt trộm",
+          "example": "Инспекторы патрулируют территорию, чтобы предотвращать браконьерство."
         }
       ]
     }

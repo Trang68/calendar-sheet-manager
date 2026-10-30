@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thiệp chúc Tết đồng nghiệp (Поздравление)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "колле́га",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống trung",
           "meaning": "lời chúc tốt đẹp",
           "example": "С наилучшими праздничными пожеланиями."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "восхища́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trầm trồ đồ thủ công",
+          "example": "Я восхищаюсь мастерством русских резчиков по дереву."
+        },
+        {
+          "word": "распи́сывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vẽ men gốm",
+          "example": "Каждое изделие художники расписывают вручную с душой."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua quà lưu niệm",
+          "example": "В подарок друзьям я купил расписной поднос из Жостово."
+        },
+        {
+          "word": "беречь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gìn giữ tinh hoa",
+          "example": "Такие уникальные народные ремёсла нужно беречь для потомков."
         }
       ]
     }

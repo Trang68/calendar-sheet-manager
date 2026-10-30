@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đàm phán trang thiết bị (Поставка)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "поставщи́к",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "tiền bồi thường chậm phạt hợp đồng",
           "example": "В случае срыва сроков поставщик выплачивает неустойку."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поставля́ть (оборудование)",
+          "gram": "cụm động từ",
+          "meaning": "cung ứng máy móc thiết bị",
+          "example": "Завод обязуется поставлять высокотехнологичное оборудование в срок."
+        },
+        {
+          "word": "согласо́вывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thống nhất thông số kỹ thuật",
+          "example": "Инженеры согласуют техническую спецификацию производственной линии."
+        },
+        {
+          "word": "вести́ (переговоры)",
+          "gram": "cụm động từ",
+          "meaning": "đàm phán thương vụ lớn",
+          "example": "Руководители ведут конструктивные переговоры о долгосрочном партнёрстве."
+        },
+        {
+          "word": "гаранти́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bảo hành chất lượng",
+          "example": "Поставщик гарантирует сервисное обслуживание на протяжении трёх лет."
         }
       ]
     }

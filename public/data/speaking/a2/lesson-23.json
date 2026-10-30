@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Môi trường và Đô thị xanh (Экология)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "чистота́",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "phủ xanh cây cối",
           "example": "Озеленение жилых районов города."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "забо́титься (о здоровье)",
+          "gram": "cụm động từ",
+          "meaning": "giữ gìn thể lực",
+          "example": "Каждый день я забочусь о своём здоровье и самочувствии."
+        },
+        {
+          "word": "пита́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn uống khoa học",
+          "example": "Очень важно регулярно питаться полезной домашней пищей."
+        },
+        {
+          "word": "занима́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "luyện tập thể thao",
+          "example": "Утренняя зарядка и бег заряжают энергией на целый рабочий день."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngủ đủ giấc",
+          "example": "Организму необходим полноценный сон для восстановления сил."
         }
       ]
     }

@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Văn hóa trao nhận quà (Подарки)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "внима́ние",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống cái",
           "meaning": "lòng biết ơn",
           "example": "Выразить глубокую благодарность за подарок."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du ngoạn phương bắc",
+          "example": "Я мечтаю путешествовать по Санкт-Петербургу белыми ночами."
+        },
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêm ngưỡng danh lam",
+          "example": "Туристы с набережных любуются величественной Невой и мостами."
+        },
+        {
+          "word": "посеща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thăm quan cung điện",
+          "example": "В Северной столице обязательно нужно посетить Эрмитаж и Петергоф."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp ảnh lưu niệm",
+          "example": "Я фотографирую прекрасные памятники архитектуры и соборы."
         }
       ]
     }

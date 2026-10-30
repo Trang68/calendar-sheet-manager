@@ -59,7 +59,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Môi trường & Tái chế (Экология)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "сортиро́вка",
@@ -84,6 +84,35 @@
           "gram": "danh từ giống cái",
           "meaning": "sáng kiến",
           "example": "Молодёжная экологическая инициатива получила поддержку."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "сортирова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phân loại rác tại nguồn",
+          "example": "Сознательные граждане сортируют пластик, стекло и бумагу."
+        },
+        {
+          "word": "перераба́тывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tái chế phế thải",
+          "example": "Завод экологично перерабатывает вторичное сырьё в новую продукцию."
+        },
+        {
+          "word": "подде́рживать (инициативы)",
+          "gram": "cụm động từ",
+          "meaning": "ủng hộ sáng kiến xanh",
+          "example": "Город поддерживает экологические инициативы молодёжных движений."
+        },
+        {
+          "word": "беречь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bảo vệ thiên nhiên",
+          "example": "Мы обязаны беречь природу ради будущих поколений."
         }
       ]
     }

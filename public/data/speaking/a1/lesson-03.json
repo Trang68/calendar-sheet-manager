@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Gia đình yêu thương (Моя семья)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "семья́",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "yêu quý",
           "example": "Я очень люблю свою семью."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý",
+          "example": "Я очень люблю свою семью."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kể chuyện",
+          "example": "Расскажите о ваших родителях."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giúp đỡ",
+          "example": "Дети помогают родителям по дому."
+        },
+        {
+          "word": "звони́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi điện thoại",
+          "example": "Каждое воскресенье я звоню маме."
         }
       ]
     }

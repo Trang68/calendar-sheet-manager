@@ -52,7 +52,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tiểu luận về mùa yêu thích (Время года)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "люби́мый",
@@ -77,6 +77,35 @@
           "gram": "động từ",
           "meaning": "truyền cảm hứng",
           "example": "Красота природы вдохновляет поэтов и художников."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu thích mùa vàng",
+          "example": "Больше всего в году я люблю золотую русскую осень."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tản bộ công viên",
+          "example": "В ясные осенние дни приятно гулять по ковру из жёлтых листьев."
+        },
+        {
+          "word": "наслажда́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tận hưởng cảnh sắc",
+          "example": "Я наслаждаюсь тишиной, прохладой и красотой увядающей природы."
+        },
+        {
+          "word": "меня́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển biến thời tiết",
+          "example": "Осенью погода постепенно меняется и воздух становится свежим."
         }
       ]
     }

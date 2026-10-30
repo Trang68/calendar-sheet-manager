@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Câu lạc bộ thể hình (Фитнес-клуб)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "абонеме́нт",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "phòng xông hơi",
           "example": "После тренировки приятно посетить сауну."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "ходи́ть (на приём)",
+          "gram": "cụm động từ",
+          "meaning": "đến khám nha khoa",
+          "example": "Пациент ходит на профилактический приём раз в полгода."
+        },
+        {
+          "word": "жа́ловаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kêu đau răng",
+          "example": "Она жалуется на острую зубную боль по ночам."
+        },
+        {
+          "word": "лечи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hàn trám điều trị",
+          "example": "Опытный стоматолог безболезненно лечит зуб."
+        },
+        {
+          "word": "полоска́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "súc miệng sát trùng",
+          "example": "Врач советует полоскать рот травяным настоем."
         }
       ]
     }

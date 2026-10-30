@@ -9,25 +9,60 @@
   "topic": "Hội họa & Bảo tàng: Phòng tranh Tretyakov",
   "vocabCategories": [
     {
-      "title": "Bảo tàng hội họa (Художественный музей)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "карти́на",
           "gram": "danh từ giống cái",
-          "meaning": "bức tranh nghệ thuật",
-          "example": "В залах галереи представлены тысячи картин русских художников."
+          "meaning": "bức tranh sơn dầu nghệ thuật",
+          "example": "В залах Третьяковской галереи собраны выдающиеся картины русских художников."
         },
         {
           "word": "худо́жник",
           "gram": "danh từ giống đực",
-          "meaning": "họa sĩ",
-          "example": "Илья Репин и Иван Шишкин — знаменитые русские художники."
+          "meaning": "họa sĩ bậc thầy tài ba",
+          "example": "Знаменитый художник Илья Репин создал множество шедевров реализма."
         },
         {
           "word": "шеде́вр",
           "gram": "danh từ giống đực",
-          "meaning": "kiệt tác",
-          "example": "«Утро в сосновом лесу» — признанный шедевр пейзажа."
+          "meaning": "kiệt tác mỹ thuật vô giá",
+          "example": "Картина «Утро в сосновом лесу» — признанный шедевр пейзажной живописи."
+        },
+        {
+          "word": "экскурсово́д",
+          "gram": "danh từ giống đực",
+          "meaning": "hướng dẫn viên bảo tàng",
+          "example": "Знающий экскурсовод увлекательно рассказывает об истории создания полотен."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "посеща́ть (галерею)",
+          "gram": "cụm động từ",
+          "meaning": "đi thăm phòng trưng bày tranh",
+          "example": "Любители живописи часто посещают Третьяковку в Лаврушинском переулке."
+        },
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêm ngưỡng vẻ đẹp tác phẩm lớn",
+          "example": "Посетители подолгу любуются полотнами Айвазовского и Левитана."
+        },
+        {
+          "word": "понима́ть (искусство)",
+          "gram": "cụm động từ",
+          "meaning": "thấu hiểu chiều sâu nghệ thuật",
+          "example": "Экскурсия помогает глубже понимать замысел и внутренний мир автора."
+        },
+        {
+          "word": "узнава́ть (историю)",
+          "gram": "cụm động từ",
+          "meaning": "tìm hiểu cội nguồn văn hóa hội họa",
+          "example": "В музее можно подробно узнавать биографии великих мастеров живописи."
         }
       ]
     }

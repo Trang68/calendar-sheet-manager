@@ -9,31 +9,60 @@
   "topic": "Giải trí: Đi xem phim và rạp chiếu phim",
   "vocabCategories": [
     {
-      "title": "Từ vựng Điện ảnh (Кино)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "кинотеа́тр",
           "gram": "danh từ giống đực",
           "meaning": "rạp chiếu phim",
-          "example": "Мы идём в кинотеатр в субботу."
+          "example": "В субботу мы идём в современный кинотеатр."
         },
         {
-          "word": "биле́т",
+          "word": "сеа́нс",
           "gram": "danh từ giống đực",
-          "meaning": "vé",
-          "example": "Сколько стоит билет в кино?"
+          "meaning": "suất chiếu",
+          "example": "Вечерний сеанс начинается в девятнадцать часов."
+        },
+        {
+          "word": "экран",
+          "gram": "danh từ giống đực",
+          "meaning": "màn ảnh",
+          "example": "На большом экране показывают премьеру."
         },
         {
           "word": "ряд",
           "gram": "danh từ giống đực",
           "meaning": "hàng ghế",
-          "example": "Наши места в пятом ряду."
+          "example": "Наши места в пятом ряду в центре."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xem phim",
+          "example": "Друзья смотрят фильм с субтитрами."
         },
         {
-          "word": "попко́рн",
-          "gram": "danh từ giống đực",
-          "meaning": "bỏng ngô",
-          "example": "Перед фильмом мы купили сладкий попкорн."
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lựa chọn",
+          "example": "Мы выбираем лучшие места в зале."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua vé",
+          "example": "Антон покупает билеты и попкорн."
+        },
+        {
+          "word": "обсужда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thảo luận",
+          "example": "После фильма мы обсуждаем сюжет в кафе."
         }
       ]
     }

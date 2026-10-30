@@ -48,7 +48,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thói quen hàng ngày (Распорядок)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "привы́чка",
@@ -73,6 +73,35 @@
           "gram": "danh từ giống đực",
           "meaning": "lịch trình giờ giấc",
           "example": "Строгий распорядок трудового дня."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "просыпа́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thức giấc mỗi sáng",
+          "example": "В будние дни я просыпаюсь в семь часов утра по будильнику."
+        },
+        {
+          "word": "за́втракать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dùng bữa sáng",
+          "example": "Я завтракаю овсяной кашей и чашкой ароматного кофе."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tại trường",
+          "example": "Днём я учусь в университете и посещаю лекции."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thư giãn buổi tối",
+          "example": "Вечером я отдыхаю дома, читаю книги и слушаю музыку."
         }
       ]
     }

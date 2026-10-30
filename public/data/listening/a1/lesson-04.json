@@ -265,7 +265,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Từ vựng Mua sắm quần áo (В магазине)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "оде́жда",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống cái",
           "meaning": "phòng thử đồ",
           "example": "Где находится примерочная?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "ме́рить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thử đồ (quần áo)",
+          "example": "Где можно примерить эту куртку?"
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua sắm",
+          "example": "Анна покупает тёплый свитер."
+        },
+        {
+          "word": "подходи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vừa vặn, hợp",
+          "example": "Этот размер мне идеально подходит."
+        },
+        {
+          "word": "сто́ить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "có giá bán",
+          "example": "Сколько стоит эта зимняя куртка?"
         }
       ]
     }

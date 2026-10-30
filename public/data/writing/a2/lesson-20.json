@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Quy định trật tự khu dân cư (Правила дома)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "жиле́ц",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống trung",
           "meaning": "lời cáo lỗi",
           "example": "Приносим извинения за временные неудобства."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "посвяща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dành bài viết tri ân",
+          "example": "Своё эссе я посвящаю подвигу защитников Родины в годы войны."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhớ mãi công ơn",
+          "example": "Наш долг — свято помнить имена павших воинов и ценить мирную жизнь."
+        },
+        {
+          "word": "передава́ть (память)",
+          "gram": "cụm động từ",
+          "meaning": "truyền lại ngọn lửa",
+          "example": "Мы должны бережно передавать память о Победе следующим поколениям."
+        },
+        {
+          "word": "горди́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự hào lịch sử",
+          "example": "Каждая российская семья гордится своими дедами и прадедами."
         }
       ]
     }

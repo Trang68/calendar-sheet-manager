@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Vấn đáp kết thúc khóa học (Экзамен)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "экза́мен",
@@ -282,6 +282,35 @@
           "gram": "danh từ giống cái",
           "meaning": "điểm số",
           "example": "Я получил отличную оценку."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "сдава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dự thi, thi cử",
+          "example": "Студент сдаёт экзамен по русскому языку."
+        },
+        {
+          "word": "спра́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt câu hỏi",
+          "example": "Экзаменатор спрашивает о граматических правилах."
+        },
+        {
+          "word": "отвеча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trả lời rành mạch",
+          "example": "Антон уверенно отвечает на все вопросы."
+        },
+        {
+          "word": "объясня́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giải thích",
+          "example": "Преподаватель объясняет сложный пример."
         }
       ]
     }

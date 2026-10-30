@@ -265,7 +265,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Từ vựng Quán Cà Phê (В кафе)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "кафе́",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống đực",
           "meaning": "hóa đơn",
           "example": "Принесите, пожалуйста, счёт."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt món, gọi món",
+          "example": "Что вы будете заказывать сегодня?"
+        },
+        {
+          "word": "принести́",
+          "gram": "động từ hoàn thành",
+          "meaning": "mang đến",
+          "example": "Принесите, пожалуйста, чашку чая."
+        },
+        {
+          "word": "пить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống",
+          "example": "Максим пьёт чёрный кофе без сахара."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lựa chọn",
+          "example": "Клиент долго выбирает десерт."
         }
       ]
     }

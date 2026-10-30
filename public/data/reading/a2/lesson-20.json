@@ -9,25 +9,60 @@
   "topic": "Lịch sử & Tưởng niệm: Ngày Chiến Thắng 9/5",
   "vocabCategories": [
     {
-      "title": "Kỷ niệm lịch sử (День Победы)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "День Побе́ды",
-          "gram": "cụm danh từ đực",
-          "meaning": "Ngày Chiến Thắng (9 tháng 5)",
-          "example": "9 Мая — священный праздник для каждой российской семьи."
+          "gram": "cụm danh từ",
+          "meaning": "Ngày Chiến Thắng lịch sử 9 tháng 5",
+          "example": "Девятое мая — священный праздник великой Победы для каждой российской семьи."
         },
         {
           "word": "пара́д",
           "gram": "danh từ giống đực",
-          "meaning": "lễ duyệt binh",
-          "example": "Военный парад на Красной площади транслируют по всему миру."
+          "meaning": "cuộc diễu binh quân sự oai hùng",
+          "example": "На Красной площади в Москве традиционно проходит масштабный военный парад."
         },
         {
           "word": "гео́ргиевская ле́нточка",
-          "gram": "cụm danh từ cái",
-          "meaning": "dải băng sọc cam đen tưởng niệm",
-          "example": "Люди прикрепляют ленточку к одежде в знак памяти и благодарности."
+          "gram": "cụm danh từ",
+          "meaning": "dải ruy băng Thánh George tưởng niệm",
+          "example": "В майские дни миллионы людей с гордостью носят георгиевскую ленточку на груди."
+        },
+        {
+          "word": "ветера́н",
+          "gram": "danh từ giống đực",
+          "meaning": "người cựu chiến binh dũng cảm",
+          "example": "Школьники с почтением дарят алые гвоздики убелённым сединами ветеранам."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поздравля́ть (ветеранов)",
+          "gram": "cụm động từ",
+          "meaning": "tri ân các cựu chiến binh",
+          "example": "В День Победы люди сердечно поздравляют ветеранов Великой Отечественной войны."
+        },
+        {
+          "word": "возлага́ть (цветы)",
+          "gram": "cụm động từ",
+          "meaning": "dâng hoa tưởng nhớ anh hùng",
+          "example": "Граждане возлагают живые цветы к Вечному огню у Кремлёвской стены."
+        },
+        {
+          "word": "по́мнить (подвиг)",
+          "gram": "cụm động từ",
+          "meaning": "khắc ghi chiến công bảo vệ tổ quốc",
+          "example": "Потомки свято помнят бессмертный подвиг солдат, победивших фашизм."
+        },
+        {
+          "word": "смотре́ть (салют)",
+          "gram": "cụm động từ",
+          "meaning": "ngắm màn pháo hoa rực sáng",
+          "example": "Вечером жители выходят на набережные, чтобы смотреть праздничный салют."
         }
       ]
     }

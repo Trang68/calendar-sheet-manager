@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nha khoa & Đặt hẹn (Стоматолог)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "стомато́лог",
@@ -87,6 +87,35 @@
           "gram": "động từ",
           "meaning": "hàn trám răng",
           "example": "Врач аккуратно запломбировал зуб."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua vé kịch",
+          "example": "Мы покупаем билеты на балет «Лебединое озеро»."
+        },
+        {
+          "word": "сдава́ть (в гардероб)",
+          "gram": "cụm động từ",
+          "meaning": "gửi áo khoác",
+          "example": "Зрители сдают пальто в гардероб перед спектаклем."
+        },
+        {
+          "word": "занима́ть (место)",
+          "gram": "cụm động từ",
+          "meaning": "ngồi vào chỗ",
+          "example": "После третьего звонка зрители занимают свои места."
+        },
+        {
+          "word": "аплоди́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhiệt liệt vỗ tay",
+          "example": "Зал стоя аплодирует выдающимся артистам."
         }
       ]
     }

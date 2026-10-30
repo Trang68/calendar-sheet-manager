@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đi xem phim (В кинотеатре)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "кинотеа́тр",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống đực",
           "meaning": "màn hình chiếu",
           "example": "Большой яркий экран."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xem phim chiếu rạp",
+          "example": "Мы смотрим премьеру нового фильма."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn chỗ ngồi",
+          "example": "Давай выберем места в центре зала."
+        },
+        {
+          "word": "идти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi xem phim",
+          "example": "В субботу мы идём в кинотеатр."
+        },
+        {
+          "word": "обсужда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bình luận thảo luận",
+          "example": "После сеанса зрители обсуждают финал картины."
         }
       ]
     }

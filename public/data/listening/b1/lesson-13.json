@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Văn học Pushkin (Повесть «Метель»)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "по́весть",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "nhân vật (văn học/phim)",
           "example": "Главный персонаж произведения вызывает искреннее сочувствие."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "обсужда́ть (повесть)",
+          "gram": "cụm động từ",
+          "meaning": "thảo luận tác phẩm Pushkin",
+          "example": "В книжном клубе читатели оживлённо обсуждают повесть Пушкина «Метель»."
+        },
+        {
+          "word": "анализи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phân tích diễn biến tâm lý",
+          "example": "Участники встречи глубоко анализируют поступки и судьбу главных героев."
+        },
+        {
+          "word": "переосмы́сливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhìn nhận lại thông điệp",
+          "example": "Современное поколение по-новому переосмысливает классические сюжеты."
+        },
+        {
+          "word": "дели́ться (мнением)",
+          "gram": "cụm động từ",
+          "meaning": "bày tỏ quan điểm cá nhân",
+          "example": "Каждый читатель с увлечением делится своим пониманием финала книги."
         }
       ]
     }

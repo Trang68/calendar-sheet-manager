@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đồ vật xung quanh (Предметы вокруг)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "ру́чка",
@@ -80,6 +80,35 @@
           "gram": "danh từ giống đực",
           "meaning": "máy tính",
           "example": "Я работаю за компьютером."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "ви́деть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhìn thấy",
+          "example": "Что вы видите на этой картине?"
+        },
+        {
+          "word": "называ́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi tên, nêu danh",
+          "example": "Назовите предметы в вашей комнате."
+        },
+        {
+          "word": "пока́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chỉ ra, cho xem",
+          "example": "Покажите, пожалуйста, этот словарь."
+        },
+        {
+          "word": "знать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "biết",
+          "example": "Я знаю, как называется этот предмет."
         }
       ]
     }

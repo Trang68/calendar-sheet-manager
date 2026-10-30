@@ -53,7 +53,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thư rủ bạn đi triển lãm (Приглашение)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "вы́ставка",
@@ -78,6 +78,35 @@
           "gram": "danh từ giống đực",
           "meaning": "vé vào cửa",
           "example": "Я могу купить билеты онлайн заранее."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời bạn dự triển lãm",
+          "example": "Приглашаю тебя пойти в субботу на выставку современной живописи."
+        },
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng lãm tranh",
+          "example": "Там можно посмотреть уникальные работы молодых художников."
+        },
+        {
+          "word": "встреча́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hẹn gặp tại sảnh",
+          "example": "Давай встретимся около входа в музей в двенадцать часов."
+        },
+        {
+          "word": "жда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngóng chờ câu trả lời",
+          "example": "С нетерпением жду твоего скорого ответа по электронной почте."
         }
       ]
     }

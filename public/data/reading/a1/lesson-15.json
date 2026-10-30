@@ -9,31 +9,60 @@
   "topic": "Thời tiết, Bốn mùa & Khí hậu nước Nga",
   "vocabCategories": [
     {
-      "title": "Bốn mùa trong năm (Времена года)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "зима́ / зимо́й",
-          "gram": "danh từ / phó từ",
-          "meaning": "mùa đông / vào mùa đông",
-          "example": "Зимой идёт снег."
+          "word": "пого́да",
+          "gram": "danh từ giống cái",
+          "meaning": "thời tiết",
+          "example": "Сегодня прекрасная солнечная погода."
         },
         {
-          "word": "весна́ / весно́й",
-          "gram": "danh từ / phó từ",
-          "meaning": "mùa xuân / vào mùa xuân",
-          "example": "Весной цветут деревья."
+          "word": "зима́",
+          "gram": "danh từ giống cái",
+          "meaning": "mùa đông",
+          "example": "Зимой в Москве идёт белый снег."
         },
         {
-          "word": "ле́то / ле́том",
-          "gram": "danh từ / phó từ",
-          "meaning": "mùa hè / vào mùa hè",
-          "example": "Летом тепло и солнечно."
+          "word": "весна́",
+          "gram": "danh từ giống cái",
+          "meaning": "mùa xuân",
+          "example": "Весной природа оживает и цветёт."
         },
         {
-          "word": "о́сень / о́сенью",
-          "gram": "danh từ / phó từ",
-          "meaning": "mùa thu / vào mùa thu",
-          "example": "Осенью идёт дождь."
+          "word": "ле́то",
+          "gram": "danh từ giống trung",
+          "meaning": "mùa hè",
+          "example": "Летом у студентов долгие каникулы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "свети́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiếu sáng",
+          "example": "На небе ярко светит солнце."
+        },
+        {
+          "word": "идти́ (дождь/снег)",
+          "gram": "cụm động từ",
+          "meaning": "rơi (mưa/tuyết)",
+          "example": "На улице идёт тихий снег."
+        },
+        {
+          "word": "тая́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tan chảy",
+          "example": "Весной снег быстро тает на солнце."
+        },
+        {
+          "word": "замерза́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đóng băng",
+          "example": "Зимой река полностью замерзает."
         }
       ]
     }

@@ -9,31 +9,60 @@
   "topic": "Gia đình, Họ hàng & Tình cảm gia đình",
   "vocabCategories": [
     {
-      "title": "Thành viên gia đình (Члены семьи)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "па́па / оте́ц",
-          "gram": "danh từ giống đực",
-          "meaning": "bố, ba, cha",
-          "example": "Мой папа добрый."
-        },
-        {
-          "word": "ма́ма / мать",
+          "word": "семья́",
           "gram": "danh từ giống cái",
-          "meaning": "mẹ, má",
-          "example": "Мама вкусно готовит."
+          "meaning": "gia đình",
+          "example": "У меня большая и дружная семья."
         },
         {
-          "word": "брат / сестра́",
-          "gram": "danh từ",
-          "meaning": "anh (em) trai / chị (em) gái",
-          "example": "У меня есть старший брат."
+          "word": "роди́тели",
+          "gram": "danh từ số nhiều",
+          "meaning": "cha mẹ, phụ huynh",
+          "example": "Мои родители живут в Ханое."
         },
         {
-          "word": "де́душка / ба́бушка",
-          "gram": "danh từ",
-          "meaning": "ông nội, ngoại / bà nội, ngoại",
-          "example": "Дедушка и бабушка на пенсии."
+          "word": "брат",
+          "gram": "danh từ giống đực",
+          "meaning": "anh/em trai",
+          "example": "Мой старший брат работает программистом."
+        },
+        {
+          "word": "сестра́",
+          "gram": "danh từ giống cái",
+          "meaning": "chị/em gái",
+          "example": "Моя младшая сестра учится в школе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sống, cư trú",
+          "example": "Мы живём в уютной квартире."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý, thích",
+          "example": "Я очень люблю своих родителей."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giúp đỡ",
+          "example": "Брат помогает мне учить уроки."
+        },
+        {
+          "word": "забо́титься",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chăm sóc",
+          "example": "Мама заботится обо всей семье."
         }
       ]
     }

@@ -9,54 +9,60 @@
   "topic": "Nghề nghiệp & Công việc thường nhật",
   "vocabCategories": [
     {
-      "title": "Danh từ chỉ nghề nghiệp (Профессии)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "врач",
-          "gram": "danh từ",
-          "meaning": "bác sĩ",
-          "example": "Мой папа — врач."
-        },
-        {
           "word": "инжене́р",
-          "gram": "danh từ",
+          "gram": "danh từ giống đực",
           "meaning": "kỹ sư",
-          "example": "Он опытный инженер."
+          "example": "Борис — опытный инженер."
         },
         {
-          "word": "учи́тель",
-          "gram": "danh từ",
-          "meaning": "giáo viên (nam)",
-          "example": "Учитель объясняет урок."
+          "word": "врач",
+          "gram": "danh từ giống đực",
+          "meaning": "bác sĩ",
+          "example": "Елена работает врачом в больнице."
         },
         {
-          "word": "журнали́ст",
-          "gram": "danh từ",
-          "meaning": "nhà báo",
-          "example": "Она талантливый журналист."
+          "word": "заво́д",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà máy",
+          "example": "Он работает на автомобильном заводе."
+        },
+        {
+          "word": "больни́ца",
+          "gram": "danh từ giống cái",
+          "meaning": "bệnh viện",
+          "example": "Больница находится рядом с метро."
         }
       ]
     },
     {
-      "title": "Động từ về công việc (Работа)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
           "word": "рабо́тать",
-          "gram": "động từ nhóm I",
+          "gram": "động từ chưa hoàn thành",
           "meaning": "làm việc",
-          "example": "Где вы работаете?"
+          "example": "Кем вы работаете?"
         },
         {
-          "word": "заво́д",
-          "gram": "danh từ",
-          "meaning": "nhà máy, xí nghiệp",
-          "example": "Он работает на заводе."
+          "word": "лечи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chữa bệnh",
+          "example": "Врач лечит больных детей."
         },
         {
-          "word": "больни́ца",
-          "gram": "danh từ",
-          "meaning": "bệnh viện",
-          "example": "Врач работает в больнице."
+          "word": "мечта́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mơ ước",
+          "example": "Я мечтаю стать программистом."
+        },
+        {
+          "word": "строи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xây dựng",
+          "example": "Инженер строит современные дома."
         }
       ]
     }

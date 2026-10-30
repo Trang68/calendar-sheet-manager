@@ -253,7 +253,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Phòng khám & Bác sĩ (У врача)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "врач",
@@ -278,6 +278,35 @@
           "gram": "danh từ giống cái",
           "meaning": "bệnh cảm lạnh",
           "example": "Обычная сезонная простуда."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu ăn",
+          "example": "Мама готовит праздничный ужин."
+        },
+        {
+          "word": "есть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn uống",
+          "example": "Вся семья с аппетитом ест горячий суп."
+        },
+        {
+          "word": "угоща́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời ăn, thết đãi",
+          "example": "Хозяйка угощает гостей пирогами."
+        },
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn",
+          "example": "Гости благодарят за вкусный ужин."
         }
       ]
     }

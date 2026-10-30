@@ -9,54 +9,60 @@
   "topic": "Giống của danh từ & Đại từ sở hữu",
   "vocabCategories": [
     {
-      "title": "Đại từ sở hữu 'Của tôi' (Местоимения 'Мой')",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "мой",
-          "gram": "giống đực",
-          "meaning": "của tôi (đi với từ giống đực)",
-          "example": "Это мой паспорт, мой друг."
+          "word": "рюкза́к",
+          "gram": "danh từ giống đực",
+          "meaning": "ba lô",
+          "example": "Это мой синий рюкзак."
         },
         {
-          "word": "моя́",
-          "gram": "giống cái",
-          "meaning": "của tôi (đi với từ giống cái)",
-          "example": "Это моя мама, моя комната."
+          "word": "ру́чка",
+          "gram": "danh từ giống cái",
+          "meaning": "cây bút bi",
+          "example": "Чья это чёрная ручка?"
         },
         {
-          "word": "моё",
-          "gram": "giống trung",
-          "meaning": "của tôi (đi với từ giống trung)",
-          "example": "Это моё окно, моё пальто."
+          "word": "я́блоко",
+          "gram": "danh từ giống trung",
+          "meaning": "quả táo",
+          "example": "На тарелке лежит сладкое яблоко."
         },
         {
-          "word": "мои́",
-          "gram": "số nhiều",
-          "meaning": "của tôi (đi với danh từ số nhiều)",
-          "example": "Это мои книги, мои друзья."
+          "word": "кре́сло",
+          "gram": "danh từ giống trung",
+          "meaning": "ghế bành tựa",
+          "example": "В комнате стоит мягкое кресло."
         }
       ]
     },
     {
-      "title": "Từ hỏi về sở hữu (Чей? Чья? Чьё?)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "Чей?",
-          "gram": "giống đực",
-          "meaning": "Của ai? (hỏi đồ giống đực)",
-          "example": "Чей это карандаш?"
+          "word": "ку́шать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn (thân mật)",
+          "example": "Кушай яблоко на здоровье!"
         },
         {
-          "word": "Чья?",
-          "gram": "giống cái",
-          "meaning": "Của ai? (hỏi đồ giống cái)",
-          "example": "Чья это сумка?"
+          "word": "ви́деть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhìn thấy",
+          "example": "Я вижу твой дом издалека."
         },
         {
-          "word": "Чьё?",
-          "gram": "giống trung",
-          "meaning": "Của ai? (hỏi đồ giống trung)",
-          "example": "Чьё это письмо?"
+          "word": "брать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lấy, cầm lấy",
+          "example": "Студент берёт учебник в библиотеке."
+        },
+        {
+          "word": "писа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "viết",
+          "example": "Он пишет домашнее задание ручкой."
         }
       ]
     }

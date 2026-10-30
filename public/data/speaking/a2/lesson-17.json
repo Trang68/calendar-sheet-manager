@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Bạn thân & Nhân phẩm (Мой друг)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "надёжный",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự tín nhiệm, niềm tin",
           "example": "Дружба строится на взаимном доверии."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đọc tác phẩm kinh điển",
+          "example": "Я люблю читать рассказы русских классиков вслух."
+        },
+        {
+          "word": "обсужда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bàn luận về cuốn sách",
+          "example": "На уроках литературы мы обсуждаем поступки главных героев."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn đầu sách mới",
+          "example": "В библиотеке студент выбирает книгу по рекомендации педагога."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học qua trang sách",
+          "example": "Хорошая литература учит мудрости, добру и справедливости."
         }
       ]
     }

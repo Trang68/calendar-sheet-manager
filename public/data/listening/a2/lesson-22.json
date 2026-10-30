@@ -67,7 +67,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Giao đồ ăn tận nhà (Доставка)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "курье́р",
@@ -92,6 +92,35 @@
           "gram": "danh từ giống cái",
           "meaning": "suất ăn, khẩu phần",
           "example": "Две порции горячих пельменей."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть (билет)",
+          "gram": "cụm động từ",
+          "meaning": "mua vé tham quan",
+          "example": "Мы покупаем билет в кассе музея со студенческой скидкой."
+        },
+        {
+          "word": "брать (аудиогид)",
+          "gram": "cụm động từ",
+          "meaning": "thuê máy thuyết minh",
+          "example": "Турист берёт персональный аудиогид на русском языке."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm nhìn gian trưng bày",
+          "example": "Посетители внимательно осматривают залы с картинами."
+        },
+        {
+          "word": "восхища́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngợi ca kiệt tác",
+          "example": "Все восхищаются непревзойдённым талантом живописца."
         }
       ]
     }

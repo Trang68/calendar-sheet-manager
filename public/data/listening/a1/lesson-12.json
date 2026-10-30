@@ -253,7 +253,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Bảo tàng (В музее)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "музе́й",
@@ -278,6 +278,35 @@
           "gram": "danh từ giống đực",
           "meaning": "vé vào cửa",
           "example": "Один студенческий билет, пожалуйста."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "lựa chọn",
+          "example": "Туристы выбирают сувениры на память."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua sắm",
+          "example": "Я покупаю деревянную матрёшку."
+        },
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tặng quà",
+          "example": "Этот сувенир я подарю другу."
+        },
+        {
+          "word": "нра́виться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm cho thích",
+          "example": "Мне очень нравится эта шкатулка."
         }
       ]
     }

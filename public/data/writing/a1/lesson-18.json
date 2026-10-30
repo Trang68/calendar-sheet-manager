@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Nghề nghiệp tương lai (Профессия)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "стать",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống cái",
           "meaning": "ước mơ",
           "example": "Моя детская мечта сбылась."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn chân thành",
+          "example": "Искренне благодарю вас за ценную помощь и совет."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tận tình giúp đỡ",
+          "example": "Преподаватель всегда терпеливо помогает студентам."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khắc ghi ân tình",
+          "example": "Я всегда буду помнить вашу доброту и поддержку."
+        },
+        {
+          "word": "цени́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trân trọng biết ơn",
+          "example": "Мы высоко ценим ваш огромный педагогический труд."
         }
       ]
     }

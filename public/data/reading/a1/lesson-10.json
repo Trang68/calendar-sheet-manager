@@ -9,31 +9,60 @@
   "topic": "Nơi chốn, Quốc gia & Cách 6 vị trí (в / на)",
   "vocabCategories": [
     {
-      "title": "Cách 6 chỉ nơi chốn (Предложный падеж)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "в го́роде",
-          "gram": "Cách 6",
-          "meaning": "ở trong thành phố",
-          "example": "Я живу в городе."
+          "word": "го́род",
+          "gram": "danh từ giống đực",
+          "meaning": "thành phố",
+          "example": "Москва — огромный красивый город."
         },
         {
-          "word": "в Москве́",
-          "gram": "Cách 6",
-          "meaning": "ở Moskva",
-          "example": "Мы учимся в Москве."
+          "word": "страна́",
+          "gram": "danh từ giống cái",
+          "meaning": "quốc gia, đất nước",
+          "example": "Россия — самая большая страна в мире."
         },
         {
-          "word": "в Хано́е",
-          "gram": "Cách 6",
-          "meaning": "ở Hà Nội",
-          "example": "Моя семья живёт в Ханое."
+          "word": "столи́ца",
+          "gram": "danh từ giống cái",
+          "meaning": "thủ đô",
+          "example": "Ханой — столица Вьетнама."
         },
         {
-          "word": "на у́лице",
-          "gram": "Cách 6",
-          "meaning": "ở trên đường phố",
-          "example": "Дети гуляют на улице."
+          "word": "у́лица",
+          "gram": "danh từ giống cái",
+          "meaning": "đường phố",
+          "example": "На нашей улице много зелёных деревьев."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "приезжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đến nơi (bằng xe/tàu)",
+          "example": "Иностранцы приезжают в Москву учиться."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo",
+          "example": "Мы гуляем по Красной площади."
+        },
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du lịch",
+          "example": "Летом он любит путешествовать на поезде."
+        },
+        {
+          "word": "знать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "biết",
+          "example": "Я хорошо знаю этот древний город."
         }
       ]
     }

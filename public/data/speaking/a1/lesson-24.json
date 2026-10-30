@@ -33,7 +33,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Kế hoạch cuối tuần (Выходные)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "суббо́та",
@@ -58,6 +58,35 @@
           "gram": "danh từ giống đực",
           "meaning": "kế hoạch",
           "example": "Какие у тебя планы на вечер?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "носи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc đồ giữ ấm",
+          "example": "Зимой в России носят тёплые пуховики."
+        },
+        {
+          "word": "надева́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc vào, xỏ vào",
+          "example": "Наденьте тёплую шапку перед выходом на улицу."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua sắm",
+          "example": "Мы покупаем зимние ботинки из натуральной кожи."
+        },
+        {
+          "word": "примеря́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thử áo khoác",
+          "example": "Покупатель примеряет шерстяное пальто в зеркале."
         }
       ]
     }

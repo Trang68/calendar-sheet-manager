@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Nhân vật lịch sử truyền cảm hứng (Личность)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "истори́ческая ли́чность",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống đực",
           "meaning": "uy tín thanh danh",
           "example": "Учёный пользовался безусловным авторитетом среди коллег."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "вдохновля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "truyền cảm hứng lý tưởng",
+          "example": "Выдающиеся исторические личности вдохновляют нас своим мужеством и трудом."
+        },
+        {
+          "word": "соверша́ть (подвиг)",
+          "gram": "cụm động từ",
+          "meaning": "lập nên kỳ tích lịch sử",
+          "example": "Юрий Гагарин совершил беспримерный подвиг, открыв эру пилотируемой космонавтики."
+        },
+        {
+          "word": "вноси́ть (вклад)",
+          "gram": "cụm động từ",
+          "meaning": "đóng góp lớn cho nhân loại",
+          "example": "Великие учёные внесли неоценимый вклад в развитие цивилизации."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khắc ghi di sản tiền nhân",
+          "example": "Благодарное человечество свято помнит имена своих героев и первопроходцев."
         }
       ]
     }

@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thư bàn kế hoạch nghỉ hè (Летний отпуск)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "кани́кулы",
@@ -76,6 +76,35 @@
           "gram": "danh từ giống đực",
           "meaning": "thư hồi âm",
           "example": "С нетерпением жду твоего скорого ответа."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "рассужда́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bàn về tình bạn",
+          "example": "Что такое истинная дружба? Об этом я размышляю в своём эссе."
+        },
+        {
+          "word": "подде́рживать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sát cánh động viên",
+          "example": "Верный друг бескорыстно поддерживает тебя в любых жизненных испытаниях."
+        },
+        {
+          "word": "дове́рять",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tin cậy tâm giao",
+          "example": "Настоящая дружба строится на искренности, уважении и взаимном доверии."
+        },
+        {
+          "word": "беречь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gìn giữ mối quan hệ",
+          "example": "Крепкую дружбу нужно беречь как самое драгоценное сокровище в жизни."
         }
       ]
     }

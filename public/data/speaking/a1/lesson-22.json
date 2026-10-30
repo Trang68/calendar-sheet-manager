@@ -33,7 +33,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Chỉ đường trên phố (На улице)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "остано́вка",
@@ -58,6 +58,35 @@
           "gram": "phó từ",
           "meaning": "gần",
           "example": "Аптека находится очень близко."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng",
+          "example": "Поздравляю вас с Новым годом и Рождеством!"
+        },
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tổ chức liên hoan",
+          "example": "Мы празднуем день рождения в кругу друзей."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc điều may mắn",
+          "example": "Желаю вам крепкого здоровья и больших успехов!"
+        },
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trao tặng quà",
+          "example": "Родители дарят детям красивые книги и сладости."
         }
       ]
     }

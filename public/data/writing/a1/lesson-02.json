@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tả gia đình thân yêu (Моя семья)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "роди́тели",
@@ -85,6 +85,35 @@
           "gram": "phó từ",
           "meaning": "cùng nhau",
           "example": "Мы часто проводим время вместе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "рабо́тать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm việc",
+          "example": "Мой папа работает главным инженером."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý gia đình",
+          "example": "Мы любим собираться вместе за ужином."
+        },
+        {
+          "word": "забо́титься",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chăm sóc chu đáo",
+          "example": "Родители заботятся о нашем образовании."
+        },
+        {
+          "word": "помога́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giúp đỡ",
+          "example": "Я всегда помогаю маме на кухне."
         }
       ]
     }

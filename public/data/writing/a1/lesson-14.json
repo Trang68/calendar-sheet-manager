@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thiệp chúc mừng (Поздравление)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "откры́тка",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống đực",
           "meaning": "ngày vui, ngày lễ",
           "example": "С праздником тебя, дорогой друг!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trao quà tặng",
+          "example": "На день рождения друзья дарят мне полезные книги."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng sinh nhật",
+          "example": "Все тепло поздравляют именинника и поют песню."
+        },
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tổ chức kỷ niệm",
+          "example": "Мы весело празднуем этот радостный день."
+        },
+        {
+          "word": "ра́доваться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hạnh phúc hoan hỉ",
+          "example": "Я искренне радуюсь встрече со всеми друзьями."
         }
       ]
     }

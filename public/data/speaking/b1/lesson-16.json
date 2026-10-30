@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đạo đức nghiên cứu khoa học (Наука и этика)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "нау́чная э́тика",
@@ -56,6 +56,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "ranh giới, giới hạn chuẩn mực",
           "example": "Учёные обязаны осознавать границы допустимого вмешательства в природу."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "иссле́довать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu giới hạn khoa học",
+          "example": "Учёные исследуют генетические механизмы лечения тяжёлых болезней."
+        },
+        {
+          "word": "осознава́ть (ответственность)",
+          "gram": "cụm động từ",
+          "meaning": "ý thức trách nhiệm đạo đức",
+          "example": "Научное сообщество обязано осознавать колоссальную ответственность за опыты."
+        },
+        {
+          "word": "дискути́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tranh luận vấn đề nhân bản",
+          "example": "Общество бурно дискутирует о моральных границах клонирования человека."
+        },
+        {
+          "word": "контроли́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giám sát chặt chẽ thử nghiệm",
+          "example": "Государство должно контролировать безопасность биологических технологий."
         }
       ]
     }

@@ -67,7 +67,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mở thẻ & Ngoại tệ (Банк)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "де́бетовая ка́рта",
@@ -92,6 +92,35 @@
           "gram": "cụm danh từ cái",
           "meaning": "thẻ nhập cảnh di trú",
           "example": "Предъявите миграционную карту с регистрацией."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть (экскурсию)",
+          "gram": "cụm động từ",
+          "meaning": "mua tour du thuyền",
+          "example": "Туристы покупают ночную водную экскурсию по каналам."
+        },
+        {
+          "word": "плыть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi thuyền trên sông",
+          "example": "Теплоход плавно плывёт по реке Неве мимо дворцов."
+        },
+        {
+          "word": "смотре́ть (развод мостов)",
+          "gram": "cụm động từ",
+          "meaning": "ngắm mở cầu xoay",
+          "example": "С набережной все смотрят на завораживающий развод мостов."
+        },
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng ngoạn đêm trắng",
+          "example": "Гости города любуются романтическими белыми ночами."
         }
       ]
     }

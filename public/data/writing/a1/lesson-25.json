@@ -44,7 +44,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tổng kết chặng đường A1 (Итоги)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "заверше́ние",
@@ -69,6 +69,35 @@
           "gram": "danh từ giống đực",
           "meaning": "chân trời mới",
           "example": "Впереди новые языковые горизонты."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "переходи́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyển cấp tiến lên",
+          "example": "Я уверенно перехожу на уровень А2 с отличной базой."
+        },
+        {
+          "word": "продолжа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kiên trì tiếp tục",
+          "example": "Я буду ежедневно продолжать учить новые грамматические темы."
+        },
+        {
+          "word": "совершенствова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trau dồi kỹ năng",
+          "example": "Моя цель — совершенствовать разговорную речь и слух."
+        },
+        {
+          "word": "мечта́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoài bão lớn lao",
+          "example": "Я мечтаю свободно читать классиков русской литературы."
         }
       ]
     }

@@ -9,31 +9,60 @@
   "topic": "Nhà ở, Phòng ốc & Tiện nghi gia đình",
   "vocabCategories": [
     {
-      "title": "Các phòng trong nhà (Комнаты)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
+        {
+          "word": "дом",
+          "gram": "danh từ giống đực",
+          "meaning": "ngôi nhà, tòa nhà",
+          "example": "Наш дом находится в тихом районе."
+        },
+        {
+          "word": "кварти́ра",
+          "gram": "danh từ giống cái",
+          "meaning": "căn hộ",
+          "example": "Это трёхкомнатная светлая квартира."
+        },
         {
           "word": "ку́хня",
           "gram": "danh từ giống cái",
           "meaning": "phòng bếp",
-          "example": "Мама готовит на кухне."
+          "example": "На кухне мама готовит обед."
         },
         {
-          "word": "спа́льня",
-          "gram": "danh từ giống cái",
-          "meaning": "phòng ngủ",
-          "example": "В спальне стоит кровать."
-        },
-        {
-          "word": "ванная",
-          "gram": "danh từ giống cái",
-          "meaning": "phòng tắm",
-          "example": "Ванная чистая и светлая."
-        },
-        {
-          "word": "балко́н",
+          "word": "эта́ж",
           "gram": "danh từ giống đực",
-          "meaning": "ban công",
-          "example": "На балконе растут цветы."
+          "meaning": "tầng lầu",
+          "example": "Мы живём на пятом этаже."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu nướng",
+          "example": "Бабушка готовит вкусный пирог."
+        },
+        {
+          "word": "убира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dọn dẹp",
+          "example": "В субботу я убираю свою комнату."
+        },
+        {
+          "word": "находи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tọa lạc",
+          "example": "Метро находится рядом с домом."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua sắm",
+          "example": "Мы покупаем мебель для гостиной."
         }
       ]
     }

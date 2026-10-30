@@ -55,7 +55,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thư gửi cha mẹ ở quê nhà (Письмо)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "роди́тели",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "ôm ấp yêu thương",
           "example": "Крепко обнимаю вас и скучаю."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "пра́здновать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đón mừng giao thừa",
+          "example": "Новый год мы празднуем в кругу самых близких людей дома."
+        },
+        {
+          "word": "украша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trang hoàng cây thông",
+          "example": "Вся семья дружно украшает пушистую ёлку яркими гирляндами."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm món salad Nga",
+          "example": "Мама готовит традиционный новогодний салат «Оливье»."
+        },
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc tụng thời khắc giao thừa",
+          "example": "Под бой курантов мы поздравляем друг друга и загадываем желания."
         }
       ]
     }

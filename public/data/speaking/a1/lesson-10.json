@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Sở thích cá nhân (Хобби)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "хо́бби",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "du lịch",
           "example": "Мы любим путешествовать по миру."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "увлека́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "say mê, đam mê",
+          "example": "Чем вы увлекаетесь в свободное время?"
+        },
+        {
+          "word": "игра́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chơi nhạc/thể thao",
+          "example": "Мой друг отлично играет в шахматы."
+        },
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đọc sách",
+          "example": "Я люблю читать исторические романы."
+        },
+        {
+          "word": "рисова́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vẽ tranh",
+          "example": "Сестра красиво рисует акварелью."
         }
       ]
     }

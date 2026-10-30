@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Tin nhắn rủ bạn đi xem kịch (В театр)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "спектакль",
@@ -76,6 +76,35 @@
           "gram": "phó từ",
           "meaning": "trực tuyến qua mạng",
           "example": "Забронировать и оплатить билеты онлайн."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "забо́титься",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chăm sóc chó cưng",
+          "example": "У меня дома живёт умная собака, о которой я с радостью забочусь."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo mỗi sáng chiều",
+          "example": "Каждый день мы гуляем в парке и играем на свежем воздухе."
+        },
+        {
+          "word": "понима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hiểu lệnh của chủ",
+          "example": "Мой преданный пёс прекрасно понимает команды с одного взгляда."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý như bạn",
+          "example": "Четвероногий питомец стал настоящим и верным членом нашей семьи."
         }
       ]
     }

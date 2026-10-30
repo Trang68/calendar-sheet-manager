@@ -9,31 +9,60 @@
   "topic": "Thời gian biểu trong ngày, Giờ giấc & Thói quen",
   "vocabCategories": [
     {
-      "title": "Buổi trong ngày & Động từ sinh hoạt",
+      "title": "Danh từ trong bài đọc (Существительные)",
+      "rows": [
+        {
+          "word": "расписа́ние",
+          "gram": "danh từ giống trung",
+          "meaning": "thời khóa biểu",
+          "example": "В расписании сегодня три пары."
+        },
+        {
+          "word": "ле́кция",
+          "gram": "danh từ giống cái",
+          "meaning": "tiết giảng, bài giảng",
+          "example": "Лекция по истории начинается в девять."
+        },
+        {
+          "word": "обе́д",
+          "gram": "danh từ giống đực",
+          "meaning": "bữa trưa",
+          "example": "После занятий студенты идут на обед."
+        },
+        {
+          "word": "о́тдых",
+          "gram": "danh từ giống đực",
+          "meaning": "sự nghỉ ngơi",
+          "example": "Вечер — лучшее время для отдыха."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
           "word": "просыпа́ться",
-          "gram": "động từ",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thức giấc",
+          "example": "Я просыпаюсь рано утром."
+        },
+        {
+          "word": "встава́ть",
+          "gram": "động từ chưa hoàn thành",
           "meaning": "thức dậy",
-          "example": "Я просыпаюсь в семь часов."
+          "example": "Он встаёт в семь часов утра."
         },
         {
-          "word": "за́втракать",
-          "gram": "động từ",
-          "meaning": "ăn sáng",
-          "example": "Мы завтракаем в восемь."
+          "word": "идти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi bộ",
+          "example": "Студенты идут в университет пешком."
         },
         {
-          "word": "обе́дать",
-          "gram": "động từ",
-          "meaning": "ăn trưa",
-          "example": "В час дня я обедаю."
-        },
-        {
-          "word": "у́жинать",
-          "gram": "động từ",
-          "meaning": "ăn tối",
-          "example": "Вечером семья ужинает."
+          "word": "возвраща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "quay trở về",
+          "example": "Вечером я возвращаюсь в общежитие."
         }
       ]
     }

@@ -93,7 +93,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Hành trình Trans-Siberian (Транссиб)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "магистра́ль",
@@ -118,6 +118,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "không gian bao la, vùng đất rộng lớn",
           "example": "За окном поезда открываются сибирские просторы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "путеше́ствовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "du ngoạn xuyên lục địa",
+          "example": "Мы путешествуем по легендарной Транссибирской магистрали."
+        },
+        {
+          "word": "пересека́ть (часовые пояса)",
+          "gram": "cụm động từ",
+          "meaning": "băng qua các múi giờ",
+          "example": "Поезд пересекает семь часовых поясов от Москвы до Владивостока."
+        },
+        {
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm nhìn vẻ đẹp Siberia",
+          "example": "Пассажиры любуются бескрайними таёжными просторами из окна."
+        },
+        {
+          "word": "остана́вливаться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dừng chân tại các ga",
+          "example": "Состав останавливается на крупных станциях на полчаса."
         }
       ]
     }

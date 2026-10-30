@@ -41,7 +41,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Đa ngôn ngữ & Giao tiếp (Изучение языков)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "многоязы́чие",
@@ -66,6 +66,35 @@
           "gram": "danh từ giống cái",
           "meaning": "triển vọng tương lai",
           "example": "Знание иностранных языков открывает отличные карьерные перспективы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "изуча́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chuyên tâm học ngoại ngữ",
+          "example": "В современном глобальном мире важно изучать несколько иностранных языков."
+        },
+        {
+          "word": "преодолева́ть (барьер)",
+          "gram": "cụm động từ",
+          "meaning": "vượt qua rào cản ngôn ngữ",
+          "example": "Постоянная практика помогает преодолевать языковой барьер в общении."
+        },
+        {
+          "word": "обща́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "giao lưu không ranh giới",
+          "example": "Знание языков даёт свободу уверенно общаться с коллегами по всему миру."
+        },
+        {
+          "word": "расширя́ть (кругозор)",
+          "gram": "cụm động từ",
+          "meaning": "mở rộng tầm nhìn tri thức",
+          "example": "Изучение русской культуры расширяет интеллектуальный кругозор человека."
         }
       ]
     }

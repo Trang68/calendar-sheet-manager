@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Chủ nghĩa kiến tạo (Конструктивизм)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "конструктиви́зм",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống cái",
           "meaning": "tính công năng, tính thực dụng",
           "example": "Главный принцип направления — удобство и функциональность."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "проекти́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thiết kế phong cách kiến tạo",
+          "example": "Архитекторы конструктивизма проектировали здания с чистой геометрией."
+        },
+        {
+          "word": "отража́ть (эпоху)",
+          "gram": "cụm động từ",
+          "meaning": "thể hiện tinh thần tiền phong",
+          "example": "Советский авангард ярко отражал революционный дух 1920-х годов."
+        },
+        {
+          "word": "сочета́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kết hợp thẩm mỹ và công năng",
+          "example": "Зодчие гармонично сочетали строгую форму и высокую функциональность."
+        },
+        {
+          "word": "вдохновля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "truyền cảm hứng kiến trúc sư",
+          "example": "Памятники конструктивизма вдохновляют современных мировых дизайнеров."
         }
       ]
     }

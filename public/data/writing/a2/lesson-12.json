@@ -51,7 +51,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thư hỏi khóa học ngôn ngữ (Курсы языка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "интенси́в",
@@ -76,6 +76,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "tài liệu giáo trình",
           "example": "Предоставляются ли учебные материалы бесплатно?"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "благодари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cảm ơn bữa cơm ấm",
+          "example": "Хочу от всего сердца поблагодарить вашу семью за тёплый приём."
+        },
+        {
+          "word": "вспомина́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhớ mãi món ăn ngon",
+          "example": "Я с восхищением вспоминаю ваши вкуснейшие домашние пироги."
+        },
+        {
+          "word": "цени́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trân quý lòng tốt",
+          "example": "Я очень ценю вашу доброту, открытость и заботу об иностранцах."
+        },
+        {
+          "word": "приглаша́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mời lại nhà mình",
+          "example": "Буду счастлив пригласить вас в гости с ответным визитом!"
         }
       ]
     }

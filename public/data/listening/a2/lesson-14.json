@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Gọi điện thoại chúc Tết (Поздравление)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "наступа́ть",
@@ -87,6 +87,35 @@
           "gram": "danh từ số nhiều",
           "meaning": "kỳ nghỉ lễ / nghỉ hè",
           "example": "Встретимся на зимних каникулах."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi bánh xèo Nga",
+          "example": "Мы заказываем сытные блины с мясным фаршем."
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng thức ẩm thực",
+          "example": "Иностранец впервые пробует сладкие сырники со сметаной."
+        },
+        {
+          "word": "печь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "rán nướng nhanh",
+          "example": "Повар быстро печёт горячие блины на круглой сковороде."
+        },
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên thử món",
+          "example": "Друг советует взять ягодный морс к десерту."
         }
       ]
     }

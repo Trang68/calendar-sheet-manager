@@ -53,7 +53,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Bưu thiếp chúc mừng sinh nhật (Открытка)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "поздравле́ние",
@@ -78,6 +78,35 @@
           "gram": "danh từ giống đực",
           "meaning": "người có ngày sinh nhật",
           "example": "Подарки и поздравления для дорогого именинника."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc mừng sinh nhật",
+          "example": "От всей души поздравляю тебя с днём рождения!"
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chúc điều tốt đẹp",
+          "example": "Желаю тебе крепкого здоровья, счастья и больших успехов в учёбе!"
+        },
+        {
+          "word": "дари́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trao gửi món quà",
+          "example": "Я дарю тебе эту редкую книгу на добрую память."
+        },
+        {
+          "word": "наде́яться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hy vọng sớm gặp",
+          "example": "Очень надеюсь скоро увидеться с тобой на каникулах."
         }
       ]
     }

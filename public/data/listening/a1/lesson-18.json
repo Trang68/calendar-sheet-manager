@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Điện thoại & Mời mọc (По телефону)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "телефо́н",
@@ -282,6 +282,35 @@
           "gram": "danh từ giống cái",
           "meaning": "cuộc gặp mặt",
           "example": "Договорились о встрече у метро."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn mua",
+          "example": "Покупатель выбирает новый смартфон."
+        },
+        {
+          "word": "проверя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "kiểm tra tính năng",
+          "example": "Продавец проверяет работу экрана."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua hàng",
+          "example": "Я покупаю современный ноутбук для учёбы."
+        },
+        {
+          "word": "рабо́тать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hoạt động tốt",
+          "example": "Новый телефон работает быстро."
         }
       ]
     }

@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Ngoại hình & Tính cách (Мой друг)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "характеристика",
@@ -85,6 +85,35 @@
           "gram": "tính từ",
           "meaning": "thông minh",
           "example": "Он очень умный и начитанный."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sinh sống",
+          "example": "Я родился и живу в древнем городе Ханой."
+        },
+        {
+          "word": "расти́",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "phát triển lớn lên",
+          "example": "Наш город быстро растёт и модернизируется."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo ven hồ",
+          "example": "Вечером горожане любят гулять вокруг озера."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu quý quê hương",
+          "example": "Я всем сердцем люблю свой родной город."
         }
       ]
     }

@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Sửa chữa ô tô (Автосервис)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "автосе́рвис",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống đực",
           "meaning": "cầu nâng xe cơ giới",
           "example": "Загнать автомобиль на подъёмник."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "проходи́ть (собеседование)",
+          "gram": "cụm động từ",
+          "meaning": "tham dự phỏng vấn",
+          "example": "Кандидат проходит собеседование на должность менеджера."
+        },
+        {
+          "word": "расска́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trình bày kinh nghiệm",
+          "example": "Соискатель рассказывает о своих профессиональных навыках."
+        },
+        {
+          "word": "задава́ть (вопросы)",
+          "gram": "cụm động từ",
+          "meaning": "đặt câu hỏi kiểm tra",
+          "example": "Работодатель задаёт вопросы о предыдущих проектах."
+        },
+        {
+          "word": "предлага́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đưa lời mời làm việc",
+          "example": "Компания предлагает отличные условия труда и зарплату."
         }
       ]
     }

@@ -9,25 +9,60 @@
   "topic": "Ẩm thực truyền thống: Món bánh Blini và văn hóa trà",
   "vocabCategories": [
     {
-      "title": "Ẩm thực (Русская кухня)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "блины́",
           "gram": "danh từ số nhiều",
-          "meaning": "bánh kếp mỏng truyền thống",
-          "example": "Тонкие русские блины выпекают на горячей сковороде."
+          "meaning": "bánh kếp tròn blini truyền thống",
+          "example": "Тонкие золотистые блины подают с разнообразными сытными начинками."
         },
         {
           "word": "начи́нка",
           "gram": "danh từ giống cái",
-          "meaning": "nhân bánh",
-          "example": "Блины бывают со сладкой и солёной начинкой."
+          "meaning": "nhân bánh ngọt hoặc mặn",
+          "example": "Самая популярная начинка для блинов — сёмга, икра или лесные ягоды."
         },
         {
           "word": "смета́на",
           "gram": "danh từ giống cái",
-          "meaning": "kem chua",
-          "example": "К горячим блинам отлично подходит густая сметана."
+          "meaning": "kem chua béo ngậy Smetana",
+          "example": "В блинной к горячим блинам традиционно заказывают густую свежую сметану."
+        },
+        {
+          "word": "официа́нт",
+          "gram": "danh từ giống đực",
+          "meaning": "nhân viên phục vụ bàn ăn",
+          "example": "Вежливый официант быстро приносит меню и рекомендует блюдо дня."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi món ăn theo thực đơn",
+          "example": "Посетители заказывают комплексный бизнес-ланч и травяной чай."
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nếm thử hương vị món mới",
+          "example": "Иностранцы с интересом пробуют традиционные блюда русской кухни."
+        },
+        {
+          "word": "плати́ть (по счёту)",
+          "gram": "cụm động từ",
+          "meaning": "thanh toán tiền ăn",
+          "example": "Гости кафе платят по счёту через терминал безналичной оплаты."
+        },
+        {
+          "word": "оставля́ть (чаевые)",
+          "gram": "cụm động từ",
+          "meaning": "để lại tiền boa cảm ơn",
+          "example": "За отличное обслуживание приятно оставлять официанту чаевые."
         }
       ]
     }

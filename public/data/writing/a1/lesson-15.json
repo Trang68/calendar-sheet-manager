@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thú cưng trong nhà (Питомцы)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "соба́ка",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống đực",
           "meaning": "người bạn",
           "example": "Собака — верный друг человека."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́виться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ôn thi, chuẩn bị",
+          "example": "Я усердно готовлюсь к зимней экзаменационной сессии."
+        },
+        {
+          "word": "чита́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu tài liệu",
+          "example": "В читальном зале я читаю дополнительные статьи."
+        },
+        {
+          "word": "писа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "viết bài tổng kết",
+          "example": "Студент пишет подробный конспект по грамматике."
+        },
+        {
+          "word": "сдава́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thi đỗ hoàn thành",
+          "example": "Я надеюсь сдать все зачёты на отлично."
         }
       ]
     }

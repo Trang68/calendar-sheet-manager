@@ -56,7 +56,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Mùa em yêu thích (Время года)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "любо́вь",
@@ -81,6 +81,35 @@
           "gram": "danh từ giống cái",
           "meaning": "thiên nhiên",
           "example": "Красота родной природы."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua thực phẩm",
+          "example": "В субботу мама покупает свежие продукты на неделю."
+        },
+        {
+          "word": "тра́тить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chi tiêu tiền bạc",
+          "example": "Я стараюсь разумно тратить деньги."
+        },
+        {
+          "word": "выбира́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chọn lựa hàng hóa",
+          "example": "Мы тщательно выбираем спелые фрукты и овощи."
+        },
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chế biến món ăn",
+          "example": "Из купленных продуктов мы готовим вкусный обед."
         }
       ]
     }

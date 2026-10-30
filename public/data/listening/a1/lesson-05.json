@@ -265,7 +265,7 @@
   "skill": "listening",
   "vocabCategories": [
     {
-      "title": "Từ vựng Hiệu thuốc & Sức khỏe (В аптеке)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "апте́ка",
@@ -290,6 +290,35 @@
           "gram": "danh từ giống đực",
           "meaning": "nhiệt kế",
           "example": "Мне нужно купить градусник."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bị đau, bị ốm",
+          "example": "У меня сильно болит горло."
+        },
+        {
+          "word": "принима́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống (thuốc)",
+          "example": "Принимайте эти таблетки после еды."
+        },
+        {
+          "word": "сове́товать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khuyên bảo",
+          "example": "Фармацевт советует хорошее лекарство."
+        },
+        {
+          "word": "выздора́вливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bình phục",
+          "example": "Выздоравливайте скорее!"
         }
       ]
     }

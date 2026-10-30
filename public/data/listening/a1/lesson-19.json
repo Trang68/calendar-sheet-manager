@@ -257,7 +257,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Đón Năm Mới (Новый год)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "пра́здник",
@@ -282,6 +282,35 @@
           "gram": "động từ",
           "meaning": "chúc mừng",
           "example": "Поздравляю вас с праздником!"
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "взве́шивать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cân đo",
+          "example": "Продавец взвешивает два килограмма яблок."
+        },
+        {
+          "word": "покупа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mua",
+          "example": "Бабушка покупает свежие овощи на рынке."
+        },
+        {
+          "word": "сто́ить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "có giá bán",
+          "example": "Сколько стоят эти сладкие помидоры?"
+        },
+        {
+          "word": "торгова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mặc cả giá",
+          "example": "На восточном рынке принято торговаться."
         }
       ]
     }

@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Không gian phòng ở (Мой дом)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "уют",
@@ -56,6 +56,35 @@
           "gram": "tính từ",
           "meaning": "rộng rãi thoáng đãng",
           "example": "Просторная светлая комната с балконом."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "боле́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "mắc bệnh cảm cúm",
+          "example": "Осенью многие болеют сезонными простудными заболеваниями."
+        },
+        {
+          "word": "обраща́ться (к врачу)",
+          "gram": "cụm động từ",
+          "meaning": "đi khám bác sĩ",
+          "example": "При первых симптомах болезни нужно обращаться к терапевту."
+        },
+        {
+          "word": "принима́ть (лекарства)",
+          "gram": "cụm động từ",
+          "meaning": "uống thuốc theo đơn",
+          "example": "Пациент строго принимает прописанные врачом таблетки."
+        },
+        {
+          "word": "выздора́вливать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hồi phục sức lực",
+          "example": "Благодаря правильному лечению больной быстро выздоравливает."
         }
       ]
     }

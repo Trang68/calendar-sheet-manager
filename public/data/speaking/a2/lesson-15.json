@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thú cưng trong đô thị (Животные)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "пито́мец",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống đực",
           "meaning": "bác sĩ thú y",
           "example": "Регулярный осмотр животного у ветеринара."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "забо́титься",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu thương săn sóc",
+          "example": "Домашний питомец учит детей заботиться и быть добрыми."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "dắt chó đi dạo",
+          "example": "Каждое утро я с радостью гуляю с собакой на свежем воздухе."
+        },
+        {
+          "word": "корми́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cho ăn đúng giờ",
+          "example": "Кошку нужно кормить качественной и полезной пищей."
+        },
+        {
+          "word": "игра́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "vui đùa cùng thú cưng",
+          "example": "Щенок любит весело играть с мячиком на траве."
         }
       ]
     }

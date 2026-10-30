@@ -62,7 +62,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Hội họa & Bảo tàng (Третьяковка)",
+      "title": "Danh từ trong bài nghe (Существительные)",
       "rows": [
         {
           "word": "шеде́вр",
@@ -87,6 +87,35 @@
           "gram": "danh từ giống trung",
           "meaning": "bức tranh khổ lớn, vải vẽ",
           "example": "Знаменитое полотно Репина привлекает тысячи туристов."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "выставля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "trưng bày kiệt tác hội họa",
+          "example": "В залах Третьяковской галереи выставляют шедевры русских мастеров."
+        },
+        {
+          "word": "осма́тривать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ngắm nhìn các tác phẩm",
+          "example": "Посетители подолгу осматривают полотна Репина и Сурикова."
+        },
+        {
+          "word": "собира́ть (коллекцию)",
+          "gram": "cụm động từ",
+          "meaning": "sưu tầm tranh quý",
+          "example": "Павел Третьяков всю жизнь собирал лучшую коллекцию русской живописи."
+        },
+        {
+          "word": "восхища́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm rung động lòng người",
+          "example": "Русское изобразительное искусство восхищает ценителей со всего мира."
         }
       ]
     }

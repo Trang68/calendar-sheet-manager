@@ -55,7 +55,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Giới thiệu bản thân (О себе)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "меня́ зову́т",
@@ -80,6 +80,35 @@
           "gram": "động từ",
           "meaning": "học tập",
           "example": "Я учусь на первом курсе."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "звать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "gọi tên",
+          "example": "Как вас зовут? — Меня зовут Минх."
+        },
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sống, cư ngụ",
+          "example": "Я живу в красивом городе Дананг."
+        },
+        {
+          "word": "рабо́тать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm việc",
+          "example": "Мой отец работает инженером."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tập",
+          "example": "Я учусь в политехническом университете."
         }
       ]
     }

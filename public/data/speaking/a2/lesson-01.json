@@ -48,7 +48,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Thành phố quê hương (Родной город)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "родно́й го́род",
@@ -73,6 +73,35 @@
           "gram": "danh từ giống đực",
           "meaning": "đài tưởng niệm",
           "example": "Исторический памятник в центре площади."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sinh sống lớn lên",
+          "example": "Я родился и всю жизнь живу в древнем городе."
+        },
+        {
+          "word": "гуля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo ven sông",
+          "example": "Моё любимое занятие — гулять по тихим старинным улицам."
+        },
+        {
+          "word": "пока́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "hướng dẫn khách xem",
+          "example": "Я люблю показывать свой город иностранным гостям."
+        },
+        {
+          "word": "горди́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tự hào về quê hương",
+          "example": "Жители искренне гордятся богатой историей города."
         }
       ]
     }

@@ -9,25 +9,60 @@
   "topic": "Sở thích cá nhân & Động từ Любить",
   "vocabCategories": [
     {
-      "title": "Động từ 'Thích' & Hành động (Глагол Любить)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "люби́ть",
-          "gram": "я люблю, ты любишь",
-          "meaning": "yêu, thích",
-          "example": "Я люблю спорт."
+          "word": "вре́мя",
+          "gram": "danh từ giống trung",
+          "meaning": "thời gian",
+          "example": "У меня есть свободное время вечером."
         },
         {
-          "word": "путеше́ствовать",
-          "gram": "động từ",
-          "meaning": "đi du lịch",
-          "example": "Мы любим путешествовать."
+          "word": "парк",
+          "gram": "danh từ giống đực",
+          "meaning": "công viên",
+          "example": "Мы гуляем в городском парке."
+        },
+        {
+          "word": "фильм",
+          "gram": "danh từ giống đực",
+          "meaning": "bộ phim",
+          "example": "Мы смотрим интересную кинокомедию."
+        },
+        {
+          "word": "вы́ставка",
+          "gram": "danh từ giống cái",
+          "meaning": "buổi triển lãm",
+          "example": "В музее открылась новая выставка."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "смотре́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "xem, ngắm",
+          "example": "Они смотрят новый фильм в кино."
         },
         {
           "word": "гуля́ть",
-          "gram": "động từ",
-          "meaning": "đi dạo",
-          "example": "Вечером я гуляю в парке."
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đi dạo tản bộ",
+          "example": "Семья гуляет в парке по аллеям."
+        },
+        {
+          "word": "фотографи́ровать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chụp ảnh",
+          "example": "Туристы фотографируют старинные здания."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi",
+          "example": "После работы приятно отдохнуть дома."
         }
       ]
     }

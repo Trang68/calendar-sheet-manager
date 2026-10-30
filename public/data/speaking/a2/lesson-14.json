@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Nghề nghiệp mơ ước (Профессия мечты)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "специали́ст",
@@ -56,6 +56,35 @@
           "gram": "động từ",
           "meaning": "chinh phục, đạt được",
           "example": "Достигать поставленных профессиональных целей."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "гото́вить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nấu ăn tại nhà",
+          "example": "По праздникам мы любим готовить старинные русские блюда."
+        },
+        {
+          "word": "печь",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "làm bánh truyền thống",
+          "example": "Бабушка печёт румяные пирожки с яблоками и капустой."
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "thưởng thức hương vị",
+          "example": "Иностранным студентам очень нравится пробовать квас и морс."
+        },
+        {
+          "word": "дели́ться (рецептом)",
+          "gram": "cụm động từ",
+          "meaning": "chia sẻ công thức nấu",
+          "example": "Мама с удовольствием делится семейным рецептом кулича."
         }
       ]
     }

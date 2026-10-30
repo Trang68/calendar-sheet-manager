@@ -73,7 +73,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Thư giới thiệu bản thân (Письмо о себе)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "письмо́",
@@ -98,6 +98,35 @@
           "gram": "động từ",
           "meaning": "học tập",
           "example": "Я учусь в университете."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "жить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "sống, cư trú",
+          "example": "Я живу в столице Вьетнама — Ханое."
+        },
+        {
+          "word": "учи́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "học tập",
+          "example": "Я студент и учусь на первом курсе."
+        },
+        {
+          "word": "люби́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "yêu thích",
+          "example": "Я очень люблю изучать иностранные языки."
+        },
+        {
+          "word": "писа́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "viết thư",
+          "example": "Я пишу тебе это письмо на русском языке."
         }
       ]
     }

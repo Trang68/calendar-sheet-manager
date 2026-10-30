@@ -31,7 +31,7 @@
   },
   "vocabCategories": [
     {
-      "title": "Tham quan bảo tàng (Музеи и галереи)",
+      "title": "Danh từ trong bài nói (Существительные)",
       "rows": [
         {
           "word": "экспона́т",
@@ -56,6 +56,35 @@
           "gram": "danh từ giống trung",
           "meaning": "sự trầm trồ thán phục",
           "example": "Картина вызывает искреннее восхищение."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "поздравля́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tri ân ngày chiến thắng",
+          "example": "Мы от всего сердца поздравляем дорогих ветеранов с 9 Мая."
+        },
+        {
+          "word": "по́мнить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "khắc ghi công ơn",
+          "example": "Потомки свято помнят подвиг солдат, защитивших Родину."
+        },
+        {
+          "word": "смотре́ть (парад)",
+          "gram": "cụm động từ",
+          "meaning": "xem duyệt binh kỷ niệm",
+          "example": "Вся страна с гордостью смотрит Парад Победы на Красной площади."
+        },
+        {
+          "word": "жела́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "cầu chúc hòa bình",
+          "example": "Мы искренне желаем чистого неба и вечного мира на всей планете."
         }
       ]
     }

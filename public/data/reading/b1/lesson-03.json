@@ -9,54 +9,60 @@
   "topic": "Thiên nhiên, Địa lý & Bảo tồn môi trường Siberia",
   "vocabCategories": [
     {
-      "title": "Địa lý & Tự nhiên (География и экология)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "глубина́",
           "gram": "danh từ giống cái",
-          "meaning": "độ sâu",
-          "example": "Максимальная глубина озера превышает 1600 метров."
+          "meaning": "độ sâu kỷ lục của hồ",
+          "example": "Байкал — самое глубокое озеро на планете, его глубина превышает 1640 метров."
         },
         {
           "word": "пре́сная вода́",
           "gram": "cụm danh từ",
-          "meaning": "nước ngọt",
-          "example": "В Байкале сосредоточено 20% мировых запасов пресной воды."
-        },
-        {
-          "word": "прозра́чный",
-          "gram": "tính từ",
-          "meaning": "trong suốt",
-          "example": "Вода в озере удивительно прозрачная и чистая."
+          "meaning": "nguồn nước ngọt tự nhiên tinh khiết",
+          "example": "В Байкале сосредоточено около двадцати процентов мировых запасов пресной воды."
         },
         {
           "word": "энде́мик",
           "gram": "danh từ giống đực",
-          "meaning": "loài sinh vật đặc hữu",
-          "example": "Байкальская нерпа — уникальный эндемик озера."
+          "meaning": "loài động thực vật đặc hữu",
+          "example": "Байкальская нерпа и рыба омуль — уникальные эндемики этого региона."
+        },
+        {
+          "word": "запове́дник",
+          "gram": "danh từ giống đực",
+          "meaning": "khu bảo tồn thiên nhiên nghiêm ngặt",
+          "example": "Вокруг озера созданы государственные заповедники и национальные парки."
         }
       ]
     },
     {
-      "title": "Bảo tồn & Du lịch (Охрана природы и туризм)",
+      "title": "Động từ then chốt (Глаголы)",
       "rows": [
         {
-          "word": "запове́дник",
-          "gram": "danh từ giống đực",
-          "meaning": "khu bảo tồn thiên nhiên",
-          "example": "Вокруг озера созданы национальные заповедники."
+          "word": "сохраня́ть (экосистему)",
+          "gram": "cụm động từ",
+          "meaning": "bảo tồn hệ sinh thái nguyên sơ",
+          "example": "Учёные и экологи стремятся сохранить хрупкую экосистему чистейшего озера."
         },
         {
-          "word": "сохрани́ть",
-          "gram": "động từ hoàn thành",
-          "meaning": "bảo tồn, giữ gìn",
-          "example": "Человечество обязано сохранить Байкал для потомков."
+          "word": "любова́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "chiêm ngưỡng làn nước trong vắt",
+          "example": "Путешественники часами любуются прозрачным кристальным льдом Байкала зимой."
         },
         {
-          "word": "уника́льный",
-          "gram": "tính từ",
-          "meaning": "độc nhất vô nhị",
-          "example": "Это уникальное природное богатство."
+          "word": "иссле́довать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghiên cứu thủy sinh vật học",
+          "example": "Международные экспедиции исследуют глубоководный животный мир озера."
+        },
+        {
+          "word": "оберега́ть (природу)",
+          "gram": "cụm động từ",
+          "meaning": "gìn giữ bảo vệ thiên nhiên",
+          "example": "Человечество обязано бережно оберегать природные богатства священного моря."
         }
       ]
     }

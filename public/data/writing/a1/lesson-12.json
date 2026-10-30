@@ -60,7 +60,7 @@
   ],
   "vocabCategories": [
     {
-      "title": "Chuyến đi xa (Путешествие)",
+      "title": "Danh từ trong bài viết (Существительные)",
       "rows": [
         {
           "word": "поездка",
@@ -85,6 +85,35 @@
           "gram": "danh từ giống trung",
           "meaning": "ấn tượng",
           "example": "Много ярких впечатлений."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ dưỡng",
+          "example": "Летом я мечтаю отдыхать на тёплом морском побережье."
+        },
+        {
+          "word": "купа́ться",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tắm biển",
+          "example": "Мы с удовольствием купаемся в прозрачной воде."
+        },
+        {
+          "word": "загора́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "tắm nắng",
+          "example": "Туристы загорают на белом песке под солнцем."
+        },
+        {
+          "word": "лета́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "bay du lịch",
+          "example": "Я люблю летать на самолёте в новые страны."
         }
       ]
     }

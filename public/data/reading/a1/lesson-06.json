@@ -9,31 +9,60 @@
   "topic": "Các hoạt động hàng ngày & Động từ nhóm I",
   "vocabCategories": [
     {
-      "title": "Động từ nhóm I thì hiện tại (Глаголы I спряжения)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
-          "word": "чита́ть",
-          "gram": "я читаю, ты читаешь",
-          "meaning": "đọc",
-          "example": "Я читаю газету."
+          "word": "день",
+          "gram": "danh từ giống đực",
+          "meaning": "ngày, ban ngày",
+          "example": "Каждый день мы изучаем новые слова."
         },
         {
-          "word": "писа́ть",
-          "gram": "я пишу, ты пишешь",
-          "meaning": "viết",
-          "example": "Студент пишет письмо."
+          "word": "у́тро",
+          "gram": "danh từ giống trung",
+          "meaning": "buổi sáng",
+          "example": "Утром я пью зелёный чай."
         },
         {
-          "word": "понима́ть",
-          "gram": "я понимаю, ты понимаешь",
-          "meaning": "hiểu",
-          "example": "Вы понимаете по-русски?"
+          "word": "ве́чер",
+          "gram": "danh từ giống đực",
+          "meaning": "buổi tối",
+          "example": "Вечером семья собирается вместе."
         },
+        {
+          "word": "за́втрак",
+          "gram": "danh từ giống đực",
+          "meaning": "bữa ăn sáng",
+          "example": "На завтрак мы едим кашу и яйца."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
         {
           "word": "де́лать",
-          "gram": "я делаю, ты делаешь",
+          "gram": "động từ chưa hoàn thành",
           "meaning": "làm",
-          "example": "Что ты делаешь вечером?"
+          "example": "Что вы делаете вечером?"
+        },
+        {
+          "word": "повторя́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nhắc lại, ôn tập",
+          "example": "Студенты повторяют грамматику дома."
+        },
+        {
+          "word": "за́втракать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn bữa sáng",
+          "example": "Я завтракаю в восемь часов."
+        },
+        {
+          "word": "отдыха́ть",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nghỉ ngơi",
+          "example": "В воскресенье мы отдыхаем на даче."
         }
       ]
     }

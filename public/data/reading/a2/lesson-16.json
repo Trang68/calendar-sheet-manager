@@ -9,25 +9,60 @@
   "topic": "Thời trang theo mùa: Trang phục chống lạnh mùa đông",
   "vocabCategories": [
     {
-      "title": "Trang phục mùa đông (Зимний гардероб)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
         {
           "word": "пухови́к",
           "gram": "danh từ giống đực",
-          "meaning": "áo khoác lông vũ giữ ấm",
-          "example": "Длинный тёплый пуховик защитит от мороза до минус двадцати градусов."
+          "meaning": "áo khoác phao lông vũ ấm áp",
+          "example": "Тёплый длинный пуховик надёжно защищает от сильного зимнего ветра."
         },
         {
           "word": "боти́нки",
           "gram": "danh từ số nhiều",
-          "meaning": "đôi giày bốt cổ cao",
-          "example": "Зимние ботинки должны быть на толстой нескользящей подошве."
+          "meaning": "đôi giày bốt cao cổ mùa đông",
+          "example": "Зимние ботинки с натуральным мехом не скользят на ледяной дорожке."
         },
         {
           "word": "ша́пка",
           "gram": "danh từ giống cái",
-          "meaning": "mũ len ấm",
-          "example": "Зимой без тёплой шапки и шарфа выходить на улицу опасно."
+          "meaning": "mũ len trùm đầu che tai",
+          "example": "В морозную погоду в России нельзя выходить на улицу без шапки."
+        },
+        {
+          "word": "перча́тки",
+          "gram": "danh từ số nhiều",
+          "meaning": "đôi găng tay len giữ ấm",
+          "example": "Шерстяные перчатки согревают руки во время долгих зимних прогулок."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "примеря́ть (одежду)",
+          "gram": "cụm động từ",
+          "meaning": "thử đồ trong phòng thay",
+          "example": "Покупатель примеряет зимнюю куртку в примерочной кабине магазина."
+        },
+        {
+          "word": "подбира́ть (размер)",
+          "gram": "cụm động từ",
+          "meaning": "chọn lựa số đo vừa vặn",
+          "example": "Консультант помогает клиенту точно подобрать нужный размер обуви."
+        },
+        {
+          "word": "защища́ть (от холода)",
+          "gram": "cụm động từ",
+          "meaning": "giữ ấm che chắn gió lạnh",
+          "example": "Качественная мембранная ткань куртки защищает тело от промозглого ветра."
+        },
+        {
+          "word": "покупа́ть (со скидкой)",
+          "gram": "cụm động từ",
+          "meaning": "mua sắm vào mùa giảm giá",
+          "example": "В конце сезона можно выгодно покупать брендовые вещи со скидкой."
         }
       ]
     }

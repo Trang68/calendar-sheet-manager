@@ -9,31 +9,60 @@
   "topic": "Ẩm thực Nga, Món ăn & Lời chúc ngon miệng",
   "vocabCategories": [
     {
-      "title": "Các món ăn truyền thống Nga (Русские блюда)",
+      "title": "Danh từ trong bài đọc (Существительные)",
       "rows": [
+        {
+          "word": "рестора́н",
+          "gram": "danh từ giống đực",
+          "meaning": "nhà hàng",
+          "example": "Мы обедаем в русском ресторане."
+        },
         {
           "word": "борщ",
           "gram": "danh từ giống đực",
-          "meaning": "súp củ dền đỏ Nga",
-          "example": "Борщ со сметаной очень вкусный."
+          "meaning": "súp củ dền borscht",
+          "example": "Русский борщ со сметаной очень вкусный."
         },
         {
-          "word": "пельме́ни",
-          "gram": "danh từ số nhiều",
-          "meaning": "bánh xếp thịt kiểu Nga",
-          "example": "Горячие пельмени."
-        },
-        {
-          "word": "блины́",
-          "gram": "danh từ số nhiều",
-          "meaning": "bánh xèo blini của Nga",
-          "example": "Блины с мёдом."
-        },
-        {
-          "word": "морс",
+          "word": "пирожо́к",
           "gram": "danh từ giống đực",
-          "meaning": "nước quả rừng mát ngọt",
-          "example": "Ягодный морс."
+          "meaning": "bánh nướng nhỏ pirozhok",
+          "example": "Горячие пирожки с мясом и капустой."
+        },
+        {
+          "word": "счёт",
+          "gram": "danh từ giống đực",
+          "meaning": "hóa đơn",
+          "example": "Официант, принесите счёт, пожалуйста."
+        }
+      ]
+    },
+    {
+      "title": "Động từ then chốt (Глаголы)",
+      "rows": [
+        {
+          "word": "обе́дать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "ăn trưa",
+          "example": "Мы обедаем в час дня."
+        },
+        {
+          "word": "зака́зывать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "đặt món, gọi món",
+          "example": "Что вы будете заказывать?"
+        },
+        {
+          "word": "про́бовать",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "nếm thử",
+          "example": "Она пробует традиционный напиток квас."
+        },
+        {
+          "word": "пить",
+          "gram": "động từ chưa hoàn thành",
+          "meaning": "uống",
+          "example": "Я пью чёрный чай с лимоном."
         }
       ]
     }
