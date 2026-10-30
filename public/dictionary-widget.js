@@ -617,8 +617,12 @@
       this.panelEl.style.removeProperty("transition");
       this.isOpen = true;
       this.panelEl.classList.add("open");
-      this.launcherEl.style.transform = "scale(0.9)";
-      this.launcherEl.style.opacity = "0.7";
+      if (window.innerWidth <= 640) {
+        this.launcherEl.style.display = "none";
+      } else {
+        this.launcherEl.style.transform = "scale(0.9)";
+        this.launcherEl.style.opacity = "0.7";
+      }
       setTimeout(() => this.searchInput.focus(), 150);
     }
 
@@ -631,6 +635,7 @@
       }
       this.isOpen = false;
       this.panelEl.classList.remove("open");
+      this.launcherEl.style.display = "";
       this.launcherEl.style.transform = "";
       this.launcherEl.style.opacity = "";
       this.stopAudio();

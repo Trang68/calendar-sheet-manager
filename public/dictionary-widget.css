@@ -6,7 +6,9 @@
 .dict-widget-launcher {
   position: fixed;
   bottom: 24px;
+  bottom: max(24px, env(safe-area-inset-bottom, 24px));
   right: 24px;
+  right: max(24px, env(safe-area-inset-right, 24px));
   z-index: 9990;
   display: flex;
   align-items: center;
@@ -21,8 +23,14 @@
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s ease,
+              background 0.2s ease,
+              opacity 0.2s ease;
   user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transform: translateZ(0);
 }
 
 .dict-widget-launcher:hover {
@@ -1105,7 +1113,9 @@
 @media (max-width: 640px) {
   .dict-widget-launcher {
     bottom: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
     right: 16px;
+    right: max(16px, env(safe-area-inset-right, 16px));
     padding: 10px 14px;
     font-size: 0.88rem;
   }

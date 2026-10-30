@@ -54,7 +54,7 @@ body {
   line-height: 1.6;
   position: relative;
   isolation: isolate;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -67,6 +67,13 @@ body::before {
   filter: blur(1px) saturate(60%);
   pointer-events: none;
   z-index: -1;
+}
+
+/* Ensure Unified Topbar stays stationary and elevated at top of viewport */
+.game-topbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
 }
 
 .shell {
@@ -1072,7 +1079,7 @@ body::before {
   padding: 24px;
   box-shadow: var(--shadow-sm);
   position: sticky;
-  top: 20px;
+  top: 96px;
   width: 100%;
 }
 
