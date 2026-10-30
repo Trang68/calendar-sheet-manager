@@ -201,7 +201,17 @@ body.ff-body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Interactive 3D paper surface for touch gesture navigation */
+.ff-swipe-surface {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  will-change: transform, filter, box-shadow;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .game-shell {

@@ -606,6 +606,29 @@
       } catch (_) {}
     };
 
+    // Auto-scroll header nav pills so the active tab (e.g. Contact, Login) is always visible and centered
+    function scrollActiveTabIntoView(smooth = true) {
+      const container = document.querySelector('.ff-nav-pills');
+      if (!container) return;
+      const activeTab = container.querySelector('.ff-nav-tab.active') ||
+                        container.querySelector(`.ff-nav-tab[href="${currentPath}"]`);
+      if (activeTab) {
+        const tabLeft = activeTab.offsetLeft;
+        const tabWidth = activeTab.offsetWidth;
+        const containerWidth = container.clientWidth;
+        const targetScroll = tabLeft - (containerWidth - tabWidth) / 2;
+        container.scrollTo({
+          left: Math.max(0, targetScroll),
+          behavior: smooth ? 'smooth' : 'instant',
+        });
+      }
+    }
+
+    // Scroll active tab on page load
+    scrollActiveTabIntoView(false);
+    requestAnimationFrame(() => scrollActiveTabIntoView(false));
+    setTimeout(() => scrollActiveTabIntoView(true), 120);
+
     // 1. Capture tab clicks and set forward/back direction BEFORE navigation starts
     document.addEventListener(
       'click',
@@ -622,19 +645,75 @@
         const direction = targetIndex > currentIndex ? 'forward' : 'back';
         setDirection(direction);
 
-        // Instant tactile feedback on header tab
+        // Instant tactile feedback on header tab & auto-scroll header
         const navTab = anchor.closest('.ff-nav-tab');
         if (navTab) {
           const oldActive = document.querySelector('.ff-nav-tab.active');
           if (oldActive && oldActive !== navTab) oldActive.classList.remove('active');
           navTab.classList.add('active');
+          scrollActiveTabIntoView(true);
         }
       },
       { capture: true }
     );
 
-    // 2. High-performance, natural swipe gesture navigation on mobile & touch devices
+    // 2. High-performance, interactive 3D page-turn touch gesture on mobile
     if (currentIndex === -1) return;
+
+    // Locate or create the content surface below the header (header is completely isolated outside)
+    function getPageSurface() {
+      let surface = document.getElementById('ffSwipeSurface');
+      if (surface) return surface;
+
+      const topbar = document.querySelector('.game-topbar');
+      if (!topbar || !topbar.parentNode) return null;
+
+      surface = document.createElement('div');
+      surface.id = 'ffSwipeSurface';
+      surface.className = 'ff-swipe-surface';
+
+      const parent = topbar.parentNode;
+      const nodesToMove = [];
+      let next = topbar.nextSibling;
+      while (next) {
+        const cur = next;
+        next = next.nextSibling;
+        if (cur.nodeType === 1) {
+          const tag = cur.tagName.toLowerCase();
+          if (tag === 'script' ||
+              cur.classList.contains('dict-widget-panel') ||
+              cur.classList.contains('dict-widget-launcher') ||
+              cur.classList.contains('back-to-top-btn') ||
+              cur.classList.contains('pwa-instructions-modal') ||
+              cur.classList.contains('pwa-widget-dock') ||
+              cur.id === 'dictSelectionPopup') {
+            continue;
+          }
+        }
+        nodesToMove.push(cur);
+      }
+
+      nodesToMove.forEach((node) => surface.appendChild(node));
+      parent.appendChild(surface);
+      return surface;
+    }
+
+    function resetSurface(el) {
+      if (!el) return;
+      el.style.transition = 'transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 260ms ease, box-shadow 260ms ease, opacity 260ms ease';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+      el.style.boxShadow = 'none';
+      el.style.opacity = '1';
+      setTimeout(() => {
+        el.style.removeProperty('transition');
+        el.style.removeProperty('transform');
+        el.style.removeProperty('transform-origin');
+        el.style.removeProperty('filter');
+        el.style.removeProperty('box-shadow');
+        el.style.removeProperty('opacity');
+      }, 280);
+    }
 
     const ignoredTargets = [
       'a',
@@ -676,19 +755,20 @@
     };
 
     let touchStart = null;
-    let isSwiping = false;
+    let isDragging = false;
+    let surface = null;
 
     document.addEventListener(
       'touchstart',
       (e) => {
         if (e.touches.length !== 1 || window.getSelection()?.toString()) {
           touchStart = null;
-          isSwiping = false;
+          isDragging = false;
           return;
         }
         if (isIgnoredTouchTarget(e.target)) {
           touchStart = null;
-          isSwiping = false;
+          isDragging = false;
           return;
         }
         touchStart = {
@@ -696,7 +776,11 @@
           y: e.touches[0].clientY,
           time: Date.now(),
         };
-        isSwiping = false;
+        isDragging = false;
+        surface = getPageSurface();
+        if (surface) {
+          surface.style.transition = 'none';
+        }
       },
       { passive: true }
     );
@@ -708,17 +792,36 @@
         const deltaX = e.touches[0].clientX - touchStart.x;
         const deltaY = e.touches[0].clientY - touchStart.y;
 
-        if (!isSwiping) {
-          if (Math.abs(deltaX) > 12 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
-            isSwiping = true;
-          } else if (Math.abs(deltaY) > 12) {
+        if (!isDragging) {
+          if (Math.abs(deltaY) > 8 && Math.abs(deltaY) > Math.abs(deltaX) * 0.9) {
             touchStart = null;
             return;
           }
+          if (Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+            isDragging = true;
+          }
         }
 
-        if (isSwiping && e.cancelable) {
-          e.preventDefault();
+        if (isDragging) {
+          if (e.cancelable) e.preventDefault();
+          if (!surface) surface = getPageSurface();
+          if (!surface) return;
+
+          const progress = deltaX / window.innerWidth;
+          // 3D paper rotation & curvature following the finger in real time:
+          const angle = Math.max(-55, Math.min(55, progress * 65));
+          const skew = Math.max(-2, Math.min(2, progress * 2.5));
+          const tx = deltaX * 0.75;
+          const z = Math.abs(deltaX) * 0.12;
+          const brightness = Math.max(0.72, 1 - Math.abs(progress) * 0.35);
+
+          surface.style.transition = 'none';
+          surface.style.transformOrigin = deltaX < 0 ? '0% 50%' : '100% 50%';
+          surface.style.transform = `perspective(1400px) rotateY(${angle}deg) skewY(${skew}deg) translate3d(${tx}px, 0, ${z}px)`;
+          surface.style.filter = `brightness(${brightness})`;
+          surface.style.boxShadow = deltaX < 0
+            ? `-18px 0 35px rgba(0, 0, 0, ${Math.min(0.28, Math.abs(progress) * 0.4)})`
+            : `18px 0 35px rgba(0, 0, 0, ${Math.min(0.28, Math.abs(progress) * 0.4)})`;
         }
       },
       { passive: false }
@@ -727,38 +830,64 @@
     document.addEventListener(
       'touchend',
       (e) => {
-        if (!touchStart || !isSwiping || e.changedTouches.length !== 1) {
+        if (!touchStart || !isDragging || e.changedTouches.length !== 1) {
+          if (surface && isDragging) resetSurface(surface);
           touchStart = null;
-          isSwiping = false;
+          isDragging = false;
           return;
         }
 
         const deltaX = e.changedTouches[0].clientX - touchStart.x;
         const deltaY = e.changedTouches[0].clientY - touchStart.y;
-        const deltaTime = Math.max(1, Date.now() - touchStart.time);
-        const velocity = Math.abs(deltaX) / deltaTime; // px/ms
+        const elapsed = Math.max(1, Date.now() - touchStart.time);
+        const velocity = Math.abs(deltaX) / elapsed;
 
         touchStart = null;
-        isSwiping = false;
+        isDragging = false;
 
-        const isFlick = velocity > 0.28 && Math.abs(deltaX) >= 30;
-        const isDrag = Math.abs(deltaX) >= Math.min(55, window.innerWidth * 0.16);
+        const isFlick = velocity > 0.32 && Math.abs(deltaX) >= 30;
+        const isDragPast = Math.abs(deltaX) >= Math.min(65, window.innerWidth * 0.18);
 
-        if ((isFlick || isDrag) && Math.abs(deltaX) > Math.abs(deltaY) * 1.05) {
+        if ((isFlick || isDragPast) && Math.abs(deltaX) > Math.abs(deltaY) * 1.05) {
           const direction = deltaX < 0 ? 'forward' : 'back';
           const targetIndex = (currentIndex + (direction === 'forward' ? 1 : -1) + routes.length) % routes.length;
           const targetUrl = routes[targetIndex];
 
+          // Animate completing the paper flip off-screen:
+          if (surface) {
+            surface.style.transition = 'transform 260ms cubic-bezier(0.25, 1, 0.45, 1), opacity 260ms ease, filter 260ms ease';
+            const exitAngle = deltaX < 0 ? -80 : 80;
+            const exitTx = deltaX < 0 ? -window.innerWidth * 0.45 : window.innerWidth * 0.45;
+            surface.style.transform = `perspective(1400px) rotateY(${exitAngle}deg) translate3d(${exitTx}px, 0, 40px)`;
+            surface.style.opacity = '0';
+            surface.style.filter = 'brightness(0.55)';
+          }
+
           setDirection(direction);
-          window.location.assign(targetUrl);
+
+          // Update header tab active & scroll to it right away
+          const targetTab = document.querySelectorAll('.ff-nav-tab')[targetIndex];
+          if (targetTab) {
+            document.querySelectorAll('.ff-nav-tab').forEach((t) => t.classList.remove('active'));
+            targetTab.classList.add('active');
+            scrollActiveTabIntoView(true);
+          }
+
+          setTimeout(() => {
+            window.location.assign(targetUrl);
+          }, 240);
+        } else {
+          // Cancelled: smoothly spring back to 0
+          if (surface) resetSurface(surface);
         }
       },
       { passive: true }
     );
 
     document.addEventListener('touchcancel', () => {
+      if (surface && isDragging) resetSurface(surface);
       touchStart = null;
-      isSwiping = false;
+      isDragging = false;
     });
   }
 
